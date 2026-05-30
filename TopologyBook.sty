@@ -267,8 +267,8 @@
 \makeatletter
 \@addtoreset{example}{section}
 \makeatother
-\newtheorem{theorem}[question]{Theorem}
-\newtheorem{lemma}[question]{Lemma}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
 \newtheorem{remark}[question]{Remark}
 \newtheorem*{definition}{Definition}
 \newtheorem{corollary}[question]{Corollary}
@@ -406,6 +406,18 @@
   pdftitle = {Topology_by_Munkres},
 }
 \providecommand\phantomsection{}
+
+% ---------- 居中文本块 ----------
+\newenvironment{centeredblock}{%
+  \par\addvspace{8pt}%
+  \begin{center}%
+  \begin{minipage}{0.85\textwidth}%
+  \raggedright
+}{%
+  \end{minipage}%
+  \end{center}%
+  \addvspace{8pt}%
+}
 
 % ---------- 索引 ----------
 \usepackage{makeidx}

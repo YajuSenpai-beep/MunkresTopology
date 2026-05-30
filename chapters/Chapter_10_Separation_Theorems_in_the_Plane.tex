@@ -1,12 +1,12 @@
 \chapter{Separation Theorems in the Plane}
 
-There are several difficult questions concerning the topology of the plane that arise quite naturally in the study of analysis. The answers to these questions seem geometrically quite obvious but turn out to be surprisingly hard to prove. They include the Jordan curve theorem, the Brouwer theorem on invariance of domain, and the classical theorem that the winding number of a simple closed curve is zero or \(\pm  1\) . We prove them in this chapter as consequences of our study of covering spaces and the fundamental group
+There are several difficult questions concerning the topology of the plane that arise quite naturally in the study of analysis. The answers to these questions seem geometrically quite obvious but turn out to be surprisingly hard to prove. They include the \idx{Jordan curve theorem}, the Brouwer theorem on \idx{invariance of domain}, and the classical theorem that the \idx{winding number} of a simple \idx{Closed topologist's sine curve} closed curve is zero or \(\pm  1\) . We prove them in this chapter as consequences of our study of covering spaces and the fundamental group
 
 \section*{§ 61 The Jordan Separation Theorem}
 
-We consider first one of the classical theorems of mathematics, the Jordan curve theorem. It states a fact that is geometrically quite believable, the fact that a simple closed curve in the plane always separates the plane into two pieces, its "inside" and its "outside." It was originally conjectured in 1892 by Camille Jordan, and several incorrect proofs were published, including one by Jordan himself. Eventually, a correct proof was provided by Oswald Veblen, in 1905. The early proofs were complicated, but over the years, simpler proofs have been found. If one uses the tools of modern algebraic topology, singular homology theory in particular, the proof is quite straightforward. The proof we give here is the simplest one we know that uses only results from the theory of covering spaces and the fundamental group.
+We consider first one of the classical theorems of mathematics, the Jordan curve theorem. It states a fact that is geometrically quite believable, the fact that a simple closed curve in the plane always \idx{Separates a space} separates the plane into two pieces, its ``inside'' and its ``outside.'' It was originally conjectured in 1892 by Camille Jordan, and several incorrect proofs were published, including one by Jordan himself. Eventually, a correct proof was provided by Oswald Veblen, in 1905. The early proofs were complicated, but over the years, simpler proofs have been found. If one uses the tools of modern algebraic topology, singular homology theory in particular, the proof is quite straightforward. The proof we give here is the simplest one we know that uses only results from the theory of covering spaces and the fundamental group.
 
-Our proof of the Jordan curve theorem divides into three parts. The first, which we call the Jordan separation theorem, states that a simple closed curve in the plane separates it into at least two components. The second says that an arc in the plane does not separate the plane. And the third, the Jordan curve theorem proper, says that a simple closed curve \(C\) in the plane separates it into precisely two components, of which \(C\) is the common boundary. The first of these theorems will be treated in this section.
+Our proof of the Jordan curve theorem divides into three parts. The first, which we call the \idx{Jordan separation theorem}, states that a simple closed curve in the plane separates it into at least two components. The second says that an arc in the plane does not separate the plane. And the third, the Jordan curve theorem proper, says that a simple closed curve \(C\) in the plane separates it into precisely two components, of which \(C\) is the common boundary. The first of these theorems will be treated in this section.
 
 In dealing with separation theorems, it will often be convenient to formulate them as separation theorems for subsets of \({S}^{2}\) rather than \({\mathbb{R}}^{2}\) . The separation theorems for \({\mathbb{R}}^{2}\) will follow. The connection between the two sets of theorems is provided by the following lemma.
 
@@ -22,7 +22,7 @@ Let \(\left\{  {U}_{\alpha }\right\}\) be the set of components of \({S}^{2} - C
 
 Now the homeomorphism \(h\) of \({S}^{2} - b\) with \({\mathbb{R}}^{2}\) can be extended to a homeomorphism \(H\) of \({S}^{2}\) with the one-point compactification \({\mathbb{R}}^{2} \cup  \{ \infty \}\) of \({\mathbb{R}}^{2}\) , merely by setting \(H\left( b\right)  = \infty\) . If \({U}_{\beta }\) is the component of \({S}^{2} - C\) containing \(b\) , then \(H\left( {U}_{\beta }\right)\) is a neighborhood of \(\infty\) in \({\mathbb{R}}^{2} \cup  \{ \infty \}\) . Therefore \({V}_{\beta }\) is unbounded; since its complement \({\mathbb{R}}^{2} - {V}_{\beta }\) is compact, all the other components of \({\mathbb{R}}^{2} - h\left( C\right)\) are bounded. See Figure 61.1.
 \end{proof}
-\begin{lemma}[Nulhomotopy lemma] Let \(a\) and \(b\) be points of \({S}^{2}\) . Let \(A\) be a compact space, and let
+\begin{lemma}[Nul\idx{Free homotopy of loops} homotopy lemma] Let \(a\) and \(b\) be points of \({S}^{2}\) . Let \(A\) be a compact space, and let
 
 \[
 f : A \rightarrow  {S}^{2} - a - b
@@ -68,7 +68,7 @@ Now we prove the Jordan separation theorem. In general, if \(X\) is a connected 
 
 Figure 61.2
 
-An arc \(A\) is a space homeomorphic to the unit interval \(\left\lbrack  {0,1}\right\rbrack\) . The end points of \(A\) are the two points \(p\) and \(q\) of \(A\) such that \(A - p\) and \(A - q\) are connected; the other points of \(A\) are called interior points of \(A\) .
+An arc \(A\) is a space homeomorphic to the unit interval \(\left\lbrack  {0,1}\right\rbrack\) . The end points of \(A\) are the two points \(p\) and \(q\) of \(A\) such that \(A - p\) and \(A - q\) are connected; the other points of \(A\) are called \idx{Interior point: of an arc} interior points of \(A\) .
 
 A simple closed curve is a space homeomorphic to the unit circle \({S}^{1}\) .
 \end{proof}
@@ -111,7 +111,7 @@ Figure 61.3
 
 Let us examine the preceding proof. What facts did we use about the simple closed curve \(C\) ? All we actually needed was the fact that \(C\) could be written as the union of the two closed connected sets \({A}_{1}\) and \({A}_{2}\) , whose intersection consisted of the two points \(a\) and \(b\) . This remark leads to the following generalized version of the separation theorem, which will be useful later.
 \end{proof}
-\begin{theorem}[A general separation theorem] Let \({A}_{1}\) and \({A}_{2}\) be closed connected subsets of \({S}^{2}\) whose intersection consists of precisely two points a and \(b\) . Then the set \(C = {A}_{1} \cup  {A}_{2}\) separates \({S}^{2}\) .
+\begin{theorem}[A \idx{general separation theorem}] Let \({A}_{1}\) and \({A}_{2}\) be closed connected subsets of \({S}^{2}\) whose intersection consists of precisely two points a and \(b\) . Then the set \(C = {A}_{1} \cup  {A}_{2}\) separates \({S}^{2}\) .
 \end{theorem}
 
 \begin{proof}We must show first that \(C\) cannot equal all of \({S}^{2}\) . That fact was obvious in the earlier proof. In the present case, we can see that \(C \neq  {S}^{2}\) because \({S}^{2} - a - b\) is connected and \(C - a - b\) is not. (The sets \({A}_{i} - a - b\) form a separation of \(C - a - b\) .)
@@ -119,7 +119,7 @@ The remainder of the proof is a copy of the proof of the preceding theorem.
 \end{proof}
 \section*{Exercises}
 
-1. Give examples to show that a simple closed curve in the torus may or may not separate the torus.
+1. Give examples to show that a simple closed curve in the \idx{Double torus} torus may or may not separate the torus.
 
 2. Let \(A\) be the subset of \({\mathbb{R}}^{2}\) consisting of the union of the topologist’s sine curve and the broken-line path from \(\left( {0, - 1}\right)\) to \(\left( {0, - 2}\right)\) to \(\left( {1, - 2}\right)\) to \(\left( {1,\sin 1}\right)\) . See Figure 61.4. We call \(A\) the closed topologist’s sine curve. Show that if \(C\) is a subspace of \({S}^{2}\) homeomorphic to the closed topologist’s sine curve, then \(C\) separates \({S}^{2}\) .
 
@@ -132,9 +132,9 @@ Figure 61.4
 
 \section*{*§ 62 Invariance of Domain \protect\sectionDagger}
 
-One of the theorems of topology that is truly fundamental, because it expresses an intrinsic property of euclidean space, is the theorem on "invariance of domain," proved by L. E. J. Brouwer in 1912. It states that for any open set \(U\) of \({\mathbb{R}}^{n}\) and any continuous injective mapping \(f : U \rightarrow  {\mathbb{R}}^{n}\) , the image set \(f\left( U\right)\) is open in \({\mathbb{R}}^{n}\) and the inverse function is continuous. (The Inverse Function Theorem of analysis derives this result under the additional hypothesis that the map \(f\) is continuously differentiable with nonsingular Jacobian matrix.) We shall prove this theorem in the case \(n = 2\) .
+One of the theorems of topology that is truly fundamental, because it expresses an intrinsic property of euclidean space, is the theorem on ``invariance of domain,'' proved by L. E. J. Brouwer in 1912. It states that for any open set \(U\) of \({\mathbb{R}}^{n}\) and any continuous injective mapping \(f : U \rightarrow  {\mathbb{R}}^{n}\) , the image set \(f\left( U\right)\) is open in \({\mathbb{R}}^{n}\) and the inverse function is continuous. (The Inverse Function Theorem of analysis derives this result under the additional hypothesis that the map \(f\) is continuously differentiable with nonsingular Jacobian matrix.) We shall prove this theorem in the case \(n = 2\) .
 
-\begin{lemma}[Homotopy extension lemma] Let \(X\) be a space such that \(X \times  I\) is normal. Let \(A\) be a closed subspace of \(X\) , and let \(f : A \rightarrow  Y\) be a continuous map, where \(Y\) is an open subspace of \({\mathbb{R}}^{n}\) . If \(f\) is nulhomotopic, then \(f\) may be extended to a continuous map \(g : X \rightarrow  Y\) that is also nulhomotopic.
+\begin{lemma}[\idx{Homotopy extension lemma}] Let \(X\) be a space such that \(X \times  I\) is normal. Let \(A\) be a closed subspace of \(X\) , and let \(f : A \rightarrow  Y\) be a continuous map, where \(Y\) is an open subspace of \({\mathbb{R}}^{n}\) . If \(f\) is nulhomotopic, then \(f\) may be extended to a continuous map \(g : X \rightarrow  Y\) that is also nulhomotopic.
 \end{lemma}
 
 \begin{proof}Let \(F : A \times  I \rightarrow  Y\) be a homotopy between \(f\) and a constant map. Then \(F\left( {a,0}\right)  = f\left( a\right)\) and \(F\left( {a,1}\right)  = {y}_{0}\) for all \(a\) . Extend \(F\) to the space \(X \times  1\) by setting \(F\left( {x,1}\right)  = {y}_{0}\) for \(x \in  X\) Then \(F\) is a continuous map of the closed subspace \((A \times\)  \(I) \cup  \left( {X \times  1}\right)\) of \(X \times  I\) into \({\mathbb{R}}^{n}\) ; by the Tietze extension theorem, it may be extended to a continuous map \(G : X \times  I \rightarrow  {\mathbb{R}}^{n}\) .
@@ -157,7 +157,7 @@ Figure 62.1
 
 The following lemma is a partial converse to the nulhomotopy lemma of the preceding section.
 \end{proof}
-\begin{lemma}[Borsuk lemma] Let \(a\) and \(b\) be points of \({S}^{2}\) . Let \(A\) be a compact space, and let \(f : A \rightarrow  {S}^{2} - a - b\) be a continuous injective map. If \(f\) is nulhomotopic, then \(a\) and \(b\) lie in the same component of \({S}^{2} - f\left( A\right)\) .
+\begin{lemma}[\idx{Borsuk lemma}] Let \(a\) and \(b\) be points of \({S}^{2}\) . Let \(A\) be a compact space, and let \(f : A \rightarrow  {S}^{2} - a - b\) be a continuous injective map. If \(f\) is nulhomotopic, then \(a\) and \(b\) lie in the same component of \({S}^{2} - f\left( A\right)\) .
 \end{lemma}
 
 \begin{proof}Because \(A\) is compact and \({S}^{2}\) is Hausdorff, \(f\left( A\right)\) is a compact subspace of \({S}^{2}\) that is homeomorphic to \(A\) . Because \(f\) is nulhomotopic, so is the inclusion mapping of \(f\left( A\right)\) into \({S}^{2} - a - b\) . Hence it suffices to prove the lemma in the special case where \(f\) is simply an inclusion map. Furthermore, we can replace \({S}^{2}\) by \({\mathbb{R}}^{2} \cup  \{ \infty \}\) , letting \(a\) correspond to 0, and \(b\) to \(\infty\) . Then our lemma reduces to the following statement:
@@ -386,7 +386,7 @@ Consider the space \({S}^{2} - h\left( x\right)\) . Since this space is homeomor
 
 Both proofs of this theorem are interesting. As we noted in  \S 62, the first generalizes to show that no compact contractible subspace of \({S}^{2}\) separates \({S}^{2}\) . The second generalizes in another direction. Let us examine this second proof, and ask ourselves what properties of the sets \({D}_{1}\) and \({D}_{2}\) made it work? One readily sees that all that was needed was the fact that \({D}_{1}\) and \({D}_{2}\) were closed subsets of \({S}^{2}\) and that \({S}^{2} - \left( {{D}_{1} \cap  {D}_{2}}\right)\) was simply connected. Hence we have the following result, which we shall use later:
 \end{proof}
-\begin{theorem}[A general nonseparation theorem] Let \({D}_{1}\) and \({D}_{2}\) be closed subsets of \({S}^{2}\) such that \({S}^{2} - {D}_{1} \cap  {D}_{2}\) is simply connected. If neither \({D}_{1}\) nor \({D}_{2}\) separates \({S}^{2}\) , then \({D}_{1} \cup  {D}_{2}\) does not separate \({S}^{2}\) .
+\begin{theorem}[A \idx{general nonseparation theorem}] Let \({D}_{1}\) and \({D}_{2}\) be closed subsets of \({S}^{2}\) such that \({S}^{2} - {D}_{1} \cap  {D}_{2}\) is simply connected. If neither \({D}_{1}\) nor \({D}_{2}\) separates \({S}^{2}\) , then \({D}_{1} \cup  {D}_{2}\) does not separate \({S}^{2}\) .
 \end{theorem}
 
 Now we prove the Jordan curve theorem.
@@ -436,7 +436,7 @@ For instance, consider the space indicated in Figure 63 5. It is the union of tw
 
 Figure 63.5
 
-There is a fourth theorem that is often considered along with these three separation theorems. It is called the Schoenflies theorem, and it states that if \(C\) is a simple closed curve in \({S}^{2}\) and \(U\) and \(V\) are the components of \({S}^{2} - C\) , then \(\bar{U}\) and \(\bar{V}\) are each homeomorphic to the closed unit ball \({B}^{2}\) . A proof may be found in 		\cite{HallSpencer1955}.
+There is a fourth theorem that is often considered along with these three separation theorems. It is called the \idx{Schoenflies theorem}, and it states that if \(C\) is a simple closed curve in \({S}^{2}\) and \(U\) and \(V\) are the components of \({S}^{2} - C\) , then \(\bar{U}\) and \(\bar{V}\) are each homeomorphic to the closed unit ball \({B}^{2}\) . A proof may be found in 		\cite{HallSpencer1955}.
 
 The separation theorems can be generalized to higher dimensions as follows: (1) Any subspace \(C\) of \({S}^{n}\) homeomorphic to \({S}^{n - 1}\) separates \({S}^{n}\) .
 
@@ -446,7 +446,7 @@ The separation theorems can be generalized to higher dimensions as follows: (1) 
 
 These theorems can be proved quite readily once one has studied singular homology groups in algebraic topology. (See 		\cite{Munkres1993}, p. 202.) The Brouwer theorem on invariance of domain for \({\mathbb{R}}^{n}\) follows as a corollary.
 
-The Schoenflies theorem, however, does not generalize to higher dimensions without some restrictions on the way the space \(C\) is imbedded in \({S}^{n}\) . This is shown by the famous example of the "Alexander horned sphere," a homeomorphic image of \({S}^{2}\) in \({S}^{3}\) , one of whose complementary domains is not simply connected! (See 		\cite{HockingYoung1961}, p. 176.)
+The Schoenflies theorem, however, does not generalize to higher dimensions without some restrictions on the way the space \(C\) is imbedded in \({S}^{n}\) . This is shown by the famous example of the ``\idx{Alexander horned sphere},'' a homeomorphic image of \({S}^{2}\) in \({S}^{3}\) , one of whose complementary domains is not simply connected! (See 		\cite{HockingYoung1961}, p. 176.)
 
 The separation theorems can be generalized even further than this. The definitive theorem along these lines is the famous Alexander-Pontryagin duality theorem, a rather deep theorem of algebraic topology, which we shall not attempt to state here. (See 		\cite{Munkres1993}.) It implies that if the closed subspace \(C\) separates \({S}^{n}\) into \(k\) components, so does any subspace of \({S}^{n}\) that is homeomorphic to \(C\) (or even homotopy equivalent to \(C\) ). The separation theorems (1)-(3) are immediate corollaries.
 
@@ -478,7 +478,7 @@ Linear graphs are used in mathematics to model many real-life phenomena; however
 
 Note that any graph is determined completely (up to homeomorphism) by listing its vertices and specifying which pairs of vertices have an edge joining them.
 
-\begin{example} If \(G\) contains exactly \(n\) vertices, and if for every pair of distinct vertices of \(G\) there is an edge of \(G\) joining them, then \(G\) is called the complete graph on \(n\) vertices and is denoted \({G}_{n}\) . Several such graphs are pictured in Figure 64.1. Note that the first three of these graphs are pictured as subspaces of \({\mathbb{R}}^{2}\) , but the fourth is pictured instead as a subspace of \({\mathbb{R}}^{3}\) . A little experimentation will convince you that this graph cannot in fact be imbedded in \({\mathbb{R}}^{2}\) . We shall prove this result shortly.
+\begin{example} If \(G\) contains exactly \(n\) vertices, and if for every pair of distinct vertices of \(G\) there is an edge of \(G\) joining them, then \(G\) is called the \idx{complete graph} on \(n\) vertices and is denoted \({G}_{n}\) . Several such graphs are pictured in Figure 64.1. Note that the first three of these graphs are pictured as subspaces of \({\mathbb{R}}^{2}\) , but the fourth is pictured instead as a subspace of \({\mathbb{R}}^{3}\) . A little experimentation will convince you that this graph cannot in fact be imbedded in \({\mathbb{R}}^{2}\) . We shall prove this result shortly.
 
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/64.1.jpg}
@@ -488,7 +488,7 @@ Note that any graph is determined completely (up to homeomorphism) by listing it
 Figure 64.1
 \end{example}
 
-\begin{example} Another interesting graph arises in considering the classical puzzle: "Given three houses, \({h}_{1},{h}_{2}\) , and \({h}_{3}\) , and three utilities, \(g\) (for gas), \(w\) (for water), and \(e\) (for electricity), can you connect each utility to each house without letting any of the connecting lines cross?" Formulated mathematically, this is just the question whether the graph pictured in Figure 64.2, which is called the utilities graph. can be imbedded in \({\mathbb{R}}^{2}\) . Again, a little experimentation will convince you that it cannot, a fact that we shall prove shortly
+\begin{example} Another interesting graph arises in considering the classical puzzle: ``Given three houses, \({h}_{1},{h}_{2}\) , and \({h}_{3}\) , and three utilities, \(g\) (for gas), \(w\) (for water), and \(e\) (for electricity), can you connect each utility to each house without letting any of the connecting lines cross?'' Formulated mathematically, this is just the question whether the graph pictured in Figure 64.2, which is called the utilities graph. can be imbedded in \({\mathbb{R}}^{2}\) . Again, a little experimentation will convince you that it cannot, a fact that we shall prove shortly
 \end{example}
 
 \begin{definition} A theta space \(X\) is a Hausdorff space that is written as the union of three arcs \(A,B\) , and \(C\) , each pair of which intersect precisely in their end points. (The space \(X\) is of course homeomorphic to the Greek letter theta.)
@@ -584,7 +584,7 @@ It follows from these theorems that if a graph \(G\) contains a subgraph that is
 
 \section*{§ 65 The Winding Number of a Simple Closed Curve}
 
-If \(h : {S}^{1} \rightarrow  {\mathbb{R}}^{2} - 0\) is a continuous map, then the induced homomorphism \({h}_{ * }\) carries a generator of the fundamental group of \({S}^{1}\) to some integral power of a generator of the fundamental group of \({\mathbb{R}}^{2} - \mathbf{0}\) . This integral power \(n\) is called the winding number of \(h\) with respect to 0. It measures how many times \(h\) "wraps \({S}^{1}\) around the origin;" its sign depends of course on the choice of generators. See Figure 65.1. We will introduce it more formally in the next section.
+If \(h : {S}^{1} \rightarrow  {\mathbb{R}}^{2} - 0\) is a continuous map, then the induced homomorphism \({h}_{ * }\) carries a generator of the fundamental group of \({S}^{1}\) to some integral power of a generator of the fundamental group of \({\mathbb{R}}^{2} - \mathbf{0}\) . This integral power \(n\) is called the winding number of \(h\) with respect to 0. It measures how many times \(h\) ``wraps \({S}^{1}\) around the origin;'' its sign depends of course on the choice of generators. See Figure 65.1. We will introduce it more formally in the next section.
 
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/65.1.jpg}
@@ -694,7 +694,7 @@ D\overset{k}{ \rightarrow  }{\mathbb{R}}^{2} - p\overset{f}{ \rightarrow  }{\mat
 
 indices an isomorphism of fundamental groups. Let \(\alpha\) be a path in \({\mathbb{R}}^{2} - D\) from 0 to \(p\) , and let \(F : D \times  I \rightarrow  {\mathbb{R}}^{2} - 0\) be the map \(F\left( {x,t}\right)  = x - \alpha \left( t\right)\) . Then \(F\) is a homotopy between \(j\) and \(f \circ  k\) ; since \(j\) induces an isomorphism, so does \(f \circ  k\) . (See Corollary 58.5).
 
-This theorem is a special case of a rather deep theorem of algebraic topology, concerning the "linking number" of two disjoint subspaces of \({S}^{m + n + 1}\) , one homeomorphic to an \(m\) -sphere and the other homeomorphic to an \(n\) -sphere; it is related to the Alexander duality theorem. (See 		\cite{Munkres1993}, p. 433.) The special case of our theorem is that of a 0-sphere (i.e., a two-point space) and a 1-sphere (i.e., a simple closed curve) in \({S}^{2}\) .
+This theorem is a special case of a rather deep theorem of algebraic topology, concerning the ``linking number'' of two disjoint subspaces of \({S}^{m + n + 1}\) , one homeomorphic to an \(m\) -sphere and the other homeomorphic to an \(n\) -sphere; it is related to the Alexander duality theorem. (See 		\cite{Munkres1993}, p. 433.) The special case of our theorem is that of a 0-sphere (i.e., a two-point space) and a 1-sphere (i.e., a simple closed curve) in \({S}^{2}\) .
 \end{proof}
 \section*{§ 66 The Cauchy Integral Formula}
 
@@ -702,7 +702,7 @@ One of the central theorems in the study of functions of a complex variable is t
 
 Since we have the Jordan curve theorem at our disposal, we shall set ourselves the task of deriving the Cauchy integral formula in its classical version from the reformulated version.
 
-We begin by introducing the notion of "winding number" more formally.
+We begin by introducing the notion of ``winding number'' more formally.
 
 \begin{definition} Let \(f\) be a loop in \({\mathbb{R}}^{2}\) , and let \(a\) be a point not in the image of \(f\) . Set
 
@@ -710,7 +710,7 @@ We begin by introducing the notion of "winding number" more formally.
 g\left( s\right)  = \left\lbrack  {f\left( s\right)  - a}\right\rbrack  /\parallel f\left( s\right)  - a\parallel
 \]
 
-then \(g\) is a loop in \({S}^{1}\) . Let \(p : \mathbb{R} \rightarrow  {S}^{1}\) be the standard covering map, and let \(\widetilde{g}\) be a lifting of \(g\) to \({S}^{1}\) . Because \(g\) is a loop, the difference \(\widetilde{g}\left( 1\right)  - \widetilde{g}\left( 0\right)\) is an integer. This integer is called the winding number of \(f\) with respect to \(a\) , and is denoted \(n\left( {f,a}\right)\) .
+then \(g\) is a loop in \({S}^{1}\) . Let \(p : \mathbb{R} \rightarrow  {S}^{1}\) be the standard covering map, and let \(\widetilde{g}\) be a lifting of \(g\) to \({S}^{1}\) . Because \(g\) is a loop, the difference \(\widetilde{g}\left( 1\right)  - \widetilde{g}\left( 0\right)\) is an integer. This integer is called the winding number of \(f\) with respect to \(a\) , and is denoted \(\idxmath{n}{\(n\left( {f,a}\right)\) (see Winding number)} n\left( {f,a}\right)\) .
 \end{definition}
 
 Note that \(n\left( {f,a}\right)\) is independent of the choice of the lifting of \(g\) . For if \(\widetilde{g}\) is one lifting of \(g\) , then uniqueness of liftings implies that any other lifting of \(g\) has the form \(\widetilde{g}\left( s\right)  + m\) for some integer \(m\) .
@@ -738,7 +738,7 @@ Let \(\bar{G}\) be a lifting of \(G\) to \(\mathbb{R}\) . Then \(\widetilde{G}\l
 
 (c) Let \(\alpha\) be a path in \({\mathbb{R}}^{2} - f\left( l\right)\) from \(a\) to \(b\) . Note that by definition, \(n\left( {f,a}\right)  =\)  \(n\left( {f - a,0}\right)\) . Since \(f\left( s\right)  - \alpha \left( t\right)\) is a free homotopy in \({\mathbb{R}}^{2} - 0\) between \(f - a\) and \(f - b\) , our result follows.
 \end{proof}
-\begin{definition} Let \(f\) be a loop in \(X\) . We call \(f\) a simple loop provided \(f\left( s\right)  = f\left( {s}^{\prime }\right)\) only if \(s = {s}^{\prime }\) or if one of the points \(s,{s}^{\prime }\) is 0 and the other is 1 . If \(f\) is a simple loop, its image set is a simple closed curve in \(X\) .
+\begin{definition} Let \(f\) be a loop in \(X\) . We call \(f\) a \idx{simple loop} provided \(f\left( s\right)  = f\left( {s}^{\prime }\right)\) only if \(s = {s}^{\prime }\) or if one of the points \(s,{s}^{\prime }\) is 0 and the other is 1 . If \(f\) is a simple loop, its image set is a simple closed curve in \(X\) .
 \end{definition}
 
 \begin{theorem} Let \(f\) be a simple loop in \({\mathbb{R}}^{2}\) . If a lies in the unbounded component of \({\mathbb{R}}^{2} - f\left( 1\right)\) , then \(n\left( {f,a}\right)  = 0\) ; while if a lies in the bounded component, \(n\left( {f,a}\right)  =  \pm  1\) .
@@ -751,7 +751,7 @@ The map \(f\) induces, \({via}\) the standard quotient map \(p : I \rightarrow  
 
 Now we show that if \(\left\lbrack  f\right\rbrack\) generates \({\pi }_{1}\left( {X,{x}_{0}}\right)\) , then \(n\left( {f,\mathbf{0}}\right)  =  \pm  1\) , while if \(\left\lbrack  f\right\rbrack\) is trivial, \(n\left( {f,\mathbf{0}}\right)  = 0\) . Since the retraction \(x \rightarrow  x/\parallel x\parallel\) of \({\mathbb{R}}^{2} - \mathbf{0}\) onto \({S}^{1}\) induces an isomorphism of fundamental groups, the loop \(g\left( s\right)  = f\left( s\right) /\parallel f\left( s\right) \parallel\) represents a generator of \({\pi }_{1}\left( {{S}^{1},{b}_{0}}\right)\) in the first case, and the identity element in the second case. If we examine the isomorphism \(\phi  : {\pi }_{1}\left( {{S}^{1},{b}_{0}}\right)  \rightarrow  \mathbb{Z}\) constructed in the proof of Theorem 54.5, we see this means that when we lift \(g\) to a path \(\bar{g}\) in \(\mathbb{R}\) beginning at 0, the path \(\widetilde{g}\) ends at \(\pm  1\) in the first case, and at 0 in the second.
 \end{proof}
-\begin{definition} Let \(f\) be a simple loop in \({\mathbb{R}}^{2}\) . We say \(f\) is a counterclockwise loop if \(n\left( {f,a}\right)  =  + 1\) for some \(a\) (and hence for every \(a\) ) in the bounded component of \({\mathbb{R}}^{2} - f\left( I\right)\) . We say it is a clockwise loop if \(n\left( {f,a}\right)  =  - 1\) . The standard loop \(p\left( s\right)  =\)  \(\left( {\cos {2\pi s},\sin {2\pi s}}\right)\) is thus a counterclockwise loop.
+\begin{definition} Let \(f\) be a simple loop in \({\mathbb{R}}^{2}\) . We say \(f\) is a \idx{counterclockwise loop} if \(n\left( {f,a}\right)  =  + 1\) for some \(a\) (and hence for every \(a\) ) in the bounded component of \({\mathbb{R}}^{2} - f\left( I\right)\) . We say it is a clockwise loop if \(n\left( {f,a}\right)  =  - 1\) . The standard loop \(p\left( s\right)  =\)  \(\left( {\cos {2\pi s},\sin {2\pi s}}\right)\) is thus a counterclockwise loop.
 \end{definition}
 
 \section*{Application to complex variables}
