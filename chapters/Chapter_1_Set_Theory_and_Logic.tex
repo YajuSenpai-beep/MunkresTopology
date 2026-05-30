@@ -614,7 +614,10 @@ Figure 2.3
   \item \({B}_{0} \subset  {B}_{1} \Rightarrow  {f}^{-1}\left( {B}_{0}\right)  \subset  {f}^{-1}\left( {B}_{1}\right)\) .
   \item \({f}^{-1}\left( {{B}_{0} \cup  {B}_{1}}\right)  = {f}^{-1}\left( {B}_{0}\right)  \cup  {f}^{-1}\left( {B}_{1}\right)\) .
   \item \({f}^{-1}\left( {{B}_{0} \cap  {B}_{1}}\right)  = {f}^{-1}\left( {B}_{0}\right)  \cap  {f}^{-1}\left( {B}_{1}\right)\) .
-  \item \({f}^{-1}\left( {{B}_{0} - {B}_{1}}\right)  = {f}^{-1}\left( {B}_{0}\right)  - {f}^{-1}\left( {B}_{1}\right)\) . Show that \(f\) preserves inclusions and unions only:
+  \item \({f}^{-1}\left( {{B}_{0} - {B}_{1}}\right)  = {f}^{-1}\left( {B}_{0}\right)  - {f}^{-1}\left( {B}_{1}\right)\) . 
+\end{enumerate}
+	  Show that \(f\) preserves inclusions and unions only:
+	  \begin{enumerate}[start=5, itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item \({A}_{0} \subset  {A}_{1} \Rightarrow  f\left( {A}_{0}\right)  \subset  f\left( {A}_{1}\right)\) .
   \item \(f\left( {{A}_{0} \cup  {A}_{1}}\right)  = f\left( {A}_{0}\right)  \cup  f\left( {A}_{1}\right)\) .
   \item \(f\left( {{A}_{0} \cap  {A}_{1}}\right)  \subset  f\left( {A}_{0}\right)  \cap  f\left( {A}_{1}\right)\) ; show that equality holds if \(f\) is injective.
@@ -894,8 +897,10 @@ We leave it to the exercises to show that \(A\) has the least upper bound proper
 \end{centeredblock}
 
 \section*{Exercises}
+\textbf{Equivalence Relations}
+
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
-\item Define two points \(\left( {{x}_{0},{y}_{0}}\right)\) and \(\left( {{x}_{1},{y}_{1}}\right)\) of the plane to be equivalent if \({y}_{0} - {x}_{0}^{2} =\)  \({y}_{1} - {x}_{1}^{2}\) . Check that this is an equivalence relation and describe the equivalence classes
+\item Define two points \(\left( {{x}_{0},{y}_{0}}\right)\) and \(\left( {{x}_{1},{y}_{1}}\right)\) of the plane to be equivalent if \({y}_{0} - {x}_{0}^{2} =\)  \({y}_{1} - {x}_{1}^{2}\) . Check that this is an equivalence relation and describe the equivalence classes.
 \item Let \(C\) be a relation on a set \(A\) . If \({A}_{0} \subset  A\) , define the restriction of \(C\) to \({A}_{0}\) to be the relation \(C \cap  \left( {{A}_{0} \times  {A}_{0}}\right)\) . Show that the restriction of an equivalence relation is an equivalence relation.
 \item Here is a ``proof'' that every relation \(C\) that is both symmetric and transitive is also reflexive: ``Since \(C\) is symmetric, \({aCb}\) implies \({bCa}\) . Since \(C\) is transitive, \({aCb}\) and \({bCa}\) together imply \({aCa}\) , as desired.'' Find the flaw in this argument.
 \item Let \(f : A \rightarrow  B\) be a surjective function. Let us define a relation on \(A\) by setting \({a}_{0} \sim  {a}_{1}\) if \[ f\left( {a}_{0}\right)  = f\left( {a}_{1}\right) . \]
@@ -903,12 +908,17 @@ We leave it to the exercises to show that \(A\) has the least upper bound proper
   \item Show that this is an equivalence relation.
   \item Let \({A}^{ * }\) be the set of equivalence classes. Show there is a bijective correspondence of \({A}^{ * }\) with \(B\) .
   \end{enumerate}
-\item Let \(S\) and \({S}^{\prime }\) be the following subsets of the plane. \[ S = \{ \left( {x,y}\right)  \mid  y = x + 1\text{ and }0 < x < 2\} , \] \[ {S}^{\prime } = \{ \left( {x,y}\right)  \mid  y - x\text{ is an integer }\} . \]
+\item Let \(S\) and \({S}^{\prime }\) be the following subsets of the plane. \[ \begin{aligned} S &= \{ \left( {x,y}\right)  \mid  y = x + 1\text{ and }0 < x < 2\} , \\ {S}^{\prime } &= \{ \left( {x,y}\right)  \mid  y - x\text{ is an integer }\} . \end{aligned} \]
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that \({S}^{\prime }\) is an equivalence relation on the real line and \({S}^{\prime } \supset  S\) . Describe the equivalence classes of \({S}^{\prime }\) .
   \item Show that given any collection of equivalence relations on a set \(A\) , their intersection is an equivalence relation on \(A\) .
-  \item Describe the equivalence relation \(T\) on the real line that is the intersection of all equivalence relations on the real line that contain \(S\) . Describe the equivalence classes of \(T\) . Order Relations
+  \item Describe the equivalence relation \(T\) on the real line that is the intersection of all equivalence relations on the real line that contain \(S\) . Describe the equivalence classes of \(T\) .
   \end{enumerate}
+\end{enumerate}
+
+\noindent\textbf{Order Relations}
+
+\begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*, resume]
 \item Define a relation on the plane by setting \[ \left( {{x}_{0},{y}_{0}}\right)  < \left( {{x}_{1},{y}_{1}}\right) \] if either \({y}_{0} - {x}_{0}^{2} < {y}_{1} - {x}_{1}^{2}\) , or \({y}_{0} - {x}_{0}^{2} = {y}_{1} - {x}_{1}^{2}\) and \({x}_{0} < {x}_{1}\) . Show that this is an order relation on the plane, and describe it geometrically.
 \item Show that the restriction of an order relation is an order relation.
 \item Check that the relation defined in Example 7 is an order relation.
@@ -919,10 +929,13 @@ We leave it to the exercises to show that \(A\) has the least upper bound proper
   \end{enumerate}
 \item Show that an element in an ordered set has at most one immediate successor and at most one immediate predecessor. Show that a subset of an ordered set has at most one smallest element and at most one largest element.
 \item Let \({\mathbb{Z}}_{ + }\) denote the set of positive integers. Consider the following order relations on \({\mathbb{Z}}_{ + } \times  {\mathbb{Z}}_{ + }\) :
-  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item The dictionary order. (ii) \(\left( {{x}_{0},{y}_{0}}\right)  < \left( {{x}_{1},{y}_{1}}\right)\) if either \({x}_{0} - {y}_{0} < {x}_{1} - {y}_{1}\) , or \({x}_{0} - {y}_{0} = {x}_{1} - {y}_{1}\) and \({y}_{0} < {y}_{1}\) . (iii) \(\left( {{x}_{0},{y}_{0}}\right)  < \left( {{x}_{1},{y}_{1}}\right)\) if either \({x}_{0} + {y}_{0} < {x}_{1} + {y}_{1}\) , or \({x}_{0} + {y}_{0} = {x}_{1} + {y}_{1}\) and \({y}_{0} < {y}_{1}\) . In these order relations, which elements have immediate predecessors? Does the set have a smallest element? Show that all three order types are different.
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\roman*), align=left]
+  \item The dictionary order.
+  \item \(\left( {{x}_{0},{y}_{0}}\right)  < \left( {{x}_{1},{y}_{1}}\right)\) if either \({x}_{0} - {y}_{0} < {x}_{1} - {y}_{1}\) , or \({x}_{0} - {y}_{0} = {x}_{1} - {y}_{1}\) and \({y}_{0} < {y}_{1}\) .
+  \item \(\left( {{x}_{0},{y}_{0}}\right)  < \left( {{x}_{1},{y}_{1}}\right)\) if either \({x}_{0} + {y}_{0} < {x}_{1} + {y}_{1}\) , or \({x}_{0} + {y}_{0} = {x}_{1} + {y}_{1}\) and \({y}_{0} < {y}_{1}\) .
   \end{enumerate}
-\item Prove the following: \textsl{theorem}. If an ordered set \(A\) has the least upper bound property, then it has the greatest lower bound property.
+  In these order relations, which elements have immediate predecessors? Does the set have a smallest element? Show that all three order types are different.
+\item Prove the following: \\ \textsl{theorem}. If an ordered set \(A\) has the least upper bound property, then it has the greatest lower bound property.
 \item If \(C\) is a relation on a set \(A\) , define a new relation \(D\) on \(A\) by letting \(\left( {b,a}\right)  \in  D\) if \(\left( {a,b}\right)  \in  C\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that \(C\) is symmetric if and only if \(C = D\) .
@@ -1111,23 +1124,25 @@ Proofs of these properties of the integers and real numbers, along with a few ot
   \item \(x > y > 0 \Rightarrow  1/x < 1/y\) .
   \item \(x < y \Rightarrow  x < \left( {x + y}\right) /2 < y\) .
   \end{enumerate}
-\item (a) Show that if \(\mathcal{A}\) is a collection of inductive sets, then the intersection of the elements of \(\mathcal{A}\) is an inductive set.
+\item
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Prove the basic properties (l) and (2) of \({\mathbb{Z}}_{ + }\) .
+  \item Show that if \(\mathcal{A}\) is a collection of inductive sets, then the intersection of the elements of \(\mathcal{A}\) is an inductive set.
+  \item Prove the basic properties (1) and (2) of \({\mathbb{Z}}_{ + }\) .
   \end{enumerate}
-\item (a) Prove by induction that given \(n \in  {\mathbb{Z}}_{ + }\) , every nonempty subset of \(\{ 1,\ldots ,n\rbrack\) has a largest element.
+\item
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Prove by induction that given \(n \in  {\mathbb{Z}}_{ + }\) , every nonempty subset of \{ 1,\ldots ,n\} has a largest element.
   \item Explain why you cannot conclude from (a) that every nonempty subset of \({\mathbb{Z}}_{ + }\) has a largest element.
   \end{enumerate}
 \item Prove the following properties of \(\mathbb{Z}\) and \({\mathbb{Z}}_{ + }\) :
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item \(a,b \in  {\mathbb{Z}}_{ + } \Rightarrow  a + b \in  {\mathbb{Z}}_{ + }\) . [Hint: Show that given \(a \in  {\mathbb{Z}}_{ + }\) , the set \(X = \left\{  {x \mid  x \in  \mathbb{R}\text{ and }a + x \in  {\mathbb{Z}}_{ + }}\right\}\) is inductive.
   \item \(a,b \in  {\mathbb{Z}}_{ + } \Rightarrow  a \cdot  b \in  {\mathbb{Z}}_{ + }\) .
-  \item Show that \(a \in  {\mathbb{Z}}_{ + } \Rightarrow  a - 1 \in  {\mathbb{Z}}_{ + } \cup  \{ 0\}\) . [Hint: Let \(X = \{ x \mid  x \in  \mathbb{R}\) and \(x - 1 \in  {\mathbb{Z}}_{ + } \cup  \{ 0\}\) ; show that \(X\) is inductive.
-  \item \(c,d \in  \mathbb{Z} \Rightarrow  c + d \in  \mathbb{Z}\) and \(c - d \in  \mathbb{Z}\) . [Hint. Prove it first for \(d = 1\) .\}
+  \item Show that \(a \in  {\mathbb{Z}}_{ + } \Rightarrow  a - 1 \in  {\mathbb{Z}}_{ + } \cup  \{ 0\}\) . [Hint: Let \(X = \{ x \mid  x \in  \mathbb{R}\) and \(x - 1 \in  {\mathbb{Z}}_{ + } \cup  \{ 0\}\) ; show that \(X\) is inductive.]
+  \item \(c,d \in  \mathbb{Z} \Rightarrow  c + d \in  \mathbb{Z}\) and \(c - d \in  \mathbb{Z}\) . [Hint. Prove it first for \(d = 1\) .]
   \item \(c,d \in  \mathbb{Z} \Rightarrow  c \cdot  d \in  \mathbb{Z}\) .
   \end{enumerate}
-\item Let \(a \in  \mathbb{R}\) . Define inductively \[ \begin{aligned} {a}^{1} &= a, \\ {a}^{n + 1} &= {a}^{n} \cdot  a \end{aligned} \] for \(n \in  {\mathbb{Z}}_{ + }\) . (See \(§7\) for a discussion of the process of \idx{inductive definition}.) Show that for \(n,m \in  {\mathbb{Z}}_{ + }\) and \(a,b \in  \mathbb{R}\) , \[ \begin{aligned} {a}^{n}{a}^{m} &= {a}^{n + m}, \\ {\left( {a}^{n}\right) }^{m} &= {a}^{nm}, \\ {a}^{m}{b}^{m} &= {\left( ab\right) }^{m}. \end{aligned} \] These are called the laws of exponents [Hint: For fixed \(n\) , prove the formulas by induction on \(m\) .\}
+\item Let \(a \in  \mathbb{R}\) . Define inductively \[ \begin{aligned} {a}^{1} &= a, \\ {a}^{n + 1} &= {a}^{n} \cdot  a \end{aligned} \] for \(n \in  {\mathbb{Z}}_{ + }\) . (See \(§7\) for a discussion of the process of \idx{inductive definition}.) Show that for \(n,m \in  {\mathbb{Z}}_{ + }\) and \(a,b \in  \mathbb{R}\) , \[ \begin{aligned} {a}^{n}{a}^{m} &= {a}^{n + m}, \\ {\left( {a}^{n}\right) }^{m} &= {a}^{nm}, \\ {a}^{m}{b}^{m} &= {\left( ab\right) }^{m}. \end{aligned} \] These are called the laws of exponents [Hint: For fixed \(n\) , prove the formulas by induction on \(m\) .]
 \item Let \(a \in  \mathbb{R}\) and \(a \neq  0\) . Define \({a}^{0} = 1\) , and for \(n \in  {\mathbb{Z}}_{ + },{a}^{-n} = 1/{a}^{n}\) . Show that the laws of exponents hold for \(a,b \neq  0\) and \(n,m \in  \mathbb{Z}\) .
 \item (a) Show that \(\mathbb{R}\) has the greatest lower bound property.
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
@@ -1149,10 +1164,10 @@ Proofs of these properties of the integers and real numbers, along with a few ot
   \end{enumerate}
 \item Given \(m \in  \mathbb{Z}\) , we say that \(m\) is even if \(m/2 \in  \mathbb{Z}\) , and \(m\) is odd otherwise.
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Show that if \(m\) is odd, \(m = {2n} + 1\) for some \(n \in  \mathbb{Z}\) . [Hint: Choose \(n\) so that \(n < m/2 < n + 1\) .\}
+  \item Show that if \(m\) is odd, \(m = {2n} + 1\) for some \(n \in  \mathbb{Z}\) . [Hint: Choose \(n\) so that \(n < m/2 < n + 1\) .]
   \item Show that if \(p\) and \(q\) are odd, so are \(p \cdot  q\) and \({p}^{n}\) , for any \(n \in  {\mathbb{Z}}_{ + }\) .
   \item Show that if \(a > 0\) is rational, then \(a = m/n\) for some \(m,n \in  {\mathbb{Z}}_{ + }\) where not both \(m\) and \(n\) are even. [Hint: Let \(n\) be the smallest element of the set \(\left\{  {x \mid  x \in  {\mathbb{Z}}_{ + }\text{ and }x \cdot  a \in  {\mathbb{Z}}_{ + }}\right\}\) .
-  \item Theorem. \(\sqrt{2}\) is irrational.
+  \item \textsl{Theorem. \(\sqrt{2}\) is irrational.}
   \end{enumerate}
 \end{enumerate}
 \section*{§ 5 Cartesian Products}
