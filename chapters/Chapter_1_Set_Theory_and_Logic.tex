@@ -73,7 +73,7 @@ In ordinary everyday English, the word ``or'' is ambiguous. Sometimes the statem
 \begin{centeredblock}
 ``Miss Smith, every student registered for this course has taken either a course in linear algebra or a course in analysis.''
 
-``Mr. Jones, either you get a grade of at least 70 on the final exam or you will flunk this course''
+``Mr. Jones, either you get a grade of at least 70 on the final exam or you will flunk this course.''
 \end{centeredblock}
 
 In the context, Miss Smith knows perfectly well that I mean ``everyone has had linear algebra or analysis, or both,'' and Mr. Jones knows I mean ``either he gets at least 70 or he flunks, but not both.'' Indeed, Mr. Jones would be exceedingly unhappy if both statements turned out to be true!
@@ -237,7 +237,6 @@ If it should happen that both the statement \(P \Rightarrow  Q\) and its convers
 \[
 P \Leftrightarrow  Q\text{ , }
 \]
-
 which is read `` \(P\) holds if and only if \(Q\) holds.''
 
 \section*{Negation}
@@ -246,26 +245,29 @@ If one wishes to form the contrapositive of the statement \(P \Rightarrow  Q\) ,
 
 To illustrate, suppose that \(X\) is a set, \(A\) is a subset of \(X\) , and \(P\) is a statement about the general element of \(X\) . Consider the following statement:
 
-(*)
 \[
-\text{ For every }x \in  A\text{ , statement }P\text{ holds. }
+\left( *\right) \hspace{1em} \text{ For every }x \in  A\text{ , statement }P\text{ holds. }
 \]
 
 How does one form the negation of this statement? Let us translate the problem into the language of sets. Suppose that we let \(B\) denote the set of all those elements \(x\) of \(X\) for which \(P\) holds. Then statement \(\left( *\right)\) is just the statement that \(A\) is a subset of \(B\) . What is its negation? Obviously, the statement that \(A\) is not a subset of \(B\) ; that is, the statement that there exists at least one element of \(A\) that does not belong to \(B\) . Translating back into ordinary language, this becomes
 
-\section*{For at least one \(x \in  A\) , statement \(P\) does not hold.}
+\[
+\text{For at least one } x \in  A \text{, statement } P \text{ does not hold.}
+\]
 
 Therefore, to form the negation of statement (*), one replaces the quantifier ``for every'' by the quantifier ``for at least one,'' and one replaces statement \(P\) by its negation.
 
 The process works in reverse just as well; the negation of the statement
 
 \[
-\text{ For at least one }x \in  A\text{ , statement }Q\text{ holds, }
+\text{ For at least one }x \in A\text{ , statement }Q\text{ holds, }
 \]
 
 is the statement
 
-For every \(x \in  A\) , statement \(Q\) does not hold.
+\[
+\text{For every } x \in A \text{, statement } Q \text{ does not hold.}
+\]
 
 \section*{The Difference of Two Sets}
 
@@ -329,7 +331,6 @@ A - \left( {B \cap  C}\right)  = \left( {A - B}\right)  \cup  \left( {A - C}\rig
 We leave it to you to check these rules. One can state other rules of set theory, but these are the most important ones. DeMorgan's laws are easier to remember if you verbalize them as follows:
 
 The complement of the union equals the intersection of the complements.
-
 The complement of the intersection equals the union of the complements.
 
 \section*{Collections of Sets}
@@ -572,6 +573,7 @@ It is denoted by \(f \mid  {A}_{0}\) , which is read `` \(f\) restricted to \({A
 \end{definition}
 
 
+\begin{centeredblock}
 \begin{example} Let \(\mathbb{R}\) denote the real numbers and let \({\bar{\mathbb{R}}}_{ + }\) denote the nonnegative reals. Consider the functions
 
 \(f : \mathbb{R} \rightarrow  \mathbb{R}\;\) defined by \(\;f\left( x\right)  = {x}^{2},\)
@@ -583,6 +585,8 @@ It is denoted by \(f \mid  {A}_{0}\) , which is read `` \(f\) restricted to \({A
 \(k.{\overline{\mathbb{R}}}_{ + } \rightarrow  {\overline{\mathbb{R}}}_{ + }\;\) defined by \(\;k\left( x\right)  = {x}^{2}\) .
 
 The function \(g\) is different from the function \(f\) because their rules are different subsets of \(\mathbb{R} \times  \mathbb{R}\) ; it is the restriction of \(f\) to the set \({\overline{\mathbb{R}}}_{ + }\) . The function \(h\) is also different from \(f\) , even though their rules are the same set, because the range specified for \(h\) is different from the range specified for \(f\) . The function \(k\) is different from all of these. These functions are pictured in Figure 2.1
+\end{example}
+\end{centeredblock}
 
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/2.1.jpg}
@@ -592,9 +596,10 @@ The function \(g\) is different from the function \(f\) because their rules are 
 Figure 2.1
 
 Restricting the domain of a function and changing its range are two ways of forming a new function from an old one. Another way is to form the \idx{Composite: of functions} composite of two functions.
-\end{example}
 
-\begin{definition} Given functions \(f : A \rightarrow  B\) and \(g : B \rightarrow  C\) , we define the composite \(g \circ  f\) of \(f\) and \(g\) as the function \(g \circ  f : A \rightarrow  C\) defined by the equation \(\left( {g \circ  f}\right) \left( a\right)  =\)  \(g\left( {f\left( a\right) }\right)\) .
+
+\begin{definition}
+    Given functions \(f : A \rightarrow  B\) and \(g : B \rightarrow  C\) , we define the composite \(g \circ  f\) of \(f\) and \(g\) as the function \(g \circ  f : A \rightarrow  C\) defined by the equation \(\left( {g \circ  f}\right) \left( a\right)  =\)  \(g\left( {f\left( a\right) }\right)\) .
 \end{definition}
 
 
@@ -615,20 +620,19 @@ Note that \(g \circ  f\) is defined only when the range of \(f\) equals the doma
 
 Figure 2.2
 
-\begin{example} The composite of the function \(f.\mathbb{R} \rightarrow  \mathbb{R}\) given by \(f\left( x\right)  = 3{x}^{2} + 2\) and the function \(g : \mathbb{R} \rightarrow  \mathbb{R}\) given by \(g\left( x\right)  = {5x}\) is the function \(g \circ  f : \mathbb{R} \rightarrow  \mathbb{R}\) given by
-
-\[
-\left( {g \circ  f}\right) \left( x\right)  = g\left( {f\left( x\right) }\right)  = g\left( {3{x}^{2} + 2}\right)  = 5\left( {3{x}^{2} + 2}\right) .
-\]
-
-The composite \(f \circ  g\) can also be formed in this case; it is the quite different function \(f \circ  g : \mathbb{R} \rightarrow  \mathbb{R}\) given by
-
-\[
-\left( {f \circ  g}\right) \left( x\right)  = f\left( {g\left( x\right) }\right)  = f\left( {5x}\right)  = 3{\left( 5x\right) }^{2} + 2.
-\]
+\begin{example}
+    The composite of the function \(f.\mathbb{R} \rightarrow  \mathbb{R}\) given by \(f\left( x\right)  = 3{x}^{2} + 2\) and the function \(g : \mathbb{R} \rightarrow  \mathbb{R}\) given by \(g\left( x\right)  = {5x}\) is the function \(g \circ  f : \mathbb{R} \rightarrow  \mathbb{R}\) given by
+    \[
+    \left( {g \circ  f}\right) \left( x\right)  = g\left( {f\left( x\right) }\right)  = g\left( {3{x}^{2} + 2}\right)  = 5\left( {3{x}^{2} + 2}\right) .
+    \]
+    The composite \(f \circ  g\) can also be formed in this case; it is the quite different function \(f \circ  g : \mathbb{R} \rightarrow  \mathbb{R}\) given by
+    \[
+    \left( {f \circ  g}\right) \left( x\right)  = f\left( {g\left( x\right) }\right)  = f\left( {5x}\right)  = 3{\left( 5x\right) }^{2} + 2.
+    \]
 \end{example}
 
-\begin{definition} A function \(f : A \rightarrow  B\) is said to be injective (or one-to-one) if for each pair of distinct points of \(A\) , their images under \(f\) are distinct. It is said to be surjective (or \(f\) is said to map \(A\) onto \(B\) ) if every element of \(B\) is the image of some element of \(A\) under the function \(f\) . If \(f\) is both injective and surjective, it is said to be bijective (or is called a \idx{one-to-one correspondence}).
+\begin{definition}
+    A function \(f : A \rightarrow  B\) is said to be injective (or one-to-one) if for each pair of distinct points of \(A\) , their images under \(f\) are distinct. It is said to be surjective (or \(f\) is said to map \(A\) onto \(B\) ) if every element of \(B\) is the image of some element of \(A\) under the function \(f\) . If \(f\) is both injective and surjective, it is said to be bijective (or is called a \idx{one-to-one correspondence}).
 \end{definition}
 
 
