@@ -1,12 +1,12 @@
 \chapter{The Tychonoff Theorem}
 
-We now return to a problem we left unresolved in Chapter 3. We shall prove the Tychonoff theorem, to the effect that arbitrary products of compact spaces are compact. The proof makes use of Zorn's Lemma (see §11). An alternate proof, which relies instead on the well-ordering theorem, is outlined in the exercises.
+We now return to a problem we left unresolved in Chapter 3. We shall prove the \idx{Tychonoff theorem}, to the effect that arbitrary products of compact spaces are compact. The proof makes use of Zorn's Lemma (see §11). An alternate proof, which relies instead on the well-ordering theorem, is outlined in the exercises.
 
 The Tychonoff theorem is of great usefulness to analysts (less so to geometers). We apply it in §38 to construct the Stone-Čech compactification of a completely regular space, and in \(\$ {47}\) in proving the general version of Ascoli’s theorem.
 
 \section*{§ 37 The Tychonoff Theorem}
 
-Like the Urysohn lemma, the Tychonoff theorem is what we call a "deep" theorem. Its proof involves not one but several original ideas; it is anything but straightforward. We shall discuss the crucial ideas of the proof in some detail before turning to the proof itself.
+Like the Urysohn lemma, the Tychonoff theorem is what we call a ``deep'' theorem. Its proof involves not one but several original ideas; it is anything but straightforward. We shall discuss the crucial ideas of the proof in some detail before turning to the proof itself.
 
 In Chapter 3, we proved the product \(X \times  Y\) of two compact spaces to be compact. For that proof the open covering formulation of compactness was quite satisfactory. Given an open covering of \(X \times  Y\) by basis elements, we covered each slice \(x \times  Y\) by finitely many of them, and proceeded from that to construct a finite covering of \(X \times  Y\) .
 
@@ -35,11 +35,11 @@ does not lie in the intersection of the sets \(A\) .
 
 Figure 37.1
 
-"Aha!" you say,"you made a bad choice. If after choosing \({x}_{1} = \frac{1}{2}\) you had chosen \({x}_{2} = \frac{2}{3}\) , then you would have found a point in \(\mathop{\bigcap }\limits_{{A \in  \mathcal{A}}}A\) ." The difficulty with our tentative proof is that it gave us too much freedom in picking \({x}_{1}\) and \({x}_{2}\) ; it allowed us to make a "bad" choice instead of a "good" choice.
+``Aha!'' you say,''you made a bad choice. If after choosing \({x}_{1} = \frac{1}{2}\) you had chosen \({x}_{2} = \frac{2}{3}\) , then you would have found a point in \(\mathop{\bigcap }\limits_{{A \in  \mathcal{A}}}A\) .'' The difficulty with our tentative proof is that it gave us too much freedom in picking \({x}_{1}\) and \({x}_{2}\) ; it allowed us to make a ``bad'' choice instead of a ``good'' choice.
 
 How can we alter the proof so as to avoid this difficulty?
 
-This question leads to the second idea of the proof: Perhaps if we expand the collection \(\mathcal{A}\) (retaining the finite intersection property, of course), that expansion will restrict the choices of \({x}_{1}\) and \({x}_{2}\) sufficiently that we will be forced to make the "right" choice. To illustrate, suppose that in the previous example we expand the collection \(\mathcal{A}\) to the collection \(\mathcal{D}\) consisting of all closed elliptical regions bounded by ellipses that have \(p = \left( {\frac{1}{3},\frac{1}{3}}\right)\) as one focus and any point of the line segment \({pq}\) as the other focus. This collection is illustrated in Figure 37.2. The new collection \(\mathcal{D}\) still has the finite intersection property. But if you try to choose a point \({x}_{1}\) in
+This question leads to the second idea of the proof: Perhaps if we expand the collection \(\mathcal{A}\) (retaining the finite intersection property, of course), that expansion will restrict the choices of \({x}_{1}\) and \({x}_{2}\) sufficiently that we will be forced to make the ``right'' choice. To illustrate, suppose that in the previous example we expand the collection \(\mathcal{A}\) to the collection \(\mathcal{D}\) consisting of all closed elliptical regions bounded by ellipses that have \(p = \left( {\frac{1}{3},\frac{1}{3}}\right)\) as one focus and any point of the line segment \({pq}\) as the other focus. This collection is illustrated in Figure 37.2. The new collection \(\mathcal{D}\) still has the finite intersection property. But if you try to choose a point \({x}_{1}\) in
 
 \[
 \mathop{\bigcap }\limits_{{D \in  \mathcal{D}}}\overline{{\pi }_{1}\left( D\right) }
@@ -54,7 +54,7 @@ the only possible choice for \({x}_{1}\) is \(\frac{1}{3}\) Similarly, the only 
 
 Figure 37.2
 
-Now of course in this example we chose \(\mathcal{D}\) carefully so that the proof would work. What hope can we have for choosing \(\mathcal{D}\) correctly in general? Here is the third idea of the proof: Why not simply choose \(\mathcal{D}\) to be a collection that is "as large as possible"- so that no larger collection has the finite intersection property—and see whether such a \(\mathcal{D}\) will work? It is not at all obvious that such a collection \(\mathcal{D}\) exists; to prove it, we must appeal to Zorn’s lemma. But after we prove that \(\mathcal{D}\) exists, we shall in fact be able to show that \(\mathcal{D}\) is large enough to force the proper choices on us.
+Now of course in this example we chose \(\mathcal{D}\) carefully so that the proof would work. What hope can we have for choosing \(\mathcal{D}\) correctly in general? Here is the third idea of the proof: Why not simply choose \(\mathcal{D}\) to be a collection that is ``as large as possible''- so that no larger collection has the finite intersection property—and see whether such a \(\mathcal{D}\) will work? It is not at all obvious that such a collection \(\mathcal{D}\) exists; to prove it, we must appeal to Zorn’s lemma. But after we prove that \(\mathcal{D}\) exists, we shall in fact be able to show that \(\mathcal{D}\) is large enough to force the proper choices on us.
 
 A final remark. The assumption that the elements of the collection \(\mathcal{A}\) were closed sets was irrelevant in this discussion. For even if the set \(A \in  \mathcal{A}\) is closed, the set \({\pi }_{1}\left( A\right)\) need not be closed, so we had to take its closure in order to apply the closed set formulation of compactness. Therefore, we may as well begin with an arbitrary collection of subsets of \(X\) having the finite intersection property, and prove that the intersection of their closures is nonempty. This approach actually proves to be more convenient.
 
@@ -64,7 +64,7 @@ A final remark. The assumption that the elements of the collection \(\mathcal{A}
 We often say that a collection \(\mathcal{D}\) satisfying the conclusion of this theorem is maximal with respect to the finite intersection property
 
 \begin{proof}As you might expect, we construct \(\mathcal{D}\) by using Zorn’s lemma. It states that, given a set \(A\) that is strictly partially ordered, in which every simply ordered subset has an upper bound, \(A\) itself has a maximal element.
-The set \(A\) to which we shall apply Zorn’s lemma is not a subset of \(X\) , nor even a collection of subsets of \(X\) , but a set whose elements are collections of subsets of \(X\) . For purposes of this proof, we shall call a set whose elements are collections of subsets of \(X\) a "superset" and shall denote it by an outline letter. To summarize the rotation:
+The set \(A\) to which we shall apply Zorn’s lemma is not a subset of \(X\) , nor even a collection of subsets of \(X\) , but a set whose elements are collections of subsets of \(X\) . For purposes of this proof, we shall call a set whose elements are collections of subsets of \(X\) a ``\idx{superset}'' and shall denote it by an outline letter. To summarize the rotation:
 
 \(c\) is an element of \(X\) .
 
@@ -76,7 +76,7 @@ The set \(A\) to which we shall apply Zorn’s lemma is not a subset of \(X\) , 
 
 Now by hypothesis, we have a collection \(\mathcal{A}\) of subsets of \(X\) that has the finite intersection property. Let \(\mathbf{A}\) denote the superset consisting of all collections \(\mathcal{B}\) of subsets of \(X\) such that \(\mathcal{B} \supset  \mathcal{A}\) and \(\mathcal{B}\) has the finite intersection property. We use proper inclusion \(\subsetneq\) as our strict partial order on \(\mathbf{A}\) . To prove our lemma, we need to show that \(\mathbf{A}\) has a maximal element \(\mathcal{D}\) .
 
-In order to apply Zorn’s lemma, we must show that if \(\mathbb{B}\) is a "subsuperset" of \(\mathbf{A}\) that is simply ordered by proper inclusion, then \(\mathbb{B}\) has an upper bound in \(\mathbb{A}\) . We shall show in fact that the collection
+In order to apply Zorn’s lemma, we must show that if \(\mathbb{B}\) is a ``subsuperset'' of \(\mathbf{A}\) that is simply ordered by proper inclusion, then \(\mathbb{B}\) has an upper bound in \(\mathbb{A}\) . We shall show in fact that the collection
 
 \[
 \mathcal{C} = \mathop{\bigcup }\limits_{{\mathcal{B} \in  \mathbb{B}}}\mathcal{B}
@@ -156,7 +156,7 @@ It follows from (b) of Lemma 37.2 that every subbasis element containing \(\math
 
 (c) Show that if \(X\) satisfies the \({T}_{1}\) axiom, there is at most one point belonging to \(\mathop{\bigcap }\limits_{{D \in  \mathcal{D}}}\bar{D}\) .
 
-2. A collection \(\mathcal{A}\) of subsets of \(X\) has the countable intersection property if every countable intersection of elements of \(\mathcal{A}\) is nonempty. Show that \(X\) is a Lindelöf space if and only if for every collection \(\mathcal{A}\) of subsets of \(X\) having the countable intersection property,
+2. A collection \(\mathcal{A}\) of subsets of \(X\) has the \idx{countable intersection property} if every countable intersection of elements of \(\mathcal{A}\) is nonempty. Show that \(X\) is a Lindelöf space if and only if for every collection \(\mathcal{A}\) of subsets of \(X\) having the countable intersection property,
 
 \section*{\(\mathop{\bigcap }\limits_{{A \in  A}}\bar{A}\)}
 
@@ -231,7 +231,7 @@ We recall the following definition
 
 If \(X\) has a compactification \(Y\) , then \(X\) must be completely regular, being a subspace of the completely regular space \(Y\) . Conversely, if \(X\) is completely regular, then \(X\) has a compactification. For \(X\) can be imbedded in the compact Hausdorff space \({\left\lbrack  0,1\right\rbrack  }^{J}\) for some \(J\) , and any such imbedding gives rise to a compactification of \(X\) , as the following lemma shows
 
-\begin{lemma} Let \(X\) be a space; suppose that \(h : X \rightarrow  Z\) is an imbedding of \(X\) in the compact Hausdorff space \(Z\) . Then there exists a corresponding compactification \(Y\) of \(X\) ; it has the property that there is an imbedding \(H : Y \rightarrow  Z\) that equals \(h\) on \(X\) . The compactification \(Y\) is uniquely determined up to equivalence.
+\begin{lemma} Let \(X\) be a space; suppose that \(h : X \rightarrow  Z\) is an imbedding of \(X\) in the compact Hausdorff space \(Z\) . Then there exists a corresponding compactification \(Y\) of \(X\) ; it has the property that there is an imbedding \(H : Y \rightarrow  Z\) that equals \(h\) on \(X\) . The compactification \(Y\) is uniquely determined up to \idx{Equivalence of compactifications} equivalence.
 \end{lemma}
 
 We call \(Y\) the compactification induced by the imbedding \(h\) .
@@ -262,7 +262,7 @@ h\left( \iota \right)  = \left( {\cos {2\pi \iota }}\right)  \times  \left( {\si
 The compactification induced by the imbedding \(h\) is equivalent to the one-point compactification of \(X\)
 \end{example}
 
-\begin{example} Let \(Y\) be the space \(\left\lbrack  {0,1}\right\rbrack\) Then \(Y\) is a compacufication of \(X\) , it is obtained by "adding one point at each end of(0,1)"
+\begin{example} Let \(Y\) be the space \(\left\lbrack  {0,1}\right\rbrack\) Then \(Y\) is a compacufication of \(X\) , it is obtained by ``adding one point at each end of(0,1)''
 \end{example}
 
 \begin{example} Consider the square \({\left\lbrack  -1,1\right\rbrack  }^{2}\) in \({\mathbb{R}}^{2}\) and let \(h\;\left( {0,1}\right)  \rightarrow  {\left\lbrack  -1,1\right\rbrack  }^{2}\) be the map
@@ -287,7 +287,7 @@ If \(Y\) is a compactification of \(X\) , under what conditions can a continuous
 exist and are equal.
 \end{example}
 
-For the "the two-point compactification" of \(X\) considered in Example 2, the function \(f\) is extendable if and only if both these limits simply exist
+For the ``the two-point compactification'' of \(X\) considered in Example 2, the function \(f\) is extendable if and only if both these limits simply exist
 
 For the compactification of Example 3, extensions exist for a still broader class of functions It is easy to see that \(f\) is extendable if both the above limits exist But the function \(f\left( x\right)  = \sin \left( {1/x}\right)\) is also extendable to this compactification. Let \(H\) be the imbedding of \(Y\) in \({\mathbb{R}}^{2}\) that equals \(h\) on the subspace \(X\) Then the composite map
 
@@ -369,9 +369,9 @@ The composite \({f}_{1} \circ  {f}_{2} : {Y}_{1} \rightarrow  {Y}_{1}\) has the 
 
 4. Let \(Y\) be an arbitrary compactification of \(X\) ; let \(\beta \left( X\right)\) be the Stone-Čech compactification. Show there is a continuous surjective closed map \(g : \beta \left( X\right)  \rightarrow  Y\) that equals the identity on \(X\)
 
-[This exercise makes precise what we mean by saying that \(\beta \left( X\right)\) is the "maximal" compactification of \(X\) . It shows that every compactification of \(X\) is equivalent to a quotient space of \(\beta \left( X\right)\) .]
+[This exercise makes precise what we mean by saying that \(\beta \left( X\right)\) is the ``maximal'' compactification of \(X\) . It shows that every compactification of \(X\) is equivalent to a quotient space of \(\beta \left( X\right)\) .]
 
-5. (a) Show that every continuous real-valued function defined on \({S}_{\Omega }\) is "eventually constant." [Hint First prove that for each \(\epsilon\) , there is an element \(\alpha\) of \({S}_{\Omega }\) such that \(\left| {f\left( \beta \right)  - f\left( \alpha \right) }\right|  < \epsilon\) for all \(\beta  > \alpha\) Then let \(\epsilon  = 1/n\) for \(n \in  {\mathbb{Z}}_{ + }\) and consider the corresponding points \(\left. {{\alpha }_{n}\text{ . }}\right\rbrack\)
+5. (a) Show that every continuous real-valued function defined on \({S}_{\Omega }\) is ``eventually constant.'' [Hint First prove that for each \(\epsilon\) , there is an element \(\alpha\) of \({S}_{\Omega }\) such that \(\left| {f\left( \beta \right)  - f\left( \alpha \right) }\right|  < \epsilon\) for all \(\beta  > \alpha\) Then let \(\epsilon  = 1/n\) for \(n \in  {\mathbb{Z}}_{ + }\) and consider the corresponding points \(\left. {{\alpha }_{n}\text{ . }}\right\rbrack\)
 
 (b) Show that the one-point compactification of \({S}_{\Omega }\) and the Stone-Čech compactification are equivalent.
 
@@ -399,4 +399,4 @@ The composite \({f}_{1} \circ  {f}_{2} : {Y}_{1} \rightarrow  {Y}_{1}\) has the 
 
 (ii) If \(f : X \rightarrow  Y\) and \(g : Y \rightarrow  Z\) , then \(\beta \left( {g \circ  f}\right)  = \beta \left( g\right)  \circ  \beta \left( f\right)\) .
 
-These properties tell us that the correspondence we have constructed is what is called a functor; it is a functor from the "category" of completely regular spaces and continuous maps of such spaces, to the "category" of compact Hausdorff spaces and continuous maps of such spaces. You will see these properties again in Part II of the book; they are fundamental in algebra and in algebraic topology.
+These properties tell us that the correspondence we have constructed is what is called a functor; it is a functor from the ``category'' of completely regular spaces and continuous maps of such spaces, to the ``category'' of compact Hausdorff spaces and continuous maps of such spaces. You will see these properties again in Part II of the book; they are fundamental in algebra and in algebraic topology.
