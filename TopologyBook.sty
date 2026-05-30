@@ -424,6 +424,7 @@
 \makeindex
 \makeatletter
 \patchcmd{\theindex}{\@makeschapterhead{\indexname}}{\@makeschapterhead{\indexname}\vspace*{6.5cm}\addcontentsline{toc}{chapter}{\indexname}}{}{}
+\patchcmd{\theindex}{\@mkboth{\MakeUppercase\indexname}{\MakeUppercase\indexname}}{\@mkboth{\indexname}{\indexname}}{}{}
 \patchcmd{\tableofcontents}{\@starttoc{toc}}{\vspace*{6.5cm}\@starttoc{toc}}{}{}
 \makeatother
 % 索引字母标题格式
