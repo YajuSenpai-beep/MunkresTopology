@@ -290,6 +290,71 @@ xelatex --shell-escape Topology_by_Munkres.tex
 
 > 注意：`A \cdot B`（群运算）为正确用法，Type C 修复中未改动。
 
+### Ch1 引号 OCR 校准（2026.05.31）
+
+引号问题是 OCR 转换中的系统性错误，分三类：
+
+#### 类型 D：`,''` → `, ``（逗号 + 闭引号误读为开引号）
+
+OCR 将 `, ``（逗号 + 左双引号）误读为 `,''`（逗号 + 右双引号），导致引号方向错误。
+
+| # | 行号 | 原文本 | 修复 |
+|---|------|--------|------|
+| D-1 | 98 | `the sentence,''Every element` | `the sentence, ``Every element` |
+| D-2 | 98 | `formally,''For every object` | `formally, ``For every object` |
+| D-3 | 117 | `the form,''If \(P\)` | `the form, ``If \(P\)` |
+| D-4 | 125 | `as saying,''If \(x \in \varnothing\)` | `as saying, ``If \(x \in \varnothing\)` |
+| D-5 | 1746 | `by saying,''Let \(A\) be the set` | `by saying, ``Let \(A\) be the set` |
+
+#### 类型 E：` `` … `` Y` → ` `` … '' Y`（引号中间被 OCR 误认为开引号）
+
+OCR 将公式后接续文本前的闭引号 `''` 误读为开引号 ` `` `。关键特征：第二个 ` `` ` 后跟的不是新引文，而是 `means` / `can` / `is` / `and` 等接续词。
+
+| # | 行号 | 原文本 | 修复 |
+|---|------|--------|------|
+| E-1 | 57 | ` `` \(P\) or \(Q\) `` means` | ` `` \(P\) or \(Q\) '' means` |
+| E-2 | 66 | ` `` \(P\) or \(Q\) `` always means` | ` `` \(P\) or \(Q\) '' always means` |
+| E-3 | 117 | ` `` \(x > 0\) `` (called the hypothesis` | ` `` \(x > 0\) '' (called the hypothesis` |
+| E-4 | 117 | ` `` \({x}^{3} \neq 0\) `` (called the conclusion` | ` `` \({x}^{3} \neq 0\) '' (called the conclusion` |
+| E-5 | 158 | ` ``not \(Q\) `` stands for` | ` ``not \(Q\) '' stands for` |
+| E-6 | 160 | ` `` \(P \Rightarrow Q\) `` can fail` | ` `` \(P \Rightarrow Q\) '' can fail` |
+| E-7 | 160 | ` ``not \(Q\) `` is true` | ` ``not \(Q\) '' is true` |
+| E-8 | 160 | ` ``not \(P\) `` is false` | ` ``not \(P\) '' is false` |
+| E-9 | 160 | ` `` not \(Q \Rightarrow\) not \(P\) `` as a proof` | ` `` not \(Q \Rightarrow\) not \(P\) '' as a proof` |
+| E-10 | 478 | ` ``Let \(f\) … = {x}^{3} + 1\) `` is no longer` | ` ``Let \(f\) … = {x}^{3} + 1\) '' is no longer` |
+| E-11 | 696 | ` `` \(x\) is in the relation \(D\) to \(y\) `` and` | ` `` \(x\) is in the relation \(D\) to \(y\) '' and` |
+| E-12 | 696 | ` `` \(x\) is a descendant of \(y\) `` mean` | ` `` \(x\) is a descendant of \(y\) '' mean` |
+| E-13 | 820 | ` ``either \(x < y\) or \(x = y\) ``; and` | ` ``either \(x < y\) or \(x = y\) ''; and` |
+
+#### 类型 F：Unicode 智能引号 → LaTeX 引号
+
+OCR 产生 Unicode 左双引号 `"` (U+201C) 而非 LaTeX ` `` `。
+
+| # | 行号 | 原文本 | 修复 |
+|---|------|--------|------|
+| F-1 | 376 | `"If \(x < 0\)` | ` ``If \(x < 0\)` |
+
+#### 前期已修复（直引号）
+
+| # | 行号 | 原文本 | 修复 | 类型 |
+|---|------|--------|------|------|
+| — | 49 | `"or"` → ` ``or'' ` | section 标题 | 直引号 |
+| — | 70 | `"If ... Then"` → ` ``If ... Then'' ` | section 标题 | 直引号 |
+| — | 480 | `"range"` / `"image set''` → ` ``range'' ` / ` ``image set'' ` | 脚注 | 直引号 + 混用 |
+
+#### 统计
+
+| 类型 | 数量 | 说明 |
+|------|------|------|
+| D：`,''` → `, `` ` | 5 | 闭引号误为开引号 |
+| E：` `` X `` Y` → ` `` X '' Y` | 13 | 中间闭引号误为开引号 |
+| F：Unicode → LaTeX | 1 | 智能引号 |
+| 直引号 | 3 | section/脚注直引号 |
+
+**合计 22 处引号修复**。修复脚本：`index/_fix_quotes2.js`。
+
+> 注意：以上修复针对 Ch1。其他 13 章可能存在同类问题，需后续统一处理。
+
 ### 前导页 vs 原始 PDF 对照
 
 | 顺序 | 文件 | 内容 | 匹配 |
