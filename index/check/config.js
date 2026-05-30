@@ -1,7 +1,7 @@
 // Validate LaTeX index configuration (.sty, .ist, Makefile, .tex)
 const fs = require('fs');
 const path = require('path');
-const { PROJECT_ROOT, formatSection, heading, pass, fail, warn, info } = require('./utils');
+const { PROJECT_ROOT, formatSection, heading, pass, fail, warn, info } = require('../utils');
 
 function check() {
   const lines = [];

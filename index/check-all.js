@@ -2,13 +2,13 @@
 const { summaryLine, heading } = require('./utils');
 
 const MODULES = [
-  { name: 'Master JSON Validation',              path: './validate-json' },
-  { name: 'Chapter JSON Validation',             path: './validate-chapter-jsons' },
-  { name: 'Chapter-Master Cross-Reference',       path: './crossref-jsons' },
-  { name: 'Index Command Scan',                  path: './scan-commands' },
-  { name: 'Coverage Analysis',                   path: './coverage' },
-  { name: 'Configuration Validation',            path: './check-config' },
-  { name: 'Build Artifact Validation',           path: './check-build' },
+  { name: 'Master JSON Validation',              path: './validate/master-json' },
+  { name: 'Chapter JSON Validation',             path: './validate/chapter-jsons' },
+  { name: 'Chapter-Master Cross-Reference',       path: './validate/crossref' },
+  { name: 'Index Command Scan',                  path: './scan/commands' },
+  { name: 'Coverage Analysis',                   path: './scan/coverage' },
+  { name: 'Configuration Validation',            path: './check/config' },
+  { name: 'Build Artifact Validation',           path: './check/build' },
 ];
 
 if (require.main === module) {
