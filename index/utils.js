@@ -73,7 +73,7 @@ function extractCommands(content) {
     return results;
   }
 
-  findAll('idx{').forEach(m => idx.push(m.arg));
+  findAll('idx').forEach(m => idx.push(m.arg));
   findAll2('idxmath').forEach(m => idxmath.push({ sort: m.arg1, display: m.arg2 }));
   findAll2('idxsub').forEach(m => idxsub.push({ parent: m.arg1, term: m.arg2 }));
 
