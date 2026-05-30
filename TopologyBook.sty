@@ -54,7 +54,7 @@
   {}
 \titlespacing*{\section}{0pt}{2em}{1em}
 \titleformat{name=\section,numberless}
-  {\normalfont\large\bfseries}
+  {\normalfont\Large\bfseries}
   {}
   {0pt}
   {}
@@ -258,25 +258,32 @@
 % ---------- 定理环境 ----------
 \RequirePackage{amsthm}
 \newtheoremstyle{CustomBookMath}%
-  {8pt}{8pt}{}{0pt}%
+  {8pt}{8pt}{\itshape}{0pt}%
   {\bfseries}{}{.25em}%
   {\thmname{#1} \thmnumber{#2} \thmnote{(#3)}}
 \theoremstyle{CustomBookMath}
 \newtheorem{question}{Question}[chapter]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{ucorollary}{Corollary}
+
+\newtheoremstyle{ExampleStyle}%
+  {8pt}{8pt}{\normalfont}{0pt}%
+  {\bfseries}{}{.25em}%
+  {\thmname{#1} \thmnumber{#2} \thmnote{(#3)}}
+\theoremstyle{ExampleStyle}
 \newtheorem{example}{Example}
 \makeatletter
 \@addtoreset{example}{section}
 \makeatother
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}{Lemma}[section]
 \newtheorem{remark}[question]{Remark}
 \newtheorem*{definition}{Definition}
-\newtheorem{corollary}[question]{Corollary}
 \newtheorem{proposition}[question]{Proposition}
 \newtheorem{addendum}[question]{Addendum}
 \newtheorem{property}[question]{Property}
 \let\oldproofname\proofname
-\renewcommand{\proofname}{\upshape\textbf{\oldproofname}}
+\renewcommand{\proofname}{\textsl{\oldproofname}}
 
 % ---------- 目录格式 ----------
 \setcounter{tocdepth}{1}
