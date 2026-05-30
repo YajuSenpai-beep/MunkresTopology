@@ -1,0 +1,432 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{TopologyBook}[2025/03/25 Customized book style]
+
+% ---------- 基础包 ----------
+\RequirePackage[paperwidth=21cm, paperheight=29.7cm, left=1cm, right=1cm, top=1.2cm, bottom=1.5cm, includehead]{geometry}
+\RequirePackage{amsmath}
+\RequirePackage{amsfonts}
+\RequirePackage{amssymb}
+\RequirePackage{fontspec}        % 用于 XeLaTeX 字体配置
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta, calc}
+\RequirePackage{mathrsfs}
+\RequirePackage{xcolor}
+\RequirePackage{xstring}
+
+% ---------- 章节格式（\part） ----------
+\RequirePackage{titlesec}
+\newcommand{\partfontsize}{\fontsize{48}{60}\bfseries\selectfont}
+\titleformat{\part}[display]
+  {\filright\partfontsize}
+  {\partname~\Roman{part}}
+  {20pt}
+  {\partfontsize}
+\titlespacing*{\part}{0.05\textwidth}{\fill}{\fill}[0.05\textwidth]
+\assignpagestyle{\part}{empty}  % 需加载 titlesec 后使用
+\RequirePackage{etoolbox}
+\makeatletter
+\newif\iffirstpart\firstparttrue
+\pretocmd{\part}{%
+  \iffirstpart
+    \pagenumbering{arabic}\setcounter{page}{1}%
+    \firstpartfalse
+  \fi
+}{}{}
+\makeatother
+
+% ---------- 章节标题 ----------
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\raggedright}
+  {\fontsize{25}{30}\selectfont\chaptertitlename\ \thechapter}
+  {2ex}
+  {\Huge}
+\titlespacing*{\chapter}{0pt}{2em}{4em}
+\titleformat{name=\chapter,numberless}[display]
+  {\normalfont\bfseries\raggedright}
+  {}
+  {0pt}
+  {\Huge}
+\titlespacing*{name=\chapter,numberless}{0pt}{2em}{4em}
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\S\thesection}
+  {1em}
+  {}
+\titlespacing*{\section}{0pt}{2em}{1em}
+\titleformat{name=\section,numberless}
+  {\normalfont\large\bfseries}
+  {}
+  {0pt}
+  {}
+\titlespacing{name=\section,numberless}{0pt}{2em}{1em}
+\makeatletter
+\let\orig@star@section\section
+\def\section{\@ifstar{\@star@section}{\orig@star@section}}
+\def\@star@section#1{%
+  \in@{§}{#1}%
+  \ifin@
+    \stepcounter{section}%
+    \noexpandarg\StrBehind{#1}{ }[\sectiontmp]%
+    \expandarg
+    \StrBefore{\sectiontmp}{ }[\secnum]%
+    \StrBehind{\sectiontmp}{ }[\sectionname]%
+    \noexpandarg
+    \in@{*}{#1}%
+    \ifin@
+      \noexpandarg\StrDel{#1}{*}[\cleanarg]%
+      \orig@star@section*{\raisebox{0.15ex}{\small *}\cleanarg}%
+      \phantomsection
+      \addcontentsline{toc}{section}{\llap{\raisebox{0.15ex}{\small *}}\secnum\quad\sectionname}%
+    \else
+      \orig@star@section*{#1}%
+      \phantomsection
+      \addcontentsline{toc}{section}{\secnum\quad\sectionname}%
+    \fi
+    \markright{\sectionname}%
+  \else
+    \in@{*}{#1}%
+    \ifin@
+      \noexpandarg\StrBehind{#1}{ }[\sectiontitle]%
+      \orig@star@section*{\raisebox{0.15ex}{\small *}\ \sectiontitle}%
+      \phantomsection
+      \addcontentsline{toc}{section}{\llap{\raisebox{0.15ex}{\small *}}\sectiontitle}%
+      \markright{\sectiontitle}%
+    \else
+      \orig@star@section*{#1}%
+    \fi
+  \fi
+}
+\makeatother
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}
+  {}
+  {0pt}
+  {}
+\titlespacing*{\subsection}{0pt}{\parskip}{0pt}
+
+% ---------- 文本框 ----------
+\RequirePackage[most]{tcolorbox}
+\definecolor{mygray}{RGB}{240,240,240}
+\tcbset{
+  colback=mygray,
+  boxrule=0pt,
+}
+
+% ---------- 图形路径 ----------
+\RequirePackage{graphicx}
+\graphicspath{{./images/}}
+
+% ---------- 自定义命令 ----------
+\newcommand{\HRule}{\begin{center}\rule{0.9\linewidth}{0.2mm}\end{center}}
+\newcommand{\customfootnote}[1]{%
+  \let\thefootnote\relax\footnotetext{#1}%
+}
+
+% ---------- backmatter：只取消 Ch.X，保留其他页眉 ----------
+\makeatletter
+\renewcommand{\backmatter}{%
+  \clearpage
+  \@mainmatterfalse
+  \fancyhead[RE]{}%
+  \fancyhead[LO]{}%
+}
+\makeatother
+
+% ---------- 页面布局调整 ----------
+\raggedbottom % 允许页面底部不对齐
+\makeatletter
+\renewcommand{\mainmatter}{
+  \clearpage
+  \@mainmattertrue
+  \@openrighttrue
+  \setcounter{chapter}{0}
+  \pagestyle{fancy}
+  \fancyhead{}
+  \fancyhead[LO]{\S\ \thesection}
+  \fancyhead[RO]{\textsl{\rightmark}\hspace{4em}\textbf{\thepage}}
+  \fancyhead[LE]{\textbf{\thepage}\hspace{2em}\textsl{\leftmark}}
+  \fancyhead[RE]{Ch.\,\thechapter}
+  \fancyfoot[C]{}
+  \typeout{>>> MAINMATTER: pagestyle=fancy, thechapter=\thechapter}%
+  \fancypagestyle{plain}{
+    \fancyhead{}
+    \fancyfoot{}
+  }
+}
+\makeatother
+
+% ---------- 页眉 ----------
+\RequirePackage{fancyhdr}
+\setlength{\headheight}{14.5pt}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyfoot[C]{}
+\fancypagestyle{plain}{
+  \fancyhead{}
+  \fancyfoot[C]{\thepage}
+}
+\fancypagestyle{frontmatter}{%
+  \fancyhead{}
+  \fancyfoot[C]{\thepage}%
+}
+\makeatletter
+\renewcommand{\frontmatter}{%
+  \cleardoublepage
+  \@mainmatterfalse
+  \@openrighttrue
+  \pagenumbering{roman}%
+  \setcounter{page}{0}%
+  \pagestyle{frontmatter}%
+}
+\makeatother
+\renewcommand{\thesection}{\arabic{section}}
+\counterwithout{section}{chapter}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\typeout{>>> SECTIONMARK: [#1]}\markright{#1}}
+
+% ---------- 参考文献 ----------
+\RequirePackage[backend=biber, style=alphabetic, sorting=biborder]{biblatex}
+\setlength{\bibitemsep}{1\baselineskip}
+\setlength{\bibparsep}{0.4\baselineskip}
+\setlength{\biblabelsep}{2em}
+\addbibresource{Biblography.bib}
+\DeclareSortingTemplate{biborder}{
+  \sort{\field{sortkey}}
+}
+\defbibheading{bibliography}[\bibname]{%
+  \chapter*{#1}%
+  \addtocontents{toc}{\vskip 1.5em}%
+  \addcontentsline{toc}{chapter}{#1}%
+  \vspace*{6.5cm}%
+  \markboth{#1}{#1}}
+\DeclareLabelalphaTemplate{
+  \labelelement{
+    \field[final]{shorthand}
+    \field{labelname}
+    \field{year}
+  }
+}         % 注意：路径请自行调整
+
+% ---------- 数学符号快捷命令 ----------
+\newcommand{\C}[1]{\ensuremath{\mathcal{#1}}}
+\newcommand{\mc}[1]{\ensuremath{\mathscr{#1}}}
+\newcommand{\B}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand{\FF}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\F}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\R}[1]{\ensuremath{\mathrm{#1}}}
+\newcommand{\K}[1]{\ensuremath{\mathfrak{#1}}}
+\newcommand\RR{{\B{R}}}
+\newcommand\NN{{\B{N}}}
+\newcommand\CC{{\B{C}}}
+\newcommand\QQ{{\B{Q}}}
+\newcommand\ZZ{{\B{Z}}}
+\newcommand\CP{\mathbb{CP}}
+\newcommand\sseq{\subseteq}
+\newcommand\mrg[1]{\mathring{#1}}
+\newcommand\sime{\backsimeq}
+\newcommand\simee{\cong}
+\newcommand{\equ}{\ensuremath{\Longleftrightarrow}\,}
+\newcommand{\ma}{\ensuremath{\longmapsto}}
+\newcommand{\ns}{\ensuremath{\varnothing}}
+\newcommand{\A}{\ensuremath{\forall}}
+\newcommand{\dd}{\ensuremath{\mathchoice{\:}{\mspace{1.5mu}}{}{}\mathrm{d}}}
+
+% ---------- 扩展箭头命令（来自原“优化”样式）----------
+\ExplSyntaxOn
+\cs_new:Npn \ext_arrow_set:nn #1#2 
+  { \exp_args:Nee \NewDocumentCommand{\use:c {#1}}{sO{}D(){}}
+      {
+        \IfBooleanTF{##1}
+          {#2[\text{##3}]{\text{##2}}}
+          {#2[##3]{##2}}
+      }
+  }
+\ext_arrow_set:nn {xla}{\xleftarrow}
+\ext_arrow_set:nn {Xla}{\xLeftarrow}
+\ext_arrow_set:nn {xxla}{\xLongleftarrow}
+\ext_arrow_set:nn {xra}{\xrightarrow}
+\ext_arrow_set:nn {Xra}{\xRightarrow}
+\ext_arrow_set:nn {xxra}{\xLongrightarrow}
+\ext_arrow_set:nn {hla}{\xhookleftarrow}
+\ext_arrow_set:nn {hra}{\xhookrightarrow}
+\ExplSyntaxOff
+\let\ra\rightarrow
+\newcommand{\se}{\ensuremath{\backsimeq}}
+\newcommand{\btd}{\bigtriangledown}
+
+% ---------- 定理环境 ----------
+\RequirePackage{amsthm}
+\newtheoremstyle{CustomBookMath}%
+  {8pt}{8pt}{}{0pt}%
+  {\bfseries}{}{.25em}%
+  {\thmname{#1} \thmnumber{#2} \thmnote{(#3)}}
+\theoremstyle{CustomBookMath}
+\newtheorem{question}{Question}[chapter]
+\newtheorem{example}{Example}
+\makeatletter
+\@addtoreset{example}{section}
+\makeatother
+\newtheorem{theorem}[question]{Theorem}
+\newtheorem{lemma}[question]{Lemma}
+\newtheorem{remark}[question]{Remark}
+\newtheorem*{definition}{Definition}
+\newtheorem{corollary}[question]{Corollary}
+\newtheorem{proposition}[question]{Proposition}
+\newtheorem{addendum}[question]{Addendum}
+\newtheorem{property}[question]{Property}
+\let\oldproofname\proofname
+\renewcommand{\proofname}{\upshape\textbf{\oldproofname}}
+
+% ---------- 目录格式 ----------
+\setcounter{tocdepth}{1}
+
+% ---------- 目录 ----------
+\setcounter{tocdepth}{1}
+\makeatletter
+% All chapters: "Chapter N. Title ...... page" + dot leaders
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode\large\bfseries
+      \def\numberline##1{\chaptername~##1\ }%
+      #1\nobreak
+      \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill
+      \hb@xt@\@pnumwidth{\hfil\bfseries #2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+% Part: "Part I Title" without page number (after titlesec init)
+\AddToHook{begindocument/end}{%
+  \renewcommand*\l@part[2]{%
+    \ifnum \c@tocdepth >-2\relax
+      \addpenalty{-\@highpenalty}%
+      \vskip 0.5em \@plus\p@
+      \begingroup
+        \parindent \z@
+        {\leavevmode\Large\bfseries\partname~\MakeUppercase{#1}\par}%
+        \nobreak
+        \vskip 0.3em \@plus\p@
+      \endgroup
+    \fi}%
+  % Section: "N. Title ...... page" + dot leaders, one size larger
+  \renewcommand*\l@section[2]{%
+    \ifnum \c@tocdepth >\z@
+      \addpenalty{-\@highpenalty}%
+      \vskip 0.1em \@plus\p@
+      \begingroup
+        \parindent \z@ \rightskip \@pnumwidth
+        \parfillskip -\@pnumwidth
+        \leavevmode\large
+        \hskip 1.5em #1\nobreak
+        \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill
+        \hb@xt@\@pnumwidth{\hfil #2}\par
+      \endgroup
+    \fi}%
+}
+\makeatother
+
+% ---------- 字体选项（保留键值选择）----------
+\long\def\IfFontTimesTF#1#2{#2}
+\ExplSyntaxOn
+\keys_define:nn { TopologyBook / option }{
+  font          .choice:,
+  font / times  .code:n = {
+    \ifxetex
+      \setmainfont{Times New Roman}[
+        BoldFont       = Times New Roman Bold,
+        ItalicFont     = Times New Roman Italic,
+        BoldItalicFont = Times New Roman Bold Italic
+      ]
+      % 若系统无 Times New Roman，可改用 TeX Gyre Termes
+      % \setmainfont{TeX Gyre Termes}[
+      %   UprightFont    = *-Regular,
+      %   BoldFont       = *-Bold,
+      %   ItalicFont     = *-Italic,
+      %   BoldItalicFont = *-BoldItalic
+      % ]
+    \else
+      \PackageWarning{TopologyBook}{Times font requires XeLaTeX; falling back to default}
+    \fi
+    \long\def\IfFontTimesTF##1##2{##1}
+    \DeclareTextFontCommand{\textsl}{\itshape}
+    \renewcommand{\slshape}{\itshape}
+  },
+  font / euler  .code:n = {
+    \usepackage[OT1]{eulervm}
+    \DeclareSymbolFont{cmmlargesymbols}{OMX}{cmex}{m}{n}
+    \DeclareSymbolFont{greekletters}{OML}{cmm}{m}{it}
+    \DeclareMathDelimiter{\Newint}{\mathop}{cmmlargesymbols}{"52}{cmmlargesymbols}{"5A}
+    \AddToHook{begindocument}{
+      \renewcommand{\int}{\Newint\nolimits}
+      \DeclareMathSymbol{\kappa}{\mathord}{greekletters}{"14}  
+      \DeclareMathSymbol{\tau}{\mathord}{greekletters}{"1C}
+      \DeclareMathSymbol{\omega}{\mathord}{greekletters}{"21}
+    }
+  },
+  font / ncmr     .code:n = {
+    \usepackage[default]{fontsetup}
+  },
+  font / cmr      .code:n = { },
+  font / unknown  .code:n = {
+    \msg_warning:nnn {TopologyBook} {unknown-font-option, use CMR instead.} {#1}
+  },
+}
+\ProcessKeyOptions[ TopologyBook / option ]
+\ExplSyntaxOff
+
+% ---------- 空白页 ----------
+\newcommand*{\blankpage}{%
+  \vspace*{\fill}
+  {\centering This page intentionally left blank.\par}
+  \vspace{\fill}
+}
+\renewcommand*{\cleardoublepage}{%
+  \clearpage\if@twoside\ifodd\c@page\else
+  \blankpage
+  \thispagestyle{empty}
+  \newpage
+  \if@twocolumn\hbox{}\newpage\fi\fi\fi
+}
+
+% ---------- 超链接 ----------
+\RequirePackage{hyperref}
+\hypersetup{
+  bookmarksnumbered,
+  colorlinks = true,
+  linkcolor = teal,
+  urlcolor = red,
+  citecolor = blue,
+  hyperindex=false,
+  pdfauthor = {Munkres},
+  pdftitle = {Topology_by_Munkres},
+}
+\providecommand\phantomsection{}
+
+% ---------- 索引 ----------
+\usepackage{makeidx}
+\makeindex
+\makeatletter
+\patchcmd{\theindex}{\@makeschapterhead{\indexname}}{\@makeschapterhead{\indexname}\vspace*{6.5cm}}{}{}
+\patchcmd{\tableofcontents}{\@starttoc{toc}}{\vspace*{6.5cm}\@starttoc{toc}}{}{}
+\makeatother
+% 索引字母标题格式
+\newcommand{\lettergroup}[1]{\vspace{1em}\nopagebreak\par\textbf{\Large #1}\par\nopagebreak}
+% 编译命令: makeindex -s Topology_by_Munkres.ist Topology_by_Munkres.idx
+% ---------- 索引自定义格式 ----------
+\newcommand{\idxfmt}[1]{\textbf{\textsl{#1}}}       % 索引条目正文字体格式
+\newcommand{\idx}[1]{\index{#1}\idxfmt{#1}}        % L1索引条目（自动加粗斜体）
+\newcommand{\idxmath}[2]{\index{#1@#2}\idxfmt{#2}} % 数学符号索引条目（#1=排序键,#2=显示）
+\newcommand{\idxsub}[2]{\index{#1!#2}}             % L2子条目
+% 索引页面plain格式由Topology_by_Munkres.tex中\pagestyle{plain}控制
+% 字母标题间距由上面\patchcmd中的\vspace*{7em}控制
+% 字母标题格式由Topology_by_Munkres.ist中的heading_prefix/suffix控制
+% xindy 编译命令: xindy -M texindy -L chinese-pinyin Topology_by_Munkres.idx
+
+% ---------- 节标题 dagger（目录中不显示）----------
+\newcommand{\sectionDagger}{${}^{\dagger}$}
+\endinput

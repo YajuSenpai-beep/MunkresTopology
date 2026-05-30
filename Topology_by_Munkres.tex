@@ -1,0 +1,37 @@
+\documentclass[12pt,openany]{book}
+\usepackage{TopologyBook}   % 加载自定义样式
+\begin{document}
+\frontmatter
+\input{chapters/cover.tex}
+\input{chapters/halftitle.tex}
+\input{chapters/copyright.tex}
+\input{chapters/dedication.tex}
+\addtocontents{toc}{\protect\renewcommand{\protect\sectionDagger}{}}
+\tableofcontents
+\input{chapters/preface.tex}
+\input{chapters/NoteToReader.tex}
+
+\mainmatter
+\part{General Topology}
+\input{chapters/Chapter_1_Set_Theory_and_Logic.tex}
+\input{chapters/Chapter_2_Topological_Spaces_and_Continuous_Functions.tex}
+\input{chapters/Chapter_3_Connectedness_and_Compactness.tex}
+\input{chapters/Chapter_4_Countability_and_Separation_Axioms.tex}
+\input{chapters/Chapter_5_The_Tychonoff_Theorem.tex}
+\input{chapters/Chapter_6_Metrization_Theorems_and_Paracompactness.tex}
+\input{chapters/Chapter_7_Complete_Metric_Spaces_and_Function_Spaces.tex}
+\input{chapters/Chapter_8_Baire_Spaces_and_Dimension_Theory.tex}
+\part{Algebraic Topology}
+\input{chapters/Chapter_9_The_Fundamental_Group.tex}
+\input{chapters/Chapter_10_Separation_Theorems_in_the_Plane.tex}
+\input{chapters/Chapter_11_The_Seifert_van_Kampen_Theorem.tex}
+\input{chapters/Chapter_12_Classification_of_Surfaces.tex}
+\input{chapters/Chapter_13_Classification_of_Covering_Spaces.tex}
+\input{chapters/Chapter_14_Applications_to_Group_Theory.tex}
+
+\backmatter
+\nocite{Dugundji1966}
+\printbibliography
+%\pagestyle{plain}\thispagestyle{plain}
+\printindex
+\end{document}
