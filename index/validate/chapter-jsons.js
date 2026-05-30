@@ -1,7 +1,7 @@
 // Validate chapters/ch*_entries.json structural integrity
 const fs = require('fs');
 const path = require('path');
-const { PROJECT_ROOT, loadJSON, formatSection, heading, pass, fail, warn, info, summaryLine } = require('./utils');
+const { PROJECT_ROOT, loadJSON, formatSection, heading, pass, fail, warn, info, summaryLine } = require('../utils');
 
 function check() {
   const lines = [];
@@ -9,7 +9,7 @@ function check() {
 
   lines.push(formatSection('Chapter JSON Validation'));
 
-  const indexDir = path.join(PROJECT_ROOT, 'index');
+  const indexDir = path.join(PROJECT_ROOT, 'index', 'data');
   const existingFiles = fs.readdirSync(indexDir).filter(f => /^ch\d+_entries\.json$/.test(f));
 
   // Load master for parent resolution of L2 entries
@@ -39,7 +39,7 @@ function check() {
     }
 
     foundCount++;
-    const { data, error } = loadJSON(`index/${filename}`);
+    const { data, error } = loadJSON(`index/data/${filename}`);
     if (error) {
       lines.push(fail(`${chLabel} ${error}`));
       failures++;

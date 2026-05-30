@@ -1,7 +1,7 @@
 // Compare index_entries.json against parsed index.pdf (MinerU output)
 const fs = require('fs');
 const path = require('path');
-const { PROJECT_ROOT, loadJSON, formatSection, heading, pass, fail, warn, info } = require('./utils');
+const { PROJECT_ROOT, loadJSON, formatSection, heading, pass, fail, warn, info } = require('../utils');
 
 // Aggressive LaTeX-to-plain-text normalization for fuzzy matching
 function toPlain(text) {

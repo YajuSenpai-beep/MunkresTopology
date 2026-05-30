@@ -1,7 +1,7 @@
 // Scan .tex chapter files for \idx, \idxsub, \idxmath commands
 const fs = require('fs');
 const path = require('path');
-const { PROJECT_ROOT, extractCommands, formatSection, heading, pass, warn, fail } = require('./utils');
+const { PROJECT_ROOT, extractCommands, formatSection, heading, pass, warn, fail } = require('../utils');
 
 function check() {
   const lines = [];
