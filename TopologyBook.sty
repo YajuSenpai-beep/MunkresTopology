@@ -411,7 +411,7 @@
 \usepackage{makeidx}
 \makeindex
 \makeatletter
-\patchcmd{\theindex}{\@makeschapterhead{\indexname}}{\@makeschapterhead{\indexname}\vspace*{6.5cm}}{}{}
+\patchcmd{\theindex}{\@makeschapterhead{\indexname}}{\@makeschapterhead{\indexname}\vspace*{6.5cm}\addcontentsline{toc}{chapter}{\indexname}}{}{}
 \patchcmd{\tableofcontents}{\@starttoc{toc}}{\vspace*{6.5cm}\@starttoc{toc}}{}{}
 \makeatother
 % 索引字母标题格式

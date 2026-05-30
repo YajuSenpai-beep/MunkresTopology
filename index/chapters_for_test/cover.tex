@@ -1,0 +1,131 @@
+% 定义底色和线条颜色
+\definecolor{covercolor}{HTML}{315758}
+\definecolor{linecolor}{HTML}{D6E19A}
+
+% 定义统一宽度
+\newlength{\patternwidth}
+\setlength{\patternwidth}{14.4cm}
+
+\newfontfamily{\SenatorTall}{SenatorTall.otf}
+\newfontfamily{\RebarBold}{rebar-bold-1.ttf}
+\newfontfamily{\Trajan}{TrajanPro-Regular.otf}
+
+\newcommand{\reversedpattern}{
+    \begin{tikzpicture}[x=0.5\patternwidth/6, y=0.5\patternwidth/6]
+        
+        % 添加径向渐变光源效果 - 放在最底层
+        \shade[inner color=white, outer color=covercolor] (0,0) circle (5.8);
+
+        % 外框正方形
+        \draw[linecolor, line width=3pt] (-6,-6) rectangle (6,6);
+        
+        % 定义正方形大小
+        \def\sqsize{4.0}
+        
+        % 完全逆转的绘制顺序
+        \foreach \angle in {315, 270, 225, 180, 135, 90, 45, 0} {
+            \begin{scope}[rotate=\angle]
+                % 使用底色填充遮盖前面的正方形
+                \fill[covercolor] (0,0) -- (\sqsize,0) -- (\sqsize,\sqsize) -- (0,\sqsize) -- cycle;
+                
+                % 绘制边框
+                \draw[linecolor, line width=2.2pt] (0,0) -- (\sqsize,0) -- (\sqsize,\sqsize) -- (0,\sqsize) -- cycle;
+            \end{scope}
+        }
+        
+        % 添加两条黄色线段
+        % 第一条线段：从中心点出发，长度为4，与x轴夹角为45度
+        \draw[linecolor, line width=2pt] (0,0) -- (45:4);
+        
+        % 用背景色覆盖从交点到(4,0)之间的线段，加宽了线宽
+        % 交点坐标计算：(4, 1.656)
+        \draw[covercolor, line width=3.5pt] (4,1.656) -- (4,0);
+        
+        % 第二条线段：从第一条线段的终点出发，与水平线夹角为-45度，长度为4
+        \draw[linecolor, line width=2pt] (45:4) -- ++(-45:4);
+        
+        % 添加从中心到点(4,0)的黄色线段
+        \draw[linecolor, line width=2pt] (0,0) -- (4,0);
+        
+        % 添加从(4,0)到(4,-2)的黄色线段
+        \draw[linecolor, line width=2pt] (4,0.03) -- (4,-2);
+
+        % 使用函数控制亮度的连续光照效果
+        \begin{scope}
+            \clip (-6,-6) rectangle (6,6); % 限制效果在边界内
+            
+            % 使用函数定义连续的光照强度
+            \foreach \i in {0,1,...,50} { % 减少迭代次数以提高性能
+                \pgfmathsetmacro{\radius}{\i/50*5.0} % 半径从0到5.0
+                \pgfmathsetmacro{\opacity}{0.15 * exp(-\radius/1.2)} % 指数衰减函数
+                \fill[white, opacity=\opacity] (0,0) circle (\radius);
+            }
+        \end{scope}
+    
+       
+    \end{tikzpicture}
+}
+
+% 封面部分 - 使用简单的方法限制颜色范围
+\pagecolor{covercolor}
+\thispagestyle{empty}
+
+\cleardoublepage
+\thispagestyle{empty}
+\begingroup
+    \centering
+
+    % 设置文字颜色为白色
+    \color{white}
+
+    % 增加TOPOLOGY上方的间距
+    \vspace*{0.2cm}
+
+    % TOPOLOGY标题
+    {\centering
+    \SenatorTall
+    \fontsize{60}{0}\selectfont
+    \noindent\makebox[\textwidth][s]{%
+    \raisebox{1em}{\scalebox{3}[2.9]{T}}\hfill%
+    \raisebox{1em}{\scalebox{3}[2.9]{O}}\hfill%
+    \raisebox{1em}{\scalebox{3}[2.9]{P}}\hfill%
+    \raisebox{1em}{\scalebox{3}[2.9]{O}}\hfill%
+    \raisebox{1em}{\scalebox{3}[2.9]{L}}\hfill%
+    \raisebox{1em}{\scalebox{3}[2.9]{O}}\hfill%
+    \raisebox{1em}{\scalebox{3}[2.9]{G}}\hfill%
+    \raisebox{1em}{\scalebox{3}[2.9]{Y}}%
+    }
+    \par}
+    \vspace{-1cm}
+
+    % SECOND EDITION
+    \noindent
+    \begin{minipage}{\patternwidth}
+        \centering
+        \RebarBold
+        \color{linecolor}\fontsize{20}{0}\selectfont
+        S\hspace{0.95em}E\hspace{0.95em}C\hspace{0.95em}O\hspace{0.95em}N\hspace{0.95em}D%
+        \hfill%
+        E\hspace{0.95em}D\hspace{0.95em}I\hspace{0.95em}T\hspace{0.95em}I\hspace{0.95em}O\hspace{0.95em}N%
+    \end{minipage}
+    \vspace{1.7cm}
+
+    % 添加图案
+    \reversedpattern
+
+    % 使用弹性垂直空间将作者名推到底部
+    \vfill
+
+    % JAMES R. MUNKRES
+    {\centering
+    \Trajan
+    \color{linecolor}\fontsize{38}{0}\selectfont
+    \makebox[\patternwidth][s]{JAMES\hspace{0.3em} R.\hspace{0.3em} MUNKRES}
+    \par}
+    \vspace{0.1cm}
+
+\endgroup
+\clearpage
+
+% 封面结束后立即重置页面颜色
+\nopagecolor

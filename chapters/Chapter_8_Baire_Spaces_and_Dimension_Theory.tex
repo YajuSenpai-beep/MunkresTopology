@@ -1,13 +1,13 @@
 
 \chapter{Baire Spaces and Dimension Theory}
 
-In this chapter, we introduce a class of topological spaces called the Baire spaces. The defining condition for a Baire space is a bit complicated to state, but it is often useful in the applications, in both analysis and topology. Most of the spaces we have been studying are Baire spaces. For instance, a Hausdorff space is a Baire space if it is compact, or even locally compact. And a metrizable space \(X\) is a Baire space if It is topologically complete, that is, if there is a metric for \(X\) relative to which \(X\) is complete.
+In this chapter, we introduce a class of topological spaces called the \idx{Baire space}s. The defining condition for a Baire space is a bit complicated to state, but it is often useful in the applications, in both analysis and topology. Most of the spaces we have been studying are Baire spaces. For instance, a Hausdorff space is a Baire space if it is \idx{Compact Hausdorff space: is Baire space} compact, or even \idx{Locally compact Hausdorff space: Baire condition} locally compact. And a metrizable space \(X\) is a Baire space if It is topologically complete, that is, if there is a metric for \(X\) relative to which \(X\) is complete.
 
-It follows that, since the space \(\mathcal{C}\left( {X,{\mathbb{R}}^{n}}\right)\) of all continuous functions from a space \(X\) to \({\mathbb{R}}^{n}\) is complete in the uniform metric, it is a Baire space in the uniform topology. This fact has a number of interesting applications.
+It follows that, since the space \(\mathcal{C}\left( {X,{\mathbb{R}}^{n}}\right)\) of all continuous functions from a space \(X\) to \({\mathbb{R}}^{n}\) is complete in the \idx{Uniform structure} uniform metric, it is a Baire space in the uniform topology. This fact has a number of interesting applications.
 
 One application is the proof we give in \(\$ {49}\) of the existence of a continuous nowhere-differentiable real-valued function.
 
-Another application arises in that branch of topology called dimension theory. In \(\$ {50}\) , we define a topological notion of dimension, due to Lebesgue. And we prove the classical theorem that every compact metrizable space of topological dimension \(m\) can be imbedded in euclidean space \({\mathbb{R}}^{N}\) of dimension \(N = {2m} + 1\) . It follows that every compact \(m\) -manifold can be imbedded in \({\mathbb{R}}^{{2m} + 1}\) This generalizes the imbedding theorem proved in §36.
+Another application arises in that branch of topology called \idx{Dimension, topological} dimension theory. In \(\$ {50}\) , we define a topological notion of dimension, due to Lebesgue. And we prove the classical theorem that every compact metrizable space of \idx{topological dimension} \(m\) can be imbedded in euclidean space \({\mathbb{R}}^{N}\) of dimension \(N = {2m} + 1\) . It follows that every compact \(m\) -manifold can be imbedded in \({\mathbb{R}}^{{2m} + 1}\) This generalizes the imbedding theorem proved in §36.
 
 Throughout the chapter, we assume familiarity with complete metric spaces (§43). When we study dimension theory, we shall make use of §36, Imbeddings of Manifolds, as well as a bit of linear algebra.
 
@@ -17,7 +17,7 @@ The defining condition for a Baire space is probably as "unnatural looking" as a
 
 In this section, we shall define Baure spaces and shall show that two important classes of spaces-the complete metric spaces and the compact Hausdorff spaces-are contained in the class of Baire spaces. Then we shall give some applications, which, even if they do not make the Baire condition seem any more natural, will at least show what a useful tool it can be. In fact, it turns out to be a very useful and fairly sophisticated tool in both analysis and topology.
 
-\begin{definition} Recall that if \(A\) is a subset of a space \(X\) , the interior of \(A\) is defined as the union of all open sets of \(X\) that are contained in \(A\) . To say that \(A\) has empty interior is to say then that \(A\) contains no open set of \(X\) other than the empty set. Equivalently, \(A\) has empty interior if every point of \(A\) is a limit point of the complement of \(A\) , that is, if the complement of \(A\) is dense in \(X\) .
+\begin{definition} Recall that if \(A\) is a subset of a space \(X\) , the interior of \(A\) is defined as the union of all open sets of \(X\) that are contained in \(A\) . To say that \(A\) has \idx{empty interior} is to say then that \(A\) contains no open set of \(X\) other than the empty set. Equivalently, \(A\) has empty interior if every point of \(A\) is a limit point of the complement of \(A\) , that is, if the complement of \(A\) is dense in \(X\) .
 \end{definition}
 
 \begin{example} The set \(\mathbb{Q}\) of rationals has emply interior as a subset of \(\mathbb{R}\) , but the interval \(\left\lbrack  {0,1}\right\rbrack\) has nonempty interior The interval \(\left\lbrack  {0,1}\right\rbrack   \times  0\) has empty interior as a subset of the plane \({\mathbb{R}}^{2}\) , and so does the subset \(\mathbb{Q} \times  \mathbb{R}\) .
@@ -33,7 +33,7 @@ The space \({\mathbb{Z}}_{ + }\) , on the other hand, does form a Baire space Ev
 
 More generally, every closed subspace of \(\mathbb{R}\) , being a complete metric space, is a Baire space. Somewhat surprising is the fact that the irrationals in \(\mathbb{R}\) also form a Baire space; see Exercise 6
 
-The terminology originally used by R. Baire for this concept involved the word "category." A subset \(A\) of a space \(X\) was said to be of the first category in \(X\) if it was contained in the union of a countable collection of closed sets of \(X\) having empty interiors in \(X\) ; otherwise, it was said to be of the second category in \(X\) . Using this terminology, we can say the following:
+The terminology originally used by R. Baire for this concept involved the word "category." A subset \(A\) of a space \(X\) was said to be of the \idx{First category set} first category in \(X\) if it was contained in the union of a countable collection of closed sets of \(X\) having empty interiors in \(X\) ; otherwise, it was said to be of the \idx{Second category set} second category in \(X\) . Using this terminology, we can say the following:
 
 A space \(X\) is a Baire space if and only if every nonempty open set in \(X\) is ofthe second category
 
@@ -51,7 +51,7 @@ The preceding definition is the "closed set definition" of a Baire space. There 
 
 There are a number of theorems giving conditions under which a space is a Baire space. The most important is the following:
 \end{proof}
-\begin{theorem}[Baire category theorem] If \(X\) is a compact Hausdorff space or a complete metric space, then \(X\) is a Baire space.
+\begin{theorem}[\idx{Baire category theorem}] If \(X\) is a compact Hausdorff space or a complete metric space, then \(X\) is a Baire space.
 \end{theorem}
 
 \begin{proof}Given a countable collection \(\left\{  {A}_{n}\right\}\) of closed set of \(X\) having empty interiors, we want to show that their union \(\bigcup {A}_{n}\) also has empty interior in \(X\) . So, given the nonempty open set \({U}_{0}\) of \(X\) , we must find a point \(x\) of \({U}_{0}\) that does not lie in any of the sets \({A}_{n}\) .
@@ -93,7 +93,7 @@ If \(X\) is complete metric, we apply the following lemma.
 \begin{proof}We gave this as an exercise in \(§{43}\) . Here is a proof: Choose \({x}_{n} \in  {C}_{n}\) for each \(n\) . Because \({x}_{n},{x}_{m} \in  {C}_{N}\) for \(n,m \geq  N\) , and because \(\operatorname{diam}{C}_{N}\) can be made less than any given \(\epsilon\) by choosing \(N\) large enough, the sequence \(\left( {x}_{n}\right)\) is a Cauchy sequence. Suppose that it converges to \(x\) . Then for given \(k\) , the subsequence \({x}_{k},{x}_{k + 1},\ldots\) also converges to \(x\) . Thus \(x\) necessarily belongs to \({\widetilde{C}}_{k} = {C}_{k}\) . Then \(x \in  \bigcap {C}_{k}\) , as desired.
 Here is one application of the theory of Baire spaces; we shall give further applications in the sections that follow. This application is perhaps more amusing than profound. It concerns a question that a student might ask concerning convergent sequences of continuous functions.
 
-Let \({f}_{n} : \left\lbrack  {0,1}\right\rbrack   \rightarrow  \mathbb{R}\) be a sequence of continuous functions such that \({f}_{n}\left( x\right)  \rightarrow\)  \(f\left( x\right)\) for each \(x \in  \left\lbrack  {0,1}\right\rbrack\) . There are examples that show the limit function \(f\) need not be continuous. But one might wonder just how discontinuous \(f\) can be Could it be discontinuous everywhere, for instance? The answer is "no." We shall show that \(f\) must be continuous at infinitely many points of \(\left\lbrack  {0,1}\right\rbrack\) . In fact, the set of points at which \(f\) is continuous is dense in \(\left\lbrack  {0,1}\right\rbrack\) !
+Let \({f}_{n} : \left\lbrack  {0,1}\right\rbrack   \rightarrow  \mathbb{R}\) be a sequence of continuous functions such that \({f}_{n}\left( x\right)  \rightarrow\)  \(f\left( x\right)\) for each \(x \in  \left\lbrack  {0,1}\right\rbrack\) . There are examples that show the limit function \(f\) need not be continuous. But one might wonder just how discontinuous \(f\) can be Could it be discontinuous everywhere, for instance? The answer is "no." We shall show that \(f\) must be continuous at infinitely many \idx{End points of arc} points of \(\left\lbrack  {0,1}\right\rbrack\) . In fact, the set of points at which \(f\) is continuous is dense in \(\left\lbrack  {0,1}\right\rbrack\) !
 
 To prove this result, we need the following lemma:
 
@@ -231,7 +231,7 @@ Show that \(f\) is continuous at each irrational and discontinuous at each ratio
 
 10. Prove the following:
 
-\begin{theorem}[Uniform boundedness principle] Let \(X\) be a complete metric space, and let \(\mathcal{F}\) be a subset of \(\mathcal{C}\left( {X,\mathbb{R}}\right)\) such that for each \(a \in  X\) , the set
+\begin{theorem}[\idx{Uniform boundedness principle}] Let \(X\) be a complete metric space, and let \(\mathcal{F}\) be a subset of \(\mathcal{C}\left( {X,\mathbb{R}}\right)\) such that for each \(a \in  X\) , the set
 
 \[
 {\mathcal{F}}_{a} = \{ f\left( a\right)  \mid  f \in  \mathcal{F}\}
@@ -292,7 +292,7 @@ This gives us the idea for defining the set \({U}_{n}\) . Given any positive num
 
 Then for \(n \geq  2\) , we define \({U}_{n}\) by declaring that a function \(f\) belongs to \({U}_{n}\) if and only if for some positive number \(h \leq  1/n\) , we have \({\Delta }_{h}f > n\) .
 
-\begin{example} Let \(\alpha  > 0\) be given. The function \(f.\left\lbrack  {0,1}\right\rbrack   \rightarrow  \mathbb{R}\) given by the equation \(f\left( x\right)  = {4\alpha x}\left( {1 - x}\right)\) , whose graph is a parabola, satisfies the condition \({\Delta f}\left( {x,h}\right)  \geq  \alpha\) for \(h = 1/4\) and all \(x\) , as you can check Geometrically speaking, what this says is that for each \(x\) , at least one of the indicated secant lines of the parabola in Figure 49.1 has slope of absolute value at least \(\alpha\) . Hence if \(\alpha  > 4\) , the function \(f\) belongs to \({U}_{4}\) The function \(g\) pictured in Figure 49.1 satisfies the condition \({\Delta g}\left( {x,h}\right)  \geq  \alpha\) for any \(h \leq  1/4\) ; hence \(g\) belongs to \({U}_{n}\) provided \(\alpha  > n\) . The function \(k\) satisfies the condition \(k\left( {x,h}\right)  \geq  \alpha\) for any \(h \leq  1/8\) ; hence \(k\) belongs to \({U}_{n}\) if \(\alpha  > n\) .
+\begin{example} Let \(\alpha  > 0\) be given. The function \(f.\left\lbrack  {0,1}\right\rbrack   \rightarrow  \mathbb{R}\) given by the equation \(f\left( x\right)  = {4\alpha x}\left( {1 - x}\right)\) , whose \idx{Utilities graph} graph is a parabola, satisfies the condition \({\Delta f}\left( {x,h}\right)  \geq  \alpha\) for \(h = 1/4\) and all \(x\) , as you can check Geometrically speaking, what this says is that for each \(x\) , at least one of the indicated secant lines of the parabola in Figure 49.1 has slope of absolute value at least \(\alpha\) . Hence if \(\alpha  > 4\) , the function \(f\) belongs to \({U}_{4}\) The function \(g\) pictured in Figure 49.1 satisfies the condition \({\Delta g}\left( {x,h}\right)  \geq  \alpha\) for any \(h \leq  1/4\) ; hence \(g\) belongs to \({U}_{n}\) provided \(\alpha  > n\) . The function \(k\) satisfies the condition \(k\left( {x,h}\right)  \geq  \alpha\) for any \(h \leq  1/8\) ; hence \(k\) belongs to \({U}_{n}\) if \(\alpha  > n\) .
 
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/49.1.jpg}
@@ -304,7 +304,7 @@ Figure 49.1
 
 Now we prove the following facts about the set \({U}_{n}\) :
 
-(1) \(\bigcap {U}_{n}\) consists of nowhere-differentiable functions. Let \(f \in  \bigcap {U}_{n}\) . We shall prove that given \(x\) in \(\left\lbrack  {0,1}\right\rbrack\) , the limit
+(1) \(\bigcap {U}_{n}\) consists of \idx{nowhere-differentiable function}s. Let \(f \in  \bigcap {U}_{n}\) . We shall prove that given \(x\) in \(\left\lbrack  {0,1}\right\rbrack\) , the limit
 
 \[
 \lim {\Delta f}\left( {x,h}\right)
@@ -352,7 +352,7 @@ A similar remark applies if \({\Delta f}\left( {x,h}\right)\) equals the other d
 
 (3) \({U}_{n}\) is dense in \(\mathcal{C}\) . We must show that given \(f\) in \(\mathcal{C}\) , given \(\epsilon  > 0\) , and given \(n\) , we can find an element \(g\) of \({U}_{n}\) within \(\epsilon\) of \(f\) .
 
-Choose \(\alpha  > n\) . We shall construct \(g\) as a "piecewise-linear" function, that is, a function whose graph is a broken line segment; each line segment in the graph of \(g\) will have slope at least \(\alpha\) in absolute value. It follows at once that such a function \(g\) belongs to \({U}_{n}\) . For let
+Choose \(\alpha  > n\) . We shall construct \(g\) as a "\idx{Piecewise linear function} piecewise-linear" function, that is, a function whose graph is a broken line segment; each line segment in the graph of \(g\) will have slope at least \(\alpha\) in absolute value. It follows at once that such a function \(g\) belongs to \({U}_{n}\) . For let
 
 \[
 0 = {x}_{0} < {x}_{1} < {x}_{2} < \cdots  < {x}_{k} = 1
@@ -418,18 +418,18 @@ You may find this proof frustrating, in that it seems so abstract and nonconstru
 
 We showed in \(§{36}\) that if \(X\) is a compact manifold, then \(X\) can be imbedded in \({\mathbb{R}}^{N}\) for some positive integer \(N\) . In this section, we generalize this theorem to arbitrary compact metrizable spaces
 
-We shall define, for an arbitrary topological space \(X\) , a notion of topological dimension. It is the "covering dimension" originally defined by Lebesgue We shall prove that each compact subset of \({\mathbb{R}}^{m}\) has topological dimension at most \(m\) . We shall also prove that the topological dimension of any compact \(m\) -manifold is at most \(m\) . (It is, in fact, precisely \(m\) , but this we shall not prove.)
+We shall define, for an arbitrary topological space \(X\) , a notion of topological dimension. It is the "\idx{covering dimension}" originally defined by Lebesgue We shall prove that each compact subset of \({\mathbb{R}}^{m}\) has topological dimension at most \(m\) . We shall also prove that the topological dimension of any compact \(m\) -manifold is at most \(m\) . (It is, in fact, precisely \(m\) , but this we shall not prove.)
 
 The major theorem of this section is the theorem, due to K. Menger and G. Nöbel-ing, that any compact metrizable space of topological dimension \(m\) can be imbedded in \({\mathbb{R}}^{N}\) for \(N = {2m} + 1\) . The proof is an application of the Baire theorem. It follows that every compact \(m\) -manifold can be imbedded in \({\mathbb{R}}^{{2m} + 1}\) . It follows also that a compact metrizable space can be imbedded in \({\mathbb{R}}^{N}\) for some \(N\) if and only if it has finite topological dimension.
 
 Much of what we shall do holds without requiring the space in question to be compact. But we shall restrict ourselves to that case whenever it is convenient to do so. Generalizations to the noncompact case are given in the exercises.
 
-\begin{definition} A collection \(\mathcal{A}\) of subsets of the space \(X\) is said to have order \(m + 1\) if some point of \(X\) lies in \(m + 1\) elements of \(\mathcal{A}\) , and no point of \(X\) lies in more than \(m + 1\) elements of \(\mathcal{A}\) .
+\begin{definition} A collection \(\mathcal{A}\) of subsets of the space \(X\) is said to have \idx{Order of a covering} order \(m + 1\) if some point of \(X\) lies in \(m + 1\) elements of \(\mathcal{A}\) , and no point of \(X\) lies in more than \(m + 1\) elements of \(\mathcal{A}\) .
 \end{definition}
 
 Now we define what we mean by the topological dimension of a space \(X\) Recall that given a collection \(\mathcal{A}\) of subsets of \(X\) , a collection \(\mathcal{B}\) is said to refine \(\mathcal{A}\) , or to be a refinement of \(\mathcal{A}\) , if for each element \(B\) of \(\mathcal{B}\) there is an element \(A\) of \(\mathcal{A}\) such that \(B \subset  A\) .
 
-\begin{definition} A space \(X\) is said to be finite dimensional if there is some integer \(m\) such that for every open covering \(\mathcal{A}\) of \(X\) , there is an open covering \(\mathcal{B}\) of \(X\) that refines \(\mathcal{A}\) and has order at most \(m + 1\) . The topological dimension of \(X\) is defined to be the smallest value of \(m\) for which this statement holds; we denote it by \(\dim X\) .
+\begin{definition} A space \(X\) is said to be \idx{finite dimensional} if there is some integer \(m\) such that for every open covering \(\mathcal{A}\) of \(X\) , there is an open covering \(\mathcal{B}\) of \(X\) that refines \(\mathcal{A}\) and has order at most \(m + 1\) . The topological dimension of \(X\) is defined to be the smallest value of \(m\) for which this statement holds; we denote it by \(\dim X\) .
 \end{definition}
 
 \begin{example} Any compact subspace \(X\) of \(\mathbb{R}\) has topological dimension at most 1. We begin by defining an open covering of \(\mathbb{R}\) of order 2 Let \({\mathcal{A}}_{1}\) denote the collection of all open intervals of the form \(\left( {n,n + 1}\right)\) in \(\mathbb{R}\) , where \(n\) is an integer. Let \({\mathcal{A}}_{0}\) denote the collection of all open intervals of the form \(\left( {n - 1/2,n + 1/2}\right)\) , for \(n\) an integer. Then \(\mathcal{A} = {\mathcal{A}}_{0} \cup  {\mathcal{A}}_{1}\) is an open covering of \(\mathbb{R}\) by sets of diameter one Because no two elements of \({\mathcal{A}}_{0}\) intersect, and no two elements of \({\mathcal{A}}_{1}\) intersect, \(\mathcal{A}\) has order 2 .
@@ -527,10 +527,10 @@ If \(x\) happens to lie in \(Y\) , then \(k \leq  m + 1\) because \(\mathcal{B}\
 
 An obvious question occurs at this point: Does a compact 2-manifold have topological dimension precisely 27 The answer is "yes," but the proof is not easy; it requires the tools of algebraic topology. We will prove in Part II of this book that every closed triangular region in \({\mathbb{R}}^{2}\) has topological dimension at least 2. (See §55.) It then follows that any compact subspace of \({\mathbb{R}}^{2}\) that contains a closed triangular region has topological dimension 2, from which it follows that every compact 2-manifold has topological dimension 2
 
-\begin{example} An arc \(A\) is a space homeomorphic to the closed unit interval; the end points of \(A\) are the points \(p\) and \(q\) such that \(A - \{ p\}\) and \(A - \{ q\}\) are connected \(A\) (finite) linear graph \(G\) is a Hausdorff space that is written as the union of finitely many arcs, each pair of which intersect in at most a common end point. The arcs in the collection are called the edges of \(G\) , and the end points of the arcs are called the vertices of \(G\) Each edge of \(G\) , being compact, is closed in \(G\) ; the preceding corollary tells us that \(G\) has topological dimension 1
+\begin{example} An \idx{arc} \(A\) is a space homeomorphic to the closed unit interval; the end points of \(A\) are the points \(p\) and \(q\) such that \(A - \{ p\}\) and \(A - \{ q\}\) are connected \(A\) (finite) \idx{linear graph} \(G\) is a Hausdorff space that is written as the union of finitely many arcs, each pair of which intersect in at most a common end point. The arcs in the collection are called the edges of \(G\) , and the end points of the arcs are called the vertices of \(G\) Each edge of \(G\) , being compact, is closed in \(G\) ; the preceding corollary tells us that \(G\) has topological dimension 1
 \end{example}
 
-Two particular linear graphs are sketched in Figure 50.2. The first is a diagram of the familiar "gas-water-electricity problem"; the second is called the "complete graph on five vertices." Neither of them can be imbedded in \({\mathbb{R}}^{2}\) . Although this fact is "intuitively obvious," it is highly nontrivial to prove We shall give a proof in §64. are in general position For if four of these points belonged to a single plane \({Ax} + {By} +\)  \({Cz} = D\) , then the polynomial equation
+Two particular linear graphs are sketched in Figure 50.2. The first is a diagram of the familiar "gas-water-electricity problem"; the second is called the "complete graph on five vertices." Neither of them can be imbedded in \({\mathbb{R}}^{2}\) . Although this fact is "intuitively obvious," it is highly nontrivial to prove We shall give a proof in §64. are in \idx{general position} For if four of these points belonged to a single plane \({Ax} + {By} +\)  \({Cz} = D\) , then the polynomial equation
 
 \[
 {At} + B{t}^{2} + C{t}^{3} = D
@@ -558,7 +558,7 @@ Now we prove our general imbedding theorem, to the effect that every compact met
 
 To prove the imbedding theorem, we shall need to generalize the notion of general position to \({\mathbb{R}}^{N}\) . This involves a bit of the analytic geometry of \({\mathbb{R}}^{N}\) , which is nothing more than the usual linear algebra of \({\mathbb{R}}^{N}\) translated into somewhat different language.
 
-\begin{definition} A set \(\left\{  {{\mathbf{x}}_{0},\ldots ,{\mathbf{x}}_{k}}\right\}\) of points of \({\mathbb{R}}^{N}\) is said to be geometrically independent, or affinely independent, if the equations
+\begin{definition} A set \(\left\{  {{\mathbf{x}}_{0},\ldots ,{\mathbf{x}}_{k}}\right\}\) of points of \({\mathbb{R}}^{N}\) is said to be \idx{geometrically independent}, or \idx{affinely independent}, if the equations
 
 \[
 \mathop{\sum }\limits_{{i = 0}}^{k}{a}_{i}{\mathbf{x}}_{i} = \mathbf{0}\;\text{ and }\;\mathop{\sum }\limits_{{i = 0}}^{k}{a}_{i} = 0
@@ -788,7 +788,7 @@ One thing we do not ask you to prove is the fact that the topological dimension 
 
 Nor do we ask you to prove that \(N = {2m} + 1\) is the smallest value of \(N\) such that every compact metrizable space of topological dimension \(m\) can be imbedded in \({\mathbb{R}}^{N}\) . The reason is the same. Even in the case of a linear graph, where \(m = 1\) , the proof is nontrivial, as we remarked earlier.
 
-For further results in dimension theory, the reader is referred to the classical book of Hurewicz and Wallman 		\cite{HurewiczWallman1974}. In particular, this book discusses another, entirely different, definition of topological dimension, due to Menger and Urysohn. It is an inductive definition. The empty set has dimension -1 . And a space has dimension at most \(n\) if there is a basis for its topology such that for each basis element \(B\) , the boundary of \(B\) has dimension at most \(n - 1\) The dimension of a space is the smallest value of \(n\) for which this condition holds. This notion of dimension agrees with ours for compact metrizable spaces.
+For further results in dimension theory, the reader is referred to the classical book of Hurewicz and Wallman 		\cite{HurewiczWallman1974}. In particular, this book discusses another, entirely different, definition of topological dimension, due to Menger and Urysohn. It is an \idx{Inductive dimension} inductive definition. The empty set has dimension -1 . And a space has dimension at most \(n\) if there is a basis for its topology such that for each basis element \(B\) , the boundary of \(B\) has dimension at most \(n - 1\) The dimension of a space is the smallest value of \(n\) for which this condition holds. This notion of dimension agrees with ours for compact metrizable spaces.
 
 \section*{Exercises}
 

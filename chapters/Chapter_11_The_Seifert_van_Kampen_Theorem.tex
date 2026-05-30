@@ -1,10 +1,10 @@
 \chapter{The Seifert-van Kampen Theorem}
 
-\section*{§ 67 Direct Sums of Abelian Groups}
+\section*{§ 67 \idx{Direct Sum}s of \idx{Rank of a free abelian group} Abelian \idx{Sum of groups} Groups}
 
 In this section, we shall consider only groups that are abelian. As is usual, we shall write such groups additively. Then 0 denotes the identity element of the group, \(- x\) denotes the inverse of \(x\) , and \({nx}\) denotes the \(n\) -fold sum \(x + \cdots  + x\) .
 
-Suppose \(G\) is an abelian group, and \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) is an indexed family of subgroups of \(G\) . We say that the groups \({G}_{\alpha }\) generate \(G\) if every element \(x\) of \(G\) can be written as a finite sum of elements of the groups \({G}_{\alpha }\) . Since \(G\) is abelian, we can always rearrange such a sum to group together terms that belong to a single \({G}_{\alpha }\) ; hence we can always write \(x\) in the form
+Suppose \(G\) is an abelian group, and \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) is an indexed family of \idx{Subgroup: of free abelian group} subgroups of \(G\) . We say that the groups \({G}_{\alpha }\) generate \(G\) if every element \(x\) of \(G\) can be written as a finite sum of elements of the groups \({G}_{\alpha }\) . Since \(G\) is abelian, we can always rearrange such a sum to group together terms that belong to a single \({G}_{\alpha }\) ; hence we can always write \(x\) in the form
 
 \[
 x = {x}_{{\alpha }_{1}} + \cdots  + {x}_{{\alpha }_{n}},
@@ -14,7 +14,7 @@ where the indices \({\alpha }_{i}\) are distinct. In this case, we often write \
 
 If the groups \({G}_{\alpha }\) generate \(G\) , we often say that \(G\) is the sum of the groups \({G}_{\alpha }\) , writing \(G = \mathop{\sum }\limits_{{\alpha  \in  J}}{G}_{\alpha }\) in general, or \(G = {G}_{1} + \cdots  + {G}_{n}\) in the case of the finite index set \(\{ 1,\ldots ,n\}\) .
 
-Now suppose that the groups \({G}_{\alpha }\) generate \(G\) , and that for each \(x \in  G\) , the expression \(x = \sum {x}_{\alpha }\) for \(x\) is unique. That is, suppose that for each \(x \in  G\) , there is only one \(J\) -tuple \({\left( {x}_{\alpha }\right) }_{\alpha  \in  J}\) with \({x}_{\alpha } = 0\) for all but finitely many \(\alpha\) such that \(x = \sum {x}_{\alpha }\) . Then \(G\) is said to be the direct sum of the groups \({G}_{\alpha }\) , and we write
+Now suppose that the groups \({G}_{\alpha }\) generate \(G\) , and that for each \(x \in  G\) , the expression \(x = \sum {x}_{\alpha }\) for \(x\) is unique. That is, suppose that for each \(x \in  G\) , there is only one \(J\) -tuple \({\left( {x}_{\alpha }\right) }_{\alpha  \in  J}\) with \({x}_{\alpha } = 0\) for all but \idx{Finitely generated group} finitely many \(\alpha\) such that \(x = \sum {x}_{\alpha }\) . Then \(G\) is said to be the direct sum of the groups \({G}_{\alpha }\) , and we write
 
 \[
 G = {\bigoplus }_{\alpha  \in  J}{G}_{\alpha }
@@ -25,7 +25,7 @@ or in the finite case, \(G = {G}_{1} \oplus  \cdots  \oplus  {G}_{n}\)
 \begin{example} The cartesian product \({\mathbb{R}}^{\omega }\) is an abelian group under the operation of coordinate-wise addition. The set \({G}_{n}\) consisting of those tuples \(\left( {x}_{t}\right)\) such that \({x}_{t} = 0\) for \(i \neq  n\) is a subgroup isomorphic to \(\mathbb{R}\) . The groups \({G}_{n}\) generate the subgroup \({\mathbb{R}}^{\infty }\) of \({\mathbb{R}}^{\omega }\) , indeed, \({\mathbb{R}}^{\infty }\) is their direct sum.
 \end{example}
 
-A useful characterization of direct sums is given in the following lemma, we call it the extension condition for direct sums.
+A useful characterization of direct sums is given in the following lemma, we call it the \idx{Extension condition: for direct sums} extension condition for direct sums.
 
 \begin{lemma} Let \(G\) be an abelian group; let \(\left\{  {G}_{\alpha }\right\}\) be a family of subgroups of \(G\) . If \(G\) is the direct sum of the groups \({G}_{\alpha }\) , then \(G\) satisfies the following condition:
 
@@ -59,7 +59,7 @@ This corollary implies, for example, that
 \end{corollary}
 
 \begin{proof}Let \(H = {G}_{1}\) , let \({h}_{1} : {G}_{1} \rightarrow  H\) be the identity homomorphism, and let \({h}_{2} : {G}_{2} \rightarrow  H\) be the trivial homomorphism. Let \(h : G \rightarrow  H\) be their extension to \(G\) . Then \(h\) is surjective with kernel \({G}_{2}\) .
-In many situations, one is given a family of abelian groups \(\left\{  {G}_{\alpha }\right\}\) and one wishes to find a group \(G\) that contains subgroups \({G}_{\alpha }^{\prime }\) isomorphic to the groups \({G}_{\alpha }\) , such that \(G\) is the direct sum of these subgroups. This can in fact always be done, it leads to a notion called the external direct sum.
+In many situations, one is given a family of abelian groups \(\left\{  {G}_{\alpha }\right\}\) and one wishes to find a group \(G\) that contains subgroups \({G}_{\alpha }^{\prime }\) isomorphic to the groups \({G}_{\alpha }\) , such that \(G\) is the direct sum of these subgroups. This can in fact always be done, it leads to a notion called the \idx{external direct sum}.
 \end{proof}
 \begin{definition} Let \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an indexed family of abelian groups Suppose that \(G\) is an abelian group, and that \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) is a family of monomorphisms, such that \(G\) is the direct sum of the groups \({i}_{\alpha }\left( {G}_{\alpha }\right)\) . Then we say that \(G\) is the external direct sum of the groups \({G}_{\alpha }\) , relative to the monomorphisms \({i}_{\alpha }\) .
 \end{definition}
@@ -96,9 +96,9 @@ An immediate consequence is a uniqueness theorem for direct sums:
 \begin{proof}We apply the preceding lemma (four times!). Since \(G\) is the external direct sum of the \({G}_{\alpha }\) and \(\left\{  {i}_{\alpha }^{\prime }\right\}\) is a family of homomorphisms, there exists a unique homomorphism \(\phi  : G \rightarrow  {G}^{\prime }\) such that \(\phi  \circ  {i}_{\alpha } = {i}_{\alpha }^{\prime }\) for each \(\alpha\) . Similarly, since \({G}^{\prime }\) is the external direct sum of the \({G}_{\alpha }\) and \(\left\{  {i}_{\alpha }\right\}\) is a family of homomorphisms, there exists a unique homomorphism \(\psi .{G}^{\prime } \rightarrow  G\) such that \(\psi  \circ  {i}_{\alpha }^{\prime } = {i}_{\alpha }\) for each \(\alpha\) . Now \(\psi  \circ  \phi  : G \rightarrow  G\) has the property that \(\psi  \circ  \phi  \circ  {i}_{\alpha } = {i}_{\alpha }\) for each \(\alpha\) ; since the identity map of \(G\) has the same property, the uniqueness part of the lemma shows that \(\psi  \circ  \phi\) must equal the identity map of \(G\) . Similarly, \(\phi  \circ  \psi\) must equal the identity map of \({G}^{\prime }\) .
 If \(G\) is the external direct sum of the groups \({G}_{\alpha }\) , relative to the monomorphisms \({i}_{\alpha }\) , we sometimes abuse notation and write \(G = \bigoplus {G}_{\alpha }\) , even though the groups \({G}_{\alpha }\) are not subgroups of \(G\) . That is, we identify each group \({G}_{\alpha }\) with its image under \({i}_{\alpha }\) , and treat \(G\) as an ordinary direct sum rather than an external direct sum. In each case, the context will make the meaning clear.
 
-Now we discuss free abelian groups.
+Now we discuss \idx{free abelian group}s.
 \end{proof}
-\begin{definition} Let \(G\) be an abelian group and let \(\left\{  {a}_{\alpha }\right\}\) be an indexed family of elements of \(G\) ; let \({G}_{\alpha }\) be the subgroup of \(G\) generated by \({a}_{\alpha }\) . If the groups \({G}_{\alpha }\) generate \(G\) , we also say that the elements \({a}_{\alpha }\) generate \(G\) . If each group \({G}_{\alpha }\) is infinite cyclic, and if \(G\) is the direct sum of the groups \({G}_{\alpha }\) , then \(G\) is said to be a free abelian group having the elements \(\left\{  {a}_{\alpha }\right\}\) as a basis.
+\begin{definition} Let \(G\) be an abelian group and let \(\left\{  {a}_{\alpha }\right\}\) be an indexed family of elements of \(G\) ; let \({G}_{\alpha }\) be the subgroup of \(G\) \idx{Generated: by elements} generated by \({a}_{\alpha }\) . If the groups \({G}_{\alpha }\) generate \(G\) , we also say that the elements \({a}_{\alpha }\) generate \(G\) . If each group \({G}_{\alpha }\) is infinite cyclic, and if \(G\) is the direct sum of the groups \({G}_{\alpha }\) , then \(G\) is said to be a free abelian group having the elements \(\left\{  {a}_{\alpha }\right\}\) as a \idx{Basis: for a free abelian group} basis.
 \end{definition}
 
 The extension condition for direct sums implies the following extension condition for free abelian groups:
@@ -106,7 +106,7 @@ The extension condition for direct sums implies the following extension conditio
 \begin{lemma} Let \(G\) be an abelian group; let \({\left\{  {a}_{\alpha }\right\}  }_{\alpha  \in  J}\) be a family of elements of \(G\) that generates \(G\) . Then \(G\) is a free abelian group with basis \(\left\{  {a}_{\alpha }\right\}\) if and only if for any abelian group \(H\) and any family \(\left\{  {y}_{\alpha }\right\}\) of elements of \(H\) , there is a homomorphism \(h\) of \(G\) into \(H\) such that \(h\left( {a}_{\alpha }\right)  = {y}_{\alpha }\) for each \(\alpha\) . In such case, \(h\) is unique.
 \end{lemma}
 
-\begin{proof}Let \({G}_{\alpha }\) denote the subgroup of \(G\) generated by \({a}_{\alpha }\) . Suppose first that the extension property holds. We show first that each group \({G}_{\alpha }\) is infinite cyclic. Suppose that for some index \(\beta\) , the element \({a}_{\beta }\) generates a finite cyclic subgroup of \(G\) . Then if we set \(H = \mathbb{Z}\) , there is no homomorphism \(h : G \rightarrow  H\) that maps each \({a}_{\alpha }\) to the number 1. For \({a}_{\beta }\) has finite order and 1 does not! To show that \(G\) is the direct sum of the groups \({G}_{\alpha }\) , we merely apply Lemma 67.1.
+\begin{proof}Let \({G}_{\alpha }\) denote the subgroup of \(G\) generated by \({a}_{\alpha }\) . Suppose first that the extension property holds. We show first that each group \({G}_{\alpha }\) is infinite cyclic. Suppose that for some index \(\beta\) , the element \({a}_{\beta }\) generates a finite cyclic subgroup of \(G\) . Then if we set \(H = \mathbb{Z}\) , there is no homomorphism \(h : G \rightarrow  H\) that maps each \({a}_{\alpha }\) to the number 1. For \({a}_{\beta }\) has finite \idx{Order of a group element} order and 1 does not! To show that \(G\) is the direct sum of the groups \({G}_{\alpha }\) , we merely apply Lemma 67.1.
 Conversely, if \(G\) is free abelian with basis \(\left\{  {a}_{\alpha }\right\}\) , then given the elements \(\left\{  {y}_{\alpha }\right\}\) of \(H\) , there are homomorphisms \({h}_{\alpha } : {G}_{\alpha } \rightarrow  H\) such that \({h}_{\alpha }\left( {a}_{\alpha }\right)  = {y}_{\alpha }\) (because \({G}_{\alpha }\) is infinite cyclic). Then Lemma 67.1 applies.
 \end{proof}
 \begin{theorem} If \(G\) is a free abelian group with basis \(\left\{  {{a}_{1},\ldots ,{a}_{n}}\right\}\) , then \(n\) is uniquely determined by \(G\) .
@@ -131,7 +131,7 @@ implies that each \({x}_{{\alpha }_{i}}\) equals 0 . (Here \({x}_{{\alpha }_{i}}
 
 4. The order of an element \(a\) of an abelian group \(G\) is the smallest positive integer \(m\) such that \({ma} = 0\) , if such exists; otherwise, the order of \(a\) is said to be infinite. The order of \(a\) thus equals the order of the subgroup generated by \(a\) .
 
-(a) Show the elements of finite order in \(G\) form a subgroup of \(G\) , called its torsion subgroup.
+(a) Show the elements of finite order in \(G\) form a subgroup of \(G\) , called its \idx{torsion subgroup}.
 
 (b) Show that if \(G\) is free abelian, it has no elements of finite order.
 
@@ -157,9 +157,9 @@ Consider the subgroup \({\pi }_{m}\left( {B}_{m}\right)\) of \(\mathbb{Z}\) . If
 
 We now consider groups \(G\) that are not necessarily abelian. In this case, we write \(G\) multiplicatively. We denote the identity element of \(G\) by 1, and the inverse of the element \(x\) by \({x}^{-1}\) . The symbol \({x}^{n}\) denotes the \(n\) -fold product of \(x\) with itself, \({x}^{-n}\) denotes the \(n\) -fold product of \({x}^{-1}\) with itself, and \({x}^{0}\) denotes 1 .
 
-In this section, we study a concept that plays a role for arbitrary groups similar to that played by the direct sum for abelian groups. It is called the free product of groups.
+In this section, we study a concept that plays a role for arbitrary groups similar to that played by the direct sum for abelian groups. It is called the \idx{free product} of groups.
 
-Let \(G\) be a group. If \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) is a family of subgroups of \(G\) , we say (as before) that these groups generate \(G\) if every element \(x\) of \(G\) can be written as a finite product of elements of the groups \({G}_{\alpha }\) . This means that there is a finite sequence \(\left( {{x}_{1},\ldots ,{x}_{n}}\right)\) of elements of the groups \({G}_{\alpha }\) such that \(x = {x}_{1}\cdots {x}_{n}\) . Such a sequence is called a word (of length \(n\) ) in the groups \({G}_{\alpha }\) ; it is said to represent the element \(x\) of \(G\) .
+Let \(G\) be a group. If \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) is a family of subgroups of \(G\) , we say (as before) that these groups generate \(G\) if every element \(x\) of \(G\) can be written as a finite product of elements of the groups \({G}_{\alpha }\) . This means that there is a finite sequence \(\left( {{x}_{1},\ldots ,{x}_{n}}\right)\) of elements of the groups \({G}_{\alpha }\) such that \(x = {x}_{1}\cdots {x}_{n}\) . Such a sequence is called a \idx{word} (of \idx{Length of a word} length \(n\) ) in the groups \({G}_{\alpha }\) ; it is said to represent the element \(x\) of \(G\) .
 
 Note that because we lack commutativity, we cannot rearrange the factors in the expression for \(x\) so as to group together factors that belong to a single one of the groups \({G}_{\alpha }\) . However, if \({x}_{i}\) and \({x}_{i + 1}\) both belong to the same group \({G}_{\alpha }\) , we can group them together, thereby obtaining the word
 
@@ -169,7 +169,7 @@ Note that because we lack commutativity, we cannot rearrange the factors in the 
 
 of length \(n - 1\) , which also represents \(x\) . Furthermore, if any \({x}_{i}\) equals 1, we can delete \({x}_{i}\) from the sequence, again obtaining a shorter word that represents \(x\) .
 
-Applying these reduction operations repeatedly, one can in general obtain a word representing \(x\) of the form \(\left( {{y}_{1},\ldots ,{y}_{m}}\right)\) , where no group \({G}_{\alpha }\) contains both \({y}_{i}\) and \({y}_{i + 1}\) , and where \({y}_{i} \neq  1\) for all \(i\) . Such a word is called a reduced word. This discussion does not apply, however, if \(x\) is the identity element of \(G\) . For in that case, one might represent \(x\) by a word such as \(\left( {a,{a}^{-1}}\right)\) , which reduces successively to the word \(\left( {a{a}^{-1}}\right)\) of length one, and then disappears altogether! Accordingly, we make the convention that the empty set is considered to be a reduced word (of length zero) that represents the identity element of \(G\) . With this convention, it is true that if the groups \({G}_{\alpha }\) generate \(G\) , then every element of \(G\) can be represented by a reduced word in the elements of the groups \({G}_{\alpha }\) .
+Applying these reduction operations repeatedly, one can in general obtain a word representing \(x\) of the form \(\left( {{y}_{1},\ldots ,{y}_{m}}\right)\) , where no group \({G}_{\alpha }\) contains both \({y}_{i}\) and \({y}_{i + 1}\) , and where \({y}_{i} \neq  1\) for all \(i\) . Such a word is called a \idx{reduced word}. This discussion does not apply, however, if \(x\) is the identity element of \(G\) . For in that case, one might represent \(x\) by a word such as \(\left( {a,{a}^{-1}}\right)\) , which reduces successively to the word \(\left( {a{a}^{-1}}\right)\) of length one, and then disappears altogether! Accordingly, we make the convention that the empty set is considered to be a reduced word (of length zero) that represents the identity element of \(G\) . With this convention, it is true that if the groups \({G}_{\alpha }\) generate \(G\) , then every element of \(G\) can be \idx{Represented by a word} represented by a reduced word in the elements of the groups \({G}_{\alpha }\) .
 
 Note that if \(\left( {{x}_{1},\ldots ,{x}_{n}}\right)\) and \(\left( {{y}_{1},\ldots ,{y}_{m}}\right)\) are words representing \(x\) and \(y\) , respectively, then \(\left( {{x}_{1},\ldots ,{x}_{n},{y}_{1},\ldots ,{y}_{m}}\right)\) is a word representing \({xy}\) . Even if the first two words are reduced words, however, the third will not be a reduced word unless none of the groups \({G}_{\alpha }\) contains both \({x}_{n}\) and \({y}_{1}\) .
 
@@ -184,7 +184,7 @@ or in the finite case, \(G = {G}_{1} * \cdots  * {G}_{n}\) .
 
 Let \(G\) be the free product of the groups \({G}_{\alpha }\) , and let \(\left( {{x}_{1},\ldots ,{x}_{n}}\right)\) be a word in the groups \({G}_{\alpha }\) satisfying the condition \({x}_{i} \neq  1\) for all \(i\) . Then, for each \(i\) , there is a unique index \({\alpha }_{i}\) such that \({x}_{i} \in  {G}_{{\alpha }_{i}}\) ; to say the word is a reduced word is to say simply that \({\alpha }_{i} \neq  {\alpha }_{i + 1}\) for each \(i\) .
 
-Suppose the groups \({G}_{\alpha }\) generate \(G\) , where \({G}_{\alpha } \cap  {G}_{\beta } = \{ 1\}\) for \(\alpha  \neq  \beta\) . In order for \(G\) to be the free product of these groups, it suffices to know that the representation of 1 by the empty word is unique. For suppose this weaker condition holds, and suppose that \(\left( {{x}_{1},\ldots ,{x}_{n}}\right)\) and \(\left( {{y}_{1},\ldots ,{y}_{m}}\right)\) are two reduced words that represent the same element \(x\) of \(G\) . Let \({\alpha }_{i}\) and \({\beta }_{i}\) be the indices such that \({x}_{i} \in  {G}_{{\alpha }_{i}}\) and \({y}_{i} \in  {G}_{{\beta }_{i}}\) . Since
+Suppose the groups \({G}_{\alpha }\) generate \(G\) , where \({G}_{\alpha } \cap  {G}_{\beta } = \{ 1\}\) for \(\alpha  \neq  \beta\) . In order for \(G\) to be the free product of these groups, it suffices to know that the re\idx{Presentation of a group} presentation of 1 by the empty word is unique. For suppose this weaker condition holds, and suppose that \(\left( {{x}_{1},\ldots ,{x}_{n}}\right)\) and \(\left( {{y}_{1},\ldots ,{y}_{m}}\right)\) are two reduced words that represent the same element \(x\) of \(G\) . Let \({\alpha }_{i}\) and \({\beta }_{i}\) be the indices such that \({x}_{i} \in  {G}_{{\alpha }_{i}}\) and \({y}_{i} \in  {G}_{{\beta }_{i}}\) . Since
 
 \[
 {x}_{1}\cdots {x}_{n} = x = {y}_{1}\cdots {y}_{m},
@@ -263,7 +263,7 @@ It follows at once that if \(w\) is any word in the groups \({G}_{\alpha }\) tha
 
 Now we show that \(h\) is a homomorphism. Suppose that \(w = \left( {{x}_{1},\ldots ,{x}_{n}}\right)\) and \({w}^{\prime } = \left( {{y}_{1},\ldots ,{y}_{m}}\right)\) are words representing \(x\) and \(y\) , respectively. Let \(\left( {w,{w}^{\prime }}\right)\) denote the word \(\left( {{x}_{1},\ldots ,{x}_{n},{y}_{1},\ldots ,{y}_{m}}\right)\) , which represents \({xy}\) . It follows from equation (**) that \(\phi \left( {w,{w}^{\prime }}\right)  = \phi \left( w\right) \phi \left( {w}^{\prime }\right)\) . Then \(h\left( {xy}\right)  = h\left( x\right) h\left( y\right)\) .
 
-We now consider the problem of taking an arbitrary family of groups \(\left\{  {G}_{\alpha }\right\}\) and finding a group \(G\) that contains subgroups \({G}_{\alpha }^{\prime }\) isomorphic to the groups \({G}_{\alpha }\) , such that \(G\) is the free product of the groups \({G}_{\alpha }^{\prime }\) . This can, in fact, be done; it leads to the notion of external free product.
+We now consider the problem of taking an arbitrary family of groups \(\left\{  {G}_{\alpha }\right\}\) and finding a group \(G\) that contains subgroups \({G}_{\alpha }^{\prime }\) isomorphic to the groups \({G}_{\alpha }\) , such that \(G\) is the free product of the groups \({G}_{\alpha }^{\prime }\) . This can, in fact, be done; it leads to the notion of \idx{external free product}.
 \end{proof}
 \begin{definition} Let \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an indexed family of groups. Suppose that \(G\) is a group, and that \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) is a family of monomorphisms, such that \(G\) is the free product of the groups \({i}_{\alpha }\left( {G}_{\alpha }\right)\) . Then we say that \(G\) is the external free product of the groups \({G}_{\alpha }\) , relative to the monomorphisms \({i}_{\alpha }\) .
 \end{definition}
@@ -438,9 +438,9 @@ This result implies in particular that
 {G}_{1} * {G}_{2} * {G}_{3} = {G}_{1} * \left( {{G}_{2} * {G}_{3}}\right)  = \left( {{G}_{1} * {G}_{2}}\right)  * {G}_{3}.
 \]
 
-In order to state the next theorem, we must recall some terminology from group theory. If \(x\) and \(y\) are elements of a group \(G\) , we say that \(y\) is conjugate to \(x\) if \(y =\)  \({cx}{c}^{-1}\) for some \(c \in  G\) . A normal subgroup of \(G\) is one that contains all conjugates of its elements.
+In order to state the next theorem, we must recall some terminology from group theory. If \(x\) and \(y\) are elements of a group \(G\) , we say that \(y\) is \idx{Conjugate elements} conjugate to \(x\) if \(y =\)  \({cx}{c}^{-1}\) for some \(c \in  G\) . A normal subgroup of \(G\) is one that contains all conjugates of its elements.
 
-If \(S\) is a subset of \(G\) , one can consider the intersection \(N\) of all normal subgroups of \(G\) that contain \(S\) . It is easy to see that \(N\) is itself a normal subgroup of \(G\) , it is called the least normal subgroup of \(G\) that contains \(S\) .
+If \(S\) is a subset of \(G\) , one can consider the intersection \(N\) of all normal subgroups of \(G\) that contain \(S\) . It is easy to see that \(N\) is itself a normal subgroup of \(G\) , it is called the \idx{least normal subgroup} of \(G\) that contains \(S\) .
 \end{proof}
 \begin{theorem} Let \(G = {G}_{1} * {G}_{2}\) . Let \({N}_{i}\) be a normal subgroup of \({G}_{i}\) , for \(i = 1,2\) . If \(N\) is the least normal subgroup of \(G\) that contains \({N}_{1}\) and \({N}_{2}\) , then
 
@@ -513,7 +513,7 @@ We can write \(x\) in the form \(x = {x}_{1}{x}_{2}\cdots {x}_{n}\) , where each
 
 Let \(G\) be a group; let \(\left\{  {a}_{\alpha }\right\}\) be a family of elements of \(G\) , for \(\alpha  \in  J\) . We say the elements \(\left\{  {a}_{\alpha }\right\}\) generate \(G\) if every element of \(G\) can be written as a product of powers of the elements \({a}_{\alpha }\) . If the family \(\left\{  {a}_{\alpha }\right\}\) is finite, we say \(G\) is finitely generated.
 
-\begin{definition} Let \(\left\{  {a}_{\alpha }\right\}\) be a family of elements of a group \(G\) . Suppose each \({a}_{\alpha }\) generates an infinite cyclic subgroup \({G}_{\alpha }\) of \(G\) . If \(G\) is the free product of the groups \(\left\{  {G}_{\alpha }\right\}\) , then \(G\) is said to be a free group, and the family \(\left\{  {a}_{\alpha }\right\}\) is called a system of free generators for \(G\) .
+\begin{definition} Let \(\left\{  {a}_{\alpha }\right\}\) be a family of elements of a group \(G\) . Suppose each \({a}_{\alpha }\) generates an infinite cyclic subgroup \({G}_{\alpha }\) of \(G\) . If \(G\) is the free product of the groups \(\left\{  {G}_{\alpha }\right\}\) , then \(G\) is said to be a \idx{free group}, and the family \(\left\{  {a}_{\alpha }\right\}\) is called a system of free \idx{Free generators for a group} generators for \(G\) .
 \end{definition}
 
 In this case, for each element \(x\) of \(G\) , there is a unique reduced word in the elements of the groups \({G}_{\alpha }\) that represents \(x\) . This says that if \(x \neq  1\) , then \(x\) can be written uniquely in the form
@@ -548,7 +548,7 @@ Then \({a}_{\alpha }^{0}\) is the identity element of \({G}_{\alpha }\) , and \(
 
 If \(G\) is the free group on the elements \({a}_{\alpha }\) , we normally abuse notation and identify the elements of the group \({G}_{\alpha }\) with their images under the monomorphism \({i}_{\alpha } : {G}_{\alpha } \rightarrow\)  \(G\) involved in the construction of the external free product. Then each \({a}_{\alpha }\) is treated as an element of \(G\) , and the family \(\left\{  {a}_{\alpha }\right\}\) forms a system of free generators for \(G\) .
 
-There is an important connection between free groups and free abelian groups. In order to describe it, we must recall the notion of commutator subgroup from algebra.
+There is an important connection between free groups and free abelian groups. In order to describe it, we must recall the notion of \idx{commutator} subgroup from algebra.
 
 \begin{definition} Let \(G\) be a group. If \(x,y \in  G\) , we denote by \(\left\lbrack  {x,y}\right\rbrack\) the element
 
@@ -556,7 +556,7 @@ There is an important connection between free groups and free abelian groups. In
 \left\lbrack  {x,y}\right\rbrack = {xy}{x}^{-1}{y}^{-1}
 \]
 
-of \(G\) ; it is called the commutator of \(x\) and \(y\) . The subgroup of \(G\) generated by the set of all commutators in \(G\) is called the commutator subgroup of \(G\) and denoted \(\left\lbrack  {G,G}\right\rbrack\) .
+of \(G\) ; it is called the commutator of \(x\) and \(y\) . The subgroup of \(G\) generated by the set of all commutators in \(G\) is called the commutator subgroup of \(G\) and denoted \(\idxmath{G}{\(\left\lbrack  {G,G}\right\rbrack\)} \left\lbrack  {G,G}\right\rbrack\) .
 \end{definition}
 
 The following result may be familiar; we provide a proof, for completeness:
@@ -635,15 +635,15 @@ A basic problem in group theory is to determine, for two given groups, whether o
 
 For arbitrary groups, however the answer is not so simple. Only in the case of an abelian group that is finitely generated is there a clear-cut answer.
 
-If \(G\) is abelian and finitely generated, then there is a fundamental theorem to the effect that \(G\) is the direct sum of two subgroups, \(G = H \oplus  T\) , where \(H\) is free abelian of finite rank, and \(T\) is the subgroup of \(G\) consisting of all elements of finite order. (We call \(T\) the torsion subgroup of \(G\) .) The rank of \(H\) is uniquely determined by \(G\) , since it equals the rank of the quotient of \(G\) by its torsion subgroup. This number is often called the betti number of \(G\) . Furthermore, the subgroup \(T\) is itself a direct sum; it is the direct sum of a finite number of finite cyclic groups whose orders are powers of primes. The orders of these groups are uniquely determined by \(T\) (and hence by \(G\) ), and are called the elementary divisors of \(G\) . Thus the isomorphism class of \(G\) is completely determined by specifying its betti number and its elementary divisors.
+If \(G\) is abelian and finitely generated, then there is a fundamental theorem to the effect that \(G\) is the direct sum of two subgroups, \(G = H \oplus  T\) , where \(H\) is free abelian of finite rank, and \(T\) is the subgroup of \(G\) consisting of all elements of finite order. (We call \(T\) the torsion subgroup of \(G\) .) The rank of \(H\) is uniquely determined by \(G\) , since it equals the rank of the quotient of \(G\) by its torsion subgroup. This number is often called the \idx{betti number} of \(G\) . Furthermore, the subgroup \(T\) is itself a direct sum; it is the direct sum of a finite number of finite cyclic groups whose orders are powers of primes. The orders of these groups are uniquely determined by \(T\) (and hence by \(G\) ), and are called the \idx{elementary divisors} of \(G\) . Thus the isomorphism class of \(G\) is completely determined by specifying its betti number and its elementary divisors.
 
 If \(G\) is not abelian, matters are not nearly so satisfactory, even if \(G\) is finitely generated. What can we specify that will determine \(G\) ? The best we can do is the following:
 
-Given \(G\) , suppose we are given a family \({\left\{  {a}_{\alpha }\right\}  }_{\alpha  \in  J}\) of generators for \(G\) . Let \(F\) be the free group on the elements \(\left\{  {a}_{\alpha }\right\}\) . Then the obvious map \(h\left( {a}_{\alpha }\right)  = {a}_{\alpha }\) of these elements into \(G\) extends to a homomorphism \(h : F \rightarrow  G\) that is surjective. If \(N\) equals the kernel of \(h\) , then \(F/N \cong  G\) . So one way of specifying \(G\) is to give a family \(\left\{  {a}_{\alpha }\right\}\) of generators for \(G\) , and somehow to specify the subgroup \(N\) . Each element of \(N\) is called a relation on \(F\) , and \(N\) is called the relations subgroup. We can specify \(N\) by giving a set of generators for \(N\) . But since \(N\) is normal in \(F\) , we can also specify \(N\) by a smaller set. Specifically, we can specify \(N\) by giving a family \(\left\{  {r}_{\beta }\right\}\) of elements of \(F\) such that these elements and their conjugates generate \(N\) , that is, such that \(N\) is the least normal subgroup of \(F\) that contains the elements \({r}_{\beta }\) . In this case, we call the family \(\left\{  {r}_{\beta }\right\}\) a complete set of relations for \(G\) .
+Given \(G\) , suppose we are given a family \({\left\{  {a}_{\alpha }\right\}  }_{\alpha  \in  J}\) of generators for \(G\) . Let \(F\) be the free group on the elements \(\left\{  {a}_{\alpha }\right\}\) . Then the obvious map \(h\left( {a}_{\alpha }\right)  = {a}_{\alpha }\) of these elements into \(G\) extends to a homomorphism \(h : F \rightarrow  G\) that is surjective. If \(N\) equals the kernel of \(h\) , then \(F/N \cong  G\) . So one way of specifying \(G\) is to give a family \(\left\{  {a}_{\alpha }\right\}\) of generators for \(G\) , and somehow to specify the subgroup \(N\) . Each element of \(N\) is called a \idx{Relation on a free group} relation on \(F\) , and \(N\) is called the relations subgroup. We can specify \(N\) by giving a set of generators for \(N\) . But since \(N\) is normal in \(F\) , we can also specify \(N\) by a smaller set. Specifically, we can specify \(N\) by giving a family \(\left\{  {r}_{\beta }\right\}\) of elements of \(F\) such that these elements and their conjugates generate \(N\) , that is, such that \(N\) is the least normal subgroup of \(F\) that contains the elements \({r}_{\beta }\) . In this case, we call the family \(\left\{  {r}_{\beta }\right\}\) a \idx{complete set of relations} for \(G\) .
 
 Each element of \(N\) belongs to \(F\) , so it can of course be represented uniquely by a reduced word in powers of the generators \(\left\{  {a}_{\alpha }\right\}\) . When we speak of a relation on the generators of \(G\) , we sometimes refer to this reduced word, rather than to the element of \(N\) it represents. The context will make the meaning clear.
 
-\begin{definition} If \(G\) is a group, a presentation of \(G\) consists of a family \(\left\{  {a}_{\alpha }\right\}\) of generators for \(G\) , along with a complete set \(\left\{  {r}_{\beta }\right\}\) of relations for \(G\) , where each \({r}_{\beta }\) is an element of the free group on the set \(\left\{  {a}_{\alpha }\right\}\) . If the family \(\left\{  {a}_{\alpha }\right\}\) is finite, then \(G\) is finitely generated, of course. If both the families \(\left\{  {a}_{\alpha }\right\}\) and \(\left\{  {r}_{\beta }\right\}\) are finite, then \(G\) is said to be finitely presented, and these families form what is called a finite presentation for \(G\) .
+\begin{definition} If \(G\) is a group, a presentation of \(G\) consists of a family \(\left\{  {a}_{\alpha }\right\}\) of generators for \(G\) , along with a complete set \(\left\{  {r}_{\beta }\right\}\) of relations for \(G\) , where each \({r}_{\beta }\) is an element of the free group on the set \(\left\{  {a}_{\alpha }\right\}\) . If the family \(\left\{  {a}_{\alpha }\right\}\) is finite, then \(G\) is finitely generated, of course. If both the families \(\left\{  {a}_{\alpha }\right\}\) and \(\left\{  {r}_{\beta }\right\}\) are finite, then \(G\) is said to be finitely presented, and these families form what is called a \idx{finite presentation} for \(G\) .
 \end{definition}
 
 This procedure for specifying \(G\) is far from satisfactory. A presentation for \(G\) does determine \(G\) uniquely, up to isomorphism; but two completely different presentations can lead to groups that are isomorphic. Furthermore, even in the finite case there is no effective procedure for determining, from two different presentations, whether or not the groups they determine are isomorphic. This result is known as the "unsolvability of the isomorphism problem" for groups.
@@ -687,7 +687,7 @@ Proof.
 
 We now return to the problem of determining the fundamental group of a space \(X\) that is written as the union of two open subsets \(U\) and \(V\) having path-connected intersection. We showed in \( \S {59}\) that, if \({x}_{0} \in  U \cap  V\) , the images of the two groups \({\pi }_{1}\left( {U,{x}_{0}}\right)\) and \({\pi }_{1}\left( {V,{x}_{0}}\right)\) in \({\pi }_{1}\left( {X,{x}_{0}}\right)\) , under the homomorphisms induced by inclusion, generate the latter group. In this section, we show that \({\pi }_{1}\left( {X,{x}_{0}}\right)\) is, in fact, completely determined by these two groups, the group \({\pi }_{1}\left( {U \cap  V,{x}_{0}}\right)\) , and the various homomorphisms of these groups induced by inclusion. This is a basic result about fundamental groups. It will enable us to compute the fundamental groups of a number of spaces, including the compact 2-manifolds.
 
-\begin{theorem}[Seifert-van Kampen theorem] Let \(X = U \cup  V\) , where \(U\) and \(V\) are open in \(X\) ; assume \(U,V\) , and \(U \cap  V\) are path connected; let \({x}_{0} \in  U \cap  V\) . Let \(H\) be a group, and let
+\begin{theorem}[\idx{Seifert-van Kampen theorem}] Let \(X = U \cup  V\) , where \(U\) and \(V\) are open in \(X\) ; assume \(U,V\) , and \(U \cap  V\) are path connected; let \({x}_{0} \in  U \cap  V\) . Let \(H\) be a group, and let
 
 \[
 {\phi }_{1} : {\pi }_{1}\left( {U,{x}_{0}}\right)  \rightarrow  H\;\text{ and }\;{\phi }_{2} : {\pi }_{1}\left( {V,{x}_{0}}\right)  \rightarrow  H
@@ -794,7 +794,7 @@ If \(\tau\) is to be an extension of \(\sigma\) and satisfy (1) and (2), we must
 
 So we shall use this equation as our definition of \(\tau\) .
 
-We show that this definition is independent of the choice of subdivision. It suffices to show that the value of \(\tau \left( f\right)\) remains unchanged if we adjoin a single additional point \(p\) to the subdivision. Let \(i\) be the index such that \({s}_{i - 1} < p < {s}_{i}\) . If we compute \(\tau \left( f\right)\) using this new subdivision, the only change in formula \(\left( *\right)\) is that the factor \(\sigma \left( {f}_{i}\right)\) disappears and is replaced by the product \(\sigma \left( {f}_{i}^{\prime }\right)  \cdot  \sigma \left( {f}_{i}^{\prime \prime }\right)\) , where \({f}_{i}^{\prime }\) and \({f}_{i}^{\prime \prime }\) equal the positive linear maps of \(\left\lbrack  {0,1}\right\rbrack\) to \(\left\lbrack  {{s}_{i - 1},p}\right\rbrack\) and to \(\left\lbrack  {p,{s}_{i}}\right\rbrack\) , respectively, followed by \(f\) . But \({f}_{i}\) is path homotopic to \({f}_{i}^{\prime } * {f}_{i}^{\prime \prime }\) in \(U\) or \(V\) , so that \(\sigma \left( {f}_{i}\right)  = \sigma \left( {f}_{i}^{\prime }\right) \;\sigma \left( {f}_{i}^{\prime \prime }\right)\) , by conditions (1) and (2) for \(\sigma\) . Thus \(\tau\) is well-defined.
+We show that this definition is independent of the choice of subdivision. It suffices to show that the value of \(\tau \left( f\right)\) remains unchanged if we adjoin a single additional point \(p\) to the subdivision. Let \(i\) be the index such that \({s}_{i - 1} < p < {s}_{i}\) . If we compute \(\tau \left( f\right)\) using this new subdivision, the only change in \idx{Cauchy integral formula} formula \(\left( *\right)\) is that the factor \(\sigma \left( {f}_{i}\right)\) disappears and is replaced by the product \(\sigma \left( {f}_{i}^{\prime }\right)  \cdot  \sigma \left( {f}_{i}^{\prime \prime }\right)\) , where \({f}_{i}^{\prime }\) and \({f}_{i}^{\prime \prime }\) equal the positive linear maps of \(\left\lbrack  {0,1}\right\rbrack\) to \(\left\lbrack  {{s}_{i - 1},p}\right\rbrack\) and to \(\left\lbrack  {p,{s}_{i}}\right\rbrack\) , respectively, followed by \(f\) . But \({f}_{i}\) is path homotopic to \({f}_{i}^{\prime } * {f}_{i}^{\prime \prime }\) in \(U\) or \(V\) , so that \(\sigma \left( {f}_{i}\right)  = \sigma \left( {f}_{i}^{\prime }\right) \;\sigma \left( {f}_{i}^{\prime \prime }\right)\) , by conditions (1) and (2) for \(\sigma\) . Thus \(\tau\) is well-defined.
 
 It follows that \(\tau\) is an extension of \(\sigma\) . For if \(f\) already lies in \(U\) or \(V\) , we can use the trivial partition of \(\left\lbrack  {0,1}\right\rbrack\) to define \(\tau \left( f\right)\) ; then \(\tau \left( f\right)  = \sigma \left( f\right)\) by definition.
 
@@ -1025,7 +1025,7 @@ where \(M\) is the least normal subgroup of \({\pi }_{1}\left( {U,{x}_{0}}\right
 
 \section*{§ 71 The Fundamental Group of a Wedge of Circles}
 
-In this section, we define what we mean by a wedge of circles, and we compute its fundamental group.
+In this section, we define what we mean by a \idx{wedge of circles}, and we compute its fundamental group.
 
 \begin{definition} Let \(X\) be a Hausdorff space that is the union of the subspaces \({S}_{1},\ldots ,{S}_{n}\) , each of which is homeomorphic to the unit circle \({S}^{1}\) . Assume that there is a point \(p\) of \(X\) such that \({S}_{i} \cap  {S}_{j} = \{ p\}\) whenever \(i \neq  j\) . Then \(X\) is called the wedge of the circles \({S}_{1},\ldots ,{S}_{n}\) .
 \end{definition}
@@ -1091,7 +1091,7 @@ in the elements of the groups \({G}_{\alpha }\) that represents the identity ele
 
 The preceding theorem depended on the fact that the topology of \(X\) was coherent with the subspaces \({S}_{\alpha }\) . Consider the following example:
 
-\begin{example} Let \({C}_{n}\) be the circle of radius \(1/n\) in \({\mathbb{R}}^{2}\) with center at the point \(\left( {1/n,0}\right)\) . Let \(X\) be the subspace of \({\mathbb{R}}^{2}\) that is the union of these circles; then \(X\) is the union of a countably infinite collection of circles, each pair of which intersect in the origin \(p\) However, \(X\) is not the wedge of the circles \({C}_{n}\) , we call \(X\) (for convenience) the infinite earring.
+\begin{example} Let \({C}_{n}\) be the circle of radius \(1/n\) in \({\mathbb{R}}^{2}\) with center at the point \(\left( {1/n,0}\right)\) . Let \(X\) be the subspace of \({\mathbb{R}}^{2}\) that is the union of these circles; then \(X\) is the union of a countably infinite collection of circles, each pair of which intersect in the origin \(p\) However, \(X\) is not the wedge of the circles \({C}_{n}\) , we call \(X\) (for convenience) the \idx{infinite earring}.
 
 One can verify directly that \(X\) does not have the topology coherent with the subspaces \({C}_{n}\) ; the intersection of the positive \(x\) -axis with \(X\) contains exactly one point from each circle \({C}_{n}\) , but it is not closed in \(X\) . Alternatively, for each \(n\) , let \({f}_{n}\) be a loop in \({C}_{n}\) that represents a generator of \({\pi }_{1}\left( {{C}_{n},p}\right)\) , we show that \({\pi }_{1}\left( {X,p}\right)\) is not a free group with \(\left\{  \left\lbrack  {f}_{n}\right\rbrack  \right\}\) as a system of free generators Indeed, we show the elements \(\left\lbrack  {f}_{i}\right\rbrack\) do not even generate the group \({\pi }_{1}\left( {X,p}\right)\) .
 \end{example}
@@ -1232,7 +1232,7 @@ Figure 72.2
 
 The loop \({f}_{0}\) represents a generator of the fundamental group of Int \({B}^{2} - 0\) based at \(q\) . Then the loop \(\bar{\gamma } * \left( {{f}_{0} * \gamma }\right)\) represents a generator of the fundamental group of \({B}^{2} - 0\) based at \(p\) . Therefore, it is path homotopic either to \(f\) or its reverse; suppose the former. Following this path homotopy by the map \(h\) , we see that \(\bar{\delta } * \left( {{g}_{0} * \delta }\right)\) is path homotopic in \(U\) to \(g\) . Then \(\widehat{\delta }\left( \left\lbrack  {g}_{0}\right\rbrack  \right)  = \left\lbrack  g\right\rbrack\) , and the theorem follows.
 
-There is nothing special in this theorem about the unit ball \({B}^{2}\) . The same result holds if we replace \({B}^{2}\) by any space \(B\) homeomorphic to \({B}^{2}\) , if we denote by \(\operatorname{Bd}B\) the subspace corresponding to \({S}^{1}\) under the homeomorphism. Such a space \(B\) is called a 2- cell. The space \(X\) of this theorem is thought of as having been obtained by "adjoining a 2-cell" to \(A\) . We shall treat this situation more formally later.
+There is nothing special in this theorem about the unit ball \({B}^{2}\) . The same result holds if we replace \({B}^{2}\) by any space \(B\) homeomorphic to \({B}^{2}\) , if we denote by \(\operatorname{Bd}B\) the subspace corresponding to \({S}^{1}\) under the homeomorphism. Such a space \(B\) is called a 2- cell. The space \(X\) of this theorem is thought of as having been obtained by "adjoining a \idx{2-cell}" to \(A\) . We shall treat this situation more formally later.
 \end{proof}
 \section*{Exercises}
 
@@ -1273,7 +1273,7 @@ Then \(f\) represents a generator of \({\pi }_{1}\left( {\operatorname{Bd}{I}^{2
 \begin{proof}Let \(G\) be the free group on generators \(\alpha ,\beta\) ; and let \(N\) be the least normal subgroup containing the element \({\alpha \beta }{\alpha }^{-1}{\beta }^{-1}\) . Because this element is a commutator, \(N\) is contained in the commutator subgroup \(\left\lbrack  {G,G}\right\rbrack\) of \(G\) . On the other hand, \(G/N\) is abelian; for it is generated by the cosets \({\alpha N}\) and \({\beta N}\) , and these elements of \(G/N\) commute. Therefore \(N\) contains the commutator subgroup of \(G\) .
 It follows from Theorem 69.4 that \(G/N\) is a free abelian group of rank 2.
 \end{proof}
-\begin{definition} Let \(n\) be a positive integer with \(n > 1\) . Let \(r : {S}^{1} \rightarrow  {S}^{1}\) be rotation through the angle \({2\pi }/n\) , mapping the point \(\left( {\cos \theta ,\sin \theta }\right)\) to the point \((\cos (\theta  +\)  \({2\pi }/n)\) , \(\sin \left( {\theta  + {2\pi }/n}\right) )\) . Form a quotient space \(X\) from the unit ball \({B}^{2}\) by identifying each point \(x\) of \({S}^{1}\) with the points \(r\left( x\right) ,{r}^{2}\left( x\right) ,\ldots ,{r}^{n - 1}\left( x\right)\) . We shall show that \(X\) is a compact Hausdorff space; we call it the \(n\) -fold dunce cap.
+\begin{definition} Let \(n\) be a positive integer with \(n > 1\) . Let \(r : {S}^{1} \rightarrow  {S}^{1}\) be rotation through the angle \({2\pi }/n\) , mapping the point \(\left( {\cos \theta ,\sin \theta }\right)\) to the point \((\cos (\theta  +\)  \({2\pi }/n)\) , \(\sin \left( {\theta  + {2\pi }/n}\right) )\) . Form a quotient space \(X\) from the unit ball \({B}^{2}\) by identifying each point \(x\) of \({S}^{1}\) with the points \(r\left( x\right) ,{r}^{2}\left( x\right) ,\ldots ,{r}^{n - 1}\left( x\right)\) . We shall show that \(X\) is a compact Hausdorff space; we call it the \(n\) -fold \idx{dunce cap}.
 \end{definition}
 
 Let \(\pi  : {B}^{2} \rightarrow  X\) be the quotient map; we show that \(\pi\) is a closed map. In order to do this, we must show that if \(C\) is a closed set of \({B}^{2}\) , then \({\pi }^{-1}\pi \left( C\right)\) is also closed in \({B}^{2}\) ; it then will follow from the definition of the quotient topology that \(\pi \left( C\right)\) is closed in \(X\) . Let \({C}_{0} = C \cap  {S}^{1}\) ; it is closed in \({B}^{2}\) . The set \({\pi }^{-1}\pi \left( C\right)\) equals the union of \(C\) and the sets \(r\left( {C}_{0}\right) ,{r}^{2}\left( {C}_{0}\right) ,\ldots ,{r}^{n - 1}\left( {C}_{0}\right)\) , all of which are closed in \({B}^{2}\) because \(r\) is a homeomorphism. Hence \({\pi }^{-1}\pi \left( C\right)\) is closed in \({B}^{2}\) , as desired.
@@ -1343,7 +1343,7 @@ Figure 73.3
 
 2. Prove the following:
 
-\begin{theorem} If \(G\) is a finitely presented group, then there is a compact Hausdorff space \(X\) whose fundamental group is isomorphic to \(G\) .
+\begin{theorem} If \(G\) is a \idx{finitely presented group}, then there is a compact Hausdorff space \(X\) whose fundamental group is isomorphic to \(G\) .
 \end{theorem}
 
 \begin{proof}Suppose \(G\) has a presentation consisting of \(n\) generators and \(m\) relations. Let \(A\) be the wedge of \(n\) circles; form an adjunction space \(X\) from the union of \(A\) and \(m\) copies \({B}_{1},\ldots ,{B}_{m}\) of the unit ball by means of a continuous map \(f : \bigcup \operatorname{Bd}{B}_{i} \rightarrow  A\) .
