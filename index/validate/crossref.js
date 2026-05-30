@@ -1,7 +1,7 @@
 // Cross-reference chapter JSON files against the master index JSON
 const fs = require('fs');
 const path = require('path');
-const { PROJECT_ROOT, loadJSON, formatSection, heading, pass, fail, warn, info, summaryLine } = require('./utils');
+const { PROJECT_ROOT, loadJSON, formatSection, heading, pass, fail, warn, info, summaryLine } = require('../utils');
 
 function check() {
   const lines = [];
@@ -26,7 +26,7 @@ function check() {
 
   lines.push(heading('Forward Check (chapter entries -> master)'));
 
-  const indexDir = path.join(PROJECT_ROOT, 'index');
+  const indexDir = path.join(PROJECT_ROOT, 'index', 'data');
   let totalChapter = 0, totalFound = 0, totalMismatch = 0;
   let coveredMaster = new Set();
 
@@ -35,7 +35,7 @@ function check() {
     const filePath = path.join(indexDir, filename);
     if (!fs.existsSync(filePath)) continue;
 
-    const { data } = loadJSON(`index/${filename}`);
+    const { data } = loadJSON(`index/data/${filename}`);
     if (!Array.isArray(data)) continue;
 
     totalChapter += data.length;

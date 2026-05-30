@@ -1,7 +1,7 @@
 // Compare index commands found in .tex source against master JSON target
 const fs = require('fs');
 const path = require('path');
-const { PROJECT_ROOT, loadJSON, extractCommands, normalizeTerm, formatSection, heading, pass, fail, warn, info } = require('./utils');
+const { PROJECT_ROOT, loadJSON, extractCommands, normalizeTerm, formatSection, heading, pass, fail, warn, info } = require('../utils');
 
 function check() {
   const lines = [];

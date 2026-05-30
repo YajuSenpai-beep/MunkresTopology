@@ -1,5 +1,5 @@
 // Validate original/index_entries.json structural integrity
-const { loadJSON, formatSection, heading, pass, fail, warn, info } = require('./utils');
+const { loadJSON, formatSection, heading, pass, fail, warn, info } = require('../utils');
 
 function check() {
   const lines = [];
