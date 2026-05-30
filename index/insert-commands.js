@@ -82,7 +82,14 @@ function insertForChapter(chNum, sourceDir, dryRun, l1Only) {
   // Phase 1: find all insertion points on original content
   const operations = [];
 
-  for (const e of data) {
+  // Sort by term length descending: longer terms first to avoid substring conflicts
+  const sortedData = [...data].sort((a, b) => {
+    const al = a.term.replace(/\\\(|\\\)/g, '').replace(/\\[a-zA-Z]+(\{[^}]*\})?/g, '').replace(/[{}]/g, '').trim().length;
+    const bl = b.term.replace(/\\\(|\\\)/g, '').replace(/\\[a-zA-Z]+(\{[^}]*\})?/g, '').replace(/[{}]/g, '').trim().length;
+    return bl - al;
+  });
+
+  for (const e of sortedData) {
     let insertPos = -1, replaceLen = 0, cmd = '';
 
     if (e.level === 1 && e.sort_key) {
@@ -154,6 +161,53 @@ function insertForChapter(chNum, sourceDir, dryRun, l1Only) {
         'm -fold projective plane': ['m-fold projective plane', 'projective plane'],
         'n -fold torus': ['n-fold torus'],
         'T_i axioms': ['separation axioms', 't_i axioms'],
+        // Additional verified aliases from optimize-l1.js audit
+        'Adjoining a 2-cell': ['adjoining a 2-cell', 'adjoining a two-cell'],
+        'Antipode-preserving': ['antipode-preserving', 'antipode preserving'],
+        'Boundary: of a set': ['boundary of'],
+        'Compactness': ['compactness'],
+        'Continuity: of algebraic operations in \\(\\mathbb{R}\\)': ['algebraic operations in'],
+        'Countable dense subset': ['countable dense subset'],
+        'Edge: of curved triangle': ['curved triangle'],
+        'First homology group': ['first homology group'],
+        'Fixed point theorem: for \\({B}^{n}\\)': ['fixed point theorem', 'fixed point'],
+        'Functorial properties of \\({h}_{ * }\\)': ['functorial properties'],
+        '"If ... then," meaning of': ['if ... then', 'meaning of'],
+        'Indexed family of sets': ['indexed family', 'indexing function'],
+        'Infimum': ['infimum'],
+        'Intersection': ['intersection'],
+        'Intervals in \\(\\mathbb{R}\\): compactness': ['intervals in'],
+        'Labelling scheme': ['labelling scheme'],
+        'Least upper bound': ['least upper bound'],
+        'Least upper bound property': ['least upper bound property'],
+        'Limit of a sequence': ['convergent sequence', 'limit of a sequence'],
+        'Locally euclidean': ['locally euclidean'],
+        'Logical quantifiers': ['quantifiers'],
+        'Metric space': ['metric space'],
+        'Nulhomotopy lemma': ['nulhomotopy lemma'],
+        'One-point compactification': ['one-point compactification'],
+        '"Onto" function': ['surjective function', 'onto function'],
+        'Open covering': ['open covering', 'open cover'],
+        'Path connectedness': ['path connected', 'path-connected'],
+        'Path homotopy': ['path homotopy'],
+        'Peano space': ['peano space'],
+        'Plane in \\({\\mathbb{R}}^{N}\\)': ['plane in'],
+        'Principle of recursive definition': ['principle of recursive', 'recursive definition'],
+        'Regular Lindelöf space: metrizability': ['regular lindelof', 'lindelof space'],
+        'Scheme': ['labelling scheme', 'proper labelling'],
+        'Separation theorem: closed topologist\'s sine curve in \\({S}^{2}\\)': ['separation theorem'],
+        'Simple closed curve': ['simple closed curve'],
+        'Standard bounded metric': ['standard bounded metric'],
+        'Standard topology: on \\(\\mathbb{R}\\)': ['standard topology'],
+        'Strictly finer topology': ['strictly finer', 'finer topology'],
+        'Strict partial order': ['strict partial order'],
+        'Supremum': ['supremum'],
+        'System of free generators': ['system of free generators', 'free generators'],
+        'Torus-type scheme': ['torus type', 'torus-type'],
+        'Translation of \\({\\mathbb{R}}^{N}\\)': ['translation of'],
+        'Uncountability: of \\(\\mathcal{P}\\left( {\\mathbb{Z}}_{ + }\\right)\\)': ['uncountability'],
+        'Vanish precisely on \\(A\\)': ['vanish precisely on a'],
+        'Weak local connectedness': ['weakly locally connected', 'weak local connectedness'],
       };
 
       let pos = findInsertPoint(content, searchTerm);

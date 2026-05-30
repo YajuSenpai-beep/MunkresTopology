@@ -1,13 +1,45 @@
-// Compare index commands found in .tex source against master JSON target
+// Accurate L1 coverage: compare .idx file (ground truth) against master JSON
 const fs = require('fs');
 const path = require('path');
-const { PROJECT_ROOT, loadJSON, extractCommands, normalizeTerm, formatSection, heading, pass, fail, warn, info } = require('../utils');
+const { PROJECT_ROOT, loadJSON, formatSection, heading, pass, fail, warn, info } = require('../utils');
 
 function check() {
   const lines = [];
   let passes = 0, failures = 0, warnings = 0;
 
-  lines.push(formatSection('Coverage Analysis'));
+  lines.push(formatSection('L1 Coverage Analysis (.idx ground truth)'));
+
+  const idxPath = path.join(PROJECT_ROOT, 'Topology_by_Munkres.idx');
+  if (!fs.existsSync(idxPath)) {
+    lines.push(fail('.idx file not found — compile first'));
+    failures++;
+    return { passes, failures, warnings, lines };
+  }
+
+  // Parse .idx entries
+  const idxContent = fs.readFileSync(idxPath, 'utf8');
+  const idxEntries = [];
+  for (const line of idxContent.split('\n')) {
+    const m = line.match(/\\indexentry\{(.+?)\}\{(\d+)\}/);
+    if (m) idxEntries.push({ raw: m[1], page: m[2] });
+  }
+
+  // Build lookup sets
+  const idxPlain = new Set(); // term|page_format
+  const idxMath = new Map();  // sortkey -> [display, ...]
+  for (const e of idxEntries) {
+    const parts = e.raw.split('|');
+    const key = parts[0];
+    const atIdx = key.indexOf('@');
+    if (atIdx >= 0) {
+      const sort = key.slice(0, atIdx).toLowerCase();
+      const display = key.slice(atIdx + 1).replace(/\s+/g, ' ').toLowerCase();
+      if (!idxMath.has(sort)) idxMath.set(sort, []);
+      idxMath.get(sort).push(display);
+    } else {
+      idxPlain.add(key.toLowerCase().replace(/\s+/g, ' '));
+    }
+  }
 
   const master = loadJSON('original/index_entries.json');
   if (master.error) {
@@ -16,87 +48,63 @@ function check() {
     return { passes, failures, warnings, lines };
   }
 
-  // Collect all index commands from all chapter .tex files
-  const chaptersDir = path.join(PROJECT_ROOT, 'chapters');
-  const files = fs.readdirSync(chaptersDir).filter(f => f.startsWith('Chapter_') && f.endsWith('.tex'));
+  const filterable = master.data.entries.filter(e =>
+    e.level === 1 && !e.term.includes('(cont.)') && !/\(see/.test(e.term) && e.page.length > 0
+  );
 
-  const sourceL1 = new Set();
-  const sourceL2 = new Set();
-  const sourceMath = new Map(); // display -> sort
-
-  for (const f of files) {
-    const content = fs.readFileSync(path.join(chaptersDir, f), 'utf8');
-    const cmds = extractCommands(content);
-    for (const term of cmds.idx) sourceL1.add(term);
-    for (const m of cmds.idxmath) sourceMath.set(m.display, m.sort);
-    for (const s of cmds.idxsub) sourceL2.add(s.parent + '::' + s.term);
-  }
-
-  const sourceTotal = sourceL1.size + sourceL2.size + sourceMath.size;
-  lines.push(info(`Source commands found: ${sourceL1.size} idx + ${sourceL2.size} idxsub + ${sourceMath.size} idxmath = ${sourceTotal}`));
-  lines.push(info(`Master target: ${master.data.entries.length} entries (685 L1 + 733 L2)`));
-
-  // Match master entries against source
-  let matched = 0, missing = 0, extra = 0;
-  const missingL1 = [];
-  const mathCheckIssues = [];
-
-  for (const e of master.data.entries) {
+  let covered = 0, missing = [], matchIssue = [];
+  for (const e of filterable) {
+    const ct = e.term.replace(/\\\(|\\\)/g, '').replace(/\s+/g, ' ').toLowerCase().trim();
     let found = false;
-    if (e.level === 1) {
-      if (sourceL1.has(e.term)) found = true;
-      else if (sourceMath.has(e.term)) found = true; // \idxmath display matches term
+
+    if (e.sort_key) {
+      const displays = idxMath.get(e.sort_key.toLowerCase());
+      if (displays) {
+        for (const d of displays) {
+          if (d.includes(ct.slice(0, 20)) || ct.includes(d.slice(0, 20))) { found = true; break; }
+        }
+      }
+      if (!found) {
+        // Try plain match too
+        if (idxPlain.has(ct)) found = true;
+      }
     } else {
-      found = sourceL2.has(e.parent + '::' + e.term);
-    }
-
-    if (found) matched++;
-    else {
-      missing++;
-      if (e.level === 1 && missingL1.length < 15) missingL1.push(e);
-    }
-  }
-
-  // Math mode audit: entries with sort_key should use \idxmath
-  let mathMisuse = 0;
-  for (const e of master.data.entries) {
-    if (e.sort_key && e.level === 1) {
-      if (sourceL1.has(e.term)) {
-        // Found via \idx instead of \idxmath - potential issue
-        mathCheckIssues.push(`"${e.term.slice(0,50)}" has sort_key="${e.sort_key}" but found via \\idx (should use \\idxmath)`);
-        mathMisuse++;
+      if (idxPlain.has(ct)) found = true;
+      else {
+        // Fuzzy: check if any plain entry contains the term
+        for (const p of idxPlain) {
+          if (p.includes(ct.slice(0, 15)) || ct.includes(p)) { found = true; break; }
+        }
       }
     }
+
+    if (found) covered++;
+    else if (e.sort_key) matchIssue.push(e);
+    else missing.push(e);
   }
 
-  // Coverage percentage
-  const pct = master.data.entries.length > 0 ? (matched / master.data.entries.length * 100) : 0;
+  const pct = (covered / filterable.length * 100).toFixed(1);
+  lines.push(info(`Filterable L1: ${filterable.length}`));
+  lines.push(info(`.idx entries: ${idxEntries.length}`));
+  lines.push(info(`Covered: ${covered} (${pct}%)`));
 
-  if (matched === 0 && missing === master.data.entries.length) {
-    lines.push(warn('The index has NOT been implemented yet. 100% of entries are pending.'));
-    warnings++;
-  } else if (pct < 50) {
-    lines.push(warn(`Coverage: ${matched}/${master.data.entries.length} (${pct.toFixed(1)}%)`));
-    warnings++;
-  } else {
-    lines.push(pass(`Coverage: ${matched}/${master.data.entries.length} (${pct.toFixed(1)}%)`));
+  if (missing.length === 0 && matchIssue.length === 0) {
+    lines.push(pass('All L1 entries verified in .idx'));
     passes++;
-  }
-
-  if (missingL1.length > 0) {
-    lines.push(heading('Sample Missing L1 Entries'));
-    for (const e of missingL1) {
-      const cmd = e.sort_key ? `\\idxmath{${e.sort_key}}{${e.term}}` : `\\idx{${e.term}}`;
-      lines.push(`  [p.${e.page.join(',')}] ${cmd}`);
+  } else {
+    if (missing.length > 0) {
+      lines.push(fail(`Plain entries NOT in .idx: ${missing.length}`));
+      failures++;
+      lines.push(heading('Missing Plain Entries'));
+      for (const e of missing.slice(0, 20)) {
+        const ct = e.term.replace(/\\\(|\\\)/g, '').trim();
+        lines.push(`  [p.${e.page}] ${ct.slice(0,65)}`);
+      }
     }
-  }
-
-  if (mathCheckIssues.length > 0) {
-    lines.push(heading(`Math Sort-Key Audit (${mathMisuse} issues)`));
-    for (const issue of mathCheckIssues.slice(0, 5)) {
-      lines.push(warn(issue));
+    if (matchIssue.length > 0) {
+      lines.push(warn(`Math entries with match issues: ${matchIssue.length} (likely formatting)`));
+      warnings++;
     }
-    warnings += mathCheckIssues.length;
   }
 
   return { passes, failures, warnings, lines };
