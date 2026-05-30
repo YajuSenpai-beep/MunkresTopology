@@ -63,9 +63,9 @@ function insertForChapter(chNum, sourceDir, dryRun, l1Only) {
   if (l1Only) data = data.filter(e => e.level === 1);
   data = data.filter(e => {
     const t = e.term;
-    if (t.includes('(cont.)')) return false;
-    if (/\(see\s/.test(t)) return false;
-    if (/\(see also\s/.test(t)) return false;
+    if (t.includes('(cont.)')) return true;
+    if (/\(see/.test(t)) return true;
+    if (/\(see also/.test(t)) return true;
     if (e.page.length === 0) return false;
     return true;
   });
