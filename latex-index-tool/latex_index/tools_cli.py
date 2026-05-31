@@ -512,13 +512,15 @@ def _add_common_args(parser: argparse.ArgumentParser) -> None:
 def _for_each_file(
     files: List[str], args: argparse.Namespace, processor: Any,
 ) -> int:
-    """遍历文件执行 processor(fp)，支持 --continue-on-error."""
+    """遍历文件执行 processor(fp)，支持 --continue-on-error 和恢复报告."""
     total = 0
     errors: List[Tuple[str, str]] = []
+    success: List[str] = []
     for fp in files:
         try:
             n = processor(fp)
             total += n
+            success.append(fp)
         except Exception as e:
             if getattr(args, "continue_on_error", False):
                 logger.error("%s: %s", os.path.basename(fp), e)
@@ -527,6 +529,16 @@ def _for_each_file(
                 raise
     if errors:
         logger.warning("%d/%d files had errors", len(errors), len(files))
+        # 生成恢复报告
+        try:
+            from .reporter import generate_recovery_report
+            report = generate_recovery_report(success, errors)
+            report_path = "recovery_report.txt"
+            with open(report_path, "w", encoding="utf-8") as f:
+                f.write(report + "\n")
+            logger.info("恢复报告已生成: %s", report_path)
+        except Exception:
+            pass
     return total
 
 

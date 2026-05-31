@@ -103,6 +103,62 @@ class TestCmdInsert:
         result = cmd_insert(args)
         assert result == 1  # error
 
+    def test_chapter_mode_with_config(self, tmp_entries):
+        """Single-file chapter mode: finds chapter file via config."""
+        import latex_index.cli as cli_mod
+        with tempfile.TemporaryDirectory() as tmpdir:
+            chapters_dir = os.path.join(tmpdir, "chapters")
+            os.makedirs(chapters_dir)
+            ch1 = os.path.join(chapters_dir, "Chapter_1_Test.tex")
+            with open(ch1, "w", encoding="utf-8") as f:
+                f.write(r"\section{Test} The field concept.")
+            # Create config pointing to temp chapters dir
+            cfg_path = os.path.join(tmpdir, "cfg.yaml")
+            with open(cfg_path, "w", encoding="utf-8") as f:
+                f.write(f"chapter_source_dir: {chapters_dir}\n")
+                f.write("file_pattern: Chapter_${num}_*.tex\n")
+                f.write("templates:\n")
+                f.write("  l1: \\\\idx{{${key}}}\n")
+            args = argparse.Namespace(
+                config=cfg_path,
+                chapter=1,
+                entries=tmp_entries,
+                dry_run=True,
+                l1_only=False,
+                main=None,
+                fast=False,
+                interactive=False,
+                progress=False,
+            )
+            result = cmd_insert(args)
+            assert result == 0  # success
+
+    def test_chapter_mode_no_matching_file(self, tmp_entries):
+        """Single-file chapter mode: empty dir returns error."""
+        import latex_index.cli as cli_mod
+        with tempfile.TemporaryDirectory() as tmpdir:
+            empty_dir = os.path.join(tmpdir, "empty_chapters")
+            os.makedirs(empty_dir)
+            cfg_path = os.path.join(tmpdir, "cfg.yaml")
+            with open(cfg_path, "w", encoding="utf-8") as f:
+                f.write(f"chapter_source_dir: {empty_dir}\n")
+                f.write("file_pattern: Chapter_${num}_*.tex\n")
+                f.write("templates:\n")
+                f.write("  l1: \\\\idx{{${key}}}\n")
+            args = argparse.Namespace(
+                config=cfg_path,
+                chapter=99,
+                entries=tmp_entries,
+                dry_run=True,
+                l1_only=False,
+                main=None,
+                fast=False,
+                interactive=False,
+                progress=False,
+            )
+            result = cmd_insert(args)
+            assert result == 1
+
 
 class TestCmdParse:
     def test_parse_indented_format(self):

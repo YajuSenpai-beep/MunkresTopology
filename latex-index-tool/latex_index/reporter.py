@@ -159,6 +159,74 @@ def validate_range_pairs(content: str) -> Dict[str, Any]:
     }
 
 
+def generate_recovery_report(
+    success_files: list[str],
+    failed_files: list[tuple[str, str]],
+    output_path: str = "",
+) -> str:
+    """生成多文件批处理的恢复报告。
+
+    Args:
+        success_files: 成功处理的文件列表
+        failed_files: 失败文件列表 [(文件路径, 错误信息), ...]
+        output_path: 输出报告路径（可选）
+
+    Returns:
+        格式化的恢复报告
+    """
+    lines = [
+        "=" * 60,
+        "批处理恢复报告",
+        "=" * 60,
+        "",
+        f"成功: {len(success_files)} 个文件",
+        f"失败: {len(failed_files)} 个文件",
+        "",
+    ]
+
+    if failed_files:
+        lines.append("--- 失败详情 ---")
+        for fp, err in failed_files:
+            lines.append(f"  ✗ {fp}")
+            lines.append(f"    原因: {err}")
+            # 建议恢复操作
+            if "FileNotFound" in err or "No such file" in err or "文件未找到" in err:
+                lines.append("    建议: 检查文件路径是否正确")
+            elif "Permission" in err or "denied" in err:
+                lines.append("    建议: 检查文件权限，确保可读写")
+            elif "encoding" in err.lower():
+                lines.append("    建议: 尝试用 UTF-8 编码重新保存文件")
+            else:
+                lines.append("    建议: 检查文件语法是否完整，可尝试手动恢复")
+        lines.append("")
+
+    if success_files:
+        lines.append("--- 成功文件 ---")
+        for fp in success_files[:20]:
+            lines.append(f"  ✓ {fp}")
+        if len(success_files) > 20:
+            lines.append(f"  ... 及另外 {len(success_files) - 20} 个文件")
+        lines.append("")
+
+    lines.append("--- 恢复操作 ---")
+    lines.append("1. 检查所有失败文件的错误信息")
+    lines.append("2. 手动修复或从备份恢复失败文件")
+    lines.append("3. 重新运行批处理命令")
+    lines.append("   备份命令: latex-index rollback --list <文件>")
+    lines.append("   恢复命令: latex-index rollback <文件>")
+    lines.append("   重试命令: 使用相同的 tools 子命令重新处理")
+    lines.append("")
+
+    if output_path:
+        try:
+            with open(output_path, "w", encoding="utf-8") as f:
+                f.write("\n".join(lines) + "\n")
+        except OSError:
+            pass
+
+    return "\n".join(lines)
+
+
 def find_potential_missing_entries(
     content: str, candidate_list: List[str]
 ) -> List[str]:

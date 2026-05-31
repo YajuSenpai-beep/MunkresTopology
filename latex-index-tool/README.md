@@ -3,13 +3,15 @@
 配置驱动、项目无关的生产级工具，用于在 LaTeX 源文件中自动插入 `\index{}` 命令。
 
 ```
-index/
-├── latex_index/        # Python 核心包（16 模块）
+latex-index-tool/
+├── latex_index/        # Python 核心包（16 模块，1881 行）
 ├── core/               # Node.js 引擎（保留兼容）
 ├── config/             # YAML 配置文件
 ├── tools/              # 独立批处理脚本
-├── tests/              # pytest 测试套件（409 项，89% 覆盖）
+├── tests/              # pytest 测试套件（464 项，核心库 92%，CLI 层 86%）
 ├── data/               # 索引条目 JSON 数据
+├── packaging/          # Brew/Scoop 打包模板
+├── docs/               # 教学文档
 └── test/               # 测试用 .tex 样本
 ```
 
@@ -38,7 +40,7 @@ brew install latex-index-tool                 # macOS (Homebrew)
 scoop install latex-index-tool                # Windows (Scoop)
 
 # 源码安装（开发模式）
-cd index && pip install -e ".[dev]"
+cd latex-index-tool && pip install -e ".[dev]"
 ```
 
 ### 基本使用
@@ -365,10 +367,10 @@ sorted(entries, key=lambda e: sort_key_for(e["term"], "stroke"))
 ## 测试
 
 ```bash
-cd index
+cd latex-index-tool
 pip install -e ".[dev]"
 
-# 全部测试（409 项，89% 覆盖）
+# 全部测试（464 项，89% 覆盖）
 make test
 
 # 覆盖率报告
@@ -385,11 +387,14 @@ pytest tests/test_scanner.py -v       # 索引扫描
 pytest tests/test_cli.py -v           # CLI 命令
 pytest tests/test_tools_cli.py -v     # 批处理工具
 pytest tests/test_collation.py -v     # 排序规则
-pytest tests/test_fuzz.py -v          # 模糊测试
 pytest tests/test_reporter.py -v      # 报告生成
 pytest tests/test_tui.py -v           # Rich TUI
 pytest tests/test_latexmk.py -v       # 编译集成
 pytest tests/test_xindy.py -v         # xindy 生成
+pytest tests/test_stability.py -v     # 稳定性测试
+pytest tests/test_e2e.py -v           # 端到端测试
+pytest tests/test_fuzz.py -v          # 模糊测试 (55 项)
+pytest tests/test_fuzz_advanced.py -v # 增强模糊测试 (14 项)
 pytest tests/test_integration.py -v   # 集成测试
 pytest tests/test_regression.py -v    # 回归测试
 pytest tests/test_exceptions.py -v    # 异常测试
@@ -431,9 +436,10 @@ pyinstaller latex-index.spec
 | ruff | Lint + 格式化 | `pyproject.toml` [tool.ruff] |
 | mypy | 静态类型检查 | `pyproject.toml` [tool.mypy] (strict) |
 | PyInstaller | 打包独立 exe | `latex-index.spec` |
-| Rich | TUI 交互界面 | 可选依赖 |
+| Rich | TUI 交互界面 | dev 依赖 (含在 [dev]) |
 | pypinyin | 中文拼音排序 | 可选依赖 |
 | tqdm | 进度条 | 可选依赖 |
+| pytest-cov | 覆盖率 | dev 依赖 |
 
 ### CI/CD
 
@@ -446,7 +452,7 @@ pyinstaller latex-index.spec
 
 ### 发布流程
 
-1. `make all` — 确保全部通过（409 测试 + mypy + ruff）
+1. `make all` — 确保全部通过（464 测试 + mypy + ruff）
 2. 更新 `pyproject.toml` 版本号
 3. 更新 `CHANGELOG.md`
 4. `git tag v1.0.0 && git push --tags`
@@ -462,7 +468,7 @@ pyinstaller latex-index.spec
 | `core/` | Node.js 引擎（保留兼容） |
 | `config/` | default.yaml |
 | `tools/` | 独立批处理脚本（也可通过 `latex-index tools` 调用） |
-| `tests/` | pytest 测试套件（409 项，89% 覆盖） |
+| `tests/` | pytest 测试套件（464 项，89% 覆盖 — 核心库 92%，CLI 层 86%） |
 | `data/` | 14 章索引条目 JSON |
 | `test/` | 测试用 .tex 样本 |
 
@@ -475,7 +481,7 @@ pyinstaller latex-index.spec
 ```bash
 # 贡献前请确保
 make all        # 完整检查（tests + mypy + ruff）
-pytest tests/   # 409 项测试全部通过
+pytest tests/   # 464 项测试全部通过
 ```
 
 ---

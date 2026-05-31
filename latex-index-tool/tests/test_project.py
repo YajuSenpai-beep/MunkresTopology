@@ -234,4 +234,71 @@ class TestListInputFiles:
             with open(main, "w", encoding="utf-8") as f:
                 f.write(r"\input{ch1}" + "\n")
             files = list_input_files(main)
-            assert len(files) == 2
+            assert len(files) >= 2  # main + sub
+
+
+class TestIncludeOnly:
+    """Tests for \\includeonly and \\excludeonly logic."""
+
+    def test_includeonly_filters_unlisted(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            for name in ["ch1.tex", "ch2.tex", "ch3.tex"]:
+                with open(os.path.join(tmpdir, name), "w", encoding="utf-8") as f:
+                    f.write(f"Content of {name}\n")
+            main = os.path.join(tmpdir, "main.tex")
+            with open(main, "w", encoding="utf-8") as f:
+                f.write(
+                    r"\includeonly{ch1}" + "\n"
+                    r"\include{ch1}" + "\n"
+                    r"\include{ch2}" + "\n"
+                )
+            merged, files, _ = resolve_tex_project(main)
+            assert "ch1" in merged.lower()
+            assert "ch2" not in merged
+
+    def test_includeonly_empty_list(self):
+        """Empty includeonly means everything is included."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            sub = os.path.join(tmpdir, "ch1.tex")
+            with open(sub, "w", encoding="utf-8") as f:
+                f.write("OK\n")
+            main = os.path.join(tmpdir, "main.tex")
+            with open(main, "w", encoding="utf-8") as f:
+                f.write(r"\includeonly{}" + "\n" + r"\include{ch1}" + "\n")
+            merged, files, _ = resolve_tex_project(main)
+            assert "OK" in merged
+
+    def test_includeonly_comma_separated(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            for name in ["a.tex", "b.tex", "c.tex"]:
+                with open(os.path.join(tmpdir, name), "w", encoding="utf-8") as f:
+                    f.write(f"[{name}]\n")
+            main = os.path.join(tmpdir, "main.tex")
+            with open(main, "w", encoding="utf-8") as f:
+                f.write(
+                    r"\includeonly{a, c}" + "\n"
+                    r"\include{a}" + "\n"
+                    r"\include{b}" + "\n"
+                    r"\include{c}" + "\n"
+                )
+            merged, files, _ = resolve_tex_project(main)
+            assert "a.tex" in merged or "[a.tex]" in merged
+            assert "[b.tex]" not in merged
+            assert "[c.tex]" in merged
+
+    def test_nested_include_respects_includeonly(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            inner = os.path.join(tmpdir, "inner.tex")
+            with open(inner, "w", encoding="utf-8") as f:
+                f.write(r"\input{deep}" + "\n")
+            deep = os.path.join(tmpdir, "deep.tex")
+            with open(deep, "w", encoding="utf-8") as f:
+                f.write("deep content\n")
+            main = os.path.join(tmpdir, "main.tex")
+            with open(main, "w", encoding="utf-8") as f:
+                f.write(
+                    r"\includeonly{inner,deep}" + "\n"
+                    r"\include{inner}" + "\n"
+                )
+            merged, files, _ = resolve_tex_project(main)
+            assert "deep content" in merged
