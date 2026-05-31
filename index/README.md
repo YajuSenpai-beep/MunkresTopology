@@ -1,130 +1,485 @@
-# Index System
+# LaTeX Index Tool — 通用 LaTeX 索引自动插入工具
 
-Munkres Topology 索引系统。所有与索引相关的脚本、数据、校验、生成、文档集中管理于此。
-
-## 目录结构
+配置驱动、项目无关的生产级工具，用于在 LaTeX 源文件中自动插入 `\index{}` 命令。
 
 ```
 index/
-  utils.js                     # 共享工具（JSON 读取、括号匹配、命令提取、格式化）
-  check-all.js                 # 总控：一键运行全部检查
-
-  assign-chapters.js           # 生成：按页数范围分配 1418 条条目到 14 章
-  insert-commands.js           # 生成：将分章条目自动插入 .tex 源文件
-  verify-assignments.js        # 校验：检查分章条目是否匹配对应章节内容
-  audit-skipped.js             # 校验：审计被跳过的条目是否可找到
-
-  TROUBLESHOOTING.md           # 故障排除与经验记录
-
-  data/                        # 索引条目数据（JSON）
-    ch01_entries.json          #   Chapter  1 分章条目（自动生成）
-    ch02_entries.json          #   Chapter  2 分章条目（自动生成）
-    ch03_entries.json          #   Chapter  3 分章条目（自动生成）
-    ch04_entries.json          #   Chapter  4 分章条目（自动生成）
-    ch05_entries.json          #   Chapter  5 分章条目（自动生成）
-    ch06_entries.json          #   Chapter  6 分章条目（自动生成）
-    ch07_entries.json          #   Chapter  7 分章条目（自动生成）
-    ch08_entries.json          #   Chapter  8 分章条目（自动生成）
-    ch09_entries.json          #   Chapter  9 分章条目（自动生成）
-    ch10_entries.json          #   Chapter 10 分章条目（自动生成）
-    ch11_entries.json          #   Chapter 11 分章条目（自动生成）
-    ch12_entries.json          #   Chapter 12 分章条目（自动生成）
-    ch13_entries.json          #   Chapter 13 分章条目（自动生成）
-    ch14_entries.json          #   Chapter 14 分章条目（自动生成）
-
-  validate/                    # 数据校验
-    master-json.js             #   校验 original/index_entries.json 结构完整性
-    chapter-jsons.js           #   校验 data/ch*_entries.json 结构完整性
-    crossref.js                #   交叉比对章节 JSON ↔ master JSON
-    pdf-compare.js             #   原始书 index.pdf ↔ index_entries.json 覆盖对比
-
-  scan/                        # 源码分析
-    commands.js                #   扫描 .tex 文件中的 \idx/\idxsub/\idxmath 命令
-    coverage.js                #   对比源码命令 vs master JSON，计算覆盖率
-
-  check/                       # 系统检查
-    config.js                  #   校验 .sty / .ist / Makefile 索引配置
-    build.js                   #   校验 .idx / .ind / .log 构建产物
+├── latex_index/        # Python 核心包（16 模块）
+├── core/               # Node.js 引擎（保留兼容）
+├── config/             # YAML 配置文件
+├── tools/              # 独立批处理脚本
+├── tests/              # pytest 测试套件（409 项，89% 覆盖）
+├── data/               # 索引条目 JSON 数据
+└── test/               # 测试用 .tex 样本
 ```
 
-## 数据流
+---
 
-```
-  original/index_entries.json
-         │
-         ├──→ assign-chapters.js ──→ data/ch*_entries.json
-         │         │
-         │         └──→ insert-commands.js ──→ chapters/*.tex
-         │
-         ├──→ validate/master-json.js
-         ├──→ validate/crossref.js ←── data/ch*_entries.json
-         ├──→ scan/coverage.js ←── scan/commands.js ←── chapters/*.tex
-         └──→ validate/pdf-compare.js ←── original/pdf/index.pdf
+## 快速开始 | Quick Start
 
-  TopologyBook.sty ──→ check/config.js
-  Makefile          ──→ check/config.js
-  *.ist             ──→ check/config.js
-  *.idx/*.ind/*.log ──→ check/build.js
-```
-
-## 使用方式
+### 安装 | Installation
 
 ```bash
-# 生成分章 JSON（从 original/index_entries.json 按页数分配）
-node index/assign-chapters.js
+# pip 安装（推荐）
+pip install latex-index-tool
 
-# 插入 L1 索引命令到 chapters/（正文章节）
-node index/insert-commands.js 5 --l1-only --chapters
+# 可选组件
+pip install latex-index-tool[tui]             # Rich TUI 界面
+pip install latex-index-tool[progress]        # 进度条
+pip install latex-index-tool[xindy]           # 中文拼音排序
+pip install latex-index-tool[all]             # 全部
 
-# 插入到全部 14 章
-for ch in $(seq 1 14); do node index/insert-commands.js $ch --l1-only --chapters; done
+# 一键安装脚本
+curl -sSL https://.../install.sh | bash       # Linux / macOS
+iwr https://.../install.ps1 | powershell      # Windows
 
-# 运行全部检查
-node index/check-all.js
+# 包管理器
+brew install latex-index-tool                 # macOS (Homebrew)
+scoop install latex-index-tool                # Windows (Scoop)
 
-# 单独运行某个脚本
-node index/validate/master-json.js
-node index/scan/commands.js
+# 源码安装（开发模式）
+cd index && pip install -e ".[dev]"
 ```
 
-## 脚本职责速查
+### 基本使用
 
-| 脚本 | 类型 | 输入 | 输出 |
-|------|------|------|------|
-| `assign-chapters.js` | 生成 | `original/index_entries.json` | `data/ch*_entries.json` |
-| `insert-commands.js` | 生成 | `data/ch*_entries.json` + `.tex` | 插入了 `\idx` / `\idxmath` 的 `.tex` |
-| `verify-assignments.js` | 校验 | `data/` + `chapters_backup/*.tex` | 逐章术语匹配报告 |
-| `audit-skipped.js` | 审计 | `chapters/*.tex` | 被跳过的 L1 条目可查性 |
-| `validate/master-json.js` | 校验 | `original/index_entries.json` | 结构完整性 |
-| `validate/chapter-jsons.js` | 校验 | `data/ch*_entries.json` | 逐章结构完整性 |
-| `validate/crossref.js` | 校验 | data JSON + master JSON | 交叉比对 |
-| `validate/pdf-compare.js` | 校验 | `original/pdf/index.pdf` + master | L1/L2 覆盖 |
-| `scan/commands.js` | 扫描 | `chapters/*.tex` | 逐章 `\idx` 统计 |
-| `scan/coverage.js` | 扫描 | .tex + master | 覆盖率 + 缺失清单 |
-| `check/config.js` | 系统 | `.sty` `.ist` `Makefile` | 配置完整性 |
-| `check/build.js` | 系统 | `.idx` `.ind` `.log` | 构建产物状态 |
+```bash
+# 预览
+latex-index insert --chapter 1 --dry-run
 
-## 当前状态
+# 正式插入 + 进度条
+latex-index insert --chapter 1 --progress
 
-- **Master JSON**: 1418 条目（685 L1 + 733 L2），与原始书 index.pdf 完整覆盖
-- **分章 JSON**: 14 章全部生成（`data/ch01_entries.json` ~ `ch14_entries.json`），基于页数范围自动分配
-- **L1 插入**: 14 章 `.tex` 已插入 549 条 L1 索引命令（`\idx{}` + `\idxmath{}`）
-- **编译**: 0 错误，0 拒绝，549 accepted by makeindex
-- **配置**: 完备（16/16 通过）
-- **L2 插入**: 尚未开始
+# Rich TUI 交互界面
+latex-index insert --chapter 1 --interactive --tui
 
-## 索引命令格式
+# 多文件项目模式
+latex-index insert --main main.tex --entries data/entries.json
 
-| 命令 | 用途 | 示例 |
+# 解析 OCR 索引文本
+latex-index parse index.txt -o entries.json
+
+# 扫描已有索引
+latex-index scan chapter.tex -o report.txt
+
+# 生成索引分析报告
+latex-index report chapter.tex --entries data/entries.json
+
+# 生成 xindy 排序规则
+latex-index xindy --languages english chinese-pinyin -o index_style.xdy
+
+# latexmk 编译集成
+latex-index setup --project-dir .          # 生成 .latexmkrc
+latex-index rollback chapter.tex           # 恢复备份
+latex-index rollback --list chapter.tex    # 列出备份
+latex-index rollback --clean 5 chapter.tex # 清理旧备份
+
+# 批处理工具
+latex-index tools format-env --chapter 2
+latex-index tools convert-exercises --chapter 3
+latex-index tools ocr-fix --chapter 1
+latex-index tools scan-issues
+```
+
+### Python API
+
+```python
+from latex_index.engine import IndexEngine
+from latex_index.config import load_config
+
+config = load_config("config/default.yaml")
+engine = IndexEngine(config)
+
+with open("chapter.tex") as f:
+    content = f.read()
+
+entries = [
+    {"term": "compact space", "level": 1},
+    {"term": "open cover", "level": 2, "parent": "compact space"},
+]
+
+# 标准搜索
+ops = engine.find_insertions(content, entries)
+
+# 快速搜索（Aho-Corasick，适合大规模词条）
+ops = engine.find_insertions_fast(content, entries, progress=True)
+
+# 应用修改
+result = engine.apply(content, ops)
+```
+
+---
+
+## CLI 完整参考
+
+### `latex-index insert` — 索引插入
+
+| 参数 | 说明 |
+|------|------|
+| `--config PATH` | 配置文件路径（YAML/JSON），默认使用内置配置 |
+| `--chapter N` | 章节编号（单文件模式） |
+| `--entries PATH` | 条目 JSON 文件，默认 `data/ch0N_entries.json` |
+| `--main PATH` | 多文件项目主文件，自动解析 `\input`/`\include` |
+| `--dry-run` | 预览模式，仅显示将要插入的条目和位置 |
+| `--l1-only` | 仅处理 L1 条目 |
+| `--fast` | 强制使用 Aho-Corasick 自动机 |
+| `--interactive`, `-i` | 交互模式（自动检测 Rich，回退到命令行） |
+| `--tui` | 强制使用 Rich TUI（支持 all/range/select/search） |
+| `--progress` | 显示进度条（需安装 tqdm） |
+
+### `latex-index parse` — 索引文本解析
+
+```bash
+latex-index parse index.txt --format indented -o entries.json
+latex-index parse index.txt --format run-in -o entries.json
+```
+
+| 参数 | 说明 |
+|------|------|
+| `input` | 索引文本文件路径 |
+| `--format` | 格式：`indented`（默认）或 `run-in` |
+| `--output`, `-o` | 输出 JSON 文件路径 |
+
+### `latex-index scan` — 索引扫描
+
+```bash
+latex-index scan chapter.tex -o report.txt
+```
+
+扫描文件中已有的 `\index{}`、`\idx{}`、`\idxmath{}`、`\idxsub{}` 命令。
+
+### `latex-index report` — 索引分析报告
+
+```bash
+# 完整报告（覆盖率 + 重复 + 配对）
+latex-index report chapter.tex --entries data/entries.json --candidates words.txt
+
+# 基础报告（仅统计）
+latex-index report chapter.tex
+```
+
+| 参数 | 说明 |
+|------|------|
+| `input` | .tex 文件路径 |
+| `--entries` | 条目 JSON，用于覆盖率分析 |
+| `--candidates` | 候选词条文件（每行一个），用于缺失检测 |
+| `--output`, `-o` | 输出报告文件路径 |
+
+### `latex-index setup` — 编译集成
+
+```bash
+latex-index setup                    # 生成 .latexmkrc（含自动备份）
+latex-index setup --no-backup        # 不含备份
+```
+
+自动生成的 `.latexmkrc` 在编译前自动插入索引、编译后重新生成索引。
+
+### `latex-index rollback` — 备份回滚
+
+```bash
+latex-index rollback chapter.tex           # 恢复到最近备份
+latex-index rollback --list chapter.tex    # 列出所有备份
+latex-index rollback --clean 5 chapter.tex # 清理旧备份，保留 5 个
+```
+
+### `latex-index xindy` — 排序规则生成
+
+```bash
+# 生成英文索引样式
+latex-index xindy -o index_style.xdy
+
+# 中英混合索引
+latex-index xindy --languages english chinese-pinyin -o index_style.xdy
+
+# 列出支持的语言
+latex-index xindy --list-langs
+```
+
+支持的语言：`english`、`chinese-pinyin`、`chinese-stroke`、`greek`、`math-symbols`。
+
+### `latex-index tools` — 批处理工具集
+
+| 子命令 | 功能 |
+|--------|------|
+| `format-env` | 修复环境格式 `\begin{env}text` → 三行拆分 |
+| `convert-exercises` | 转换习题为 `enumerate` 格式（含子题） |
+| `clean-ex-envs` | 清理习题内 theorem/proof/lemma → `\textsl{}` |
+| `fix-subitems` | 修复 `\item (a)` 父级条目 |
+| `wrap-examples` | 用 `centeredblock` 包裹 `example` 环境 |
+| `ocr-fix` | OCR 拼写修复（含词边界保护） |
+| `scan-issues` | 扫描已知问题（拼写、引号、格式） |
+
+所有子命令支持 `--chapter N`、`--files a.tex b.tex`、`--continue-on-error`。
+
+---
+
+## 配置手册
+
+### 完整配置 | Full Configuration
+
+```yaml
+# ── 版本（工具兼容性校验） ──
+version: 1                                      # int, 必需
+
+# ── 索引处理器 ──
+index_processor: "makeindex"                    # str, 默认 "makeindex", 可选 "xindy"
+
+# ── 模板 ──
+templates:                                      # dict, 必需
+  l1: "\\index{${key}}"                         # str — 普通 L1 条目
+  l1Math: "\\index{${sort}@${display}}"          # str — 数学符号
+  l2: "\\index{${parent}!${child}}"              # str — L2 子条目
+
+# ── 文件匹配 ──
+file_pattern: "Chapter_${num}_*.tex"            # str, ${num} → 章节编号
+chapter_source_dir: "chapters"                  # str, 章节 .tex 文件目录
+
+# ── 别名：正文变体 → 索引键 ──
+aliases:                                        # dict[str, list[str]], 默认 {}
+  "inverse image": ["preimage"]
+  "compactness": ["compact"]
+
+# ── 数学快捷方式 ──
+math_shortcuts:                                 # dict[str, list[str]], 默认 {}
+  "\\mathbb{R}": ["\\R"]
+  "\\mathbb{Z}": ["\\Z"]
+
+# ── 跳过模式（正则） ──
+skip_patterns: []                               # list[str], 默认 []
+
+# ── 日志 ──
+log_level: "INFO"                               # str, 默认 "INFO", 可选 DEBUG/INFO/WARNING/ERROR
+log_file: "index_tool.log"                      # str, 日志轮转 5×10MB
+```
+
+### 配置项速查 | Config Reference
+
+| 键 | 类型 | 默认值 | 说明 |
+|----|------|--------|------|
+| `version` | int | 1 | 配置格式版本，不匹配时警告 |
+| `index_processor` | str | `"makeindex"` | 索引处理器：`makeindex` 或 `xindy` |
+| `templates.l1` | str | `"\\index{${key}}"` | L1 条目模板 |
+| `templates.l1Math` | str | `"\\index{${sort}@${display}}"` | 数学符号模板 |
+| `templates.l2` | str | `"\\index{${parent}!${child}}"` | L2 子条目模板 |
+| `file_pattern` | str | `"Chapter_${num}_*.tex"` | 章节文件名模式 |
+| `chapter_source_dir` | str | `"chapters"` | 章节文件目录 |
+| `aliases` | dict | `{}` | 正文变体 → 索引键映射 |
+| `math_shortcuts` | dict | `{}` | LaTeX 命令 → 简写映射 |
+| `skip_patterns` | list | `[]` | 跳过匹配的行（正则） |
+| `log_level` | str | `"INFO"` | 日志级别 |
+| `log_file` | str | `"index_tool.log"` | 日志文件路径 |
+
+### 模板变量
+
+| 变量 | 说明 | 示例 |
 |------|------|------|
-| `\idx{term}` | L1 索引条目，正文渲染为粗斜体 | `\idx{Compactness}` |
-| `\idxmath{sort}{display}` | L1 数学符号条目 | `\idxmath{A}{\(\bar{A}\) (closure)}` |
-| `\idxsub{parent}{child}` | L2 子条目，仅写入 .idx | `\idxsub{Compactness}{of product space}` |
+| `${key}` | 索引键（排序用） | `compact space` |
+| `${display}` | 显示文本 | `\(\mathbb{R}\)` |
+| `${sort}` | 数学符号排序键 | `R` |
+| `${parent}` | 父条目名称 | `compact space` |
+| `${child}` | 子条目名称 | `open cover` |
 
-## 故障排除
+### 条目 JSON 格式
 
-见 [TROUBLESHOOTING.md](TROUBLESHOOTING.md)，记录了：
+```json
+{
+  "entries": [
+    {"term": "compact space", "level": 1},
+    {"term": "open cover", "level": 2, "parent": "compact space"},
+    {"term": "\\(\\mathbb{R}\\)", "level": 1, "sort_key": "R",
+     "display": "\\(\\mathbb{R}\\)"}
+  ]
+}
+```
 
-- **XeLaTeX + makeindex: `\idxmath` 中鲁棒命令展开问题** — `\widetilde{d}` 导致 1 rejected 的定位与修复
-- **102→0 错误的完整修复历程** — 5 类问题的原因和解决方案
-- **`\idxmath` 使用预防指南** — 哪些数学命令需要 `\protect`
+### 中文索引
+
+设置 `index_processor: "xindy"` 并配合排序规则：
+
+```bash
+# 生成中英混合 xindy 样式文件
+latex-index xindy --languages english chinese-pinyin -o index_style.xdy
+
+# 在配置中指定
+# index_processor: "xindy"
+```
+
+```python
+from latex_index.collation import sort_key_for
+
+# 拼音排序
+sorted(entries, key=lambda e: sort_key_for(e["term"], "pinyin"))
+
+# 笔画排序
+sorted(entries, key=lambda e: sort_key_for(e["term"], "stroke"))
+```
+
+---
+
+## 安全特性
+
+| 特性 | 实现 |
+|------|------|
+| **原子写入** | `tempfile.mkstemp()` + `os.replace()` |
+| **文件锁** | 跨平台独占锁（`fcntl` / `msvcrt`），防并发损坏 |
+| **dry-run** | `--dry-run` 仅打印，不修改文件 |
+| **交互确认** | `--interactive` 支持 Rich TUI (all/range/select/search) + 命令行回车 |
+| **批处理容错** | `--continue-on-error` 单文件失败后继续 |
+| **备份回滚** | `latex-index rollback` 恢复任意历史备份 |
+| **LaTeX 语义安全** | 跳过数学模式、注释、抄录环境、ExplSyntax、tikzpicture、tabular 等 |
+| **编码检测** | UTF-8 → latin-1 → cp1252 自动回退 |
+| **换行符保留** | 自动检测 `\r\n`/`\n`，保持原格式 |
+| **日志轮转** | `RotatingFileHandler` 5×10MB，防磁盘写满 |
+| **去重** | 长词优先，重叠位置自动跳过 |
+
+### LaTeX 命令参数自动避开
+
+引擎自动跳过 50+ 标准命令的参数区域：
+`\section`, `\chapter`, `\label`, `\ref`, `\cite`, `\textcite`, `\parencite`, `\index`, `\textbf`, `\emph`, `\footnote`, `\includegraphics`, `\caption`, `\newcommand` 等。
+
+### LaTeX 环境自动避开
+
+`\ExplSyntaxOn/Off` · `verbatim` · `lstlisting` · `minted` · `tikzpicture` · `pgfplots` · `axis` · `tabular` · `tabularx` · `longtable` · `array`
+
+### `\index` 高级格式
+
+- `|see{other}` — 交叉引用
+- `|seealso{other}` — 参见引用
+- `|(` / `|)` — 范围索引（`report` 命令可检测未配对）
+
+---
+
+## 性能
+
+| 场景 | 策略 | 复杂度 |
+|------|------|--------|
+| 常规 (< 1000 词条, < 500KB) | 逐条搜索 | O(n·k) |
+| 大规模 (≥ 1000 词条) | Aho-Corasick 自动机 | O(n + m) |
+| 超大文件 (> 50MB) | 自动限制词条数 | 防止 OOM |
+| 超大文件 (> 10MB) | 缓冲写入 | 减少内存碎片 |
+
+使用 `--progress` 可显示实时进度条（需安装 tqdm）。
+
+---
+
+## 测试
+
+```bash
+cd index
+pip install -e ".[dev]"
+
+# 全部测试（409 项，89% 覆盖）
+make test
+
+# 覆盖率报告
+pytest tests/ --cov=latex_index --cov-report=term
+
+# 分类运行
+pytest tests/test_engine.py -v        # 引擎
+pytest tests/test_tex_utils.py -v     # LaTeX 工具
+pytest tests/test_matcher.py -v       # Aho-Corasick 自动机
+pytest tests/test_parser.py -v        # 解析器
+pytest tests/test_project.py -v       # 多文件项目
+pytest tests/test_config.py -v        # 配置管理
+pytest tests/test_scanner.py -v       # 索引扫描
+pytest tests/test_cli.py -v           # CLI 命令
+pytest tests/test_tools_cli.py -v     # 批处理工具
+pytest tests/test_collation.py -v     # 排序规则
+pytest tests/test_fuzz.py -v          # 模糊测试
+pytest tests/test_reporter.py -v      # 报告生成
+pytest tests/test_tui.py -v           # Rich TUI
+pytest tests/test_latexmk.py -v       # 编译集成
+pytest tests/test_xindy.py -v         # xindy 生成
+pytest tests/test_integration.py -v   # 集成测试
+pytest tests/test_regression.py -v    # 回归测试
+pytest tests/test_exceptions.py -v    # 异常测试
+pytest tests/test_performance.py -v   # 性能测试
+
+# 类型检查 + 代码风格 + 测试
+make all
+```
+
+---
+
+## 开发
+
+```bash
+# 安装开发依赖
+pip install -e ".[dev]"
+
+# 代码检查
+make lint          # ruff
+make typecheck     # mypy --strict
+make fmt           # ruff format
+
+# 构建
+make build         # python -m build
+
+# Docker 构建
+docker build -t latex-index-tool .
+docker run -v $(pwd):/app latex-index-tool insert --chapter 1 --dry-run
+
+# PyInstaller 打包
+pyinstaller latex-index.spec
+```
+
+### 工具链
+
+| 工具 | 用途 | 配置 |
+|------|------|------|
+| pytest | 测试 | `pyproject.toml` [tool.pytest] |
+| ruff | Lint + 格式化 | `pyproject.toml` [tool.ruff] |
+| mypy | 静态类型检查 | `pyproject.toml` [tool.mypy] (strict) |
+| PyInstaller | 打包独立 exe | `latex-index.spec` |
+| Rich | TUI 交互界面 | 可选依赖 |
+| pypinyin | 中文拼音排序 | 可选依赖 |
+| tqdm | 进度条 | 可选依赖 |
+
+### CI/CD
+
+| 事件 | 动作 |
+|------|------|
+| push / PR → main | 测试 (3.10/3.11/3.12) + lint + mypy |
+| push / PR → main | 性能 benchmark |
+| tag → main | Docker 镜像 → GitHub Container Registry |
+| tag → main | 发布 PyPI |
+
+### 发布流程
+
+1. `make all` — 确保全部通过（409 测试 + mypy + ruff）
+2. 更新 `pyproject.toml` 版本号
+3. 更新 `CHANGELOG.md`
+4. `git tag v1.0.0 && git push --tags`
+5. CI 自动构建 Docker 镜像并发布到 PyPI
+
+---
+
+## 目录说明
+
+| 路径 | 内容 |
+|------|------|
+| `latex_index/` | Python 包（engine, parser, tex_utils, matcher, config, project, scanner, cli, tools_cli, collation, reporter, tui, latexmk, xindy） |
+| `core/` | Node.js 引擎（保留兼容） |
+| `config/` | default.yaml |
+| `tools/` | 独立批处理脚本（也可通过 `latex-index tools` 调用） |
+| `tests/` | pytest 测试套件（409 项，89% 覆盖） |
+| `data/` | 14 章索引条目 JSON |
+| `test/` | 测试用 .tex 样本 |
+
+---
+
+## 贡献
+
+欢迎提交 Issue 和 Pull Request。
+
+```bash
+# 贡献前请确保
+make all        # 完整检查（tests + mypy + ruff）
+pytest tests/   # 409 项测试全部通过
+```
+
+---
+
+## 许可
+
+MIT License
