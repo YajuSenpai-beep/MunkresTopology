@@ -6,7 +6,8 @@ The concept of topological \idx{First-countable space (see First-countability)} 
 
 The definition of a topological space that is now \idx{Standard topology: on} standard was a long time in being formulated. Various mathematicians-Fréchet, Hausdorff, and others-proposed different definitions over a period of years during the first decades of the twentieth century, but it took quite a while before mathematicians settled on the one that seemed most suitable. They wanted, of course, a definition that was as broad as possible, so that it would include as special cases all the various examples that were useful in mathematics-euclidean space, \idx{Infinite senes} infinite-dimensional euclidean space, and function spaces among them-but they also wanted the definition to be narrow enough that the standard theorems about these familiar spaces would hold for topological spaces in general. This is always the problem when one is trying to formulate a new mathematical concept, to decide how general its definition should be. The definition finally settled on may seem a bit abstract, but as you work through the various ways of constructing topological spaces, you will get a better feeling for what the concept means.
 
-\begin{definition} A topology on a set \(X\) is a collection \(\mathcal{T}\) of subsets of \(X\) having the following properties:
+\begin{definition}
+	A topology on a set \(X\) is a collection \(\mathcal{T}\) of subsets of \(X\) having the following properties:
 
 (1) \(\varnothing\) and \(X\) are in \(\mathcal{T}\) .
 
@@ -22,7 +23,9 @@ Properly speaking, a topological space is an \idx{Ray in ordered set} ordered pa
 
 If \(X\) is a topological space with topology \(\mathcal{T}\) , we say that a subset \(U\) of \(X\) is an \idx{open set} of \(X\) if \(U\) belongs to the collection \(\mathcal{T}\) . Using this terminology, one can say that a topological space is a set \(X\) together with a collection of subsets of \(X\) , called open sets, such that \(\varnothing\) and \(X\) are both open, and such that arbitrary unions and finite intersections of open sets are open.
 
-\begin{example} Let \(X\) be a three-element set, \(X = \{ a,b,c\}\) There are many possible topologies on \(X\) , some of which are indicated schematically in Figure 12.1. The diagram in the upper right-hand corner indicates the topology in which the open sets are \(X,\varnothing\) , \(\{ a,b\} ,\{ b\}\) , and \(\{ b,c\}\) The topology in the upper left-hand corner contains only \(X\) and \(\varnothing\) , while the topology in the lower right-hand corner contains every subset of \(X\) . You can get other topologies on \(X\) by permuting \(a,b\) , and \(c\)
+\begin{centeredblock}
+\begin{example}
+	Let \(X\) be a three-element set, \(X = \{ a,b,c\}\) There are many possible topologies on \(X\) , some of which are indicated schematically in Figure 12.1. The diagram in the upper right-hand corner indicates the topology in which the open sets are \(X,\varnothing\) , \(\{ a,b\} ,\{ b\}\) , and \(\{ b,c\}\) The topology in the upper left-hand corner contains only \(X\) and \(\varnothing\) , while the topology in the lower right-hand corner contains every subset of \(X\) . You can get other topologies on \(X\) by permuting \(a,b\) , and \(c\)
 
 \begin{center}
 \includegraphics[width=0.9\textwidth]{images/12.1.jpg}
@@ -31,6 +34,7 @@ If \(X\) is a topological space with topology \(\mathcal{T}\) , we say that a su
 
 Figure 12.1
 \end{example}
+\end{centeredblock}
 
 From this example, you can see that even a three-element set has many different topologies. But not every collection of subsets of \(X\) is a topology on \(X\) Neither of the collections inducated in Figure 122 is a topology, for instance.
 
@@ -41,10 +45,15 @@ From this example, you can see that even a three-element set has many different 
 
 Figure 12.2
 
-\begin{example} If \(X\) is any set, the collection of all subsets of \(X\) is a topology on \(X\) , it is called the \idx{discrete topology} The collection consisting of \(X\) and \(\varnothing\) only is also a topology on \(X\) ; we shall call it the \idx{indiscrete topology}, or the \idx{trivial topology}
+\begin{centeredblock}
+\begin{example}
+	If \(X\) is any set, the collection of all subsets of \(X\) is a topology on \(X\) , it is called the \idx{discrete topology} The collection consisting of \(X\) and \(\varnothing\) only is also a topology on \(X\) ; we shall call it the \idx{indiscrete topology}, or the \idx{trivial topology}
 \end{example}
+\end{centeredblock}
 
-\begin{example} Let \(X\) be a set, let \({\mathcal{T}}_{f}\) be the collection of all subsets \(U\) of \(X\) such that \(X - U\) either is finite or is all of \(X\) Then \({\mathcal{T}}_{f}\) is a topology on \(X\) , called the \idx{finite complement topology}. Both \(X\) and \(\varnothing\) are in \({\mathcal{T}}_{f}\) , since \(X - X\) is finite and \(X - \varnothing\) is all of \(X\) If \(\left\{  {U}_{\alpha }\right\}\) is an indexed family of nonempty elements of \({\mathcal{T}}_{f}\) , to show that \(\bigcup {U}_{\alpha }\) is in \({\mathcal{T}}_{f}\) , we compute
+\begin{centeredblock}
+\begin{example}
+	Let \(X\) be a set, let \({\mathcal{T}}_{f}\) be the collection of all subsets \(U\) of \(X\) such that \(X - U\) either is finite or is all of \(X\) Then \({\mathcal{T}}_{f}\) is a topology on \(X\) , called the \idx{finite complement topology}. Both \(X\) and \(\varnothing\) are in \({\mathcal{T}}_{f}\) , since \(X - X\) is finite and \(X - \varnothing\) is all of \(X\) If \(\left\{  {U}_{\alpha }\right\}\) is an indexed family of nonempty elements of \({\mathcal{T}}_{f}\) , to show that \(\bigcup {U}_{\alpha }\) is in \({\mathcal{T}}_{f}\) , we compute
 
 \[
 X - \bigcup {U}_{\alpha } = \bigcap \left( {X - {U}_{\alpha }}\right)
@@ -58,11 +67,16 @@ X - \mathop{\bigcap }\limits_{{i = 1}}^{n}{U}_{i} = \mathop{\bigcup }\limits_{{i
 
 The latter set is a finite union of finite sets and, therefore, finite
 \end{example}
+\end{centeredblock}
 
-\begin{example} Let \(X\) be a set, let \({\mathcal{T}}_{c}\) be the collection of all subsets \(U\) of \(X\) such that \(X - U\) either is \idx{Countable basis at a point} countable or is all of \(X\) . Then \({\mathcal{T}}_{c}\) is a topology on \(X\) , as you can check
+\begin{centeredblock}
+\begin{example}
+	Let \(X\) be a set, let \({\mathcal{T}}_{c}\) be the collection of all subsets \(U\) of \(X\) such that \(X - U\) either is \idx{Countable basis at a point} countable or is all of \(X\) . Then \({\mathcal{T}}_{c}\) is a topology on \(X\) , as you can check
 \end{example}
+\end{centeredblock}
 
-\begin{definition} Suppose that \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\) are two topologies on a given set \(X\) . If \({\mathcal{T}}^{\prime } \supset  \mathcal{T}\) , we say that \({\mathcal{T}}^{\prime }\) is \idx{Finer topology} finer than \(\mathcal{T}\) ; if \({\mathcal{T}}^{\prime }\) properly contains \(\mathcal{T}\) , we say that \({\mathcal{T}}^{\prime }\) is \idx{Strictly coarser topology} strictly finer than \(\mathcal{T}\) . We also say that \(\mathcal{T}\) is \idx{Coarser topology} coarser than \({\mathcal{T}}^{\prime }\) , or strictly coarser, in these two respective situations. We say \(\mathcal{T}\) is comparable with \({\mathcal{T}}^{\prime }\) if either \({\mathcal{T}}^{\prime } \supset  \mathcal{T}\) or \(\mathcal{T} \supset  {\mathcal{T}}^{\prime }\) .
+\begin{definition}
+	Suppose that \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\) are two topologies on a given set \(X\) . If \({\mathcal{T}}^{\prime } \supset  \mathcal{T}\) , we say that \({\mathcal{T}}^{\prime }\) is \idx{Finer topology} finer than \(\mathcal{T}\) ; if \({\mathcal{T}}^{\prime }\) properly contains \(\mathcal{T}\) , we say that \({\mathcal{T}}^{\prime }\) is \idx{Strictly coarser topology} strictly finer than \(\mathcal{T}\) . We also say that \(\mathcal{T}\) is \idx{Coarser topology} coarser than \({\mathcal{T}}^{\prime }\) , or strictly coarser, in these two respective situations. We say \(\mathcal{T}\) is comparable with \({\mathcal{T}}^{\prime }\) if either \({\mathcal{T}}^{\prime } \supset  \mathcal{T}\) or \(\mathcal{T} \supset  {\mathcal{T}}^{\prime }\) .
 \end{definition}
 
 
@@ -78,7 +92,8 @@ Many mathematicians use the words ``\idx{Weaker topology} weaker'' and ``\idx{St
 
 For each of the examples in the preceding section, we were able to specify the topology by describing the entire collection \(\mathcal{T}\) of open sets. Usually this is too difficult. In most cases, one specifies instead a smaller collection of subsets of \(X\) and defines the topology in terms of that.
 
-\begin{definition} If \(X\) is a set, a basis for a topology on \(X\) is a collection \(\mathcal{B}\) of subsets of \(X\) (called basis elements) such that
+\begin{definition}
+	If \(X\) is a set, a basis for a topology on \(X\) is a collection \(\mathcal{B}\) of subsets of \(X\) (called basis elements) such that
 
 (1) For each \(x \in  X\) , there is at least one basis element \(B\) containing \(x\) .
 
@@ -90,7 +105,9 @@ If \(\mathcal{B}\) satisfies these two conditions, then we define the topology \
 We will check shortly that the collection \(\mathcal{T}\) is indeed a topology on \(X\) . But first let us consider some examples.
 
 
-\begin{example} Let \(\mathcal{B}\) be the collection of all circular regions (interiors of circles) in the plane. Then \(\mathcal{B}\) satisfies both conditions for a basis The second condition is illustrated in Figure 13 1. In the topology generated by \(\mathcal{B}\) , a subset \(U\) of the plane is open if every \(x\) in \(U\) lies in some circular region contained in \(U\)
+\begin{centeredblock}
+\begin{example}
+	Let \(\mathcal{B}\) be the collection of all circular regions (interiors of circles) in the plane. Then \(\mathcal{B}\) satisfies both conditions for a basis The second condition is illustrated in Figure 13 1. In the topology generated by \(\mathcal{B}\) , a subset \(U\) of the plane is open if every \(x\) in \(U\) lies in some circular region contained in \(U\)
 
 \begin{center}
 \includegraphics[width=0.4\textwidth]{images/13.1.jpg}
@@ -106,12 +123,19 @@ Figure 13.1
 
 Figure 13.2
 \end{example}
+\end{centeredblock}
 
-\begin{example} Let \({\mathcal{B}}^{\prime }\) be the collection of all rectangular regions (interiors of rectangles) in the plane, where the rectangles have sides parallel to the \idx{Coordinate: of J-tuple} coordinate axes Then \({\mathcal{B}}^{\prime }\) satisfies both conditions for a basis. The second condition is illustrated in Figure 132; in thus case, the condition is trivial, because the intersection of any two basis elements is itself a basis element (or empty) As we shall see later, the basis \({\mathcal{B}}^{\prime }\) generates the same topology on the plane as the basis \(\mathcal{B}\) given in the preceding example
+\begin{centeredblock}
+\begin{example}
+	Let \({\mathcal{B}}^{\prime }\) be the collection of all rectangular regions (interiors of rectangles) in the plane, where the rectangles have sides parallel to the \idx{Coordinate: of J-tuple} coordinate axes Then \({\mathcal{B}}^{\prime }\) satisfies both conditions for a basis. The second condition is illustrated in Figure 132; in thus case, the condition is trivial, because the intersection of any two basis elements is itself a basis element (or empty) As we shall see later, the basis \({\mathcal{B}}^{\prime }\) generates the same topology on the plane as the basis \(\mathcal{B}\) given in the preceding example
 \end{example}
+\end{centeredblock}
 
-\begin{example} If \(X\) is any set, the collection of all one-point subsets of \(X\) is a basis for the discrete topology on \(X\)
+\begin{centeredblock}
+\begin{example}
+	If \(X\) is any set, the collection of all one-point subsets of \(X\) is a basis for the discrete topology on \(X\)
 \end{example}
+\end{centeredblock}
 
 Let us check now that the collection \(\mathcal{T}\) generated by the basis \(\mathcal{B}\) is, in fact, a topology on \(X\) . If \(U\) is the empty set, it satisfies the defining condition of openness vacuously. Likewise, \(X\) is in \(\mathcal{T}\) , since for each \(x \in  X\) there is some basis element \(B\) containing \(x\) and contained in \(X\) Now let us take an indexed family \({\left\{  {U}_{\alpha }\right\}  }_{\alpha  \in  J}\) , of elements of \(\mathcal{T}\) and show that
 
@@ -142,7 +166,8 @@ Thus we have checked that collection of open sets generated by a basis \(\mathca
 
 Another way of describing the topology generated by a basis is given in the following lemma.
 
-\begin{lemma} Let \(X\) be a set; let \(\mathcal{B}\) be a basis for a topology \(\mathcal{T}\) on \(X\) . Then \(\mathcal{T}\) equals the collection of all unions of elements of \(\mathcal{B}\) .
+\begin{lemma}
+	Let \(X\) be a set; let \(\mathcal{B}\) be a basis for a topology \(\mathcal{T}\) on \(X\) . Then \(\mathcal{T}\) equals the collection of all unions of elements of \(\mathcal{B}\) .
 \end{lemma}
 
 \begin{proof}
@@ -153,7 +178,8 @@ This lemma states that every open set \(U\) in \(X\) can be expressed as a union
 We have described in two different ways how to go from a basis to the topology it generates. Sometimes we need to go in the reverse direction, from a topology to a basis generating it. Here is one way of obtaining a basis for a given topology; we shall use it frequently.
 \end{proof}
 
-\begin{lemma} Let \(X\) be a topological space. Suppose that \(\mathcal{C}\) is a collection of open sets of \(X\) such that for each open set \(U\) of \(X\) and each \(x\) in \(U\) , there is an element \(C\) of \(\mathcal{C}\) such that \(x \in  C \subset  U\) . Then \(\mathcal{C}\) is a basis for the topology of \(X\) .
+\begin{lemma}
+	Let \(X\) be a topological space. Suppose that \(\mathcal{C}\) is a collection of open sets of \(X\) such that for each open set \(U\) of \(X\) and each \(x\) in \(U\) , there is an element \(C\) of \(\mathcal{C}\) such that \(x \in  C \subset  U\) . Then \(\mathcal{C}\) is a basis for the topology of \(X\) .
 \end{lemma}
 
 \begin{proof}
@@ -164,7 +190,8 @@ Let \(\mathcal{T}\) be the collection of open sets of \(X\) ; we must show that 
 When topologies are given by bases, it is useful to have a criterion in terms of the bases for determining whether one topology is finer than another. One such criterion is the following.
 \end{proof}
 
-\begin{lemma} Let \(\mathcal{B}\) and \({\mathcal{B}}^{\prime }\) be bases for the topologies \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\) , respectively, on \(X\) . Then the following are equivalent:
+\begin{lemma}
+	Let \(\mathcal{B}\) and \({\mathcal{B}}^{\prime }\) be bases for the topologies \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\) , respectively, on \(X\) . Then the following are equivalent:
 
 (1) \({\mathcal{T}}^{\prime }\) is finer than \(\mathcal{T}\) .
 
@@ -179,7 +206,9 @@ When topologies are given by bases, it is useful to have a criterion in terms of
 Some students find this condition hard to remember. ``Which way does the inclusion go?'' they ask. It may be easier to remember if you recall the analogy between a topological space and a truckload full of gravel. Think of the pebbles as the basis elements of the topology; after the pebbles are smashed to dust, the dust particles are the basis elements of the new topology. The new topology is finer than the old one, and each dust particle was contained inside a pebble, as the criterion states.
 \end{proof}
 
-\begin{example} One can now see that the collection \(\mathcal{B}\) of all circular regions in the plane generates the same topology as the collection \({\mathcal{B}}^{\prime }\) of all rectangular regions, Figure 134 illustrates the proof We shall treat this example more formally when we study \idx{metric space}s
+\begin{centeredblock}
+\begin{example}
+	One can now see that the collection \(\mathcal{B}\) of all circular regions in the plane generates the same topology as the collection \({\mathcal{B}}^{\prime }\) of all rectangular regions, Figure 134 illustrates the proof We shall treat this example more formally when we study \idx{metric space}s
 
 \begin{center}
 \includegraphics[width=0.7\textwidth]{images/13.4.jpg}
@@ -188,10 +217,12 @@ Some students find this condition hard to remember. ``Which way does the inclusi
 
 Figure 13.4
 \end{example}
+\end{centeredblock}
 
 We now define three topologies on the real line \(\mathbb{R}\) , all of which are of interest.
 
-\begin{definition} If \(\mathcal{B}\) is the collection of all open intervals in the real line,
+\begin{definition}
+	If \(\mathcal{B}\) is the collection of all open intervals in the real line,
 
 \[
 \left( {a,b}\right)  = \{ x \mid  a < x < b\} ,
@@ -211,7 +242,8 @@ where \(a < b\) , the topology generated by \({\mathcal{B}}^{\prime }\) is calle
 
 It is easy to see that all three of these collections are bases; in each case, the intersection of two basis elements is either another basis element or is empty. The relation between these topologies is the following
 
-\begin{lemma} The topologies of \({\mathbb{R}}_{\ell }\) and \({\mathbb{R}}_{K}\) are strictly finer than the standard topology on \(\mathbb{R}\) , but are not comparable with one another.
+\begin{lemma}
+	The topologies of \({\mathbb{R}}_{\ell }\) and \({\mathbb{R}}_{K}\) are strictly finer than the standard topology on \(\mathbb{R}\) , but are not comparable with one another.
 \end{lemma}
 
 Proof Let \(\mathcal{T},{\mathcal{T}}^{\prime }\) , and \({\mathcal{T}}^{\prime \prime }\) be the topologies of \(\mathbb{R},{\mathbb{R}}_{\ell }\) , and \({\mathbb{R}}_{K}\) , respectively. Given a basis element(a, b)for \(\mathcal{T}\) and a point \(x\) of(a, b), the basis element \(\lbrack x,b)\) for \({\mathcal{T}}^{\prime }\) contains \(x\) and lies in(a, b). On the other hand, given the basis element \(\lbrack x,d)\) for \({\mathcal{T}}^{\prime }\) , there is no open interval(a, b)that contains \(x\) and lies in \(\lbrack x,d)\) . Thus \({\mathcal{T}}^{\prime }\) is strictly finer than \(\mathcal{T}\)
@@ -222,7 +254,8 @@ We leave it to you to show that the topologies of \({\mathbb{R}}_{\ell }\) and \
 
 A question may occur to you at this point. Since the topology generated by a basis \(\mathcal{B}\) may be described as the collection of arbitrary unions of elements of \(\mathcal{B}\) , what happens if you start with a given collection of sets and take finite intersections of them as well as arbitrary unions? This question leads to the notion of a \idx{subbasis} for a topology
 
-\begin{definition} A subbasis \(S\) for a topology on \(X\) is a collection of subsets of \(X\) whose union equals \(X\) . The topology generated by the subbasis \(S\) is defined to be the collection \(\mathcal{T}\) of all unions of finite intersections of elements of \(\mathcal{S}\) .
+\begin{definition}
+	A subbasis \(S\) for a topology on \(X\) is a collection of subsets of \(X\) whose union equals \(X\) . The topology generated by the subbasis \(S\) is defined to be the collection \(\mathcal{T}\) of all unions of finite intersections of elements of \(\mathcal{S}\) .
 \end{definition}
 
 
@@ -324,7 +357,8 @@ Suppose that \(X\) is a set having a simple order relation \(<\) . Given element
 
 The notation used here is familiar to you already in the case where \(X\) is the real line, but these are intervals in an arbitrary ordered set. A set of the first type is called an open interval in \(X\) , a set of the last type is called a \idx{closed interval} in \(X\) , and sets of the second and third types are called half-open intervals. The use of the term ``open'' in this connection suggests that open intervals in \(X\) should turn out to be open sets when we put a topology on \(X\) . And so they will.
 
-\begin{definition} Let \(X\) be a set with a simple order relation; assume \(X\) has more than one element. Let \(\mathcal{B}\) be the collection of all sets of the following types:
+\begin{definition}
+	Let \(X\) be a set with a simple order relation; assume \(X\) has more than one element. Let \(\mathcal{B}\) be the collection of all sets of the following types:
 
 (I) All open intervals(a, b)in \(X\) .
 
@@ -337,10 +371,15 @@ If \(X\) has no smallest element, there are no sets of type (2), and if \(X\) ha
 
 One has to check that \(\mathcal{B}\) satisfies the requirements for a basis. First, note that every element \(x\) of \(X\) lies in at least one element of \(\mathcal{B}\) : The smallest element (if any) lies in all sets of type (2), the largest element (if any) lies in all sets of type (3), and every other element lies in a set of type (1). Second, note that the intersection of any two sets of the preceding types is again a set of one of these types, or is empty. Several cases need to be checked; we leave it to you.
 
-\begin{example} The standard topology on \(\mathbb{R}\) , as defined in the preceding section, is just the order topology derived from the usual order on \(\mathbb{R}\) .
+\begin{centeredblock}
+\begin{example}
+	The standard topology on \(\mathbb{R}\) , as defined in the preceding section, is just the order topology derived from the usual order on \(\mathbb{R}\) .
 \end{example}
+\end{centeredblock}
 
-\begin{example} Consider the set \(\mathbb{R} \times  \mathbb{R}\) in the dictionary order, we shall denote the general element of \(\mathbb{R} \times  \mathbb{R}\) by \(x \times  y\) , to avoid difficulty with notation The set \(\mathbb{R} \times  \mathbb{R}\) has neither a largest nor a smallest element, so the order topology on \(\mathbb{R} \times  \mathbb{R}\) has as basis the collection of all open intervals of the form \(\left( {a \times  b,c \times  d}\right)\) for \(a < c\) , and for \(a = c\) and \(b < d\) . These two types of intervals are indicated in Figure 14.1. The subcollection consisting of only intervals of the second type is also a basis for the order topology on \(\mathbb{R} \times  \mathbb{R}\) , as you can check
+\begin{centeredblock}
+\begin{example}
+	Consider the set \(\mathbb{R} \times  \mathbb{R}\) in the dictionary order, we shall denote the general element of \(\mathbb{R} \times  \mathbb{R}\) by \(x \times  y\) , to avoid difficulty with notation The set \(\mathbb{R} \times  \mathbb{R}\) has neither a largest nor a smallest element, so the order topology on \(\mathbb{R} \times  \mathbb{R}\) has as basis the collection of all open intervals of the form \(\left( {a \times  b,c \times  d}\right)\) for \(a < c\) , and for \(a = c\) and \(b < d\) . These two types of intervals are indicated in Figure 14.1. The subcollection consisting of only intervals of the second type is also a basis for the order topology on \(\mathbb{R} \times  \mathbb{R}\) , as you can check
 
 \begin{center}
 \includegraphics[width=0.9\textwidth]{images/14.1.jpg}
@@ -349,11 +388,17 @@ One has to check that \(\mathcal{B}\) satisfies the requirements for a basis. Fi
 
 Figure 14.1
 \end{example}
+\end{centeredblock}
 
-\begin{example} The positive integers \({\mathbb{Z}}_{ + }\) form an ordered set with a smallest element. The order topology on \({\mathbb{Z}}_{ + }\) is the discrete topology, for every one-point set is open If \(n > 1\) , then the one-point set \(\{ n\}  = \left( {n - 1,n + 1}\right)\) is a basis element; and if \(n = 1\) , the one-point set \(\{ 1\}  = \lbrack 1,2)\) is a basis element.
+\begin{centeredblock}
+\begin{example}
+	The positive integers \({\mathbb{Z}}_{ + }\) form an ordered set with a smallest element. The order topology on \({\mathbb{Z}}_{ + }\) is the discrete topology, for every one-point set is open If \(n > 1\) , then the one-point set \(\{ n\}  = \left( {n - 1,n + 1}\right)\) is a basis element; and if \(n = 1\) , the one-point set \(\{ 1\}  = \lbrack 1,2)\) is a basis element.
 \end{example}
+\end{centeredblock}
 
-\begin{example} The set \(X = \{ 1,2\}  \times  {\mathbb{Z}}_{ + }\) in the dictionary order is another example of an ordered set with a smallest element Denoting \(1 \times  n\) by \({a}_{n}\) and \(2 \times  n\) by \({b}_{n}\) , we can represent \(X\) by
+\begin{centeredblock}
+\begin{example}
+	The set \(X = \{ 1,2\}  \times  {\mathbb{Z}}_{ + }\) in the dictionary order is another example of an ordered set with a smallest element Denoting \(1 \times  n\) by \({a}_{n}\) and \(2 \times  n\) by \({b}_{n}\) , we can represent \(X\) by
 
 \[
 {a}_{1},{a}_{2},.\;;{b}_{1},{b}_{2},\ldots
@@ -361,8 +406,10 @@ Figure 14.1
 
 The order topology on \(X\) is not the discrete topology. Most one-point sets are open, but there is an exception-the one-point set \(\left\{  {b}_{1}\right\}\) . Any open set containing \({b}_{1}\) must contain a basis element about \({b}_{1}\) (by definition), and any basis element containing \({b}_{1}\) contains points of the \({a}_{i}\) sequence.
 \end{example}
+\end{centeredblock}
 
-\begin{definition} If \(X\) is an ordered set, and \(a\) is an element of \(X\) , there are four subsets of \(X\) that are called the rays determined by \(a\) They are the following
+\begin{definition}
+	If \(X\) is an ordered set, and \(a\) is an element of \(X\) , there are four subsets of \(X\) that are called the rays determined by \(a\) They are the following
 
 \[
 \left( {a, + \infty }\right)  = \{ x \mid  x > a\} ,
@@ -391,7 +438,8 @@ The open rays, in fact, form a subbasis for the order topology on \(X\) , as we 
 
 If \(X\) and \(Y\) are topological spaces, there is a standard way of defining a topology on the cartesian \idx{Product: of continuous maps} product \(X \times  Y\) . We consider this topology now and study some of its properties.
 
-\begin{definition} Let \(X\) and \(Y\) be topological spaces. The \idx{product topology} on \(X \times  Y\) is the topology having as basis the collection \(\mathcal{B}\) of all sets of the form \(U \times  V\) , where \(U\) is an open subset of \(X\) and \(V\) is an open subset of \(Y\) .
+\begin{definition}
+	Let \(X\) and \(Y\) be topological spaces. The \idx{product topology} on \(X \times  Y\) is the topology having as basis the collection \(\mathcal{B}\) of all sets of the form \(U \times  V\) , where \(U\) is an open subset of \(X\) and \(V\) is an open subset of \(Y\) .
 \end{definition}
 
 Let us check that \(\mathcal{B}\) is a basis. The first condition is trivial, since \(X \times  Y\) is itself a basis element. The second condition is almost as easy, since the intersection of any two basis elements \({U}_{1} \times  {V}_{1}\) and \({U}_{2} \times  {V}_{2}\) is another basis element. For
@@ -406,7 +454,8 @@ Note that the collection \(\mathcal{B}\) is not a topology on \(X \times  Y\) . 
 
 Each time we introduce a new concept, we shall try to relate it to the concepts that have been previously introduced. In the present case, we ask: What can one say if the topologies on \(X\) and \(Y\) are given by bases? The answer is as follows:
 
-\begin{theorem} If \(\mathcal{B}\) is a basis for the topology of \(X\) and \(\mathcal{C}\) is a basis for the topology of \(Y\) , then the collection
+\begin{theorem}
+	If \(\mathcal{B}\) is a basis for the topology of \(X\) and \(\mathcal{C}\) is a basis for the topology of \(Y\) , then the collection
 
 \[
 \mathcal{D} = \{ B \times  C \mid  B \in  \mathcal{B}\text{ and }C \in  \mathcal{C}\}
@@ -426,12 +475,16 @@ Figure 15.1
 We apply Lemma 13.2. Given an open set \(W\) of \(X \times  Y\) and a point \(x \times  y\) of \(W\) , by definition of the product topology there is a basis element \(U \times  V\) such that \(x \times  y \in  U \times  V \subset  W\) . Because \(\mathcal{B}\) and \(\mathcal{C}\) are bases for \(X\) and \(Y\) , respectively, we can choose an element \(B\) of \(\mathcal{B}\) such that \(x \in  B \subset  U\) , and an element \(C\) of \(\mathcal{C}\) such that \(y \in  C \subset  V\) . Then \(x \times  y \in  B \times  C \subset  W\) . Thus the collection \(\mathcal{D}\) meets the criterion of Lemma 13.2, so \(\mathcal{D}\) is a basis for \(X \times  Y\) .
 \end{proof}
 
-\begin{example} We have a standard topology on \(\mathbb{R}\) the order topology The product of this topology with itself is called the standard topology on \(\mathbb{R} \times  \mathbb{R} = {\mathbb{R}}^{2}\) . It has as basis the collection of all products of open sets of \(\mathbb{R}\) , but the theorem just proved tells us that the much smaller collection of all products \(\left( {a,b}\right)  \times  \left( {c,d}\right)\) of open intervals in \(\mathbb{R}\) will also serve as a basis for the topology of \({\mathbb{R}}^{2}\) Each such set can be pictured as the \idx{Int A} interior of a rectangle in \({\mathbb{R}}^{2}\) . Thus the standard topology on \({\mathbb{R}}^{2}\) is just the one we considered in Example 2 of \(§{13}\)
+\begin{centeredblock}
+\begin{example}
+	We have a standard topology on \(\mathbb{R}\) the order topology The product of this topology with itself is called the standard topology on \(\mathbb{R} \times  \mathbb{R} = {\mathbb{R}}^{2}\) . It has as basis the collection of all products of open sets of \(\mathbb{R}\) , but the theorem just proved tells us that the much smaller collection of all products \(\left( {a,b}\right)  \times  \left( {c,d}\right)\) of open intervals in \(\mathbb{R}\) will also serve as a basis for the topology of \({\mathbb{R}}^{2}\) Each such set can be pictured as the \idx{Int A} interior of a rectangle in \({\mathbb{R}}^{2}\) . Thus the standard topology on \({\mathbb{R}}^{2}\) is just the one we considered in Example 2 of \(§{13}\)
 \end{example}
+\end{centeredblock}
 
 It is sometimes useful to express the product topology in terms of a subbasis. To do this, we first define certain functions called projections.
 
-\begin{definition} Let \({\pi }_{1}.X \times  Y \rightarrow  X\) be defined by the equation
+\begin{definition}
+	Let \({\pi }_{1}.X \times  Y \rightarrow  X\) be defined by the equation
 
 \[
 {\pi }_{1}\left( {x,y}\right)  = x
@@ -456,7 +509,8 @@ If \(U\) is an open subset of \(X\) , then the set \({\pi }_{1}^{-1}\left( U\rig
 
 which is also open in \(X \times  Y\) . The intersection of these two sets is the set \(U \times  V\) , as indicated in Figure 15.2. This fact leads to the following theorem:
 
-\begin{theorem} The collection
+\begin{theorem}
+	The collection
 
 \[
 S = \left\{  {{\pi }_{1}^{-1}\left( U\right)  \mid  U\text{ open in }X}\right\}   \cup  \left\{  {{\pi }_{2}^{-1}\left( V\right)  \mid  V\text{ open in }Y}\right\}
@@ -484,7 +538,8 @@ Therefore, \(U \times  V\) belongs to \({\mathcal{T}}^{\prime }\) , so that \(\m
 
 \section*{§ 16 The \idx{Subspace Topology}}
 
-\begin{definition} Let \(X\) be a topological space with topology \(\mathcal{T}\) . If \(Y\) is a subset of \(X\) , the collection
+\begin{definition}
+	Let \(X\) be a topological space with topology \(\mathcal{T}\) . If \(Y\) is a subset of \(X\) , the collection
 
 \[
 {\mathcal{T}}_{Y} = \{ Y \cap  U \mid  U \in  \mathcal{T}\}
@@ -509,7 +564,8 @@ where \(\varnothing\) and \(X\) are elements of \(\mathcal{T}\) . The fact that 
 \mathop{\bigcup }\limits_{{\alpha  \in  J}}\left( {{U}_{\alpha } \cap  Y}\right)  = \left( {\mathop{\bigcup }\limits_{{\alpha  \in  J}}{U}_{\alpha }}\right)  \cap  Y
 \]
 
-\begin{lemma} If \(\mathcal{B}\) is a basis for the topology of \(X\) then the collection
+\begin{lemma}
+	If \(\mathcal{B}\) is a basis for the topology of \(X\) then the collection
 
 \[
 {\mathcal{B}}_{Y} = \{ B \cap  Y \mid  B \in  \mathcal{B}\}
@@ -526,7 +582,8 @@ When dealing with a space \(X\) and a subspace \(Y\) , one needs to be careful w
 There is a special situation in which every set open in \(Y\) is also open in \(\mathbf{X}\) .
 \end{proof}
 
-\begin{lemma} Let \(Y\) be a subspace of \(X\) . If \(U\) is open in \(Y\) and \(Y\) is open in \(X\) , then \(U\) is open in \(X\) .
+\begin{lemma}
+	Let \(Y\) be a subspace of \(X\) . If \(U\) is open in \(Y\) and \(Y\) is open in \(X\) , then \(U\) is open in \(X\) .
 \end{lemma}
 
 \begin{proof}
@@ -535,7 +592,8 @@ Since \(U\) is open in \(Y,U = Y \cap  V\) for some set \(V\) open in \(X\) . Si
 Now let us explore the relation between the subspace topology and the order and product topologies For product topologies, the result is what one might expect; for order topologies, it is not.
 \end{proof}
 
-\begin{theorem} If \(A\) is a subspace of \(X\) and \(B\) is a subspace of \(Y\) , then the product topology on \(A \times  B\) is the same as the topology \(A \times  B\) inherits as a subspace of \(X \times  Y\) .
+\begin{theorem}
+	If \(A\) is a subspace of \(X\) and \(B\) is a subspace of \(Y\) , then the product topology on \(A \times  B\) is the same as the topology \(A \times  B\) inherits as a subspace of \(X \times  Y\) .
 
 \end{theorem}
 \begin{proof}
@@ -552,7 +610,9 @@ The conclusion we draw is that the bases for the subspace topology on \(A \times
 Now let \(X\) be an ordered set in the order topology, and let \(Y\) be a subset of \(X\) . The order relation on \(X\) , when restricted to \(Y\) , makes \(Y\) into an ordered set. However, the resulting order topology on \(Y\) need not be the same as the topology that \(Y\) inherits as a subspace of \(X\) . We give one example where the subspace and order topologies on \(Y\) agree, and two examples where they do not.
 \end{proof}
 
-\begin{example} Consider the subset \(Y = \left\lbrack  {0,1}\right\rbrack\) of the real line \(\mathbb{R}\) , in the subspace topology. The subspace topology has as basis all sets of the form \(\left( {a,b}\right)  \cap  Y\) , where(a, b)is an open interval in \(\mathbb{R}\) Such a set is of one of the following types.
+\begin{centeredblock}
+\begin{example}
+	Consider the subset \(Y = \left\lbrack  {0,1}\right\rbrack\) of the real line \(\mathbb{R}\) , in the subspace topology. The subspace topology has as basis all sets of the form \(\left( {a,b}\right)  \cap  Y\) , where(a, b)is an open interval in \(\mathbb{R}\) Such a set is of one of the following types.
 
 \[
 \left( {a,b}\right)  \cap  Y = \left\{ \begin{array}{ll} \left( {a,b}\right) & \text{ if }a\text{ and }b\text{ are in }Y, \\  \lbrack 0,b) & \text{ if only }b\text{ is in }Y, \\  \left( {a,1}\right) & \text{ if only }a\text{ is in }Y, \\  Y\text{ or }\varnothing & \text{ if neither }a\text{ nor }b\text{ is in }Y. \end{array}\right.
@@ -562,8 +622,11 @@ By definition, each of these sets is open in \(Y\) But sets of the second and th
 
 Note that these sets form a basis for the order topology on \(Y\) Thus, we see that in the case of the set \(Y = \left\lbrack  {0,1}\right\rbrack\) , its subspace topology (as a subspace of \(\mathbb{R}\) ) and its order topology are the same.
 \end{example}
+\end{centeredblock}
 
-\begin{example} Let \(Y\) be the subset \(\lbrack 0,1) \cup  \{ 2\}\) of \(\mathbb{R}\) . In the subspace topology on \(Y\) the one-point set \(\{ 2\}\) is open, because it is the intersection of the open set \(\left( {\frac{3}{2},\frac{5}{2}}\right)\) with \(Y\) But in the order topology on \(Y\) , the set \(\{ 2\}\) is not open. Any basis element for the order topology on \(Y\) that contains 2 is of the form
+\begin{centeredblock}
+\begin{example}
+	Let \(Y\) be the subset \(\lbrack 0,1) \cup  \{ 2\}\) of \(\mathbb{R}\) . In the subspace topology on \(Y\) the one-point set \(\{ 2\}\) is open, because it is the intersection of the open set \(\left( {\frac{3}{2},\frac{5}{2}}\right)\) with \(Y\) But in the order topology on \(Y\) , the set \(\{ 2\}\) is not open. Any basis element for the order topology on \(Y\) that contains 2 is of the form
 
 \[
 \{ x \mid  x \in  Y\text{ and }a < x \leq  2\}
@@ -571,9 +634,13 @@ Note that these sets form a basis for the order topology on \(Y\) Thus, we see t
 
 for some \(a \in  Y\) , such a set necessarily contains points of \(Y\) less than 2
 \end{example}
+\end{centeredblock}
 
-\begin{example} Let \(I = \left\lbrack  {0,1}\right\rbrack\) The dictionary order on \(I \times  I\) is just the restriction to \(I \times  I\) of the dictionary order on the plane \(\mathbb{R} \times  \mathbb{R}\) . However, the dictionary order topology on \(I \times  I\) is not the same as the subspace topology on \(I \times  I\) obtained from the dictionary order topology on \(\mathbb{R} \times  {\mathbb{R}}^{1}\) For example, the set \(\{ 1/2\}  \times  (1/2,1\rbrack\) is open in \(I \times  I\) in the subspace topology, but not in the order topology, as you can check. See Figure 16.1.
+\begin{centeredblock}
+\begin{example}
+	Let \(I = \left\lbrack  {0,1}\right\rbrack\) The dictionary order on \(I \times  I\) is just the restriction to \(I \times  I\) of the dictionary order on the plane \(\mathbb{R} \times  \mathbb{R}\) . However, the dictionary order topology on \(I \times  I\) is not the same as the subspace topology on \(I \times  I\) obtained from the dictionary order topology on \(\mathbb{R} \times  {\mathbb{R}}^{1}\) For example, the set \(\{ 1/2\}  \times  (1/2,1\rbrack\) is open in \(I \times  I\) in the subspace topology, but not in the order topology, as you can check. See Figure 16.1.
 \end{example}
+\end{centeredblock}
 
 The set \(I \times  I\) in the dictionary order topology will be called the ordered \idx{Square metric (see also )} square, and denoted by \(\idxmath{I}{\({I}_{o}^{2}\) (see Ordered square)} {I}_{o}^{2}\) .
 
@@ -588,7 +655,8 @@ Given an ordered set \(X\) , let us say that a subset \(Y\) of \(X\) is \idx{Con
 
 Figure 16.1
 
-\begin{theorem} Let \(X\) be an ordered set in the order topology; let \(Y\) be a subset of \(X\) that is convex in \(X\) Then the order topology on \(Y\) is the same as the topology \(Y\) inherits as a subspace of \(X\) .
+\begin{theorem}
+	Let \(X\) be an ordered set in the order topology; let \(Y\) be a subset of \(X\) that is convex in \(X\) Then the order topology on \(Y\) is the same as the topology \(Y\) inherits as a subspace of \(X\) .
 
 \end{theorem}
 \begin{proof}
@@ -667,7 +735,9 @@ Now that we have a few examples at hand, we can introduce some of the basic conc
 
 A subset \(A\) of a topological space \(X\) is said to be closed if the set \(X - A\) is open.
 
-\begin{example} The subset \(\left\lbrack  {a,b}\right\rbrack\) of \(\mathbb{R}\) is closed because its complement
+\begin{centeredblock}
+\begin{example}
+	The subset \(\left\lbrack  {a,b}\right\rbrack\) of \(\mathbb{R}\) is closed because its complement
 
 \[
 \mathbb{R} - \left\lbrack  {a,b}\right\rbrack   = \left( {-\infty ,a}\right)  \cup  \left( {b, + \infty }\right) ,
@@ -675,8 +745,11 @@ A subset \(A\) of a topological space \(X\) is said to be closed if the set \(X 
 
 is open. Similarly, \(\lbrack a, + \infty )\) is closed, because its complement \(\left( {-\infty ,a}\right)\) is open. These facts justify our use of the terms ``closed interval'' and ``closed ray'' The subset \(\lbrack a,b)\) of \(\mathbb{R}\) is neither open nor closed.
 \end{example}
+\end{centeredblock}
 
-\begin{example} In the plane \({\mathbb{R}}^{2}\) , the set
+\begin{centeredblock}
+\begin{example}
+	In the plane \({\mathbb{R}}^{2}\) , the set
 
 \[
 \{ x \times  y \mid  x \geq  0\text{ and }y \geq  0\}
@@ -690,14 +763,23 @@ is closed, because its complement is the union of the two sets
 
 each of which is a product of open sets of \(\mathbb{R}\) and is, therefore, open in \({\mathbb{R}}^{2}\)
 \end{example}
+\end{centeredblock}
 
-\begin{example} In the finite complement topology on a set \(X\) , the closed sets consist of \(X\) itself and all finute subsets of \(X\)
+\begin{centeredblock}
+\begin{example}
+	In the finite complement topology on a set \(X\) , the closed sets consist of \(X\) itself and all finute subsets of \(X\)
 \end{example}
+\end{centeredblock}
 
-\begin{example} In the discrete topology on the set \(X\) , every set is open, it follows that every set is closed as well.
+\begin{centeredblock}
+\begin{example}
+	In the discrete topology on the set \(X\) , every set is open, it follows that every set is closed as well.
 \end{example}
+\end{centeredblock}
 
-\begin{example} Consider the following subset of the real line:
+\begin{centeredblock}
+\begin{example}
+	Consider the following subset of the real line:
 
 \[
 Y = \left\lbrack  {0,1}\right\rbrack   \cup  \left( {2,3}\right) \text{ , }
@@ -705,12 +787,14 @@ Y = \left\lbrack  {0,1}\right\rbrack   \cup  \left( {2,3}\right) \text{ , }
 
 in the subspace topology. In this space, the set \(\left\lbrack  {0,1}\right\rbrack\) is open, since it is the intersection of the open set \(\left( {-\frac{1}{2},\frac{3}{2}}\right)\) of \(\mathbb{R}\) with \(Y\) Similarly,(2,3)is open as a subset of \(Y\) ; it is even open as a subset of \(\mathbb{R}\) . Since \(\left\lbrack  {0,1}\right\rbrack\) and(2,3)are complements in \(Y\) of each other, we conclude that both \(\left\lbrack  {0,1}\right\rbrack\) and(2,3)are closed as subsets of \(Y\)
 \end{example}
+\end{centeredblock}
 
 These examples suggest that an answer to the mathematician's riddle: ``How is a set different from a door?'' should be: ``A door must be either open or closed, and cannot be both, while a set can be open, or closed, or both, or neither!''
 
 The collection of closed subsets of a space \(X\) has properties similar to those satisfied by the collection of open subsets of \(X\) :
 
-\begin{theorem} Let \(X\) be a topological space. Then the following conditions hold:
+\begin{theorem}
+	Let \(X\) be a topological space. Then the following conditions hold:
 
 (1) \(\varnothing\) and \(X\) are closed.
 
@@ -722,7 +806,7 @@ The collection of closed subsets of a space \(X\) has properties similar to thos
 \begin{proof}
 (1) \(\varnothing\) and \(X\) are closed because they are the complements of the open sets \(X\) and \(\varnothing\) , respectively.
 
-(2) Given a collection of closed sets \({\left\{  {A}_{\alpha }\right\}  }_{\alpha  \in  J}\) , we apply DeMorgan’s law,
+(2) Given a collection of closed sets \({\left\{  {A}_{\alpha }\right\}  }_{\alpha  \in  J}\) , we apply DeMorgan's law,
 
 \[
 X - \mathop{\bigcap }\limits_{{\alpha  \in  J}}{A}_{\alpha } = \mathop{\bigcup }\limits_{{\alpha  \in  J}}\left( {X - {A}_{\alpha }}\right)
@@ -743,7 +827,8 @@ Instead of using open sets, one could just as well specify a topology on a space
 Now when dealing with subspaces, one needs to be careful in using the term ``closed set.'' If \(Y\) is a subspace of \(X\) , we say that a set \(A\) is closed in \(Y\) if \(A\) is a subset of \(Y\) and if \(A\) is closed in the subspace topology of \(Y\) (that is, if \(Y - A\) is open in \(Y\) ). We have the following theorem:
 \end{proof}
 
-\begin{theorem} Let \(Y\) be a subspace of \(X\) . Then a set \(A\) is closed in \(Y\) if and only if it equals the intersection of a closed set of \(X\) with \(Y\) .
+\begin{theorem}
+	Let \(Y\) be a subspace of \(X\) . Then a set \(A\) is closed in \(Y\) if and only if it equals the intersection of a closed set of \(X\) with \(Y\) .
 
 \end{theorem}
 \begin{proof}
@@ -757,7 +842,8 @@ A set \(A\) that is closed in the subspace \(Y\) may or may not be closed in the
 \hspace*{3em} 
 \end{proof}
 
-\begin{theorem} Let \(Y\) be a subspace of \(X\) . If \(A\) is closed in \(Y\) and \(Y\) is closed in \(X\) , then \(A\) is closed in \(X\) .
+\begin{theorem}
+	Let \(Y\) be a subspace of \(X\) . If \(A\) is closed in \(Y\) and \(Y\) is closed in \(X\) , then \(A\) is closed in \(X\) .
 
 \end{theorem}
 \section*{Closure and Interior of a Set}
@@ -776,7 +862,8 @@ We shall not make much use of the interior of a set, but the closure of a set wi
 
 When dealing with a topological space \(X\) and a subspace \(Y\) , one needs to exercise care in taking closures of sets If \(A\) is a subset of \(Y\) , the closure of \(A\) in \(Y\) and the closure of \(A\) in \(X\) will in general be different In such a situation, we reserve the notation \(\bar{A}\) to stand for the closure of \(A\) in \(X\) . The closure of \(A\) in \(Y\) can be expressed in terms of \(\bar{A}\) , as the following theorem shows:
 
-\begin{theorem} Let \(Y\) be a subspace of \(X\) , let \(A\) be a subset of \(Y\) , let \(\bar{A}\) denote the closure of \(A\) in \(X\) . Then the closure of \(A\) in \(Y\) equals \(\bar{A} \cap  Y\) .
+\begin{theorem}
+	Let \(Y\) be a subspace of \(X\) , let \(A\) be a subset of \(Y\) , let \(\bar{A}\) denote the closure of \(A\) in \(X\) . Then the closure of \(A\) in \(Y\) equals \(\bar{A} \cap  Y\) .
 
 \end{theorem}
 \begin{proof}
@@ -789,7 +876,8 @@ The definition of the closure of a set does not give us a convenient way for act
 First let us introduce some convenient terminology. We shall say that a set \(A\) intersects a set \(B\) if the intersection \(A \cap  B\) is not empty.
 \end{proof}
 
-\begin{theorem} Let \(A\) be a subset of the topological space \(X\) .
+\begin{theorem}
+	Let \(A\) be a subset of the topological space \(X\) .
 
 (a) Then \(x \in  \bar{A}\) if and only if every open set \(U\) containing \(x\) intersects \(A\) .
 
@@ -816,13 +904,19 @@ Using this terminology, one can write the first half of the preceding theorem as
 If \(A\) is a subset of the topological space \(X\) , then \(x \in  \widehat{A}\) if and only if every \idx{neighborhood} of \(x\) intersects \(A\) .
 \end{proof}
 
-\begin{example} Let \(X\) be the real line \(\mathbb{R}\) . If \(A = (0,1\rbrack\) , then \(\bar{A} = \left\lbrack  {0,1}\right\rbrack\) , for every neighborhood of 0 intersects \(A\) , while every point outside \(\left\lbrack  {0,1}\right\rbrack\) has a neighborhood disjoint from \(A\) Similar arguments apply to the following subsets of \(X\)
+\begin{centeredblock}
+\begin{example}
+	Let \(X\) be the real line \(\mathbb{R}\) . If \(A = (0,1\rbrack\) , then \(\bar{A} = \left\lbrack  {0,1}\right\rbrack\) , for every neighborhood of 0 intersects \(A\) , while every point outside \(\left\lbrack  {0,1}\right\rbrack\) has a neighborhood disjoint from \(A\) Similar arguments apply to the following subsets of \(X\)
 
 If \(B = \left\{  {1/n \mid  n \in  {\mathbb{Z}}_{ + }}\right\}\) , then \(\bar{B} = \{ 0\}  \cup  B\) If \(C = \{ 0\}  \cup  \left( {1,2}\right)\) , then \(\bar{C} = \{ 0\}  \cup  \left\lbrack  {1,2}\right\rbrack\) If \(\mathbb{Q}\) is the set of rational numbers, then \(\widehat{\mathbb{Q}} = \mathbb{R}\) If \({\mathbb{Z}}_{ + }\) is the set of positive integers, then \({\overline{\mathbb{Z}}}_{ + } = {\mathbb{Z}}_{ + }\) . If \({\mathbb{R}}_{ + }\) is the set of positive reals, then the closure of \({\mathbb{R}}_{ + }\) is the set \({\mathbb{R}}_{ + } \cup  \{ 0\}\) . (This is the reason we introduced the notation \({\overline{\mathbb{R}}}_{ + }\) for the set \({\mathbb{R}}_{ + } \cup  \{ 0\}\) , back in \(\$ 2\) )
 \end{example}
+\end{centeredblock}
 
-\begin{example} Consider the subspace \(Y = (0,1\rbrack\) of the real line \(\mathbb{R}\) . The set \(A = \left( {0,\frac{1}{2}}\right)\) is a subset of \(Y\) , its closure in \(\mathbb{R}\) is the set \(\left\lbrack  {0,\frac{1}{2}}\right\rbrack\) , and its closure in \(Y\) is the set \(\left\lbrack  {0,\frac{1}{2}}\right\rbrack   \cap  Y =\)  \(\left( {0,\frac{1}{2}}\right\rbrack\)
+\begin{centeredblock}
+\begin{example}
+	Consider the subspace \(Y = (0,1\rbrack\) of the real line \(\mathbb{R}\) . The set \(A = \left( {0,\frac{1}{2}}\right)\) is a subset of \(Y\) , its closure in \(\mathbb{R}\) is the set \(\left\lbrack  {0,\frac{1}{2}}\right\rbrack\) , and its closure in \(Y\) is the set \(\left\lbrack  {0,\frac{1}{2}}\right\rbrack   \cap  Y =\)  \(\left( {0,\frac{1}{2}}\right\rbrack\)
 \end{example}
+\end{centeredblock}
 
 Some mathematicians use the term ``neighborhood'' differently. They say that \(A\) is a neighborhood of \(x\) if \(A\) merely contains an open set containing \(x\) . We shall not follow this practice.
 
@@ -832,14 +926,18 @@ There is yet another way of describing the closure of a set, a way that involves
 
 If \(A\) is a subset of the topological space \(X\) and if \(x\) is a point of \(X\) , we say that \(x\) is a limit point (or ``cluster point,'' or ``point of accumulation'') of \(A\) if every neighborhood of \(x\) intersects \(A\) in some point other than \(x\) itself. Said differently, \(x\) is a limit point of \(A\) if it belongs to the closure of \(A - \{ x\}\) The point \(x\) may lie in \(A\) or not; for this definition it does not matter.
 
-\begin{example} Consider the real line \(\mathbb{R}\) . If \(A = (0,1\rbrack\) , then the point 0 is a limit point of \(A\) and so is the point \(\frac{1}{2}\) . In fact, every point of the interval \(\left\lbrack  {0,1}\right\rbrack\) is a limit point of \(A\) , but no other point of \(\mathbb{R}\) is a limit point of \(A\)
+\begin{centeredblock}
+\begin{example}
+	Consider the real line \(\mathbb{R}\) . If \(A = (0,1\rbrack\) , then the point 0 is a limit point of \(A\) and so is the point \(\frac{1}{2}\) . In fact, every point of the interval \(\left\lbrack  {0,1}\right\rbrack\) is a limit point of \(A\) , but no other point of \(\mathbb{R}\) is a limit point of \(A\)
 
 If \(B = \left\{  {1/n \mid  n \in  {\mathbb{Z}}_{ + }}\right\}\) , then 0 is the only limit point of \(B\) . Every other point \(x\) of \(\mathbb{R}\) has a neighborhood that either does not intersect \(B\) at all, or it intersects \(B\) only in the point \(x\) itself. If \(C = \{ 0\}  \cup  \left( {1,2}\right)\) , then the limit points of \(C\) are the points of the interval \(\left\lbrack  {1,2}\right\rbrack\) . If \(\mathbb{Q}\) is the set of rational numbers, every point of \(\mathbb{R}\) is a limit point of \(\mathbb{Q}\) . If \({\mathbb{Z}}_{ + }\) is the set of positive integers, no point of \(\mathbb{R}\) is a limit point of \({\mathbb{Z}}_{ + }\) . If \({\mathbb{R}}_{ + }\) is the set of positive reals, then every point of \(\{ 0\}  \cup  {\mathbb{R}}_{ + }\) is a limit point of \({\mathbb{R}}_{ + }\)
 \end{example}
+\end{centeredblock}
 
 \idx{Comparison test for infinite senes} Comparison of Examples 6 and 8 suggests a relationship between the closure of a set and the limit points of a set. That relationship is given in the following theorem:
 
-\begin{theorem} Let \(A\) be a subset of the topological space \(X\) , let \({A}^{\prime }\) be the set of all limit points of \(A\) . Then
+\begin{theorem}
+	Let \(A\) be a subset of the topological space \(X\) , let \({A}^{\prime }\) be the set of all limit points of \(A\) . Then
 
 \[
 \bar{A} = A \cup  {A}^{\prime }.
@@ -852,7 +950,8 @@ If \(x\) is in \({A}^{\prime }\) , every neighborhood of \(x\) intersects \(A\) 
 To demonstrate the reverse inclusion, we let \(x\) be a point of \(\bar{A}\) and show that \(x \in  A \cup  {A}^{\prime }\) . If \(x\) happens to lie in \(A\) , it is trivial that \(x \in  A \cup  {A}^{\prime }\) ; suppose that \(x\) does not lie in \(A\) . Since \(x \in  \bar{A}\) , we know that every neighborhood \(U\) of \(x\) intersects \(A\) ; because \(x \notin  A\) , the set \(U\) must intersect \(A\) in a point different from \(x\) . Then \(x \in  {A}^{\prime }\) , so that \(x \in  A \cup  {A}^{\prime }\) , as desired.
 \end{proof}
 
-\begin{corollary} A subset of a topological space is closed if and only if it contains all its limit points.
+\begin{corollary}
+	A subset of a topological space is closed if and only if it contains all its limit points.
 \end{corollary}
 
 Proof The set \(A\) is closed if and only if \(A = \bar{A}\) , and the latter holds if and only if \({A}^{\prime } \subset  A\) .
@@ -868,11 +967,12 @@ One's experience with open and closed sets and limit points in the real line and
 
 Figure 17.3
 
-Similarly, one’s experience with the properties of \idx{convergent sequence}s in \(\mathbb{R}\) and \({\mathbb{R}}^{2}\) can be misleading when one deals with more general topological spaces. In an arbitrary topological space, one says that a sequence \({x}_{1},{x}_{2},\ldots\) of points of the space \(X\) converges to the point \(x\) of \(X\) provided that, corresponding to each neighborhood \(U\) of \(x\) , there is a positive integer \(N\) such that \({x}_{n} \in  U\) for all \(n \geq  N\) . In \(\mathbb{R}\) and \({\mathbb{R}}^{2}\) , a sequence cannot converge to more than one point, but in an arbitrary space, it can. In the space indicated in Figure 17.3, for example, the sequence defined by setting \({x}_{n} = b\) for all \(n\) converges not only to the point \(b\) , but also to the point \(a\) and to the point \(c\) !
+Similarly, one's experience with the properties of \idx{convergent sequence}s in \(\mathbb{R}\) and \({\mathbb{R}}^{2}\) can be misleading when one deals with more general topological spaces. In an arbitrary topological space, one says that a sequence \({x}_{1},{x}_{2},\ldots\) of points of the space \(X\) converges to the point \(x\) of \(X\) provided that, corresponding to each neighborhood \(U\) of \(x\) , there is a positive integer \(N\) such that \({x}_{n} \in  U\) for all \(n \geq  N\) . In \(\mathbb{R}\) and \({\mathbb{R}}^{2}\) , a sequence cannot converge to more than one point, but in an arbitrary space, it can. In the space indicated in Figure 17.3, for example, the sequence defined by setting \({x}_{n} = b\) for all \(n\) converges not only to the point \(b\) , but also to the point \(a\) and to the point \(c\) !
 
 Topologies in which one-point sets are not closed, or in which sequences can converge to more than one point, are considered by many mathematicians to be somewhat strange. They are not really very interesting, for they seldom occur in other branches of mathematics And the theorems that one can prove about topological spaces are rather limited if such examples are allowed. Therefore, one often imposes an additional condition that will rule out examples like this one, bringing the class of spaces under consideration closer to those to which one's geometric intuition applies. The condition was suggested by the mathematician Felix Hausdorff, so mathematicians have come to call it by his name.
 
-\begin{definition} A topological space \(X\) is called a \idx{Hausdorff space} if for each pair \({x}_{1},{x}_{2}\) of distinct points of \(X\) , there exist neighborhoods \({U}_{1}\) , and \({U}_{2}\) of \({x}_{1}\) and \({x}_{2}\) , respectively, that are disjoint.
+\begin{definition}
+	A topological space \(X\) is called a \idx{Hausdorff space} if for each pair \({x}_{1},{x}_{2}\) of distinct points of \(X\) , there exist neighborhoods \({U}_{1}\) , and \({U}_{2}\) of \({x}_{1}\) and \({x}_{2}\) , respectively, that are disjoint.
 \end{definition}
 
 \section*{Theorem 17.8. Every finite point set in a Hausdorff space \(X\) is closed.}
@@ -883,7 +983,8 @@ It suffices to show that every one-point set \(\left\{  {x}_{0}\right\}\) is clo
 The condition that finite point sets be closed is in fact weaker than the \idx{Hausdorff condition} For example, the real line \(\mathbb{R}\) in the finite complement topology is not a Hausdorff space, but it is a space in which finite point sets are closed The condition that finite point sets be closed has been given a name of its own: it is called the \({T}_{1}{ax}\) - iom. (We shall explain the reason for this strange terminology in Chapter 4.) The \({T}_{1}\) axiom will appear in this book in a few exercises, and in just one theorem, which is the following:
 \end{proof}
 
-\begin{theorem} Let \(X\) be a space satisfying the \({T}_{1}\) axiom; let \(A\) be a subset of \(X\) . Then the point \(x\) is a limit point of \(A\) if and only if every neighborhood of \(x\) contains infinitely many points of \(A\) .
+\begin{theorem}
+	Let \(X\) be a space satisfying the \({T}_{1}\) axiom; let \(A\) be a subset of \(X\) . Then the point \(x\) is a limit point of \(A\) if and only if every neighborhood of \(x\) contains infinitely many points of \(A\) .
 
 \end{theorem}
 \begin{proof}
@@ -900,7 +1001,8 @@ is a neighborhood of \(x\) that intersects the set \(A - \{ x\}\) not at all. Th
 One reason for our lack of interest in the \({T}_{1}\) axiom is the fact that many of the interesting theorems of topology require not just that axiom, but the full strength of the Hausdorff axiom. Furthermore, most of the spaces that are important to mathematicians are Hausdorff spaces. The following two theorems give some substance to these remarks.
 \end{proof}
 
-\begin{theorem} If \(X\) is a Hausdorff space, then a sequence of points of \(X\) converges to at most one point of \(X\)
+\begin{theorem}
+	If \(X\) is a Hausdorff space, then a sequence of points of \(X\) converges to at most one point of \(X\)
 
 \end{theorem}
 Proof Suppose that \({x}_{n}\) is a sequence of points of \(X\) that converges to \(x\) If \(y \neq  x\) , let \(U\) and \(V\) be disjoint neighborhoods of \(x\) and \(y\) , respectively. Since \(U\) contains \({x}_{n}\) for all but finitely many values of \(n\) , the set \(V\) cannot Therefore, \({x}_{n}\) cannot converge to y.
@@ -909,7 +1011,8 @@ If the sequence \({x}_{n}\) of points of the Hausdorff space \(X\) converges to 
 
 The proof of the following result is left to the exercises.
 
-\begin{theorem} Every simply ordered set is a Hausdorff space in the order topology. The product of two Hausdorff spaces is a Hausdorff space. A subspace of a Hausdorff space is a Hausdorff space.
+\begin{theorem}
+	Every simply ordered set is a Hausdorff space in the order topology. The product of two Hausdorff spaces is a Hausdorff space. A subspace of a Hausdorff space is a Hausdorff space.
 
 The Hausdorff condition is generally considered to be a very mild extra condition to impose on a topological space. Indeed, in a first course in topology some mathematicians go so far as to impose this condition at the outset, refusing to consider spaces that are not Hausdorff spaces. We shall not go this far, but we shall certainly assume the Hausdorff condition whenever it is needed in a proof without having any qualms about limiting seriously the range of applications of the results.
 
@@ -1070,7 +1173,9 @@ If the topology on \(Y\) is given by a subbasis \(S\) , to prove continuity of \
 
 that the inverse image of every basis element is open.
 
-\begin{example} Let us consider a function like those studied in analysis, a ``real-valued function of a real variable,''
+\begin{centeredblock}
+\begin{example}
+	Let us consider a function like those studied in analysis, a ``real-valued function of a real variable,''
 
 \[
 f\mathbb{R} \rightarrow  \mathbb{R}\text{ . }
@@ -1082,8 +1187,11 @@ Given \({x}_{0}\) in \(\mathbb{R}\) , and given \(\epsilon  > 0\) , the interval
 
 Proving that the \(\epsilon  - \delta\) definition implies our definition is no harder; we leave it to you. We shall return to this example when we study metric spaces
 \end{example}
+\end{centeredblock}
 
-\begin{example} In calculus one considers the property of continuity for many kinds of functions. For example, one studies functions of the following types:
+\begin{centeredblock}
+\begin{example}
+	In calculus one considers the property of continuity for many kinds of functions. For example, one studies functions of the following types:
 
 \(f.\mathbb{R} \rightarrow  {\mathbb{R}}^{2}\;\) (curves in the plane)
 
@@ -1097,8 +1205,11 @@ Proving that the \(\epsilon  - \delta\) definition implies our definition is no 
 
 Each of them has a notion of continuity defined for it. Our general definition of continuity includes all these as special cases, this fact will be a consequence of general theorems we shall prove concerning continuous functions on \idx{product space}s and on metric spaces.
 \end{example}
+\end{centeredblock}
 
-\begin{example} Let \(\mathbb{R}\) denote the set of real numbers in its usual topology, and let \({\mathbb{R}}_{\ell }\) denote the same set in the lower limit topology. Let
+\begin{centeredblock}
+\begin{example}
+	Let \(\mathbb{R}\) denote the set of real numbers in its usual topology, and let \({\mathbb{R}}_{\ell }\) denote the same set in the lower limit topology. Let
 
 \[
 f\mathbb{R} \rightarrow  {\mathbb{R}}_{\ell }
@@ -1112,10 +1223,12 @@ g \cdot  {\mathbb{R}}_{\ell } \rightarrow  \mathbb{R}
 
 is continuous, because the inverse image of(a, b)is itself, which is open in \({\mathbb{R}}_{\ell }\) .
 \end{example}
+\end{centeredblock}
 
 In analysis, one studies several different but equivalent ways of formulating the definition of continuity. Some of these generalize to arbitrary spaces, and they are considered in the theorems that follow. The familiar `` \(\epsilon  - \delta\) `` definition and the ``convergent sequence definition'' do not generalize to arbitrary spaces; they will be treated when we study metric spaces.
 
-\begin{theorem} Let \(X\) and \(Y\) be topological spaces; let \(f : X \rightarrow  Y\) . Then the following are equivalent:
+\begin{theorem}
+	Let \(X\) and \(Y\) be topological spaces; let \(f : X \rightarrow  Y\) . Then the following are equivalent:
 
 (1) \(f\) is continuous.
 
@@ -1179,7 +1292,9 @@ You may have studied in modern algebra the notion of an \idx{isomorphism} betwee
 
 Now suppose that \(f : X \rightarrow  Y\) is an injective continuous map, where \(X\) and \(Y\) are topological spaces. Let \(Z\) be the image set \(f\left( X\right)\) , considered as a subspace of \(Y\) ; then the function \({f}^{\prime } : X \rightarrow  Z\) obtained by restricting the range of \(f\) is bijective. If \({f}^{\prime }\) happens to be a homeomorphism of \(X\) with \(Z\) , we say that the map \(f : X \rightarrow  Y\) is a topological \idx{imbedding}, or simply an imbedding, of \(X\) in \(Y\) .
 
-\begin{example} The function \(f : \mathbb{R} \rightarrow  \mathbb{R}\) given by \(f\left( x\right)  = {3x} + 1\) is a homeomorphism See Figure 18 2. If we define \(g \cdot  \mathbb{R} \rightarrow  \mathbb{R}\) by the equation
+\begin{centeredblock}
+\begin{example}
+	The function \(f : \mathbb{R} \rightarrow  \mathbb{R}\) given by \(f\left( x\right)  = {3x} + 1\) is a homeomorphism See Figure 18 2. If we define \(g \cdot  \mathbb{R} \rightarrow  \mathbb{R}\) by the equation
 
 \[
 g\left( y\right)  = \frac{1}{3}\left( {y - 1}\right)
@@ -1187,8 +1302,11 @@ g\left( y\right)  = \frac{1}{3}\left( {y - 1}\right)
 
 then one can check easily that \(f\left( {g\left( y\right) }\right)  = y\) and \(g\left( {f\left( x\right) }\right)  = x\) for all real numbers \(x\) and \(y\) It follows that \(f\) is bijective and that \(g = {f}^{-1}\) , the continuity of \(f\) and \(g\) is a familiar result from calculus.
 \end{example}
+\end{centeredblock}
 
-\begin{example} The function \(F : \left( {-1,1}\right)  \rightarrow  \mathbb{R}\) defined by
+\begin{centeredblock}
+\begin{example}
+	The function \(F : \left( {-1,1}\right)  \rightarrow  \mathbb{R}\) defined by
 
 \[
 F\left( x\right)  = \frac{x}{1 - {x}^{2}}
@@ -1218,8 +1336,11 @@ Figure 18.3
 
 A second way to show \(F\) a homeomorphism is to use the continuity of the algebraic functions and the square-root function to show that both \(F\) and \(G\) are continuous These are familiar facts from calculus
 \end{example}
+\end{centeredblock}
 
-\begin{example} A bijective function \(f : X \rightarrow  Y\) can be continuous without being a homeomorphism One such function is the identity map \(g\;{\mathbb{R}}_{\ell } \rightarrow  \mathbb{R}\) considered in Example 3 Another is the following Let \(\idxmath{S}{\({S}^{1}\)} {S}^{1}\) denote the unit circle.
+\begin{centeredblock}
+\begin{example}
+	A bijective function \(f : X \rightarrow  Y\) can be continuous without being a homeomorphism One such function is the identity map \(g\;{\mathbb{R}}_{\ell } \rightarrow  \mathbb{R}\) considered in Example 3 Another is the following Let \(\idxmath{S}{\({S}^{1}\)} {S}^{1}\) denote the unit circle.
 
 \[
 {S}^{1} = \left\{  {x \times  y \mid  {x}^{2} + {y}^{2} = 1}\right\}  ,
@@ -1240,8 +1361,11 @@ be the map defined by \(f\left( t\right)  = \left( {\cos {2\pi t},\sin {2\pi t}}
 
 Figure 18.4
 \end{example}
+\end{centeredblock}
 
-\begin{example} Consider the function
+\begin{centeredblock}
+\begin{example}
+	Consider the function
 
 \[
 g : \lbrack 0,1) \rightarrow  {\mathbb{R}}^{2}
@@ -1249,12 +1373,14 @@ g : \lbrack 0,1) \rightarrow  {\mathbb{R}}^{2}
 
 obtained from the function \(f\) of the preceding example by expanding the range. The map \(g\) is an example of a continuous injective map that is not an imbedding
 \end{example}
+\end{centeredblock}
 
 \section*{Constructing Continuous Functions}
 
 How does one go about constructing continuous functions from one topological space to another? There are a number of methods used in analysis, of which some generalize to arbitrary topological spaces and others do not. We study first some constructions that do hold for general topological spaces, deferring consideration of the others until later.
 
-\begin{theorem}[Rules for constructing continuous functions] Let \(X,Y\) , and \(Z\) be topological spaces.
+\begin{theorem}[Rules for constructing continuous functions]
+	Let \(X,Y\) , and \(Z\) be topological spaces.
 
 (a) (Constant function) If \(f : X \rightarrow  Y\) maps all of \(X\) into the single point \({y}_{O}\) of \(Y\) , then \(f\) is continuous.
 
@@ -1309,9 +1435,11 @@ because both expressions represent the set of those points \(x\) lying in \({U}_
 so that \({f}^{-1}\left( V\right)\) is also open in \(X\) .
 \end{proof}
 
-\begin{theorem}[The \idx{pasting lemma}] Let \(X = A \cup  B\) , where \(A\) and \(B\) are closed in \(X\) . Let \(f : A \rightarrow  Y\) and \(g : B \rightarrow  Y\) be continuous. If \(f\left( x\right)  = g\left( x\right)\) for every \(x \in  A \cap  B\) , then \(f\) and \(g\) combine to give a continuous function \(h : X \rightarrow  Y\) , defined by setting \(h\left( x\right)  = f\left( x\right)\) if \(x \in  A\) , and \(h\left( x\right)  = g\left( x\right)\) if \(x \in  B\) .
+\begin{theorem}[The \idx{pasting lemma}]
+	Let \(X = A \cup  B\) , where \(A\) and \(B\) are closed in \(X\) . Let \(f : A \rightarrow  Y\) and \(g : B \rightarrow  Y\) be continuous. If \(f\left( x\right)  = g\left( x\right)\) for every \(x \in  A \cap  B\) , then \(f\) and \(g\) combine to give a continuous function \(h : X \rightarrow  Y\) , defined by setting \(h\left( x\right)  = f\left( x\right)\) if \(x \in  A\) , and \(h\left( x\right)  = g\left( x\right)\) if \(x \in  B\) .
 \end{theorem}
-\begin{proof}Let \(C\) be a closed subset of \(Y\) . Now
+\begin{proof}
+	Let \(C\) be a closed subset of \(Y\) . Now
 
 \[
 {h}^{-1}\left( C\right)  = {f}^{-1}\left( C\right)  \cup  {g}^{-1}\left( C\right) ,
@@ -1321,7 +1449,9 @@ by elementary set theory. Since \(f\) is continuous, \({f}^{-1}\left( C\right)\)
 
 This theorem also holds if \(A\) and \(B\) are open sets in \(X\) ; this is just a special case of the ``local formulation of continuity'' rule given in preceding theorem.
 
-\begin{example} Let us define a function \(h : \mathbb{R} \rightarrow  \mathbb{R}\) by setting
+\begin{centeredblock}
+\begin{example}
+	Let us define a function \(h : \mathbb{R} \rightarrow  \mathbb{R}\) by setting
 
 \[
 h\left( x\right)  = \left\{  \begin{array}{ll} x & \text{ for }x \leq  0 \\  x/2 & \text{ for }x \geq  0 \end{array}\right.
@@ -1348,9 +1478,11 @@ for instance, do define a function \(l\) mapping \(\mathbb{R}\) into \(\mathbb{R
 
 Figure 18.5
 \end{example}
+\end{centeredblock}
 
 \end{proof}
-\begin{theorem}[Maps into products] Let \(f : A \rightarrow  X \times  Y\) be given by the equation
+\begin{theorem}[Maps into products]
+	Let \(f : A \rightarrow  X \times  Y\) be given by the equation
 
 \[
 f\left( a\right)  = \left( {{f}_{1}\left( a\right) ,{f}_{2}\left( a\right) }\right) .
@@ -1385,7 +1517,9 @@ Since both of the sets \({f}_{1}^{-1}\left( U\right)\) and \({f}_{2}^{-1}\left( 
 There is no useful criterion for the continuity of a map \(f : A \times  B \rightarrow  X\) whose domain is a product space. One might conjecture that \(f\) is continuous if it is continuous ``in each variable separately,'' but this conjecture is not true. (See Exercise 12.)
 \end{proof}
 
-\begin{example} In calculus, a parametrized curve in the plane is defined to be a continuous map \(f\left\lbrack  {a,b}\right\rbrack   \rightarrow  {\mathbb{R}}^{2}\) It is often expressed in the form \(f\left( t\right)  = \left( {x\left( t\right) ,y\left( t\right) }\right)\) ; and one frequently uses the fact that \(f\) is a continuous function of \(t\) if both \(x\) and \(y\) are Similarly, a vector field in the plane
+\begin{centeredblock}
+\begin{example}
+	In calculus, a parametrized curve in the plane is defined to be a continuous map \(f\left\lbrack  {a,b}\right\rbrack   \rightarrow  {\mathbb{R}}^{2}\) It is often expressed in the form \(f\left( t\right)  = \left( {x\left( t\right) ,y\left( t\right) }\right)\) ; and one frequently uses the fact that \(f\) is a continuous function of \(t\) if both \(x\) and \(y\) are Similarly, a vector field in the plane
 
 \[
 \mathbf{v}\left( {x,y}\right)  = P\left( {x,y}\right) \mathbf{i} + Q\left( {x,y}\right) \mathbf{j}
@@ -1397,6 +1531,7 @@ There is no useful criterion for the continuity of a map \(f : A \times  B \righ
 
 is said to be continuous if both \(P\) and \(Q\) are continuous functions, or equivalently, if \(\mathbf{v}\) is continuous as a map of \({\mathbb{R}}^{2}\) into \({\mathbb{R}}^{2}\) . Both of these statements are simply special cases of the preceding theorem.
 \end{example}
+\end{centeredblock}
 
 One way of forming continuous functions that is used a great deal in analysis is to take sums, differences, products, or \idx{Quotient space (see also Quotient topology)} quotients of continuous real-valued functions. It is a standard theorem that if \(f.g.X \rightarrow  \mathbb{R}\) are continuous, then \(f + g,f - g\) , and \(f \cdot  g\) are continuous, and \(f/g\) is continuous if \(g\left( x\right)  \neq  0\) for all \(x\) . We shall consider this theorem in \(§{21}\) .
 
@@ -1500,7 +1635,8 @@ It follows that these two topologies agree for the finite cartesian product and 
 
 Before proceeding, however, we shall introduce a more general notion of cartesian product. So far, we have defined the cartesian product of an indexed family of sets only in the cases where the index set was the set \(\{ 1,\ldots ,n\}\) or the set \({\mathbb{Z}}_{ + }\) Now we consider the case where the index set is completely arbitrary.
 
-\begin{definition} Let \(J\) be an index set. Given a set \(X\) , we define a \(J\) -tuple of elements of \(X\) to be a function \(\mathbf{x} : J \rightarrow  X\) . If \(\alpha\) is an element of \(J\) , we often denote the value of \(x\) at \(\alpha\) by \({x}_{\alpha }\) rather than \(x\left( \alpha \right)\) ; we call it the \(\alpha\) th coordinate of \(x\) . And we often denote the function \(x\) itself by the symbol
+\begin{definition}
+	Let \(J\) be an index set. Given a set \(X\) , we define a \(J\) -tuple of elements of \(X\) to be a function \(\mathbf{x} : J \rightarrow  X\) . If \(\alpha\) is an element of \(J\) , we often denote the value of \(x\) at \(\alpha\) by \({x}_{\alpha }\) rather than \(x\left( \alpha \right)\) ; we call it the \(\alpha\) th coordinate of \(x\) . And we often denote the function \(x\) itself by the symbol
 
 \[
 {\left( {x}_{\alpha }\right) }_{\alpha  \in  J},
@@ -1509,7 +1645,8 @@ Before proceeding, however, we shall introduce a more general notion of cartesia
 which is as close as we can come to a ``tuple notation'' for an arbitrary index set \(J\) . We denote the set of all \(J\) -tuples of elements of \(X\) by \(\idxmath{X}{\({X}^{J}\)} {X}^{J}\) .
 \end{definition}
 
-\begin{definition} Let \({\left\{  {A}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an indexed family of sets; let \(X = \mathop{\bigcup }\limits_{{\alpha  \in  J}}{A}_{\alpha }\) . The cartesian product of this indexed family, denoted by
+\begin{definition}
+	Let \({\left\{  {A}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an indexed family of sets; let \(X = \mathop{\bigcup }\limits_{{\alpha  \in  J}}{A}_{\alpha }\) . The cartesian product of this indexed family, denoted by
 
 \[
 \mathop{\prod }\limits_{{\alpha  \in  J}}{A}_{\alpha }
@@ -1528,7 +1665,8 @@ Occasionally we denote the product simply by \(\prod {A}_{\alpha }\) , and its g
 
 If all the sets \({A}_{\alpha }\) are equal to one set \(X\) , then the cartesian product \(\mathop{\prod }\limits_{{\alpha  \in  J}}{A}_{\alpha }\) is just the set \({X}^{J}\) of all \(J\) -tuples of elements of \(X\) . We sometimes use ``tuple notation'' for the elements of \({X}^{J}\) , and sometimes we use functional notation, depending on which is more convenient.
 
-\begin{definition} Let \({\left\{  {X}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an indexed family of topological spaces. Let us take as a basis for a topology on the product space
+\begin{definition}
+	Let \({\left\{  {X}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an indexed family of topological spaces. Let us take as a basis for a topology on the product space
 
 \[
 \mathop{\prod }\limits_{{\alpha  \in  J}}{X}_{\alpha }
@@ -1563,7 +1701,8 @@ be the function assigning to each element of the product space its \(\beta\) th 
 
 it is called the \idx{projection map}ping associated with the index \(\beta\) .
 
-\begin{definition} Let \({S}_{\beta }\) denote the collection
+\begin{definition}
+	Let \({S}_{\beta }\) denote the collection
 
 \[
 {S}_{\beta } = \left\{  {{\pi }_{\beta }^{-1}\left( {U}_{\beta }\right)  \mid  {U}_{\beta }\text{ open in }{X}_{\beta }}\right\}  ,
@@ -1578,7 +1717,7 @@ S = \mathop{\bigcup }\limits_{{\beta  \in  J}}{S}_{\beta }
 The topology generated by the subbasis \(S\) is called the product topology. In this topology \(\mathop{\prod }\limits_{{\alpha  \in  J}}{X}_{\alpha }\) is called a product space.
 \end{definition}
 
-To compare these topologies, we consider the basis \(\mathcal{B}\) that \(\mathcal{S}\) generates. The collection \(\mathcal{B}\) consists of all finite intersections of elements of \(\mathcal{S}\) . If we intersect elements belonging to the same one of the sets \({S}_{\beta }\) , we do not get anything new, because
+To compare these topologies, we consider the basis \(\mathcal{B}\) that \(\mathcal{S}\) generates. The collection \(\mathcal{B}\) consists of all finite intersections of elements of \(\mathcal{S}\) . If we intersect elements beloriging to the same one of the sets \({S}_{\beta }\) , we do not get anything new, because
 
 \[
 {\pi }_{\beta }^{-1}\left( {U}_{\beta }\right)  \cap  {\pi }_{\beta }^{-1}\left( {V}_{\beta }\right)  = {\pi }_{\beta }^{-1}\left( {{U}_{\beta } \cap  {V}_{\beta }}\right)
@@ -1602,7 +1741,8 @@ where \({U}_{\alpha }\) denotes the entire space \({X}_{\alpha }\) if \(\alpha  
 
 All this is summarized in the following theorem:
 
-\begin{theorem}[Comparison of the box and product topologies] The box topology on \(\prod {X}_{\alpha }\) has as basis all sets of the form \(\prod {U}_{\alpha }\) , where \({U}_{\alpha }\) is open in \({X}_{\alpha }\) for each \(\alpha\) . The product topology on \(\prod {X}_{\alpha }\) has as basis all sets of the form \(\prod {U}_{\alpha }\) , where \({U}_{\alpha }\) is open in \({X}_{\alpha }\) for each \(\alpha\) and \({U}_{\alpha }\) equals \({X}_{\alpha }\) except for finitely many values of \(\alpha\) .
+\begin{theorem}[Comparison of the box and product topologies]
+	The box topology on \(\prod {X}_{\alpha }\) has as basis all sets of the form \(\prod {U}_{\alpha }\) , where \({U}_{\alpha }\) is open in \({X}_{\alpha }\) for each \(\alpha\) . The product topology on \(\prod {X}_{\alpha }\) has as basis all sets of the form \(\prod {U}_{\alpha }\) , where \({U}_{\alpha }\) is open in \({X}_{\alpha }\) for each \(\alpha\) and \({U}_{\alpha }\) equals \({X}_{\alpha }\) except for finitely many values of \(\alpha\) .
 
 Two things are immediately clear First, for finite products \(\mathop{\prod }\limits_{{\alpha  = 1}}^{n}{X}_{\alpha }\) the two topologies are precisely the same. Second, the box topology is in general finer than the product topology.
 
@@ -1613,7 +1753,8 @@ Whenever we consider the product \(\prod {X}_{\alpha }\) , we shall assume it is
 Some of the theorems we proved for the product \(X \times  Y\) hold for the product \(\prod {X}_{\alpha }\) no matter which topology we use. We list them here; most of the proofs are left to the exercises.
 
 \end{theorem}
-\begin{theorem} Suppose the topology on each space \({X}_{\alpha }\) is given by a basis \({\mathcal{B}}_{\alpha }\) . The collection of all sets of the form
+\begin{theorem}
+	Suppose the topology on each space \({X}_{\alpha }\) is given by a basis \({\mathcal{B}}_{\alpha }\) . The collection of all sets of the form
 
 \[
 \mathop{\prod }\limits_{{\alpha  \in  J}}{B}_{\alpha }
@@ -1623,7 +1764,9 @@ where \({B}_{\alpha } \in  {\mathcal{B}}_{\alpha }\) for each \(\alpha\) , will 
 
 The collection of all sets of the same form, where \({B}_{\alpha } \in  {\mathcal{B}}_{\alpha }\) for finitely many indices \(\alpha\) and \({B}_{\alpha } = {X}_{\alpha }\) for all the remaining indices, will serve as a basis for the \(\begin{matrix} \text{ product topology }\mathop{\prod }\limits_{{\alpha  \in  J}}{X}_{\alpha }. \end{matrix}\)
 
-\begin{example} Consider euclidean \(n\) -space \({\mathbb{R}}^{n}\) . A basis for \(\mathbb{R}\) consists of all open intervals in \(\mathbb{R}\) ; hence a basis for the topology of \({\mathbb{R}}^{n}\) consists of all products of the form
+\begin{centeredblock}
+\begin{example}
+	Consider euclidean \(n\) -space \({\mathbb{R}}^{n}\) . A basis for \(\mathbb{R}\) consists of all open intervals in \(\mathbb{R}\) ; hence a basis for the topology of \({\mathbb{R}}^{n}\) consists of all products of the form
 
 \[
 \left( {{a}_{1},{b}_{1}}\right)  \times  \left( {{a}_{2},{b}_{2}}\right)  \times   \cdot  \; \times  \left( {{a}_{n},{b}_{n}}\right) .
@@ -1631,15 +1774,19 @@ The collection of all sets of the same form, where \({B}_{\alpha } \in  {\mathca
 
 Since \({\mathbb{R}}^{n}\) is a finite product, the box and product topologies agree Whenever we consider \({\mathbb{R}}^{n}\) , we will assume that it is given this topology, unless we specifically state otherwise
 \end{example}
+\end{centeredblock}
 
 \end{theorem}
-\begin{theorem} Let \({A}_{\alpha }\) be a subspace of \({X}_{\alpha }\) , for each \(\alpha  \in  J\) . Then \(\prod {A}_{\alpha }\) is a subspace of \(\prod {X}_{\alpha }\) if both products are given the box topology, or if both products are given the product topology.
+\begin{theorem}
+	Let \({A}_{\alpha }\) be a subspace of \({X}_{\alpha }\) , for each \(\alpha  \in  J\) . Then \(\prod {A}_{\alpha }\) is a subspace of \(\prod {X}_{\alpha }\) if both products are given the box topology, or if both products are given the product topology.
 
 \end{theorem}
-\begin{theorem} If each space \({X}_{\alpha }\) is a Hausdorff space, then \(\prod {X}_{\alpha }\) is a Hausdorff space in both the box and product topologies.
+\begin{theorem}
+	If each space \({X}_{\alpha }\) is a Hausdorff space, then \(\prod {X}_{\alpha }\) is a Hausdorff space in both the box and product topologies.
 
 \end{theorem}
-\begin{theorem} Let \(\left\{  {X}_{\alpha }\right\}\) be an indexed family of spaces; let \({A}_{\alpha } \subset  {X}_{\alpha }\) for each \(\alpha\) . If \(\prod {X}_{\alpha }\) is given either the product or the box topology, then
+\begin{theorem}
+	Let \(\left\{  {X}_{\alpha }\right\}\) be an indexed family of spaces; let \({A}_{\alpha } \subset  {X}_{\alpha }\) for each \(\alpha\) . If \(\prod {X}_{\alpha }\) is given either the product or the box topology, then
 
 \[
 \prod {\widetilde{A}}_{\alpha } = \bar{\prod }\overline{{A}_{\alpha }}.
@@ -1654,7 +1801,8 @@ Conversely, suppose \(\mathbf{x} = \left( {x}_{\alpha }\right)\) lies in the clo
 So far, no reason has appeared for preferring the product to the box topology. It is when we try to generalize our previous theorem about continuity of maps into product spaces that a difference first arises. Here is a theorem that does not hold if \(\prod {X}_{\alpha }\) is given the box topology:
 \end{proof}
 
-\begin{theorem} Let \(f : A \rightarrow  \mathop{\prod }\limits_{{\alpha  \in  J}}{X}_{\alpha }\) be given by the equation
+\begin{theorem}
+	Let \(f : A \rightarrow  \mathop{\prod }\limits_{{\alpha  \in  J}}{X}_{\alpha }\) be given by the equation
 
 \[
 f\left( a\right)  = {\left( {f}_{\alpha }\left( a\right) \right) }_{\alpha  \in  J},
@@ -1677,7 +1825,9 @@ because \({f}_{\beta } = {\pi }_{\beta } \circ  f\) . Since \({f}_{\beta }\) is 
 Why does this theorem fail if we use the box topology? Probably the most convincing thing to do is to look at an example.
 \end{proof}
 
-\begin{example} Consider \({\mathbb{R}}^{\omega }\) , the countably infinite product of \(\mathbb{R}\) with itself. Recall that
+\begin{centeredblock}
+\begin{example}
+	Consider \({\mathbb{R}}^{\omega }\) , the countably infinite product of \(\mathbb{R}\) with itself. Recall that
 
 \[
 {\mathbb{R}}^{\omega } = \mathop{\prod }\limits_{{n \in  {\mathbf{Z}}_{ + }}}{X}_{n}
@@ -1703,6 +1853,7 @@ for the box topology. We assert that \({f}^{-1}\left( B\right)\) is not open in 
 
 for all \(n\) , a contradiction
 \end{example}
+\end{centeredblock}
 
 \section*{Exercises}
 
@@ -1766,7 +1917,8 @@ let \(Z\) denote the subspace \(f\left( A\right)\) of the product space \(\prod 
 
 One of the most important and frequently used ways of imposing a topology on a set is to define the topology in terms of a metric on the set. Topologies given in this way lie at the heart of modern analysis, for example. In this section, we shall define the \idx{metric topology} and shall give a number of examples. In the next section, we shall consider some of the properties that metric topologies satisfy.
 
-\begin{definition} A metric on a set \(X\) is a function
+\begin{definition}
+	A metric on a set \(X\) is a function
 
 \[
 d : X \times  X \rightarrow  R
@@ -1789,7 +1941,8 @@ Given a metric \(d\) on \(X\) , the number \(d\left( {x,y}\right)\) is often cal
 of all points \(y\) whose distance from \(x\) is less than \(\epsilon\) . It is called the \(\epsilon\) -ball centered at \(x\) . Sometimes we omit the metric \(d\) from the notation and write this ball simply as \(\idxmath{B}{\(B\left( {x,\epsilon }\right)\)} B\left( {x,\epsilon }\right)\) , when no confusion will arise.
 \end{definition}
 
-\begin{definition} If \(d\) is a metric on the set \(X\) , then the collection of all \(\epsilon\) -balls \({B}_{d}\left( {x,\epsilon }\right)\) , for \(x \in  X\) and \(\epsilon  > 0\) , is a basis for a topology on \(X\) , called the metric topology induced by \(d\) .
+\begin{definition}
+	If \(d\) is a metric on the set \(X\) , then the collection of all \(\epsilon\) -balls \({B}_{d}\left( {x,\epsilon }\right)\) , for \(x \in  X\) and \(\epsilon  > 0\) , is a basis for a topology on \(X\) , called the metric topology induced by \(d\) .
 \end{definition}
 
 The first condition for a basis is trivial, since \(x \in  B\left( {x,\epsilon }\right)\) for any \(\epsilon  > 0\) . Before checking the second condition for a basis, we show that if \(y\) is a point of the basis element \(B\left( {x,\epsilon }\right)\) , then there is a basis element \(B\left( {y,\delta }\right)\) centered at \(y\) that is contained in \(B\left( {x,\epsilon }\right)\) . Define \(\delta\) to be the positive number \(\epsilon  - d\left( {x,y}\right)\) . Then \(B\left( {y,\delta }\right)  \subset  B\left( {x,\epsilon }\right)\) , for if \(z \in  B\left( {y,\delta }\right)\) , then \(d\left( {y,z}\right)  < \epsilon  - d\left( {x,y}\right)\) , from which we conclude that
@@ -1815,7 +1968,9 @@ A set \(U\) is open in the metric topology induced by \(d\) if and only if for e
 
 Clearly this condition implies that \(U\) is open. Conversely, if \(U\) is open, it contains a basis element \(B = {B}_{d}\left( {x,\epsilon }\right)\) containing \(y\) , and \(B\) in turn contains a basis element \({B}_{d}\left( {y,\delta }\right)\) centered at \(y\)
 
-\begin{example} Given a set \(X\) , define
+\begin{centeredblock}
+\begin{example}
+	Given a set \(X\) , define
 
 \[
 d\left( {x,y}\right)  = 1\;\text{ if }x \neq  y,
@@ -1827,8 +1982,11 @@ d\left( {x,y}\right)  = 0\;\text{ if }x = y
 
 It is trivial to check that \(d\) is a metric. The topology it induces is the discrete topology; the basis element \(B\left( {x,1}\right)\) , for example, consists of the point \(x\) alone.
 \end{example}
+\end{centeredblock}
 
-\begin{example} The standard metric on the real numbers \(\mathbb{R}\) is defined by the equation
+\begin{centeredblock}
+\begin{example}
+	The standard metric on the real numbers \(\mathbb{R}\) is defined by the equation
 
 \[
 d\left( {x,y}\right)  = \left| {x - y}\right|
@@ -1842,8 +2000,10 @@ It is easy to check that \(d\) is a metric. The topology it induces is the same 
 
 where \(x = \left( {a + b}\right) /2\) and \(\epsilon  = \left( {b - a}\right) /2\) . And conversely, each \(\epsilon\) -ball \(B\left( {x,\epsilon }\right)\) equals an open interval the interval \(\left( {x - \epsilon ,x + \epsilon }\right)\) .
 \end{example}
+\end{centeredblock}
 
-\begin{definition} If \(X\) is a topological space, \(X\) is said to be metrizable if there exists a metric \(d\) on the set \(X\) that induces the topology of \(X\) . A metric space is a \idx{metrizable space} \(X\) together with a specific metric \(d\) that gives the topology of \(X\) .
+\begin{definition}
+	If \(X\) is a topological space, \(X\) is said to be metrizable if there exists a metric \(d\) on the set \(X\) that induces the topology of \(X\) . A metric space is a \idx{metrizable space} \(X\) together with a specific metric \(d\) that gives the topology of \(X\) .
 \end{definition}
 
 Many of the spaces important for mathematics are metrizable, but some are not. Metrizability is always a highly desirable attribute for a space to possess, for the existence of a metric gives one a valuable tool for proving theorems about the space.
@@ -1852,7 +2012,8 @@ It is, therefore, a problem of fundamental importance in topology to find condit
 
 Although the metrizability problem is an important problem in topology, the study of metric spaces as such does not properly belong to topology as much as it does to analysis Metrzability of a space depends only on the topology of the space in question, but properties that involve a specific metric for \(X\) in general do not. For instance, one can make the following definition in a metric space.
 
-\begin{definition} Let \(X\) be a metric space with metric \(d\) . A subset \(A\) of \(X\) is said to be \idx{Bounded set} bounded if there is some number \(M\) such that
+\begin{definition}
+	Let \(X\) be a metric space with metric \(d\) . A subset \(A\) of \(X\) is said to be \idx{Bounded set} bounded if there is some number \(M\) such that
 
 \[
 d\left( {{a}_{1},{a}_{2}}\right)  \leq  M
@@ -1867,7 +2028,8 @@ for every pair \({a}_{1},{a}_{2}\) of points of \(A\) . If \(A\) is bounded and 
 
 Boundedness of a set is not a topological property, for it depends on the particular metric \(d\) that is used for \(X\) . For instance, if \(X\) is a metric space with metric \(d\) , then there exists a metric \(\bar{d}\) that gives the topology of \(X\) , relative to which every subset of \(X\) is bounded. It is defined as follows
 
-\begin{theorem} Let \(X\) be a metric space with metric \(d\) . Define \(\idxmath{d}{\(\widetilde{d}\)} \widetilde{d} : X \times  X \rightarrow  \mathbb{R}\) by the equation
+\begin{theorem}
+	Let \(X\) be a metric space with metric \(d\) . Define \(\idxmath{d}{\(\widetilde{d}\)} \widetilde{d} : X \times  X \rightarrow  \mathbb{R}\) by the equation
 
 \[
 \bar{d}\left( {x,y}\right)  = \min \{ d\left( {x,y}\right) ,1\}
@@ -1898,7 +2060,8 @@ Now we note that in any metric space, the collection of \(\epsilon\) -balls with
 Now we consider some familiar spaces and show they are metrizable.
 \end{proof}
 
-\begin{definition} Given \(\mathbf{x} = \left( {{x}_{1},\ldots ,{x}_{n}}\right)\) in \({\mathbb{R}}^{n}\) , we define the \idx{norm} of \(\mathbf{x}\) by the equation
+\begin{definition}
+	Given \(\mathbf{x} = \left( {{x}_{1},\ldots ,{x}_{n}}\right)\) in \({\mathbb{R}}^{n}\) , we define the \idx{norm} of \(\mathbf{x}\) by the equation
 
 \[
 \parallel x\parallel  = {\left( {x}_{1}^{2} + \cdots  + {x}_{n}^{2}\right) }^{1/2}
@@ -1943,7 +2106,8 @@ On the real line \(\mathbb{R} = {\mathbb{R}}^{1}\) , these two metrics coincide 
 
 We now show that each of these metrics induces the usual topology on \({\mathbb{R}}^{n}\) . We need the following lemma:
 
-\begin{lemma} Let \(d\) and \({d}^{\prime }\) be two metrics on the set \(X\) ; let \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\) be the topologies they induce, respectively. Then \({\mathcal{T}}^{\prime }\) is finer than \(\mathcal{T}\) if and only if for each \(x\) in \(X\) and each \(\epsilon  > 0\) , there exists a \(\delta  > 0\) such that
+\begin{lemma}
+	Let \(d\) and \({d}^{\prime }\) be two metrics on the set \(X\) ; let \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\) be the topologies they induce, respectively. Then \({\mathcal{T}}^{\prime }\) is finer than \(\mathcal{T}\) if and only if for each \(x\) in \(X\) and each \(\epsilon  > 0\) , there exists a \(\delta  > 0\) such that
 
 \[
 {B}_{{d}^{\prime }}\left( {x,\delta }\right)  \subset  {B}_{d}\left( {x,\epsilon }\right)
@@ -1956,7 +2120,8 @@ Suppose that \({\mathcal{T}}^{\prime }\) is finer than \(\mathcal{T}\) Given the
 Conversely, suppose the \(\delta\) - \(\epsilon\) condition holds Given a basis element \(B\) for \(\mathcal{T}\) containing \(x\) , we can find within \(B\) a ball \({B}_{d}\left( {x,\epsilon }\right)\) centered at \(x\) . By the given condition, there is a \(\delta\) such that \({B}_{{d}^{\prime }}\left( {x,\delta }\right)  \subset  {B}_{d}\left( {x,\epsilon }\right)\) . Then Lemma 13.3 applies to show \({\mathcal{T}}^{\prime }\) is finer than \(\mathcal{T}\) .
 \end{proof}
 
-\begin{theorem} The topologies on \({\mathbb{R}}^{n}\) induced by the euclidean metric \(d\) and the square metric \(\rho\) are the same as the product topology on \({\mathbb{R}}^{n}\) .
+\begin{theorem}
+	The topologies on \({\mathbb{R}}^{n}\) induced by the euclidean metric \(d\) and the square metric \(\rho\) are the same as the product topology on \({\mathbb{R}}^{n}\) .
 
 \end{theorem}
 \begin{proof}
@@ -2027,7 +2192,8 @@ Again, this formula does not always make sense. If however we replace the usual 
 The uniform metric can be defined more generally on the cartesian product \({\mathbb{R}}^{J}\) for arbitrary \(J\) , as follows:
 \end{proof}
 
-\begin{definition} Given an index set \(J\) , and given points \(\mathbf{x} = {\left( {x}_{\alpha }\right) }_{\alpha  \in  J}\) and \(\mathbf{y} = {\left( {y}_{\alpha }\right) }_{\alpha  \in  J}\) of \({\mathbb{R}}^{J}\) , let us define a metric \(\bar{\rho }\) on \({\mathbb{R}}^{J}\) by the equation
+\begin{definition}
+	Given an index set \(J\) , and given points \(\mathbf{x} = {\left( {x}_{\alpha }\right) }_{\alpha  \in  J}\) and \(\mathbf{y} = {\left( {y}_{\alpha }\right) }_{\alpha  \in  J}\) of \({\mathbb{R}}^{J}\) , let us define a metric \(\bar{\rho }\) on \({\mathbb{R}}^{J}\) by the equation
 
 \[
 \bar{\rho }\left( {\mathbf{x},\mathbf{y}}\right)  = \sup \{ \bar{d}\left( {{x}_{\alpha },{y}_{\alpha }}\right)  \mid  \alpha  \in  J\} ,
@@ -2038,7 +2204,8 @@ where \(\bar{d}\) is the standard bounded metric on \(\mathbb{R}\) . It is easy 
 
 The relation between this topology and the product and box topologies is the following:
 
-\begin{theorem} The uniform topology on \({\mathbb{R}}^{J}\) is finer than the product topology and coarser than the box topology; these three topologies are all different if \(J\) is infinite.
+\begin{theorem}
+	The uniform topology on \({\mathbb{R}}^{J}\) is finer than the product topology and coarser than the box topology; these three topologies are all different if \(J\) is infinite.
 
 \end{theorem}
 \begin{proof}
@@ -2057,7 +2224,8 @@ Showing these three topologies are different if \(J\) is infinite is a task we l
 In the case where \(J\) is infinite, we still have not determined whether \({\mathbb{R}}^{J}\) is metrizable in either the box or the product topology. It turns out that the only one of these cases where \({\mathbb{R}}^{J}\) is metrizable is the case where \(J\) is countable and \({\mathbb{R}}^{J}\) has the product topology. As we shall see.
 \end{proof}
 
-\begin{theorem} Let \(\bar{d}\left( {a,b}\right)  = \min \{ \left| {a - b}\right| ,1\}\) be the standard bounded metric on \(\mathbb{R}\) . If \(\mathbf{x}\) and \(\mathbf{y}\) are two points of \({\mathbb{R}}^{\omega }\) , define
+\begin{theorem}
+	Let \(\bar{d}\left( {a,b}\right)  = \min \{ \left| {a - b}\right| ,1\}\) be the standard bounded metric on \(\mathbb{R}\) . If \(\mathbf{x}\) and \(\mathbf{y}\) are two points of \({\mathbb{R}}^{\omega }\) , define
 
 \[
 D\left( {\mathbf{x},\mathbf{y}}\right)  = \sup \left\{  \frac{\bar{d}\left( {{x}_{i},{y}_{i}}\right) }{i}\right\}  .
@@ -2079,7 +2247,7 @@ so that
 \sup \left\{  \frac{\bar{d}\left( {{x}_{i},{z}_{i}}\right) }{i}\right\}   \leq  D\left( {\mathbf{x},\mathbf{y}}\right)  + D\left( {\mathbf{y},\mathbf{z}}\right) .
 \]
 
-The fact that \(D\) gives the product topology requires a \idx{Little ell-two topology} little more work. First, let \(U\) be open in the metric topology and let \(\mathbf{x} \in  U\) ; we’find an open set \(V\) in the product topology such that \(\mathbf{x} \in  V \subset  U\) . Choose an \(\epsilon\) -ball \({B}_{D}\left( {\mathbf{x},\epsilon }\right)\) lying in \(U\) . Then choose \(N\) large enough that \(1/N < \epsilon\) . Finally, let \(V\) be the basis element for the product topology
+The fact that \(D\) gives the product topology requires a \idx{Little ell-two topology} little more work. First, let \(U\) be open in the metric topology and let \(\mathbf{x} \in  U\) ; we'find an open set \(V\) in the product topology such that \(\mathbf{x} \in  V \subset  U\) . Choose an \(\epsilon\) -ball \({B}_{D}\left( {\mathbf{x},\epsilon }\right)\) lying in \(U\) . Then choose \(N\) large enough that \(1/N < \epsilon\) . Finally, let \(V\) be the basis element for the product topology
 
 \[
 V = \left( {{x}_{1} - \epsilon ,{x}_{1} + \epsilon }\right)  \times  \cdots  \times  \left( {{x}_{N} - \epsilon ,{x}_{N} + \epsilon }\right)  \times  \mathbb{R} \times  \mathbb{R} \times  \cdots .
@@ -2224,7 +2392,7 @@ U\left( {\mathbf{x},\epsilon }\right)  = \left( {{x}_{1} - \epsilon ,{x}_{1} + \
 d\left( {\mathbf{x},\mathbf{y}}\right)  = {\left\lbrack  \mathop{\sum }\limits_{{i = 1}}^{\infty }{\left( {x}_{i} - {y}_{i}\right) }^{2}\right\rbrack  }^{1/2}
 \]
 
-defines a metric on \(X\) . (See Exercise 10.) On \(X\) we have the three topologies it inherits from the box, uniform, and product topologies on \({\mathbb{R}}^{\omega }\) . We have also the topology given by the metric \(d\) , which we call the \({\ell }^{2}\) -topology. (Read ``little ell two.”)
+defines a metric on \(X\) . (See Exercise 10.) On \(X\) we have the three topologies it inherits from the box, uniform, and product topologies on \({\mathbb{R}}^{\omega }\) . We have also the topology given by the metric \(d\) , which we call the \({\ell }^{2}\) -topology. (Read ``little ell two.'')
 
 (a) Show that on \(X\) , we have the inclusions
 
@@ -2306,7 +2474,8 @@ First, we want to show that the familiar `` \(\epsilon  - \delta\) definition'' 
 
 Second, we want to consider two additional methods for constructing continuous functions, besides those discussed in §18. One is the process of taking sums, differences, products, and quotients of continuous real-valued functions. The other is the process of taking limits of uniformly convergent sequences of continuous functions.
 
-\begin{theorem} Let \(f : X \rightarrow  Y\) ; let \(X\) and \(Y\) be metrizable with metrics \({d}_{X}\) and \({d}_{Y}\) , respectively. Then continuity of \(f\) is equivalent to the requirement that given \(x \in  X\) and given \(\epsilon  > 0\) , there exists \(\delta  > 0\) such that
+\begin{theorem}
+	Let \(f : X \rightarrow  Y\) ; let \(X\) and \(Y\) be metrizable with metrics \({d}_{X}\) and \({d}_{Y}\) , respectively. Then continuity of \(f\) is equivalent to the requirement that given \(x \in  X\) and given \(\epsilon  > 0\) , there exists \(\delta  > 0\) such that
 
 \[
 {d}_{X}\left( {x,y}\right)  < \delta  \Rightarrow  {d}_{Y}\left( {f\left( x\right) ,f\left( y\right) }\right)  < \epsilon .
@@ -2324,17 +2493,19 @@ which is open in \(X\) and contains the point \(x\) . It contains some \(\delta\
 
 Conversely, suppose that the \(\epsilon  - \delta\) condition is satisfied. Let \(V\) be open in \(Y\) ; we show that \({f}^{-1}\left( V\right)\) is open in \(X\) . Let \(x\) be a point of the set \({f}^{-1}\left( V\right)\) . Since \(f\left( x\right)  \in\)  \(V\) , there is an \(\epsilon\) -ball \(B\left( {f\left( x\right) ,\epsilon }\right)\) centered at \(f\left( x\right)\) and contained in \(V\) . By the \(\epsilon\) - \(\delta\) condition, there is a \(\delta\) -ball \(B\left( {x,\delta }\right)\) centered at \(x\) such that \(f\left( {B\left( {x,\delta }\right) }\right)  \subset  B\left( {f\left( x\right) ,\epsilon }\right)\) . Then \(B\left( {x,\delta }\right)\) is a neighborhood of \(x\) contained in \({f}^{-1}\left( V\right)\) , so that \({f}^{-1}\left( V\right)\) is open, as desired.
 
-Now we turn to the convergent sequence definition of continuity. We begin by considering the relation between convergent sequences and closures of sets. It is certainly believable, from one’s experience in analysis, that if \(x\) lies in the closure of a subset \(A\) of the space \(X\) , then there should exist a sequence of points of \(A\) converging to \(x\) . This is not true in general, but it is true for metrizable spaces.
+Now we turn to the convergent sequence definition of continuity. We begin by considering the relation between convergent sequences and closures of sets. It is certainly believable, from one's experience in analysis, that if \(x\) lies in the closure of a subset \(A\) of the space \(X\) , then there should exist a sequence of points of \(A\) converging to \(x\) . This is not true in general, but it is true for metrizable spaces.
 \end{proof}
 
-\begin{lemma}[The \idx{sequence lemma}] Let \(X\) be a topological space; let \(A \subset  X\) . If there is a sequence of points of \(A\) converging to \(x\) , then \(x \in  \bar{A}\) ; the converse holds if \(X\) is metrizable.
+\begin{lemma}[The \idx{sequence lemma}]
+	Let \(X\) be a topological space; let \(A \subset  X\) . If there is a sequence of points of \(A\) converging to \(x\) , then \(x \in  \bar{A}\) ; the converse holds if \(X\) is metrizable.
 \end{lemma}
 
 \begin{proof}
 Suppose that \({x}_{n} \rightarrow  x\) , where \({x}_{n} \in  A\) . Then every neighborhood \(U\) of \(x\) contains a point of \(A\) , so \(x \in  \bar{A}\) by Theorem 17.5. Conversely, suppose that \(X\) is metrizable and \(x \in  \bar{A}\) . Let \(d\) be a metric for the topology of \(X\) . For each positive integer \(n\) , take the neighborhood \({B}_{d}\left( {x,1/n}\right)\) of radius \(1/n\) of \(x\) , and choose \({x}_{n}\) to be a point of its intersection with \(A\) . We assert that the sequence \({x}_{n}\) converges to \(x\) : Any open set \(U\) containing \(x\) contains an \(\epsilon\) -ball \({B}_{d}\left( {x,\epsilon }\right)\) centered at \(x\) ; if we choose \(N\) so that \(1/N < \epsilon\) , then \(U\) contains \({x}_{i}\) for all \(i \geq  N\) .
 \end{proof}
 
-\begin{theorem} Let \(f : X \rightarrow  Y\) . If the function \(f\) is continuous, then for every convergent sequence \({x}_{n} \rightarrow  x\) in \(X\) , the sequence \(f\left( {x}_{n}\right)\) converges to \(f\left( x\right)\) . The converse holds if \(X\) is metrizable.
+\begin{theorem}
+	Let \(f : X \rightarrow  Y\) . If the function \(f\) is continuous, then for every convergent sequence \({x}_{n} \rightarrow  x\) in \(X\) , the sequence \(f\left( {x}_{n}\right)\) converges to \(f\left( x\right)\) . The converse holds if \(X\) is metrizable.
 
 \end{theorem}
 \begin{proof}
@@ -2359,12 +2530,14 @@ A metrizable space always satisfies the first countability axiom, but the conver
 Now we consider additional methods for constructing continuous functions. We need the following lemma:
 \end{proof}
 
-\begin{lemma} The addition, subtraction, and multiplication operations are continuous functions from \(\mathbb{R} \times  \mathbb{R}\) into \(\mathbb{R}\) ; and the quotient operation is a continuous function from \(\mathbb{R} \times  \left( {\mathbb{R}-\{ 0\} }\right)\) into \(\mathbb{R}\) .
+\begin{lemma}
+	The addition, subtraction, and multiplication operations are continuous functions from \(\mathbb{R} \times  \mathbb{R}\) into \(\mathbb{R}\) ; and the quotient operation is a continuous function from \(\mathbb{R} \times  \left( {\mathbb{R}-\{ 0\} }\right)\) into \(\mathbb{R}\) .
 \end{lemma}
 
 You have probably seen this lemma proved before; it is a standard `` \(\epsilon  - \delta\) argument.'' If not, a proof is outlined in Exercise 12 below; you should have no trouble filling in the details.
 
-\begin{theorem} If \(X\) is a topological space, and if \(f,g : X \rightarrow  \mathbb{R}\) are continuous functions, then \(f + g,f - g\) , and \(f \cdot  g\) are continuous. If \(g\left( x\right)  \neq  0\) for all \(x\) , then \(f/g\) is continuous.
+\begin{theorem}
+	If \(X\) is a topological space, and if \(f,g : X \rightarrow  \mathbb{R}\) are continuous functions, then \(f + g,f - g\) , and \(f \cdot  g\) are continuous. If \(g\left( x\right)  \neq  0\) for all \(x\) , then \(f/g\) is continuous.
 
 \end{theorem}
 \begin{proof}
@@ -2385,7 +2558,8 @@ therefore \(f + g\) is continuous. Similar arguments apply to \(f - g,f \cdot  g
 Finally, we come to the notion of \idx{uniform convergence}.
 \end{proof}
 
-\begin{definition} Let \({f}_{n} : X \rightarrow  Y\) be a sequence of functions from the set \(X\) to the metric space \(Y\) . Let \(d\) be the metric for \(Y\) . We say that the sequence \(\left( {f}_{n}\right)\) converges uniformly to the function \(f : X \rightarrow  Y\) if given \(\epsilon  > 0\) , there exists an integer \(N\) such that
+\begin{definition}
+	Let \({f}_{n} : X \rightarrow  Y\) be a sequence of functions from the set \(X\) to the metric space \(Y\) . Let \(d\) be the metric for \(Y\) . We say that the sequence \(\left( {f}_{n}\right)\) converges uniformly to the function \(f : X \rightarrow  Y\) if given \(\epsilon  > 0\) , there exists an integer \(N\) such that
 
 \[
 d\left( {{f}_{n}\left( x\right) ,f\left( x\right) }\right)  < \epsilon
@@ -2396,7 +2570,8 @@ for all \(n > N\) and all \(x\) in \(X\) .
 
 Uniformity of convergence depends not only on the topology of \(Y\) but also on its metric. We have the following theorem about uniformly convergent sequences:
 
-\begin{theorem}[Uniform limit theorem] Let \({f}_{n} : X \rightarrow  Y\) be a sequence of continuous functions from the topological space \(X\) to the metric space \(Y\) . If \(\left( {f}_{n}\right)\) converges uniformly to \(f\) , then \(f\) is continuous.
+\begin{theorem}[Uniform limit theorem]
+	Let \({f}_{n} : X \rightarrow  Y\) be a sequence of continuous functions from the topological space \(X\) to the metric space \(Y\) . If \(\left( {f}_{n}\right)\) converges uniformly to \(f\) , then \(f\) is continuous.
 
 \end{theorem}
 \begin{proof}
@@ -2431,7 +2606,9 @@ Let us remark that the notion of uniform convergence is related to the definitio
 We conclude the section with some examples of spaces that are not metrizable.
 \end{proof}
 
-\begin{example} \({\mathbb{R}}^{\omega }\) in the box topology is not metrizable.
+\begin{centeredblock}
+\begin{example}
+	\({\mathbb{R}}^{\omega }\) in the box topology is not metrizable.
 
 We shall show that the sequence lemma does not hold for \({\mathbb{R}}^{\omega }\) . Let \(A\) be the subset of \({\mathbb{R}}^{\omega }\) consisting of those points all of whose coordinates are positive:
 
@@ -2439,7 +2616,7 @@ We shall show that the sequence lemma does not hold for \({\mathbb{R}}^{\omega }
 A = \left\{  {\left( {{x}_{1},{x}_{2},\ldots }\right)  \mid  {x}_{i} > 0\text{ for all }i \in  {\mathbb{Z}}_{ + }}\right\}  .
 \]
 
-Let0be the ``ongin'' in \({\mathbb{R}}^{\omega }\) , that is, the point(0,0,.)each of whose coordinates is zero. In the box topology,0belongs to \(A\) ; for if
+Let0be the ``origin'' in \({\mathbb{R}}^{\omega }\) , that is, the point(0,0,.)each of whose coordinates is zero. In the box topology,0belongs to \(A\) ; for if
 
 \[
 B = \left( {{a}_{1},{b}_{1}}\right)  \times  \left( {{a}_{2},{b}_{2}}\right)  \times
@@ -2467,8 +2644,11 @@ Every coordinate \({x}_{tn}\) is positive, so we can construct a basis element \
 
 Then \({B}^{\prime }\) contains the origin0, but it contains no member of the sequence \(\left( {\mathbf{a}}_{n}\right)\) ; the point \({a}_{n}\) cannot belong to \({B}^{\prime }\) because its \(n\) th coordinate \({x}_{nn}\) does not belong to the interval \(\left( {-{x}_{nn},{x}_{nn}}\right)\) . Hence the sequence \(\left( {a}_{n}\right)\) cannot converge to 0 in the box topology.
 \end{example}
+\end{centeredblock}
 
-\begin{example} An uncountable product of \(\mathbb{R}\) with itself is not metrizable.
+\begin{centeredblock}
+\begin{example}
+	An uncountable product of \(\mathbb{R}\) with itself is not metrizable.
 
 Let \(J\) be an uncountable index set; we show that \({\mathbb{R}}^{J}\) does not satisfy the sequence lemma (in the product topology)
 
@@ -2480,6 +2660,7 @@ But there is no sequence of points of \(A\) converging to0. For let \({\mathbf{a
 
 Now let \({U}_{\beta }\) be the open interval(-1,1)in \(\mathbb{R}\) , and let \(U\) be the open set \({\pi }_{\beta }^{-1}\left( {U}_{\beta }\right)\) in \({\mathbb{R}}^{J}\) . The set \(U\) is a neighborhood of0that contains none of the points \({\mathbf{a}}_{n}\) ; therefore, the sequence \({a}_{n}\) cannot converge to0.
 \end{example}
+\end{centeredblock}
 
 \section*{Exercises}
 
@@ -2656,7 +2837,8 @@ ${}^{\dagger}$ This section will be used throughout Part II of the book. It also
 
 Figure 22.2
 
-\begin{definition} Let \(X\) and \(Y\) be topological spaces; let \(p : X \rightarrow  Y\) be a surjective map. The map \(p\) is said to be a \idx{quotient map} provided a subset \(U\) of \(Y\) is open in \(Y\) if and only if \({p}^{-1}\left( U\right)\) is open in \(X\) .
+\begin{definition}
+	Let \(X\) and \(Y\) be topological spaces; let \(p : X \rightarrow  Y\) be a surjective map. The map \(p\) is said to be a \idx{quotient map} provided a subset \(U\) of \(Y\) is open in \(Y\) if and only if \({p}^{-1}\left( U\right)\) is open in \(X\) .
 \end{definition}
 
 This condition is stronger than continuity; some mathematicians call it ``\idx{strong continuity}.'' An equivalent condition is to require that a subset \(A\) of \(Y\) be closed in \(Y\) if and only if \({p}^{-1}\left( A\right)\) is closed in \(X\) . Equivalence of the two conditions follows from equation
@@ -2669,7 +2851,9 @@ Another way of describing a quotient map is as follows: We say that a subset \(C
 
 Two special kinds of quotient maps are the open maps and the \idx{closed map}s. Recall that a map \(f : X \rightarrow  Y\) is said to be an open map if for each open set \(U\) of \(X\) , the set \(f\left( U\right)\) is open in \(Y\) . It is said to be a closed map if for each closed set \(A\) of \(X\) , the set \(f\left( A\right)\) is closed in \(Y\) . It follows immediately from the definition that if \(p : X \rightarrow  Y\) is a surjective continuous map that is either open or closed, then \(p\) is a quotient map. There are quotient maps that are neither open nor closed. (See Exercise 3.)
 
-\begin{example} Let \(X\) be the subspace \(\left\lbrack  {0,1}\right\rbrack   \cup  \left\lbrack  {2,3}\right\rbrack\) of \(\mathbb{R}\) , and let \(Y\) be the subspace \(\left\lbrack  {0,2}\right\rbrack\) of \(\mathbb{R}\) . The map \(p : X \rightarrow  Y\) defined by
+\begin{centeredblock}
+\begin{example}
+	Let \(X\) be the subspace \(\left\lbrack  {0,1}\right\rbrack   \cup  \left\lbrack  {2,3}\right\rbrack\) of \(\mathbb{R}\) , and let \(Y\) be the subspace \(\left\lbrack  {0,2}\right\rbrack\) of \(\mathbb{R}\) . The map \(p : X \rightarrow  Y\) defined by
 
 \[
 p\left( x\right)  = \left\{  \begin{array}{ll} x & \text{ for }x \in  \left\lbrack  {0,1}\right\rbrack  , \\  x - 1 & \text{ for }x \in  \left\lbrack  {2,3}\right\rbrack   \end{array}\right.
@@ -2679,8 +2863,11 @@ is readily seen to be surjective, continuous, and closed. Therefore it is a quot
 
 Note that if \(A\) is the subspace \(\lbrack 0,1) \cup  \left\lbrack  {2,3}\right\rbrack\) of \(X\) , then the map \(q : A \rightarrow  Y\) obtained by restricting \(p\) is continuous and surjective, but it is not a quotient map. For the set \(\left\lbrack  {2,3}\right\rbrack\) is open in \(A\) and is saturated with respect to \(q\) , but its image is not open in \(Y\) .
 \end{example}
+\end{centeredblock}
 
-\begin{example} Let \({\pi }_{1} : \mathbb{R} \times  \mathbb{R} \rightarrow  \mathbb{R}\) be projection onto the first coordinate; then \({\pi }_{1}\) is continuous and surjective. Furthermore, \({\pi }_{1}\) is an open map. For if \(U \times  V\) is a nonempty basis element for \(\mathbb{R} \times  \mathbb{R}\) , then \({\pi }_{1}\left( {U \times  V}\right)  = U\) is open in \(\mathbb{R}\) ; it follows that \({\pi }_{1}\) carries open sets of \(\mathbb{R} \times  \mathbb{R}\) to open sets of \(\mathbb{R}\) . However, \({\pi }_{1}\) is not a closed map. The subset
+\begin{centeredblock}
+\begin{example}
+	Let \({\pi }_{1} : \mathbb{R} \times  \mathbb{R} \rightarrow  \mathbb{R}\) be projection onto the first coordinate; then \({\pi }_{1}\) is continuous and surjective. Furthermore, \({\pi }_{1}\) is an open map. For if \(U \times  V\) is a nonempty basis element for \(\mathbb{R} \times  \mathbb{R}\) , then \({\pi }_{1}\left( {U \times  V}\right)  = U\) is open in \(\mathbb{R}\) ; it follows that \({\pi }_{1}\) carries open sets of \(\mathbb{R} \times  \mathbb{R}\) to open sets of \(\mathbb{R}\) . However, \({\pi }_{1}\) is not a closed map. The subset
 
 \[
 C = \{ x \times  y \mid  {xy} = 1\}
@@ -2690,10 +2877,12 @@ of \(\mathbb{R} \times  \mathbb{R}\) is closed, but \({\pi }_{1}\left( C\right) 
 
 Note that if \(A\) is the subspace of \(\mathbb{R} \times  \mathbb{R}\) that is the union of \(C\) and the origin \(\{ 0\}\) , then the map \(q \cdot  A \rightarrow  \mathbb{R}\) obtained by restricting \({\pi }_{1}\) is continuous and surjective, but it is not a quotient map. For the one-point set \(\{ \mathbf{0}\}\) is open in \(A\) and is saturated with respect to \(q\) , but its image is not open in \(\mathbb{R}\) .
 \end{example}
+\end{centeredblock}
 
 Now we show how the notion of quotient map can be used to construct a topology on a set.
 
-\begin{definition} If \(X\) is a space and \(A\) is a set and if \(p : X \rightarrow  A\) is a surjective map, then there exists exactly one topology \(\mathcal{T}\) on \(A\) relative to which \(p\) is a quotient map; it is called the quotient topology induced by \(p\) .
+\begin{definition}
+	If \(X\) is a space and \(A\) is a set and if \(p : X \rightarrow  A\) is a surjective map, then there exists exactly one topology \(\mathcal{T}\) on \(A\) relative to which \(p\) is a quotient map; it is called the quotient topology induced by \(p\) .
 \end{definition}
 
 The topology \(\mathcal{T}\) is of course defined by letting it consist of those subsets \(U\) of \(A\) such that \({p}^{-1}\left( U\right)\) is open in \(X\) . It is easy to check that \(\mathcal{T}\) is a topology. The sets \(\varnothing\) and \(A\) are open because \({p}^{-1}\left( \varnothing \right)  = \varnothing\) and \({p}^{-1}\left( A\right)  = X\) . The other two conditions follow from the equations
@@ -2706,7 +2895,9 @@ The topology \(\mathcal{T}\) is of course defined by letting it consist of those
 {p}^{-1}\left( {\mathop{\bigcap }\limits_{{i = 1}}^{n}{U}_{i}}\right)  = \mathop{\bigcap }\limits_{{i = 1}}^{n}{p}^{-1}\left( {U}_{i}\right)
 \]
 
-\begin{example} Let \(p\) be the map of the real line \(\mathbb{R}\) onto the three-point set \(A = \{ a,b,c\}\) defined by
+\begin{centeredblock}
+\begin{example}
+	Let \(p\) be the map of the real line \(\mathbb{R}\) onto the three-point set \(A = \{ a,b,c\}\) defined by
 
 \[
 p\left( x\right)  = \left\{  \begin{array}{ll} a & \text{ if }x > 0 \\  b & \text{ if }x < 0 \\  c & \text{ if }x = 0 \end{array}\right.
@@ -2721,17 +2912,21 @@ You can check that the quotient topology on \(A\) induced by \(p\) is the one in
 
 Figure 22.3
 \end{example}
+\end{centeredblock}
 
 There is a special situation in which the quotient topology occurs particularly frequently. It is the following:
 
-\begin{definition} Let \(X\) be a topological space, and let \({X}^{ * }\) be a partition of \(X\) into disjoint subsets whose union is \(X\) . Let \(p : X \rightarrow  {X}^{ * }\) be the surjective map that carries each point of \(X\) to the element of \({X}^{ * }\) containing it. In the quotient topology induced by \(p\) , the space \({X}^{ * }\) is called a quotient space of \(X\) .
+\begin{definition}
+	Let \(X\) be a topological space, and let \({X}^{ * }\) be a partition of \(X\) into disjoint subsets whose union is \(X\) . Let \(p : X \rightarrow  {X}^{ * }\) be the surjective map that carries each point of \(X\) to the element of \({X}^{ * }\) containing it. In the quotient topology induced by \(p\) , the space \({X}^{ * }\) is called a quotient space of \(X\) .
 \end{definition}
 
 Given \({X}^{ * }\) , there is an equivalence relation on \(X\) of which the elements of \({X}^{ * }\) are the equivalence classes. One can think of \({X}^{ * }\) as having been obtained by ``ide ntifying'' each pair of equivalent points. For this reason, the quotient space \({X}^{ * }\) is often called an \idx{identification space}, or a \idx{decomposition space}, of the space \(X\) .
 
-We can describe the topology of \({X}^{ * }\) in another way. A subset \(U\) of \({X}^{ * }\) is a collection of equivalence classes, and the set \({p}^{-1}\left( U\right)\) is just the union of the equivalence classes belonging to \(U\) . Thus the typical open set of \({X}^{ * }\) is a collection of equivalence classes whose union is an open set of \(X\) .
+We can describe the topology of \({X}^{ * }\) in another way. A subset \(U\) of \({X}^{ * }\) is a collection of equivalence classes, and the set \({p}^{-1}\left( U\right)\) is just the union of the equivalence classes beloriging to \(U\) . Thus the typical open set of \({X}^{ * }\) is a collection of equivalence classes whose union is an open set of \(X\) .
 
-\begin{example} Let \(X\) be the closed unit ball
+\begin{centeredblock}
+\begin{example}
+	Let \(X\) be the closed unit ball
 
 \[
 \left\{  {x \times  y \mid  {x}^{2} + {y}^{2} \leq  1}\right\}
@@ -2750,8 +2945,11 @@ in \({\mathbb{R}}^{2}\) , and let \({X}^{ * }\) be the partition of \(X\) consis
 
 Figure 22.4
 \end{example}
+\end{centeredblock}
 
-\begin{example} Let \(X\) be the rectangle \(\left\lbrack  {0,1}\right\rbrack   \times  \left\lbrack  {0,1}\right\rbrack\) . Define a partition \({X}^{ * }\) of \(X\) as follows: It consists of all the one-point sets \(\{ x \times  y\}\) where \(0 < x < 1\) and \(0 < y < 1\) , the following types of two-point sets:
+\begin{centeredblock}
+\begin{example}
+	Let \(X\) be the rectangle \(\left\lbrack  {0,1}\right\rbrack   \times  \left\lbrack  {0,1}\right\rbrack\) . Define a partition \({X}^{ * }\) of \(X\) as follows: It consists of all the one-point sets \(\{ x \times  y\}\) where \(0 < x < 1\) and \(0 < y < 1\) , the following types of two-point sets:
 
 \[
 \{ x \times  0,x \times  1\} \;\text{ where }0 < x < 1,
@@ -2771,6 +2969,7 @@ Typical saturated open sets in \(X\) are pictured by the shaded regions in Figur
 
 The image of each of these sets under \(p\) is an open set of \({X}^{ * }\) , as indicated in Figure 22.6. This description of \({X}^{ * }\) is just the mathematical way of saying what we expressed in pictures when we pasted the edges of a rectangle together to form a torus.
 \end{example}
+\end{centeredblock}
 
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/22.5.jpg}
@@ -2790,7 +2989,8 @@ Now we explore the relationship between the notions of quotient map and quotient
 
 We have already noted that subspaces do not behave well; if \(p : X \rightarrow  Y\) is a quotient map and \(A\) is a subspace of \(X\) , then the map \(q : A \rightarrow  p\left( A\right)\) obtained by restricting \(p\) need not be a quotient map. One has, however, the following theorem:
 
-\begin{theorem} Let \(p : X \rightarrow  Y\) be a quotient map; let \(A\) be a subspace of \(X\) that is saturated with respect to \(p\) ; let \(q : A \rightarrow  p\left( A\right)\) be the map obtained by restricting \(p\) .
+\begin{theorem}
+	Let \(p : X \rightarrow  Y\) be a quotient map; let \(A\) be a subspace of \(X\) that is saturated with respect to \(p\) ; let \(q : A \rightarrow  p\left( A\right)\) be the map obtained by restricting \(p\) .
 
 (1) If \(A\) is either open or closed in \(X\) , then \(q\) is a quotient map.
 
@@ -2843,7 +3043,8 @@ Finally, the Hausdorff condition does not behave well; even if \(X\) is Hausdorf
 Perhaps the most important result in the study of quotient spaces has to do with the problem of constructing continuous functions on a quotient space. We consider that problem now. When we studied product spaces, we had a criterion for determining whether a map \(f : Z \rightarrow  \prod {X}_{\alpha }\) into a product space was continuous. Its counterpart in the theory of quotient spaces is a criterion for determining when a map \(f : {X}^{ * } \rightarrow  Z\) out of a quotient space is continuous. One has the following theorem:
 \end{proof}
 
-\begin{theorem} Let \(p : X \rightarrow  Y\) be a quotient map. Let \(Z\) be a space and let \(g : X \rightarrow  Z\) be a map that is constant on each set \({p}^{-1}\left( {\{ y\} }\right)\) , for \(y \in  Y\) . Then \(g\) induces a map \(f : Y \rightarrow  Z\) such that \(f \circ  p = g\) . The induced map \(f\) is continuous if and only if \(g\) is continuous; \(f\) is a quotient map if and only if \(g\) is a quotient map.
+\begin{theorem}
+	Let \(p : X \rightarrow  Y\) be a quotient map. Let \(Z\) be a space and let \(g : X \rightarrow  Z\) be a map that is constant on each set \({p}^{-1}\left( {\{ y\} }\right)\) , for \(y \in  Y\) . Then \(g\) induces a map \(f : Y \rightarrow  Z\) such that \(f \circ  p = g\) . The induced map \(f\) is continuous if and only if \(g\) is continuous; \(f\) is a quotient map if and only if \(g\) is a quotient map.
 
 \begin{center}
 \includegraphics[width=0.2\textwidth]{images/22.7.jpg}
@@ -2857,7 +3058,8 @@ For each \(y \in  Y\) , the set \(g\left( {{p}^{-1}\left( {\{ y\} }\right) }\rig
 If \(f\) is a quotient map, then \(g\) is the composite of two quotient maps and is thus a quotient map. Conversely, suppose that \(g\) is a quotient map. Since \(g\) is surjective, so is \(f\) . Let \(V\) be a subset of \(Z\) ; we show that \(V\) is open in \(Z\) if \({f}^{-1}\left( V\right)\) is open in \(Y\) . Now the set \({p}^{-1}\left( {{f}^{-1}\left( V\right) }\right)\) is open in \(X\) because \(p\) is continuous. Since this set equals \({g}^{-1}\left( V\right)\) , the latter is open in \(X\) . Then because \(g\) is a quotient map, \(V\) is open in \(Z\) .
 \end{proof}
 
-\begin{corollary} Let \(g : X \rightarrow  Z\) be a surjective continuous map. Let \({X}^{ * }\) be the following collection of subsets of \(X\) :
+\begin{corollary}
+	Let \(g : X \rightarrow  Z\) be a surjective continuous map. Let \({X}^{ * }\) be the following collection of subsets of \(X\) :
 
 \[
 {X}^{ * } = \left\{  {{g}^{-1}\left( {\{ z\} }\right)  \mid  z \in  Z}\right\}  .
@@ -2881,7 +3083,9 @@ By the preceding theorem, \(g\) induces a continuous map \(f : {X}^{ * } \righta
 Suppose \(Z\) is Hausdorff. Given distinct pomts of \({X}^{ * }\) , their images under \(f\) are distinct and thus possess disjoint neighborhoods \(U\) and \(V\) . Then \({f}^{-1}\left( U\right)\) and \({f}^{-1}\left( V\right)\) are disjoint neighborhoods of the two given points of \({X}^{ * }\) .
 \end{proof}
 
-\begin{example} Let \(X\) be the subspace of \({\mathbb{R}}^{2}\) that is the union of the line segments \(\left\lbrack  {0,1}\right\rbrack   \times\)  \(\{ n\}\) , for \(n \in  {\mathbb{Z}}_{ + }\) , and let \(Z\) be the subspace of \({\mathbb{R}}^{2}\) consisting of all points of the form \(x \times  \left( {x/n}\right)\) for \(x \in  \left\lbrack  {0,1}\right\rbrack\) and \(n \in  {\mathbb{Z}}_{ + }\) . Then \(X\) is the union of countably many disjoint line segments, and \(Z\) is the union of countably many line segments having an end point in common. See Figure 22.7.
+\begin{centeredblock}
+\begin{example}
+	Let \(X\) be the subspace of \({\mathbb{R}}^{2}\) that is the union of the line segments \(\left\lbrack  {0,1}\right\rbrack   \times\)  \(\{ n\}\) , for \(n \in  {\mathbb{Z}}_{ + }\) , and let \(Z\) be the subspace of \({\mathbb{R}}^{2}\) consisting of all points of the form \(x \times  \left( {x/n}\right)\) for \(x \in  \left\lbrack  {0,1}\right\rbrack\) and \(n \in  {\mathbb{Z}}_{ + }\) . Then \(X\) is the union of countably many disjoint line segments, and \(Z\) is the union of countably many line segments having an end point in common. See Figure 22.7.
 
 Define a map \(g : X \rightarrow  Z\) by the equation \(g\left( {x \times  n}\right)  = x \times  \left( {x/n}\right)\) ; then \(g\) is surjective and continuous. The quotient space \({X}^{ * }\) whose elements are the sets \({g}^{-1}\left( {\{ z\} }\right)\) is simply the space obtained from \(X\) by identifying the subset \(\{ 0\}  \times  {\mathbb{Z}}_{ + }\) to a point. The map \(g\) induces a bijective continuous map \(f : {X}^{ * } \rightarrow  Z\) . But \(f\) is not a homeomorphism.
 
@@ -2894,8 +3098,11 @@ To verify this fact, it suffices to show that \(g\) is not a quotient map. Consi
 
 Figure 22.7
 \end{example}
+\end{centeredblock}
 
-\begin{example} The product of two quotient maps need not be a quotient map
+\begin{centeredblock}
+\begin{example}
+	The product of two quotient maps need not be a quotient map
 
 We give an example that involves non-Hausdorff spaces in the exercises. Here is another involving spaces that are nicer.
 
@@ -2926,6 +3133,7 @@ Choose \(n\) large enough that \({c}_{n} < \delta\) . Then since \({p}^{-1}\left
 
 Figure 22.8
 \end{example}
+\end{centeredblock}
 
 \section*{Exercises}
 
