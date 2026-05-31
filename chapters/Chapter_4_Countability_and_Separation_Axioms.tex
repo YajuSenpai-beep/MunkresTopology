@@ -46,7 +46,7 @@ Why then is this second axiom interesting? Well, for one thing, many familiar sp
 \begin{example}
 	In the uniform topology, \({\mathbb{R}}^{\omega }\) satisfies the first countability axiom (being metrizable). However, it does not satisfy the second. To verify this fact, we first show that if \(X\) is a space having a countable basis \(\mathcal{B}\) , then any discrete subspace \(A\) of \(X\) must be countable Choose, for each \(a \in  A\) , a basis element \({B}_{a}\) that intersects \(A\) in the point \(a\) alone. If \(a\) and \(b\) are distinct points of \(A\) , the sets \({B}_{a}\) and \({B}_{b}\) are different, since the first contains \(a\) and the second does not It follows that the map \(a \rightarrow  {B}_{a}\) is an injection of \(A\) into \(\mathcal{B}\) , so \(A\) must be countable.
 
-Now we note that the subspace \(A\) of \({\mathbb{R}}^{\omega }\) consisting of all sequences of0’s and1’s is uncountable; and it has the discrete topology because \(\bar{\rho }\left( {a,b}\right)  = 1\) for any two distinct points \(a\) and \(b\) of \(A\) . Therefore, in the uniform topology \({\mathbb{R}}^{\omega }\) does not have a countable basis.
+Now we note that the subspace \(A\) of \({\mathbb{R}}^{\omega }\) consisting of all sequences of0's and1's is uncountable; and it has the discrete topology because \(\bar{\rho }\left( {a,b}\right)  = 1\) for any two distinct points \(a\) and \(b\) of \(A\) . Therefore, in the uniform topology \({\mathbb{R}}^{\omega }\) does not have a countable basis.
 \end{example}
 \end{centeredblock}
 
@@ -378,7 +378,7 @@ Similarly, choose a countable collection \(\left\{  {V}_{n}\right\}\) of open se
 {U}_{n}^{\prime } = {U}_{n} - \mathop{\bigcup }\limits_{{i = 1}}^{n}{\bar{V}}_{i}\;\text{ and }\;{V}_{n}^{\prime } = {V}_{n} - \mathop{\bigcup }\limits_{{i = 1}}^{n}{\bar{U}}_{i}.
 \]
 
-Note that each set \({U}_{n}^{\prime }\) is open, being the difference of an open set \({U}_{n}\) and a closed set \(\mathop{\bigcup }\limits_{{i = 1}}^{n}{\bar{V}}_{i}\) . Simularly, each set \({V}_{n}^{\prime }\) is open. The collection \(\left\{  {U}_{n}^{\prime }\right\}\) covers \(A\) , because each \(x\) in \(A\) belongs to \({U}_{n}\) for some \(n\) , and \(x\) belongs to none of the sets \({\bar{V}}_{t}\) . Similarly, the collection \(\left\{  {V}_{n}^{\prime }\right\}\) covers \(B\) . See Figure 32.1.
+Note that each set \({U}_{n}^{\prime }\) is open, being the difference of an open set \({U}_{n}\) and a closed set \(\mathop{\bigcup }\limits_{{i = 1}}^{n}{\bar{V}}_{i}\) . Similarly, each set \({V}_{n}^{\prime }\) is open. The collection \(\left\{  {U}_{n}^{\prime }\right\}\) covers \(A\) , because each \(x\) in \(A\) belongs to \({U}_{n}\) for some \(n\) , and \(x\) belongs to none of the sets \({\bar{V}}_{t}\) . Similarly, the collection \(\left\{  {V}_{n}^{\prime }\right\}\) covers \(B\) . See Figure 32.1.
 
 \begin{center}
 \includegraphics[width=0.7\textwidth]{images/32.1.jpg}
@@ -762,8 +762,10 @@ A space that is regular but not completely regular is much harder to find. Most 
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item Examine the proof of the Urysohn lemma, and show that for given \(r\) , \[ {f}^{-1}\left( r\right)  = \mathop{\bigcap }\limits_{{p > r}}{U}_{p} - \mathop{\bigcup }\limits_{{q < r}}{U}_{q} \] \(p,q\) rational.
-\item (a) Show that a connected normal space having more than one point is uncountable.
+\item
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show that a connected normal space having more than one point is uncountable.
+
   \item Show that a connected regular space having more than one point is uncountable. ${}^{\dagger}$ \{Hint: Any countable space is Lindelöf.]
   \end{enumerate}
 \item Give a direct proof of the Urysohn lemma for a metric space(X, d)by setting \[ f\left( x\right)  = \frac{d\left( {x,A}\right) }{d\left( {x,A}\right)  + d\left( {x,B}\right) }. \] \customfootnote{ ${}^{\dagger}$ Surprisingly enough, there does exist a connected Hausdorff space that is countably infinite. See Example 75 of 		\cite{SteenSeebach1970}. }
@@ -1139,8 +1141,10 @@ Finally, \(h\) maps all of \(X\) into the open interval(-1,1). For if \(x \in  D
   \item Show that if \(Y\) has the universal extension property, then \(Y\) is an absolute retract.
   \item Show that if \(Y\) is an absolute retract and \(Y\) is compact, then \(Y\) has the universal extension property. [Hint. Assume the Tychonoff theorem, so you know \({\left\lbrack  0,1\right\rbrack  }^{J}\) is normal. Imbed \(Y\) in \({\left\lbrack  0,1\right\rbrack  }^{J}\) .]
   \end{enumerate}
-\item (a) Show the logarithmic spiral \[ C = \{ 0 \times  0\}  \cup  \left\{  {{e}^{t}\cos t \times  {e}^{t}\sin t \mid  t \in  \mathbb{R}}\right\} \] is a retract of \({\mathbb{R}}^{2}\) . Can you define a specific retraction \(r \cdot  {\mathbb{R}}^{2} \rightarrow  C\) ? \begin{center} \includegraphics[width=0.8\textwidth]{images/35.2.jpg} \end{center} \hspace*{3em} Figure 35.2
+\item
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show the logarithmic spiral \[ C = \{ 0 \times  0\}  \cup  \left\{  {{e}^{t}\cos t \times  {e}^{t}\sin t \mid  t \in  \mathbb{R}}\right\} \] is a retract of \({\mathbb{R}}^{2}\) . Can you define a specific retraction \(r \cdot  {\mathbb{R}}^{2} \rightarrow  C\) ? \begin{center} \includegraphics[width=0.8\textwidth]{images/35.2.jpg} \end{center} \hspace*{3em} Figure 35.2
+
   \item Show that the ``knotted x-axis'' \(K\) of Figure 35.2 is a retract of \({\mathbb{R}}^{3}\) . *8. Prove the following. \textsl{Theorem.} Let \(Y\) be a normal space. Then \(Y\) is an absolute retract if and only if \(Y\) has the universal extension property. [Hint: If \(X\) and \(Y\) are disjoint normal spaces, \(A\) is closed in \(X\) , and \(f : A \rightarrow  Y\) is a continuous map, define the \idx{adjunction space} \({Z}_{f}\) to be the quotient space obtained from \(X \cup  Y\) by identifying each point \(a\) of \(A\) with the point \(f\left( a\right)\) and with all the points of \({f}^{-1}\left( {\{ f\left( a\right) \} }\right)\) . Using the Tietze theorem, show that \({Z}_{f}\) is normal. If \(p \cdot  X \cup  Y \rightarrow  {Z}_{f}\) is the quotient map, show that \(p \mid  Y\) is a homeomorphism of \(Y\) with a closed subspace of \({Z}_{f}\) .]
   \end{enumerate}
 \item Let \({X}_{1} \subset  {X}_{2} \subset  \cdots\) be a sequence of spaces, where \({X}_{i}\) is a closed subspace of \({X}_{i + 1}\) for each \(i\) . Let \(X\) be the union of the \({X}_{i}\) ; let us topologize \(X\) by declaring a set \(U\) to be open in \(X\) if \(U \cap  {X}_{i}\) is open in \(X\) for each \(i\) .
