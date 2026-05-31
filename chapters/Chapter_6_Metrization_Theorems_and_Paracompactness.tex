@@ -9,13 +9,13 @@ The condition that was eventually formulated, by J. Nagata and Y. Smurnov indepe
 Now one way of expressing the condition that the basis \(\mathcal{B}\) is countable is to say that \(\mathcal{B}\) can be expressed in the form
 
 \[
-\mathcal{B} = \mathop{\bigcup }\limits_{{n \in  {\mathbf{Z}}_{ + }}}{\mathcal{B}}_{n}
+\mathcal{B} = \mathop{\bigcup }\limits_{{n \in  {\mathbb{Z}}_{ + }}}{\mathcal{B}}_{n}
 \]
 
 where each collection \({\mathcal{B}}_{n}\) is finite. This is an awkward way of saying that \(\mathcal{B}\) is countable, but it suggests how to formulate a weaker version of it. The Nagata-Smirnov condition is to require that the basis \(\mathcal{B}\) can be expressed in the form
 
 \[
-\mathcal{B} = \mathop{\bigcup }\limits_{{n \in  {\mathbf{Z}}_{ + }}}{\mathcal{B}}_{n}
+\mathcal{B} = \mathop{\bigcup }\limits_{{n \in  {\mathbb{Z}}_{ + }}}{\mathcal{B}}_{n}
 \]
 
 where each collection \({\mathcal{B}}_{n}\) is locally finite. We say that such a collection \(\mathcal{B}\) is \idx{countably locally finite}. Surprisingly enough, this condition, along with regularity, is both necessary and sufficient for metrizability of \(X\) . This we shall we prove.
@@ -33,10 +33,13 @@ Some of the sections of this chapter are independent of one another. The depende
 
 In this sections we prove some elementary properties of \idx{locally finite collection}s and a crucial lemma about metrizable spaces.
 
-\begin{definition} Let \(X\) be a topological space. A collection \(\mathcal{A}\) of subsets of \(X\) is said to be locally finite in \(X\) if every point of \(X\) has a neighborhood that intersects only finitely many elements of \(\mathcal{A}\)
+\begin{definition}
+	Let \(X\) be a topological space. A collection \(\mathcal{A}\) of subsets of \(X\) is said to be locally finite in \(X\) if every point of \(X\) has a neighborhood that intersects only finitely many elements of \(\mathcal{A}\)
 \end{definition}
 
-\begin{example} The collection of intervals
+\begin{centeredblock}
+\begin{example}
+	The collection of intervals
 
 \[
 \mathcal{A} = \{ \left( {n,n + 2}\right)  \mid  n \in  \mathbb{Z}\}
@@ -54,8 +57,10 @@ is locally finite in(0,1)but not in \(\mathbb{R}\) , as is the collection
 \mathcal{C} = \left\{  {\left( {1/\left( {n + 1}\right) ,1/n}\right)  \mid  n \in  {\mathbb{Z}}_{ + }}\right\}
 \]
 \end{example}
+\end{centeredblock}
 
-\begin{lemma} Let \(\mathcal{A}\) be a locally finite collection of subsets of \(X\) . Then:
+\begin{lemma}
+	Let \(\mathcal{A}\) be a locally finite collection of subsets of \(X\) . Then:
 
 (a) Any subcollection of \(\mathcal{A}\) is locally finite.
 
@@ -64,7 +69,8 @@ is locally finite in(0,1)but not in \(\mathbb{R}\) , as is the collection
 (c) \(\overline{\mathop{\bigcup }\limits_{{A \in  \mathcal{A}}}A} = \mathop{\bigcup }\limits_{{A \in  \mathcal{A}}}\overline{A}\) .
 \end{lemma}
 
-\begin{proof}Statement (a) is trivial. To prove (b), note that any open set \(U\) that intersects the set \(\bar{A}\) necessarily intersects \(A\) . Therefore, if \(U\) is a neighborhood of \(x\) that intersects only finitely many elements \(A\) of \(\mathcal{A}\) , then \(U\) can intersect at most the same number of sets of the collection \(\mathcal{B}\) . (It might intersect fewer sets of \(\mathcal{B}\) , since \({\bar{A}}_{1}\) and \({\bar{A}}_{2}\) can be equal even though \({A}_{1}\) and \({A}_{2}\) are not).
+\begin{proof}
+	Statement (a) is trivial. To prove (b), note that any open set \(U\) that intersects the set \(\bar{A}\) necessarily intersects \(A\) . Therefore, if \(U\) is a neighborhood of \(x\) that intersects only finitely many elements \(A\) of \(\mathcal{A}\) , then \(U\) can intersect at most the same number of sets of the collection \(\mathcal{B}\) . (It might intersect fewer sets of \(\mathcal{B}\) , since \({\bar{A}}_{1}\) and \({\bar{A}}_{2}\) can be equal even though \({A}_{1}\) and \({A}_{2}\) are not).
 To prove (c), let \(Y\) denote the union of the elements of \(\mathcal{A}\) :
 
 \[
@@ -77,18 +83,22 @@ There is an analogous concept of local finiteness for an indexed family of subse
 
 We shall be concerned with locally finite indexed families only in §41, when we deal with partitions of unity.
 \end{proof}
-\begin{definition} A collection \(\mathcal{B}\) of subsets of \(X\) is said to be countably locally finite if \(\mathcal{B}\) can be written as the countable union of collections \({\mathcal{B}}_{n}\) , each of which is locally finite.
+\begin{definition}
+	A collection \(\mathcal{B}\) of subsets of \(X\) is said to be countably locally finite if \(\mathcal{B}\) can be written as the countable union of collections \({\mathcal{B}}_{n}\) , each of which is locally finite.
 \end{definition}
 
 Most authors use the term `` \(\sigma\) -locally finite'' for this concept. The \(\sigma\) comes from measure theory and stands for the phrase ``countable union of `` Note that both a countable collection and a locally finite collection are countably locally finite.
 
-\begin{definition} Let \(\mathcal{A}\) be a collection of subsets of the space \(X\) . A collection \(\mathcal{B}\) of subsets of \(X\) is said to be a \idx{refinement} of \(\mathcal{A}\) (or is said to refine \(\mathcal{A}\) ) if for each element \(B\) of \(\mathcal{B}\) , there is an element \(A\) of \(\mathcal{A}\) containing \(B\) . If the elements of \(\mathcal{B}\) are open sets, we call \(\mathcal{B}\) an \idx{open refinement} of \(\mathcal{A}\) ; if they are closed sets, we call \(\mathcal{B}\) a \idx{closed refinement}
+\begin{definition}
+	Let \(\mathcal{A}\) be a collection of subsets of the space \(X\) . A collection \(\mathcal{B}\) of subsets of \(X\) is said to be a \idx{refinement} of \(\mathcal{A}\) (or is said to refine \(\mathcal{A}\) ) if for each element \(B\) of \(\mathcal{B}\) , there is an element \(A\) of \(\mathcal{A}\) containing \(B\) . If the elements of \(\mathcal{B}\) are open sets, we call \(\mathcal{B}\) an \idx{open refinement} of \(\mathcal{A}\) ; if they are closed sets, we call \(\mathcal{B}\) a \idx{closed refinement}
 \end{definition}
 
-\begin{lemma} Let \(X\) be a metrizable space. If \(\mathcal{A}\) is an open covering of \(X\) , then there is an open covering \(\mathcal{E}\) of \(X\) refining \(\mathcal{A}\) that is countably locally finite.
+\begin{lemma}
+	Let \(X\) be a metrizable space. If \(\mathcal{A}\) is an open covering of \(X\) , then there is an open covering \(\mathcal{E}\) of \(X\) refining \(\mathcal{A}\) that is countably locally finite.
 \end{lemma}
 
-\begin{proof}We shall use the well-ordering theorem in proving this theorem. Choose a well-ordering \(<\) for the collection \(\mathcal{A}\) . Let us denote the elements of \(\mathcal{A}\) generically by the letters \(U,V,W,\ldots\) .
+\begin{proof}
+	We shall use the well-ordering theorem in proving this theorem. Choose a well-ordering \(<\) for the collection \(\mathcal{A}\) . Let us denote the elements of \(\mathcal{A}\) generically by the letters \(U,V,W,\ldots\) .
 Choose a metric for \(X\) . Let \(n\) be a positive integer, fixed for the moment. Given an element \(U\) of \(\mathcal{A}\) , let us define \({S}_{n}\left( U\right)\) to be the subset of \(U\) obtained by ``shrinking'' \(U\) a distance of \(1/n\) . More precisely, let
 
 \[
@@ -136,7 +146,7 @@ We claim that \({\mathcal{E}}_{n}\) is a locally finite collection of open sets 
 Of course, the collection \({\mathcal{E}}_{n}\) , will not cover \(X\) . (Figure 39 2 illustrates that fact.) But we assert that the collection
 
 \[
-\varepsilon  = \mathop{\bigcup }\limits_{{n \in  {\mathbf{Z}}_{ + }}}{\varepsilon }_{n}
+\varepsilon  = \mathop{\bigcup }\limits_{{n \in  {\mathbb{Z}}_{ + }}}{\varepsilon }_{n}
 \]
 
 does cover \(X\) .
@@ -144,37 +154,14 @@ does cover \(X\) .
 Let \(x\) be a point of \(X\) . The collection \(\mathcal{A}\) with which we began covers \(X\) ; let us choose \(U\) to be the first element of \(\mathcal{A}\) (in the well-ordering \(<\) ) that contains \(x\) . Since \(U\) is open, we can choose \(n\) so that \(B\left( {x,1/n}\right)  \subset  U\) Then, by definition, \(x \in  {S}_{n}\left( U\right)\) . Now because \(U\) is the first element of \(\mathcal{A}\) that contains \(x\) , the point \(x\) belongs to \({T}_{n}\left( U\right)\) . Then \(x\) also belongs to the element \({E}_{n}\left( U\right)\) of \({\mathcal{E}}_{n}\) , as desired.
 \end{proof}
 \section*{Exercises}
-
-1. Check the statements in Example 1.
-
-2. Find a \idx{Point-finite collection} point-finite open covering \(\mathcal{A}\) of \(\mathbb{R}\) that is not locally finite. (The collection \(\mathcal{A}\) is point-finite if each point of \(\mathbb{R}\) lies in only finitely many elements of \(\mathcal{A}\) .)
-
-3. Give an example of a collection of sets \(\mathcal{A}\) that is not locally finite, such that the collection \(\mathcal{B} = \{ \bar{A} \mid  A \in  \mathcal{A}\}\) is locally finite.
-
-4. Let \(\mathcal{A}\) be the following collection of subsets of \(\mathbb{R}\) :
-
-\[
-A = \{ \left( {n,n + 2}\right)  \mid  n \in  \mathbb{Z}\}
-\]
-
-Which of the following collections refine \(\mathcal{A}\) ?
-
-\[
-\mathcal{B} = \{ \left( {x,x + 1}\right)  \mid  x \in  \mathbb{R}\} ,
-\]
-
-\[
-\mathcal{C} = \left\{  {\left( {n,n + \frac{3}{2}}\right)  \mid  n \in  \mathbb{Z}}\right\}  ,
-\]
-
-\[
-\mathcal{D} = \left\{  {\left( {x,x + \frac{3}{2}}\right)  \mid  x \in  \mathbb{R}}\right\}  .
-\]
-
-5. Show that if \(X\) has a countable basis, a collection \(\mathcal{A}\) of subsets of \(X\) is countably locally finite if and only if it is countable
-
-6. Consider \({\mathbb{R}}^{\omega }\) in the uniform topology. Given \(n\) , let \({\mathcal{B}}_{n}\) be the collection of all subsets of \({\mathbb{R}}^{\omega }\) of the form \(\prod {A}_{i}\) , where \({A}_{i} = \mathbb{R}\) for \(i \leq  n\) and \({A}_{i}\) equals either \(\{ 0\}\) or \(\{ 1\}\) otherwise. Show that the collection \(\mathcal{B} = \bigcup {\mathcal{B}}_{n}\) is countably locally finite, but neither countable nor locally finite.
-
+\begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
+\item Check the statements in Example 1.
+\item Find a \idx{Point-finite collection} point-finite open covering \(\mathcal{A}\) of \(\mathbb{R}\) that is not locally finite. (The collection \(\mathcal{A}\) is point-finite if each point of \(\mathbb{R}\) lies in only finitely many elements of \(\mathcal{A}\) .)
+\item Give an example of a collection of sets \(\mathcal{A}\) that is not locally finite, such that the collection \(\mathcal{B} = \{ \bar{A} \mid  A \in  \mathcal{A}\}\) is locally finite.
+\item Let \(\mathcal{A}\) be the following collection of subsets of \(\mathbb{R}\) : \[ A = \{ \left( {n,n + 2}\right)  \mid  n \in  \mathbb{Z}\} \] Which of the following collections refine \(\mathcal{A}\) ? \[ \mathcal{B} = \{ \left( {x,x + 1}\right)  \mid  x \in  \mathbb{R}\} , \] \[ \mathcal{C} = \left\{  {\left( {n,n + \frac{3}{2}}\right)  \mid  n \in  \mathbb{Z}}\right\}  , \] \[ \mathcal{D} = \left\{  {\left( {x,x + \frac{3}{2}}\right)  \mid  x \in  \mathbb{R}}\right\}  . \]
+\item Show that if \(X\) has a countable basis, a collection \(\mathcal{A}\) of subsets of \(X\) is countably locally finite if and only if it is countable
+\item Consider \({\mathbb{R}}^{\omega }\) in the uniform topology. Given \(n\) , let \({\mathcal{B}}_{n}\) be the collection of all subsets of \({\mathbb{R}}^{\omega }\) of the form \(\prod {A}_{i}\) , where \({A}_{i} = \mathbb{R}\) for \(i \leq  n\) and \({A}_{i}\) equals either \(\{ 0\}\) or \(\{ 1\}\) otherwise. Show that the collection \(\mathcal{B} = \bigcup {\mathcal{B}}_{n}\) is countably locally finite, but neither countable nor locally finite.
+\end{enumerate}
 \section*{§ 40 The Nagata-Smirnov Metrization Theorem}
 
 Now we prove that regularity of \(X\) and the existence of a countably locally finite basis for \(X\) are equivalent to metrizability of \(X\) .
@@ -185,23 +172,32 @@ Each of these steps needs to be generalized in order to prove the general metriz
 
 Before we start, we need to recall a notion we have already introduced in the exercises, that of a \({G}_{\delta }\) set.
 
-\begin{definition} A subset \(A\) of a space \(X\) is called a \({G}_{\delta }\) set in \(X\) if it equals the intersection of a countable collection of open subsets of \(X\) .
+\begin{definition}
+	A subset \(A\) of a space \(X\) is called a \({G}_{\delta }\) set in \(X\) if it equals the intersection of a countable collection of open subsets of \(X\) .
 \end{definition}
 
-\begin{example} Each open subset of \(X\) is a \({G}_{\delta }\) set, invially In a first-countable Hausdorff space, each one-point set is a \({G}_{\delta }\) set The one-point subset \(\{ \Omega \}\) of \({\bar{S}}_{\Omega }\) is not a \({G}_{\delta }\) set, as you can check
+\begin{centeredblock}
+\begin{example}
+	Each open subset of \(X\) is a \({G}_{\delta }\) set, invially In a first-countable Hausdorff space, each one-point set is a \({G}_{\delta }\) set The one-point subset \(\{ \Omega \}\) of \({\bar{S}}_{\Omega }\) is not a \({G}_{\delta }\) set, as you can check
 \end{example}
+\end{centeredblock}
 
-\begin{example} In a metric space \(X\) , each closed set is a \({G}_{\delta }\) set. Given \(A \subset  X\) , let \(U\left( {A,\epsilon }\right)\) denote the \(\epsilon\) -neighborhood of \(A\) If \(A\) is closed, you can check that
+\begin{centeredblock}
+\begin{example}
+	In a metric space \(X\) , each closed set is a \({G}_{\delta }\) set. Given \(A \subset  X\) , let \(U\left( {A,\epsilon }\right)\) denote the \(\epsilon\) -neighborhood of \(A\) If \(A\) is closed, you can check that
 
 \[
-A = \mathop{\bigcap }\limits_{{n \in  {\mathbf{Z}}_{ + }}}U\left( {A,1/n}\right)
+A = \mathop{\bigcap }\limits_{{n \in  {\mathbb{Z}}_{ + }}}U\left( {A,1/n}\right)
 \]
 \end{example}
+\end{centeredblock}
 
-\begin{lemma} Let \(X\) be a regular space with a basis \(\mathcal{B}\) that is countably locally finite. Then \(X\) is normal, and every closed set in \(X\) is a \({G}_{\delta }\) set in \(X\) .
+\begin{lemma}
+	Let \(X\) be a regular space with a basis \(\mathcal{B}\) that is countably locally finite. Then \(X\) is normal, and every closed set in \(X\) is a \({G}_{\delta }\) set in \(X\) .
 \end{lemma}
 
-\begin{proof}Step 1. Let \(W\) be open in \(X\) . We show there is a countable collection \(\left\{  {U}_{n}\right\}\) of open sets of \(X\) such that
+\begin{proof}
+	Step 1. Let \(W\) be open in \(X\) . We show there is a countable collection \(\left\{  {U}_{n}\right\}\) of open sets of \(X\) such that
 \[
 W = \bigcup {U}_{n} = \bigcup {\bar{U}}_{n}
 \]
@@ -250,18 +246,23 @@ Then the sets
 
 are disjoint open sets about \(C\) and \(D\) , respectively.
 \end{proof}
-\begin{lemma} Let \(X\) be normal; let \(A\) be a closed \({G}_{\delta }\) set in \(X\) . Then there is a continuous function \(f \cdot  X \rightarrow  \left\lbrack  {0,1}\right\rbrack\) such that \(f\left( x\right)  = 0\) for \(x \in  A\) and \(f\left( x\right)  > 0\) for \(x \notin  A\) .
+\begin{lemma}
+	Let \(X\) be normal; let \(A\) be a closed \({G}_{\delta }\) set in \(X\) . Then there is a continuous function \(f : X \rightarrow  \left\lbrack  {0,1}\right\rbrack\) such that \(f\left( x\right)  = 0\) for \(x \in  A\) and \(f\left( x\right)  > 0\) for \(x \notin  A\) .
 \end{lemma}
 
-\begin{proof}We gave this as an exercise in \(\$ {33}\) , we provide a proof here. Write \(A\) as the intersection of the open sets \({U}_{n}\) , for \(n \in  {\mathbb{Z}}_{ + }\) For each \(n\) , choose a continuous function \({f}_{n} : X \rightarrow  \left\lbrack  {0,1}\right\rbrack\) such that \(f\left( x\right)  = 0\) for \(x \in  A\) and \(f\left( x\right)  = 1\) for \(x \in  X - {U}_{n}\) Define \(f\left( x\right)  = \sum {f}_{n}\left( x\right) /{2}^{n}\) The series converges uniformly, by comparison with \(\sum 1/{2}^{n}\) , so that \(f\) is continuous. Also, \(f\) vanishes on \(A\) and is positive on \(X - A\)\end{proof}
-\begin{theorem}[\idx{Nagata-Smirnov metrization theorem}] A space \(X\) is metrizable if and only if \(X\) is regular and has a basis that is countably locally finite.
+\begin{proof}
+	We gave this as an exercise in \(\$ {33}\) , we provide a proof here. Write \(A\) as the intersection of the open sets \({U}_{n}\) , for \(n \in  {\mathbb{Z}}_{ + }\) For each \(n\) , choose a continuous function \({f}_{n} : X \rightarrow  \left\lbrack  {0,1}\right\rbrack\) such that \(f\left( x\right)  = 0\) for \(x \in  A\) and \(f\left( x\right)  = 1\) for \(x \in  X - {U}_{n}\) Define \(f\left( x\right)  = \sum {f}_{n}\left( x\right) /{2}^{n}\) The series converges uniformly, by comparison with \(\sum 1/{2}^{n}\) , so that \(f\) is continuous. Also, \(f\) vanishes on \(A\) and is positive on \(X - A\)
+\end{proof}
+\begin{theorem}[\idx{Nagata-Smirnov metrization theorem}]
+	A space \(X\) is metrizable if and only if \(X\) is regular and has a basis that is countably locally finite.
 \end{theorem}
 
-\begin{proof}Step 1. Assume \(X\) is regular with a countably locally finite basis \(\mathcal{B}\) Then \(X\) is normal, and every closed set in \(X\) is a \({G}_{\delta }\) set in \(X\) . We shall show that \(X\) is metrizable by imbedding \(X\) in the metric space \(\left( {{\mathbb{R}}^{J},\bar{\rho }}\right)\) for some \(J\)
+\begin{proof}
+	Step 1. Assume \(X\) is regular with a countably locally finite basis \(\mathcal{B}\) Then \(X\) is normal, and every closed set in \(X\) is a \({G}_{\delta }\) set in \(X\) . We shall show that \(X\) is metrizable by imbedding \(X\) in the metric space \(\left( {{\mathbb{R}}^{J},\bar{\rho }}\right)\) for some \(J\)
 Let \(\mathcal{B} = \bigcup {\mathcal{B}}_{n}\) , where each collection \({\mathcal{B}}_{n}\) is locally finite. For each positive integer \(n\) , and each basis element \(B \in  {\mathcal{B}}_{n}\) , choose a continuous function
 
 \[
-{f}_{n,B} \cdot  X \rightarrow  \left\lbrack  {0,1/n}\right\rbrack
+{f}_{n,B} : X \rightarrow  \left\lbrack  {0,1/n}\right\rbrack
 \]
 
 such that \({f}_{n,B}\left( x\right)  > 0\) for \(x \in  B\) and \({f}_{n,B}\left( x\right)  = 0\) for \(x \notin  B\) . The collection \(\left\{  {f}_{n,B}\right\}\) separates points from closed sets in \(X\) . Given a point \({x}_{0}\) and a neighborhood \(U\) of \({x}_{0}\) , there is a basis element \(B\) such that \({x}_{0} \in  B \subset  U\) . Then \(B \in  {\mathcal{B}}_{n}\) for some \(n\) , so that \({f}_{n,B}\left( {x}_{0}\right)  > 0\) and \({f}_{n,B}\) vanishes outside \(U\) .
@@ -323,22 +324,13 @@ Choose a metric for \(X\) . Given \(m\) , let \({A}_{m}\) be the covering of \(X
 Given \(x \in  X\) and given \(\epsilon  > 0\) , we show that there is an element \(B\) of \(\mathcal{B}\) containing \(x\) that is contained in \(B\left( {x,\epsilon }\right)\) . First choose \(m\) so that \(1/m < \epsilon /2\) . Then, because \({\mathcal{B}}_{m}\) covers \(X\) , we can choose an element \(B\) of \({\mathcal{B}}_{m}\) that contains \(x\) . Since \(B\) contains \(x\) and has diameter at most \(2/m < \epsilon\) , it is contained in \(B\left( {x,\epsilon }\right)\) , as desired.
 \end{proof}
 \section*{Exercises}
-
-1. Check the details of Examples 1 and 2.
-
-2. A subset \(W\) of \(X\) is said to be an `` \({F}_{\sigma }\) set'' in \(X\) if \(W\) equals a countable union of closed sets of \(X\) . Show that \(W\) is an \({F}_{\sigma }\) set in \(X\) if and only if \(X - W\) is a \({G}_{\delta }\) set in \(X\) .
-
-[The termunology comes from the French. The ``F'' stands for ``fermé,'' which means ``closed,'' and the `` \(\sigma\) `` for ``somme,'' which means ``union.'']
-
-3. Many spaces have countable bases; but no \({T}_{1}\) space has a locally finite basis unless it is discrete. Prove this fact.
-
-4. Find a nondiscrete space that has a countably locally finite basis but does not have a countable basis.
-
-5. A collection \(\mathcal{A}\) of subsets of \(X\) is said to be \idx{locally discrete} if each point of \(X\) has a neighborhood that intersects at most one element of \(\mathcal{A}\) . A collection \(\mathcal{B}\) is \idx{countably locally discrete} (or `` \(\sigma\) -locally discrete'') if it equals a countable union of locally discrete collections. Prove the following:
-
-\begin{theorem}[\idx{Bing metrization theorem}] A space \(X\) is metrizable if and only if it is regular and has a basis that is countably locally discrete.
-\end{theorem}
-
+\begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
+\item Check the details of Examples 1 and 2.
+\item A subset \(W\) of \(X\) is said to be an `` \({F}_{\sigma }\) set'' in \(X\) if \(W\) equals a countable union of closed sets of \(X\) . Show that \(W\) is an \({F}_{\sigma }\) set in \(X\) if and only if \(X - W\) is a \({G}_{\delta }\) set in \(X\) . [The termunology comes from the French. The ``F'' stands for ``fermé,'' which means ``closed,'' and the `` \(\sigma\) `` for ``somme,'' which means ``union.'']
+\item Many spaces have countable bases; but no \({T}_{1}\) space has a locally finite basis unless it is discrete. Prove this fact.
+\item Find a nondiscrete space that has a countably locally finite basis but does not have a countable basis.
+\item A collection \(\mathcal{A}\) of subsets of \(X\) is said to be \idx{locally discrete} if each point of \(X\) has a neighborhood that intersects at most one element of \(\mathcal{A}\) . A collection \(\mathcal{B}\) is \idx{countably locally discrete} (or `` \(\sigma\) -locally discrete'') if it equals a countable union of locally discrete collections. Prove the following: \textsl{Theorem. (\idx{Bing metrization theorem}).} A space \(X\) is metrizable if and only if it is regular and has a basis that is countably locally discrete. 
+\end{enumerate}
 \section*{§ 41 Paracompactness}
 
 The concept of paracompactness is one of the most useful generalizations of compactness that has been discovered in recent years. It is particularly useful for applications in topology and differential geometry We shall give just one application, a metrization theorem that we prove in the next section.
@@ -353,13 +345,17 @@ This definition is equivalent to the usual one, given such a refinement \(\mathc
 
 This new formulation of compactness is an awkward one, but it suggests a way to generalize.
 
-\begin{definition} A space \(X\) is paracompact if every open covering \(\mathcal{A}\) of \(X\) has a locally finite open refinement \(\mathcal{B}\) that covers \(X\) .
+\begin{definition}
+	A space \(X\) is paracompact if every open covering \(\mathcal{A}\) of \(X\) has a locally finite open refinement \(\mathcal{B}\) that covers \(X\) .
 \end{definition}
 
 Many authors, following the lead of Bourbaki, include as part of the definition of the term paracompact the requirement that the space be Hausdorff. (Bourbaki also includes the Hausdorff condition as part of the definition of the term compact.) We shall not follow this convention.
 
-\begin{example} The space \({\mathbb{R}}^{n}\) is paracompact Let \(X = {\mathbb{R}}^{n}\) Let \(\mathcal{A}\) be an open covering of \(X\) . Let \({B}_{0} = \varnothing\) , and for each positive integer \(m\) , let \({B}_{m}\) denote the open ball of radius \(m\) centered at the ongin. Given \(m\) , choose finitely many elements of \(\mathcal{A}\) that cover \({\widetilde{B}}_{m}\) and intersect each one with the open set \(X - {\bar{B}}_{m - 1}\) , let this finite collection of open sets be denoted \({\mathcal{C}}_{m}\) Then the collection \(\mathcal{C} = \bigcup {\mathcal{C}}_{m}\) is a refinement of \(\mathcal{A}\) It is clearly locally finite, for the open set \({B}_{m}\) intersects only finitely many elements of \(\mathcal{C}\) , namely those elements belonging to the collection \({\mathcal{C}}_{1} \cup  \; \cup  {\mathcal{C}}_{m}\) . Finally, \(\mathcal{C}\) covers \(X\) For, given \(x\) , let \(m\) be the smallest integer such that \(x \in  {\bar{B}}_{m}\) . Then \(x\) belongs to an element of \({\mathcal{C}}_{m}\) , by definition.
+\begin{centeredblock}
+\begin{example}
+	The space \({\mathbb{R}}^{n}\) is paracompact Let \(X = {\mathbb{R}}^{n}\) Let \(\mathcal{A}\) be an open covering of \(X\) . Let \({B}_{0} = \varnothing\) , and for each positive integer \(m\) , let \({B}_{m}\) denote the open ball of radius \(m\) centered at the origin. Given \(m\) , choose finitely many elements of \(\mathcal{A}\) that cover \({\widetilde{B}}_{m}\) and intersect each one with the open set \(X - {\bar{B}}_{m - 1}\) , let this finite collection of open sets be denoted \({\mathcal{C}}_{m}\) Then the collection \(\mathcal{C} = \bigcup {\mathcal{C}}_{m}\) is a refinement of \(\mathcal{A}\) It is clearly locally finite, for the open set \({B}_{m}\) intersects only finitely many elements of \(\mathcal{C}\) , namely those elements beloriging to the collection \({\mathcal{C}}_{1} \cup  \; \cup  {\mathcal{C}}_{m}\) . Finally, \(\mathcal{C}\) covers \(X\) For, given \(x\) , let \(m\) be the smallest integer such that \(x \in  {\bar{B}}_{m}\) . Then \(x\) belongs to an element of \({\mathcal{C}}_{m}\) , by definition.
 \end{example}
+\end{centeredblock}
 
 Some of the properties of a paracompact space are similar to those of a compact space. For instance, a subspace of a paracompact space is not necessarily paracompact; but a closed subspace is paracompact. Also, a paracompact Hausdorff space is normal. In other ways, a paracompact space is not similar to a compact space; in particular, the product of two paracompact spaces need not be paracompact. We shall verify these facts shortly.
 
@@ -385,22 +381,30 @@ To prove normality, one merely repeats the same argument, replacing \(a\) by the
 
 \section*{Theorem 41.2. Every closed subspace of a paracompact space is paracompact.}
 
-\begin{proof}Let \(Y\) be a closed subspace of the paracompact space \(X\) ; let \(\mathcal{A}\) be a covering of \(Y\) by sets open in \(Y\) . For each \(A \in  \mathcal{A}\) , choose an open set \({A}^{\prime }\) of \(X\) such that \({A}^{\prime } \cap  Y = A\) . Cover \(X\) by the open sets \({A}^{\prime }\) , along with the open set \(X - Y\) . Let \(\mathcal{B}\) be a locally finite open refinement of this covering that covers \(X\) . The collection
+\begin{proof}
+	Let \(Y\) be a closed subspace of the paracompact space \(X\) ; let \(\mathcal{A}\) be a covering of \(Y\) by sets open in \(Y\) . For each \(A \in  \mathcal{A}\) , choose an open set \({A}^{\prime }\) of \(X\) such that \({A}^{\prime } \cap  Y = A\) . Cover \(X\) by the open sets \({A}^{\prime }\) , along with the open set \(X - Y\) . Let \(\mathcal{B}\) be a locally finite open refinement of this covering that covers \(X\) . The collection
 \[
 \mathcal{C} = \{ B \cap  Y \mid  B \in  \mathcal{B}\}
 \]
 
 is the required locally finite open refinement of \(\mathcal{A}\)
 
-\begin{example} A paracompact subspace of a Hausdorff space X need not be closed in X. Indeed, the open interval(0,1)is paracompact, being homeomorphic to \(\mathbb{R}\) , but it is not closed in \(\mathbb{R}\)
+\begin{centeredblock}
+\begin{example}
+	A paracompact subspace of a Hausdorff space X need not be closed in X. Indeed, the open interval(0,1)is paracompact, being homeomorphic to \(\mathbb{R}\) , but it is not closed in \(\mathbb{R}\)
 \end{example}
+\end{centeredblock}
 
-\begin{example} A subspace of a paracompact space need not be paracompact The space \({\bar{S}}_{\Omega } \times  {\bar{S}}_{\Omega }\) is compact and, therefore, paracompact. But the subspace \({S}_{\Omega } \times  {\bar{S}}_{\Omega }\) is not para-compact, for it is Hausdorff but not normal.
+\begin{centeredblock}
+\begin{example}
+	A subspace of a paracompact space need not be paracompact The space \({\bar{S}}_{\Omega } \times  {\bar{S}}_{\Omega }\) is compact and, therefore, paracompact. But the subspace \({S}_{\Omega } \times  {\bar{S}}_{\Omega }\) is not para-compact, for it is Hausdorff but not normal.
 \end{example}
+\end{centeredblock}
 
 To prove the important theorem that every metrizable space is paracompact, we need the following lemma, due to E. Michael, which is also useful for other purposes:
 \end{proof}
-\begin{lemma} Let \(X\) be regular. Then the following conditions on \(X\) are equivalent: Every open covering of \(X\) has a refinement that is:
+\begin{lemma}
+	Let \(X\) be regular. Then the following conditions on \(X\) are equivalent: Every open covering of \(X\) has a refinement that is:
 
 (1) An open covering of \(X\) and countably locally finite.
 
@@ -411,7 +415,8 @@ To prove the important theorem that every metrizable space is paracompact, we ne
 (4) An open covering of \(X\) and locally finite.
 \end{lemma}
 
-\begin{proof}It is trivial that \(\left( 4\right)  \Rightarrow  \left( 1\right)\) . What we need to prove our theorem is the converse In order to prove the converse, we must go through the steps \(\left( 1\right)  \Rightarrow  \left( 2\right)  \Rightarrow  \left( 3\right)  \Rightarrow  \left( 4\right)\) anyway, so we have for convenience listed these conditions in the statement of the lemma.
+\begin{proof}
+	It is trivial that \(\left( 4\right)  \Rightarrow  \left( 1\right)\) . What we need to prove our theorem is the converse In order to prove the converse, we must go through the steps \(\left( 1\right)  \Rightarrow  \left( 2\right)  \Rightarrow  \left( 3\right)  \Rightarrow  \left( 4\right)\) anyway, so we have for convenience listed these conditions in the statement of the lemma.
 (1) \(\Rightarrow\) (2). Let \(\mathcal{A}\) be an open covering of \(X\) . Let \(\mathcal{B}\) be an open refinement of \(\mathcal{A}\) that covers \(X\) and is countably locally finite; let
 
 \[
@@ -497,25 +502,39 @@ We have finally to prove that \(\mathcal{D}\) is locally finite. Given a point \
 \end{proof}
 \section*{Theorem 41.4. Every metrizable space is paracompact}
 
-\begin{proof}Let \(X\) be a metrizable space. We already know from Lemma 39.2 that, given an open covering \(\mathcal{A}\) of \(X\) , it has an open refinement that covers \(X\) and is countably locally finite. The preceding lemma then implies that \(\mathcal{A}\) has an open refinement that covers \(X\) and is locally finite\end{proof}
-\begin{theorem} Every regular Lindelöf space is paracompact
+\begin{proof}
+	Let \(X\) be a metrizable space. We already know from Lemma 39.2 that, given an open covering \(\mathcal{A}\) of \(X\) , it has an open refinement that covers \(X\) and is countably locally finite. The preceding lemma then implies that \(\mathcal{A}\) has an open refinement that covers \(X\) and is locally finite
+\end{proof}
+\begin{theorem}
+	Every regular Lindelöf space is paracompact
 \end{theorem}
 
-\begin{proof} Let \(X\) be regular and Lindelof. Given an open covering \(\mathcal{A}\) of \(X\) , it has a countable subcollection that covers \(X\) , this subcollection is automatically countably locally finite The preceding lemma applies to show \(\mathcal{A}\) has an open refinement that covers \(X\) and is locally finite.
+\begin{proof}
+	Let \(X\) be regular and Lindelof. Given an open covering \(\mathcal{A}\) of \(X\) , it has a countable subcollection that covers \(X\) , this subcollection is automatically countably locally finite The preceding lemma applies to show \(\mathcal{A}\) has an open refinement that covers \(X\) and is locally finite.
 \end{proof}
 
-\begin{example} The product of two paracompact spaces need not be paracompact The space \({\mathbb{R}}_{\ell }\) is paracompact, for it is regular and Lindelof However, \({\mathbb{R}}_{\ell } \times  {\mathbb{R}}_{\ell }\) is not paracom-pact, for it is Hausdorff but not normal
+\begin{centeredblock}
+\begin{example}
+	The product of two paracompact spaces need not be paracompact The space \({\mathbb{R}}_{\ell }\) is paracompact, for it is regular and Lindelof However, \({\mathbb{R}}_{\ell } \times  {\mathbb{R}}_{\ell }\) is not paracom-pact, for it is Hausdorff but not normal
 \end{example}
+\end{centeredblock}
 
-\begin{example} The space \({\mathbb{R}}^{\omega }\) is paracompact in both the product and uniform topologies. This result follows from the fact that \({\mathbb{R}}^{\omega }\) is metrizable in these topologies. It is not known whether \({\mathbf{R}}^{\omega }\) is paracompact in the box topology (See the comment in Exercise 5 of §32 )
+\begin{centeredblock}
+\begin{example}
+	The space \({\mathbb{R}}^{\omega }\) is paracompact in both the product and uniform topologies. This result follows from the fact that \({\mathbb{R}}^{\omega }\) is metrizable in these topologies. It is not known whether \({\mathbf{R}}^{\omega }\) is paracompact in the box topology (See the comment in Exercise 5 of §32 )
 \end{example}
+\end{centeredblock}
 
-\begin{example} The product space \({\mathbb{R}}^{J}\) is not paracompact if \(J\) is uncountable For \({\mathbb{R}}^{J}\) is Hausdorff but not normal
+\begin{centeredblock}
+\begin{example}
+	The product space \({\mathbb{R}}^{J}\) is not paracompact if \(J\) is uncountable For \({\mathbb{R}}^{J}\) is Hausdorff but not normal
 \end{example}
+\end{centeredblock}
 
-One of the most useful properties that a paracompact space \(X\) possesses has to do with the existence of partitions of unity on \(X\) . We have already seen the finite version of this notion in \(§{36}\) , we discuss the general case now. Recall that if \(\phi  \cdot  X \rightarrow  \mathbb{R}\) , the support of \(\phi\) is the closure of the set of those \(x\) for which \(\phi \left( x\right)  \neq  0\) .
+One of the most useful properties that a paracompact space \(X\) possesses has to do with the existence of partitions of unity on \(X\) . We have already seen the finite version of this notion in \(§{36}\) , we discuss the general case now. Recall that if \(\phi : X \rightarrow  \mathbb{R}\) , the support of \(\phi\) is the closure of the set of those \(x\) for which \(\phi \left( x\right)  \neq  0\) .
 
-\begin{definition} Let \({\left\{  {U}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an indexed open covering of \(X\) . An indexed family of continuous functions
+\begin{definition}
+	Let \({\left\{  {U}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an indexed open covering of \(X\) . An indexed family of continuous functions
 
 \[
 {\phi }_{\alpha } : X \rightarrow  \left\lbrack  {0,1}\right\rbrack
@@ -538,7 +557,8 @@ We now construct a partition of unity on an arbitrary paracompact Hausdorff spac
 
 The condition that \({\widetilde{V}}_{\alpha } \subset  {U}_{\alpha }\) for each \(\alpha\) is sometimes expressed by saying that the family \(\left\{  {\widetilde{V}}_{\alpha }\right\}\) is a \idx{precise refinement} of the family \(\left\{  {U}_{\alpha }\right\}\) .
 
-\begin{proof}Let \(\mathcal{A}\) be the collection of all open sets \(A\) such that \(\bar{A}\) is contained in some element of the collection \(\left\{  {U}_{\alpha }\right\}\) . Regularity of \(X\) implies that \(\mathcal{A}\) covers \(X\) . Since \(X\) is paracompact, we can find a locally finite collection \(\mathcal{B}\) of open sets covering \(X\) that refines \(\mathcal{A}\) Let us index \(\mathcal{B}\) bijectively with some index set \(K\) , then the general element of \(\mathcal{B}\) can be denoted \({B}_{\beta }\) , for \(\beta  \in  K\) , and \({\left\{  {B}_{\beta }\right\}  }_{\beta  \in  K}\) is a locally finite indexed family. Since \(\mathcal{B}\) refines \(\mathcal{A}\) , we can define a function \(f : K \rightarrow  J\) by choosing, for each \(\beta\) in \(K\) , an element \(f\left( \beta \right)  \in  J\) such that
+\begin{proof}
+	Let \(\mathcal{A}\) be the collection of all open sets \(A\) such that \(\bar{A}\) is contained in some element of the collection \(\left\{  {U}_{\alpha }\right\}\) . Regularity of \(X\) implies that \(\mathcal{A}\) covers \(X\) . Since \(X\) is paracompact, we can find a locally finite collection \(\mathcal{B}\) of open sets covering \(X\) that refines \(\mathcal{A}\) Let us index \(\mathcal{B}\) bijectively with some index set \(K\) , then the general element of \(\mathcal{B}\) can be denoted \({B}_{\beta }\) , for \(\beta  \in  K\) , and \({\left\{  {B}_{\beta }\right\}  }_{\beta  \in  K}\) is a locally finite indexed family. Since \(\mathcal{B}\) refines \(\mathcal{A}\) , we can define a function \(f : K \rightarrow  J\) by choosing, for each \(\beta\) in \(K\) , an element \(f\left( \beta \right)  \in  J\) such that
 \[
 {\bar{B}}_{\beta } \subset  {U}_{f\left( \beta \right) }.
 \]
@@ -597,58 +617,46 @@ Because all the numbers \({\delta }_{\alpha }\) are positive, so is \(f\) . We s
 then the desired inequality follows by summing, as \(\sum {\phi }_{\alpha }\left( x\right)  = 1\) . If \(x \notin  \operatorname{Support}{\phi }_{\alpha }\) , then inequality \(\left( *\right)\) is trivial because \({\phi }_{\alpha }\left( x\right)  = 0\) . And if \(x \in  \operatorname{Support}{\phi }_{\alpha }\) and \(x \in  C\) , then \(C\) intersects the support of \({\phi }_{\alpha }\) , so that \({\delta }_{\alpha } \leq  {\epsilon }_{C}\) by construction; thus \(\left( *\right)\) holds.
 \end{proof}
 \section*{Exercises}
-
-1. Give an example to show that if \(X\) is paracompact, it does not follow that for every open covering \(\mathcal{A}\) of \(X\) , there is a locally finite subcollection of \(\mathcal{A}\) that covers \(X\) .
-
-2. (a) Show that the product of a paracompact space and a compact space is para-compact. [Hint: Use the tube lemma.]
-
-(b) Conclude that \({S}_{\Omega }\) is not paracompact.
-
-3. Is every locally compact Hausdorff space paracompact?
-
-4. (a) Show that if \(X\) has the discrete topology, then \(X\) is paracompact.
-
-(b) Show that if \(f : X \rightarrow  Y\) is continuous and \(X\) is paracompact, the subspace \(f\left( X\right)\) of \(Y\) need not be paracompact.
-
-5. Let \(X\) be paracompact. We proved a ``shnnking lemma'' for arbitrary indexed open coverings of \(X\) . Here is an ``\idx{expansion lemma}'' for arbitrary locally finite indexed families in \(X\) .
-
-\begin{lemma} Let \({\left\{  {B}_{\alpha }\right\}  }_{\alpha  \in  J}\) be a locally finite indexed family of subsets of the para-compact Hausdorff space \(X\) . Then there \(\iota\) s a locally finite indexed family \({\left\{  {U}_{\alpha }\right\}  }_{\alpha  \in  J}\) of open sets in \(X\) such that \({B}_{\alpha } \subset  {U}_{\alpha }\) for each \(\alpha\) .
-\end{lemma}
-
-6. (a) Let \(X\) be a regular space. If \(X\) is a countable union of compact subspaces of \(X\) , then \(X\) is paracompact.
-
-(b) Show \({\mathbb{R}}^{\infty }\) is paracompact as a subspace of \({\mathbb{R}}^{\omega }\) in the box topology.
-
-*7. Let \(X\) be a regular space.
-
-(a) If \(X\) is a finite union of closed paracompact subspaces of \(X\) , then \(X\) is para-compact.
-
-(b) If \(X\) is a countable union of closed paracompact subspaces of \(X\) whose interiors cover \(X\) , show \(X\) is paracompact.
-
-8. Let \(p : X \rightarrow  Y\) be a perfect map. (See Exercise 7 of §31.)
-
-(a) Show that if \(Y\) is paracompact, so is \(X\) . [Hint: If \(\mathcal{A}\) is an open covering of \(X\) , find a locally finite open covering of \(Y\) by sets \(B\) such that \({p}^{-1}\left( B\right)\) can be covered by finitely many elements of \(\mathcal{A}\) ; then intersect \({p}^{-1}\left( B\right)\) with these elements of \(\mathcal{A}\) .]
-
-(b) Show that if \(X\) is a paracompact Hausdorff space, then so is \(Y\) . [Hint: If \(\mathcal{B}\) is a locally finite closed covering of \(X\) , then \(\{ p\left( B\right)  \mid  B \in  \mathcal{B}\}\) is a locally finite closed covering of \(Y\) .]
-
-9. Let \(G\) be a locally compact, connected topological group Show that \(G\) is para-compact [Hint. Let \({U}_{1}\) be a neighborhood of \(e\) having compact closure. In general, define \({U}_{n + 1} = {\bar{U}}_{n} \cdot  {U}_{1}\) . Show the union of the sets \({\bar{U}}_{n}\) is both open and closed in \(G\) .]
-
-This result holds without assuming \(G\) is connected, but the proof requires more effort.
-
-10. Theorem. If \(X\) is a Hausdorff space that is locally compact and paracompact, then each component of \(X\) has a countable basis.
-
-\begin{proof}If \({X}_{0}\) is a component of \(X\) , then \({X}_{0}\) is locally compact and paracompact. Let \(\mathcal{C}\) be a locally finite covering of \({X}_{0}\) by sets open in \({X}_{0}\) that have compact closures Let \({U}_{1}\) be a nonempty element of \(\mathcal{C}\) , and in general let \({U}_{n}\) be the union of all elements of \(\mathcal{C}\) that intersect \({\bar{U}}_{n - 1}\) . Show \({\bar{U}}_{n}\) is compact, and the sets \({U}_{n}\) cover \({X}_{0}\) .\end{proof}
+\begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
+\item Give an example to show that if \(X\) is paracompact, it does not follow that for every open covering \(\mathcal{A}\) of \(X\) , there is a locally finite subcollection of \(\mathcal{A}\) that covers \(X\) .
+\item (a) Show that the product of a paracompact space and a compact space is para-compact. [Hint: Use the tube lemma.]
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Conclude that \({S}_{\Omega }\) is not paracompact.
+  \end{enumerate}
+\item Is every locally compact Hausdorff space paracompact?
+\item (a) Show that if \(X\) has the discrete topology, then \(X\) is paracompact.
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show that if \(f : X \rightarrow  Y\) is continuous and \(X\) is paracompact, the subspace \(f\left( X\right)\) of \(Y\) need not be paracompact.
+  \end{enumerate}
+\item Let \(X\) be paracompact. We proved a ``shnnking lemma'' for arbitrary indexed open coverings of \(X\) . Here is an ``\idx{expansion lemma}'' for arbitrary locally finite indexed families in \(X\) . \textsl{Lemma} Let \({\left\{  {B}_{\alpha }\right\}  }_{\alpha  \in  J}\) be a locally finite indexed family of subsets of the para-compact Hausdorff space \(X\) . Then there \(\iota\) s a locally finite indexed family \({\left\{  {U}_{\alpha }\right\}  }_{\alpha  \in  J}\) of open sets in \(X\) such that \({B}_{\alpha } \subset  {U}_{\alpha }\) for each \(\alpha\) . 
+\item (a) Let \(X\) be a regular space. If \(X\) is a countable union of compact subspaces of \(X\) , then \(X\) is paracompact.
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show \({\mathbb{R}}^{\infty }\) is paracompact as a subspace of \({\mathbb{R}}^{\omega }\) in the box topology. *7. Let \(X\) be a regular space.
+  \item If \(X\) is a finite union of closed paracompact subspaces of \(X\) , then \(X\) is para-compact.
+  \item If \(X\) is a countable union of closed paracompact subspaces of \(X\) whose interiors cover \(X\) , show \(X\) is paracompact.
+  \end{enumerate}
+\item Let \(p : X \rightarrow  Y\) be a perfect map. (See Exercise 7 of §31.)
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show that if \(Y\) is paracompact, so is \(X\) . [Hint: If \(\mathcal{A}\) is an open covering of \(X\) , find a locally finite open covering of \(Y\) by sets \(B\) such that \({p}^{-1}\left( B\right)\) can be covered by finitely many elements of \(\mathcal{A}\) ; then intersect \({p}^{-1}\left( B\right)\) with these elements of \(\mathcal{A}\) .]
+  \item Show that if \(X\) is a paracompact Hausdorff space, then so is \(Y\) . [Hint: If \(\mathcal{B}\) is a locally finite closed covering of \(X\) , then \(\{ p\left( B\right)  \mid  B \in  \mathcal{B}\}\) is a locally finite closed covering of \(Y\) .]
+  \end{enumerate}
+\item Let \(G\) be a locally compact, connected topological group Show that \(G\) is para-compact [Hint. Let \({U}_{1}\) be a neighborhood of \(e\) having compact closure. In general, define \({U}_{n + 1} = {\bar{U}}_{n} \cdot  {U}_{1}\) . Show the union of the sets \({\bar{U}}_{n}\) is both open and closed in \(G\) .] This result holds without assuming \(G\) is connected, but the proof requires more effort.
+\item Theorem. If \(X\) is a Hausdorff space that is locally compact and paracompact, then each component of \(X\) has a countable basis. \textsl{Proof.} If \({X}_{0}\) is a component of \(X\) , then \({X}_{0}\) is locally compact and paracompact. Let \(\mathcal{C}\) be a locally finite covering of \({X}_{0}\) by sets open in \({X}_{0}\) that have compact closures Let \({U}_{1}\) be a nonempty element of \(\mathcal{C}\) , and in general let \({U}_{n}\) be the union of all elements of \(\mathcal{C}\) that intersect \({\bar{U}}_{n - 1}\) . Show \({\bar{U}}_{n}\) is compact, and the sets \({U}_{n}\) cover \({X}_{0}\) . 
+\end{enumerate}
 \section*{§ 42 The Smirnov Metrization Theorem}
 
 The Nagata-Smurnov metrization theorem gives one set of necessary and sufficient conditions for metrizability of a space In this section we prove a theorem that gives another such set of conditions. It is a corollary of the Nagata-Smirnov theorem and was first proved by Smirnov.
 
-\begin{definition} A space \(X\) is locally metrizable if every point \(x\) of \(X\) has a neighborhood \(U\) that is metrizable in the subspace topology
+\begin{definition}
+	A space \(X\) is locally metrizable if every point \(x\) of \(X\) has a neighborhood \(U\) that is metrizable in the subspace topology
 \end{definition}
 
-\begin{theorem}[Smirnov metrization theorem] A space \(X\) is metrizable if and only if it is a paracompact Hausdorff space that is locally metrizable.
+\begin{theorem}[Smirnov metrization theorem]
+	A space \(X\) is metrizable if and only if it is a paracompact Hausdorff space that is locally metrizable.
 \end{theorem}
 
-\begin{proof}Suppose that \(X\) is metrizable. Then \(X\) is locally metrizable; it is also para-compact, by Theorem 414.
+\begin{proof}
+	Suppose that \(X\) is metrizable. Then \(X\) is locally metrizable; it is also para-compact, by Theorem 414.
 Conversely, suppose that \(X\) is a paracompact Hausdorff space that is locally metrizable. We shall show that \(X\) has a basis that is countably locally finite. Since \(X\) is regular, it will then follow from the Nagata-Smirnov theorem that \(X\) is metrizable.
 
 The proof is an adaptation of the last part of the proof of Theorem 40.3. Cover \(X\) by open sets that are metrizable; then choose a locally finite open refinement \(\mathcal{C}\) of this covering that covers \(X\) . Each element \(C\) of \(\mathcal{C}\) is metrizable; let the function \({d}_{C}\) : \(C \times  C \rightarrow  \mathbb{R}\) be a metric that gives the topology of \(C\) . Given \(x \in  C\) , let \({B}_{C}\left( {x,\epsilon }\right)\) denote the set of all points \(y\) of \(C\) such that \({d}_{C}\left( {x,y}\right)  < \epsilon\) . Being open in \(C\) , the set \({B}_{C}\left( {x,\epsilon }\right)\) is also open in \(X\) .
@@ -682,9 +690,10 @@ x \in  D \subset  {B}_{{C}_{1}}\left( {y,1/m}\right)  \subset  {B}_{{C}_{1}}\lef
 as desired.
 \end{proof}
 \section*{Exercises}
-
-1. Compare Theorem 42.1 with Exercises 7 and 8 of \(§{34}\) .
-
-2. (a) Show that for each \(x \in  {S}_{\Omega }\) , the section of \({S}_{\Omega }\) by \(x\) has a countable basis and hence is metrizable.
-
-(b) Conclude that \({S}_{\Omega }\) is not paracompact.
+\begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
+\item Compare Theorem 42.1 with Exercises 7 and 8 of \(§{34}\) .
+\item (a) Show that for each \(x \in  {S}_{\Omega }\) , the section of \({S}_{\Omega }\) by \(x\) has a countable basis and hence is metrizable.
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Conclude that \({S}_{\Omega }\) is not paracompact.
+  \end{enumerate}
+\end{enumerate}

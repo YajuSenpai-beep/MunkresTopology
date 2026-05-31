@@ -18,7 +18,7 @@ To see how this idea might work, let us consider first the simplest possible cas
 \left\{  {{\pi }_{1}\left( A\right)  \mid  A \in  \mathcal{A}}\right\}
 \]
 
-of subsets of \({X}_{1}\) also has the finite intersection property, and so does the collection of their closures \(\overline{{\pi }_{1}\left( A\right) }\) . Compactness of \({X}_{1}\) guarantees that the intersection of all the sets \(\overline{{\pi }_{1}\left( A\right) }\) is nonempty. Let us choose a point \({x}_{1}\) belonging to this intersection. Similarly, let us choose a point \({x}_{2}\) belonging to all the sets \(\overline{{\pi }_{2}\left( A\right) }\) . The obvious conclusion we would like to draw is that the point \({x}_{1} \times  {x}_{2}\) lies in \(\mathop{\bigcap }\limits_{{A \in  A}}A\) , for then our theorem would be proved.
+of subsets of \({X}_{1}\) also has the finite intersection property, and so does the collection of their closures \(\overline{{\pi }_{1}\left( A\right) }\) . Compactness of \({X}_{1}\) guarantees that the intersection of all the sets \(\overline{{\pi }_{1}\left( A\right) }\) is nonempty. Let us choose a point \({x}_{1}\) beloriging to this intersection. Similarly, let us choose a point \({x}_{2}\) beloriging to all the sets \(\overline{{\pi }_{2}\left( A\right) }\) . The obvious conclusion we would like to draw is that the point \({x}_{1} \times  {x}_{2}\) lies in \(\mathop{\bigcap }\limits_{{A \in  A}}A\) , for then our theorem would be proved.
 
 But that is unfortunately not true. Consider the following example, in which \({X}_{1} =\)  \({X}_{2} = \left\lbrack  {0,1}\right\rbrack\) and the collection \(\mathcal{A}\) consists of all closed elliptical regions bounded by ellipses that have the points \(p = \left( {\frac{1}{3},\frac{1}{3}}\right)\) and \(q = \left( {\frac{1}{2},\frac{2}{3}}\right)\) as their foci. See Figure 37.1. Certainly \(\mathcal{A}\) has the finite intersection property. Now let us pick a point \({x}_{1}\) in the intersection of the sets \(\left\{  {\left. \overline{{\pi }_{1}\left( A\right) }\right| \;A \in  \mathcal{A}}\right\}\) Any point of the interval \(\left\lbrack  {\frac{1}{3},\frac{1}{2}}\right\rbrack\) will do; suppose we choose \({x}_{1} = \frac{1}{2}\) . Similarly, choose a point \({x}_{2}\) in the intersection of the sets \(\left\{  {\overline{{\pi }_{2}\left( A\right) } \mid  A \in  \mathcal{A}}\right\}\) . Any point of the interval \(\left\lbrack  {\frac{1}{3},\frac{2}{3}}\right\rbrack\) will do; suppose we pick \({x}_{2} = \frac{1}{2}\) . This proves to be an unfortunate choice, for the point
 
@@ -58,12 +58,14 @@ Now of course in this example we chose \(\mathcal{D}\) carefully so that the pro
 
 A final remark. The assumption that the elements of the collection \(\mathcal{A}\) were closed sets was irrelevant in this discussion. For even if the set \(A \in  \mathcal{A}\) is closed, the set \({\pi }_{1}\left( A\right)\) need not be closed, so we had to take its closure in order to apply the closed set formulation of compactness. Therefore, we may as well begin with an arbitrary collection of subsets of \(X\) having the finite intersection property, and prove that the intersection of their closures is nonempty. This approach actually proves to be more convenient.
 
-\begin{lemma} Let \(X\) be a set; let \(\mathcal{A}\) be a collection of subsets of \(X\) having the finite intersection property. Then there is a collection \(\mathcal{D}\) of subsets of \(X\) such that \(\mathcal{D}\) contains \(\mathcal{A}\) , and \(\mathcal{D}\) has the finite intersection property, and no collection of subsets of \(X\) that properly contains \(\mathcal{D}\) has this property.
+\begin{lemma}
+	Let \(X\) be a set; let \(\mathcal{A}\) be a collection of subsets of \(X\) having the finite intersection property. Then there is a collection \(\mathcal{D}\) of subsets of \(X\) such that \(\mathcal{D}\) contains \(\mathcal{A}\) , and \(\mathcal{D}\) has the finite intersection property, and no collection of subsets of \(X\) that properly contains \(\mathcal{D}\) has this property.
 \end{lemma}
 
 We often say that a collection \(\mathcal{D}\) satisfying the conclusion of this theorem is maximal with respect to the finite intersection property
 
-\begin{proof}As you might expect, we construct \(\mathcal{D}\) by using Zorn’s lemma. It states that, given a set \(A\) that is strictly partially ordered, in which every simply ordered subset has an upper bound, \(A\) itself has a maximal element.
+\begin{proof}
+	As you might expect, we construct \(\mathcal{D}\) by using Zorn’s lemma. It states that, given a set \(A\) that is strictly partially ordered, in which every simply ordered subset has an upper bound, \(A\) itself has a maximal element.
 The set \(A\) to which we shall apply Zorn’s lemma is not a subset of \(X\) , nor even a collection of subsets of \(X\) , but a set whose elements are collections of subsets of \(X\) . For purposes of this proof, we shall call a set whose elements are collections of subsets of \(X\) a ``\idx{superset}'' and shall denote it by an outline letter. To summarize the rotation:
 
 \(c\) is an element of \(X\) .
@@ -82,18 +84,20 @@ In order to apply Zorn’s lemma, we must show that if \(\mathbb{B}\) is a ``sub
 \mathcal{C} = \mathop{\bigcup }\limits_{{\mathcal{B} \in  \mathbb{B}}}\mathcal{B}
 \]
 
-which is the union of the collections belonging to \(\mathbb{B}\) , is an element of \(\mathbb{A}\) , then it is the required upper bound on \(\mathbb{B}\) .
+which is the union of the collections beloriging to \(\mathbb{B}\) , is an element of \(\mathbb{A}\) , then it is the required upper bound on \(\mathbb{B}\) .
 
 To show that \(\mathcal{C}\) is an element of \(\mathbf{A}\) , we must show that \(\mathcal{C} \supset  \mathcal{A}\) and that \(\mathcal{C}\) has the finite intersection property. Certainly \(\mathcal{C}\) contains \(\mathcal{A}\) , since each element of \(\mathcal{B}\) contains \(\mathcal{A}\) . To show that \(\mathcal{C}\) has the finite intersection property, let \({C}_{1},\ldots ,{C}_{n}\) be elements, of \(\mathcal{C}\) . Because \(\mathcal{C}\) is the union of the elements of \(\mathbb{B}\) , there is, for each \(i\) , an element \({\mathcal{B}}_{i}\) of \(\mathbb{B}\) such that \({C}_{i} \in  {\mathcal{B}}_{i}\) . The superset \(\left\{  {{\mathcal{B}}_{1},\ldots ,{\mathcal{B}}_{n}}\right\}\) is contained in \(\mathbb{B}\) , so it is simply ordered by the relation of proper inclusion. Being finite, it has a largest element; that is, there is an index \(k\) such that \({\mathcal{B}}_{i} \subset  {\mathcal{B}}_{k}\) for \(i = 1,\ldots ,n\) . Then all the sets \({C}_{1},\ldots ,{C}_{n}\) are elements of \({\mathcal{B}}_{k}\) . Since \({\mathcal{B}}_{k}\) has the finite intersection property, the intersection of the sets \({C}_{1},\ldots ,{C}_{n}\) is nonempty, as desired.
 \end{proof}
-\begin{lemma} Let \(X\) be a set; let \(\mathcal{D}\) be a collection of subsets of \(X\) that is maximal with respect to the finite intersection property. Then:
+\begin{lemma}
+	Let \(X\) be a set; let \(\mathcal{D}\) be a collection of subsets of \(X\) that is maximal with respect to the finite intersection property. Then:
 
 (a) Any finite intersection of elements of \(\mathcal{D}\) is an element of \(\mathcal{D}\) .
 
 (b) If \(A\) is a subset of \(X\) that intersects every element of \(\mathcal{D}\) , then \(A\) is an element of \(\mathcal{D}\) .
 \end{lemma}
 
-\begin{proof}(a) Let \(B\) equal the intersection of finitely many elements of \(\mathcal{D}\) . Define a collection \(\mathcal{E}\) by adjoining \(B\) to \(\mathcal{D}\) , so that \(\mathcal{E} = \mathcal{D} \cup  \{ B\}\) . We show that \(\mathcal{E}\) has the finite intersection property; then maximality of \(\mathcal{D}\) implies that \(\mathcal{E} = \mathcal{D}\) , so that \(B \in  \mathcal{D}\) as desired
+\begin{proof}
+	(a) Let \(B\) equal the intersection of finitely many elements of \(\mathcal{D}\) . Define a collection \(\mathcal{E}\) by adjoining \(B\) to \(\mathcal{D}\) , so that \(\mathcal{E} = \mathcal{D} \cup  \{ B\}\) . We show that \(\mathcal{E}\) has the finite intersection property; then maximality of \(\mathcal{D}\) implies that \(\mathcal{E} = \mathcal{D}\) , so that \(B \in  \mathcal{D}\) as desired
 Take finitely many elements of \(\mathcal{E}\) . If none of them is the set \(B\) , then their intersection is nonempty because \(\mathcal{D}\) has the finite intersection property. If one of them is the set \(B\) , then their intersection is of the form
 
 \[
@@ -110,10 +114,12 @@ Since \(B\) equals a finite intersection of elements of \(\mathcal{D}\) , this s
 
 Now \({D}_{1} \cap  \cdots  \cap  {D}_{n}\) belongs to \(\mathcal{D}\) , by (a); therefore, this intersection is nonempty, by hypothesis.
 \end{proof}
-\begin{theorem}[Tychonoff theorem] An arbitrary product of compact spaces is compact in the product topology
+\begin{theorem}[Tychonoff theorem]
+	An arbitrary product of compact spaces is compact in the product topology
 \end{theorem}
 
-\begin{proof}Let
+\begin{proof}
+	Let
 \[
 X = \mathop{\prod }\limits_{{\alpha  \in  J}}{X}_{\alpha }
 \]
@@ -147,17 +153,15 @@ First we show that if \({\pi }_{\beta }^{-1}\left( {U}_{\beta }\right)\) is any 
 It follows from (b) of Lemma 37.2 that every subbasis element containing \(\mathbf{x}\) belongs to \(\mathcal{D}\) . And then it follows from (a) of the same lemma that every basis element containing \(\mathbf{x}\) belongs to \(\mathcal{D}\) . Since \(\mathcal{D}\) has the finite intersection property, this means that every basis element containing \(\mathbf{x}\) intersects every element of \(\mathcal{D}\) ; hence \(\mathbf{x} \in  \bar{D}\) for every \(D \in  \mathcal{D}\) as desired.
 \end{proof}
 \section*{Exercises}
-
-1. Let \(X\) be a space. Let \(\mathcal{D}\) be a collection of subsets of \(X\) that is maximal with respect to the finite intersection property
-
-(a) Show that \(x \in  \bar{D}\) for every \(D \in  \mathcal{D}\) if and only if every neighborhood of \(x\) belongs to \(\mathcal{D}\) . Which implication uses maximality of \(\mathcal{D}\) ?
-
-(b) Let \(D \in  \mathcal{D}\) . Show that if \(A \supset  D\) , then \(A \in  \mathcal{D}\) .
-
-(c) Show that if \(X\) satisfies the \({T}_{1}\) axiom, there is at most one point belonging to \(\mathop{\bigcap }\limits_{{D \in  \mathcal{D}}}\bar{D}\) .
-
-2. A collection \(\mathcal{A}\) of subsets of \(X\) has the \idx{countable intersection property} if every countable intersection of elements of \(\mathcal{A}\) is nonempty. Show that \(X\) is a Lindelöf space if and only if for every collection \(\mathcal{A}\) of subsets of \(X\) having the countable intersection property,
-
+\begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
+\item Let \(X\) be a space. Let \(\mathcal{D}\) be a collection of subsets of \(X\) that is maximal with respect to the finite intersection property
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show that \(x \in  \bar{D}\) for every \(D \in  \mathcal{D}\) if and only if every neighborhood of \(x\) belongs to \(\mathcal{D}\) . Which implication uses maximality of \(\mathcal{D}\) ?
+  \item Let \(D \in  \mathcal{D}\) . Show that if \(A \supset  D\) , then \(A \in  \mathcal{D}\) .
+  \item Show that if \(X\) satisfies the \({T}_{1}\) axiom, there is at most one point beloriging to \(\mathop{\bigcap }\limits_{{D \in  \mathcal{D}}}\bar{D}\) .
+  \end{enumerate}
+\item A collection \(\mathcal{A}\) of subsets of \(X\) has the \idx{countable intersection property} if every countable intersection of elements of \(\mathcal{A}\) is nonempty. Show that \(X\) is a Lindelöf space if and only if for every collection \(\mathcal{A}\) of subsets of \(X\) having the countable intersection property,
+\end{enumerate}
 \section*{\(\mathop{\bigcap }\limits_{{A \in  A}}\bar{A}\)}
 
 is nonempty.
@@ -178,7 +182,8 @@ is nonempty.
 
 4. Here is another theorem whose proof uses Zorn’s lemma. Recall that if \(A\) is a space and if \(x,y \in  A\) , we say that \(x\) and \(y\) belong to the same quasicomponent of \(A\) if there is no separation \(A = C \cup  D\) of \(A\) into two disjoint sets open in \(A\) such that \(x \in  C\) and \(y \in  D\) .
 
-\begin{theorem} Let \(X\) be a compact Hausdorff space. Then \(x\) and \(y\) belong to the same quasicomponent of \(X\) if and only if they belong to the same component of \(X\) .
+\begin{theorem}
+	Let \(X\) be a compact Hausdorff space. Then \(x\) and \(y\) belong to the same quasicomponent of \(X\) if and only if they belong to the same component of \(X\) .
 \end{theorem}
 
 (a) Let \(A\) be the collection of all closed subspaces \(A\) of \(X\) such that \(x\) and \(y\) lie in the same quasicomponent of \(A\) . Let \(\mathcal{B}\) be a subcollection of \(\mathcal{A}\) that is simply ordered by proper inclusion. Show that the intersection of the elements of \(\mathcal{B}\) belongs to \(\mathcal{A}\) . [Hint: Compare Exercise 11 of §26.]
@@ -189,13 +194,16 @@ is nonempty.
 
 *5. Here is a proof of the Tychonoff theorem that relies on the well-ordering theorem rather than on Zorn's lemma. First, prove the following version of the tube lemma; then prove the theorem.
 
-\begin{lemma} Let \(\mathcal{A}\) be a collection of basis elements for the topology of the product space \(X \times  Y\) , such that no finite subcollection of \(\mathcal{A}\) covers \(X \times  Y\) . If \(X\) is compact, there is a point \(x \in  X\) such that no finite subcollection of \(\mathcal{A}\) covers the slice \(\{ x\}  \times  Y\) .
+\begin{lemma}
+	Let \(\mathcal{A}\) be a collection of basis elements for the topology of the product space \(X \times  Y\) , such that no finite subcollection of \(\mathcal{A}\) covers \(X \times  Y\) . If \(X\) is compact, there is a point \(x \in  X\) such that no finite subcollection of \(\mathcal{A}\) covers the slice \(\{ x\}  \times  Y\) .
 \end{lemma}
 
-\begin{theorem} An arbitrary product of compact spaces is compact in the product topology.
+\begin{theorem}
+	An arbitrary product of compact spaces is compact in the product topology.
 \end{theorem}
 
-\begin{proof}Let \({\left\{  {X}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an indexed family of compact spaces, let
+\begin{proof}
+	Let \({\left\{  {X}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an indexed family of compact spaces, let
 \[
 X = \mathop{\prod }\limits_{{\alpha  \in  J}}{X}_{\alpha }
 \]
@@ -226,17 +234,20 @@ We have already studied one way of compactifying a topological space \(X\) , the
 
 We recall the following definition
 
-\begin{definition} A compactification of a space \(X\) is a compact Hausdorff space \(Y\) containing \(X\) as a subspace such that \(\bar{X} = Y\) . Two compactifications \({Y}_{1}\) and \({Y}_{2}\) of \(X\) are said to be equivalent if there is a homeomorphism \(h : {Y}_{1} \rightarrow  {Y}_{2}\) such that \(h\left( x\right)  = x\) for every \(x \in  X\) .
+\begin{definition}
+	A compactification of a space \(X\) is a compact Hausdorff space \(Y\) containing \(X\) as a subspace such that \(\bar{X} = Y\) . Two compactifications \({Y}_{1}\) and \({Y}_{2}\) of \(X\) are said to be equivalent if there is a homeomorphism \(h : {Y}_{1} \rightarrow  {Y}_{2}\) such that \(h\left( x\right)  = x\) for every \(x \in  X\) .
 \end{definition}
 
 If \(X\) has a compactification \(Y\) , then \(X\) must be completely regular, being a subspace of the completely regular space \(Y\) . Conversely, if \(X\) is completely regular, then \(X\) has a compactification. For \(X\) can be imbedded in the compact Hausdorff space \({\left\lbrack  0,1\right\rbrack  }^{J}\) for some \(J\) , and any such imbedding gives rise to a compactification of \(X\) , as the following lemma shows
 
-\begin{lemma} Let \(X\) be a space; suppose that \(h : X \rightarrow  Z\) is an imbedding of \(X\) in the compact Hausdorff space \(Z\) . Then there exists a corresponding compactification \(Y\) of \(X\) ; it has the property that there is an imbedding \(H : Y \rightarrow  Z\) that equals \(h\) on \(X\) . The compactification \(Y\) is uniquely determined up to \idx{Equivalence of compactifications} equivalence.
+\begin{lemma}
+	Let \(X\) be a space; suppose that \(h : X \rightarrow  Z\) is an imbedding of \(X\) in the compact Hausdorff space \(Z\) . Then there exists a corresponding compactification \(Y\) of \(X\) ; it has the property that there is an imbedding \(H : Y \rightarrow  Z\) that equals \(h\) on \(X\) . The compactification \(Y\) is uniquely determined up to \idx{Equivalence of compactifications} equivalence.
 \end{lemma}
 
 We call \(Y\) the compactification induced by the imbedding \(h\) .
 
-\begin{proof}Given \(h\) , let \({X}_{0}\) denote the subspace \(h\left( X\right)\) of \(Z\) , and let \({Y}_{0}\) denote its closure in \(Z\) . Then \({Y}_{0}\) is a compact Hausdorff space and \({\bar{X}}_{0} = {Y}_{0}\) ; therefore, \({Y}_{0}\) is a compactification of \({X}_{0}\) .
+\begin{proof}
+	Given \(h\) , let \({X}_{0}\) denote the subspace \(h\left( X\right)\) of \(Z\) , and let \({Y}_{0}\) denote its closure in \(Z\) . Then \({Y}_{0}\) is a compact Hausdorff space and \({\bar{X}}_{0} = {Y}_{0}\) ; therefore, \({Y}_{0}\) is a compactification of \({X}_{0}\) .
 We now construct a space \(Y\) containing \(X\) such that the pair(X, Y)is homeomorphic to the pair \(\left( {{X}_{0},{Y}_{0}}\right)\) . Let us choose a set \(A\) disjoint from \(X\) that is in bijective correspondence with the set \({Y}_{0} - {X}_{0}\) under some map \(k : A \rightarrow  {Y}_{0} - {X}_{0}\) . Define \(Y = X \cup  A\) , and define a bijective correspondence \(H : Y \rightarrow  {Y}_{0}\) by the rule
 
 \[
@@ -253,7 +264,9 @@ Now suppose \({Y}_{i}\) is a compactification of \(X\) and that \({H}_{i} : {Y}_
 
 In general, there are many different ways of compactifying a given space \(X\) . Consider for instance the following compactifications of the open interval \(X = \left( {0,1}\right)\) :
 
-\begin{example} Take the unit circle \({S}^{1}\) in \({\mathbb{R}}^{2}\) and let \(h.\left( {0,1}\right)  \rightarrow  {S}^{1}\) be the map
+\begin{centeredblock}
+\begin{example}
+	Take the unit circle \({S}^{1}\) in \({\mathbb{R}}^{2}\) and let \(h.\left( {0,1}\right)  \rightarrow  {S}^{1}\) be the map
 
 \[
 h\left( \iota \right)  = \left( {\cos {2\pi \iota }}\right)  \times  \left( {\sin {2\pi \iota }}\right) .
@@ -261,11 +274,17 @@ h\left( \iota \right)  = \left( {\cos {2\pi \iota }}\right)  \times  \left( {\si
 
 The compactification induced by the imbedding \(h\) is equivalent to the one-point compactification of \(X\)
 \end{example}
+\end{centeredblock}
 
-\begin{example} Let \(Y\) be the space \(\left\lbrack  {0,1}\right\rbrack\) Then \(Y\) is a compacufication of \(X\) , it is obtained by ``adding one point at each end of(0,1)''
+\begin{centeredblock}
+\begin{example}
+	Let \(Y\) be the space \(\left\lbrack  {0,1}\right\rbrack\) Then \(Y\) is a compacufication of \(X\) , it is obtained by ``adding one point at each end of(0,1)''
 \end{example}
+\end{centeredblock}
 
-\begin{example} Consider the square \({\left\lbrack  -1,1\right\rbrack  }^{2}\) in \({\mathbb{R}}^{2}\) and let \(h\;\left( {0,1}\right)  \rightarrow  {\left\lbrack  -1,1\right\rbrack  }^{2}\) be the map
+\begin{centeredblock}
+\begin{example}
+	Consider the square \({\left\lbrack  -1,1\right\rbrack  }^{2}\) in \({\mathbb{R}}^{2}\) and let \(h\;\left( {0,1}\right)  \rightarrow  {\left\lbrack  -1,1\right\rbrack  }^{2}\) be the map
 
 \[
 h\left( x\right)  = x \times  \sin \left( {1/x}\right) .
@@ -273,12 +292,15 @@ h\left( x\right)  = x \times  \sin \left( {1/x}\right) .
 
 The space \({Y}_{0} = \overline{h\left( X\right) }\) is the topologist’s sine curve (see Example 7 of §24). The imbedding \(h\) gives rise to a compactification of(0,1)quite different from the other two. It is obtained by adding one point at the right-hand end of(0,1), and an entire line segment of points at the left-hand end \({}^{1}\)
 \end{example}
+\end{centeredblock}
 
 A basic problem that occurs in studying compactifications is the following:
 
 If \(Y\) is a compactification of \(X\) , under what conditions can a continuous real-valued function \(f\) defined on \(X\) be extended continuously to \(Y\) ? The function \(f\) will have to be bounded if it is to be extendable, since its extension will carry the compact space \(Y\) into \(\mathbb{R}\) and will thus be bounded. But boundedness is not enough, in general. Consider the following example
 
-\begin{example} Let \(X = \left( {0,1}\right)\) Consider the one-point compactification of \(X\) given in Example I A bounded continuous function \(f : \left( {0,1}\right)  \rightarrow  \mathbb{R}\) is extendable to this compacutfication if and only if the limits
+\begin{centeredblock}
+\begin{example}
+	Let \(X = \left( {0,1}\right)\) Consider the one-point compactification of \(X\) given in Example I A bounded continuous function \(f : \left( {0,1}\right)  \rightarrow  \mathbb{R}\) is extendable to this compacutfication if and only if the limits
 
 \[
 \mathop{\lim }\limits_{{x \rightarrow  0 + }}f\left( x\right) \;\text{ and }\;\mathop{\lim }\limits_{{x \rightarrow  1 - }}f\left( x\right)
@@ -286,6 +308,7 @@ If \(Y\) is a compactification of \(X\) , under what conditions can a continuous
 
 exist and are equal.
 \end{example}
+\end{centeredblock}
 
 For the ``the two-point compactification'' of \(X\) considered in Example 2, the function \(f\) is extendable if and only if both these limits simply exist
 
@@ -307,10 +330,12 @@ whose component functions were the functions \(x\) and \(\sin \left( {1/x}\right
 
 This idea is the basic idea behind the Stone-Čech compactification. It is defined as follows:
 \end{proof}
-\begin{theorem} Let \(X\) be a completely regular space. There exists a compactification \(Y\) of \(X\) having the property that every bounded continuous map \(f : X \rightarrow  \mathbb{R}\) extends uniquely to a continuous map of \(Y\) into \(\mathbb{R}\) .
+\begin{theorem}
+	Let \(X\) be a completely regular space. There exists a compactification \(Y\) of \(X\) having the property that every bounded continuous map \(f : X \rightarrow  \mathbb{R}\) extends uniquely to a continuous map of \(Y\) into \(\mathbb{R}\) .
 \end{theorem}
 
-\begin{proof}Let \({\left\{  {f}_{\alpha }\right\}  }_{\alpha  \in  J}\) be the collection of all bounded continuous real-valued functions on \(X\) , indexed by some index set \(J\) For each \(\alpha  \in  J\) , choose a closed interval \({I}_{\alpha }\) in \(\mathbb{R}\) containing \({f}_{\alpha }\left( X\right)\) . To be definite, choose
+\begin{proof}
+	Let \({\left\{  {f}_{\alpha }\right\}  }_{\alpha  \in  J}\) be the collection of all bounded continuous real-valued functions on \(X\) , indexed by some index set \(J\) For each \(\alpha  \in  J\) , choose a closed interval \({I}_{\alpha }\) in \(\mathbb{R}\) containing \({f}_{\alpha }\left( X\right)\) . To be definite, choose
 \[
 {I}_{\alpha } = \left\{  {\inf {f}_{\alpha }\left( X\right) ,\sup {f}_{\alpha }\left( X\right) }\right\}  .
 \]
@@ -331,24 +356,31 @@ Let \(Y\) be the compactification of \(X\) induced by the imbedding \(h\) . Then
 
 Uniqueness of the extension is a consequence of the following lemma.
 \end{proof}
-\begin{lemma} Let \(A \subset  X\) ; let \(f : A \rightarrow  Z\) be a continuous map of \(A\) into the Hausdorff space \(Z\) . There is at most one extension of \(f\) to a continuous function \(g : \bar{A} \rightarrow  Z\) .
+\begin{lemma}
+	Let \(A \subset  X\) ; let \(f : A \rightarrow  Z\) be a continuous map of \(A\) into the Hausdorff space \(Z\) . There is at most one extension of \(f\) to a continuous function \(g : \bar{A} \rightarrow  Z\) .
 \end{lemma}
 
-\begin{proof}This lemma was given as an exercise in \(\$ {18}\) ; we give a proof here. Suppose that \(g,{g}^{\prime } \cdot  \bar{A} \rightarrow  X\) are two different extensions of \(f\) , choose \(x\) so that \(g\left( x\right)  \neq  {g}^{\prime }\left( x\right)\) . Let \(U\) and \({U}^{\prime }\) be disjoint neighborhoods of \(g\left( x\right)\) and \({g}^{\prime }\left( x\right)\) , respectively. Choose a neighborhood \(V\) of \(x\) so that \(g\left( V\right)  \subset  U\) and \({g}^{\prime }\left( V\right)  \subset  {U}^{\prime }\) Now \(V\) intersects \(A\) in some point \(y\) ; then \(g\left( y\right)  \in  U\) and \({g}^{\prime }\left( y\right)  \in  {U}^{\prime }\) . But since \(y \in  A\) , we have \(g\left( y\right)  = f\left( y\right)\) and \({g}^{\prime }\left( y\right)  = f\left( y\right)\) . This contradicts the fact that \(U\) and \({U}^{\prime }\) are disjoint.\end{proof}
-\begin{theorem} Let \(X\) be a completely regular space; let \(Y\) be a compactification of \(X\) satisfying the extension property of Theorem 38.2 Given any continuous map \(f : X \rightarrow  C\) of \(X\) into a compact Hausdorff space \(C\) , the map \(f\) extends uniquely to a continuous map \(g \cdot  Y \rightarrow  C\) .
+\begin{proof}
+	This lemma was given as an exercise in \(\$ {18}\) ; we give a proof here. Suppose that \(g,{g}^{\prime } \cdot  \bar{A} \rightarrow  X\) are two different extensions of \(f\) , choose \(x\) so that \(g\left( x\right)  \neq  {g}^{\prime }\left( x\right)\) . Let \(U\) and \({U}^{\prime }\) be disjoint neighborhoods of \(g\left( x\right)\) and \({g}^{\prime }\left( x\right)\) , respectively. Choose a neighborhood \(V\) of \(x\) so that \(g\left( V\right)  \subset  U\) and \({g}^{\prime }\left( V\right)  \subset  {U}^{\prime }\) Now \(V\) intersects \(A\) in some point \(y\) ; then \(g\left( y\right)  \in  U\) and \({g}^{\prime }\left( y\right)  \in  {U}^{\prime }\) . But since \(y \in  A\) , we have \(g\left( y\right)  = f\left( y\right)\) and \({g}^{\prime }\left( y\right)  = f\left( y\right)\) . This contradicts the fact that \(U\) and \({U}^{\prime }\) are disjoint.
+\end{proof}
+\begin{theorem}
+	Let \(X\) be a completely regular space; let \(Y\) be a compactification of \(X\) satisfying the extension property of Theorem 38.2 Given any continuous map \(f : X \rightarrow  C\) of \(X\) into a compact Hausdorff space \(C\) , the map \(f\) extends uniquely to a continuous map \(g : Y \rightarrow  C\) .
 \end{theorem}
 
-\begin{proof}Note that \(C\) is completely regular, so that it can be imbedded in \({\left\lbrack  0,1\right\rbrack  }^{J}\) for some \(J\) So we may as well assume that \(C \subset  \{ 0,1{\} }^{J}\) . Then each component function \({f}_{\alpha }\) of the map \(f\) is a bounded continuous real-valued function on \(X\) , by hypothesis, \({f}_{\alpha }\) can be extended to a continuous map \({g}_{\alpha }\) of \(Y\) into \(\mathbb{R}\) . Define \(g : Y \rightarrow  {\mathbb{R}}^{J}\) by setting \(g\left( y\right)  = {\left( {g}_{\alpha }\left( y\right) \right) }_{\alpha  \in  J}\) ; then \(g\) is continuous because \({\mathbb{R}}^{J}\) has the product topology. Now in fact \(g\) maps \(Y\) into the subspace \(C\) of \({\mathbb{R}}^{J}\) . For continuity of \(g\) implies that
+\begin{proof}
+	Note that \(C\) is completely regular, so that it can be imbedded in \({\left\lbrack  0,1\right\rbrack  }^{J}\) for some \(J\) So we may as well assume that \(C \subset  \{ 0,1{\} }^{J}\) . Then each component function \({f}_{\alpha }\) of the map \(f\) is a bounded continuous real-valued function on \(X\) , by hypothesis, \({f}_{\alpha }\) can be extended to a continuous map \({g}_{\alpha }\) of \(Y\) into \(\mathbb{R}\) . Define \(g : Y \rightarrow  {\mathbb{R}}^{J}\) by setting \(g\left( y\right)  = {\left( {g}_{\alpha }\left( y\right) \right) }_{\alpha  \in  J}\) ; then \(g\) is continuous because \({\mathbb{R}}^{J}\) has the product topology. Now in fact \(g\) maps \(Y\) into the subspace \(C\) of \({\mathbb{R}}^{J}\) . For continuity of \(g\) implies that
 \[
 g\left( Y\right)  = g\left( \bar{X}\right)  \subset  \overline{g\left( X\right) } = \overline{f\left( X\right) } \subset  \bar{C} = C.
 \]
 
 Thus \(g\) is the desired extension of \(f\)
 \end{proof}
-\begin{theorem} Let \(X\) be a completely regular space. If \({Y}_{1}\) and \({Y}_{2}\) are two compact-ifications of \(X\) satisfying the extension property of Theorem 38.2, then \({Y}_{1}\) and \({Y}_{2}\) are equivalent.
+\begin{theorem}
+	Let \(X\) be a completely regular space. If \({Y}_{1}\) and \({Y}_{2}\) are two compact-ifications of \(X\) satisfying the extension property of Theorem 38.2, then \({Y}_{1}\) and \({Y}_{2}\) are equivalent.
 \end{theorem}
 
-\begin{proof}Consider the inclusion mapping \({j}_{2} : X \rightarrow  {Y}_{2}\) . It is a continuous map of \(X\) into the compact Hausdorff space \({Y}_{2}\) . Because \({Y}_{1}\) has the extension property, we may, by the preceding theorem, extend \({j}_{2}\) to a continuous map \({f}_{2} : {Y}_{1} \rightarrow  {Y}_{2}\) . Similarly, we may extend the inclusion map \({j}_{1} : X \rightarrow  {Y}_{1}\) to a continuous map \({f}_{1} : {Y}_{2} \rightarrow  {Y}_{1}\) (because \({Y}_{2}\) has the extension property and \({Y}_{1}\) is compact Hausdorff).
+\begin{proof}
+	Consider the inclusion mapping \({j}_{2} : X \rightarrow  {Y}_{2}\) . It is a continuous map of \(X\) into the compact Hausdorff space \({Y}_{2}\) . Because \({Y}_{1}\) has the extension property, we may, by the preceding theorem, extend \({j}_{2}\) to a continuous map \({f}_{2} : {Y}_{1} \rightarrow  {Y}_{2}\) . Similarly, we may extend the inclusion map \({j}_{1} : X \rightarrow  {Y}_{1}\) to a continuous map \({f}_{1} : {Y}_{2} \rightarrow  {Y}_{1}\) (because \({Y}_{2}\) has the extension property and \({Y}_{1}\) is compact Hausdorff).
 \begin{center}
 \includegraphics[width=0.4\textwidth]{images/37.3.jpg}
 \end{center}
@@ -356,47 +388,35 @@ Thus \(g\) is the desired extension of \(f\)
 
 The composite \({f}_{1} \circ  {f}_{2} : {Y}_{1} \rightarrow  {Y}_{1}\) has the property that for every \(x \in  X\) , one has \({f}_{1}\left( {{f}_{2}\left( x\right) }\right)  = x\) Therefore, \({f}_{1} \circ  {f}_{2}\) is a continuous extension of the identity map \({i}_{X} : X \rightarrow  X\) . But the identity map of \({Y}_{1}\) is also a continuous extension of \({i}_{X}\) . By uniqueness of extensions (Lemma 38.3), \({f}_{1} \circ  {f}_{2}\) must equal the identity map of \({Y}_{1}\) . Similarly, \({f}_{2} \circ  {f}_{1}\) must equal the identity map of \({Y}_{2}\) Thus \({f}_{1}\) and \({f}_{2}\) are homeomorphisms.
 \end{proof}
-\begin{definition} For each completely regular space \(X\) , let us choose, once and for all, a compactification of \(X\) satisfying the extension condition of Theorem 38.2. We will denote this compactification of \(X\) by \(\beta \left( X\right)\) and call it the Stone-Čech compactification of \(X\) . It is characterized by the fact that any continuous map \(f : X \rightarrow  C\) of \(X\) into a compact Hausdorff space \(C\) extends uniquely to a continuous map \(g\;\beta \left( X\right)  \rightarrow  C\) .
+\begin{definition}
+	For each completely regular space \(X\) , let us choose, once and for all, a compactification of \(X\) satisfying the extension condition of Theorem 38.2. We will denote this compactification of \(X\) by \(\beta \left( X\right)\) and call it the Stone-Čech compactification of \(X\) . It is characterized by the fact that any continuous map \(f : X \rightarrow  C\) of \(X\) into a compact Hausdorff space \(C\) extends uniquely to a continuous map \(g\;\beta \left( X\right)  \rightarrow  C\) .
 \end{definition}
 
 \section*{Exercises}
-
-1. Verify the statements made in Example 4.
-
-2. Show that the bounded continuous function \(g\left( {0,1}\right)  \rightarrow  \mathbb{R}\) defined by \(g\left( x\right)  =\)  \(\cos \left( {1/x}\right)\) cannot be extended to the compactification of Example 3. Define an imbedding \(h : \left( {0,1}\right)  \rightarrow  {\left\lbrack  0,1\right\rbrack  }^{3}\) such that the functions \(x,\sin \left( {1/x}\right)\) , and \(\cos \left( {1/x}\right)\) are all extendable to the compactification induced by \(h\) .
-
-3. Under what conditions does a metrizable space have a metrizable compactification?
-
-4. Let \(Y\) be an arbitrary compactification of \(X\) ; let \(\beta \left( X\right)\) be the Stone-Čech compactification. Show there is a continuous surjective closed map \(g : \beta \left( X\right)  \rightarrow  Y\) that equals the identity on \(X\)
-
-[This exercise makes precise what we mean by saying that \(\beta \left( X\right)\) is the ``maximal'' compactification of \(X\) . It shows that every compactification of \(X\) is equivalent to a quotient space of \(\beta \left( X\right)\) .]
-
-5. (a) Show that every continuous real-valued function defined on \({S}_{\Omega }\) is ``eventually constant.'' [Hint First prove that for each \(\epsilon\) , there is an element \(\alpha\) of \({S}_{\Omega }\) such that \(\left| {f\left( \beta \right)  - f\left( \alpha \right) }\right|  < \epsilon\) for all \(\beta  > \alpha\) Then let \(\epsilon  = 1/n\) for \(n \in  {\mathbb{Z}}_{ + }\) and consider the corresponding points \(\left. {{\alpha }_{n}\text{ . }}\right\rbrack\)
-
-(b) Show that the one-point compactification of \({S}_{\Omega }\) and the Stone-Čech compactification are equivalent.
-
-(c) Conclude that every compactification of \({S}_{\Omega }\) is equivalent to the one-point compactification.
-
-6. Let \(X\) be completely regular. Show that \(X\) is connected if and only if \(\beta \left( X\right)\) is connected. [Hint: If \(X = A \cup  B\) is a separation of \(X\) , let \(f\left( x\right)  = 0\) for \(x \in  A\) and \(f\left( x\right)  = 1\) for \(x \in  B\) .]
-
-7. Let \(X\) be a discrete space; consider the space \(\beta \left( X\right)\) .
-
-(a) Show that if \(A \subset  X\) , then \(\bar{A}\) and \(\overline{X - A}\) are disjoint, where the closures are taken in \(\beta \left( X\right)\) .
-
-(b) Show that if \(U\) is open in \(\beta \left( X\right)\) , then \(\bar{U}\) is open in \(\beta \left( X\right)\) .
-
-(c) Show that \(\beta \left( X\right)\) is totally disconnected.
-
-8. Show that \(\beta \left( {\mathbb{Z}}_{ + }\right)\) has cardinality at least as great as \({I}^{I}\) , where \(I = \left\lbrack  {0,1}\right\rbrack\) . [Hint: The space \({I}^{\prime }\) has a countable dense subset.]
-
-9. (a) If \(X\) is normal and \(y\) is a point of \(\beta \left( X\right)  - X\) , show that \(y\) is not the limit of a sequence of points of \(X\) .
-
-(b) Show that if \(X\) is completely regular and noncompact, then \(\beta \left( X\right)\) is not metrizable.
-
-10. We have constructed a correspondence \(X \rightarrow  \beta \left( X\right)\) that assigns, to each completely regular space, its Stone-Čech compactification. Now let us assign, to each continuous map \(f : X \rightarrow  Y\) of completely regular spaces, the unique continuous map \(\beta \left( f\right)  : \beta \left( X\right)  \rightarrow  \beta \left( Y\right)\) that extends the map \(i \circ  f\) , where \(i : Y \rightarrow  \beta \left( Y\right)\) is the inclusion map. Verify the following:
-
-(i) If \({1}_{X} : X \rightarrow  X\) is the identity map of \(X\) , then \(\beta \left( {1}_{X}\right)\) is the identity map of \(\beta \left( X\right)\) .
-
-(ii) If \(f : X \rightarrow  Y\) and \(g : Y \rightarrow  Z\) , then \(\beta \left( {g \circ  f}\right)  = \beta \left( g\right)  \circ  \beta \left( f\right)\) .
-
-These properties tell us that the correspondence we have constructed is what is called a functor; it is a functor from the ``category'' of completely regular spaces and continuous maps of such spaces, to the ``category'' of compact Hausdorff spaces and continuous maps of such spaces. You will see these properties again in Part II of the book; they are fundamental in algebra and in algebraic topology.
+\begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
+\item Verify the statements made in Example 4.
+\item Show that the bounded continuous function \(g\left( {0,1}\right)  \rightarrow  \mathbb{R}\) defined by \(g\left( x\right)  =\)  \(\cos \left( {1/x}\right)\) cannot be extended to the compactification of Example 3. Define an imbedding \(h : \left( {0,1}\right)  \rightarrow  {\left\lbrack  0,1\right\rbrack  }^{3}\) such that the functions \(x,\sin \left( {1/x}\right)\) , and \(\cos \left( {1/x}\right)\) are all extendable to the compactification induced by \(h\) .
+\item Under what conditions does a metrizable space have a metrizable compactification?
+\item Let \(Y\) be an arbitrary compactification of \(X\) ; let \(\beta \left( X\right)\) be the Stone-Čech compactification. Show there is a continuous surjective closed map \(g : \beta \left( X\right)  \rightarrow  Y\) that equals the identity on \(X\) [This exercise makes precise what we mean by saying that \(\beta \left( X\right)\) is the ``maximal'' compactification of \(X\) . It shows that every compactification of \(X\) is equivalent to a quotient space of \(\beta \left( X\right)\) .]
+\item (a) Show that every continuous real-valued function defined on \({S}_{\Omega }\) is ``eventually constant.'' [Hint First prove that for each \(\epsilon\) , there is an element \(\alpha\) of \({S}_{\Omega }\) such that \(\left| {f\left( \beta \right)  - f\left( \alpha \right) }\right|  < \epsilon\) for all \(\beta  > \alpha\) Then let \(\epsilon  = 1/n\) for \(n \in  {\mathbb{Z}}_{ + }\) and consider the corresponding points \(\left. {{\alpha }_{n}\text{ . }}\right\rbrack\)
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show that the one-point compactification of \({S}_{\Omega }\) and the Stone-Čech compactification are equivalent.
+  \item Conclude that every compactification of \({S}_{\Omega }\) is equivalent to the one-point compactification.
+  \end{enumerate}
+\item Let \(X\) be completely regular. Show that \(X\) is connected if and only if \(\beta \left( X\right)\) is connected. [Hint: If \(X = A \cup  B\) is a separation of \(X\) , let \(f\left( x\right)  = 0\) for \(x \in  A\) and \(f\left( x\right)  = 1\) for \(x \in  B\) .]
+\item Let \(X\) be a discrete space; consider the space \(\beta \left( X\right)\) .
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show that if \(A \subset  X\) , then \(\bar{A}\) and \(\overline{X - A}\) are disjoint, where the closures are taken in \(\beta \left( X\right)\) .
+  \item Show that if \(U\) is open in \(\beta \left( X\right)\) , then \(\bar{U}\) is open in \(\beta \left( X\right)\) .
+  \item Show that \(\beta \left( X\right)\) is totally disconnected.
+  \end{enumerate}
+\item Show that \(\beta \left( {\mathbb{Z}}_{ + }\right)\) has cardinality at least as great as \({I}^{I}\) , where \(I = \left\lbrack  {0,1}\right\rbrack\) . [Hint: The space \({I}^{\prime }\) has a countable dense subset.]
+\item (a) If \(X\) is normal and \(y\) is a point of \(\beta \left( X\right)  - X\) , show that \(y\) is not the limit of a sequence of points of \(X\) .
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show that if \(X\) is completely regular and noncompact, then \(\beta \left( X\right)\) is not metrizable.
+  \end{enumerate}
+\item We have constructed a correspondence \(X \rightarrow  \beta \left( X\right)\) that assigns, to each completely regular space, its Stone-Čech compactification. Now let us assign, to each continuous map \(f : X \rightarrow  Y\) of completely regular spaces, the unique continuous map \(\beta \left( f\right)  : \beta \left( X\right)  \rightarrow  \beta \left( Y\right)\) that extends the map \(i \circ  f\) , where \(i : Y \rightarrow  \beta \left( Y\right)\) is the inclusion map. Verify the following:
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item If \({1}_{X} : X \rightarrow  X\) is the identity map of \(X\) , then \(\beta \left( {1}_{X}\right)\) is the identity map of \(\beta \left( X\right)\) . (ii) If \(f : X \rightarrow  Y\) and \(g : Y \rightarrow  Z\) , then \(\beta \left( {g \circ  f}\right)  = \beta \left( g\right)  \circ  \beta \left( f\right)\) . These properties tell us that the correspondence we have constructed is what is called a functor; it is a functor from the ``category'' of completely regular spaces and continuous maps of such spaces, to the ``category'' of compact Hausdorff spaces and continuous maps of such spaces. You will see these properties again in Part II of the book; they are fundamental in algebra and in algebraic topology.
+  \end{enumerate}
+\end{enumerate}

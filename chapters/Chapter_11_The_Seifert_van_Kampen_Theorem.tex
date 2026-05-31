@@ -22,19 +22,24 @@ G = {\bigoplus }_{\alpha  \in  J}{G}_{\alpha }
 
 or in the finite case, \(G = {G}_{1} \oplus  \cdots  \oplus  {G}_{n}\)
 
-\begin{example} The cartesian product \({\mathbb{R}}^{\omega }\) is an abelian group under the operation of coordinate-wise addition. The set \({G}_{n}\) consisting of those tuples \(\left( {x}_{t}\right)\) such that \({x}_{t} = 0\) for \(i \neq  n\) is a subgroup isomorphic to \(\mathbb{R}\) . The groups \({G}_{n}\) generate the subgroup \({\mathbb{R}}^{\infty }\) of \({\mathbb{R}}^{\omega }\) , indeed, \({\mathbb{R}}^{\infty }\) is their direct sum.
+\begin{centeredblock}
+\begin{example}
+	The cartesian product \({\mathbb{R}}^{\omega }\) is an abelian group under the operation of coordinate-wise addition. The set \({G}_{n}\) consisting of those tuples \(\left( {x}_{t}\right)\) such that \({x}_{t} = 0\) for \(i \neq  n\) is a subgroup isomorphic to \(\mathbb{R}\) . The groups \({G}_{n}\) generate the subgroup \({\mathbb{R}}^{\infty }\) of \({\mathbb{R}}^{\omega }\) , indeed, \({\mathbb{R}}^{\infty }\) is their direct sum.
 \end{example}
+\end{centeredblock}
 
 A useful characterization of direct sums is given in the following lemma, we call it the \idx{Extension condition: for direct sums} extension condition for direct sums.
 
-\begin{lemma} Let \(G\) be an abelian group; let \(\left\{  {G}_{\alpha }\right\}\) be a family of subgroups of \(G\) . If \(G\) is the direct sum of the groups \({G}_{\alpha }\) , then \(G\) satisfies the following condition:
+\begin{lemma}
+	Let \(G\) be an abelian group; let \(\left\{  {G}_{\alpha }\right\}\) be a family of subgroups of \(G\) . If \(G\) is the direct sum of the groups \({G}_{\alpha }\) , then \(G\) satisfies the following condition:
 
 Given any abelian group \(H\) and any family of homomorphisms *) \(\;{h}_{\alpha } : {G}_{\alpha } \rightarrow  H\) , there exists a homomorphism \(h : G \rightarrow  H\) whose restriction to \({G}_{\alpha }\) equals \({h}_{\alpha }\) , for each \(\alpha\) .
 
 Furthermore, \(h\) is unique. Conversely, if the groups \({G}_{\alpha }\) generate \(G\) and the extension condition (*) holds, then \(G\) is the direct sum of the groups \({G}_{\alpha }\) .
 \end{lemma}
 
-\begin{proof}We show first that if \(G\) has the stated extension property, then \(G\) is the direct sum of the \({G}_{\alpha }\) . Suppose \(x = \sum {x}_{\alpha } = \sum {y}_{\alpha }\) ; we show that for any particular index \(\beta\) , we have \({x}_{\beta } = {y}_{\beta }\) . Let \(H\) denote the group \({G}_{\beta }\) ; and let \({h}_{\alpha } : {G}_{\alpha } \rightarrow  H\) be the trivial homomorphism for \(\alpha  \neq  \beta\) , and the identity homomorphism for \(\alpha  = \beta\) . Let \(h : G \rightarrow  H\) be the hypothesized extension of the homomorphisms \({h}_{\alpha }\) . Then
+\begin{proof}
+	We show first that if \(G\) has the stated extension property, then \(G\) is the direct sum of the \({G}_{\alpha }\) . Suppose \(x = \sum {x}_{\alpha } = \sum {y}_{\alpha }\) ; we show that for any particular index \(\beta\) , we have \({x}_{\beta } = {y}_{\beta }\) . Let \(H\) denote the group \({G}_{\beta }\) ; and let \({h}_{\alpha } : {G}_{\alpha } \rightarrow  H\) be the trivial homomorphism for \(\alpha  \neq  \beta\) , and the identity homomorphism for \(\alpha  = \beta\) . Let \(h : G \rightarrow  H\) be the hypothesized extension of the homomorphisms \({h}_{\alpha }\) . Then
 \[
 \begin{aligned}  & h\left( x\right)  = \sum {h}_{\alpha }\left( {x}_{\alpha }\right)  = {x}_{\beta }, \\  & h\left( x\right)  = \sum {h}_{\alpha }\left( {y}_{\alpha }\right)  = {y}_{\beta }, \end{aligned}
 \]
@@ -45,31 +50,38 @@ Now we show that if \(G\) is the direct sum of the \({G}_{\alpha }\) , then the 
 
 This lemma makes a number of results about direct sums quite easy to prove
 \end{proof}
-\begin{corollary} Let \(G = {G}_{1} \oplus  {G}_{2}\) . Suppose \({G}_{1}\) is the direct sum of subgroups \({H}_{\alpha }\) for \(\alpha  \in  J\) , and \({G}_{2}\) is the direct sum of subgroups \({H}_{\beta }\) for \(\beta  \in  K\) , where the index sets \(J\) and \(K\) are disjoint. Then \(G\) is the direct sum of the subgroups \({H}_{\gamma }\) , for \(\gamma  \in  J \cup  K\) .
+\begin{corollary}
+	Let \(G = {G}_{1} \oplus  {G}_{2}\) . Suppose \({G}_{1}\) is the direct sum of subgroups \({H}_{\alpha }\) for \(\alpha  \in  J\) , and \({G}_{2}\) is the direct sum of subgroups \({H}_{\beta }\) for \(\beta  \in  K\) , where the index sets \(J\) and \(K\) are disjoint. Then \(G\) is the direct sum of the subgroups \({H}_{\gamma }\) , for \(\gamma  \in  J \cup  K\) .
 \end{corollary}
 
-\begin{proof}If \({h}_{\alpha } : {H}_{\alpha } \rightarrow  H\) and \({h}_{\beta } : {H}_{\beta } \rightarrow  H\) are families of homomorphisms, they extend to homomorphisms \({h}_{1} : {G}_{1} \rightarrow  H\) and \({h}_{2} : {G}_{2} \rightarrow  H\) by the preceding lemma. Then \({h}_{1}\) and \({h}_{2}\) extend to a homomorphism \(h : G \rightarrow  H\) .
+\begin{proof}
+	If \({h}_{\alpha } : {H}_{\alpha } \rightarrow  H\) and \({h}_{\beta } : {H}_{\beta } \rightarrow  H\) are families of homomorphisms, they extend to homomorphisms \({h}_{1} : {G}_{1} \rightarrow  H\) and \({h}_{2} : {G}_{2} \rightarrow  H\) by the preceding lemma. Then \({h}_{1}\) and \({h}_{2}\) extend to a homomorphism \(h : G \rightarrow  H\) .
 This corollary implies, for example, that
 
 \[
 \left( {{G}_{1} \oplus  {G}_{2}}\right)  \oplus  {G}_{3} = {G}_{1} \oplus  {G}_{2} \oplus  {G}_{3} = {G}_{1} \oplus  \left( {{G}_{2} \oplus  {G}_{3}}\right) .
 \]
 \end{proof}
-\begin{corollary} If \(G = {G}_{1} \oplus  {G}_{2}\) , then \(G/{G}_{2}\) is isomorphic to \({G}_{1}\) .
+\begin{corollary}
+	If \(G = {G}_{1} \oplus  {G}_{2}\) , then \(G/{G}_{2}\) is isomorphic to \({G}_{1}\) .
 \end{corollary}
 
-\begin{proof}Let \(H = {G}_{1}\) , let \({h}_{1} : {G}_{1} \rightarrow  H\) be the identity homomorphism, and let \({h}_{2} : {G}_{2} \rightarrow  H\) be the trivial homomorphism. Let \(h : G \rightarrow  H\) be their extension to \(G\) . Then \(h\) is surjective with kernel \({G}_{2}\) .
+\begin{proof}
+	Let \(H = {G}_{1}\) , let \({h}_{1} : {G}_{1} \rightarrow  H\) be the identity homomorphism, and let \({h}_{2} : {G}_{2} \rightarrow  H\) be the trivial homomorphism. Let \(h : G \rightarrow  H\) be their extension to \(G\) . Then \(h\) is surjective with kernel \({G}_{2}\) .
 In many situations, one is given a family of abelian groups \(\left\{  {G}_{\alpha }\right\}\) and one wishes to find a group \(G\) that contains subgroups \({G}_{\alpha }^{\prime }\) isomorphic to the groups \({G}_{\alpha }\) , such that \(G\) is the direct sum of these subgroups. This can in fact always be done, it leads to a notion called the \idx{external direct sum}.
 \end{proof}
-\begin{definition} Let \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an indexed family of abelian groups Suppose that \(G\) is an abelian group, and that \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) is a family of monomorphisms, such that \(G\) is the direct sum of the groups \({i}_{\alpha }\left( {G}_{\alpha }\right)\) . Then we say that \(G\) is the external direct sum of the groups \({G}_{\alpha }\) , relative to the monomorphisms \({i}_{\alpha }\) .
+\begin{definition}
+	Let \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an indexed family of abelian groups Suppose that \(G\) is an abelian group, and that \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) is a family of monomorphisms, such that \(G\) is the direct sum of the groups \({i}_{\alpha }\left( {G}_{\alpha }\right)\) . Then we say that \(G\) is the external direct sum of the groups \({G}_{\alpha }\) , relative to the monomorphisms \({i}_{\alpha }\) .
 \end{definition}
 
 The group \(G\) is not unique, of course; we show later that it is unique up to isomorphism. Here is one way of constructing \(G\) :
 
-\begin{theorem} Given a family of abelian groups \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) , there exists an abelian group \(G\) and a family of monomorphisms \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) such that \(G\) is the direct sum of the groups \({i}_{\alpha }\left( {G}_{\alpha }\right)\) .
+\begin{theorem}
+	Given a family of abelian groups \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) , there exists an abelian group \(G\) and a family of monomorphisms \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) such that \(G\) is the direct sum of the groups \({i}_{\alpha }\left( {G}_{\alpha }\right)\) .
 \end{theorem}
 
-\begin{proof}Consider first the cartesian product
+\begin{proof}
+	Consider first the cartesian product
 \[
 \mathop{\prod }\limits_{{\alpha  \in  J}}{G}_{\alpha }
 \]
@@ -78,7 +90,8 @@ it is an abelian group if we add two \(J\) -tuples by adding them coordinate-wis
 
 The extension condition that characterizes ordinary direct sums translates immediately into an extension condition for external direct sums:
 \end{proof}
-\begin{lemma} Let \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an indexed family of abelian groups; let \(G\) be an abelian group; let \({\mathrm{i}}_{\alpha } : {G}_{\alpha } \rightarrow  G\) be a family of homomorphisms. If each \({\mathrm{i}}_{\alpha }\) is a monomorphism and \(G\) is the direct sum of the groups \({\mathrm{i}}_{\alpha }\left( {G}_{\alpha }\right)\) , then \(G\) satisfies the following extension condition:
+\begin{lemma}
+	Let \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an indexed family of abelian groups; let \(G\) be an abelian group; let \({\mathrm{i}}_{\alpha } : {G}_{\alpha } \rightarrow  G\) be a family of homomorphisms. If each \({\mathrm{i}}_{\alpha }\) is a monomorphism and \(G\) is the direct sum of the groups \({\mathrm{i}}_{\alpha }\left( {G}_{\alpha }\right)\) , then \(G\) satisfies the following extension condition:
 
 \({G}_{1}\) ven any abelian group \(H\) and any family of homomorphisms \({h}_{\alpha }\) :
 
@@ -87,72 +100,61 @@ The extension condition that characterizes ordinary direct sums translates immed
 Furthermore, \(h\) is unique. Conversely, suppose the groups \({\mathrm{i}}_{\alpha }\left( {G}_{\alpha }\right)\) generate \(G\) and the extension condition (*) holds. Then each \({i}_{\alpha }\) is a monomorphism, and \(G\) is the direct sum of the groups \({i}_{\alpha }\left( {G}_{\alpha }\right)\) .
 \end{lemma}
 
-\begin{proof}The only part that requires proof is the statement that if the extension condition holds, then each \({i}_{\alpha }\) is a monomorphism. That is proved as follows. Given an index \(\beta\) , set \(H = {G}_{\beta }\) and let \({h}_{\alpha } : {G}_{\alpha } \rightarrow  H\) be the identity homomorphism if \(\alpha  = \beta\) , and the trivial homomorphism if \(\alpha  \neq  \beta\) . Let \(h : G \rightarrow  H\) be the hypothesized extension. Then in particular, \(h \circ  {i}_{\beta } = {h}_{\beta }\) ; it follows that \({i}_{\beta }\) is injective.
+\begin{proof}
+	The only part that requires proof is the statement that if the extension condition holds, then each \({i}_{\alpha }\) is a monomorphism. That is proved as follows. Given an index \(\beta\) , set \(H = {G}_{\beta }\) and let \({h}_{\alpha } : {G}_{\alpha } \rightarrow  H\) be the identity homomorphism if \(\alpha  = \beta\) , and the trivial homomorphism if \(\alpha  \neq  \beta\) . Let \(h : G \rightarrow  H\) be the hypothesized extension. Then in particular, \(h \circ  {i}_{\beta } = {h}_{\beta }\) ; it follows that \({i}_{\beta }\) is injective.
 An immediate consequence is a uniqueness theorem for direct sums:
 \end{proof}
-\begin{theorem}[Uniqueness of direct sums] Let \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) be a family of abelian groups Suppose \(G\) and \({G}^{\prime }\) are abelian groups and \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) and \({\mathrm{i}}_{\alpha }^{\prime } : {G}_{\alpha } \rightarrow  {G}^{\prime }\) are families of monomorphisms, such that \(G\) is the direct sum of the groups \({i}_{\alpha }\left( {G}_{\alpha }\right)\) and \({G}^{\prime }\) is the direct sum of the groups \({\mathrm{i}}_{\alpha }^{\prime }\left( {G}_{\alpha }\right)\) . Then there is a unique isomorphism \(\phi .G \rightarrow  {G}^{\prime }\) such that \(\phi  \circ  {i}_{\alpha } = {i}_{\alpha }^{\prime }\) for each \(\alpha\) .
+\begin{theorem}[Uniqueness of direct sums]
+	Let \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) be a family of abelian groups Suppose \(G\) and \({G}^{\prime }\) are abelian groups and \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) and \({\mathrm{i}}_{\alpha }^{\prime } : {G}_{\alpha } \rightarrow  {G}^{\prime }\) are families of monomorphisms, such that \(G\) is the direct sum of the groups \({i}_{\alpha }\left( {G}_{\alpha }\right)\) and \({G}^{\prime }\) is the direct sum of the groups \({\mathrm{i}}_{\alpha }^{\prime }\left( {G}_{\alpha }\right)\) . Then there is a unique isomorphism \(\phi .G \rightarrow  {G}^{\prime }\) such that \(\phi  \circ  {i}_{\alpha } = {i}_{\alpha }^{\prime }\) for each \(\alpha\) .
 \end{theorem}
 
-\begin{proof}We apply the preceding lemma (four times!). Since \(G\) is the external direct sum of the \({G}_{\alpha }\) and \(\left\{  {i}_{\alpha }^{\prime }\right\}\) is a family of homomorphisms, there exists a unique homomorphism \(\phi  : G \rightarrow  {G}^{\prime }\) such that \(\phi  \circ  {i}_{\alpha } = {i}_{\alpha }^{\prime }\) for each \(\alpha\) . Similarly, since \({G}^{\prime }\) is the external direct sum of the \({G}_{\alpha }\) and \(\left\{  {i}_{\alpha }\right\}\) is a family of homomorphisms, there exists a unique homomorphism \(\psi .{G}^{\prime } \rightarrow  G\) such that \(\psi  \circ  {i}_{\alpha }^{\prime } = {i}_{\alpha }\) for each \(\alpha\) . Now \(\psi  \circ  \phi  : G \rightarrow  G\) has the property that \(\psi  \circ  \phi  \circ  {i}_{\alpha } = {i}_{\alpha }\) for each \(\alpha\) ; since the identity map of \(G\) has the same property, the uniqueness part of the lemma shows that \(\psi  \circ  \phi\) must equal the identity map of \(G\) . Similarly, \(\phi  \circ  \psi\) must equal the identity map of \({G}^{\prime }\) .
+\begin{proof}
+	We apply the preceding lemma (four times!). Since \(G\) is the external direct sum of the \({G}_{\alpha }\) and \(\left\{  {i}_{\alpha }^{\prime }\right\}\) is a family of homomorphisms, there exists a unique homomorphism \(\phi  : G \rightarrow  {G}^{\prime }\) such that \(\phi  \circ  {i}_{\alpha } = {i}_{\alpha }^{\prime }\) for each \(\alpha\) . Similarly, since \({G}^{\prime }\) is the external direct sum of the \({G}_{\alpha }\) and \(\left\{  {i}_{\alpha }\right\}\) is a family of homomorphisms, there exists a unique homomorphism \(\psi .{G}^{\prime } \rightarrow  G\) such that \(\psi  \circ  {i}_{\alpha }^{\prime } = {i}_{\alpha }\) for each \(\alpha\) . Now \(\psi  \circ  \phi  : G \rightarrow  G\) has the property that \(\psi  \circ  \phi  \circ  {i}_{\alpha } = {i}_{\alpha }\) for each \(\alpha\) ; since the identity map of \(G\) has the same property, the uniqueness part of the lemma shows that \(\psi  \circ  \phi\) must equal the identity map of \(G\) . Similarly, \(\phi  \circ  \psi\) must equal the identity map of \({G}^{\prime }\) .
 If \(G\) is the external direct sum of the groups \({G}_{\alpha }\) , relative to the monomorphisms \({i}_{\alpha }\) , we sometimes abuse notation and write \(G = \bigoplus {G}_{\alpha }\) , even though the groups \({G}_{\alpha }\) are not subgroups of \(G\) . That is, we identify each group \({G}_{\alpha }\) with its image under \({i}_{\alpha }\) , and treat \(G\) as an ordinary direct sum rather than an external direct sum. In each case, the context will make the meaning clear.
 
 Now we discuss \idx{free abelian group}s.
 \end{proof}
-\begin{definition} Let \(G\) be an abelian group and let \(\left\{  {a}_{\alpha }\right\}\) be an indexed family of elements of \(G\) ; let \({G}_{\alpha }\) be the subgroup of \(G\) \idx{Generated: by elements} generated by \({a}_{\alpha }\) . If the groups \({G}_{\alpha }\) generate \(G\) , we also say that the elements \({a}_{\alpha }\) generate \(G\) . If each group \({G}_{\alpha }\) is infinite cyclic, and if \(G\) is the direct sum of the groups \({G}_{\alpha }\) , then \(G\) is said to be a free abelian group having the elements \(\left\{  {a}_{\alpha }\right\}\) as a \idx{Basis: for a free abelian group} basis.
+\begin{definition}
+	Let \(G\) be an abelian group and let \(\left\{  {a}_{\alpha }\right\}\) be an indexed family of elements of \(G\) ; let \({G}_{\alpha }\) be the subgroup of \(G\) \idx{Generated: by elements} generated by \({a}_{\alpha }\) . If the groups \({G}_{\alpha }\) generate \(G\) , we also say that the elements \({a}_{\alpha }\) generate \(G\) . If each group \({G}_{\alpha }\) is infinite cyclic, and if \(G\) is the direct sum of the groups \({G}_{\alpha }\) , then \(G\) is said to be a free abelian group having the elements \(\left\{  {a}_{\alpha }\right\}\) as a \idx{Basis: for a free abelian group} basis.
 \end{definition}
 
 The extension condition for direct sums implies the following extension condition for free abelian groups:
 
-\begin{lemma} Let \(G\) be an abelian group; let \({\left\{  {a}_{\alpha }\right\}  }_{\alpha  \in  J}\) be a family of elements of \(G\) that generates \(G\) . Then \(G\) is a free abelian group with basis \(\left\{  {a}_{\alpha }\right\}\) if and only if for any abelian group \(H\) and any family \(\left\{  {y}_{\alpha }\right\}\) of elements of \(H\) , there is a homomorphism \(h\) of \(G\) into \(H\) such that \(h\left( {a}_{\alpha }\right)  = {y}_{\alpha }\) for each \(\alpha\) . In such case, \(h\) is unique.
+\begin{lemma}
+	Let \(G\) be an abelian group; let \({\left\{  {a}_{\alpha }\right\}  }_{\alpha  \in  J}\) be a family of elements of \(G\) that generates \(G\) . Then \(G\) is a free abelian group with basis \(\left\{  {a}_{\alpha }\right\}\) if and only if for any abelian group \(H\) and any family \(\left\{  {y}_{\alpha }\right\}\) of elements of \(H\) , there is a homomorphism \(h\) of \(G\) into \(H\) such that \(h\left( {a}_{\alpha }\right)  = {y}_{\alpha }\) for each \(\alpha\) . In such case, \(h\) is unique.
 \end{lemma}
 
-\begin{proof}Let \({G}_{\alpha }\) denote the subgroup of \(G\) generated by \({a}_{\alpha }\) . Suppose first that the extension property holds. We show first that each group \({G}_{\alpha }\) is infinite cyclic. Suppose that for some index \(\beta\) , the element \({a}_{\beta }\) generates a finite cyclic subgroup of \(G\) . Then if we set \(H = \mathbb{Z}\) , there is no homomorphism \(h : G \rightarrow  H\) that maps each \({a}_{\alpha }\) to the number 1. For \({a}_{\beta }\) has finite \idx{Order of a group element} order and 1 does not! To show that \(G\) is the direct sum of the groups \({G}_{\alpha }\) , we merely apply Lemma 67.1.
+\begin{proof}
+	Let \({G}_{\alpha }\) denote the subgroup of \(G\) generated by \({a}_{\alpha }\) . Suppose first that the extension property holds. We show first that each group \({G}_{\alpha }\) is infinite cyclic. Suppose that for some index \(\beta\) , the element \({a}_{\beta }\) generates a finite cyclic subgroup of \(G\) . Then if we set \(H = \mathbb{Z}\) , there is no homomorphism \(h : G \rightarrow  H\) that maps each \({a}_{\alpha }\) to the number 1. For \({a}_{\beta }\) has finite \idx{Order of a group element} order and 1 does not! To show that \(G\) is the direct sum of the groups \({G}_{\alpha }\) , we merely apply Lemma 67.1.
 Conversely, if \(G\) is free abelian with basis \(\left\{  {a}_{\alpha }\right\}\) , then given the elements \(\left\{  {y}_{\alpha }\right\}\) of \(H\) , there are homomorphisms \({h}_{\alpha } : {G}_{\alpha } \rightarrow  H\) such that \({h}_{\alpha }\left( {a}_{\alpha }\right)  = {y}_{\alpha }\) (because \({G}_{\alpha }\) is infinite cyclic). Then Lemma 67.1 applies.
 \end{proof}
-\begin{theorem} If \(G\) is a free abelian group with basis \(\left\{  {{a}_{1},\ldots ,{a}_{n}}\right\}\) , then \(n\) is uniquely determined by \(G\) .
+\begin{theorem}
+	If \(G\) is a free abelian group with basis \(\left\{  {{a}_{1},\ldots ,{a}_{n}}\right\}\) , then \(n\) is uniquely determined by \(G\) .
 \end{theorem}
 
-\begin{proof}The group \(G\) is isomorphic to the \(n\) -fold product \(\mathbb{Z} \times  \cdots  \times  \mathbb{Z}\) ; the subgroup \({2G}\) corresponds to the product \(\left( {2\mathbb{Z}}\right)  \times  \cdots  \times  \left( {2\mathbb{Z}}\right)\) . Then the quotient group \(G/{2G}\) is in bijective correspondence with the set \(\left( {\mathbb{Z}/2\mathbb{Z}}\right)  \times  \cdots  \times  \left( {\mathbb{Z}/2\mathbb{Z}}\right)\) , so that \(G/{2G}\) has cardinality \({2}^{n}\) . Thus \(n\) is uniquely determined by \(G\) .
+\begin{proof}
+	The group \(G\) is isomorphic to the \(n\) -fold product \(\mathbb{Z} \times  \cdots  \times  \mathbb{Z}\) ; the subgroup \({2G}\) corresponds to the product \(\left( {2\mathbb{Z}}\right)  \times  \cdots  \times  \left( {2\mathbb{Z}}\right)\) . Then the quotient group \(G/{2G}\) is in bijective correspondence with the set \(\left( {\mathbb{Z}/2\mathbb{Z}}\right)  \times  \cdots  \times  \left( {\mathbb{Z}/2\mathbb{Z}}\right)\) , so that \(G/{2G}\) has cardinality \({2}^{n}\) . Thus \(n\) is uniquely determined by \(G\) .
 If \(G\) is a free abelian group with a finite basis, the number of elements in a basis for \(G\) is called the rank of \(G\) .
 \end{proof}
 \section*{Exercises}
-
-1. Suppose that \(G = \sum {G}_{\alpha }\) . Show this sum is direct if and only if the equation
-
-\[
-{x}_{{\alpha }_{1}} + \cdots  + {x}_{{\alpha }_{n}} = 0
-\]
-
-implies that each \({x}_{{\alpha }_{i}}\) equals 0 . (Here \({x}_{{\alpha }_{i}} \in  {G}_{{\alpha }_{i}}\) and the indices \({\alpha }_{i}\) are distinct.)
-
-2. Show that if \({G}_{1}\) is a subgroup of \(G\) , there may be no subgroup \({G}_{2}\) of \(G\) such that \(G = {G}_{1} \oplus  {G}_{2}\) . [Hint: Set \(G = \mathbb{Z}\) and \({G}_{1} = 2\mathbb{Z}\) .]
-
-3. If \(G\) is free abelian with basis \(\{ x,y\}\) , show that \(\{ {2x} + {3y},x - y\}\) is also a basis for \(G\) .
-
-4. The order of an element \(a\) of an abelian group \(G\) is the smallest positive integer \(m\) such that \({ma} = 0\) , if such exists; otherwise, the order of \(a\) is said to be infinite. The order of \(a\) thus equals the order of the subgroup generated by \(a\) .
-
-(a) Show the elements of finite order in \(G\) form a subgroup of \(G\) , called its \idx{torsion subgroup}.
-
-(b) Show that if \(G\) is free abelian, it has no elements of finite order.
-
-(c) Show the additive group of rationals has no elements of finite order, but is not free abelian. [Hint: If \(\left\{  {a}_{\alpha }\right\}\) is a basis, express \(\frac{1}{2}{a}_{\alpha }\) in terms of this basis.]
-
-5. Give an example of a free abelian group \(G\) of rank \(n\) having a subgroup \(H\) of \(\operatorname{rank}n\) for which \(H \neq  G\) .
-
-6. Prove the following:
-
-\begin{theorem} If \(A\) is a free abelian group of rank \(n\) , then any subgroup \(B\) of \(A\) is a free abelian group of rank at most \(n\) .
-\end{theorem}
-
-\begin{proof}We can assume \(A = {\mathbb{Z}}^{n}\) , the \(n\) -fold cartesian product of \(\mathbb{Z}\) with itself. Let \({\pi }_{i} : {\mathbb{Z}}^{n} \rightarrow  \mathbb{Z}\) be projection on the \(i\) th coordinate. Given \(m \leq  n\) , let \({B}_{m}\) consist of all elements \(\mathbf{x}\) of \(B\) such that \({\pi }_{i}\left( \mathbf{x}\right)  = 0\) for \(i > m\) . Then \({B}_{m}\) is a subgroup of \(B\) .
-Consider the subgroup \({\pi }_{m}\left( {B}_{m}\right)\) of \(\mathbb{Z}\) . If this subgroup is nontrivial, choose \({\mathbf{x}}_{m} \in  {B}_{m}\) so that \({\pi }_{m}\left( {\mathbf{x}}_{m}\right)\) is a generator of this subgroup. Otherwise, set \({\mathbf{x}}_{m} = \mathbf{0}\) .
-
-(a) Show \(\left\{  {{\mathbf{x}}_{1},\ldots ,{\mathbf{x}}_{m}}\right\}\) generates \({B}_{m}\) , for each \(m\) .
-
-(b) Show the nonzero elements of \(\left\{  {{\mathbf{x}}_{1},\ldots ,{\mathbf{x}}_{m}}\right\}\) form a basis for \({B}_{m}\) , for each \(m\) .
-
-(c) Show that \({B}_{n} = B\) is free abelian with rank at most \(n\) .
-\end{proof}
+\begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
+\item Suppose that \(G = \sum {G}_{\alpha }\) . Show this sum is direct if and only if the equation \[ {x}_{{\alpha }_{1}} + \cdots  + {x}_{{\alpha }_{n}} = 0 \] implies that each \({x}_{{\alpha }_{i}}\) equals 0 . (Here \({x}_{{\alpha }_{i}} \in  {G}_{{\alpha }_{i}}\) and the indices \({\alpha }_{i}\) are distinct.)
+\item Show that if \({G}_{1}\) is a subgroup of \(G\) , there may be no subgroup \({G}_{2}\) of \(G\) such that \(G = {G}_{1} \oplus  {G}_{2}\) . [Hint: Set \(G = \mathbb{Z}\) and \({G}_{1} = 2\mathbb{Z}\) .]
+\item If \(G\) is free abelian with basis \(\{ x,y\}\) , show that \(\{ {2x} + {3y},x - y\}\) is also a basis for \(G\) .
+\item The order of an element \(a\) of an abelian group \(G\) is the smallest positive integer \(m\) such that \({ma} = 0\) , if such exists; otherwise, the order of \(a\) is said to be infinite. The order of \(a\) thus equals the order of the subgroup generated by \(a\) .
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show the elements of finite order in \(G\) form a subgroup of \(G\) , called its \idx{torsion subgroup}.
+  \item Show that if \(G\) is free abelian, it has no elements of finite order.
+  \item Show the additive group of rationals has no elements of finite order, but is not free abelian. [Hint: If \(\left\{  {a}_{\alpha }\right\}\) is a basis, express \(\frac{1}{2}{a}_{\alpha }\) in terms of this basis.]
+  \end{enumerate}
+\item Give an example of a free abelian group \(G\) of rank \(n\) having a subgroup \(H\) of \(\operatorname{rank}n\) for which \(H \neq  G\) .
+\item Prove the following: \textsl{Theorem.} If \(A\) is a free abelian group of rank \(n\) , then any subgroup \(B\) of \(A\) is a free abelian group of rank at most \(n\) .  \textsl{Proof.} We can assume \(A = {\mathbb{Z}}^{n}\) , the \(n\) -fold cartesian product of \(\mathbb{Z}\) with itself. Let \({\pi }_{i} : {\mathbb{Z}}^{n} \rightarrow  \mathbb{Z}\) be projection on the \(i\) th coordinate. Given \(m \leq  n\) , let \({B}_{m}\) consist of all elements \(\mathbf{x}\) of \(B\) such that \({\pi }_{i}\left( \mathbf{x}\right)  = 0\) for \(i > m\) . Then \({B}_{m}\) is a subgroup of \(B\) . Consider the subgroup \({\pi }_{m}\left( {B}_{m}\right)\) of \(\mathbb{Z}\) . If this subgroup is nontrivial, choose \({\mathbf{x}}_{m} \in  {B}_{m}\) so that \({\pi }_{m}\left( {\mathbf{x}}_{m}\right)\) is a generator of this subgroup. Otherwise, set \({\mathbf{x}}_{m} = \mathbf{0}\) .
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show \(\left\{  {{\mathbf{x}}_{1},\ldots ,{\mathbf{x}}_{m}}\right\}\) generates \({B}_{m}\) , for each \(m\) .
+  \item Show the nonzero elements of \(\left\{  {{\mathbf{x}}_{1},\ldots ,{\mathbf{x}}_{m}}\right\}\) form a basis for \({B}_{m}\) , for each \(m\) .
+  \item Show that \({B}_{n} = B\) is free abelian with rank at most \(n\) . 
+  \end{enumerate}
+\end{enumerate}
 \section*{§ 68 Free Products of Groups}
 
 We now consider groups \(G\) that are not necessarily abelian. In this case, we write \(G\) multiplicatively. We denote the identity element of \(G\) by 1, and the inverse of the element \(x\) by \({x}^{-1}\) . The symbol \({x}^{n}\) denotes the \(n\) -fold product of \(x\) with itself, \({x}^{-n}\) denotes the \(n\) -fold product of \({x}^{-1}\) with itself, and \({x}^{0}\) denotes 1 .
@@ -173,7 +175,8 @@ Applying these reduction operations repeatedly, one can in general obtain a word
 
 Note that if \(\left( {{x}_{1},\ldots ,{x}_{n}}\right)\) and \(\left( {{y}_{1},\ldots ,{y}_{m}}\right)\) are words representing \(x\) and \(y\) , respectively, then \(\left( {{x}_{1},\ldots ,{x}_{n},{y}_{1},\ldots ,{y}_{m}}\right)\) is a word representing \({xy}\) . Even if the first two words are reduced words, however, the third will not be a reduced word unless none of the groups \({G}_{\alpha }\) contains both \({x}_{n}\) and \({y}_{1}\) .
 
-\begin{definition} Let \(G\) be a group, let \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) be a family of subgroups of \(G\) that generates \(G\) . Suppose that \({G}_{\alpha } \cap  {G}_{\beta }\) consists of the identity element alone whenever \(\alpha  \neq  \beta\) . We say that \(G\) is the free product of the groups \({G}_{\alpha }\) if for each \(x \in  G\) , there is only one reduced word in the groups \({G}_{\alpha }\) that represents \(x\) . In this case, we write
+\begin{definition}
+	Let \(G\) be a group, let \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) be a family of subgroups of \(G\) that generates \(G\) . Suppose that \({G}_{\alpha } \cap  {G}_{\beta }\) consists of the identity element alone whenever \(\alpha  \neq  \beta\) . We say that \(G\) is the free product of the groups \({G}_{\alpha }\) if for each \(x \in  G\) , there is only one reduced word in the groups \({G}_{\alpha }\) that represents \(x\) . In this case, we write
 
 \[
 G = \mathop{\prod }\limits_{{\alpha  \in  J}}^{ * }{G}_{\alpha }
@@ -210,12 +213,16 @@ Again, it must be possible to reduce this word, so we must have \({y}_{1}^{-1}{x
 
 The argument continues similarly. One concludes finally that \(m = n\) and \({x}_{i} = {y}_{i}\) for all i.
 
-\begin{example} Consider the group \(P\) of bijections of the set \(\{ 0,1,2\}\) with itself. For \(i = 1,2\) , define an element \({\pi }_{t}\) of \(P\) by setting \({\pi }_{t}\left( i\right)  = i - 1\) and \({\pi }_{t}\left( {i - 1}\right)  = i\) and \({\pi }_{i}\left( j\right)  = j\) otherwise. Then \({\pi }_{t}\) generates a subgroup \({G}_{t}\) of \(P\) of order 2 . The groups \({G}_{1}\) and \({G}_{2}\) generate \(P\) , as you can check. But \(P\) is not their free product. The reduced words \(\left( {{\pi }_{1},{\pi }_{2},{\pi }_{1}}\right)\) and \(\left( {{\pi }_{2},{\pi }_{1},{\pi }_{2}}\right)\) , for instance, represent the same element of \(P\) .
+\begin{centeredblock}
+\begin{example}
+	Consider the group \(P\) of bijections of the set \(\{ 0,1,2\}\) with itself. For \(i = 1,2\) , define an element \({\pi }_{t}\) of \(P\) by setting \({\pi }_{t}\left( i\right)  = i - 1\) and \({\pi }_{t}\left( {i - 1}\right)  = i\) and \({\pi }_{i}\left( j\right)  = j\) otherwise. Then \({\pi }_{t}\) generates a subgroup \({G}_{t}\) of \(P\) of order 2 . The groups \({G}_{1}\) and \({G}_{2}\) generate \(P\) , as you can check. But \(P\) is not their free product. The reduced words \(\left( {{\pi }_{1},{\pi }_{2},{\pi }_{1}}\right)\) and \(\left( {{\pi }_{2},{\pi }_{1},{\pi }_{2}}\right)\) , for instance, represent the same element of \(P\) .
 \end{example}
+\end{centeredblock}
 
 The free product satisfies an extension condition analogous to that satisfied by the direct sum:
 
-\begin{lemma} Let \(G\) be a group; let \(\left\{  {G}_{\alpha }\right\}\) be a family of subgroups of \(G\) . If \(G\) is the free product of the groups \({G}_{\alpha }\) , then \(G\) satisfies the following condition:
+\begin{lemma}
+	Let \(G\) be a group; let \(\left\{  {G}_{\alpha }\right\}\) be a family of subgroups of \(G\) . If \(G\) is the free product of the groups \({G}_{\alpha }\) , then \(G\) satisfies the following condition:
 
 Given any group \(H\) and any family of homomorphisms \({h}_{\alpha } : {G}_{\alpha } \rightarrow\)
 
@@ -226,7 +233,8 @@ Furthermore, \(h\) is unique.
 The converse of this lemma holds, but the proof is not as easy as it was for direct sums. We postpone it until later.
 \end{lemma}
 
-\begin{proof}Given \(x \in  G\) with \(x \neq  1\) , let \(\left( {{x}_{1},\ldots ,{x}_{n}}\right)\) be the reduced word that represents \(x\) . If \(h\) exists, it must satisfy the equation
+\begin{proof}
+	Given \(x \in  G\) with \(x \neq  1\) , let \(\left( {{x}_{1},\ldots ,{x}_{n}}\right)\) be the reduced word that represents \(x\) . If \(h\) exists, it must satisfy the equation
 (*)
 \[
 h\left( x\right)  = h\left( {x}_{1}\right) \cdots h\left( {x}_{n}\right)  = {h}_{{\alpha }_{1}}\left( {x}_{1}\right) \cdots {h}_{{\alpha }_{n}}\left( {x}_{n}\right) ,
@@ -265,15 +273,18 @@ Now we show that \(h\) is a homomorphism. Suppose that \(w = \left( {{x}_{1},\ld
 
 We now consider the problem of taking an arbitrary family of groups \(\left\{  {G}_{\alpha }\right\}\) and finding a group \(G\) that contains subgroups \({G}_{\alpha }^{\prime }\) isomorphic to the groups \({G}_{\alpha }\) , such that \(G\) is the free product of the groups \({G}_{\alpha }^{\prime }\) . This can, in fact, be done; it leads to the notion of \idx{external free product}.
 \end{proof}
-\begin{definition} Let \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an indexed family of groups. Suppose that \(G\) is a group, and that \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) is a family of monomorphisms, such that \(G\) is the free product of the groups \({i}_{\alpha }\left( {G}_{\alpha }\right)\) . Then we say that \(G\) is the external free product of the groups \({G}_{\alpha }\) , relative to the monomorphisms \({i}_{\alpha }\) .
+\begin{definition}
+	Let \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an indexed family of groups. Suppose that \(G\) is a group, and that \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) is a family of monomorphisms, such that \(G\) is the free product of the groups \({i}_{\alpha }\left( {G}_{\alpha }\right)\) . Then we say that \(G\) is the external free product of the groups \({G}_{\alpha }\) , relative to the monomorphisms \({i}_{\alpha }\) .
 \end{definition}
 
 The group \(G\) is not unique, of course; we show later that it is unique up to isomorphism. Constructing \(G\) is much more difficult than constructing the external direct sum was:
 
-\begin{theorem} Given a family \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) of groups, there exists a group \(G\) and a family of monomorphisms \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) such that \(G\) is the free product of the groups \({i}_{\alpha }\left( {G}_{\alpha }\right)\) .
+\begin{theorem}
+	Given a family \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) of groups, there exists a group \(G\) and a family of monomorphisms \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) such that \(G\) is the free product of the groups \({i}_{\alpha }\left( {G}_{\alpha }\right)\) .
 \end{theorem}
 
-\begin{proof}For convenience, we assume that the groups \({G}_{\alpha }\) are disjoint as sets. (This can be accomplished by replacing \({G}_{\alpha }\) by \({G}_{\alpha } \times  \{ \alpha \}\) for each index \(\alpha\) , if necessary.)
+\begin{proof}
+	For convenience, we assume that the groups \({G}_{\alpha }\) are disjoint as sets. (This can be accomplished by replacing \({G}_{\alpha }\) by \({G}_{\alpha } \times  \{ \alpha \}\) for each index \(\alpha\) , if necessary.)
 Then as before, we define a word (of length \(n\) ) in the elements of the groups \({G}_{\alpha }\) to be an \(n\) -tuple \(w = \left( {{x}_{1},\ldots ,{x}_{n}}\right)\) of elements of \(\bigcup {G}_{\alpha }\) . It is called a reduced word if \({\alpha }_{i} \neq  {\alpha }_{i + 1}\) for all \(i\) , where \({\alpha }_{i}\) is the index such that \({x}_{i} \in  {G}_{{\alpha }_{i}}\) , and if for each \(i,{x}_{i}\) is not the identity element of \({G}_{{\alpha }_{i}}\) . We define the empty set to be the unique reduced word of length zero. Note that we are not given a group \(G\) that contains all the \({G}_{\alpha }\) as subgroups, so we cannot speak of a word ``representing'' an element of \(G\) .
 
 Let \(W\) denote the set of all reduced words in the elements of the groups \({G}_{\alpha }\) . Let \(P\left( W\right)\) denote the set of all bijective functions \(\pi  : W \rightarrow  W\) . Then \(P\left( W\right)\) is itself a group, with composition of functions as the group operation. We shall obtain our desired group \(G\) as a subgroup of \(P\left( W\right)\) .
@@ -390,7 +401,7 @@ Is there a similar simple model for the free product? Yes. In the last step of t
 {\pi }_{{x}_{1}}\left( {{\pi }_{{x}_{2}}\left( {\cdots \left( {{\pi }_{{x}_{n}}\left( \varnothing \right) }\right) }\right) }\right)  = \left( {{x}_{1},\ldots ,{x}_{n}}\right) .
 \]
 
-This equation implies that if \(\pi\) is any element of \(P\left( W\right)\) belonging to the free product \(G\) , then the assignment \(\pi  \rightarrow  \pi \left( \varnothing \right)\) defines a bijective correspondence between \(G\) and the set \(W\) itself! Furthermore, if \(\pi\) and \({\pi }^{\prime }\) are two elements of \(G\) such that
+This equation implies that if \(\pi\) is any element of \(P\left( W\right)\) beloriging to the free product \(G\) , then the assignment \(\pi  \rightarrow  \pi \left( \varnothing \right)\) defines a bijective correspondence between \(G\) and the set \(W\) itself! Furthermore, if \(\pi\) and \({\pi }^{\prime }\) are two elements of \(G\) such that
 
 \[
 \pi \left( \varnothing \right)  = \left( {{x}_{1},\ldots ,{x}_{n}}\right) \;\text{ and }\;{\pi }^{\prime }\left( \varnothing \right)  = \left( {{y}_{1},\ldots ,{y}_{k}}\right) ,
@@ -404,7 +415,8 @@ An immediate question arises: Why didn't we use this notion as our definition of
 
 The extension condition for ordinary free products translates immediately into an extension condition for external free products:
 \end{proof}
-\begin{lemma} Let \(\left\{  {G}_{\alpha }\right\}\) be a family of groups; let \(G\) be a group; let \({\mathrm{i}}_{\alpha } : {G}_{\alpha } \rightarrow  G\) be a family of homomorphisms. If each \({i}_{\alpha }\) is a monomorphism and \(G\) is the free product of the groups \({\mathrm{i}}_{\alpha }\left( {G}_{\alpha }\right)\) , then \(G\) satisfies the following condition:
+\begin{lemma}
+	Let \(\left\{  {G}_{\alpha }\right\}\) be a family of groups; let \(G\) be a group; let \({\mathrm{i}}_{\alpha } : {G}_{\alpha } \rightarrow  G\) be a family of homomorphisms. If each \({i}_{\alpha }\) is a monomorphism and \(G\) is the free product of the groups \({\mathrm{i}}_{\alpha }\left( {G}_{\alpha }\right)\) , then \(G\) satisfies the following condition:
 
 Given a group \(H\) and a family of homomorphisms \({h}_{\alpha } : {G}_{\alpha } \rightarrow  H\) ,
 
@@ -415,23 +427,28 @@ Furthermore, \(h\) is unique.
 
 An immediate consequence is a uniqueness theorem for free products; the proof is very similar to the corresponding proof for direct sums and is left to the reader.
 
-\begin{theorem}[Uniqueness of free products] Let \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) be a family of groups. Suppose \(G\) and \({G}^{\prime }\) are groups and \({\mathrm{i}}_{\alpha } : {G}_{\alpha } \rightarrow  G\) and \({i}_{\alpha }^{\prime } : {G}_{\alpha } \rightarrow  {G}^{\prime }\) are families of monomorphisms, such that the families \(\left\{  {{i}_{\alpha }\left( {G}_{\alpha }\right) }\right\}\) and \(\left\{  {{i}_{\alpha }^{\prime }\left( {G}_{\alpha }\right) }\right\}\) generate \(G\) and \({G}^{\prime }\) , respectively. If both \(G\) and \({G}^{\prime }\) have the extension property stated in the preceding lemma, then there is a unique isomorphism \(\phi  : G \rightarrow  {G}^{\prime }\) such that \(\phi  \circ  {i}_{\alpha } = {i}_{\alpha }^{\prime }\) for all \(\alpha\) .
+\begin{theorem}[Uniqueness of free products]
+	Let \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) be a family of groups. Suppose \(G\) and \({G}^{\prime }\) are groups and \({\mathrm{i}}_{\alpha } : {G}_{\alpha } \rightarrow  G\) and \({i}_{\alpha }^{\prime } : {G}_{\alpha } \rightarrow  {G}^{\prime }\) are families of monomorphisms, such that the families \(\left\{  {{i}_{\alpha }\left( {G}_{\alpha }\right) }\right\}\) and \(\left\{  {{i}_{\alpha }^{\prime }\left( {G}_{\alpha }\right) }\right\}\) generate \(G\) and \({G}^{\prime }\) , respectively. If both \(G\) and \({G}^{\prime }\) have the extension property stated in the preceding lemma, then there is a unique isomorphism \(\phi  : G \rightarrow  {G}^{\prime }\) such that \(\phi  \circ  {i}_{\alpha } = {i}_{\alpha }^{\prime }\) for all \(\alpha\) .
 \end{theorem}
 
 Now, finally, we can prove that the extension condition characterizes free products, proving the converses of Lemmas 68.1 and 68.3.
 
-\begin{lemma} Let \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) be a family of groups; let \(G\) be a group; let \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) be a family of homomorphisms. If the extension condition of Lemma 68.3 holds, then each \({i}_{\alpha }\) is a monomorphism and \(G\) is the free product of the groups \({i}_{\alpha }\left( {G}_{\alpha }\right)\) .
+\begin{lemma}
+	Let \({\left\{  {G}_{\alpha }\right\}  }_{\alpha  \in  J}\) be a family of groups; let \(G\) be a group; let \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) be a family of homomorphisms. If the extension condition of Lemma 68.3 holds, then each \({i}_{\alpha }\) is a monomorphism and \(G\) is the free product of the groups \({i}_{\alpha }\left( {G}_{\alpha }\right)\) .
 \end{lemma}
 
-\begin{proof}We first show that each \({i}_{\alpha }\) is a monomorphism. Given an index \(\beta\) , let us set \(H = {G}_{\beta }\) . Let \({h}_{\alpha } : {G}_{\alpha } \rightarrow  H\) be the identity if \(\alpha  = \beta\) , and the trivial homomorphism if \(\alpha  \neq  \beta\) Let \(h : G \rightarrow  H\) be the homomorphism given by the extension condition. Then \(h \circ  {i}_{\beta } = {h}_{\beta }\) , so that \({i}_{\beta }\) is injective.
+\begin{proof}
+	We first show that each \({i}_{\alpha }\) is a monomorphism. Given an index \(\beta\) , let us set \(H = {G}_{\beta }\) . Let \({h}_{\alpha } : {G}_{\alpha } \rightarrow  H\) be the identity if \(\alpha  = \beta\) , and the trivial homomorphism if \(\alpha  \neq  \beta\) Let \(h : G \rightarrow  H\) be the homomorphism given by the extension condition. Then \(h \circ  {i}_{\beta } = {h}_{\beta }\) , so that \({i}_{\beta }\) is injective.
 By Theorem 68.2, there exists a group \({G}^{\prime }\) and a family \({i}_{\alpha }^{\prime } : {G}_{\alpha } \rightarrow  {G}^{\prime }\) of monomor-phisms such that \({G}^{\prime }\) is the free product of the groups \({i}_{\alpha }^{\prime }\left( {G}_{\alpha }\right)\) . Both \(G\) and \({G}^{\prime }\) have the extension property of Lemma 68.3. The preceding theorem then implies that there is an isomorphism \(\phi  : G \rightarrow  {G}^{\prime }\) such that \(\phi  \circ  {i}_{\alpha } = {i}_{\alpha }^{\prime }\) . It follows at once that \(G\) is the free product of the groups \({i}_{\alpha }\left( {G}_{\alpha }\right)\) .
 
 We now prove two results analogous to Corollaries 67.2 and 67.3.
 \end{proof}
-\begin{corollary} Let \(G = {G}_{1} * {G}_{2}\) , where \({G}_{1}\) is the free product of the subgroups \({\left\{  {H}_{\alpha }\right\}  }_{\alpha  \in  J}\) and \({G}_{2}\) is the free product of the subgroups \({\left\{  {H}_{\beta }\right\}  }_{\beta  \in  K}\) . If the index sets \(J\) and \(K\) are disjoint, then \(G\) is the free product of the subgroups \({\left\{  {H}_{\gamma }\right\}  }_{\gamma  \in  J \cup  K}\) .
+\begin{corollary}
+	Let \(G = {G}_{1} * {G}_{2}\) , where \({G}_{1}\) is the free product of the subgroups \({\left\{  {H}_{\alpha }\right\}  }_{\alpha  \in  J}\) and \({G}_{2}\) is the free product of the subgroups \({\left\{  {H}_{\beta }\right\}  }_{\beta  \in  K}\) . If the index sets \(J\) and \(K\) are disjoint, then \(G\) is the free product of the subgroups \({\left\{  {H}_{\gamma }\right\}  }_{\gamma  \in  J \cup  K}\) .
 \end{corollary}
 
-\begin{proof}The proof is almost a copy of the proof of Corollary 67.2.
+\begin{proof}
+	The proof is almost a copy of the proof of Corollary 67.2.
 This result implies in particular that
 
 \[
@@ -442,14 +459,16 @@ In order to state the next theorem, we must recall some terminology from group t
 
 If \(S\) is a subset of \(G\) , one can consider the intersection \(N\) of all normal subgroups of \(G\) that contain \(S\) . It is easy to see that \(N\) is itself a normal subgroup of \(G\) , it is called the \idx{least normal subgroup} of \(G\) that contains \(S\) .
 \end{proof}
-\begin{theorem} Let \(G = {G}_{1} * {G}_{2}\) . Let \({N}_{i}\) be a normal subgroup of \({G}_{i}\) , for \(i = 1,2\) . If \(N\) is the least normal subgroup of \(G\) that contains \({N}_{1}\) and \({N}_{2}\) , then
+\begin{theorem}
+	Let \(G = {G}_{1} * {G}_{2}\) . Let \({N}_{i}\) be a normal subgroup of \({G}_{i}\) , for \(i = 1,2\) . If \(N\) is the least normal subgroup of \(G\) that contains \({N}_{1}\) and \({N}_{2}\) , then
 
 \[
 G/N \cong  \left( {{G}_{1}/{N}_{1}}\right)  * \left( {{G}_{2}/{N}_{2}}\right) \text{ . }
 \]
 \end{theorem}
 
-\begin{proof}The composite of the inclusion and projection homomorphisms
+\begin{proof}
+	The composite of the inclusion and projection homomorphisms
 \[
 {G}_{1} \rightarrow  {G}_{1} * {G}_{2} \rightarrow  \left( {{G}_{1} * {G}_{2}}\right) /N
 \]
@@ -476,15 +495,18 @@ So let \({h}_{1} : {G}_{1}/{N}_{1} \rightarrow  H\) and \({h}_{2} : {G}_{2}/{N}_
 
 of the projection map and \({h}_{i}\) on \({G}_{i}\) , for \(i = 1,2\) . This homomorphism carries the elements of \({N}_{1}\) and \({N}_{2}\) to the identity element, so its kernel contains \(N\) . Therefore it induces a homomorphism \(h : \left( {{G}_{1} * {G}_{2}}\right) /N \rightarrow  H\) that satisfies the conditions \({h}_{1} = h \circ  {i}_{1}\) and \({h}_{2} = h \circ  {i}_{2}\) .
 \end{proof}
-\begin{corollary} If \(N\) is the least normal subgroup of \({G}_{1} * {G}_{2}\) that contains \({G}_{1}\) , then \(\left( {{G}_{1} * {G}_{2}}\right) /N \cong  {G}_{2}\) .
+\begin{corollary}
+	If \(N\) is the least normal subgroup of \({G}_{1} * {G}_{2}\) that contains \({G}_{1}\) , then \(\left( {{G}_{1} * {G}_{2}}\right) /N \cong  {G}_{2}\) .
 \end{corollary}
 
 The notion of ``least normal subgroup'' is a concept that will appear frequently as we proceed. Obviously, if \(N\) is the least normal subgroup of \(G\) containing the subset \(S\) of \(G\) , then \(N\) contains \(S\) and all conjugates of elements of \(S\) . For later use, we now verify that these elements actually generate \(N\) .
 
-\begin{lemma} Let \(S\) be a subset of the group \(G\) . If \(N\) is the least normal subgroup of \(G\) containing \(S\) , then \(N\) is generated by all conjugates of elements of \(S\) .
+\begin{lemma}
+	Let \(S\) be a subset of the group \(G\) . If \(N\) is the least normal subgroup of \(G\) containing \(S\) , then \(N\) is generated by all conjugates of elements of \(S\) .
 \end{lemma}
 
-\begin{proof}Let \({N}^{\prime }\) be the subgroup of \(G\) generated by all conjugates of elements of \(S\) . We know that \({N}^{\prime } \subset  N\) ; to verify the reverse inclusion, we need merely show that \({N}^{\prime }\) is normal in \(G\) . Given \(x \in  {N}^{\prime }\) and \(c \in  G\) , we show that \({cx}{c}^{-1} \in  {N}^{\prime }\) .
+\begin{proof}
+	Let \({N}^{\prime }\) be the subgroup of \(G\) generated by all conjugates of elements of \(S\) . We know that \({N}^{\prime } \subset  N\) ; to verify the reverse inclusion, we need merely show that \({N}^{\prime }\) is normal in \(G\) . Given \(x \in  {N}^{\prime }\) and \(c \in  G\) , we show that \({cx}{c}^{-1} \in  {N}^{\prime }\) .
 We can write \(x\) in the form \(x = {x}_{1}{x}_{2}\cdots {x}_{n}\) , where each \({x}_{i}\) is conjugate to an element \({s}_{i}\) of \(S\) . Then \(c{x}_{i}{c}^{-1}\) is also conjugate to \({s}_{i}\) . Because
 
 \[
@@ -494,26 +516,23 @@ We can write \(x\) in the form \(x = {x}_{1}{x}_{2}\cdots {x}_{n}\) , where each
 \({cx}{c}^{-1}\) is a product of conjugates of elements of \(S\) , so that \({cx}{c}^{-1} \in  {N}^{\prime }\) , as desired.
 \end{proof}
 \section*{Exercises}
-
-1. Check the details of Example 1.
-
-2. Let \(G = {G}_{1} * {G}_{2}\) , where \({G}_{1}\) and \({G}_{2}\) are nontrivial groups.
-
-(a) Show \(G\) is not abelian.
-
-(b) If \(x \in  G\) , define the length of \(x\) to be the length of the unique reduced word in the elements of \({G}_{1}\) and \({G}_{2}\) that represents \(x\) . Show that if \(x\) has even length (at least 2), then \(x\) does not have finite order. Show that if \(x\) has odd length, then \(x\) is conjugate to an element of shorter length.
-
-(c) Show that the only elements of \(G\) that have finite order are the elements of \({G}_{1}\) and \({G}_{2}\) that have finite order, and their conjugates.
-
-3. Let \(G = {G}_{1} * {G}_{2}\) . Given \(c \in  G\) , let \(c{G}_{1}{c}^{-1}\) denote the set of all elements of the form \({cx}{c}^{-1}\) , for \(x \in  {G}_{1}\) . It is a subgroup of \(G\) ; show that its irtersection with \({G}_{2}\) consists of the identity alone.
-
-4. Prove Theorem 68.4.
-
+\begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
+\item Check the details of Example 1.
+\item Let \(G = {G}_{1} * {G}_{2}\) , where \({G}_{1}\) and \({G}_{2}\) are nontrivial groups.
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show \(G\) is not abelian.
+  \item If \(x \in  G\) , define the length of \(x\) to be the length of the unique reduced word in the elements of \({G}_{1}\) and \({G}_{2}\) that represents \(x\) . Show that if \(x\) has even length (at least 2), then \(x\) does not have finite order. Show that if \(x\) has odd length, then \(x\) is conjugate to an element of shorter length.
+  \item Show that the only elements of \(G\) that have finite order are the elements of \({G}_{1}\) and \({G}_{2}\) that have finite order, and their conjugates.
+  \end{enumerate}
+\item Let \(G = {G}_{1} * {G}_{2}\) . Given \(c \in  G\) , let \(c{G}_{1}{c}^{-1}\) denote the set of all elements of the form \({cx}{c}^{-1}\) , for \(x \in  {G}_{1}\) . It is a subgroup of \(G\) ; show that its irtersection with \({G}_{2}\) consists of the identity alone.
+\item Prove Theorem 68.4.
+\end{enumerate}
 \section*{§ 69 Free Groups}
 
 Let \(G\) be a group; let \(\left\{  {a}_{\alpha }\right\}\) be a family of elements of \(G\) , for \(\alpha  \in  J\) . We say the elements \(\left\{  {a}_{\alpha }\right\}\) generate \(G\) if every element of \(G\) can be written as a product of powers of the elements \({a}_{\alpha }\) . If the family \(\left\{  {a}_{\alpha }\right\}\) is finite, we say \(G\) is finitely generated.
 
-\begin{definition} Let \(\left\{  {a}_{\alpha }\right\}\) be a family of elements of a group \(G\) . Suppose each \({a}_{\alpha }\) generates an infinite cyclic subgroup \({G}_{\alpha }\) of \(G\) . If \(G\) is the free product of the groups \(\left\{  {G}_{\alpha }\right\}\) , then \(G\) is said to be a \idx{free group}, and the family \(\left\{  {a}_{\alpha }\right\}\) is called a system of free \idx{Free generators for a group} generators for \(G\) .
+\begin{definition}
+	Let \(\left\{  {a}_{\alpha }\right\}\) be a family of elements of a group \(G\) . Suppose each \({a}_{\alpha }\) generates an infinite cyclic subgroup \({G}_{\alpha }\) of \(G\) . If \(G\) is the free product of the groups \(\left\{  {G}_{\alpha }\right\}\) , then \(G\) is said to be a \idx{free group}, and the family \(\left\{  {a}_{\alpha }\right\}\) is called a system of free \idx{Free generators for a group} generators for \(G\) .
 \end{definition}
 
 In this case, for each element \(x\) of \(G\) , there is a unique reduced word in the elements of the groups \({G}_{\alpha }\) that represents \(x\) . This says that if \(x \neq  1\) , then \(x\) can be written uniquely in the form
@@ -526,18 +545,22 @@ where \({\alpha }_{i} \neq  {\alpha }_{i + 1}\) and \({n}_{i} \neq  0\) for each
 
 Free groups are characterized by the following extension property:
 
-\begin{lemma} Let \(G\) be a group; let \({\left\{  {a}_{\alpha }\right\}  }_{\alpha  \in  J}\) be a family of elements of \(G\) . If \(G\) is a free group with system of free generators \(\left\{  {a}_{\alpha }\right\}\) , then \(G\) satisfies the following condition:(*)Given any group \(H\) and any family \(\left\{  {y}_{\alpha }\right\}\) of elements of \(H\) , there is a homomorphism \(h : G \rightarrow  H\) such that \(h\left( {a}_{\alpha }\right)  = {y}_{\alpha }\) for each \(\alpha\) .
+\begin{lemma}
+	Let \(G\) be a group; let \({\left\{  {a}_{\alpha }\right\}  }_{\alpha  \in  J}\) be a family of elements of \(G\) . If \(G\) is a free group with system of free generators \(\left\{  {a}_{\alpha }\right\}\) , then \(G\) satisfies the following condition:(*)Given any group \(H\) and any family \(\left\{  {y}_{\alpha }\right\}\) of elements of \(H\) , there is a homomorphism \(h : G \rightarrow  H\) such that \(h\left( {a}_{\alpha }\right)  = {y}_{\alpha }\) for each \(\alpha\) .
 
 Furthermore, \(h\) is unique. Conversely, if the extension condition (*) holds, then \(G\) is a free group with system of free generators \(\left\{  {a}_{\alpha }\right\}\) .
 \end{lemma}
 
-\begin{proof}If \(G\) is free, then for each \(\alpha\) , the group \({G}_{\alpha }\) generated by \({a}_{\alpha }\) is infinite cyclic, so there is a homomorphism \({h}_{\alpha } : {G}_{\alpha } \rightarrow  H\) with \({h}_{\alpha }\left( {a}_{\alpha }\right)  = {y}_{\alpha }\) . Then Lemma 68.1 applies. To prove the converse, let \(\beta\) be a fixed index. By hypothesis, there exists a homomorphism \(h : G \rightarrow  \mathbb{Z}\) such that \(h\left( {a}_{\beta }\right)  = 1\) and \(h\left( {a}_{\alpha }\right)  = 0\) for \(\alpha  \neq  \beta\) . It follows that the group \({G}_{\beta }\) is infinite cyclic. Then Lemma 68.5 applies.
+\begin{proof}
+	If \(G\) is free, then for each \(\alpha\) , the group \({G}_{\alpha }\) generated by \({a}_{\alpha }\) is infinite cyclic, so there is a homomorphism \({h}_{\alpha } : {G}_{\alpha } \rightarrow  H\) with \({h}_{\alpha }\left( {a}_{\alpha }\right)  = {y}_{\alpha }\) . Then Lemma 68.1 applies. To prove the converse, let \(\beta\) be a fixed index. By hypothesis, there exists a homomorphism \(h : G \rightarrow  \mathbb{Z}\) such that \(h\left( {a}_{\beta }\right)  = 1\) and \(h\left( {a}_{\alpha }\right)  = 0\) for \(\alpha  \neq  \beta\) . It follows that the group \({G}_{\beta }\) is infinite cyclic. Then Lemma 68.5 applies.
 The results of the preceding section (in particular, Corollary 68.6) imply the following:
 \end{proof}
-\begin{theorem} Let \(G = {G}_{1} * {G}_{2}\) , where \({G}_{1}\) and \({G}_{2}\) are free groups with \({\left\{  {a}_{\alpha }\right\}  }_{\alpha  \in  J}\) and \({\left\{  {a}_{\alpha }\right\}  }_{\alpha  \in  K}\) as respective systems of free generators. If \(J\) and \(K\) are disjoint, then \(G\) is a free group with \({\left\{  {a}_{\alpha }\right\}  }_{\alpha  \in  J \cup  K}\) as a system of free generators.
+\begin{theorem}
+	Let \(G = {G}_{1} * {G}_{2}\) , where \({G}_{1}\) and \({G}_{2}\) are free groups with \({\left\{  {a}_{\alpha }\right\}  }_{\alpha  \in  J}\) and \({\left\{  {a}_{\alpha }\right\}  }_{\alpha  \in  K}\) as respective systems of free generators. If \(J\) and \(K\) are disjoint, then \(G\) is a free group with \({\left\{  {a}_{\alpha }\right\}  }_{\alpha  \in  J \cup  K}\) as a system of free generators.
 \end{theorem}
 
-\begin{definition} Let \({\left\{  {a}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an arbitrary indexed family. Let \({G}_{\alpha }\) denote the set of all symbols of the form \({a}_{\alpha }^{n}\) for \(n \in  \mathbb{Z}\) . We make \({G}_{\alpha }\) into a group by defining
+\begin{definition}
+	Let \({\left\{  {a}_{\alpha }\right\}  }_{\alpha  \in  J}\) be an arbitrary indexed family. Let \({G}_{\alpha }\) denote the set of all symbols of the form \({a}_{\alpha }^{n}\) for \(n \in  \mathbb{Z}\) . We make \({G}_{\alpha }\) into a group by defining
 
 \[
 {a}_{\alpha }^{n} \cdot  {a}_{\alpha }^{m} = {a}_{\alpha }^{n + m}.
@@ -550,7 +573,8 @@ If \(G\) is the free group on the elements \({a}_{\alpha }\) , we normally abuse
 
 There is an important connection between free groups and free abelian groups. In order to describe it, we must recall the notion of \idx{commutator subgroup} from algebra.
 
-\begin{definition} Let \(G\) be a group. If \(x,y \in  G\) , we denote by \(\left\lbrack  {x,y}\right\rbrack\) the element
+\begin{definition}
+	Let \(G\) be a group. If \(x,y \in  G\) , we denote by \(\left\lbrack  {x,y}\right\rbrack\) the element
 
 \[
 \left\lbrack  {x,y}\right\rbrack = {xy}{x}^{-1}{y}^{-1}
@@ -561,10 +585,12 @@ of \(G\) ; it is called the commutator of \(x\) and \(y\) . The subgroup of \(G\
 
 The following result may be familiar; we provide a proof, for completeness:
 
-\begin{lemma} Given \(G\) , the subgroup \(\left\lbrack  {G,G}\right\rbrack\) is a normal subgroup of \(G\) and the quotient group \(G/\left\lbrack  {G,G}\right\rbrack\) is abelian. If \(h : G \rightarrow  H\) is any homomorphism from \(G\) to an abelian group \(H\) , then the kernel of \(h\) contains \(\left\lbrack  {G,G}\right\rbrack\) , so \(h\) induces a homomorphism \(k : G/\left\lbrack  {G,G}\right\rbrack \rightarrow  H\) .
+\begin{lemma}
+	Given \(G\) , the subgroup \(\left\lbrack  {G,G}\right\rbrack\) is a normal subgroup of \(G\) and the quotient group \(G/\left\lbrack  {G,G}\right\rbrack\) is abelian. If \(h : G \rightarrow  H\) is any homomorphism from \(G\) to an abelian group \(H\) , then the kernel of \(h\) contains \(\left\lbrack  {G,G}\right\rbrack\) , so \(h\) induces a homomorphism \(k : G/\left\lbrack  {G,G}\right\rbrack \rightarrow  H\) .
 \end{lemma}
 
-\begin{proof}Step 1. First we show that any conjugate of a commutator is in \(\left\lbrack  {G,G}\right\rbrack\) . We compute as follows:
+\begin{proof}
+	Step 1. First we show that any conjugate of a commutator is in \(\left\lbrack  {G,G}\right\rbrack\) . We compute as follows:
 \[
 g\left\lbrack  {x,y}\right\rbrack  {g}^{-1} = g\left( {{xy}{x}^{-1}{y}^{-1}}\right) {g}^{-1}
 \]
@@ -617,14 +643,19 @@ and this equation follows from the fact that \({a}^{-1}{b}^{-1}{ab} = \left\lbra
 
 Step 4. To complete the proof, we note that because \(H\) is abelian, \(h\) carries each commutator to the identity element of \(H\) . Hence the kernel of \(h\) contains \(\left\lbrack  {G,G}\right\rbrack\) , so that \(h\) induces the desired homomorphism \(k\) .
 \end{proof}
-\begin{theorem} If \(G\) is a free group with free generators \({a}_{\alpha }\) , then \(G/\left\lbrack  {G,G}\right\rbrack\) is a free abelian group with basis \(\left\lbrack  {a}_{\alpha }\right\rbrack\) , where \(\left\lbrack  {a}_{\alpha }\right\rbrack\) denotes the coset of \({a}_{\alpha }\) in \(G/\left\lbrack  {G,G}\right\rbrack\) .
+\begin{theorem}
+	If \(G\) is a free group with free generators \({a}_{\alpha }\) , then \(G/\left\lbrack  {G,G}\right\rbrack\) is a free abelian group with basis \(\left\lbrack  {a}_{\alpha }\right\rbrack\) , where \(\left\lbrack  {a}_{\alpha }\right\rbrack\) denotes the coset of \({a}_{\alpha }\) in \(G/\left\lbrack  {G,G}\right\rbrack\) .
 \end{theorem}
 
-\begin{proof}We apply Lemma 67.7. Given any family \(\left\{  {y}_{\alpha }\right\}\) of elements of the abelian group \(H\) , there exists a homomorphism \(h : G \rightarrow  H\) such that \(h\left( {a}_{\alpha }\right)  = {y}_{\alpha }\) for each \(\alpha\) . Because \(H\) is abelian, the kernel of \(h\) contains \(\left\lbrack  {G,G}\right\rbrack\) ; therefore \(h\) induces a homomorphism \(k : G/\left\lbrack  {G,G}\right\rbrack \rightarrow  H\) that carries \(\left\lbrack  {a}_{\alpha }\right\rbrack\) to \({y}_{\alpha }\) .\end{proof}
-\begin{corollary} If \(G\) is a free group with \(n\) free generators, then any system of free generators for \(G\) has \(n\) elements.
+\begin{proof}
+	We apply Lemma 67.7. Given any family \(\left\{  {y}_{\alpha }\right\}\) of elements of the abelian group \(H\) , there exists a homomorphism \(h : G \rightarrow  H\) such that \(h\left( {a}_{\alpha }\right)  = {y}_{\alpha }\) for each \(\alpha\) . Because \(H\) is abelian, the kernel of \(h\) contains \(\left\lbrack  {G,G}\right\rbrack\) ; therefore \(h\) induces a homomorphism \(k : G/\left\lbrack  {G,G}\right\rbrack \rightarrow  H\) that carries \(\left\lbrack  {a}_{\alpha }\right\rbrack\) to \({y}_{\alpha }\) .
+\end{proof}
+\begin{corollary}
+	If \(G\) is a free group with \(n\) free generators, then any system of free generators for \(G\) has \(n\) elements.
 \end{corollary}
 
-\begin{proof}The free abelian group \(G/\left\lbrack  {G,G}\right\rbrack\) has rank \(n\) .
+\begin{proof}
+	The free abelian group \(G/\left\lbrack  {G,G}\right\rbrack\) has rank \(n\) .
 The properties of free groups are in many ways similar to those of free abelian groups. For instance, if \(H\) is a subgroup of a free abelian group \(G\) , then \(H\) itself is a free abelian group. (The proof in the case where \(G\) has finite rank is outlined in Exercise 6 of  \S 67; the proof in the general case is similar.) The analogous result holds for free groups, but the proof is considerably more difficult. We shall give a proof in Chapter 14 that is based on the theory of covering spaces.
 
 In other ways, free groups are very different from free abelian groups. Given a free abelian group of rank \(n\) , the rank of any subgroup \(i\) sat most \(n\) ; but the analogous result for free groups does not hold. If \(G\) is a free group with a system of \(n\) free generators, then the cardinality of a system of free generators for a subgroup of \(G\) may be greater than \(n\) ; it may even be infinite ’ We shall explore this situation later.
@@ -643,7 +674,8 @@ Given \(G\) , suppose we are given a family \({\left\{  {a}_{\alpha }\right\}  }
 
 Each element of \(N\) belongs to \(F\) , so it can of course be represented uniquely by a reduced word in powers of the generators \(\left\{  {a}_{\alpha }\right\}\) . When we speak of a relation on the generators of \(G\) , we sometimes refer to this reduced word, rather than to the element of \(N\) it represents. The context will make the meaning clear.
 
-\begin{definition} If \(G\) is a group, a presentation of \(G\) consists of a family \(\left\{  {a}_{\alpha }\right\}\) of generators for \(G\) , along with a complete set \(\left\{  {r}_{\beta }\right\}\) of relations for \(G\) , where each \({r}_{\beta }\) is an element of the free group on the set \(\left\{  {a}_{\alpha }\right\}\) . If the family \(\left\{  {a}_{\alpha }\right\}\) is finite, then \(G\) is finitely generated, of course. If both the families \(\left\{  {a}_{\alpha }\right\}\) and \(\left\{  {r}_{\beta }\right\}\) are finite, then \(G\) is said to be finitely presented, and these families form what is called a \idx{finite presentation} for \(G\) .
+\begin{definition}
+	If \(G\) is a group, a presentation of \(G\) consists of a family \(\left\{  {a}_{\alpha }\right\}\) of generators for \(G\) , along with a complete set \(\left\{  {r}_{\beta }\right\}\) of relations for \(G\) , where each \({r}_{\beta }\) is an element of the free group on the set \(\left\{  {a}_{\alpha }\right\}\) . If the family \(\left\{  {a}_{\alpha }\right\}\) is finite, then \(G\) is finitely generated, of course. If both the families \(\left\{  {a}_{\alpha }\right\}\) and \(\left\{  {r}_{\beta }\right\}\) are finite, then \(G\) is said to be finitely presented, and these families form what is called a \idx{finite presentation} for \(G\) .
 \end{definition}
 
 This procedure for specifying \(G\) is far from satisfactory. A presentation for \(G\) does determine \(G\) uniquely, up to isomorphism; but two completely different presentations can lead to groups that are isomorphic. Furthermore, even in the finite case there is no effective procedure for determining, from two different presentations, whether or not the groups they determine are isomorphic. This result is known as the ``unsolvability of the isomorphism problem'' for groups.
@@ -651,43 +683,23 @@ This procedure for specifying \(G\) is far from satisfactory. A presentation for
 Unsatisfactory as it is, this is the best we can do!
 
 \section*{Exercises}
-
-1. If \(G = {G}_{1} * {G}_{2}\) , show that
-
-\[
-G/\left\lbrack  {G,G}\right\rbrack \cong  \left( {{G}_{1}/\left\lbrack  {{G}_{1},{G}_{1}}\right\rbrack  }\right)  \oplus  \left( {{G}_{2}/\left\lbrack  {{G}_{2},{G}_{2}}\right\rbrack  }\right) .
-\]
-
-[Hint: Use the extension condition for direct sums and free products to define homomorphisms
-
-\[
-G/\left\lbrack  {G,G}\right\rbrack \rightleftarrows  \left( {{G}_{1}/\left\lbrack  {{G}_{1},{G}_{1}}\right\rbrack  }\right)  \oplus  \left( {{G}_{2}/\left\lbrack  {{G}_{2},{G}_{2}}\right\rbrack  }\right)
-\]
-
-that are inverse to each other.]
-
-2. Generalize the result of Exercise 1 to arbitrary free products.
-
-3. Prove the following:
-
-\begin{theorem} Let \(G = {G}_{1} * {G}_{1}\) , where \({G}_{1}\) and \({G}_{2}\) are cyclic of orders \(m\) and \(n\) , respectively. Then \(m\) and \(n\) are uniquely determined by \(G\) .
-\end{theorem}
-
-Proof.
-
-(a) Show \(G/\left\lbrack  {G,G}\right\rbrack\) has order \({mn}\) .
-
-(b) Determine the largest integer \(k\) such that \(G\) has an element of order \(k\) . (See Exercise 2 of  \S 68.)
-
-(c) Prove the theorem.
-
-4. Show that if \(G = {G}_{1} \oplus  {G}_{2}\) , where \({G}_{1}\) and \({G}_{2}\) are cyclic of orders \(m\) and \(n\) , respectively, then \(m\) and \(n\) are not uniquely determined by \(G\) in general. [Hint: If \(m\) and \(n\) are relatively prime, show that \(G\) is cyclic of order \({mn}\) .]
-
+\begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
+\item If \(G = {G}_{1} * {G}_{2}\) , show that \[ G/\left\lbrack  {G,G}\right\rbrack \cong  \left( {{G}_{1}/\left\lbrack  {{G}_{1},{G}_{1}}\right\rbrack  }\right)  \oplus  \left( {{G}_{2}/\left\lbrack  {{G}_{2},{G}_{2}}\right\rbrack  }\right) . \] [Hint: Use the extension condition for direct sums and free products to define homomorphisms \[ G/\left\lbrack  {G,G}\right\rbrack \rightleftarrows  \left( {{G}_{1}/\left\lbrack  {{G}_{1},{G}_{1}}\right\rbrack  }\right)  \oplus  \left( {{G}_{2}/\left\lbrack  {{G}_{2},{G}_{2}}\right\rbrack  }\right) \] that are inverse to each other.]
+\item Generalize the result of Exercise 1 to arbitrary free products.
+\item Prove the following: \textsl{Theorem.} Let \(G = {G}_{1} * {G}_{1}\) , where \({G}_{1}\) and \({G}_{2}\) are cyclic of orders \(m\) and \(n\) , respectively. Then \(m\) and \(n\) are uniquely determined by \(G\) .  Proof.
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show \(G/\left\lbrack  {G,G}\right\rbrack\) has order \({mn}\) .
+  \item Determine the largest integer \(k\) such that \(G\) has an element of order \(k\) . (See Exercise 2 of  \S 68.)
+  \item Prove the theorem.
+  \end{enumerate}
+\item Show that if \(G = {G}_{1} \oplus  {G}_{2}\) , where \({G}_{1}\) and \({G}_{2}\) are cyclic of orders \(m\) and \(n\) , respectively, then \(m\) and \(n\) are not uniquely determined by \(G\) in general. [Hint: If \(m\) and \(n\) are relatively prime, show that \(G\) is cyclic of order \({mn}\) .]
+\end{enumerate}
 \section*{§ 70 The Seifert-van Kampen Theorem}
 
 We now return to the problem of determining the fundamental group of a space \(X\) that is written as the union of two open subsets \(U\) and \(V\) having path-connected intersection. We showed in \( \S {59}\) that, if \({x}_{0} \in  U \cap  V\) , the images of the two groups \({\pi }_{1}\left( {U,{x}_{0}}\right)\) and \({\pi }_{1}\left( {V,{x}_{0}}\right)\) in \({\pi }_{1}\left( {X,{x}_{0}}\right)\) , under the homomorphisms induced by inclusion, generate the latter group. In this section, we show that \({\pi }_{1}\left( {X,{x}_{0}}\right)\) is, in fact, completely determined by these two groups, the group \({\pi }_{1}\left( {U \cap  V,{x}_{0}}\right)\) , and the various homomorphisms of these groups induced by inclusion. This is a basic result about fundamental groups. It will enable us to compute the fundamental groups of a number of spaces, including the compact 2-manifolds.
 
-\begin{theorem}[\idx{Seifert-van Kampen theorem}] Let \(X = U \cup  V\) , where \(U\) and \(V\) are open in \(X\) ; assume \(U,V\) , and \(U \cap  V\) are path connected; let \({x}_{0} \in  U \cap  V\) . Let \(H\) be a group, and let
+\begin{theorem}[\idx{Seifert-van Kampen theorem}]
+	Let \(X = U \cup  V\) , where \(U\) and \(V\) are open in \(X\) ; assume \(U,V\) , and \(U \cap  V\) are path connected; let \({x}_{0} \in  U \cap  V\) . Let \(H\) be a group, and let
 
 \[
 {\phi }_{1} : {\pi }_{1}\left( {U,{x}_{0}}\right)  \rightarrow  H\;\text{ and }\;{\phi }_{2} : {\pi }_{1}\left( {V,{x}_{0}}\right)  \rightarrow  H
@@ -705,7 +717,8 @@ If \({\phi }_{1} \circ  {i}_{1} = {\phi }_{2} \circ  {i}_{2}\) , then there is a
 This theorem says that if \({\phi }_{1}\) and \({\phi }_{2}\) are arbitrary homomorphisms that are ``compatible on \(U \cap  V\) ,'' then they induce a homomorphism of \({\pi }_{1}\left( {X,{x}_{0}}\right)\) into \(H\) .
 \end{theorem}
 
-\begin{proof}Uniqueness is easy. Theorem 59.1 tells us that \({\pi }_{1}\left( {X,{x}_{0}}\right)\) is generated by the images of \({j}_{1}\) and \({j}_{2}\) . The value of \(\Phi\) on the generator \({j}_{1}\left( {g}_{1}\right)\) must equal \({\phi }_{1}\left( {g}_{1}\right)\) , and its value on \({j}_{2}\left( {g}_{2}\right)\) must equal \({\phi }_{2}\left( {g}_{2}\right)\) . Hence \(\Phi\) is completely determined by \({\phi }_{1}\) and \({\phi }_{2}\) . To show \(\Phi\) exists is another matter!
+\begin{proof}
+	Uniqueness is easy. Theorem 59.1 tells us that \({\pi }_{1}\left( {X,{x}_{0}}\right)\) is generated by the images of \({j}_{1}\) and \({j}_{2}\) . The value of \(\Phi\) on the generator \({j}_{1}\left( {g}_{1}\right)\) must equal \({\phi }_{1}\left( {g}_{1}\right)\) , and its value on \({j}_{2}\left( {g}_{2}\right)\) must equal \({\phi }_{2}\left( {g}_{2}\right)\) . Hence \(\Phi\) is completely determined by \({\phi }_{1}\) and \({\phi }_{2}\) . To show \(\Phi\) exists is another matter!
 For convenience, we introduce the following notation: Given a path \(f\) in \(X\) , we shall use \(\left\lbrack  f\right\rbrack\) to denote its path-homotopy class in \(X\) . If \(f\) happens to lie in \(U\) , then \({\left\lbrack  f\right\rbrack  }_{U}\) is used to denote its path-homotopy class in \(U\) . The notations \({\left\lbrack  f\right\rbrack  }_{V}\) and \({\left\lbrack  f\right\rbrack  }_{U \cap  V}\) are defined similarly.
 
 Step 1. We begin by defining a set map \(\rho\) that assigns, to each loop \(f\) based at \({x}_{0}\) that lies in \(U\) or in \(V\) , an element of the group \(H\) . We define
@@ -902,7 +915,8 @@ as desired. The proof that \(\Phi  \circ  {j}_{2} = {\phi }_{2}\) is similar
 
 The preceding theorem is the modern formulation of the Seifert-van Kampen theorem. We now turn to the classical version, which involves the free product of two groups. Recall that if \(G\) is the external free product \(G = {G}_{1} * {G}_{2}\) , we often treat \({G}_{1}\) and \({G}_{2}\) as if they were subgroups of \(G\) , for simplicity of notation.
 \end{proof}
-\begin{theorem}[Seifert-van Kampen theorem, classical version] Assume the hypotheses of the preceding theorem. Let
+\begin{theorem}[Seifert-van Kampen theorem, classical version]
+	Assume the hypotheses of the preceding theorem. Let
 
 \[
 j : {\pi }_{1}\left( {U,{x}_{0}}\right)  * {\pi }_{1}\left( {V,{x}_{0}}\right)  \rightarrow  {\pi }_{1}\left( {X,{x}_{0}}\right)
@@ -919,7 +933,8 @@ for \(g \in  {\pi }_{1}\left( {U \cap  V,{x}_{0}}\right)\) .
 Said differently, the kernel of \(j\) is generated by all elements of the free product of the form \({i}_{1}{\left( g\right) }^{-1}{i}_{2}\left( g\right)\) , and their conjugates.
 \end{theorem}
 
-\begin{proof}The fact that \({\pi }_{1}\left( {X,{x}_{0}}\right)\) is generated by the images of \({j}_{1}\) and \({j}_{2}\) implies that \(j\) is surjective.
+\begin{proof}
+	The fact that \({\pi }_{1}\left( {X,{x}_{0}}\right)\) is generated by the images of \({j}_{1}\) and \({j}_{2}\) implies that \(j\) is surjective.
 We show that \(N \subset  \ker j\) . Since \(\ker j\) is normal, it is enough to show that \({i}_{1}{\left( g\right) }^{-1}{i}_{2}\left( g\right)\) belongs to \(\ker j\) for each \(g \in  {\pi }_{1}\left( {U \cap  V,{x}_{0}}\right)\) . If \(i : U \cap  V \rightarrow  X\) is the inclusion mapping, then
 
 \[
@@ -959,14 +974,16 @@ so that
 
 as desired. A similar remark applies if \(g \in  {\pi }_{1}\left( {V,{x}_{0}}\right)\) .
 \end{proof}
-\begin{corollary} Assume the hypotheses of the Seifert-van Kampen theorem. If \(U \cap  V\) is simply connected, then there is an isomorphism
+\begin{corollary}
+	Assume the hypotheses of the Seifert-van Kampen theorem. If \(U \cap  V\) is simply connected, then there is an isomorphism
 
 \[
 k : {\pi }_{1}\left( {U,{x}_{0}}\right)  * {\pi }_{1}\left( {V,{x}_{0}}\right)  \rightarrow  {\pi }_{1}\left( {X,{x}_{0}}\right) .
 \]
 \end{corollary}
 
-\begin{corollary} Assume the hypotheses of the Seifert-van Kampen theorem. If \(V\) is simply connected, there is an isomorphism
+\begin{corollary}
+	Assume the hypotheses of the Seifert-van Kampen theorem. If \(V\) is simply connected, there is an isomorphism
 
 \[
 k : {\pi }_{1}\left( {U,{x}_{0}}\right) /N \rightarrow  {\pi }_{1}\left( {X,{x}_{0}}\right) ,
@@ -979,10 +996,13 @@ where \(N\) is the least normal subgroup of \({\pi }_{1}\left( {U,{x}_{0}}\right
 \]
 \end{corollary}
 
-\begin{example} Let \(X\) be a theta-space. Then \(X\) is a Hausdorff space that is the union of three arcs \(A,B\) , and \(C\) , each pair of which intersect precisely in their end points \(p\) and \(q\) . We showed earlier that the fundamental group of \(X\) is not abelian. We show here that this group is in fact a free group on two generators.
+\begin{centeredblock}
+\begin{example}
+	Let \(X\) be a theta-space. Then \(X\) is a Hausdorff space that is the union of three arcs \(A,B\) , and \(C\) , each pair of which intersect precisely in their end points \(p\) and \(q\) . We showed earlier that the fundamental group of \(X\) is not abelian. We show here that this group is in fact a free group on two generators.
 
 Let \(a\) be an interior point of \(A\) and let \(b\) be an interior point of \(B\) . Write \(X\) as the union of the open sets \(U = X - a\) and \(V = X - b\) . See Figure 70.3. The space \(U \cap  V = X - a - b\) is simply connected because it is contractible. Furthermore, \(U\) and \(V\) have infinite cyclic fundamental groups, because \(U\) has the homotopy type of \(B \cup  C\) and \(V\) has the homotopy type of \(A \cup  C\) . Therefore, the fundamental group of \(X\) is the free product of two infinite cyclic groups, that is, it is a free group on two generators.
 \end{example}
+\end{centeredblock}
 
 \begin{center}
 \includegraphics[width=0.4\textwidth]{images/70.3.jpg}
@@ -992,50 +1012,38 @@ Let \(a\) be an interior point of \(A\) and let \(b\) be an interior point of \(
 Figure 70.3
 
 \section*{Exercises}
-
-In the following exercises, assume the hypotheses of the Seifert-van Kampen theorem.
-
-1. Suppose that the homomorphism \({i}_{ * }\) induced by inclusion \(i : U \cap  V \rightarrow  X\) is trivial.
-
-(a) Show that \({j}_{1}\) and \({j}_{2}\) induce an epimorphism
-
-\[
-h : \left( {{\pi }_{1}\left( {U,{x}_{0}}\right) /{N}_{1}}\right)  * \left( {{\pi }_{1}\left( {V,{x}_{0}}\right) /{N}_{2}}\right)  \rightarrow  {\pi }_{1}\left( {X,{x}_{0}}\right) ,
-\]
-
-where \({N}_{1}\) is the least normal subgroup of \({\pi }_{1}\left( {U,{x}_{0}}\right)\) containing image \({i}_{1}\) , and \({N}_{2}\) is the least normal subgroup of \({\pi }_{1}\left( {V,{x}_{0}}\right)\) containing image \({i}_{2}\) .
-
-(b) Show that \(h\) is an isomorphism. [Hint: Use Theorem 70.1 to define a left inverse for \(h\) .]
-
-2. Suppose that \({i}_{2}\) is surjective.
-
-(a) Show that \({j}_{1}\) induces an epimorphism
-
-\[
-h : {\pi }_{1}\left( {U,{x}_{0}}\right) /M \rightarrow  {\pi }_{1}\left( {X,{x}_{0}}\right) ,
-\]
-
-where \(M\) is the least normal subgroup of \({\pi }_{1}\left( {U,{x}_{0}}\right)\) containing \({i}_{1}\left( {\ker {i}_{2}}\right)\) . [Hint: Show \({j}_{1}\) is surjective.]
-
-(b) Show that \(h\) is an isomorphism. [Hint: Let \(H = {\pi }_{1}\left( {U,{x}_{0}}\right) /M\) . Let \({\phi }_{1}\) : \({\pi }_{1}\left( {U,{x}_{0}}\right)  \rightarrow  H\) be the projection. Use the fact that \({\pi }_{1}\left( {U \cap  V,{x}_{0}}\right) /\ker {i}_{2}\) is isomorphic to \({\pi }_{1}\left( {V,{x}_{0}}\right)\) to define a homomorphism \({\phi }_{2} : {\pi }_{1}\left( {V,{x}_{0}}\right)  \rightarrow  H\) . Use Theorem 70.1 to define a left inverse for \(h\) .]
-
-3. (a) Show that if \({G}_{1}\) and \({G}_{2}\) have finite presentations, so does \({G}_{1} * {G}_{2}\) .
-
-(b) Show that if \({\pi }_{1}\left( {U \cap  V,{x}_{0}}\right)\) is finitely generated and \({\pi }_{1}\left( {U,{x}_{0}}\right)\) and \({\pi }_{1}\left( {V,{x}_{0}}\right)\) have finite presentations, then \({\pi }_{1}\left( {X,{x}_{0}}\right)\) has a finite presentation. [Hint: If \({N}^{\prime }\) is a normal subgroup of \({\pi }_{1}\left( {U,{x}_{0}}\right)  * {\pi }_{1}\left( {V,{x}_{0}}\right)\) that contains the elements \({i}_{1}{\left( {g}_{i}\right) }^{-1}{i}_{2}\left( {g}_{i}\right)\) where \({g}_{i}\) runs over a set of generators for \({\pi }_{1}\left( {U \cap  V,{x}_{0}}\right)\) , then \({N}^{\prime }\) contains \({i}_{1}{\left( g\right) }^{-1}{i}_{2}\left( g\right)\) for arbitrary \(g\) .]
-
+\begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
+\item Suppose that the homomorphism \({i}_{ * }\) induced by inclusion \(i : U \cap  V \rightarrow  X\) is trivial.
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show that \({j}_{1}\) and \({j}_{2}\) induce an epimorphism \[ h : \left( {{\pi }_{1}\left( {U,{x}_{0}}\right) /{N}_{1}}\right)  * \left( {{\pi }_{1}\left( {V,{x}_{0}}\right) /{N}_{2}}\right)  \rightarrow  {\pi }_{1}\left( {X,{x}_{0}}\right) , \] where \({N}_{1}\) is the least normal subgroup of \({\pi }_{1}\left( {U,{x}_{0}}\right)\) containing image \({i}_{1}\) , and \({N}_{2}\) is the least normal subgroup of \({\pi }_{1}\left( {V,{x}_{0}}\right)\) containing image \({i}_{2}\) .
+  \item Show that \(h\) is an isomorphism. [Hint: Use Theorem 70.1 to define a left inverse for \(h\) .]
+  \end{enumerate}
+\item Suppose that \({i}_{2}\) is surjective.
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show that \({j}_{1}\) induces an epimorphism \[ h : {\pi }_{1}\left( {U,{x}_{0}}\right) /M \rightarrow  {\pi }_{1}\left( {X,{x}_{0}}\right) , \] where \(M\) is the least normal subgroup of \({\pi }_{1}\left( {U,{x}_{0}}\right)\) containing \({i}_{1}\left( {\ker {i}_{2}}\right)\) . [Hint: Show \({j}_{1}\) is surjective.]
+  \item Show that \(h\) is an isomorphism. [Hint: Let \(H = {\pi }_{1}\left( {U,{x}_{0}}\right) /M\) . Let \({\phi }_{1}\) : \({\pi }_{1}\left( {U,{x}_{0}}\right)  \rightarrow  H\) be the projection. Use the fact that \({\pi }_{1}\left( {U \cap  V,{x}_{0}}\right) /\ker {i}_{2}\) is isomorphic to \({\pi }_{1}\left( {V,{x}_{0}}\right)\) to define a homomorphism \({\phi }_{2} : {\pi }_{1}\left( {V,{x}_{0}}\right)  \rightarrow  H\) . Use Theorem 70.1 to define a left inverse for \(h\) .]
+  \end{enumerate}
+\item (a) Show that if \({G}_{1}\) and \({G}_{2}\) have finite presentations, so does \({G}_{1} * {G}_{2}\) .
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show that if \({\pi }_{1}\left( {U \cap  V,{x}_{0}}\right)\) is finitely generated and \({\pi }_{1}\left( {U,{x}_{0}}\right)\) and \({\pi }_{1}\left( {V,{x}_{0}}\right)\) have finite presentations, then \({\pi }_{1}\left( {X,{x}_{0}}\right)\) has a finite presentation. [Hint: If \({N}^{\prime }\) is a normal subgroup of \({\pi }_{1}\left( {U,{x}_{0}}\right)  * {\pi }_{1}\left( {V,{x}_{0}}\right)\) that contains the elements \({i}_{1}{\left( {g}_{i}\right) }^{-1}{i}_{2}\left( {g}_{i}\right)\) where \({g}_{i}\) runs over a set of generators for \({\pi }_{1}\left( {U \cap  V,{x}_{0}}\right)\) , then \({N}^{\prime }\) contains \({i}_{1}{\left( g\right) }^{-1}{i}_{2}\left( g\right)\) for arbitrary \(g\) .]
+  \end{enumerate}
+\end{enumerate}
 \section*{§ 71 The Fundamental Group of a Wedge of Circles}
 
 In this section, we define what we mean by a \idx{wedge of circles}, and we compute its fundamental group.
 
-\begin{definition} Let \(X\) be a Hausdorff space that is the union of the subspaces \({S}_{1},\ldots ,{S}_{n}\) , each of which is homeomorphic to the unit circle \({S}^{1}\) . Assume that there is a point \(p\) of \(X\) such that \({S}_{i} \cap  {S}_{j} = \{ p\}\) whenever \(i \neq  j\) . Then \(X\) is called the wedge of the circles \({S}_{1},\ldots ,{S}_{n}\) .
+\begin{definition}
+	Let \(X\) be a Hausdorff space that is the union of the subspaces \({S}_{1},\ldots ,{S}_{n}\) , each of which is homeomorphic to the unit circle \({S}^{1}\) . Assume that there is a point \(p\) of \(X\) such that \({S}_{i} \cap  {S}_{j} = \{ p\}\) whenever \(i \neq  j\) . Then \(X\) is called the wedge of the circles \({S}_{1},\ldots ,{S}_{n}\) .
 \end{definition}
 
 Note that each space \({S}_{i}\) , being compact, is closed in \(X\) . Note also that \(X\) can be imbedded in the plane; if \({C}_{i}\) denotes the circle of radius \(i\) in \({\mathbb{R}}^{2}\) with center at \(\left( {i,0}\right)\) , then \(X\) is homeomorphic to \({C}_{1} \cup  \cdots  \cup  {C}_{n}\) .
 
-\begin{theorem} Let \(X\) be the wedge of the circles \({S}_{1},\ldots ,{S}_{n}\) ; let \(p\) be the common point of these circles. Then \({\pi }_{1}\left( {X,p}\right)\) is a free group. If \({f}_{i}\) is a loop in \({S}_{i}\) that represents a generator of \({\pi }_{1}\left( {{S}_{i},p}\right)\) , then the loops \({f}_{1},\ldots ,{f}_{n}\) represent a system of free generators for \({\pi }_{1}\left( {X,p}\right)\) .
+\begin{theorem}
+	Let \(X\) be the wedge of the circles \({S}_{1},\ldots ,{S}_{n}\) ; let \(p\) be the common point of these circles. Then \({\pi }_{1}\left( {X,p}\right)\) is a free group. If \({f}_{i}\) is a loop in \({S}_{i}\) that represents a generator of \({\pi }_{1}\left( {{S}_{i},p}\right)\) , then the loops \({f}_{1},\ldots ,{f}_{n}\) represent a system of free generators for \({\pi }_{1}\left( {X,p}\right)\) .
 \end{theorem}
 
-\begin{proof}The result is immediate if \(n = 1\) . We proceed by induction on \(n\) . The proof is similar to the one given in Example 1 of the preceding section.
+\begin{proof}
+	The result is immediate if \(n = 1\) . We proceed by induction on \(n\) . The proof is similar to the one given in Example 1 of the preceding section.
 Let \(X\) be the wedge of the circles \({S}_{1},\ldots ,{S}_{n}\) , with \(p\) the common point of these circles. Choose a point \({q}_{i}\) of \({S}_{i}\) different from \(p\) , for each \(i\) . Set \({W}_{i} = {S}_{i} - {q}_{i}\) , and let
 
 \[
@@ -1057,26 +1065,32 @@ A similar argument shows that \({S}_{1}\) is a deformation retract of \(U\) and 
 
 We generalize this result to a space \(X\) that is the union of infinitely many circles having a point in common. Here we must be careful about the topology of \(X\) .
 \end{proof}
-\begin{definition} Let \(X\) be a space that is the union of the subspaces \({X}_{\alpha }\) , for \(\alpha  \in  J\) The topology of \(X\) is said to be coherent with the subspaces \({X}_{\alpha }\) provided a subset \(C\) of \(X\) is closed in \(X\) if \(C \cap  {X}_{\alpha }\) is closed in \({X}_{\alpha }\) for each \(\alpha\) . An equivalent condition is that a set be open in \(X\) if its intersection with each \({X}_{\alpha }\) is open in \({X}_{\alpha }\) .
+\begin{definition}
+	Let \(X\) be a space that is the union of the subspaces \({X}_{\alpha }\) , for \(\alpha  \in  J\) The topology of \(X\) is said to be coherent with the subspaces \({X}_{\alpha }\) provided a subset \(C\) of \(X\) is closed in \(X\) if \(C \cap  {X}_{\alpha }\) is closed in \({X}_{\alpha }\) for each \(\alpha\) . An equivalent condition is that a set be open in \(X\) if its intersection with each \({X}_{\alpha }\) is open in \({X}_{\alpha }\) .
 \end{definition}
 
 If \(X\) is the union of finitely many closed subspaces \({X}_{1},\ldots ,{X}_{n}\) , then the topology of \(X\) is automatically coherent with these subspaces, since if \(C \cap  {X}_{i}\) is closed in \({X}_{i}\) , it is closed in \(X\) , and \(C\) is the finite union of the sets \(C \cap  {X}_{i}\) .
 
-\begin{definition} Let \(X\) be a space that is the union of the subspaces \({S}_{\alpha }\) , for \(\alpha  \in  J\) , each of which is homeomorphic to the unit circle. Assume there is a point \(p\) of \(X\) such that \({S}_{\alpha } \cap  {S}_{\beta } = \{ p\}\) whenever \(\alpha  \neq  \beta\) . If the topology of \(X\) is coherent with the subspaces \({S}_{\alpha }\) , then \(X\) is called the wedge of the circles \({S}_{\alpha }\) .
+\begin{definition}
+	Let \(X\) be a space that is the union of the subspaces \({S}_{\alpha }\) , for \(\alpha  \in  J\) , each of which is homeomorphic to the unit circle. Assume there is a point \(p\) of \(X\) such that \({S}_{\alpha } \cap  {S}_{\beta } = \{ p\}\) whenever \(\alpha  \neq  \beta\) . If the topology of \(X\) is coherent with the subspaces \({S}_{\alpha }\) , then \(X\) is called the wedge of the circles \({S}_{\alpha }\) .
 \end{definition}
 
 In the finite case, the definition involved the Hausdorff condition instead of the coherence condition; in that case the coherence condition followed. In the infinite case, this would no longer be true, so we included the coherence condition as part of the definition. We would include the Hausdorff condition as well, but that is no longer necessary, for it follows from the coherence condition:
 
-\begin{lemma} Let \(X\) be the wedge of the circles \({S}_{\alpha }\) , for \(\alpha  \in  J\) . Then \(X\) is normal. Furthermore, any compact subspace of \(X\) is contained in the union of finitely many circles \({S}_{\alpha }\) .
+\begin{lemma}
+	Let \(X\) be the wedge of the circles \({S}_{\alpha }\) , for \(\alpha  \in  J\) . Then \(X\) is normal. Furthermore, any compact subspace of \(X\) is contained in the union of finitely many circles \({S}_{\alpha }\) .
 \end{lemma}
 
-\begin{proof}It is clear that one-point sets are closed in \(X\) . Let \(A\) and \(B\) be disjoint closed subsets of \(X\) ; assume that \(B\) does not contain \(p\) Choose disjoint subsets \({U}_{\alpha }\) and \({V}_{\alpha }\) of \({S}_{\alpha }\) that are open in \({S}_{\alpha }\) and contain \(\{ p\}  \cup  \left( {A \cap  {S}_{\alpha }}\right)\) and \(B \cap  {S}_{\alpha }\) , respectively. Let \(U = \bigcup {U}_{\alpha }\) and \(V = \bigcup {V}_{\alpha }\) ; then \(U\) and \(V\) are disjoint. Now \(U \cap  {S}_{\alpha } = {U}_{\alpha }\) because all the sets \({U}_{\alpha }\) contain \(p\) , and \(V \cap  {S}_{\alpha } = {V}_{\alpha }\) because no set \({V}_{\alpha }\) contains \(p\) . Hence \(U\) and \(V\) are open in \(X\) , as desired. Thus \(X\) is normal.
+\begin{proof}
+	It is clear that one-point sets are closed in \(X\) . Let \(A\) and \(B\) be disjoint closed subsets of \(X\) ; assume that \(B\) does not contain \(p\) Choose disjoint subsets \({U}_{\alpha }\) and \({V}_{\alpha }\) of \({S}_{\alpha }\) that are open in \({S}_{\alpha }\) and contain \(\{ p\}  \cup  \left( {A \cap  {S}_{\alpha }}\right)\) and \(B \cap  {S}_{\alpha }\) , respectively. Let \(U = \bigcup {U}_{\alpha }\) and \(V = \bigcup {V}_{\alpha }\) ; then \(U\) and \(V\) are disjoint. Now \(U \cap  {S}_{\alpha } = {U}_{\alpha }\) because all the sets \({U}_{\alpha }\) contain \(p\) , and \(V \cap  {S}_{\alpha } = {V}_{\alpha }\) because no set \({V}_{\alpha }\) contains \(p\) . Hence \(U\) and \(V\) are open in \(X\) , as desired. Thus \(X\) is normal.
 Now let \(C\) be a compact subspace of \(X\) . For each \(\alpha\) for which it is possible, choose a point \({x}_{\alpha }\) of \(C \cap  \left( {{S}_{\alpha } - p}\right)\) . The set \(D = \left\{  {x}_{\alpha }\right\}\) is closed in \(X\) , because its intersection with each space \({S}_{\alpha }\) is a one-point set or is empty. For the same reason, each subset of \(D\) is closed in \(X\) . Thus \(D\) is a closed discrete subspace of \(X\) contained in \(C\) ; since \(C\) is limit point compact, \(D\) must be finite.
 \end{proof}
-\begin{theorem} Let \(X\) be the wedge of the circles \({S}_{\alpha }\) , for \(\alpha  \in  J\) ; let \(p\) be the common point of these circles. Then \({\pi }_{1}\left( {X,p}\right)\) is a free group. If \({f}_{\alpha }\) is a loop in \({S}_{\alpha }\) representing a generator of \({\pi }_{1}\left( {{S}_{\alpha },p}\right)\) , then the loops \(\left\{  {f}_{\alpha }\right\}\) represent a system of free generators for \({\pi }_{1}\left( {X,p}\right)\) .
+\begin{theorem}
+	Let \(X\) be the wedge of the circles \({S}_{\alpha }\) , for \(\alpha  \in  J\) ; let \(p\) be the common point of these circles. Then \({\pi }_{1}\left( {X,p}\right)\) is a free group. If \({f}_{\alpha }\) is a loop in \({S}_{\alpha }\) representing a generator of \({\pi }_{1}\left( {{S}_{\alpha },p}\right)\) , then the loops \(\left\{  {f}_{\alpha }\right\}\) represent a system of free generators for \({\pi }_{1}\left( {X,p}\right)\) .
 \end{theorem}
 
-\begin{proof}Let \({i}_{\alpha } : {\pi }_{1}\left( {{S}_{\alpha },p}\right)  \rightarrow  {\pi }_{1}\left( {X,p}\right)\) be the homomorphism induced by inclusion; let \({G}_{\alpha }\) be the image of \({i}_{\alpha }\) .
+\begin{proof}
+	Let \({i}_{\alpha } : {\pi }_{1}\left( {{S}_{\alpha },p}\right)  \rightarrow  {\pi }_{1}\left( {X,p}\right)\) be the homomorphism induced by inclusion; let \({G}_{\alpha }\) be the image of \({i}_{\alpha }\) .
 Note that if \(f\) is any loop in \(X\) based at \(p\) , then the image set of \(f\) is compact, so that \(f\) lies in some finite union of subspaces \({S}_{\alpha }\) . Furthermore, if \(f\) and \(g\) are two loops that are path homotopic in \(X\) , then they are actually path homotopic in some finite union of the subspaces \({S}_{\alpha }\) .
 
 It follows that the groups \(\left\{  {G}_{\alpha }\right\}\) generate \({\pi }_{1}\left( {X,p}\right)\) . For if \(f\) is a loop in \(X\) , then \(f\) lies in \({S}_{{\alpha }_{1}} \cup  \cdots  \cup  {S}_{{\alpha }_{n}}\) for some finite set of indices; then Theorem 71.1 implies that \(\left\lbrack  f\right\rbrack\) is a product of elements of the groups \({G}_{{\alpha }_{1}},\ldots ,{G}_{{\alpha }_{n}}\) . Similarly, it follows that \({i}_{\beta }\) is a monomorphism. For if \(f\) is a loop in \({S}_{\beta }\) that is path homotopic in \(X\) to a constant, then \(f\) is path homotopic to a constant in some finite union of spaces \({S}_{\alpha }\) , so that Theorem 71.1 implies that \(f\) is path homotopic to a constant in \({S}_{\beta }\) .
@@ -1091,10 +1105,13 @@ in the elements of the groups \({G}_{\alpha }\) that represents the identity ele
 
 The preceding theorem depended on the fact that the topology of \(X\) was coherent with the subspaces \({S}_{\alpha }\) . Consider the following example:
 
-\begin{example} Let \({C}_{n}\) be the circle of radius \(1/n\) in \({\mathbb{R}}^{2}\) with center at the point \(\left( {1/n,0}\right)\) . Let \(X\) be the subspace of \({\mathbb{R}}^{2}\) that is the union of these circles; then \(X\) is the union of a countably infinite collection of circles, each pair of which intersect in the origin \(p\) However, \(X\) is not the wedge of the circles \({C}_{n}\) , we call \(X\) (for convenience) the \idx{infinite earring}.
+\begin{centeredblock}
+\begin{example}
+	Let \({C}_{n}\) be the circle of radius \(1/n\) in \({\mathbb{R}}^{2}\) with center at the point \(\left( {1/n,0}\right)\) . Let \(X\) be the subspace of \({\mathbb{R}}^{2}\) that is the union of these circles; then \(X\) is the union of a countably infinite collection of circles, each pair of which intersect in the origin \(p\) However, \(X\) is not the wedge of the circles \({C}_{n}\) , we call \(X\) (for convenience) the \idx{infinite earring}.
 
 One can verify directly that \(X\) does not have the topology coherent with the subspaces \({C}_{n}\) ; the intersection of the positive \(x\) -axis with \(X\) contains exactly one point from each circle \({C}_{n}\) , but it is not closed in \(X\) . Alternatively, for each \(n\) , let \({f}_{n}\) be a loop in \({C}_{n}\) that represents a generator of \({\pi }_{1}\left( {{C}_{n},p}\right)\) , we show that \({\pi }_{1}\left( {X,p}\right)\) is not a free group with \(\left\{  \left\lbrack  {f}_{n}\right\rbrack  \right\}\) as a system of free generators Indeed, we show the elements \(\left\lbrack  {f}_{i}\right\rbrack\) do not even generate the group \({\pi }_{1}\left( {X,p}\right)\) .
 \end{example}
+\end{centeredblock}
 
 Consider the loop \(g\) in \(X\) defined as follows: For each \(n\) , define \(g\) on the interval \(\left\lbrack  {1/\left( {n + 1}\right) ,1/n}\right\rbrack\) to be the positive linear map of this interval onto \(\left\lbrack  {0,1}\right\rbrack\) followed by \({f}_{n}\) . This specifies \(g\) on \((0,1\rbrack\) ; define \(g\left( 0\right)  = p\) . Because \(X\) has the subspace topology derived from \({\mathbb{R}}^{2}\) , it is easy to see that \(g\) is continuous. See Figure 71.2. We show that given \(n\) , the element \(\left\lbrack  g\right\rbrack\) does not belong to the subgroup \({G}_{n}\) of \({\pi }_{1}\left( {X,p}\right)\) generated by \(\left\lbrack  {f}_{1}\right\rbrack  ,\ldots ,\left\lbrack  {f}_{n}\right\rbrack\) .
 
@@ -1112,7 +1129,8 @@ In the preceding theorem, we calculated the fundamental group of a space that is
 
 *Lemma 71.4. Given an index set \(J\) , there exists a space \(X\) that is a wedge of circles \({S}_{\alpha }\) for \(\alpha  \in  J\) .
 
-\begin{proof}Give the set \(J\) the discrete topology, and let \(E\) be the product space \({S}^{1} \times  J\) . Choose a point \({b}_{0} \in  {S}^{1}\) , and let \(X\) be the quotient space obtained from \(E\) by collapsing the closed set \(P = {b}_{0} \times  J\) to a point \(p\) . Let \(\pi  : E \rightarrow  X\) be the quotient map; let \({S}_{\alpha } = \pi \left( {{S}^{1} \times  \alpha }\right)\) . We show that each \({S}_{\alpha }\) is homeomorphic to \({S}^{1}\) and \(X\) is the wedge of the circles \({S}_{\alpha }\) .
+\begin{proof}
+	Give the set \(J\) the discrete topology, and let \(E\) be the product space \({S}^{1} \times  J\) . Choose a point \({b}_{0} \in  {S}^{1}\) , and let \(X\) be the quotient space obtained from \(E\) by collapsing the closed set \(P = {b}_{0} \times  J\) to a point \(p\) . Let \(\pi  : E \rightarrow  X\) be the quotient map; let \({S}_{\alpha } = \pi \left( {{S}^{1} \times  \alpha }\right)\) . We show that each \({S}_{\alpha }\) is homeomorphic to \({S}^{1}\) and \(X\) is the wedge of the circles \({S}_{\alpha }\) .
 Note that if \(C\) is closed in \({S}^{1} \times  \alpha\) , then \(\pi \left( C\right)\) is closed in \(X\) . For \({\pi }^{-1}\pi \left( C\right)  = C\) if the point \({b}_{0} \times  \alpha\) is not in \(C\) , and \({\pi }^{-1}\pi \left( C\right)  = C \cup  P\) otherwise. In either case, \({\pi }^{-1}\pi \left( C\right)\) is closed in \({S}^{1} \times  J\) , so that \(\pi \left( C\right)\) is closed in \(X\) .
 
 It follows that \({S}_{\alpha }\) is itself closed in \(X\) , since \({S}^{1} \times  \alpha\) is closed in \({S}^{1} \times  J\) , and that \(\pi\) maps \({S}^{1} \times  \alpha\) homeomorphically onto \({S}_{\alpha }\) . Let \({\pi }_{\alpha }\) be this homeomorphism.
@@ -1126,27 +1144,22 @@ To show that \(X\) has the topology coherent with the subspaces \({S}_{\alpha }\
 the latter set is closed in \({S}^{1} \times  \alpha\) because \({\pi }_{\alpha }\) is continuous. Then \({\pi }^{-1}\left( D\right)\) is closed in \({S}^{1} \times  J\) , so that \(D\) is closed in \(X\) by definition of the quotient topology.
 \end{proof}
 \section*{Exercises}
-
-1. Let \(X\) be a space that is the union of subspaces \({S}_{1},\ldots ,{S}_{n}\) , each of which is homeomorphic to the unit circle. Assume there is a point \(p\) of \(X\) such that \({S}_{i} \cap  {S}_{j} = \{ p\}\) for \(i \neq  j\) .
-
-(a) Show that \(X\) is Hausdorff if and only if each space \({S}_{i}\) is closed in \(X\) .
-
-(b) Show that \(X\) is Hausdorff if and only if the topology of \(X\) is coherent with the subspaces \({S}_{i}\)
-
-(c) Give an example to show that \(X\) need not be Hausdorff. [Hint: See Exercises 5 of \( \S {36}\) .]
-
-2. Suppose \(X\) is a space that is the union of the closed subspaces \({X}_{1},\ldots ,{X}_{n}\) ; assume there is a point \(p\) of \(X\) such that \({X}_{i} \cap  {X}_{j} = \{ p\}\) for \(i \neq  j\) . Then we call \(X\) the wedge of the spaces \({X}_{1},\ldots ,{X}_{n}\) , and write \(X = {X}_{1} \vee  \cdots  \vee  {X}_{n}\) . Show that if for each \(i\) , the point \(p\) is a deformation retract of an open set \({W}_{i}\) of \({X}_{i}\) , then \({\pi }_{1}\left( {X,p}\right)\) is the external free product of the groups \({\pi }_{1}\left( {{X}_{i},p}\right)\) relative to the monomorphisms induced by inclusion.
-
-3. What can you say about the fundamental group of \(X \vee  Y\) if \(X\) is homeomorphic to \({S}^{1}\) and \(Y\) is homeomorphic to \({S}^{2}\) ?
-
-4. Show that if \(X\) is an infinite wedge of circles, then \(X\) does not satisfy the first countability axiom.
-
-5. Let \({S}_{n}\) be the circle of radius \(n\) in \({\mathbb{R}}^{2}\) whose center is at the point \(\left( {n,0}\right)\) . Let \(Y\) be the subspace of \({\mathbb{R}}^{2}\) that is the union of these circles; let \(p\) be their common point.
-
-(a) Show that \(Y\) is not homeomorphic to a countably infinite wedge \(X\) of circles, nor to the space of Example 1.
-
-(b) Show, however, that \({\pi }_{1}\left( {Y,p}\right)\) is a free group with \(\left\{  \left\lbrack  {f}_{n}\right\rbrack  \right\}\) as a system of free generators, where \({f}_{n}\) is a loop representing a generator of \({\pi }_{1}\left( {{S}_{n},p}\right)\) .
-
+\begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
+\item Let \(X\) be a space that is the union of subspaces \({S}_{1},\ldots ,{S}_{n}\) , each of which is homeomorphic to the unit circle. Assume there is a point \(p\) of \(X\) such that \({S}_{i} \cap  {S}_{j} = \{ p\}\) for \(i \neq  j\) .
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show that \(X\) is Hausdorff if and only if each space \({S}_{i}\) is closed in \(X\) .
+  \item Show that \(X\) is Hausdorff if and only if the topology of \(X\) is coherent with the subspaces \({S}_{i}\)
+  \item Give an example to show that \(X\) need not be Hausdorff. [Hint: See Exercises 5 of \( \S {36}\) .]
+  \end{enumerate}
+\item Suppose \(X\) is a space that is the union of the closed subspaces \({X}_{1},\ldots ,{X}_{n}\) ; assume there is a point \(p\) of \(X\) such that \({X}_{i} \cap  {X}_{j} = \{ p\}\) for \(i \neq  j\) . Then we call \(X\) the wedge of the spaces \({X}_{1},\ldots ,{X}_{n}\) , and write \(X = {X}_{1} \vee  \cdots  \vee  {X}_{n}\) . Show that if for each \(i\) , the point \(p\) is a deformation retract of an open set \({W}_{i}\) of \({X}_{i}\) , then \({\pi }_{1}\left( {X,p}\right)\) is the external free product of the groups \({\pi }_{1}\left( {{X}_{i},p}\right)\) relative to the monomorphisms induced by inclusion.
+\item What can you say about the fundamental group of \(X \vee  Y\) if \(X\) is homeomorphic to \({S}^{1}\) and \(Y\) is homeomorphic to \({S}^{2}\) ?
+\item Show that if \(X\) is an infinite wedge of circles, then \(X\) does not satisfy the first countability axiom.
+\item Let \({S}_{n}\) be the circle of radius \(n\) in \({\mathbb{R}}^{2}\) whose center is at the point \(\left( {n,0}\right)\) . Let \(Y\) be the subspace of \({\mathbb{R}}^{2}\) that is the union of these circles; let \(p\) be their common point.
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show that \(Y\) is not homeomorphic to a countably infinite wedge \(X\) of circles, nor to the space of Example 1.
+  \item Show, however, that \({\pi }_{1}\left( {Y,p}\right)\) is a free group with \(\left\{  \left\lbrack  {f}_{n}\right\rbrack  \right\}\) as a system of free generators, where \({f}_{n}\) is a loop representing a generator of \({\pi }_{1}\left( {{S}_{n},p}\right)\) .
+  \end{enumerate}
+\end{enumerate}
 \section*{§ 72 Adjoining a Two-cell}
 
 We have computed the fundamental group of the torus \(T = {S}^{1} \times  {S}^{1}\) in two ways. One involved considerng the standard covering map \(p \times  p : \mathbb{R} \times  \mathbb{R} \rightarrow  {S}^{1} \times  {S}^{1}\) and using the lifting correspondence. Another involved a basic theorem about the fundamental group of a product space. Now we compute the fundamental group of the torus in yet another way.
@@ -1155,7 +1168,8 @@ If one restricts the covering map \(p \times  p\) to the unit square, one obtain
 
 The process of constructing a space by pasting the edges of a polygonal region in the plane onto another space is quite useful. We show here how to compute the fundamental group of such a space. The applications will be many and fruitful.
 
-\begin{theorem} Let \(X\) be a Hausdorff space; let \(A\) be a closed path-connected subspace of \(X\) . Suppose that there is a continuous map \(h : {B}^{2} \rightarrow  X\) that maps Int \({B}^{2}\) bijectively onto \(X - A\) and maps \({S}^{1} = \mathrm{{Bd}}{B}^{2}\) into \(A\) . Let \(p \in  {S}^{1}\) and let \(a = h\left( p\right)\) ; let \(k : \left( {{S}^{1},p}\right)  \rightarrow  \left( {A,a}\right)\) be the map obtained by restricting \(h\) . Then the homomorphism
+\begin{theorem}
+	Let \(X\) be a Hausdorff space; let \(A\) be a closed path-connected subspace of \(X\) . Suppose that there is a continuous map \(h : {B}^{2} \rightarrow  X\) that maps Int \({B}^{2}\) bijectively onto \(X - A\) and maps \({S}^{1} = \mathrm{{Bd}}{B}^{2}\) into \(A\) . Let \(p \in  {S}^{1}\) and let \(a = h\left( p\right)\) ; let \(k : \left( {{S}^{1},p}\right)  \rightarrow  \left( {A,a}\right)\) be the map obtained by restricting \(h\) . Then the homomorphism
 
 \[
 {i}_{ * } : {\pi }_{1}\left( {A,a}\right)  \rightarrow  {\pi }_{1}\left( {X,a}\right)
@@ -1166,7 +1180,8 @@ induced by inclusion is surjective, and its kernel is the least normal subgroup 
 We sometimes say that the fundamental group of \(X\) is obtained from the fundamental group of \(A\) by ``killing off'' the class \({k}_{ * }\left\lbrack  f\right\rbrack\) , where \(\left\lbrack  f\right\rbrack\) generates \({\pi }_{1}\left( {{S}^{1},p}\right)\) .
 \end{theorem}
 
-\begin{proof}Step 1. The origin 0 is the center point of \({B}^{2}\) ; let \({x}_{0}\) be the point \(h\left( \mathbf{0}\right)\) of \(X\) . If \(U\) is the open set \(U = X - {x}_{0}\) of \(X\) , we show that \(A\) is a deformation retract of \(U\) . See Figure 72.1.
+\begin{proof}
+	Step 1. The origin 0 is the center point of \({B}^{2}\) ; let \({x}_{0}\) be the point \(h\left( \mathbf{0}\right)\) of \(X\) . If \(U\) is the open set \(U = X - {x}_{0}\) of \(X\) , we show that \(A\) is a deformation retract of \(U\) . See Figure 72.1.
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/72.1.jpg}
 \end{center}
@@ -1235,21 +1250,21 @@ The loop \({f}_{0}\) represents a generator of the fundamental group of Int \({B
 There is nothing special in this theorem about the unit ball \({B}^{2}\) . The same result holds if we replace \({B}^{2}\) by any space \(B\) homeomorphic to \({B}^{2}\) , if we denote by \(\operatorname{Bd}B\) the subspace corresponding to \({S}^{1}\) under the homeomorphism. Such a space \(B\) is called a 2- cell. The space \(X\) of this theorem is thought of as having been obtained by ``adjoining a \idx{2-cell}'' to \(A\) . We shall treat this situation more formally later.
 \end{proof}
 \section*{Exercises}
-
-1. Let \(X\) be a Hausdorff space; let \(A\) be a closed path-connected subspace. Suppose that \(h : {B}^{n} \rightarrow  X\) is a continuous map that maps \({S}^{n - 1}\) into \(A\) and maps Int \({B}^{n}\) bijectively onto \(X - A\) . Let \(a\) be a point of \(h\left( {S}^{n - 1}\right)\) . If \(n > 2\) , what can you say about the homomorphism of \({\pi }_{1}\left( {A,a}\right)\) into \({\pi }_{1}\left( {X,a}\right)\) induced by inclusion?
-
-2. Let \(X\) be the adjunction space formed from the disjoint union of the normal, path-connected space \(A\) and the unit ball \({B}^{2}\) by means of a continuous map \(f : {S}^{1} \rightarrow  A\) . (See Exercise 8 of  \S 35.) Show that \(X\) satisfies the hypotheses of Theorem 72.1. Where do you use the fact that \(A\) is normal?
-
-3. Let \(G\) be a group; let \(x\) be an element of \(G\) ; let \(N\) be the least normal subgroup of \(G\) containing \(x\) . Show that if there is a normal, path-connected space whose fundamental group is isomorphic to \(G\) , then there is a normal, path-connected space whose fundamental group is isomorphic to \(G/N\) .
-
+\begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
+\item Let \(X\) be a Hausdorff space; let \(A\) be a closed path-connected subspace. Suppose that \(h : {B}^{n} \rightarrow  X\) is a continuous map that maps \({S}^{n - 1}\) into \(A\) and maps Int \({B}^{n}\) bijectively onto \(X - A\) . Let \(a\) be a point of \(h\left( {S}^{n - 1}\right)\) . If \(n > 2\) , what can you say about the homomorphism of \({\pi }_{1}\left( {A,a}\right)\) into \({\pi }_{1}\left( {X,a}\right)\) induced by inclusion?
+\item Let \(X\) be the adjunction space formed from the disjoint union of the normal, path-connected space \(A\) and the unit ball \({B}^{2}\) by means of a continuous map \(f : {S}^{1} \rightarrow  A\) . (See Exercise 8 of  \S 35.) Show that \(X\) satisfies the hypotheses of Theorem 72.1. Where do you use the fact that \(A\) is normal?
+\item Let \(G\) be a group; let \(x\) be an element of \(G\) ; let \(N\) be the least normal subgroup of \(G\) containing \(x\) . Show that if there is a normal, path-connected space whose fundamental group is isomorphic to \(G\) , then there is a normal, path-connected space whose fundamental group is isomorphic to \(G/N\) .
+\end{enumerate}
 \section*{§ 73 The Fundamental Groups of the Torus and the Dunce Cap}
 
 We now apply the results of the preceding section to compute two fundamental groups, one of which we already know and the other of which we do not. The techniques involved will be important later.
 
-\begin{theorem} The fundamental group of the torus has a presentation consisting of two generators \(\alpha ,\beta\) and a single relation \({\alpha \beta }{\alpha }^{-1}{\beta }^{-1}\) .
+\begin{theorem}
+	The fundamental group of the torus has a presentation consisting of two generators \(\alpha ,\beta\) and a single relation \({\alpha \beta }{\alpha }^{-1}{\beta }^{-1}\) .
 \end{theorem}
 
-\begin{proof}Let \(X = {S}^{1} \times  {S}^{1}\) be the torus, and let \(h : {I}^{2} \rightarrow  X\) be obtained by restricting the standard covering map \(p \times  p : \mathbb{R} \times  \mathbb{R} \rightarrow  {S}^{1} \times  {S}^{1}\) . Let \(p\) be the point \(\left( {0,0}\right)\) of Bd \({I}^{2}\) , let \(a = h\left( p\right)\) , and let \(A = h\left( {\text{ Bd }{I}^{2}}\right)\) . Then the hypotheses of Theorem 72.1 are satisfied.
+\begin{proof}
+	Let \(X = {S}^{1} \times  {S}^{1}\) be the torus, and let \(h : {I}^{2} \rightarrow  X\) be obtained by restricting the standard covering map \(p \times  p : \mathbb{R} \times  \mathbb{R} \rightarrow  {S}^{1} \times  {S}^{1}\) . Let \(p\) be the point \(\left( {0,0}\right)\) of Bd \({I}^{2}\) , let \(a = h\left( p\right)\) , and let \(A = h\left( {\text{ Bd }{I}^{2}}\right)\) . Then the hypotheses of Theorem 72.1 are satisfied.
 The space \(A\) is the wedge of two circles, so the fundamental group of \(A\) is free. Indeed, if we let \({a}_{0}\) be the path \({a}_{0}\left( t\right)  = \left( {t,0}\right)\) and \({b}_{0}\) be the path \({b}_{0}\left( t\right)  = \left( {0,t}\right)\) in Bd \({I}^{2}\) , then the paths \(\alpha  = h \circ  {a}_{0}\) and \(\beta  = h \circ  {b}_{0}\) are loops in \(A\) such that \(\left\lbrack  \alpha \right\rbrack\) and \(\left\lbrack  \beta \right\rbrack\) form a system of free generators for \({\pi }_{1}\left( {A,a}\right)\) . See Figure 73.1
 
 \begin{center}
@@ -1267,20 +1282,24 @@ f = {a}_{0} * \left( {{b}_{1} * \left( {{\bar{a}}_{1} * {\bar{b}}_{0}}\right) }\
 
 Then \(f\) represents a generator of \({\pi }_{1}\left( {\operatorname{Bd}{I}^{2},p}\right)\) ; and the loop \(g = h \circ  f\) equals the product \(\alpha  * \left( {\beta  * \left( {\bar{\alpha } * \bar{\beta }}\right) }\right)\) . Theorem 72.1 tells us that \({\pi }_{1}\left( {X,a}\right)\) is the quotient of the free group on the free generators \(\left\lbrack  \alpha \right\rbrack\) and \(\left\lbrack  \beta \right\rbrack\) by the least normal subgroup containing the element \(\left\lbrack  \alpha \right\rbrack  \left\lbrack  \beta \right\rbrack  {\left\lbrack  \alpha \right\rbrack  }^{-1}{\left\lbrack  \beta \right\rbrack  }^{-1}\) .
 \end{proof}
-\begin{corollary} The fundamental group of the torus is a free abelian group of rank 2.
+\begin{corollary}
+	The fundamental group of the torus is a free abelian group of rank 2.
 \end{corollary}
 
-\begin{proof}Let \(G\) be the free group on generators \(\alpha ,\beta\) ; and let \(N\) be the least normal subgroup containing the element \({\alpha \beta }{\alpha }^{-1}{\beta }^{-1}\) . Because this element is a commutator, \(N\) is contained in the commutator subgroup \(\left\lbrack  {G,G}\right\rbrack\) of \(G\) . On the other hand, \(G/N\) is abelian; for it is generated by the cosets \({\alpha N}\) and \({\beta N}\) , and these elements of \(G/N\) commute. Therefore \(N\) contains the commutator subgroup of \(G\) .
+\begin{proof}
+	Let \(G\) be the free group on generators \(\alpha ,\beta\) ; and let \(N\) be the least normal subgroup containing the element \({\alpha \beta }{\alpha }^{-1}{\beta }^{-1}\) . Because this element is a commutator, \(N\) is contained in the commutator subgroup \(\left\lbrack  {G,G}\right\rbrack\) of \(G\) . On the other hand, \(G/N\) is abelian; for it is generated by the cosets \({\alpha N}\) and \({\beta N}\) , and these elements of \(G/N\) commute. Therefore \(N\) contains the commutator subgroup of \(G\) .
 It follows from Theorem 69.4 that \(G/N\) is a free abelian group of rank 2.
 \end{proof}
-\begin{definition} Let \(n\) be a positive integer with \(n > 1\) . Let \(r : {S}^{1} \rightarrow  {S}^{1}\) be rotation through the angle \({2\pi }/n\) , mapping the point \(\left( {\cos \theta ,\sin \theta }\right)\) to the point \((\cos (\theta  +\)  \({2\pi }/n)\) , \(\sin \left( {\theta  + {2\pi }/n}\right) )\) . Form a quotient space \(X\) from the unit ball \({B}^{2}\) by identifying each point \(x\) of \({S}^{1}\) with the points \(r\left( x\right) ,{r}^{2}\left( x\right) ,\ldots ,{r}^{n - 1}\left( x\right)\) . We shall show that \(X\) is a compact Hausdorff space; we call it the \(n\) -fold \idx{dunce cap}.
+\begin{definition}
+	Let \(n\) be a positive integer with \(n > 1\) . Let \(r : {S}^{1} \rightarrow  {S}^{1}\) be rotation through the angle \({2\pi }/n\) , mapping the point \(\left( {\cos \theta ,\sin \theta }\right)\) to the point \((\cos (\theta  +\)  \({2\pi }/n)\) , \(\sin \left( {\theta  + {2\pi }/n}\right) )\) . Form a quotient space \(X\) from the unit ball \({B}^{2}\) by identifying each point \(x\) of \({S}^{1}\) with the points \(r\left( x\right) ,{r}^{2}\left( x\right) ,\ldots ,{r}^{n - 1}\left( x\right)\) . We shall show that \(X\) is a compact Hausdorff space; we call it the \(n\) -fold \idx{dunce cap}.
 \end{definition}
 
 Let \(\pi  : {B}^{2} \rightarrow  X\) be the quotient map; we show that \(\pi\) is a closed map. In order to do this, we must show that if \(C\) is a closed set of \({B}^{2}\) , then \({\pi }^{-1}\pi \left( C\right)\) is also closed in \({B}^{2}\) ; it then will follow from the definition of the quotient topology that \(\pi \left( C\right)\) is closed in \(X\) . Let \({C}_{0} = C \cap  {S}^{1}\) ; it is closed in \({B}^{2}\) . The set \({\pi }^{-1}\pi \left( C\right)\) equals the union of \(C\) and the sets \(r\left( {C}_{0}\right) ,{r}^{2}\left( {C}_{0}\right) ,\ldots ,{r}^{n - 1}\left( {C}_{0}\right)\) , all of which are closed in \({B}^{2}\) because \(r\) is a homeomorphism. Hence \({\pi }^{-1}\pi \left( C\right)\) is closed in \({B}^{2}\) , as desired.
 
 Because \(\pi\) is continuous, \(X\) is compact. The fact that \(X\) is Hausdorff is a consequence of the following lemma, which was given as an exercise in  \S 31.
 
-\begin{lemma} Let \(\pi  : E \rightarrow  X\) be a closed quotient map. If \(E\) is normal, then so is \(X\) .
+\begin{lemma}
+	Let \(\pi  : E \rightarrow  X\) be a closed quotient map. If \(E\) is normal, then so is \(X\) .
 \end{lemma}
 
 Proof Assume \(E\) is normal. One-point sets are closed in \(X\) because one-point sets are closed in \(E\) . Now let \(A\) and \(B\) be disjoint closed sets of \(X\) . Then \({\pi }^{-1}\left( A\right)\) and \({\pi }^{-1}\left( B\right)\) are disjoint closed sets of \(E\) . Choose disjoint open sets \(U\) and \(V\) of \(E\) containing \({\pi }^{-1}\left( A\right)\) and \({\pi }^{-1}\left( B\right)\) , respectively. It is tempting to assume that \(\pi \left( U\right)\) and \(\pi \left( V\right)\) are the open sets about \(A\) and \(B\) that we are seeking. But they are not. For they need not be open ( \(\pi\) is not necessarily an open map), and they need not be disjoint! See Figure 73.2.
@@ -1304,10 +1323,12 @@ and follow it by the map \(p\) . We obtain a map \(\pi  : {B}^{2} \rightarrow  {
 
 The fundamental group of the \(n\) -fold dunce cap is just what you might expect from our computation for \({P}^{2}\) .
 
-\begin{theorem} The fundamental group of the \(n\) -fold dunce cap is a cyclic group of order \(n\) .
+\begin{theorem}
+	The fundamental group of the \(n\) -fold dunce cap is a cyclic group of order \(n\) .
 \end{theorem}
 
-\begin{proof}Let \(h : {B}^{2} \rightarrow  X\) be the quotient map, where \(X\) is the \(n\) -fold dunce cap. Set \(A = h\left( {S}^{1}\right)\) . Let \(p = \left( {1,0}\right)  \in  {S}^{1}\) and let \(a = h\left( p\right)\) . Then \(h\) maps the arc \(C\) of \({S}^{1}\) running from \(p\) to \(r\left( p\right)\) onto \(A\) ; it identifies the end points of \(C\) but is otherwise injective. Therefore, \(A\) is homeomorphic to a circle, so its fundamental group is infinite cyclic. Indeed, if \(\gamma\) is the path
+\begin{proof}
+	Let \(h : {B}^{2} \rightarrow  X\) be the quotient map, where \(X\) is the \(n\) -fold dunce cap. Set \(A = h\left( {S}^{1}\right)\) . Let \(p = \left( {1,0}\right)  \in  {S}^{1}\) and let \(a = h\left( p\right)\) . Then \(h\) maps the arc \(C\) of \({S}^{1}\) running from \(p\) to \(r\left( p\right)\) onto \(A\) ; it identifies the end points of \(C\) but is otherwise injective. Therefore, \(A\) is homeomorphic to a circle, so its fundamental group is infinite cyclic. Indeed, if \(\gamma\) is the path
 \[
 \gamma \left( t\right)  = \left( {\cos \left( {{2\pi t}/n}\right) ,\sin \left( {{2\pi t}/n}\right) }\right)
 \]
@@ -1330,34 +1351,20 @@ generates \({\pi }_{1}\left( {{S}^{1},p}\right)\) . Since \(h\left( {{r}^{m}\lef
 Figure 73.3
 \end{proof}
 \section*{Exercises}
-
-1. Find spaces whose fundamental groups are isomorphic to the following groups. (Here \(\mathbb{Z}/n\) denotes the additive group of integers modulo \(n\) .)
-
-(a) \(\mathbb{Z}/n \times  \mathbb{Z}/m\) .
-
-(b) \(\mathbb{Z}/{n}_{1} \times  \mathbb{Z}/{n}_{2} \times  \cdots  \times  \mathbb{Z}/{n}_{k}\) .
-
-(c) \(\mathbb{Z}/n * \mathbb{Z}/m\) . (See Exercise 2 of  \S 71.)
-
-(d) \(\mathbb{Z}/{n}_{1} * \mathbb{Z}/{n}_{2} * \cdots  * \mathbb{Z}/{n}_{k}\) .
-
-2. Prove the following:
-
-\begin{theorem} If \(G\) is a \idx{finitely presented group}, then there is a compact Hausdorff space \(X\) whose fundamental group is isomorphic to \(G\) .
-\end{theorem}
-
-\begin{proof}Suppose \(G\) has a presentation consisting of \(n\) generators and \(m\) relations. Let \(A\) be the wedge of \(n\) circles; form an adjunction space \(X\) from the union of \(A\) and \(m\) copies \({B}_{1},\ldots ,{B}_{m}\) of the unit ball by means of a continuous map \(f : \bigcup \operatorname{Bd}{B}_{i} \rightarrow  A\) .
-(a) Show that \(X\) is Hausdorff.
-
-(b) Prove the theorem in the case \(m = 1\) .
-
-(c) Proceed by induction on \(m\) , using the algebraic result stated in the following exercise.
-
-The construction outlined in this exercise is a standard one in algebraic topology; the space \(X\) is called a two-dimensional CW complex.
-\end{proof}
-
-3. Lemma. Let \(f : G \rightarrow  H\) and \(g : H \rightarrow  K\) be homomorphisms; assume \(f\) is surjective. If \({x}_{0} \in  G\) , and if \(\ker g\) is the least normal subgroup of \(H\) containing \(f\left( {x}_{0}\right)\) , then \(\ker \left( {g \circ  f}\right)\) is the least normal subgroup \(N\) of \(G\) containing \(\ker f\) and \({x}_{0}\) .
-
-\begin{proof}Show that \(f\left( N\right)\) is normal; conclude that \(\ker \left( {g \circ  f}\right)  = {f}^{-1}\left( {\ker g}\right)  \subset\)  \({f}^{-1}f\left( N\right)  = N.\)
-\end{proof}
-4. Show that the space constructed in Exercise 2 is in fact metrizable. [Hint: The quotient map is a perfect map.]
+\begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
+\item Find spaces whose fundamental groups are isomorphic to the following groups. (Here \(\mathbb{Z}/n\) denotes the additive group of integers modulo \(n\) .)
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item \(\mathbb{Z}/n \times  \mathbb{Z}/m\) .
+  \item \(\mathbb{Z}/{n}_{1} \times  \mathbb{Z}/{n}_{2} \times  \cdots  \times  \mathbb{Z}/{n}_{k}\) .
+  \item \(\mathbb{Z}/n * \mathbb{Z}/m\) . (See Exercise 2 of  \S 71.)
+  \item \(\mathbb{Z}/{n}_{1} * \mathbb{Z}/{n}_{2} * \cdots  * \mathbb{Z}/{n}_{k}\) .
+  \end{enumerate}
+\item Prove the following: \textsl{Theorem.} If \(G\) is a \idx{finitely presented group}, then there is a compact Hausdorff space \(X\) whose fundamental group is isomorphic to \(G\) .  \textsl{Proof.} Suppose \(G\) has a presentation consisting of \(n\) generators and \(m\) relations. Let \(A\) be the wedge of \(n\) circles; form an adjunction space \(X\) from the union of \(A\) and \(m\) copies \({B}_{1},\ldots ,{B}_{m}\) of the unit ball by means of a continuous map \(f : \bigcup \operatorname{Bd}{B}_{i} \rightarrow  A\) .
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show that \(X\) is Hausdorff.
+  \item Prove the theorem in the case \(m = 1\) .
+  \item Proceed by induction on \(m\) , using the algebraic result stated in the following exercise. The construction outlined in this exercise is a standard one in algebraic topology; the space \(X\) is called a two-dimensional CW complex. 
+  \end{enumerate}
+\item Lemma. Let \(f : G \rightarrow  H\) and \(g : H \rightarrow  K\) be homomorphisms; assume \(f\) is surjective. If \({x}_{0} \in  G\) , and if \(\ker g\) is the least normal subgroup of \(H\) containing \(f\left( {x}_{0}\right)\) , then \(\ker \left( {g \circ  f}\right)\) is the least normal subgroup \(N\) of \(G\) containing \(\ker f\) and \({x}_{0}\) . \textsl{Proof.} Show that \(f\left( N\right)\) is normal; conclude that \(\ker \left( {g \circ  f}\right)  = {f}^{-1}\left( {\ker g}\right)  \subset\)  \({f}^{-1}f\left( N\right)  = N.\) 
+\item Show that the space constructed in Exercise 2 is in fact metrizable. [Hint: The quotient map is a perfect map.]
+\end{enumerate}
