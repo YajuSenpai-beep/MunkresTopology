@@ -225,6 +225,13 @@ def cmd_insert(args: argparse.Namespace) -> int:
     new_content = engine.apply(content, ops)
 
     if new_content != content:
+        # 自动备份（若启用）
+        if getattr(args, "backup", False):
+            try:
+                bp = create_backup(tex_path)
+                logger.info("已备份: %s", bp)
+            except Exception as e:
+                logger.warning("备份失败: %s", e)
         # 保留原文件换行风格
         new_content = preserve_line_endings(content, new_content)
         atomic_write(tex_path, new_content)
@@ -427,6 +434,10 @@ def main() -> None:
     p_ins.add_argument(
         "--tui", action="store_true",
         help="强制使用 Rich TUI 交互界面（需安装 rich）",
+    )
+    p_ins.add_argument(
+        "--backup", action="store_true",
+        help="修改前自动备份原文件",
     )
     p_ins.set_defaults(func=cmd_insert)
 

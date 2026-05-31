@@ -330,8 +330,29 @@ class TestEngineEdgeCases:
     def test_large_file_apply(self, sample_config):
         """Apply should work on content > 10MB."""
         engine = IndexEngine(sample_config)
-        # Create content > 10MB (but keep it small enough for fast test)
         content = "x" * (11 * 1024 * 1024)
         ops = [{"pos": 100, "cmd": r"\index{test}", "entry": {"term": "test"}}]
         result = engine.apply(content, ops)
-        assert len(result) > len(content)  # insertion added text
+        assert len(result) > len(content)
+
+
+class TestTqdmNotInstalled:
+    """Test behavior when tqdm is not available."""
+
+    def test_find_insertions_without_tqdm(self, sample_config, monkeypatch):
+        monkeypatch.setattr("latex_index.engine.HAS_TQDM", False)
+        engine = IndexEngine(sample_config)
+        content = "field " * 100
+        entries = [{"term": "field", "level": 1}]
+        ops = engine.find_insertions(content, entries, progress=True)
+        assert len(ops) >= 1
+
+    def test_find_fast_without_tqdm(self, sample_config, monkeypatch):
+        monkeypatch.setattr("latex_index.engine.HAS_TQDM", False)
+        engine = IndexEngine(sample_config)
+        content = "field " * 25000
+        entries = [{"term": "field", "level": 1}]
+        for i in range(1000):
+            entries.append({"term": f"pad_{i:04d}", "level": 1})
+        ops = engine.find_insertions_fast(content, entries, progress=True)
+        assert len(ops) >= 1
