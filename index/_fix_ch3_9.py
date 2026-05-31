@@ -56,7 +56,7 @@ for fp in files:
     with open(fp, "r", encoding="utf-8") as f:
         c = f.read()
 
-    if "label=\\arabic*" in c:
+    if r"label=\arabic*" in c:
         print(f"{name}: already converted")
         continue
 
@@ -107,7 +107,7 @@ for fp in files:
         if current: items.append(current)
 
         new_lines = [lines[start]]
-        new_lines.append("\\begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\\arabic*., ref=\\arabic*]")
+        new_lines.append(r"\begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]")
         for item in items:
             if item["subs"]:
                 new_lines.append("\\item " + item["text"])
