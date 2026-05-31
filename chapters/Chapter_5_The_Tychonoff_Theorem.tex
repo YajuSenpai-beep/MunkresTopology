@@ -2,7 +2,7 @@
 
 We now return to a problem we left unresolved in Chapter 3. We shall prove the \idx{Tychonoff theorem}, to the effect that arbitrary products of compact spaces are compact. The proof makes use of Zorn's Lemma (see §11). An alternate proof, which relies instead on the well-ordering theorem, is outlined in the exercises.
 
-The Tychonoff theorem is of great usefulness to analysts (less so to geometers). We apply it in §38 to construct the Stone-Čech compactification of a completely regular space, and in \(\$ {47}\) in proving the general version of Ascoli’s theorem.
+The Tychonoff theorem is of great usefulness to analysts (less so to geometers). We apply it in §38 to construct the Stone-Čech compactification of a completely regular space, and in \(\$ {47}\) in proving the general version of Ascoli's theorem.
 
 \section*{§ 37 The Tychonoff Theorem}
 
@@ -54,7 +54,7 @@ the only possible choice for \({x}_{1}\) is \(\frac{1}{3}\) Similarly, the only 
 
 Figure 37.2
 
-Now of course in this example we chose \(\mathcal{D}\) carefully so that the proof would work. What hope can we have for choosing \(\mathcal{D}\) correctly in general? Here is the third idea of the proof: Why not simply choose \(\mathcal{D}\) to be a collection that is ``as large as possible''- so that no larger collection has the finite intersection property—and see whether such a \(\mathcal{D}\) will work? It is not at all obvious that such a collection \(\mathcal{D}\) exists; to prove it, we must appeal to Zorn’s lemma. But after we prove that \(\mathcal{D}\) exists, we shall in fact be able to show that \(\mathcal{D}\) is large enough to force the proper choices on us.
+Now of course in this example we chose \(\mathcal{D}\) carefully so that the proof would work. What hope can we have for choosing \(\mathcal{D}\) correctly in general? Here is the third idea of the proof: Why not simply choose \(\mathcal{D}\) to be a collection that is ``as large as possible''- so that no larger collection has the finite intersection property—and see whether such a \(\mathcal{D}\) will work? It is not at all obvious that such a collection \(\mathcal{D}\) exists; to prove it, we must appeal to Zorn's lemma. But after we prove that \(\mathcal{D}\) exists, we shall in fact be able to show that \(\mathcal{D}\) is large enough to force the proper choices on us.
 
 A final remark. The assumption that the elements of the collection \(\mathcal{A}\) were closed sets was irrelevant in this discussion. For even if the set \(A \in  \mathcal{A}\) is closed, the set \({\pi }_{1}\left( A\right)\) need not be closed, so we had to take its closure in order to apply the closed set formulation of compactness. Therefore, we may as well begin with an arbitrary collection of subsets of \(X\) having the finite intersection property, and prove that the intersection of their closures is nonempty. This approach actually proves to be more convenient.
 
@@ -65,8 +65,8 @@ A final remark. The assumption that the elements of the collection \(\mathcal{A}
 We often say that a collection \(\mathcal{D}\) satisfying the conclusion of this theorem is maximal with respect to the finite intersection property
 
 \begin{proof}
-	As you might expect, we construct \(\mathcal{D}\) by using Zorn’s lemma. It states that, given a set \(A\) that is strictly partially ordered, in which every simply ordered subset has an upper bound, \(A\) itself has a maximal element.
-The set \(A\) to which we shall apply Zorn’s lemma is not a subset of \(X\) , nor even a collection of subsets of \(X\) , but a set whose elements are collections of subsets of \(X\) . For purposes of this proof, we shall call a set whose elements are collections of subsets of \(X\) a ``\idx{superset}'' and shall denote it by an outline letter. To summarize the rotation:
+	As you might expect, we construct \(\mathcal{D}\) by using Zorn's lemma. It states that, given a set \(A\) that is strictly partially ordered, in which every simply ordered subset has an upper bound, \(A\) itself has a maximal element.
+The set \(A\) to which we shall apply Zorn's lemma is not a subset of \(X\) , nor even a collection of subsets of \(X\) , but a set whose elements are collections of subsets of \(X\) . For purposes of this proof, we shall call a set whose elements are collections of subsets of \(X\) a ``\idx{superset}'' and shall denote it by an outline letter. To summarize the rotation:
 
 \(c\) is an element of \(X\) .
 
@@ -78,7 +78,7 @@ The set \(A\) to which we shall apply Zorn’s lemma is not a subset of \(X\) , 
 
 Now by hypothesis, we have a collection \(\mathcal{A}\) of subsets of \(X\) that has the finite intersection property. Let \(\mathbf{A}\) denote the superset consisting of all collections \(\mathcal{B}\) of subsets of \(X\) such that \(\mathcal{B} \supset  \mathcal{A}\) and \(\mathcal{B}\) has the finite intersection property. We use proper inclusion \(\subsetneq\) as our strict partial order on \(\mathbf{A}\) . To prove our lemma, we need to show that \(\mathbf{A}\) has a maximal element \(\mathcal{D}\) .
 
-In order to apply Zorn’s lemma, we must show that if \(\mathbb{B}\) is a ``subsuperset'' of \(\mathbf{A}\) that is simply ordered by proper inclusion, then \(\mathbb{B}\) has an upper bound in \(\mathbb{A}\) . We shall show in fact that the collection
+In order to apply Zorn's lemma, we must show that if \(\mathbb{B}\) is a ``subsuperset'' of \(\mathbf{A}\) that is simply ordered by proper inclusion, then \(\mathbb{B}\) has an upper bound in \(\mathbb{A}\) . We shall show in fact that the collection
 
 \[
 \mathcal{C} = \mathop{\bigcup }\limits_{{\mathcal{B} \in  \mathbb{B}}}\mathcal{B}
@@ -180,7 +180,7 @@ is nonempty.
 
 (c) Products of Lindelöf spaces need not be Lindelöf (see §30). Therefore (i) does not hold. If one attempts to generalize the proof of Lemma 37.1 to the countable intersection property, at what point does the proof break down?
 
-4. Here is another theorem whose proof uses Zorn’s lemma. Recall that if \(A\) is a space and if \(x,y \in  A\) , we say that \(x\) and \(y\) belong to the same quasicomponent of \(A\) if there is no separation \(A = C \cup  D\) of \(A\) into two disjoint sets open in \(A\) such that \(x \in  C\) and \(y \in  D\) .
+4. Here is another theorem whose proof uses Zorn's lemma. Recall that if \(A\) is a space and if \(x,y \in  A\) , we say that \(x\) and \(y\) belong to the same quasicomponent of \(A\) if there is no separation \(A = C \cup  D\) of \(A\) into two disjoint sets open in \(A\) such that \(x \in  C\) and \(y \in  D\) .
 
 \begin{theorem}
 	Let \(X\) be a compact Hausdorff space. Then \(x\) and \(y\) belong to the same quasicomponent of \(X\) if and only if they belong to the same component of \(X\) .
@@ -290,7 +290,7 @@ The compactification induced by the imbedding \(h\) is equivalent to the one-poi
 h\left( x\right)  = x \times  \sin \left( {1/x}\right) .
 \]
 
-The space \({Y}_{0} = \overline{h\left( X\right) }\) is the topologist’s sine curve (see Example 7 of §24). The imbedding \(h\) gives rise to a compactification of(0,1)quite different from the other two. It is obtained by adding one point at the right-hand end of(0,1), and an entire line segment of points at the left-hand end \({}^{1}\)
+The space \({Y}_{0} = \overline{h\left( X\right) }\) is the topologist's sine curve (see Example 7 of §24). The imbedding \(h\) gives rise to a compactification of(0,1)quite different from the other two. It is obtained by adding one point at the right-hand end of(0,1), and an entire line segment of points at the left-hand end \({}^{1}\)
 \end{example}
 \end{centeredblock}
 
@@ -398,8 +398,10 @@ The composite \({f}_{1} \circ  {f}_{2} : {Y}_{1} \rightarrow  {Y}_{1}\) has the 
 \item Show that the bounded continuous function \(g\left( {0,1}\right)  \rightarrow  \mathbb{R}\) defined by \(g\left( x\right)  =\)  \(\cos \left( {1/x}\right)\) cannot be extended to the compactification of Example 3. Define an imbedding \(h : \left( {0,1}\right)  \rightarrow  {\left\lbrack  0,1\right\rbrack  }^{3}\) such that the functions \(x,\sin \left( {1/x}\right)\) , and \(\cos \left( {1/x}\right)\) are all extendable to the compactification induced by \(h\) .
 \item Under what conditions does a metrizable space have a metrizable compactification?
 \item Let \(Y\) be an arbitrary compactification of \(X\) ; let \(\beta \left( X\right)\) be the Stone-Čech compactification. Show there is a continuous surjective closed map \(g : \beta \left( X\right)  \rightarrow  Y\) that equals the identity on \(X\) [This exercise makes precise what we mean by saying that \(\beta \left( X\right)\) is the ``maximal'' compactification of \(X\) . It shows that every compactification of \(X\) is equivalent to a quotient space of \(\beta \left( X\right)\) .]
-\item (a) Show that every continuous real-valued function defined on \({S}_{\Omega }\) is ``eventually constant.'' [Hint First prove that for each \(\epsilon\) , there is an element \(\alpha\) of \({S}_{\Omega }\) such that \(\left| {f\left( \beta \right)  - f\left( \alpha \right) }\right|  < \epsilon\) for all \(\beta  > \alpha\) Then let \(\epsilon  = 1/n\) for \(n \in  {\mathbb{Z}}_{ + }\) and consider the corresponding points \(\left. {{\alpha }_{n}\text{ . }}\right\rbrack\)
+\item
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show that every continuous real-valued function defined on \({S}_{\Omega }\) is ``eventually constant.'' [Hint First prove that for each \(\epsilon\) , there is an element \(\alpha\) of \({S}_{\Omega }\) such that \(\left| {f\left( \beta \right)  - f\left( \alpha \right) }\right|  < \epsilon\) for all \(\beta  > \alpha\) Then let \(\epsilon  = 1/n\) for \(n \in  {\mathbb{Z}}_{ + }\) and consider the corresponding points \(\left. {{\alpha }_{n}\text{ . }}\right\rbrack\)
+
   \item Show that the one-point compactification of \({S}_{\Omega }\) and the Stone-Čech compactification are equivalent.
   \item Conclude that every compactification of \({S}_{\Omega }\) is equivalent to the one-point compactification.
   \end{enumerate}
@@ -411,8 +413,10 @@ The composite \({f}_{1} \circ  {f}_{2} : {Y}_{1} \rightarrow  {Y}_{1}\) has the 
   \item Show that \(\beta \left( X\right)\) is totally disconnected.
   \end{enumerate}
 \item Show that \(\beta \left( {\mathbb{Z}}_{ + }\right)\) has cardinality at least as great as \({I}^{I}\) , where \(I = \left\lbrack  {0,1}\right\rbrack\) . [Hint: The space \({I}^{\prime }\) has a countable dense subset.]
-\item (a) If \(X\) is normal and \(y\) is a point of \(\beta \left( X\right)  - X\) , show that \(y\) is not the limit of a sequence of points of \(X\) .
+\item
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item If \(X\) is normal and \(y\) is a point of \(\beta \left( X\right)  - X\) , show that \(y\) is not the limit of a sequence of points of \(X\) .
+
   \item Show that if \(X\) is completely regular and noncompact, then \(\beta \left( X\right)\) is not metrizable.
   \end{enumerate}
 \item We have constructed a correspondence \(X \rightarrow  \beta \left( X\right)\) that assigns, to each completely regular space, its Stone-Čech compactification. Now let us assign, to each continuous map \(f : X \rightarrow  Y\) of completely regular spaces, the unique continuous map \(\beta \left( f\right)  : \beta \left( X\right)  \rightarrow  \beta \left( Y\right)\) that extends the map \(i \circ  f\) , where \(i : Y \rightarrow  \beta \left( Y\right)\) is the inclusion map. Verify the following:

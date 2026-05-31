@@ -658,7 +658,7 @@ Step 4. To complete the proof, we note that because \(H\) is abelian, \(h\) carr
 	The free abelian group \(G/\left\lbrack  {G,G}\right\rbrack\) has rank \(n\) .
 The properties of free groups are in many ways similar to those of free abelian groups. For instance, if \(H\) is a subgroup of a free abelian group \(G\) , then \(H\) itself is a free abelian group. (The proof in the case where \(G\) has finite rank is outlined in Exercise 6 of  \S 67; the proof in the general case is similar.) The analogous result holds for free groups, but the proof is considerably more difficult. We shall give a proof in Chapter 14 that is based on the theory of covering spaces.
 
-In other ways, free groups are very different from free abelian groups. Given a free abelian group of rank \(n\) , the rank of any subgroup \(i\) sat most \(n\) ; but the analogous result for free groups does not hold. If \(G\) is a free group with a system of \(n\) free generators, then the cardinality of a system of free generators for a subgroup of \(G\) may be greater than \(n\) ; it may even be infinite ’ We shall explore this situation later.
+In other ways, free groups are very different from free abelian groups. Given a free abelian group of rank \(n\) , the rank of any subgroup \(i\) sat most \(n\) ; but the analogous result for free groups does not hold. If \(G\) is a free group with a system of \(n\) free generators, then the cardinality of a system of free generators for a subgroup of \(G\) may be greater than \(n\) ; it may even be infinite ' We shall explore this situation later.
 \end{proof}
 \section*{Generators and relations}
 
@@ -869,7 +869,7 @@ Now we prove condition (1) in the general case. Given \(f\) and \(g\) and a path
 
 Step 5. Now we prove condition (2) for the set map \(\tau\) . Given a path \(f * g\) in \(X\) , let us choose a subdivision \({s}_{0} < \cdots  < {s}_{n}\) of \(\left\lbrack  {0,1}\right\rbrack\) containing the point \(1/2\) as a subdivision point, such that \(f * g\) carries each subinterval into either \(U\) or \(V\) . Let \(k\) be the index such that \({s}_{k} = 1/2\) .
 
-For \(i = 1,\ldots ,k\) , the positive linear map of \(\left\lbrack  {0,1}\right\rbrack\) to \(\left\lbrack  {{s}_{i - 1},{s}_{i}}\right\rbrack\) , followed by \(f * g\) , is the same as the positive linear map of \(\left\lbrack  {0,1}\right\rbrack\) to \(\left\lbrack  {2{s}_{i - 1},2{s}_{i}}\right\rbrack\) followed by \(f\) ; call this map \({f}_{i}\) . Simularly, for \(\mathrm{i} = k + 1,\ldots ,n\) , the positive linear map of \(\left\lbrack  {0,1}\right\rbrack\) to \(\left\lbrack  {{s}_{i - 1},{s}_{i}}\right\rbrack\) , followed by \(f * g\) , is the same as the positive linear map of \(\left\lbrack  {0,1}\right\rbrack\) to \(\left\lbrack  {2{s}_{i - 1} - 1,2{s}_{i} - 1}\right\rbrack\) followed by \(g\) ; call this map \({g}_{i - k}\) . Using the subdivision \({s}_{0},\ldots ,{s}_{n}\) for the domain of the path \(f * g\) , we have
+For \(i = 1,\ldots ,k\) , the positive linear map of \(\left\lbrack  {0,1}\right\rbrack\) to \(\left\lbrack  {{s}_{i - 1},{s}_{i}}\right\rbrack\) , followed by \(f * g\) , is the same as the positive linear map of \(\left\lbrack  {0,1}\right\rbrack\) to \(\left\lbrack  {2{s}_{i - 1},2{s}_{i}}\right\rbrack\) followed by \(f\) ; call this map \({f}_{i}\) . Similarly, for \(\mathrm{i} = k + 1,\ldots ,n\) , the positive linear map of \(\left\lbrack  {0,1}\right\rbrack\) to \(\left\lbrack  {{s}_{i - 1},{s}_{i}}\right\rbrack\) , followed by \(f * g\) , is the same as the positive linear map of \(\left\lbrack  {0,1}\right\rbrack\) to \(\left\lbrack  {2{s}_{i - 1} - 1,2{s}_{i} - 1}\right\rbrack\) followed by \(g\) ; call this map \({g}_{i - k}\) . Using the subdivision \({s}_{0},\ldots ,{s}_{n}\) for the domain of the path \(f * g\) , we have
 
 \[
 \tau \left( {f * g}\right)  = \sigma \left( {f}_{1}\right) \cdots \sigma \left( {f}_{k}\right)  \cdot  \sigma \left( {g}_{1}\right) \cdots \sigma \left( {g}_{n - k}\right) .
@@ -1023,8 +1023,10 @@ Figure 70.3
   \item Show that \({j}_{1}\) induces an epimorphism \[ h : {\pi }_{1}\left( {U,{x}_{0}}\right) /M \rightarrow  {\pi }_{1}\left( {X,{x}_{0}}\right) , \] where \(M\) is the least normal subgroup of \({\pi }_{1}\left( {U,{x}_{0}}\right)\) containing \({i}_{1}\left( {\ker {i}_{2}}\right)\) . [Hint: Show \({j}_{1}\) is surjective.]
   \item Show that \(h\) is an isomorphism. [Hint: Let \(H = {\pi }_{1}\left( {U,{x}_{0}}\right) /M\) . Let \({\phi }_{1}\) : \({\pi }_{1}\left( {U,{x}_{0}}\right)  \rightarrow  H\) be the projection. Use the fact that \({\pi }_{1}\left( {U \cap  V,{x}_{0}}\right) /\ker {i}_{2}\) is isomorphic to \({\pi }_{1}\left( {V,{x}_{0}}\right)\) to define a homomorphism \({\phi }_{2} : {\pi }_{1}\left( {V,{x}_{0}}\right)  \rightarrow  H\) . Use Theorem 70.1 to define a left inverse for \(h\) .]
   \end{enumerate}
-\item (a) Show that if \({G}_{1}\) and \({G}_{2}\) have finite presentations, so does \({G}_{1} * {G}_{2}\) .
+\item
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show that if \({G}_{1}\) and \({G}_{2}\) have finite presentations, so does \({G}_{1} * {G}_{2}\) .
+
   \item Show that if \({\pi }_{1}\left( {U \cap  V,{x}_{0}}\right)\) is finitely generated and \({\pi }_{1}\left( {U,{x}_{0}}\right)\) and \({\pi }_{1}\left( {V,{x}_{0}}\right)\) have finite presentations, then \({\pi }_{1}\left( {X,{x}_{0}}\right)\) has a finite presentation. [Hint: If \({N}^{\prime }\) is a normal subgroup of \({\pi }_{1}\left( {U,{x}_{0}}\right)  * {\pi }_{1}\left( {V,{x}_{0}}\right)\) that contains the elements \({i}_{1}{\left( {g}_{i}\right) }^{-1}{i}_{2}\left( {g}_{i}\right)\) where \({g}_{i}\) runs over a set of generators for \({\pi }_{1}\left( {U \cap  V,{x}_{0}}\right)\) , then \({N}^{\prime }\) contains \({i}_{1}{\left( g\right) }^{-1}{i}_{2}\left( g\right)\) for arbitrary \(g\) .]
   \end{enumerate}
 \end{enumerate}
