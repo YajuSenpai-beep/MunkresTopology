@@ -1,6 +1,6 @@
 \chapter{Complete Metric Spaces and Function Spaces}
 
-The concept of completeness for a metric space is one you may have seen already. It is basic for all aspects of analysis. Although completeness is a metric property rather than a \idx{Topological completeness (see also Complete metric space)} topological one, there are a number of \idx{Smirnov metrization theorem} theorems involving \idx{complete metric space}s that are topological in character. In this chapter, we shall study the most important examples of complete metric spaces and shall prove some of these theorems.
+The concept of completeness for a metric space is one you may have seen already. It is basic for all aspects of analysis. Although completeness is a metric property rather than a \idx[topological completeness]{Topological completeness (see also Complete metric space)} topological one, there are a number of \idx{Smirnov metrization theorem} theorems involving \idx[complete metric spaces]{complete metric space} that are topological in character. In this chapter, we shall study the most important examples of complete metric spaces and shall prove some of these theorems.
 
 The most familiar example of a complete metric space is euclidean space in either of its usual metrics. Another example, just as important, is the set \(\mathcal{C}\left( {X,Y}\right)\) of all continuous functions mapping a space \(X\) into a metric space \(Y\) This set has a metric called the uniform metric, analogous to the uniform metric defined for \({\mathbb{R}}^{J}\) in \(§{20}\) . If \(Y\) is a complete metric space, then \(\mathcal{C}\left( {X,Y}\right)\) is complete in the uniform metric. This we demonstrate in §43. As an application, we construct in §44 the well-known \idx{Peano curve} Peano space-filling curve
 
@@ -183,7 +183,7 @@ This inequality holds for all \(\alpha\) in \(J\) , provided merely that \(n \ge
 
 for \(n \geq  N\) , as desired.
 
-Now let us specialize somewhat, and consider the set \({Y}^{X}\) where \(X\) is a topological space rather than merely a set. Of course, this has no effect on what has gone before; the topology of \(X\) is irrelevant when considering the set of all functions \(f : X \rightarrow  Y\) . But suppose that we consider the subset \(\mathcal{C}\left( {X,Y}\right)\) of \({Y}^{X}\) consisting of all continuous functions \(f : X \rightarrow  Y\) . It turns out that if \(Y\) is complete, this subset is also complete in the uniform metric. The same holds for the set \(\mathcal{B}\left( {X,Y}\right)\) of all \idx{bounded function}s \(f : X \rightarrow  Y\) . (A function \(f\) is said to be bounded if its image \(f\left( X\right)\) is a bounded subset of the metric space(Y, d).)
+Now let us specialize somewhat, and consider the set \({Y}^{X}\) where \(X\) is a topological space rather than merely a set. Of course, this has no effect on what has gone before; the topology of \(X\) is irrelevant when considering the set of all functions \(f : X \rightarrow  Y\) . But suppose that we consider the subset \(\mathcal{C}\left( {X,Y}\right)\) of \({Y}^{X}\) consisting of all continuous functions \(f : X \rightarrow  Y\) . It turns out that if \(Y\) is complete, this subset is also complete in the uniform metric. The same holds for the set \(\mathcal{B}\left( {X,Y}\right)\) of all \idx[bounded functions]{bounded function} \(f : X \rightarrow  Y\) . (A function \(f\) is said to be bounded if its image \(f\left( X\right)\) is a bounded subset of the metric space(Y, d).)
 \end{proof}
 \begin{theorem}
 	Let \(X\) be a topological space and let(Y, d)be a metric space. The set \(\mathcal{C}\left( {X,Y}\right)\) of continuous functions is closed in \({Y}^{X}\) under the uniform metric. So is the set \(\mathcal{B}\left( {X,Y}\right)\) of bounded functions. Therefore, if \(Y\) is complete, these spaces are complete in the uniform metric.
@@ -566,7 +566,7 @@ The first and third inequalities hold because \(x \in  {U}_{i}\) , and the secon
 Thus \(f\) belongs to \({B}_{\rho }\left( {{f}_{\alpha },\epsilon }\right)\) , as asserted.
 \end{proof}
 \begin{definition}
-	If(Y, d)is a metric space, a subset \(\mathcal{F}\) of \(\mathcal{C}\left( {X,Y}\right)\) is said to be \idx{Pointwise convergence topology (see also Point-open topology)} pointwise bounded under \(d\) if for each \(x \in  X\) , the subset
+	If(Y, d)is a metric space, a subset \(\mathcal{F}\) of \(\mathcal{C}\left( {X,Y}\right)\) is said to be \idx[pointwise convergence topology]{Pointwise convergence topology (see also Point-open topology)} pointwise bounded under \(d\) if for each \(x \in  X\) , the subset
 
 \[
 {\mathcal{F}}_{a} = \{ f\left( a\right)  \mid  f \in  \mathcal{F}\}
@@ -721,7 +721,7 @@ C = \{ x\}  \cup  \left\{  {{x}_{n} \mid  n \in  {\mathbb{Z}}_{ + }}\right\}
 
 is compact, so that \(B \cap  C\) is by assumption closed in \(C\) . Since \(B \cap  C\) contains \({x}_{n}\) for every \(n\) , it contains \(x\) as well. Therefore, \(x \in  B\) , as desired.
 
-The crucial fact about \idx{compactly generated space}s is the following:
+The crucial fact about \idx[compactly generated spaces]{compactly generated space} is the following:
 
 \begin{lemma}
 	If \(X\) is compactly generated, then a function \(f : X \rightarrow  Y\) is continuous if for each compact subspace \(C\) of \(X\) , the restricted function \(f \mid  C\) is continuous.
@@ -887,7 +887,7 @@ We shall return to a more detailed study of homotopy in Part II of the book.
 \item Consider the sequence of continuous functions \({f}_{n} : \mathbb{R} \rightarrow  \mathbb{R}\) defined by \[ {f}_{n}\left( x\right)  = x/n \] In which of the three topologies of Theorem 46.7 does this sequence converge? Answer the same question for the sequence given in Exercise 9 of §21.
 \item Consider the sequence of functions \({f}_{n} : \left( {-1,1}\right)  \rightarrow  \mathbb{R}\) , defined by \[ {f}_{n}\left( x\right)  = \mathop{\sum }\limits_{{k = 1}}^{n}k{x}^{k} \]
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Show that \(\left( {f}_{n}\right)\) converges in the topology of compact convergence; conclude that the lumit function is continuous. (This is a standard fact about power senes.)
+  \item Show that \(\left( {f}_{n}\right)\) converges in the topology of compact convergence; conclude that the limit function is continuous. (This is a standard fact about power series.)
   \item Show that \(\left( {f}_{n}\right)\) does not converge in the uniform topology
   \end{enumerate}
 \item Show that in the compact-open topology, \(\mathcal{C}\left( {X,Y}\right)\) is Hausdorff if \(Y\) is Hausdorff, and regular if \(Y\) is regular. [Hint: If \(\bar{U} \subset  V\) , then \(\overline{S\left( {C,U}\right) } \subset  S\left( {C,V}\right)\) .
@@ -937,7 +937,7 @@ Step 1. We show that \(\mathcal{G}\) is a compact subspace of \({Y}^{X}\) . Give
 
 since this product by definition consists of all functions \(f : X \rightarrow  Y\) satisfying the condition \(f\left( a\right)  \in  {C}_{a}\) for all \(a\) . This product space is compact, by the Tychonoff theorem; it is a closed subspace of the product space \({Y}^{X}\) . Because \(\mathcal{G}\) equals the closure of \(\mathcal{F}\) in \({Y}^{X},\mathcal{G}\) is contained in \(\prod {C}_{a}\) , being closed, \(\mathcal{G}\) is therefore compact.
 
-Step 2. We show that each function beloriging to \(\mathcal{G}\) is continuous, and indeed that \(\mathcal{G}\) itself is equicontinuous under \(d\) .
+Step 2. We show that each function belongingg to \(\mathcal{G}\) is continuous, and indeed that \(\mathcal{G}\) itself is equicontinuous under \(d\) .
 
 Given \({x}_{0} \in  X\) and \(\epsilon  > 0\) , choose a neighborhood \(U\) of \({x}_{0}\) such that
 

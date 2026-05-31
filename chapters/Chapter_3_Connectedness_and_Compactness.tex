@@ -1,10 +1,10 @@
 \chapter{Connectedness and Compactness}
 
-In the study of calculus, there are three basic \idx{Intermediate-value theorem} theorems about \idx{Continuous image: of a compact space} continuous functions, and on these theorems the rest of calculus depends. They are the following:
+In the study of calculus, there are three basic \idx{Intermediate-value theorem} theorems about \idx[continuous image]{Continuous image: of a compact space} continuous functions, and on these theorems the rest of calculus depends. They are the following:
 
 Intermediate value theorem. If \(f : \left\lbrack  {a,b}\right\rbrack   \rightarrow  \mathbb{R}\) is continuous and if \(r\) is a real number between \(f\left( a\right)\) and \(f\left( b\right)\) , then there exists an element \(c \in  \left\lbrack  {a,b}\right\rbrack\) such that \(f\left( c\right)  = r\) .
 
-\idx{Maximum value theorem: of calculus} Maximum value theorem. If \(f : \left\lbrack  {a,b}\right\rbrack   \rightarrow  R\) is continuous, then there exists an element \(c \in  \left\lbrack  {a,b}\right\rbrack\) such that \(f\left( x\right)  \leq  f\left( c\right)\) for every \(x \in  \left\lbrack  {a,b}\right\rbrack\) .
+\idx[maximum value theorem]{Maximum value theorem: of calculus} Maximum value theorem. If \(f : \left\lbrack  {a,b}\right\rbrack   \rightarrow  R\) is continuous, then there exists an element \(c \in  \left\lbrack  {a,b}\right\rbrack\) such that \(f\left( x\right)  \leq  f\left( c\right)\) for every \(x \in  \left\lbrack  {a,b}\right\rbrack\) .
 
 \idx{Uniform continuity theorem}. If \(f : \left\lbrack  {a,b}\right\rbrack   \rightarrow  \mathbb{R}\) is continuous, then given \(\epsilon  > 0\) , there exists \(\delta  > 0\) such that \(\left| {f\left( {x}_{1}\right)  - f\left( {x}_{2}\right) }\right|  < \epsilon\) for every pair of numbers \({x}_{1},{x}_{2}\) of \(\left\lbrack  {a,b}\right\rbrack\) for which \(\left| {{x}_{1} - {x}_{2}}\right|  < \delta\) .
 
@@ -92,7 +92,7 @@ Figure 23.1
 \end{example}
 \end{centeredblock}
 
-We have given several examples of spaces that are not connected. How can one construct spaces that are connected? We shall now prove several theorems that tell how to form new \idx{connected space}s from given ones. In the next section we shall apply these theorems to show that some specific spaces, such as \idx{Intervals in : compactness} intervals in \(\mathbb{R}\) , and balls and cubes in \({\mathbb{R}}^{n}\) , are connected. First, a lemma:
+We have given several examples of spaces that are not connected. How can one construct spaces that are connected? We shall now prove several theorems that tell how to form new \idx[connected spaces]{connected space} from given ones. In the next section we shall apply these theorems to show that some specific spaces, such as \idx[intervals]{Intervals in : compactness} intervals in \(\mathbb{R}\) , and balls and cubes in \({\mathbb{R}}^{n}\) , are connected. First, a lemma:
 
 \begin{lemma}
 	If the sets \(C\) and \(D\) form a separation of \(X\) , and if \(Y\) is a connected subspace of \(X\) , then \(Y\) lies entirely within either \(C\) or \(D\) .
@@ -372,7 +372,7 @@ Being a linear continuum, the ordered square is connected. Let \(p = 0 \times  0
 {U}_{x} = {f}^{-1}\left( {x \times  \left( {0,1}\right) }\right)
 \]
 
-is a nonempty subset of \(\left\lbrack  {a,b}\right\rbrack\) ; by continuity, it is open in \(\left\lbrack  {a,b}\right\rbrack\) . See Figure 24.4. Choose, for each \(x \in  I\) , a rational number \({q}_{x}\) beloriging to \({U}_{x}\) . Since the sets \({U}_{x}\) are disjoint, the map \(x \rightarrow  {q}_{x}\) is an injective mapping of \(I\) into \(\mathbb{Q}\) . This contradicts the fact that the interval \(I\) is uncountable (which we shall prove later)
+is a nonempty subset of \(\left\lbrack  {a,b}\right\rbrack\) ; by continuity, it is open in \(\left\lbrack  {a,b}\right\rbrack\) . See Figure 24.4. Choose, for each \(x \in  I\) , a rational number \({q}_{x}\) belongingg to \({U}_{x}\) . Since the sets \({U}_{x}\) are disjoint, the map \(x \rightarrow  {q}_{x}\) is an injective mapping of \(I\) into \(\mathbb{Q}\) . This contradicts the fact that the interval \(I\) is uncountable (which we shall prove later)
 \end{example}
 \end{centeredblock}
 
@@ -462,7 +462,7 @@ Figure 24.5
 Given an arbitrary space \(X\) , there is a natural way to break it up into pieces that are connected (or path connected). We consider that process now.
 
 \begin{definition}
-	Given \(X\) , define an equivalence relation on \(X\) by setting \(x \sim  y\) if there is a connected subspace of \(X\) containing both \(x\) and \(y\) . The equivalence classes are called the \idx{component}s (or the ``\idx{connected component}s'') of \(X\) .
+	Given \(X\) , define an equivalence relation on \(X\) by setting \(x \sim  y\) if there is a connected subspace of \(X\) containing both \(x\) and \(y\) . The equivalence classes are called the \idx[components]{component} (or the ``\idx[connected components]{connected component}'') of \(X\) .
 \end{definition}
 
 
@@ -492,7 +492,7 @@ Since the subspaces \({A}_{x}\) are connected and have the point \({x}_{0}\) in 
 \end{proof}
 
 \begin{definition}
-	We define another equivalence relation on the space \(X\) by defining \(x \sim  y\) if there is a path in \(X\) from \(x\) to \(y\) . The equivalence classes are called the \idx{path component}s of \(X\) .
+	We define another equivalence relation on the space \(X\) by defining \(x \sim  y\) if there is a path in \(X\) from \(x\) to \(y\) . The equivalence classes are called the \idx[path components]{path component} of \(X\) .
 \end{definition}
 
 
@@ -515,7 +515,7 @@ One can say even less about the path components of \(X\) , for they need be neit
 
 \begin{centeredblock}
 \begin{example}
-	The ``\idx{Topologist's sine curve (cont.): connectedness} topologist's sine curve'' \(\bar{S}\) of the preceding section is a space that has a single component (since it is connected) and two path components One path component is the curve \(S\) and the other is the vertical interval \(V = 0 \times  \left\lbrack  {-1,1}\right\rbrack\) . Note that \(S\) is open in \(\bar{S}\) but not closed, while \(V\) is closed but not open
+	The ``\idx[topologist's sine curve]{Topologist's sine curve (cont.): connectedness} topologist's sine curve'' \(\bar{S}\) of the preceding section is a space that has a single component (since it is connected) and two path components One path component is the curve \(S\) and the other is the vertical interval \(V = 0 \times  \left\lbrack  {-1,1}\right\rbrack\) . Note that \(S\) is open in \(\bar{S}\) but not closed, while \(V\) is closed but not open
 
 If one forms a space from \(\widetilde{S}\) by deleting all points of \(V\) having rational second coordinate, one obtains a space that has only one component but uncountably many path components.
 \end{example}
@@ -588,14 +588,14 @@ Because \(X\) is locally path connected, each path component of \(X\) is open in
 \item Let \(G\) be a \idx{topological group}; let \(C\) be the component of \(G\) containing the identity element \(e\) . Show that \(C\) is a normal subgroup of \(G\) . [Hint: If \(x \in  G\) , then \({xC}\) is the component of \(G\) containing \(x\) .]
 \item Let \(X\) be a space. Let us define \(x \sim  y\) if there is no separation \(X = A \cup  B\) of \(X\) into disjoint open sets such that \(x \in  A\) and \(y \in  B\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Show this relation is an equivalence relation. The equivalence classes are called the \idx{quasicomponent}s of \(X\) .
+  \item Show this relation is an equivalence relation. The equivalence classes are called the \idx[quasicomponents]{quasicomponent} of \(X\) .
   \item Show that each component of \(X\) lies in a quasicomponent of \(X\) , and that the components and quasicomponents of \(X\) are the same if \(X\) is locally connected.
   \item Let \(K\) denote the set \(\left\{  {1/n \mid  n \in  {\mathbb{Z}}_{ + }}\right\}\) and let \(- K\) denote the set \(\{  - 1/n \mid  n \in\)  \(\left. {\mathbb{Z}}_{ + }\right\}\) . Determine the components, path components, and quasicomponents of the following subspaces of \({\mathbb{R}}^{2}\) : \[ A = \left( {K \times  \left\lbrack  {0,1}\right\rbrack  }\right)  \cup  \{ 0 \times  0\}  \cup  \{ 0 \times  1\} . \] \[ B = A \cup  \left( {\left\lbrack  {0,1}\right\rbrack   \times  \{ 0\rbrack }\right) \text{ . } \] \[ C = \left( {K \times  \left\lbrack  {0,1}\right\rbrack  }\right)  \cup  \left( {-K \times  \left\lbrack  {-1,0}\right\rbrack  }\right)  \cup  \left( {\left\lbrack  {0,1}\right\rbrack   \times   - K}\right)  \cup  \left( {\left\lbrack  {-1,0}\right\rbrack   \times  K}\right) . \]
   \end{enumerate}
 \end{enumerate}
 \section*{§ 26 Compact Spaces}
 
-The notion of compactness is not nearly so natural as that of connectedness. From the beginnings of topology, it was clear that the closed interval \(\left\lbrack  {a,b}\right\rbrack\) of the real line had a certain property that was crucial for proving such theorems as the maximum value theorem and the uniform continuity theorem. But for a long time, it was not clear how this property should be formulated for an arbitrary topological space It used to be thought that the crucial property of \(\left\lbrack  {a,b}\right\rbrack\) was the fact that every infinite subset of \(\left\lbrack  {a,b}\right\rbrack\) has a limit point, and this property was the one dignified with the name of compactness. Later, mathematicians realized that this formulation does not lie at the heart of the matter, but rather that a stronger formulation, in terms of open \idx{covering}s of the space, is more central. The latter formulation is what we now call compactness. It is not as natural or intuitive as the former; some familiarity with it is needed before its usefulness becomes apparent.
+The notion of compactness is not nearly so natural as that of connectedness. From the beginnings of topology, it was clear that the closed interval \(\left\lbrack  {a,b}\right\rbrack\) of the real line had a certain property that was crucial for proving such theorems as the maximum value theorem and the uniform continuity theorem. But for a long time, it was not clear how this property should be formulated for an arbitrary topological space It used to be thought that the crucial property of \(\left\lbrack  {a,b}\right\rbrack\) was the fact that every infinite subset of \(\left\lbrack  {a,b}\right\rbrack\) has a limit point, and this property was the one dignified with the name of compactness. Later, mathematicians realized that this formulation does not lie at the heart of the matter, but rather that a stronger formulation, in terms of open \idx[coverings]{covering} of the space, is more central. The latter formulation is what we now call compactness. It is not as natural or intuitive as the former; some familiarity with it is needed before its usefulness becomes apparent.
 
 \begin{definition}
 	A collection \(\mathcal{A}\) of subsets of a space \(X\) is said to cover \(X\) , or to be a covering of \(X\) , if the union of the elements of \(\mathcal{A}\) is equal to \(X\) . It is called an open covering of \(X\) if its elements are open subsets of \(X\) .
