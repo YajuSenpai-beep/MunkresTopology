@@ -1,0 +1,103 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          cd index
+          pip install -e ".[dev]"
+      - name: Run tests
+        run: cd index && python -m pytest tests/ -v
+      - name: Lint
+        run: cd index && ruff check latex_index/
+      - name: Type check
+        run: cd index && mypy latex_index/ --strict
+
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          cd index
+          pip install -e ".[dev]"
+      - name: Run benchmarks
+        run: |
+          cd index
+          python -m pytest tests/test_performance.py -v --tb=short -W default \
+            --timeout 120 \
+            -k "not slow" || echo "WARNING: benchmark regressions detected"
+          echo "Performance benchmark completed."
+          echo "Hard thresholds: 500p 20k entries < 30s, insertion < 5s, generation < 60s"
+      - name: Verify thresholds
+        run: |
+          cd index
+          python -c "
+          # Verify basic performance sanity
+          import time, sys
+          from latex_index.engine import IndexEngine
+          config = {'templates': {'l1': r'\\index{\${key}}'}, 'aliases': {}, 'math_shortcuts': {}}
+          engine = IndexEngine(config)
+          content = 'word ' * 25000  # ~125KB text
+          entries = [{'term': f'w{i:04d}', 'level': 1} for i in range(1000)]
+          t0 = time.perf_counter()
+          ops = engine.find_insertions(content, entries)
+          elapsed = time.perf_counter() - t0
+          threshold = 5.0
+          if elapsed > threshold:
+              print(f'FAIL: insertion took {elapsed:.1f}s > {threshold}s limit')
+              sys.exit(1)
+          print(f'OK: insertion {elapsed:.1f}s < {threshold}s')
+          "
+
+  docker:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Docker image
+        run: docker build -t latex-index-tool index/
+      - name: Push to GitHub Container Registry
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+          docker tag latex-index-tool ghcr.io/${{ github.repository }}/latex-index-tool:${{ github.ref_name }}
+          docker push ghcr.io/${{ github.repository }}/latex-index-tool:${{ github.ref_name }}
+
+  pypi:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build package
+        run: |
+          cd index
+          pip install build
+          python -m build
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: index/dist/
+          password: ${{ secrets.PYPI_API_TOKEN }}

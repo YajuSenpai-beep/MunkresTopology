@@ -1,0 +1,42 @@
+{
+  "_description": "Index insertion config — copy and edit for your project",
+
+  "templates": {
+    "l1": "\\idx{${key}}",
+    "l1Math": "\\idxmath{${sort}}{${display}}",
+    "l2": "\\idxsub{${parent}}{${child}}"
+  },
+
+  "filePattern": "Chapter_${num}_*.tex",
+  "entryFile": "index/data/ch${num}_entries.json",
+
+  "aliases": {
+    "Counterimage": ["counterimage", "preimage", "inverse image"],
+    "Inf A": ["infimum"],
+    "Sup A": ["supremum"],
+    "Bd A": ["boundary of"],
+    "Int A": ["interior of"],
+    "Cl A": ["closure of"],
+    "First-countability": ["first-countable", "first countable", "first axiom"],
+    "Second-countability": ["second-countable", "second countable", "second axiom"],
+    "Hilbert cube": ["hilbert cube"],
+    "Larger topology": ["larger"],
+    "Smaller topology": ["smaller"],
+    "Finer topology": ["finer"],
+    "Coarser topology": ["coarser"],
+    "Strictly coarser topology": ["strictly coarser"],
+    "Strictly finer topology": ["strictly finer"]
+  },
+
+  "mathShortcuts": {
+    "\\mathbb{R}": ["\\R", "\\RR"],
+    "\\mathbb{N}": ["\\N", "\\NN"],
+    "\\mathbb{Z}": ["\\Z", "\\ZZ"],
+    "\\mathbb{Q}": ["\\Q", "\\QQ"],
+    "\\mathbb{C}": ["\\C", "\\CC"]
+  },
+
+  "skipPatterns": ["(cont.)", "(see ", "(see also "],
+
+  "chapterSourceDir": "chapters"
+}

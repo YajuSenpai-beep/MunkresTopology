@@ -440,7 +440,11 @@
 % 编译命令: makeindex -s Topology_by_Munkres.ist Topology_by_Munkres.idx
 % ---------- 索引自定义格式 ----------
 \newcommand{\idxfmt}[1]{\textbf{\textsl{#1}}}       % 索引条目正文字体格式
-\newcommand{\idx}[1]{\index{#1}\idxfmt{#1}}        % L1索引条目（自动加粗斜体）
+\NewDocumentCommand{\idx}{om}{%
+  \IfNoValueTF{#1}
+    {\index{#2}\idxfmt{#2}}      % \idx{key} — display = key
+    {\index{#2}\idxfmt{#1}}      % \idx[display]{key} — separate display
+}
 \newcommand{\idxmath}[2]{\index{#1@#2}\idxfmt{#2}} % 数学符号索引条目（#1=排序键,#2=显示）
 \newcommand{\idxsub}[2]{\index{#1!#2}}             % L2子条目
 % 索引页面plain格式由Topology_by_Munkres.tex中\pagestyle{plain}控制

@@ -1,8 +1,8 @@
 \chapter{Countability and Separation Axioms}
 
-The concepts we are going to introduce now, unlike compactness and connectedness, do not arise naturally from the study of calculus and analysis. They arise instead from a deeper study of topology itself. Such problems as \idx{Imbedding theorem: for a compact manifold} imbedding a given space in a metric space or in a compact Hausdorff space are basically problems of topology rather than analysis. These particular problems have solutions that involve the countability and separation axioms.
+The concepts we are going to introduce now, unlike compactness and connectedness, do not arise naturally from the study of calculus and analysis. They arise instead from a deeper study of topology itself. Such problems as \idx[imbedding theorem]{Imbedding theorem: for a compact manifold} imbedding a given space in a metric space or in a compact Hausdorff space are basically problems of topology rather than analysis. These particular problems have solutions that involve the countability and separation axioms.
 
-We have already introduced the first countability axiom; it arose in connection with our study of \idx{Convergent net} convergent sequences in \(\$ {21}\) . We have also studied one of the separation axioms-the Hausdorff axiom, and mentioned another-the \({T}_{1}\) axiom. In this chapter we shall introduce other, and stronger, axioms like these and explore some of their consequences. Our basic goal is to prove the \idx{Urysohn metrization theorem}. It says that if a topological space \(X\) satisfies a certain countability axiom (the second) and a certain separation axiom (the \idx{Regular space (see also Regularity)} regularity axiom), then \(X\) can be imbedded in a metric space and is thus metrizable.
+We have already introduced the first countability axiom; it arose in connection with our study of \idx{Convergent net} convergent sequences in \(\$ {21}\) . We have also studied one of the separation axioms-the Hausdorff axiom, and mentioned another-the \({T}_{1}\) axiom. In this chapter we shall introduce other, and stronger, axioms like these and explore some of their consequences. Our basic goal is to prove the \idx{Urysohn metrization theorem}. It says that if a topological space \(X\) satisfies a certain countability axiom (the second) and a certain separation axiom (the \idx[regular space]{Regular space (see also Regularity)} regularity axiom), then \(X\) can be imbedded in a metric space and is thus metrizable.
 
 Another imbedding theorem, important to geometers, appears in the last section of the chapter. Given a space that is a compact \idx{manifold} (the higher-dimensional analogue of a \idx{surface}), we show that it can be imbedded in some finite-dimensional euclidean space.
 
@@ -25,12 +25,14 @@ The most useful fact concerning spaces that satisfy this axiom is the fact that 
 
 (b) Let \(f : X \rightarrow  Y\) . If \(f\) is continuous, then for every convergent sequence \({x}_{n} \rightarrow  x\) in \(X\) , the sequence \(f\left( {x}_{n}\right)\) converges to \(f\left( x\right)\) . The converse holds if \(X\) is first-countable.
 
-The proof is a direct generalization of the proof given in §21 under the hypothesis of \idx{Metrizability: of compact Hausdorff space} metrizability, so it will not be repeated here.
+The proof is a direct generalization of the proof given in §21 under the hypothesis of \idx[metrizability]{Metrizability: of compact Hausdorff space} metrizability, so it will not be repeated here.
 
 Of much greater importance than the first countability axiom is the following:
 
 \end{theorem}
-\section*{Definition. If a space \(X\) has a countable basis for its topology, then \(X\) is said to satisfy the second countability axiom, or to be \idx{Second-countable space (see also Second-countability)} second-countable.}
+\section*{Definition. If a space \(X\) has a countable basis for its topology, then \(X\) is said to satisfy the second countability axiom, or to be second-countable.}
+
+\idx[second-countable space]{Second-countable space (see also Second-countability)}
 
 Obviously, the second axiom implies the first: if \(\mathcal{B}\) is a countable basis for the topology of \(X\) , then the subset of \(\mathcal{B}\) consisting of those basis elements containing the point \(x\) is a countable basis at \(x\) . The second axiom is, in fact, much stronger than the first; it is so strong that not even every metric space satisfies it.
 
@@ -83,7 +85,7 @@ Let \(\left\{  {B}_{n}\right\}\) be a countable basis for \(X\) .
 
 (b) From each nonempty basis element \({B}_{n}\) , choose a point \({x}_{n}\) . Let \(D\) be the set consisting of the points \({x}_{n}\) . Then \(D\) is dense in \(X\) : Given any point \(x\) of \(X\) , every basis element containing \(x\) intersects \(D\) , so \(x\) belongs to \(\bar{D}\) .
 
-The two properties listed in Theorem 30.3 are sometimes taken as alternative countability axioms. A space for which every open covering contains a countable subcovering is called a Lindelöf space A space having a countable \idx{dense subset} is often said to be \idx{Separable (see also Countable dense subset)} separable (an unfortunate choice of terminology). ${}^{\dagger}$ Weaker in general than the second countability axiom, each of these properties is equivalent to the second countability axiom when the space is metrizable (see Exercise 5). They are less important than the second countability axiom, but you should be aware of their existence, for they are sometimes useful. It is often easier, for instance, to show that a space \(X\) has a countable dense subset than it is to show that \(X\) has a countable basis. If the space is metrizable (as it usually is in analysis), it follows that \(X\) is second-countable as well.
+The two properties listed in Theorem 30.3 are sometimes taken as alternative countability axioms. A space for which every open covering contains a countable subcovering is called a Lindelöf space A space having a countable \idx{dense subset} is often said to be \idx[separable]{Separable (see also Countable dense subset)} separable (an unfortunate choice of terminology). ${}^{\dagger}$ Weaker in general than the second countability axiom, each of these properties is equivalent to the second countability axiom when the space is metrizable (see Exercise 5). They are less important than the second countability axiom, but you should be aware of their existence, for they are sometimes useful. It is often easier, for instance, to show that a space \(X\) has a countable dense subset than it is to show that \(X\) has a countable basis. If the space is metrizable (as it usually is in analysis), it follows that \(X\) is second-countable as well.
 
 We shall not use these properties to prove any theorems, but one of them-the \idx{Lindelöf condition}-will be useful in dealing with some examples. They are not as well behaved as one might wish under the operations of taking subspaces and cartesian products, as we shall see in the examples and exercises that follow.
 \end{proof}
@@ -112,7 +114,7 @@ C = \mathop{\bigcup }\limits_{{\alpha  \in  J}}\left( {{a}_{\alpha },{b}_{\alpha
 
 which is a subset of \(\mathbb{R}\) . We show the set \(\mathbb{R} - C\) is countable.
 
-Let \(x\) be a point of \(\mathbb{R} - C\) . We know that \(x\) belongs to no open interval \(\left( {{a}_{\alpha },{b}_{\alpha }}\right)\) , therefore \(x = {a}_{\beta }\) for some index \(\beta\) . Choose such a \(\beta\) and then choose \({q}_{\tau }\) to be a rational number beloriging to the interval \(\left( {{a}_{\beta },{b}_{\beta }}\right)\) . Because \(\left( {{a}_{\beta },{b}_{\beta }}\right)\) is contained in \(C\) , so is the interval \(\left( {{a}_{\beta },{q}_{t}}\right)  = \left( {x,{q}_{\lambda }}\right)\) . It follows that if \(x\) and \(y\) are two points of \(\mathbb{R} - C\) with \(x < y\) , then \({q}_{x} < {q}_{y}\) (For otherwise, we would have \(x < y < {q}_{y} \leq  {q}_{x}\) , so that \(y\) would lie in the interval \(\left( {x,{q}_{\tau }}\right)\) and hence in \(C\) .) Therefore the map \(x \rightarrow  {q}_{\tau }\) of \(\mathbb{R} - C\) into \(\mathbb{Q}\) is injective, so that \(\mathbb{R} - C\) is countable.
+Let \(x\) be a point of \(\mathbb{R} - C\) . We know that \(x\) belongs to no open interval \(\left( {{a}_{\alpha },{b}_{\alpha }}\right)\) , therefore \(x = {a}_{\beta }\) for some index \(\beta\) . Choose such a \(\beta\) and then choose \({q}_{\tau }\) to be a rational number belongingg to the interval \(\left( {{a}_{\beta },{b}_{\beta }}\right)\) . Because \(\left( {{a}_{\beta },{b}_{\beta }}\right)\) is contained in \(C\) , so is the interval \(\left( {{a}_{\beta },{q}_{t}}\right)  = \left( {x,{q}_{\lambda }}\right)\) . It follows that if \(x\) and \(y\) are two points of \(\mathbb{R} - C\) with \(x < y\) , then \({q}_{x} < {q}_{y}\) (For otherwise, we would have \(x < y < {q}_{y} \leq  {q}_{x}\) , so that \(y\) would lie in the interval \(\left( {x,{q}_{\tau }}\right)\) and hence in \(C\) .) Therefore the map \(x \rightarrow  {q}_{\tau }\) of \(\mathbb{R} - C\) into \(\mathbb{Q}\) is injective, so that \(\mathbb{R} - C\) is countable.
 
 Now we show that some countable subcollection of \(\mathcal{A}\) covers \(\mathbb{R}\) To begin, choose for each element of \(\mathbb{R} - C\) an element of \(\mathcal{A}\) containing it; one obtains a countable subcollec-tion \({\mathcal{A}}^{\prime }\) of \(\mathcal{A}\) that covers \(\mathbb{R} - C\) . Now take the set \(C\) and topologize it as a subspace of \(\mathbb{R}\) ; in this topology, \(C\) satisfies the second countability axiom. Now \(C\) is covered by the sets \(\left( {{a}_{\alpha },{b}_{\alpha }}\right)\) , which are open in \(\mathbb{R}\) and hence open in \(C\) Then some countable subcollection covers \(C\) . Suppose this subcollection consists of the elements \(\left( {{a}_{\alpha },{b}_{\alpha }}\right)\) for \(\alpha  = {\alpha }_{1},{\alpha }_{2},\ldots\) Then the collection
 
@@ -525,7 +527,7 @@ Figure 32.3
 \item Show that every locally compact Hausdorff space is regular.
 \item Show that every regular Lindelöf space is normal.
 \item Is \({\mathbb{R}}^{\omega }\) normal in the product topology? In the uniform topology? It is not known whether \({\mathbb{R}}^{\omega }\) is normal in the box topology. Mary-Ellen Rudin has shown that the answer is affirmative if one assumes the continuum hypothesis \cite{Rudin1972}. In fact, she shows it satisfies a stronger condition called paracompact-ness.
-\item A space \(X\) is said to be \idx{Complete regularity (cont.)} completely normal if every subspace of \(X\) is normal. Show that \(X\) is completely normal if and only if for every pair \(A,B\) of separated sets in \(X\) (that is, sets such that \(\bar{A} \cap  B = \varnothing\) and \(A \cap  \bar{B} = \varnothing\) ), there exist disjoint open sets containing them. [Hint: If \(X\) is completely normal, consider \(X - \left( {\bar{A} \cap  \bar{B}}\right)\) .]
+\item A space \(X\) is said to be \idx[complete regularity]{Complete regularity (cont.)} completely normal if every subspace of \(X\) is normal. Show that \(X\) is completely normal if and only if for every pair \(A,B\) of separated sets in \(X\) (that is, sets such that \(\bar{A} \cap  B = \varnothing\) and \(A \cap  \bar{B} = \varnothing\) ), there exist disjoint open sets containing them. [Hint: If \(X\) is completely normal, consider \(X - \left( {\bar{A} \cap  \bar{B}}\right)\) .]
 \item Which of the following spaces are completely normal? Justify your answers.
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item A subspace of a \idx{completely normal space}.
@@ -582,7 +584,7 @@ Now define the sets \({U}_{p}\) , as follows. First, define \({U}_{1} = X - B\) 
 A \subset  {U}_{0}\;\text{ and }\;{\bar{U}}_{0} \subset  {U}_{1}
 \]
 
-In general, let \({P}_{n}\) denote the set consisting of the first \(n\) rational numbers in the sequence. Suppose that \({U}_{p}\) is defined for all rational numbers \(p\) beloriging to the set \({P}_{n}\) , satisfying the condition
+In general, let \({P}_{n}\) denote the set consisting of the first \(n\) rational numbers in the sequence. Suppose that \({U}_{p}\) is defined for all rational numbers \(p\) belongingg to the set \({P}_{n}\) , satisfying the condition
 
 (*)
 \[
