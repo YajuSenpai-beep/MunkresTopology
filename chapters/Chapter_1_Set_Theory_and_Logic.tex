@@ -292,7 +292,6 @@ The intersection of the elements of \(\mathcal{A}\) is defined by the equation
 \mathop{\bigcap }\limits_{{A \in  \mathcal{A}}}A = \{ x \mid  x \in  A\text{ for every }A \in  \mathcal{A}\} .
 \]
 \begin{centeredblock}
-
 There is no problem with these definitions if one of the elements of \(\mathcal{A}\) happens to be the empty set. But it is a bit tricky to decide what (if anything) these definitions mean if we allow \(\mathcal{A}\) to be the empty collection. Applying the definitions literally, we see that no element \(x\) satisfies the defining property for the union of the elements of \(\mathcal{A}\) . So it is reasonable to say that
 \[
 \mathop{\bigcup }\limits_{{A \in  A}}A = \varnothing
@@ -416,24 +415,24 @@ One often does not even mention the sets \(A\) and \(B\) explicitly, agreeing to
 
 As one goes further in mathematics, however, one needs to be more precise about what a function is. Mathematicians think of functions in the way we just described, but the definition they use is more exact. First, we define the following:
 
-\begin{definition} A \idx{rule of assignment} is a subset \(r\) of the cartesian product \(\mathbf{C} \times  \mathbf{D}\) of two sets, having the property that each element of \(C\) appears as the first coordinate of at most one ordered pair belonging to \(r\) .
+\begin{definition} 
+    A \idx{rule of assignment} is a subset \(r\) of the cartesian product \(\mathbf{C} \times  \mathbf{D}\) of two sets, having the property that each element of \(C\) appears as the first coordinate of at most one ordered pair belonging to \(r\) .
 
+    Thus, a subset \(r\) of \(C \times  D\) is a rule of assignment if
+    \[
+    \left\lbrack  {\left( {c,d}\right)  \in  r\text{ and }\left( {c,{d}^{\prime }}\right)  \in  r}\right\rbrack \Rightarrow  \left\lbrack  {d = {d}^{\prime }}\right\rbrack  .
+    \]
+    We think of \(r\) as a way of assigning, to the element \(c\) of \(C\) , the element \(d\) of \(D\) for which \(\left( {c,d}\right)  \in  r\) .
 
-Thus, a subset \(r\) of \(C \times  D\) is a rule of assignment if
-\[
-\left\lbrack  {\left( {c,d}\right)  \in  r\text{ and }\left( {c,{d}^{\prime }}\right)  \in  r}\right\rbrack \Rightarrow  \left\lbrack  {d = {d}^{\prime }}\right\rbrack  .
-\]
-We think of \(r\) as a way of assigning, to the element \(c\) of \(C\) , the element \(d\) of \(D\) for which \(\left( {c,d}\right)  \in  r\) .
+    Given a rule of assignment \(r\) , the \idx{domain} of \(\mathrm{r}\) is defined to be the subset of \(C\) consisting of all first coordinates of elements of \(r\) , and the \idx{image} set of \(r\) is defined as the subset of \(D\) consisting of all second coordinates of elements of \(r\) . Formally,
 
-Given a rule of assignment \(r\) , the \idx{domain} of \(\mathrm{r}\) is defined to be the subset of \(C\) consisting of all first coordinates of elements of \(r\) , and the \idx{image} set of \(r\) is defined as the subset of \(D\) consisting of all second coordinates of elements of \(r\) . Formally,
-
-\[
-\begin{aligned}
-\text{ domain }r &= \{ c \mid  \text{ there exists }d \in  D\text{ such that }\left( {c,d}\right)  \in  r\} \text{ , } \\
-\text{ image }r &= \{ d \mid  \text{ there exists }c \in  C\text{ such that }\left( {c,d}\right)  \in  r\} \text{ . }
-\end{aligned}
-\]
-Note that given a rule of assignment \(r\) , its domain and image are entirely determined.
+    \[
+    \begin{aligned}
+    \text{ domain }r &= \{ c \mid  \text{ there exists }d \in  D\text{ such that }\left( {c,d}\right)  \in  r\} \text{ , } \\
+    \text{ image }r &= \{ d \mid  \text{ there exists }c \in  C\text{ such that }\left( {c,d}\right)  \in  r\} \text{ . }
+    \end{aligned}
+    \]
+    Note that given a rule of assignment \(r\) , its domain and image are entirely determined.
 \end{definition}
 
 Now we can say what a function is.
@@ -455,13 +454,13 @@ Using this notation, one can go back to defining functions almost as one did bef
 ``Let \(f\) be the function whose rule is \(\left\{  {\left( {x,{x}^{3} + 1}\right)  \mid  x \in  \mathbb{R}}\right\}\) and whose range is \(\mathbf{R}\) ,''
 \end{centeredblock}
 or one can equally well write
+
 \begin{centeredblock}
 ``Let \(f : \mathbb{R} \rightarrow  \mathbb{R}\) be the function such that \(f\left( x\right)  = {x}^{3} + 1\) .''
 \end{centeredblock}
 Both sentences specify precisely the same function. But the sentence ``Let \(f\) be the function \(f\left( x\right)  = {x}^{3} + 1\) '' is no longer adequate for specifying a function because it specifies neither the domain nor the range of \(f\) .
 
 \customfootnote{${}^{\dagger}$ Analysts are apt to use the word ``range'' to denote what we have called the ``image set'' of \(f\). They avoid giving the set \(B\) a name.}
-
 
 \begin{definition}
     If \(f : A \rightarrow  B\) and if \({A}_{0}\) is a subset of \(A\) , we define the restriction of \(f\) to \({A}_{0}\) to be the function mapping \({A}_{0}\) into \(B\) whose rule is
@@ -470,7 +469,6 @@ Both sentences specify precisely the same function. But the sentence ``Let \(f\)
     \]
     It is denoted by \(f \mid  {A}_{0}\) , which is read `` \(f\) restricted to \({A}_{0}\) .''
 \end{definition}
-
 
 \begin{centeredblock}
 \begin{example}
@@ -587,12 +585,12 @@ The first inclusion is an equality if \(f\) is injective, and the second inclusi
 \begin{centeredblock}
 \begin{example}
     Consider the function \(f : \mathbb{R} \rightarrow  \mathbb{R}\) given by \(f\left( x\right)  = 3{x}^{2} + 2\) (Figure 2.3). Let \(\left\lbrack  {a,b}\right\rbrack\) denote the closed interval \(a \leq  x \leq  b\) . Then
-\[
-\begin{aligned}
-{f}^{-1}\left( {f\left( \left\lbrack  {0,1}\right\rbrack  \right) }\right)  &= {f}^{-1}\left( \left\lbrack  {2,5}\right\rbrack  \right)  = \left\lbrack  {-1,1}\right\rbrack  ,\;\text{ and } \\
-f\left( {{f}^{-1}\left( \left\lbrack  {0,5}\right\rbrack  \right) }\right)  &= f\left( \left\lbrack  {-1,1}\right\rbrack  \right)  = \left\lbrack  {2,5}\right\rbrack  .
-\end{aligned}
-\]
+    \[
+    \begin{aligned}
+    {f}^{-1}\left( {f\left( \left\lbrack  {0,1}\right\rbrack  \right) }\right)  &= {f}^{-1}\left( \left\lbrack  {2,5}\right\rbrack  \right)  = \left\lbrack  {-1,1}\right\rbrack  ,\;\text{ and } \\
+    f\left( {{f}^{-1}\left( \left\lbrack  {0,5}\right\rbrack  \right) }\right)  &= f\left( \left\lbrack  {-1,1}\right\rbrack  \right)  = \left\lbrack  {2,5}\right\rbrack  .
+    \end{aligned}
+    \]
 \end{example}
 \end{centeredblock}
 
@@ -662,13 +660,13 @@ A rule of assignment \(r\) for a function \(f : A \rightarrow  A\) is also a sub
     \]
     Then \(D\) is a relation on the set \(P\) . The statements `` \(x\) is in the relation \(D\) to \(y\) '' and `` \(x\) is a descendant of \(y\) '' mean precisely the same thing, namely, that \(\left( {x,y}\right)  \in  D\) . Two other relations on \(P\) are the following
 
-\[
-\begin{aligned}
-B &= \{ \left( {x,y}\right)  \mid  x\text{ has an ancestor who is also an ancestor of }y\} \text{ . } \\
-S &= \{ \left( {x,y}\right)  \mid  \text{ the parents of }x\text{ are the parents of }y\} \text{ . }
-\end{aligned}
-\]
-We can call \(B\) the ``blood relation'' (pun intended), and we can call \(S\) the ``sibling relation.'' These three relations have quite different properties. The blood relationship is symmetric, for instance (if \(x\) is a blood relative of \(y\) , then \(y\) is a blood relative of \(x\) ), whereas the descendant relation is not. We shall consider these relations again shortly.
+    \[
+    \begin{aligned}
+    B &= \{ \left( {x,y}\right)  \mid  x\text{ has an ancestor who is also an ancestor of }y\} \text{ . } \\
+    S &= \{ \left( {x,y}\right)  \mid  \text{ the parents of }x\text{ are the parents of }y\} \text{ . }
+    \end{aligned}
+    \]
+    We can call \(B\) the ``blood relation'' (pun intended), and we can call \(S\) the ``sibling relation.'' These three relations have quite different properties. The blood relationship is symmetric, for instance (if \(x\) is a blood relative of \(y\) , then \(y\) is a blood relative of \(x\) ), whereas the descendant relation is not. We shall consider these relations again shortly.
 \end{example}
 \end{centeredblock}
 
@@ -683,7 +681,8 @@ An equivalence relation on a set \(A\) is a relation \(C\) on \(A\) having the f
 (3) (Transitivity) If \({xCy}\) and \({yCz}\) , then \({xCz}\) .
 
 \begin{centeredblock}
-\begin{example} Among the relations defined in Example 1, the descendant relation \(D\) is neither reflexive nor symmetric, while the blood relation \(B\) is not transitive (I am not a blood relation to my wife, although my children are!) The sibling relation \(S\) is, however, an equivalence relation, as you may check.
+\begin{example}
+    Among the relations defined in Example 1, the descendant relation \(D\) is neither reflexive nor symmetric, while the blood relation \(B\) is not transitive (I am not a blood relation to my wife, although my children are!) The sibling relation \(S\) is, however, an equivalence relation, as you may check.
 \end{example}
 \end{centeredblock}
 
@@ -773,7 +772,8 @@ Note that property (1) does not by itself exclude the possibility that for some 
 \end{centeredblock}
 
 \begin{centeredblock}
-\begin{example} Consider again the relationships among people given in Example 1. The blood relation \(B\) satisfies none of the properties of an order relation, and the sibling relation \(S\) satisfies only (3). The descendant relation \(D\) does somewhat better, for it satisfies both (2) and (3); however, comparability still fails. Relations that satisfy (2) and (3) occur often enough in mathematics to be given a special name. They are called strict \idx{partial order} relations; we shall consider them later (see \(§{11}\) ).
+\begin{example}
+    Consider again the relationships among people given in Example 1. The blood relation \(B\) satisfies none of the properties of an order relation, and the sibling relation \(S\) satisfies only (3). The descendant relation \(D\) does somewhat better, for it satisfies both (2) and (3); however, comparability still fails. Relations that satisfy (2) and (3) occur often enough in mathematics to be given a special name. They are called strict \idx{partial order} relations; we shall consider them later (see \(§{11}\) ).
 \end{example}
 \end{centeredblock}
 
@@ -882,9 +882,9 @@ Similarly, \({A}_{0}\) is \idx{bounded below} if there is an element \(a\) of \(
 
 Now we can define the least upper bound property.
 
-\begin{definition} An ordered set \(A\) is said to have the least upper bound property if every nonempty subset \({A}_{0}\) of \(A\) that is bounded above has a least upper bound. Analogously, the set \(A\) is said to have the greatest lower bound property if every nonempty subset \({A}_{0}\) of \(A\) that is bounded below has a greatest lower bound.
+\begin{definition}
+	An ordered set \(A\) is said to have the least upper bound property if every nonempty subset \({A}_{0}\) of \(A\) that is bounded above has a least upper bound. Analogously, the set \(A\) is said to have the greatest lower bound property if every nonempty subset \({A}_{0}\) of \(A\) that is bounded below has a greatest lower bound.
 \end{definition}
-
 
 We leave it to the exercises to show that \(A\) has the least upper bound property if and only if it has the greatest lower bound property.
 
@@ -960,7 +960,7 @@ A second way is simply to assume a set of axioms for the real numbers and work f
 First we need a definition from set theory.
 
 \begin{definition}
-A binary operation on a set \(A\) is a function \(f\) mapping \(A \times  A\) into \(A\) .
+    A binary operation on a set \(A\) is a function \(f\) mapping \(A \times  A\) into \(A\) .
 \end{definition}
 
 When dealing with a \idx{binary operation} \(f\) on a set \(A\) , we usually use a notation different from the standard functional notation introduced in \(\$ 2\) . Instead of denoting the value of the function \(f\) at the point \(\left( {a,{a}^{\prime }}\right)\) by \(f\left( {a,{a}^{\prime }}\right)\) , we usually write the symbol for the function between the two coordinates of the point in question, writing the value of the function at \(\left( {a,{a}^{\prime }}\right)\) as \({af}{a}^{\prime }\) . Furthermore (just as was the case with relations), it is more common to use some symbol other than a letter to denote an operation. Symbols often used are the plus symbol +, the multiplication symbols \(\cdot\) and \(\circ\), and the asterisk \(*\) ; however, there are many others.
@@ -1007,8 +1007,8 @@ We assume there exists a set \(\mathbb{R}\) , called the set of real numbers, tw
 \noindent\textbf{Order Properties}
 
 \begin{enumerate}[nosep, leftmargin=*, label=(\arabic*), resume]
-\item The order relation \(<\) has the least upper bound property.
-\item If \(x < y\) , there exists an element \(z\) such that \(x < z\) and \(z < y\) .
+    \item The order relation \(<\) has the least upper bound property.
+    \item If \(x < y\) , there exists an element \(z\) such that \(x < z\) and \(z < y\) .
 \end{enumerate}
 
 From properties (1)-(5) follow the familiar ``laws of algebra.'' Given \(x\) , one denotes by \(- x\) that number \(y\) such that \(x + y = 0\) ; it is called the negative of \(x\) . One defines the subtraction operation by the formula \(z - x = z + \left( {-x}\right)\) . Similarly, given \(x \neq  0\) , one denotes by \(1/x\) that number \(y\) such that \(x \cdot  y = 1\) ; it is called the reciprocal of \(x\) . One defines the quotient \(z/x\) by the formula \(z/x = z \cdot  \left( {1/x}\right)\) . The usual laws of signs, and the rules for adding and multiplying fractions, follow as theorems. These laws of algebra are listed in Exercise 1 at the end of the section. We often denote \(xy\) simply by \(xy\).
@@ -1297,6 +1297,7 @@ Later we will define the cartesian product of an arbitrary indexed family of set
   \item \(\left\{  {\mathbf{x} \mid  {x}_{2} = {x}_{3}}\right\}\) .
   \end{enumerate}
 \end{enumerate}
+
 \section*{§ 6 \idx{Finite Set}s}
 Finite sets and \idx{infinite set}s, \idx{countable set}s and \idx{uncountable set}s, these are types of sets that you may have encountered before. Nevertheless, we shall discuss them in this section and the next, not only to make sure you understand them thoroughly, but also to elucidate some particular points of logic that will arise later on. First we consider finite sets.
 
@@ -1775,6 +1776,7 @@ Now we have proved the existence of uncountable sets. But we have not yet mentio
   \item Show that there is no function \(h : {\mathbb{Z}}_{ + } \rightarrow  \mathbb{R}\) satisfying the formula \[ \begin{aligned} h\left( 1\right)  &= 1, \\ h\left( 2\right)  &= 2, \\ h\left( n\right)  &= {\left\lbrack  h\left( n + 1\right) \right\rbrack  }^{2} + {\left\lbrack  h\left( n - 1\right) \right\rbrack  }^{2}\;\text{ for }n \geq  2. \end{aligned} \]
   \end{enumerate}
 \end{enumerate}
+
 \section*{*§ 8 The Principle of Recursive Definition}
 
 Before considering the general form of the principle of recursive definition, let us first prove it in a specific case, that of Lemma 7.2. That should make the underlying idea of the proof much clearer when we consider the general case.
@@ -2483,7 +2485,6 @@ In the following exercises, we ask you to prove the equivalence of the choice ax
   \item Conclude that \(E\) is well-ordered by \(\ll\) .
   \item Show that \(E\) is uncountable. [Hint: If \(h : E \rightarrow  {\mathbb{Z}}_{ + }\) is a bijection, then \(h\) gives rise to a well-ordering of \({\mathbb{Z}}_{ + }\) .]
   \end{enumerate}
-
 {\setlength{\parindent}{2em}
 This same argument, with \({\mathbb{Z}}_{ + }\) replaced by an arbitrary well-ordered set \(X\) , proves (without use of the choice axiom) the existence of a well-ordered set \(E\) whose cardinality is greater than that of \(X\) .
 
@@ -2491,5 +2492,4 @@ This exercise shows that one can construct an uncountable well-ordered set, and 
 
 Said differently, without the choice axiom we may be able to construct the minimal uncountable well-ordered set, but we can't use it for anything!
 }
-
 \end{enumerate}
