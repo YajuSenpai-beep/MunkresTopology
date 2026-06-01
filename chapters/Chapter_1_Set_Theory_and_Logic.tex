@@ -5,9 +5,9 @@
 
 We adopt, as most mathematicians do, the naive point of view\cite{Halmos1960} regarding set theory. We shall assume that what is meant by a set of objects is intuitively clear, and we shall proceed on that basis without analyzing the concept further. Such an analysis properly belongs to the foundations of mathematics\cite{Wilder1965} and to mathematical logic, and it is not our purpose to initiate the study of those \index{field}.
 
-Logicians have analyzed set theory in great detail, and they have formulated axioms for the subject. Each of their axioms expresses a \index{Greatest lower bound!property}\index{Greatest lower bound!property}\index{Greatest lower bound!property}property of sets that mathematicians commonly accept, and collectively the axioms provide a foundation broad enough and \index{Induction principle!strong}\index{Induction principle!strong}\index{Induction principle!strong}strong enough that the rest of mathematics can be built on them.
+Logicians have analyzed set theory in great detail, and they have formulated axioms for the subject. Each of their axioms expresses a \index{Greatest lower bound!property}\index{Greatest lower bound!property}property of sets that mathematicians commonly accept, and collectively the axioms provide a foundation broad enough and \index{Induction principle!strong}\index{Induction principle!strong}strong enough that the rest of mathematics can be built on them.
 
-It is unfortunately true that careless use of set theory, relying on intuition alone, can lead to contradictions. Indeed, one of the reasons for the axiomatization of set theory was to formulate rules for dealing with sets that would avoid these contradictions. Although we shall not deal with the axioms explicitly, the rules we follow in dealing with sets derive from them. In this book, you will learn how to deal with sets in an ``apprentice'' fashion, by observing how we handle them and by working with them yourself. At some point of your studies, you may wish to study set theory more carefully and in \index{Cardinality: comparability!greater}\index{Cardinality: comparability!greater}\index{Cardinality: comparability!greater}greater detail; then a course in logic or foundations will be in order.
+It is unfortunately true that careless use of set theory, relying on intuition alone, can lead to contradictions. Indeed, one of the reasons for the axiomatization of set theory was to formulate rules for dealing with sets that would avoid these contradictions. Although we shall not deal with the axioms explicitly, the rules we follow in dealing with sets derive from them. In this book, you will learn how to deal with sets in an ``apprentice'' fashion, by observing how we handle them and by working with them yourself. At some point of your studies, you may wish to study set theory more carefully and in \index{Cardinality: comparability!greater}\index{Cardinality: comparability!greater}greater detail; then a course in logic or foundations will be in order.
 
 \section*{§ 1 Fundamental Concepts}
 
@@ -23,7 +23,7 @@ If \(a\) does not belong to \(A\) , we express this fact by writing
 a \notin  A\text{ . }
 \]
 
-The \index{equality symbol} \(=\) is used throughout this book to mean \index{Logical equivalence} logical identity. Thus, when we write \(a = b\) , we mean that `` \(a\) `` and `` \(b\) `` are symbols for the \index{Cardinality: comparability!same}\index{Cardinality: comparability!same}\index{Cardinality: comparability!same}same object. This is what one means in arithmetic, for example, when one writes \(\displaystyle\frac{2}{4} = \frac{1}{2}\) . Similarly, the equation \(A = B\) states that `` \(A\) `` and `` \(B\) `` are symbols for the same set; that is, \(A\) and \(B\) consist of precisely the same objects.
+The \index{equality symbol} \(=\) is used throughout this book to mean \index{Logical equivalence} logical identity. Thus, when we write \(a = b\) , we mean that `` \(a\) `` and `` \(b\) `` are symbols for the \index{Cardinality: comparability!same}\index{Cardinality: comparability!same}same object. This is what one means in arithmetic, for example, when one writes \(\displaystyle\frac{2}{4} = \frac{1}{2}\) . Similarly, the equation \(A = B\) states that `` \(A\) `` and `` \(B\) `` are symbols for the same set; that is, \(A\) and \(B\) consist of precisely the same objects.
 
 If \(a\) and \(b\) are different objects, we write \(a \neq  b\) ; and if \(A\) and \(B\) are different sets, we write \(A \neq  B\) . For example, if \(A\) is the set of all nonnegative real numbers, and \(B\) is the set of all positive real numbers, then \(A \neq  B\) , because the number 0 belongs to \(A\) and not to \(B\) .
 
@@ -43,7 +43,7 @@ A = \{ a,b,c\} ,
 \]
 where braces are used to enclose the list of elements.
 
-The usual way to specify a set, however, is to take some set \(A\) of objects and some property that elements of \(A\) may or may not possess, and to form the set consisting of all elements of \(A\) having that property. For instance, one might take the set of real numbers and form the \index{Subset}\index{Subset}\index{subset@Subset}subset \(B\) consisting of all even \index{integers}. In symbols, this statement becomes
+The usual way to specify a set, however, is to take some set \(A\) of objects and some property that elements of \(A\) may or may not possess, and to form the set consisting of all elements of \(A\) having that property. For instance, one might take the set of real numbers and form the \index{Subset}\index{Subset}subset \(B\) consisting of all even \index{integers}. In symbols, this statement becomes
 \[
 B = \{ x \mid  x\text{ is an even integer }\} .
 \]
@@ -71,7 +71,7 @@ In mathematics, one cannot tolerate such ambiguity. One has to pick just one mea
 With this understanding, the equation defining \(A \cup  B\) is unambiguous; it states that \(A \cup  B\) is the set consisting of all elements \(x\) that belong to \(A\) or to \(B\) or to both.
 
 \section*{The Intersection of Sets, the Empty Set, and the Meaning of ``If ... Then''}
-Given sets \(A\) and \(B\) , another way one can form a set is to take the common part of \(A\) and \(B\) . This set is called the \index{Intersection}\index{Intersection}\index{intersection@Intersection}intersection\index{Section: of the positive integers} of \(A\) and \(B\) and is denoted by \(A \cap  B\) . Formally, we define
+Given sets \(A\) and \(B\) , another way one can form a set is to take the common part of \(A\) and \(B\) . This set is called the \index{Intersection}\index{Intersection}intersection\index{Section: of the positive integers} of \(A\) and \(B\) and is denoted by \(A \cap  B\) . Formally, we define
 \[
 A \cap  B = \{ x \mid  x \in  A\text{ and }x \in  B\} .
 \]
@@ -85,7 +85,7 @@ A \cap  B = \varnothing \text{ . }
 \]
 We also express this fact by saying that \(A\) and \(B\) are disjoint.
 
-Now some students are bothered by the notion of an ``\index{Empty set}\index{Empty set}\index{empty set@Empty set}empty set.'' ``How,'' they say, ``can you have a set with nothing in it?'' The problem is similar to that which arose many years ago when the number 0 was first introduced.
+Now some students are bothered by the notion of an ``\index{Empty set}\index{Empty set}empty set.'' ``How,'' they say, ``can you have a set with nothing in it?'' The problem is similar to that which arose many years ago when the number 0 was first introduced.
 
 The empty set is only a convention, and mathematics could very well get along without it. But it is a very convenient convention, for it saves us a good deal of awkwardness in stating theorems and in proving them. Without this convention, for instance, one would have to prove that the two sets \(A\) and \(B\) do have elements in common before one could use the notation \(A \cap  B\) . Similarly, the notation
 \[
@@ -93,12 +93,12 @@ C = \{ x \mid  x \in  A\text{ and }x\text{ has a certain property }\}
 \]
 could not be used if it happened that no element \(x\) of \(A\) had the given property. It is much more convenient to agree that \(A \cap  B\) and \(C\) equal the empty set in such cases.
 
-Since the empty set \(\varnothing\) is merely a convention, we must make conventions relating it to the concepts already introduced. Because \(\varnothing\) is thought of as ``the set with no elements,'' it is clear we should make the convention that for each object \(x\) , the \index{Relation}\index{Relation}\index{relation@Relation}relation \(x \in  \varnothing\) does not hold. Similarly, the definitions of \index{Union}\index{Union}\index{union@Union}union and intersection show that for every set \(A\) we should have the equations
+Since the empty set \(\varnothing\) is merely a convention, we must make conventions relating it to the concepts already introduced. Because \(\varnothing\) is thought of as ``the set with no elements,'' it is clear we should make the convention that for each object \(x\) , the \index{Relation}\index{Relation}relation \(x \in  \varnothing\) does not hold. Similarly, the definitions of \index{Union}\index{Union}union and intersection show that for every set \(A\) we should have the equations
 \[
 A \cup  \varnothing  = A\;\text{ and }\;A \cap  \varnothing  = \varnothing .
 \]
 
-The \index{Inclusion}\index{Inclusion}\index{inclusion@Inclusion}inclusion relation is a bit more tricky. Given a set \(A\) , should we agree that \(\varnothing  \subset  A\) ? Once more, we must be careful about the way mathematicians use the English language. The expression \(\varnothing  \subset  A\) is a shorthand way of writing the sentence, ``Every element that belongs to the empty set also belongs to the set \(A\) .'' Or to put it more formally, ``For every object \(x\) , if \(x\) belongs to the empty set, then \(x\) also belongs to the set \(A\) .''
+The \index{Inclusion}\index{Inclusion}inclusion relation is a bit more tricky. Given a set \(A\) , should we agree that \(\varnothing  \subset  A\) ? Once more, we must be careful about the way mathematicians use the English language. The expression \(\varnothing  \subset  A\) is a shorthand way of writing the sentence, ``Every element that belongs to the empty set also belongs to the set \(A\) .'' Or to put it more formally, ``For every object \(x\) , if \(x\) belongs to the empty set, then \(x\) also belongs to the set \(A\) .''
 
 Is this statement true or not? Some might say ``yes'' and others say ``no.'' You will never settle the question by argument, only by agreement. This is a statement of the form ``If \(P\) , then \(Q\) ,'' and in everyday English the meaning of the ``if ... then'' construction is ambiguous. It always means that if \(P\) is true, then \(Q\) is true also. Sometimes that is all it means; other times it means something more: that if \(P\) is false, \(Q\) must be false. Usually one decides from the context which interpretation is correct.
 
@@ -117,7 +117,7 @@ As an example, consider the following statement about real numbers:
 \[
 \text{ If }x > 0\text{ , then }{x}^{3} \neq  0\text{ . }
 \]
-It is a statement of the form, ``If \(P\) , then \(Q\) ,'' where \(P\) is the phrase `` \(x > 0\) '' (called the \index{hypothesis} of the statement) and \(Q\) is the phrase `` \({x}^{3} \neq  0\) '' (called the \index{conclusion} of the statement). This is a true statement, for in every case for which the \index{Hypothesis}\index{Hypothesis}\index{hypothesis@Hypothesis}hypothesis \(x > 0\) holds, the \index{Conclusion}\index{Conclusion}\index{conclusion@Conclusion}conclusion \({x}^{3} \neq  0\) holds as well.
+It is a statement of the form, ``If \(P\) , then \(Q\) ,'' where \(P\) is the phrase `` \(x > 0\) '' (called the \index{hypothesis} of the statement) and \(Q\) is the phrase `` \({x}^{3} \neq  0\) '' (called the \index{conclusion} of the statement). This is a true statement, for in every case for which the \index{Hypothesis}\index{Hypothesis}hypothesis \(x > 0\) holds, the \index{Conclusion}\index{Conclusion}conclusion \({x}^{3} \neq  0\) holds as well.
 
 Another true statement about real numbers is the following:
 \[
@@ -125,12 +125,12 @@ Another true statement about real numbers is the following:
 \]
 in every case for which the hypothesis holds, the conclusion holds as well. Of course, it happens in this example that there are no cases for which the hypothesis holds. A statement of this sort is sometimes said to be \index{vacuously true}.
 
-To return now to the empty set and inclusion, we see that the inclusion \(\varnothing  \subset  A\) does hold for every set \(A\) . Writing \(\varnothing  \subset  A\) is the same as saying, ``If \(x \in  \varnothing\) , then \(x \in  A\) ,'' and this statement is \index{Vacuously true}\index{Vacuously true}\index{vacuously true@Vacuously true}vacuously true.
+To return now to the empty set and inclusion, we see that the inclusion \(\varnothing  \subset  A\) does hold for every set \(A\) . Writing \(\varnothing  \subset  A\) is the same as saying, ``If \(x \in  \varnothing\) , then \(x \in  A\) ,'' and this statement is \index{Vacuously true}\index{Vacuously true}vacuously true.
 
 \section*{Contrapositive and Converse}
 Our discussion of the ``if ... then'' construction leads us to consider another point of elementary logic that sometimes causes difficulty. It concerns the relation between a statement, its \index{contrapositive}, and its \index{converse}.
 
-Given a statement of the form ``If \(P\) , then \(Q\) ,'' its \index{Contrapositive}\index{Contrapositive}\index{contrapositive@Contrapositive}contrapositive is defined to be the statement ``If \(Q\) is not true, then \(P\) is not true.'' For example, the contrapositive of the statement
+Given a statement of the form ``If \(P\) , then \(Q\) ,'' its \index{Contrapositive}\index{Contrapositive}contrapositive is defined to be the statement ``If \(Q\) is not true, then \(P\) is not true.'' For example, the contrapositive of the statement
 \[
 \text{ If }x > 0\text{ , then }{x}^{3} \neq  0\text{ . }
 \]
@@ -166,7 +166,7 @@ There is another statement that can be formed from the statement \(P \Rightarrow
 \[
 Q \Rightarrow  P
 \]
-which is called the \index{Converse}\index{Converse}\index{converse@Converse}converse of \(P \Rightarrow  Q\) . One must be careful to distinguish between a statement's converse and its contrapositive. Whereas a statement and its contrapositive are logically equivalent, the truth of a statement says nothing at all about the truth or falsity of its converse. For example, the true statement
+which is called the \index{Converse}\index{Converse}converse of \(P \Rightarrow  Q\) . One must be careful to distinguish between a statement's converse and its contrapositive. Whereas a statement and its contrapositive are logically equivalent, the truth of a statement says nothing at all about the truth or falsity of its converse. For example, the true statement
 \[
 \text{ If }x > 0\text{ , then }{x}^{3} \neq  0\text{ , }
 \]
@@ -192,11 +192,11 @@ which is read `` \(P\) holds if and only if \(Q\) holds.''
 \section*{Negation}
 If one wishes to form the contrapositive of the statement \(P \Rightarrow  Q\) , one has to know how to form the statement ``not \(P\) ,'' which is called the \index{negation} of \(P\) . In many cases, this causes no difficulty; but sometimes confusion occurs with statements involving the phrases ``for every'' and ``for at least one.'' These phrases are called logical \index{Quantifiers, logical} quantifiers.
 
-To illustrate, suppose that \(X\) is a set, \(A\) is a subset of \(X\) , and \(P\) is a statement about the \index{Principle of recursive definition!general}\index{Principle of recursive definition!general}\index{Principle of recursive definition!general}general element of \(X\) . Consider the following statement:
+To illustrate, suppose that \(X\) is a set, \(A\) is a subset of \(X\) , and \(P\) is a statement about the \index{Principle of recursive definition!general}\index{Principle of recursive definition!general}general element of \(X\) . Consider the following statement:
 \[
 ( *) \hspace{1em} \text{ For every }x \in  A\text{ , statement }P\text{ holds. }
 \]
-How does one form the \index{Negation}\index{Negation}\index{negation@Negation}negation of this statement? Let us translate the problem into the language of sets. Suppose that we let \(B\) denote the set of all those elements \(x\) of \(X\) for which \(P\) holds. Then statement \(( *)\) is just the statement that \(A\) is a subset of \(B\) . What is its negation? Obviously, the statement that \(A\) is not a subset of \(B\) ; that is, the statement that there exists at least one element of \(A\) that does not belong to \(B\) . Translating back into ordinary language, this becomes
+How does one form the \index{Negation}\index{Negation}negation of this statement? Let us translate the problem into the language of sets. Suppose that we let \(B\) denote the set of all those elements \(x\) of \(X\) for which \(P\) holds. Then statement \(( *)\) is just the statement that \(A\) is a subset of \(B\) . What is its negation? Obviously, the statement that \(A\) is not a subset of \(B\) ; that is, the statement that there exists at least one element of \(A\) that does not belong to \(B\) . Translating back into ordinary language, this becomes
 \[
 \text{For at least one } x \in  A \text{, statement } P \text{ does not hold.}
 \]
@@ -216,7 +216,7 @@ We return now to our discussion of sets. There is one other \index{Operation, bi
 \[
 A - B = \{ x \mid  x \in  A\text{ and }x \notin  B\} .
 \]
-It is sometimes called the \index{complement} of \(B\) relative to \(A\) , or the \index{Complement}\index{Complement}\index{complement@Complement}complement of \(B\) in \(A\) . Our three set operations are represented schematically in Figure 1.1.
+It is sometimes called the \index{complement} of \(B\) relative to \(A\) , or the \index{Complement}\index{Complement}complement of \(B\) in \(A\) . Our three set operations are represented schematically in Figure 1.1.
 
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/1.1.jpg}
@@ -259,7 +259,7 @@ A - ( {B \cup  C})  &= ( {A - B})  \cap  ( {A - C}) ,\\
 A - ( {B \cap  C})  &= ( {A - B})  \cup  ( {A - C}) .
 \end{aligned}
 \]
-We leave it to you to check these rules. One can state other rules of set theory, but these are the most important ones. \index{DeMorgan's laws}\index{DeMorgan's laws}\index{demorgan's laws@DeMorgan's laws}DeMorgan's laws are easier to remember if you verbalize them as follows:
+We leave it to you to check these rules. One can state other rules of set theory, but these are the most important ones. \index{DeMorgan's laws}\index{DeMorgan's laws}DeMorgan's laws are easier to remember if you verbalize them as follows:
 
 \begin{centeredblock}
 The complement of the union equals the intersection of the complements.
@@ -268,11 +268,11 @@ The complement of the intersection equals the union of the complements.
 
 \section*{Collections of Sets}
 
-The objects belonging to a set may be of any sort. One can consider the set of all even \index{Integers}\index{Integers}\index{integers@Integers}integers, and the set of all blue-eyed people in Nebraska, and the set of all decks of playing cards in the world. Some of these are of limited mathematical interest, we admit! But the third example illustrates a point we have not yet mentioned: namely, that the objects belonging to a set may themselves be sets. For a deck of cards is itself a set, one consisting of pieces of pasteboard with certain standard designs printed on them. The set of all decks of cards in the world is thus a set whose elements are themselves sets (of pieces of pasteboard).
+The objects belonging to a set may be of any sort. One can consider the set of all even \index{Integers}\index{Integers}integers, and the set of all blue-eyed people in Nebraska, and the set of all decks of playing cards in the world. Some of these are of limited mathematical interest, we admit! But the third example illustrates a point we have not yet mentioned: namely, that the objects belonging to a set may themselves be sets. For a deck of cards is itself a set, one consisting of pieces of pasteboard with certain standard designs printed on them. The set of all decks of cards in the world is thus a set whose elements are themselves sets (of pieces of pasteboard).
 
 We now have another way to form new sets from old ones. Given a set \(A\) , we can consider sets whose elements are subsets of \(A\) . In particular, we can consider the set of all subsets of \(A\) . This set is sometimes denoted by the symbol \(\index{P@\(\mathcal{P}( A)\)}\) and is called the \index{power set} of \(A\) (for reasons to be explained later).
 
-When we have a set whose elements are sets, we shall often refer to it as a \index{collection} of sets and denote it by a script letter such as \(\mathcal{A}\) or \(\mathcal{B}\) . This device will help us in keeping things straight in arguments where we have to consider objects, and sets of objects, and \index{Collection}\index{Collection}\index{collection@Collection}collections of sets of objects, all at the same time. For example, we might use \(\mathcal{A}\) to denote the collection of all decks of cards in the world, letting an ordinary capital letter \(A\) denote a deck of cards and a lowercase letter \(a\) denote a single playing card.
+When we have a set whose elements are sets, we shall often refer to it as a \index{collection} of sets and denote it by a script letter such as \(\mathcal{A}\) or \(\mathcal{B}\) . This device will help us in keeping things straight in arguments where we have to consider objects, and sets of objects, and \index{Collection}\index{Collection}collections of sets of objects, all at the same time. For example, we might use \(\mathcal{A}\) to denote the collection of all decks of cards in the world, letting an ordinary capital letter \(A\) denote a deck of cards and a lowercase letter \(a\) denote a single playing card.
 
 A certain amount of care with notation is needed at this point. We make a distinction between the object \(a\) , which is an \index{element of a set} \(A\) , and the one-element set \(\{ a\}\) , which is a subset of \(A\) . To illustrate, if \(A\) is the set \(\{ a,b,c\}\) , then the statements
 \[
@@ -307,7 +307,7 @@ when \(\mathcal{A}\) is empty. Not all mathematicians follow this convention, ho
 \end{centeredblock}
 
 \section*{Cartesian Products}
-There is yet another way of forming new sets from old ones; it involves the notion of an ``\index{ordered pair}'' of objects. When you studied analytic geometry, the first thing you did was to convince yourself that after one has chosen an \(x\) -axis and a \(y\) -axis in the plane, every point in the plane can be made to correspond to a unique \index{Ordered pair}\index{Ordered pair}\index{ordered pair@Ordered pair}ordered pair(x, y)of real numbers. (In a more sophisticated treatment of geometry, the plane is more likely to be defined as the set of all ordered pairs of real numbers!)
+There is yet another way of forming new sets from old ones; it involves the notion of an ``\index{ordered pair}'' of objects. When you studied analytic geometry, the first thing you did was to convince yourself that after one has chosen an \(x\) -axis and a \(y\) -axis in the plane, every point in the plane can be made to correspond to a unique \index{Ordered pair}\index{Ordered pair}ordered pair(x, y)of real numbers. (In a more sophisticated treatment of geometry, the plane is more likely to be defined as the set of all ordered pairs of real numbers!)
 
 The notion of ordered pair carries over to general sets. Given sets \(A\) and \(B\) , we define their \index{Cartesian product: countably infinite} cartesian product \(A \times  B\) to be the set of all ordered pairs(a, b)for which \(a\) is an element of \(A\) and \(b\) is an element of \(B\) . Formally,
 
@@ -322,7 +322,7 @@ This definition assumes that the concept of ``ordered pair'' is already given. I
 ( {a,b})  = \{ \{ a\} ,\{ a,b\} \} ;
 \]
 
-it defines the ordered pair(a, b)as a collection of sets. If \(a \neq  b\) , this definition says that (a, b)is a collection containing two sets, one of which is a one-element set and the other a two-element set. The \index{first coordinate} of the ordered pair is defined to be the element belonging to both sets, and the second coordinate is the element belonging to only one of the sets. If \(a = b\) , then(a, b)is a collection containing only one set \(\{ a\}\) , since \(\{ a,b\}  =\)  \(\{ a,a\}  = \{ a\}\) in this case. Its \index{First coordinate}\index{First coordinate}\index{first coordinate@First coordinate}first coordinate and second coordinate both equal the element in this single set.
+it defines the ordered pair(a, b)as a collection of sets. If \(a \neq  b\) , this definition says that (a, b)is a collection containing two sets, one of which is a one-element set and the other a two-element set. The \index{first coordinate} of the ordered pair is defined to be the element belonging to both sets, and the second coordinate is the element belonging to only one of the sets. If \(a = b\) , then(a, b)is a collection containing only one set \(\{ a\}\) , since \(\{ a,b\}  =\)  \(\{ a,a\}  = \{ a\}\) in this case. Its \index{First coordinate}\index{First coordinate}first coordinate and second coordinate both equal the element in this single set.
 
 I think it is fair to say that most mathematicians think of an ordered pair as a primitive concept rather than thinking of it as a collection of sets!
 \end{centeredblock}
@@ -391,7 +391,7 @@ instead.
   \end{aligned}
   \]
 
-\item If a set \(A\) has two elements, show that \(\mathcal{P}( A)\) has four elements. How many elements does \(\mathcal{P}( A)\) have if \(A\) has one element? Three elements? No elements? Why is \(\mathcal{P}( A)\) called the \index{Power set}\index{Power set}\index{power set@Power set}power set of \(A\) ?
+\item If a set \(A\) has two elements, show that \(\mathcal{P}( A)\) has four elements. How many elements does \(\mathcal{P}( A)\) have if \(A\) has one element? Three elements? No elements? Why is \(\mathcal{P}( A)\) called the \index{Power set}\index{Power set}power set of \(A\) ?
 
 \item Formulate and prove DeMorgan's laws for arbitrary unions and intersections.
 
@@ -406,9 +406,9 @@ instead.
 \end{enumerate}
 
 \section*{§ 2 Functions}
-The concept of \index{Function}\index{Function}\index{function@Function}function is one you have seen many times already, so it is hardly necessary to remind you how central it is to all mathematics. In this section, we give the precise mathematical definition, and we explore some of the associated concepts.
+The concept of \index{Function}\index{Function}function is one you have seen many times already, so it is hardly necessary to remind you how central it is to all mathematics. In this section, we give the precise mathematical definition, and we explore some of the associated concepts.
 
-A function is usually thought of as a rule that assigns to each \index{Element of a set}\index{Element of a set}\index{element of a set@Element of a set}element of a set \(A\) , an element of a set \(B\) . In calculus, a function is often given by a simple formula such as \(f( x)  = 3{x}^{2} + 2\) or perhaps by a more complicated formula such as
+A function is usually thought of as a rule that assigns to each \index{Element of a set}\index{Element of a set}element of a set \(A\) , an element of a set \(B\) . In calculus, a function is often given by a simple formula such as \(f( x)  = 3{x}^{2} + 2\) or perhaps by a more complicated formula such as
 
 \[
 f( x)  = \mathop{\sum }\limits_{{k = 1}}^{\infty }{x}^{k}
@@ -421,7 +421,7 @@ As one goes further in mathematics, however, one needs to be more precise about 
 \begin{definition} 
     A \index{rule of assignment} is a subset \(r\) of the cartesian product \(\mathbf{C} \times  \mathbf{D}\) of two sets, having the property that each element of \(C\) appears as the first coordinate of at most one ordered pair belonging to \(r\) .
 
-    Thus, a subset \(r\) of \(C \times  D\) is a \index{Rule of assignment}\index{Rule of assignment}\index{rule of assignment@Rule of assignment}rule of assignment if
+    Thus, a subset \(r\) of \(C \times  D\) is a \index{Rule of assignment}\index{Rule of assignment}rule of assignment if
     \[
     [  {( {c,d})  \in  r\text{ and }( {c,{d}^{\prime }})  \in  r}] \Rightarrow  [  {d = {d}^{\prime }}]  .
     \]
@@ -435,13 +435,13 @@ As one goes further in mathematics, however, one needs to be more precise about 
     \text{ image }r &= \{ d \mid  \text{ there exists }c \in  C\text{ such that }( {c,d})  \in  r\} \text{ . }
     \end{aligned}
     \]
-    Note that given a rule of assignment \(r\) , its \index{Domain}\index{Domain}\index{domain@Domain}domain and \index{Image}\index{Image}\index{image@Image}image are entirely determined.
+    Note that given a rule of assignment \(r\) , its \index{Domain}\index{Domain}domain and \index{Image}\index{Image}image are entirely determined.
 \end{definition}
 
 Now we can say what a function is.
 
 \begin{definition}
-    A function \(f\) is a rule of assignment \(r\) , together with a set \(B\) that \index{Contains}\index{Contains}\index{contains@Contains}contains the image set of \(r\) . The domain \(A\) of the rule \(r\) is also called the domain of the function \(f\) ; the image set of \(r\) is also called the image set of \(f\) ; and the set \(B\) is called the \index{Range of a function} range of \(f{.}^{\dagger}\) .
+    A function \(f\) is a rule of assignment \(r\) , together with a set \(B\) that \index{Contains}\index{Contains}contains the image set of \(r\) . The domain \(A\) of the rule \(r\) is also called the domain of the function \(f\) ; the image set of \(r\) is also called the image set of \(f\) ; and the set \(B\) is called the \index{Range of a function} range of \(f{.}^{\dagger}\) .
 \end{definition}
 
 If \(f\) is a function having domain \(A\) and range \(B\) , we express this fact by writing
@@ -2459,7 +2459,7 @@ In the following exercises, we ask you to prove the equivalence of the choice ax
     \item \(h( \alpha )  =\) smallest \([  {E - h( {S}_{\alpha }) }]\) for all \(\alpha\) .
     \end{enumerate}
   [Hint: Show that each of these conditions implies that \(h( {S}_{\alpha })\) is a section of \(E\) , conclude that it must be the section by \(h( \alpha )\) .]
-  \item If \(E\) is a \index{well-ordered set@Well-ordered set}well-ordered set, show that no section of \(E\) has the \index{Order type}order type of \(E\) , nor do two different sections of \(E\) have the same order type. [Hint: Given \(J\) , there is at most one order-preserving map of \(J\) into \(E\) whose image is \(E\) or a section of \(E\) .]
+  \item If \(E\) is a well-ordered set, show that no section of \(E\) has the \index{Order type}order type of \(E\) , nor do two different sections of \(E\) have the same order type. [Hint: Given \(J\) , there is at most one order-preserving map of \(J\) into \(E\) whose image is \(E\) or a section of \(E\) .]
   \end{enumerate}
 \item Let \(J\) and \(E\) be well-ordered sets; suppose there is an order-preserving map \(k : J \rightarrow  E\) . Using Exercises 1 and 2, show that \(J\) has the order type of \(E\) or a section of \(E\) . [Hint: Choose \({e}_{0} \in  E\) . Define \(h : J \rightarrow  E\) by the recursion formula
       \[ h( \alpha )  = \text{ smallest }[  {E - h( {S}_{\alpha }) }]  \;\text{ if }\;h( {S}_{\alpha })  \neq  E, \]
@@ -2481,7 +2481,7 @@ In the following exercises, we ask you to prove the equivalence of the choice ax
   \item If \(( {T, < })\) is a tower in \(X\) and \(T \neq  X\) , show there is a tower in \(X\) of which \(( {T, < })\) is a section.
   \item Let \(\{  {( {{T}_{k},{ < }_{k}})  \mid  k \in  K}\}\) be the collection of all towers in \(X\) . Let \[ T = \mathop{\bigcup }\limits_{{k \in  K}}{T}_{k}\;\text{ and }\; <  = \mathop{\bigcup }\limits_{{k \in  K}}( { < }_{k}) . \] Show that \(( {T, < })\) is a tower in \(X\) . Conclude that \(T = X\) .
   \end{enumerate}
-\item Using Exercises 1-4, construct an uncountable well-ordered set, as follows. Let \(A\) be the collection of all pairs \(( {A, < })\) , where \(A\) is a subset of \({\mathbb{Z}}_{ + }\) and \(<\) is a well-ordering of \(A\) . (We allow \(A\) to be empty.) Define \(( {A, < })  \sim  ( {{A}^{\prime },{ < }^{\prime }})\) if \(( {A, < })\) and \(( {{A}^{\prime },{ < }^{\prime }})\) have the same \index{Order type}order type. It is trivial to show this is an \index{Equivalence relation}equivalence relation. Let \([  ( {A, < }) ]\) denote the \index{Equivalence class}equivalence class of \(( {A, < })\) ; let \(E\) denote the collection of these \index{Equivalence class}equivalence classes. Define \[ [  ( {A, < }) ] \ll  [  ( {{A}^{\prime },{ < }^{\prime }}) ] \] if \(( {A, < })\) has the \index{order type@Order type}order type of a section of \(( {{A}^{\prime },{ < }^{\prime }})\) .
+\item Using Exercises 1-4, construct an uncountable well-ordered set, as follows. Let \(A\) be the collection of all pairs \(( {A, < })\) , where \(A\) is a subset of \({\mathbb{Z}}_{ + }\) and \(<\) is a well-ordering of \(A\) . (We allow \(A\) to be empty.) Define \(( {A, < })  \sim  ( {{A}^{\prime },{ < }^{\prime }})\) if \(( {A, < })\) and \(( {{A}^{\prime },{ < }^{\prime }})\) have the same \index{Order type}order type. It is trivial to show this is an \index{Equivalence relation}equivalence relation. Let \([  ( {A, < }) ]\) denote the \index{Equivalence class}equivalence class of \(( {A, < })\) ; let \(E\) denote the collection of these \index{Equivalence class}equivalence classes. Define \[ [  ( {A, < }) ] \ll  [  ( {{A}^{\prime },{ < }^{\prime }}) ] \] if \(( {A, < })\) has the order type of a section of \(( {{A}^{\prime },{ < }^{\prime }})\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that the relation \(\ll\) is well defined and is a simple order on \(E\) . Note that the equivalence class \([  ( {\varnothing ,\varnothing }) ]\) is the smallest element of \(E\) .
   \item Show that if \(\alpha  = [  ( {A, < }) ]\) is an element of \(E\) , then \(( {A, < })\) has the same order type as the section \({S}_{\alpha }( E)\) of \(E\) by \(\alpha\) . [Hint: Define a map \(f : A \rightarrow  E\) by setting \(f( x)  = [  ( {{S}_{x}( A) \text{ , restriction of } < }) ]\) for each \(x \in  A\) .]
