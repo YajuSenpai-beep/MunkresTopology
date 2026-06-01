@@ -204,31 +204,73 @@ def is_inside_command_arg(content: str, pos: int) -> bool:
 # ── 已有 \\index{} 命令 ──────────────────────────────────
 
 def is_inside_index(content: str, pos: int) -> bool:
-    """检查 pos 是否在已有 \\index{...} 命令内部。"""
+    """检查 pos 是否在已有索引命令内部。
+
+    覆盖: \\index{...}, \\idx[display]{key}, \\idx{key},
+          \\idxmath{sort}{display}, \\idxsub{parent}{child}
+    """
     before = content[:pos]
-    # 查找 pos 之前最近的 \index{ 未闭合
-    idx = before.rfind("\\index{")
-    if idx < 0:
+    cmd_starts = []
+    for cmd in ("\\index", "\\idxmath", "\\idxsub", "\\idx"):
+        p = before.rfind(cmd)
+        if p >= 0:
+            cmd_starts.append((p, cmd))
+    if not cmd_starts:
         return False
-    # 从 \index{ 之后计数括号
-    depth = 0
-    for ch in content[idx + 7:pos]:
-        if ch == "{":
-            depth += 1
-        elif ch == "}":
+    cmd_start, cmd = max(cmd_starts, key=lambda x: x[0])
+    after = content[cmd_start:]
+    if cmd == "\\index":
+        i = 6
+    elif cmd in ("\\idxmath", "\\idxsub"):
+        i = len(cmd)
+        groups = 2
+    elif cmd == "\\idx":
+        if cmd_start + 5 <= len(content) and content[cmd_start + 4] == "[":
+            i = 4
+            depth = 1
+            for j in range(i + 1, len(after)):
+                if after[j] == "[":
+                    depth += 1
+                elif after[j] == "]":
+                    depth -= 1
+                    if depth == 0:
+                        if i <= pos - cmd_start <= j:
+                            return True
+                        i = j + 1
+                        break
+            if depth != 0:
+                return False
+            if i >= len(after) or after[i] != "{":
+                return False
+        else:
+            i = 4
+    else:
+        return False
+    if cmd in ("\\idxmath", "\\idxsub"):
+        groups_to_check = 2
+    else:
+        groups_to_check = 1
+    for _ in range(groups_to_check):
+        if i >= len(after) or after[i] != "{":
+            if groups_to_check > 1:
+                break
+            return False
+        start_i = i
+        depth = 0
+        while i < len(after):
+            ch = after[i]
+            if ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
             if depth == 0:
-                return False  # 已闭合
-            depth -= 1
-    # 如果还在 {} 内（depth>=0），就在 \index{} 内部
-    # 只要没遇到闭合的 }，就在内部
-    after = content[pos:]
-    for ch in after:
-        if ch == "{":
-            depth += 1
-        elif ch == "}":
-            if depth == 0:
-                return True  # 确认在 \index{} 内
-            depth -= 1
+                if start_i <= pos - cmd_start <= i:
+                    return True
+                i += 1
+                break
+            i += 1
+        if depth != 0:
+            return False
     return False
 
 
