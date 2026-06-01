@@ -3,11 +3,11 @@
 \chaptermark{Complete Metric Spaces}
 
 
-The concept of \index{\({\mathbb{R}}^{J}\) in uniform topology!completeness}\index{\({\mathbb{R}}^{J}\) in uniform topology!completeness}\index{\({\mathbb{R}}^{J}\) in uniform topology!completeness}completeness for a metric space is one you may have seen already. It is basic for all aspects of analysis. Although completeness is a metric property rather than a \\index{Isometric imbedding!in complete metric space}index{Topological completeness (see also Complete metric space)} topological one, there are a number of \index{Smirnov metrization theorem} theorems involving \index{complete metric space} that are topological in character. In this chapter, we shall study the most important examples of \index{Complete metric space}\index{Complete metric space}complete metric spaces and shall prove some of these theorems.
+The concept of \index{\({\mathbb{R}}^{J}\) in uniform topology!completeness}\index{\({\mathbb{R}}^{J}\) in uniform topology!completeness}\index{\({\mathbb{R}}^{J}\) in uniform topology!completeness}completeness for a metric space is one you may have seen already. It is basic for all aspects of analysis. Although completeness is a metric property rather than a \\index{Isometric imbedding!in complete metric space}index{Topological completeness (see also Complete metric space)} topological one, there are a number of \index{smirnov metrization theorem@Smirnov metrization theorem} theorems involving \index{Complete metric space} that are topological in character. In this chapter, we shall study the most important examples of \index{complete metric space@Complete metric space}\index{complete metric space@Complete metric space}complete metric spaces and shall prove some of these theorems.
 
-The most familiar example of a complete metric space is euclidean space in either of its usual metrics. Another example, just as important, is the set \(\mathcal{C}( {X,Y})\) of all continuous functions mapping a space \(X\) into a metric space \(Y\) This set has a metric called the uniform metric, analogous to the uniform metric defined for \({\mathbb{R}}^{J}\) in \(§{20}\) . If \(Y\) is a complete metric space, then \(\mathcal{C}( {X,Y})\) is complete in the uniform metric. This we demonstrate in §43. As an application, we construct in §44 the well-known \index{Peano curve} \index{Peano space}\index{Peano space}\index{peano curve@Peano curve}Peano space-filling curve
+The most familiar example of a complete metric space is euclidean space in either of its usual metrics. Another example, just as important, is the set \(\mathcal{C}( {X,Y})\) of all continuous functions mapping a space \(X\) into a metric space \(Y\) This set has a metric called the uniform metric, analogous to the uniform metric defined for \({\mathbb{R}}^{J}\) in \(§{20}\) . If \(Y\) is a complete metric space, then \(\mathcal{C}( {X,Y})\) is complete in the uniform metric. This we demonstrate in §43. As an application, we construct in §44 the well-known \index{peano curve@Peano curve} \index{peano space@Peano space}\index{peano space@Peano space}\index{peano curve@Peano curve}Peano space-filling curve
 
-One theorem of topological character concerning complete metric spaces is a theorem relating compactness of a space to completeness. We prove it in §45 An immediate corollary is a theorem concerning compact subspaces \index{Completeness: and Baire condition!of \({\mathbb{R}}^{n}\)}of the function space \(\mathcal{C}( {X,{\mathbb{R}}^{n}})\) ; it is the classical version of a famous theorem called \index{Ascoli's theorem}\index{Ascoli's theorem}\index{ascoli's theorem@Ascoli's theorem}Ascoli's theorem
+One theorem of topological character concerning complete metric spaces is a theorem relating compactness of a space to completeness. We prove it in §45 An immediate corollary is a theorem concerning compact subspaces \index{Completeness: and Baire condition!of \({\mathbb{R}}^{n}\)}of the function space \(\mathcal{C}( {X,{\mathbb{R}}^{n}})\) ; it is the classical version of a famous theorem called \index{ascoli's theorem@Ascoli's theorem}\index{ascoli's theorem@Ascoli's theorem}\index{ascoli's theorem@Ascoli's theorem}Ascoli's theorem
 
 There are other useful topologies on the function space \(\mathcal{C}( {X,Y})\) besides the one derived from the uniform metric. We study some of them in \(\$ {46}\) , leading to a proof of a general version of Ascoli's theorem in §47.
 
@@ -16,13 +16,13 @@ There are other useful topologies on the function space \(\mathcal{C}( {X,Y})\) 
 In this section we define the notion of completeness and show that if \(Y\) is a complete metric space, then the function space \(\mathcal{C}( {X,Y})\) is complete in the uniform metric. We also show that every metric space can be imbedded isometrically in a complete metric space.
 
 \begin{definition}
-	Let(X, d)be a metric space A sequence \(( {x}_{n})\) of points of \(X\) is said to be a \index{Cauchy sequence} in(X, d)if it has the property that given \(\epsilon  > 0\) , there is an integer \(N\) such that
+	Let(X, d)be a metric space A sequence \(( {x}_{n})\) of points of \(X\) is said to be a \index{cauchy sequence@Cauchy sequence} in(X, d)if it has the property that given \(\epsilon  > 0\) , there is an integer \(N\) such that
 
 \[
 d( {{x}_{n},{x}_{m}})  < \epsilon \;\text{ whenever }n,m \geq  N
 \]
 
-The metric space(X, d)is said to be complete if every \index{Cauchy sequence}\index{Cauchy sequence}\index{cauchy sequence@Cauchy sequence}Cauchy sequence in \(X\) converges.
+The metric space(X, d)is said to be complete if every \index{cauchy sequence@Cauchy sequence}\index{cauchy sequence@Cauchy sequence}\index{cauchy sequence@Cauchy sequence}Cauchy sequence in \(X\) converges.
 \end{definition}
 
 Any convergent sequence in \(X\) is necessarily a Cauchy sequence, of course; completeness requires that the converse hold
@@ -186,10 +186,10 @@ This inequality holds for all \(\alpha\) in \(J\) , provided merely that \(n \ge
 
 for \(n \geq  N\) , as desired.
 
-Now let us specialize somewhat, and consider the set \({Y}^{X}\) where \(X\) is a topological space rather than merely a set. Of course, this has no effect on what has gone before; the topology of \(X\) is irrelevant when considering the set of all functions \(f : X \rightarrow  Y\) . But suppose that we consider the subset \(\mathcal{C}( {X,Y})\) of \({Y}^{X}\) consisting of all continuous functions \(f : X \rightarrow  Y\) . It turns out that if \(Y\) is complete, this subset is also complete in the uniform metric. The same holds for the set \(\mathcal{B}( {X,Y})\) of all \index{bounded function} \(f : X \rightarrow  Y\) . (A function \(f\) is said to be bounded if its image \(f( X)\) is a bounded subset of the metric space(Y, d).)
+Now let us specialize somewhat, and consider the set \({Y}^{X}\) where \(X\) is a topological space rather than merely a set. Of course, this has no effect on what has gone before; the topology of \(X\) is irrelevant when considering the set of all functions \(f : X \rightarrow  Y\) . But suppose that we consider the subset \(\mathcal{C}( {X,Y})\) of \({Y}^{X}\) consisting of all continuous functions \(f : X \rightarrow  Y\) . It turns out that if \(Y\) is complete, this subset is also complete in the uniform metric. The same holds for the set \(\mathcal{B}( {X,Y})\) of all \index{Bounded function} \(f : X \rightarrow  Y\) . (A function \(f\) is said to be bounded if its image \(f( X)\) is a bounded subset of the metric space(Y, d).)
 \end{proof}
 \begin{theorem}
-	Let \(X\) be a topological space and let(Y, d)be a metric space. The set \(\mathcal{C}( {X,Y})\) of continuous functions is closed in \({Y}^{X}\) under the uniform metric. So is the set \(\mathcal{B}( {X,Y})\) of \index{Bounded function}\index{Bounded function}\index{bounded function@Bounded function}bounded functions. Therefore, if \(Y\) is complete, these spaces are complete in the uniform metric.
+	Let \(X\) be a topological space and let(Y, d)be a metric space. The set \(\mathcal{C}( {X,Y})\) of continuous functions is closed in \({Y}^{X}\) under the uniform metric. So is the set \(\mathcal{B}( {X,Y})\) of \index{bounded function@Bounded function}\index{bounded function@Bounded function}\index{bounded function@Bounded function}bounded functions. Therefore, if \(Y\) is complete, these spaces are complete in the uniform metric.
 \end{theorem}
 
 \begin{proof}
@@ -219,10 +219,10 @@ We conclude that \(\mathcal{C}( {X,Y})\) and \(\mathcal{B}( {X,Y})\) are complet
 \rho ( {f,g})  = \sup \{ d( {f( x) ,g( x) })  \mid  x \in  X\} .
 \]
 
-It is easy to see that \(\rho\) is well-defined, for the set \(f( X)  \cup  g( X)\) is bounded if both \(f( X)\) and \(g( X)\) are. The metric \(\rho\) is called the \index{sup metric}.
+It is easy to see that \(\rho\) is well-defined, for the set \(f( X)  \cup  g( X)\) is bounded if both \(f( X)\) and \(g( X)\) are. The metric \(\rho\) is called the \index{Sup metric}.
 \end{definition}
 
-There is a simple relation between the \index{Sup metric}\index{Sup metric}\index{sup metric@Sup metric}sup metric and the uniform metric. Indeed, if \(f,g \in  \mathcal{B}( {X,Y})\) , then
+There is a simple relation between the \index{sup metric@Sup metric}\index{sup metric@Sup metric}\index{sup metric@Sup metric}sup metric and the uniform metric. Indeed, if \(f,g \in  \mathcal{B}( {X,Y})\) , then
 
 \[
 \bar{\rho }( {f,g})  = \min \{ \rho ( {f,g}) ,1\} .
@@ -295,10 +295,10 @@ On the other hand, this inequality cannot be strict, for when \(x = a\) ,
 \]
 \end{proof}
 \begin{definition}
-	Let \(X\) be a metric space. If \(h : X \rightarrow  Y\) is an isometric imbedding of \(X\) into a complete metric space \(Y\) , then the subspace \(\overline{h( X) }\) of \(Y\) is a complete metric space. It is called the \index{completion} of \(X\) .
+	Let \(X\) be a metric space. If \(h : X \rightarrow  Y\) is an isometric imbedding of \(X\) into a complete metric space \(Y\) , then the subspace \(\overline{h( X) }\) of \(Y\) is a complete metric space. It is called the \index{Completion} of \(X\) .
 \end{definition}
 
-The \index{Completion}\index{Completion}\index{completion@Completion}completion of \(X\) is uniquely determined up to an isometry. See Exercise 10.
+The \index{completion@Completion}\index{completion@Completion}\index{completion@Completion}completion of \(X\) is uniquely determined up to an isometry. See Exercise 10.
 
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
@@ -308,9 +308,9 @@ The \index{Completion}\index{Completion}\index{completion@Completion}completion 
   \item Suppose that for each \(x \in  X\) there is an \(\epsilon  > 0\) such that the ball \(B( {x,\epsilon })\) has compact closure. Show by means of an example that \(X\) need not be complete.
   \end{enumerate}
 \item Let \(( {X,{d}_{X}})\) and \(( {Y,{d}_{Y}})\) be metric spaces; let \(Y\) be complete. Let \(A \subset  X\) . Show that if \(f : A \rightarrow  Y\) is uniformly continuous, then \(f\) can be uniquely extended to a continuous function \(g : \bar{A} \rightarrow  Y\) , and \(g\) is uniformly continuous.
-\item Two metrics \(d\) and \({d}^{\prime }\) on a set \(X\) are said to be \index{metrically equivalent} if the identity map \(i.( {X,d})  \rightarrow  ( {X,{d}^{\prime }})\) and its inverse are both uniformly continuous.
+\item Two metrics \(d\) and \({d}^{\prime }\) on a set \(X\) are said to be \index{Metrically equivalent} if the identity map \(i.( {X,d})  \rightarrow  ( {X,{d}^{\prime }})\) and its inverse are both uniformly continuous.
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Show that \(d\) is \index{Metrically equivalent}\index{Metrically equivalent}\index{metrically equivalent@Metrically equivalent}metrically equivalent to the standard bounded metric \(\bar{d}\) derived from \(d\)
+  \item Show that \(d\) is \index{metrically equivalent@Metrically equivalent}\index{metrically equivalent@Metrically equivalent}\index{metrically equivalent@Metrically equivalent}metrically equivalent to the standard bounded metric \(\bar{d}\) derived from \(d\)
   \item Show that if \(d\) and \({d}^{\prime }\) are metrically equivalent, then \(X\) is complete under \(d\) if and only if it is complete under \({d}^{\prime }\)
   \end{enumerate}
 \item Show that the metric space(X, d)is complete if and only if for every nested sequence \({A}_{1} \supset  {A}_{2} \supset  \cdots\) of nonempty closed sets of \(X\) such that \(\operatorname{diam}{A}_{n} \rightarrow  0\) , the intersection of the sets \({A}_{n}\) is nonempty.
@@ -323,7 +323,7 @@ The \index{Completion}\index{Completion}\index{completion@Completion}completion 
   \item Show that if \(A\) is a \({G}_{\delta }\) set in a topologically complete space, then \(A\) is topologically complete. [Hint: Let \(A\) be the intersection of the open sets \({U}_{n}\) , for \(n \in  {\mathbb{Z}}_{ + }\) . Consider the diagonal imbedding \(f( a)  = ( {a,a,\ldots })\) of \(A\) into \(\prod {U}_{n}\) .] Conclude that the irrationals are topologically complete.
   \end{enumerate}
 \item Show that the set of all sequences \(( {{x}_{1},{x}_{2},\ldots })\) such that \(\sum {x}_{i}^{2}\) converges is complete in the \({\ell }^{2}\) -metric. (See Exercise 8 of \(§{20}\) .)
-\item If \(X\) and \(Y\) are spaces, define \[ e : X \times  \mathcal{C}( {X,Y})  \rightarrow  Y \] by the equation \(e( {x,f})  = f( x)\) ; the map \(e\) is called the \index{evaluation map}. Show that if \(d\) is a metric for \(Y\) and \(\mathcal{C}( {X,Y})\) has the corresponding uniform topology, then \(e\) is continuous. We shall generalize this result in \(\$ {46}\) .
+\item If \(X\) and \(Y\) are spaces, define \[ e : X \times  \mathcal{C}( {X,Y})  \rightarrow  Y \] by the equation \(e( {x,f})  = f( x)\) ; the map \(e\) is called the \index{Evaluation map}. Show that if \(d\) is a metric for \(Y\) and \(\mathcal{C}( {X,Y})\) has the corresponding uniform topology, then \(e\) is continuous. We shall generalize this result in \(\$ {46}\) .
 \item Let(X, d)be a metric space. Show that there is an isometric imbedding \(h\) of \(X\) into a complete metric space(Y, D), as follows: Let \(\widetilde{X}\) denote the set of all Cauchy sequences \[ \mathbf{x} = ( {{x}_{1},{x}_{2},\ldots }) \] of points of \(X\) . Define \(\mathbf{x} \sim  \mathbf{y}\) if \[ d( {{x}_{n},{y}_{n}})  \rightarrow  0 \] Let \([  \mathbf{x}]\) denote the equivalence class of \(\mathbf{x}\) ; and let \(Y\) denote the set of these equivalence classes. Define a metric \(D\) on \(Y\) by the equation \[ D( {[  \mathbf{x}]  ,[  \mathbf{y}]  })  = \mathop{\lim }\limits_{{n \rightarrow  \infty }}d( {{x}_{n},{y}_{n}}) . \]
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that \(\sim\) is an equivalence relation, and show that \(D\) is a well-defined metric.
@@ -439,7 +439,7 @@ It follows that \(\mathbf{x}\) belongs to the closure of \(f( I)\) . But \(I\) i
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Let \(X\) be a Hausdorff space. Show that if there is a continuous surjective map \(f : I \rightarrow  X\) , then \(X\) is compact, connected, weakly locally connected, and metrizable. [Hint: Show \(f\) is a perfect map.]
 
-  \item The converse of the result in (a) is a famous theorem of point-set topology called the \index{Hahn-Mazurkiewicz theorem} (see 		\cite{HockingYoung1961}, p. 129). Assuming this theorem, show there is a continuous surjective map \(f : I \rightarrow  {I}^{\omega }\) . A Hausdorff space that is the continuous image of the closed unit interval is often called a Peano space.
+  \item The converse of the result in (a) is a famous theorem of point-set topology called the \index{hahn-mazurkiewicz theorem@Hahn-Mazurkiewicz theorem} (see 		\cite{HockingYoung1961}, p. 129). Assuming this theorem, show there is a continuous surjective map \(f : I \rightarrow  {I}^{\omega }\) . A Hausdorff space that is the continuous image of the closed unit interval is often called a Peano space.
   \end{enumerate}
 \end{enumerate}
 \section*{§ 45 Compactness in Metric Spaces}
@@ -449,12 +449,12 @@ We have already shown that compactness, limit point compactness, and sequential 
 How is compactness of a metric space \(X\) related to completeness of \(X\) ? It follows from Lemma 431 that every compact metric space is complete. The converse does not hold-a complete metric space need not be compact. It is reasonable to ask what extra condition one needs to impose on a complete space to be assured of its compactness. Such a condition is the one called total boundedness.
 
 \begin{definition}
-	A metric space(X, d)is said to be \index{totally bounded} if for every \(\epsilon  > 0\) , there is a finite covering of \(X\) by \(\epsilon\) -balls.
+	A metric space(X, d)is said to be \index{Totally bounded} if for every \(\epsilon  > 0\) , there is a finite covering of \(X\) by \(\epsilon\) -balls.
 \end{definition}
 
 \begin{centeredblock}
 \begin{example}
-	Total boundedness clearly implies boundedness. For if \(B( {{x}_{1},1/2}) ,\ldots\) , \(B( {{x}_{n},1/2})\) is a finite covering of \(X\) by open balls of radius \(1/2\) , then \(X\) has diameter at most \(1 + \max \{  {d( {{x}_{i},{x}_{j}}) }\}\) . The converse does not hold, however. For example, in the metric \(\bar{d}( {a,b})  = \min \{ 1,| {a - b}| \}\) , the real line \(\mathbb{R}\) is bounded but not \index{Totally bounded}\index{Totally bounded}\index{totally bounded@Totally bounded}totally bounded.
+	Total boundedness clearly implies boundedness. For if \(B( {{x}_{1},1/2}) ,\ldots\) , \(B( {{x}_{n},1/2})\) is a finite covering of \(X\) by open balls of radius \(1/2\) , then \(X\) has diameter at most \(1 + \max \{  {d( {{x}_{i},{x}_{j}}) }\}\) . The converse does not hold, however. For example, in the metric \(\bar{d}( {a,b})  = \min \{ 1,| {a - b}| \}\) , the real line \(\mathbb{R}\) is bounded but not \index{totally bounded@Totally bounded}\index{totally bounded@Totally bounded}\index{totally bounded@Totally bounded}totally bounded.
 \end{example}
 \end{centeredblock}
 
@@ -478,7 +478,7 @@ Next, cover \(X\) by finitely many balls of radius \(1/2\) . Because \({J}_{1}\)
 
 Choose \({n}_{1} \in  {J}_{1}\) . Given \({n}_{k}\) , choose \({n}_{k + 1} \in  {J}_{k + 1}\) such that \({n}_{k + 1} > {n}_{k}\) ; this we can do because \({J}_{k + 1}\) is an infinite set. Now for \(i,j \geq  k\) , the indices \({n}_{i}\) and \({n}_{j}\) both belong to \({J}_{k}\) (because \({J}_{1} \supset  {J}_{2} \supset  \cdots\) is a nested sequence of sets). Therefore, for all \(i,j \geq  k\) , the points \({x}_{{n}_{i}}\) and \({x}_{{n}_{j}}\) are contained in a ball \({B}_{k}\) of radius \(1/k\) . It follows that the sequence \(( {x}_{{n}_{1}})\) is a Cauchy sequence, as desired.
 
-We now apply this result to find the compact subspaces of the space \(\mathcal{C}( {X,{\mathbb{R}}^{n}})\) , in the uniform topology. We know that a subspace of \({\mathbb{R}}^{n}\) is compact if and only if it is closed and bounded. One might hope that an analogous result holds for \(\mathcal{C}( {X,{\mathbb{R}}^{n}})\) . But it does not, even if \(X\) is compact. One needs to assume that the subspace of \(\mathcal{C}( {X,{\mathbb{R}}^{n}})\) satisfies an additional condition, called \index{equicontinuity}. We consider that notion now.
+We now apply this result to find the compact subspaces of the space \(\mathcal{C}( {X,{\mathbb{R}}^{n}})\) , in the uniform topology. We know that a subspace of \({\mathbb{R}}^{n}\) is compact if and only if it is closed and bounded. One might hope that an analogous result holds for \(\mathcal{C}( {X,{\mathbb{R}}^{n}})\) . But it does not, even if \(X\) is compact. One needs to assume that the subspace of \(\mathcal{C}( {X,{\mathbb{R}}^{n}})\) satisfies an additional condition, called \index{Equicontinuity}. We consider that notion now.
 \end{proof}
 \begin{definition}
 	Let(Y, d)be a metric space. Let \(\mathcal{F}\) be a subset of the function space \(\mathcal{C}( {X,Y})\) . If \({x}_{0} \in  X\) , the set \(\mathcal{F}\) of functions is said to be equicontinuous at \({x}_{0}\) if given \(\epsilon  > 0\) , there is a neighborhood \(U\) of \({x}_{0}\) such that for all \(x \in  U\) and all \(f \in  \mathcal{F}\) ,
@@ -490,7 +490,7 @@ d( {f( x) ,f( {x}_{0}) })  < \epsilon
 If the set \(\mathcal{F}\) is equicontinuous at \({x}_{0}\) for each \({x}_{0} \in  X\) , it is said simply to be equicontinuous.
 \end{definition}
 
-Continuity of the function \(f\) at \({x}_{0}\) means that given \(f\) and given \(\epsilon  > 0\) , there exists a neighborhood \(U\) of \({x}_{0}\) such that \(d( {f( x) ,f( {x}_{0}) })  < \epsilon\) for \(x \in  U\) . \index{Equicontinuity}\index{Equicontinuity}\index{equicontinuity@Equicontinuity}Equicontinuity of \(\mathcal{F}\) means that a single neighborhood \(U\) can be chosen that will work for all the functions \(f\) in the collection \(\mathcal{F}\) .
+Continuity of the function \(f\) at \({x}_{0}\) means that given \(f\) and given \(\epsilon  > 0\) , there exists a neighborhood \(U\) of \({x}_{0}\) such that \(d( {f( x) ,f( {x}_{0}) })  < \epsilon\) for \(x \in  U\) . \index{equicontinuity@Equicontinuity}\index{equicontinuity@Equicontinuity}\index{equicontinuity@Equicontinuity}Equicontinuity of \(\mathcal{F}\) means that a single neighborhood \(U\) can be chosen that will work for all the functions \(f\) in the collection \(\mathcal{F}\) .
 
 Note that equicontinuity depends on the specific metric \(d\) rather than merely on the topology of \(Y\) .
 
@@ -530,7 +530,7 @@ d( {{f}_{i}( x) ,{f}_{i}( {x}_{0}) })  < \delta ,
 
 The first and third inequalities hold because \(\bar{\rho }( {f,{f}_{i}})  < \delta\) , and the second holds because \(x \in  U\) . Since \(\delta  < 1\) , the first and third also hold if \(\bar{d}\) is replaced by \(d\) ; then the triangle inequality implies that for all \(x \in  U\) , we have \(d( {f( x) ,f( {x}_{0}) })  < \epsilon\) , as desired.
 
-Now we prove the classical version of \index{Ascoli's theorem}, which concerns compact subspaces of the function space \(\mathcal{C}( {X,{\mathbb{R}}^{n}})\) . A more general version, whose proof does not depend on this one, is given in §47. The general version, however, relies on the Tychonoff theorem, whereas this one does not.
+Now we prove the classical version of \index{ascoli's theorem@Ascoli's theorem}, which concerns compact subspaces of the function space \(\mathcal{C}( {X,{\mathbb{R}}^{n}})\) . A more general version, whose proof does not depend on this one, is given in §47. The general version, however, relies on the Tychonoff theorem, whereas this one does not.
 
 We begin by proving a partial converse to the preceding lemma, which holds when \(X\) and \(Y\) are compact.
 
@@ -569,7 +569,7 @@ The first and third inequalities hold because \(x \in  {U}_{i}\) , and the secon
 Thus \(f\) belongs to \({B}_{\rho }( {{f}_{\alpha },\epsilon })\) , as asserted.
 \end{proof}
 \begin{definition}
-	If(Y, d)is a metric space, a subset \(\mathcal{F}\) of \(\mathcal{C}( {X,Y})\) is said to be \\index{Convergent sequence!in point-open topology}index{Pointwise convergence topology (see also Point-open topology)} \index{Pointwise bounded}\index{Pointwise bounded}\index{pointwise bounded@Pointwise bounded}pointwise bounded under \(d\) if for each \(x \in  X\) , the subset
+	If(Y, d)is a metric space, a subset \(\mathcal{F}\) of \(\mathcal{C}( {X,Y})\) is said to be \\index{Convergent sequence!in point-open topology}index{Pointwise convergence topology (see also Point-open topology)} \index{pointwise bounded@Pointwise bounded}\index{pointwise bounded@Pointwise bounded}\index{pointwise bounded@Pointwise bounded}pointwise bounded under \(d\) if for each \(x \in  X\) , the subset
 
 \[
 {\mathcal{F}}_{a} = \{ f( a)  \mid  f \in  \mathcal{F}\}
@@ -622,10 +622,10 @@ Proof. If \(\mathcal{F}\) is compact, it must be closed and bounded; the precedi
 
   \item Repeat (a) for the functions \({f}_{n}\) of Exercise 9 of \(§{21}\) .
   \end{enumerate}
-\item Let \(X\) be a space. A subset \(\mathcal{F}\) of \(\mathcal{C}( {X,\mathbb{R}})\) is said to vanish uniformly at infinity if given \(\epsilon  > 0\) , there is a compact subspace \(C\) of \(X\) such that \(| {f( x) }|  < \epsilon\) for \(x \in  X - C\) and \(f \in  \mathcal{F}\) If \(\mathcal{F}\) consists of a single function \(f\) , we say simply that \(f\) vanishes at infinity. Let \({\mathcal{C}}_{0}( {X,\mathbb{R}})\) denote the set of continuous functions \(f : X \rightarrow  \mathbb{R}\) that \index{vanish at infinity}. \textsl{Theorem.} Let \(X\) be locally compact Hausdorff; give \({\mathcal{C}}_{0}( {X,\mathbb{R}})\) the uniform topology. A subset \(\mathcal{F}\) of \({\mathcal{C}}_{0}( {X,\mathbb{R}})\) has compact closure if and only if it is pointwise bounded, equicontinuous, and vanishes uniformly at infinity.  \{Hint: Let \(Y\) denote the one-point compactification of \(X\) . Show that \({\mathcal{C}}_{0}( {X,\mathbb{R}})\) is isometric with a closed subspace of \(\mathcal{C}( {Y,\mathbb{R}})\) if both are given the sup metric.]
+\item Let \(X\) be a space. A subset \(\mathcal{F}\) of \(\mathcal{C}( {X,\mathbb{R}})\) is said to vanish uniformly at infinity if given \(\epsilon  > 0\) , there is a compact subspace \(C\) of \(X\) such that \(| {f( x) }|  < \epsilon\) for \(x \in  X - C\) and \(f \in  \mathcal{F}\) If \(\mathcal{F}\) consists of a single function \(f\) , we say simply that \(f\) vanishes at infinity. Let \({\mathcal{C}}_{0}( {X,\mathbb{R}})\) denote the set of continuous functions \(f : X \rightarrow  \mathbb{R}\) that \index{Vanish at infinity}. \textsl{Theorem.} Let \(X\) be locally compact Hausdorff; give \({\mathcal{C}}_{0}( {X,\mathbb{R}})\) the uniform topology. A subset \(\mathcal{F}\) of \({\mathcal{C}}_{0}( {X,\mathbb{R}})\) has compact closure if and only if it is pointwise bounded, equicontinuous, and vanishes uniformly at infinity.  \{Hint: Let \(Y\) denote the one-point compactification of \(X\) . Show that \({\mathcal{C}}_{0}( {X,\mathbb{R}})\) is isometric with a closed subspace of \(\mathcal{C}( {Y,\mathbb{R}})\) if both are given the sup metric.]
 \item Show that our proof of Ascoli's theorem goes through if \({\mathbb{R}}^{n}\) is replaced by any metric space in which all closed bounded subspaces are compact. *7. Let(X, d)be a metric space. If \(A \subset  X\) and \(\epsilon  > 0\) , let \(U( {A,\epsilon })\) be the \(\epsilon\) - neighborhood of \(A\) . Let \(\mathcal{H}\) be the collection of all (nonempty) closed, bounded subsets of \(X\) . If \(A,B \in  \mathcal{H}\) , define \[ D( {A,B})  = \inf \{ \epsilon  \mid  A \subset  U( {B,\epsilon }) \text{ and }B \subset  U( {A,\epsilon }) \} . \]
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Show that \(D\) is a metric on \(\mathcal{H}\) ; it is called the \index{Hausdorff metric}.
+  \item Show that \(D\) is a metric on \(\mathcal{H}\) ; it is called the \index{hausdorff metric@Hausdorff metric}.
   \item Show that if(X, d)is complete, so is(H, D). [Hint: Let \({A}_{n}\) be a Cauchy sequence in \(\mathcal{H}\) ; by passing to a subsequence, assume \(D( {{A}_{n},{A}_{n + 1}})  < 1/{2}^{n}\) . Define \(A\) to be the set of all points \(x\) that are the limits of sequences \({x}_{1},{x}_{2}\) , ... such that \({x}_{i} \in  {A}_{i}\) for each \(i\) and \(d( {{x}_{i},{x}_{i + 1}})  < 1/{2}^{i}\) . Show \(. {{A}_{n} \rightarrow  \bar{A}\text{ . }}]\)
   \item Show that if(X, d)is totally bounded, so is(H, D). [Hint: Given \(\epsilon\) , choose \(\delta  < \epsilon\) and let \(S\) be a finite subset of \(X\) such that the collection \(\{  {{B}_{d}( {x,\delta })  \mid  }.\)  \(x \in  S\}\) covers \(X\) . Let \(\mathcal{A}\) be the collection of all nonempty subsets of \(S\) ; show that \(\{  {{B}_{D}( {A,\epsilon })  \mid  A \in  \mathcal{A}}\}\) covers \(\mathcal{H}\) .]
   \item Theorem. If \(X\) is compact in the metric \(d\) , then the space \(\mathcal{H}\) is compact in the Hausdorff metric \(D\) . *8. Let \(( {X,{d}_{X}})\) and \(( {Y,{d}_{Y}})\) be metric spaces; give \(X \times  Y\) the corresponding square metric; let \(\mathcal{H}\) denote the collection of all nonempty closed, bounded subsets of \(X \times  Y\) in the resulting Hausdorff metric. Consider the space \(\mathcal{C}( {X,Y})\) in the uniform metric; let \(\operatorname{gr} : \mathcal{C}( {X,Y})  \rightarrow  \mathcal{H}\) be the function that assigns, to each continuous function \(f : X \rightarrow  Y\) , its graph \[ {G}_{f} = \{ x \times  f( x)  \mid  x \in  X\} . \]
@@ -637,7 +637,7 @@ Proof. If \(\mathcal{F}\) is compact, it must be closed and bounded; the precedi
 \end{enumerate}
 \section*{§ 46 Pointwise and Compact Convergence}
 
-There are other useful topologies on the spaces \({Y}^{X}\) and \(\mathcal{C}( {X,Y})\) in addition to the uniform topology. We shall consider three of them here; they are called the topology of po\index{Convergent sequence!in compact convergence topology}intwise convergence, the topology of compact convergence, and the \index{compact-open topology}.
+There are other useful topologies on the spaces \({Y}^{X}\) and \(\mathcal{C}( {X,Y})\) in addition to the uniform topology. We shall consider three of them here; they are called the topology of po\index{Convergent sequence!in compact convergence topology}intwise convergence, the topology of compact convergence, and the \index{Compact-open topology}.
 
 \begin{definition}
 	Given a point \(x\) of the set \(X\) and an open set \(U\) of the space \(Y\) , let
@@ -646,7 +646,7 @@ There are other useful topologies on the spaces \({Y}^{X}\) and \(\mathcal{C}( {
 S( {x,U})  = \{  {f \mid  f \in  {Y}^{\chi }\text{ and }f( x)  \in  U}\}  .
 \]
 
-The sets \(S( {x,U})\) are a subbasis for topology on \({Y}^{X}\) , which is called the topology of pointwise convergence (or the \index{point-open topology}).
+The sets \(S( {x,U})\) are a subbasis for topology on \({Y}^{X}\) , which is called the topology of pointwise convergence (or the \index{Point-open topology}).
 \end{definition}
 
 The general basis element for this topology is a finite intersection of subbasis elements \(S( {x,U})\) . Thus a typical basis element about the function \(f\) consists of all functions \(g\) that are ``close'' to \(f\) at finitely many points. Such a neighborhood is illustrated in Figure 46.1; it consists of all functions \(g\) whose graphs intersect the three vertical intervals pictured.
@@ -724,7 +724,7 @@ C = \{ x\}  \cup  \{  {{x}_{n} \mid  n \in  {\mathbb{Z}}_{ + }}\}
 
 is compact, so that \(B \cap  C\) is by assumption closed in \(C\) . Since \(B \cap  C\) contains \({x}_{n}\) for every \(n\) , it contains \(x\) as well. Therefore, \(x \in  B\) , as desired.
 
-The crucial fact about \index{compactly generated space} is the following:
+The crucial fact about \index{Compactly generated space} is the following:
 
 \begin{lemma}
 	If \(X\) is compactly generated, then a function \(f : X \rightarrow  Y\) is continuous if for each compact subspace \(C\) of \(X\) , the restricted function \(f \mid  C\) is continuous.
@@ -761,7 +761,7 @@ Now we have three topologies for the function space \({Y}^{X}\) when \(Y\) is me
 
 If \(X\) is compact, the first two coincide, and if \(X\) is discrete, the second two coincide.
 
-Now the definitions of the uniform topology and the \index{compact convergence topology} made specific use of the metric \(d\) for the space \(Y\) . But the topology of pointwise convergence did not; in fact, it is defined for any space \(Y\) . It is natural to ask whether either of these other topologies can be extended to the case where \(Y\) is an arbitrary topological space. There is no satisfactory answer to this question for the space \({Y}^{X}\) of all functions mapping \(X\) into \(Y\) . But for the subspace \(\mathcal{C}( {X,Y})\) of continuous functions, one can prove something. It turns out that there is in general a topology on \(\mathcal{C}( {X,Y})\) , called the \index{Compact-open topology}compact-open topology, that coincides with the \index{Compact convergence topology}compact convergence topology when \(Y\) is a metric space. This topology is important in its own right, as we shall see.
+Now the definitions of the uniform topology and the \index{Compact convergence topology} made specific use of the metric \(d\) for the space \(Y\) . But the topology of pointwise convergence did not; in fact, it is defined for any space \(Y\) . It is natural to ask whether either of these other topologies can be extended to the case where \(Y\) is an arbitrary topological space. There is no satisfactory answer to this question for the space \({Y}^{X}\) of all functions mapping \(X\) into \(Y\) . But for the subspace \(\mathcal{C}( {X,Y})\) of continuous functions, one can prove something. It turns out that there is in general a topology on \(\mathcal{C}( {X,Y})\) , called the \index{compact-open topology@Compact-open topology}compact-open topology, that coincides with the \index{compact convergence topology@Compact convergence topology}compact convergence topology when \(Y\) is a metric space. This topology is important in its own right, as we shall see.
 
 \begin{definition}
 	Let \(X\) and \(Y\) be topological spaces. If \(C\) is a compact subspace of \(X\) and \(U\) is an open subset of \(Y\) , define
@@ -770,7 +770,7 @@ Now the definitions of the uniform topology and the \index{compact convergence t
 S( {C,U})  = \{ f \mid  f \in  \mathcal{C}( {X,Y}) \text{ and }f( C)  \subset  U\} .
 \]
 
-The sets \(S( {C,U})\) form a subbasis for a topology on \(\mathcal{C}( {X,Y})\) that is called the \index{Compact-open topology}compact-open topology.
+The sets \(S( {C,U})\) form a subbasis for a topology on \(\mathcal{C}( {X,Y})\) that is called the \index{compact-open topology@Compact-open topology}compact-open topology.
 \end{definition}
 
 It is clear from the definition that the compact-open topology is finer than the pointwise convergence topology. The compact-open topology can in fact be defined on the entire function space \({Y}^{X}\) . It is, however, of interest only for the subspace \(\mathcal{C}( {X,Y})\) , so we shall consider it only for that space.
@@ -818,7 +818,7 @@ e( {x,f})  = f( x)
 
 is continuous
 
-The map \(e\) is called the \index{Evaluation map}evaluation map.
+The map \(e\) is called the \index{evaluation map@Evaluation map}evaluation map.
 \end{theorem}
 
 \begin{proof}
@@ -906,8 +906,8 @@ We shall return to a more detailed study of homotopy in Part II of the book.
   \end{enumerate}
 \item Let(Y, d)be a metric space; let \(X\) be a space. Define a topology on \(\mathcal{C}( {X,Y})\) as follows: Given \(f \in  \mathcal{C}( {X,Y})\) , and given a positive continuous function \(\delta  : X \rightarrow\)  \({\mathbb{R}}_{ + }\) on \(X\) , let \[ B( {f,\delta })  = \{ g \mid  d( {f( x) ,g( x) })  < \delta ( x) \text{ for all }x \in  X\} . \]
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Show that the sets \(B( {f,\delta })\) form a basis for a topology on \(\mathcal{C}( {X,Y})\) . We call it the \index{fine topology}.
-  \item Show that the \index{Fine topology}\index{Fine topology}\index{fine topology@Fine topology}fine topology contains the uniform topology.
+  \item Show that the sets \(B( {f,\delta })\) form a basis for a topology on \(\mathcal{C}( {X,Y})\) . We call it the \index{Fine topology}.
+  \item Show that the \index{fine topology@Fine topology}\index{fine topology@Fine topology}\index{fine topology@Fine topology}fine topology contains the uniform topology.
   \item Show that if \(X\) is compact, the fine and uniform topologies agree.
   \item Show that if \(X\) is discrete, then \(\mathcal{C}( {X,Y})  = {Y}^{X}\) and the fine and box topologies agree.
   \end{enumerate}
@@ -963,7 +963,7 @@ d( {h( x) ,g( x) })  < \epsilon /3\;\text{ and }\;d( {h( {x}_{0}) ,g( {x}_{0}) }
 
 Because \(g\) belongs to the closure of \(\mathcal{F}\) , the neighborhood \({V}_{x}\) of \(g\) must contain an element \(f\) of \(\mathcal{F}\) . Applying the triangle inequality to \(( *)\) and \(( {* * })\) , it follows that \(d( {g( x) ,g( {x}_{0}) })  < \epsilon\) , as desired.
 
-Step 3. We show that the product topology on \({Y}^{X}\) and the \index{Compact convergence topology}\index{compact convergence topology@Compact convergence topology}compact convergence topology on \(\mathcal{C}( {X,Y})\) coincide on the subset \(\mathcal{G}\) .
+Step 3. We show that the product topology on \({Y}^{X}\) and the \index{compact convergence topology@Compact convergence topology}\index{compact convergence topology@Compact convergence topology}compact convergence topology on \(\mathcal{C}( {X,Y})\) coincide on the subset \(\mathcal{G}\) .
 
 In general, the compact convergence topology is finer than the product topology. We prove that the reverse holds for the subset \(\mathcal{G}\) . Let \(g\) be an element of \(\mathcal{G}\) , and let \({B}_{C}( {g,\epsilon })\) be a basis element for the compact convergence topology on \({Y}^{X}\) that contains \(g\) . We find a basis element \(B\) for the pointwise convergence topology on \({Y}^{X}\) that contains \(g\) such that
 
@@ -1011,7 +1011,7 @@ To show \({\mathcal{H}}_{a}\) is compact, consider the composite of the map
 j : \mathcal{C}( {X,Y})  \rightarrow  X \times  \mathcal{C}( {X,Y})
 \]
 
-defined by \(j( f)  = a \times  f\) , and the \index{Evaluation map}\index{evaluation map@Evaluation map}evaluation map
+defined by \(j( f)  = a \times  f\) , and the \index{evaluation map@Evaluation map}\index{evaluation map@Evaluation map}evaluation map
 
 \[
 e : X \times  \mathcal{C}( {X,Y})  \rightarrow  Y

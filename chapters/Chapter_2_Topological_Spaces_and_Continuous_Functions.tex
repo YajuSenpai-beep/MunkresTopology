@@ -1,14 +1,14 @@
 \chapter[\index{topological space@Topological space}Topological Spaces \index{Quotient topology!and continuous functions}and Continuous Functions]{Topological Spaces \\and Continuous Functions}
 \vspace{6.5cm}
 
-The concept of topological \index{First-countable space (see First-countability)} space grew out of the study of the real line and euclidean space and the study of \index{continuous function} on these spaces. In this chapter, we define what a \index{Topological space}\index{Topological space}topological space is, and we study a number of ways of constructing a \index{topology} on a set so as to make it into a topological space. We also consider some of the elementary concepts associ\index{Continuity: of algebraic operations in \(\mathbb{R}\)!at a point}ated with topological spaces. Open and \index{closed set}, \index{limit point}, \index{Quotient topology!and continuous functions}\index{Quotient topology!and continuous functions}and cont\index{Closure!in a cartesian product}inuous functions are introduced as natural \index{Cartesian product: countably infinite!general}\index{Cartesian product: countably infinite!general}\index{Cartesian product: countably infinite!general}generalizations of the corresponding ideas for the real line and euclidean space.
+The concept of topological \index{first-countable space (see first-countability)@First-countable space (see First-countability)} space grew out of the study of the real line and euclidean space and the study of \index{Continuous function} on these spaces. In this chapter, we define what a \index{topological space@Topological space}\index{topological space@Topological space}topological space is, and we study a number of ways of constructing a \index{Topology} on a set so as to make it into a topological space. We also consider some of the elementary concepts associ\index{Continuity: of algebraic operations in \(\mathbb{R}\)!at a point}ated with topological spaces. Open and \index{Closed set}, \index{Limit point}, \index{Quotient topology!and continuous functions}\index{Quotient topology!and continuous functions}and cont\index{Closure!in a cartesian product}inuous functions are introduced as natural \index{Cartesian product: countably infinite!general}\index{Cartesian product: countably infinite!general}\index{Cartesian product: countably infinite!general}generalizations of the corresponding ideas for the real line and euclidean space.
 
 \section*{§ 12 Topological Spaces}
 
-The definition of a topological space that is now \index{Standard topology: on} standard was a long time in being formulated. Various mathematicians-Fréchet, Hausdorff, and others-proposed different definitions over a period of years during the first decades of the twentieth century, but it took quite a while before mathematicians settled on the one that seemed most suitable. They wanted, of course, a definition that was as broad as possible, so that it would include as special cases all the various examples that were useful in mathematics-euclidean space, \index{infinite series} infinite-dimensional euclidean space, and function spaces among them-but they also wanted the definition to be narrow enough that the standard theorems about these familiar spaces would hold for topological spaces in general. This is always the problem when one is trying to formulate a new mathematical concept, to decide how general its definition should be. The definition finally settled on may seem a bit abstract, but as you work through the various ways of constructing topological spaces, you will get a better feeling for what the concept means.
+The definition of a topological space that is now \index{standard topology: on@Standard topology: on} standard was a long time in being formulated. Various mathematicians-Fréchet, Hausdorff, and others-proposed different definitions over a period of years during the first decades of the twentieth century, but it took quite a while before mathematicians settled on the one that seemed most suitable. They wanted, of course, a definition that was as broad as possible, so that it would include as special cases all the various examples that were useful in mathematics-euclidean space, \index{Infinite series} infinite-dimensional euclidean space, and function spaces among them-but they also wanted the definition to be narrow enough that the standard theorems about these familiar spaces would hold for topological spaces in general. This is always the problem when one is trying to formulate a new mathematical concept, to decide how general its definition should be. The definition finally settled on may seem a bit abstract, but as you work through the various ways of constructing topological spaces, you will get a better feeling for what the concept means.
 
 \begin{definition}
-	A \index{Topology}\index{Topology}\index{topology@Topology}topology on a set \(X\) is a collection \(\mathcal{T}\) of subsets of \(X\) having the following properties:
+	A \index{topology@Topology}\index{topology@Topology}\index{topology@Topology}topology on a set \(X\) is a collection \(\mathcal{T}\) of subsets of \(X\) having the following properties:
 
 (1) \(\varnothing\) and \(X\) are in \(\mathcal{T}\) .
 
@@ -18,11 +18,11 @@ The definition of a topological space that is now \index{Standard topology: on} 
 
 A set \(X\) for which a topology \(\mathcal{T}\) has been specified is called a topological space.
 
-Properly speaking, a topological space is an \index{Ray in ordered set} ordered pair(X, T)consisting \index{Interior point: of an arc!of a set}\index{Interior point: of an arc!of a set}\index{Interior point: of an arc!of a set}of a set \(X\) and a topology \(\mathcal{T}\) on \(X\) , but we often omit specific mention of \(\mathcal{T}\) if no confusion will anse.
+Properly speaking, a topological space is an \index{ray in ordered set@Ray in ordered set} ordered pair(X, T)consisting \index{Interior point: of an arc!of a set}\index{Interior point: of an arc!of a set}\index{Interior point: of an arc!of a set}of a set \(X\) and a topology \(\mathcal{T}\) on \(X\) , but we often omit specific mention of \(\mathcal{T}\) if no confusion will anse.
 \end{definition}
 
 
-If \(X\) is a topological space with topology \(\mathcal{T}\) , we say that a subset \(U\) of \(X\) is an \index{open set} of \(X\) if \(U\) belongs to the collection \(\mathcal{T}\) . Using this terminology, one can say that a topological space is a set \(X\) together with a collection of subsets of \(X\) , called \index{Open set}\index{Open set}\index{open set@Open set}open sets, such that \(\varnothing\) and \(X\) are both open, and such that arbitrary unions and finite intersections of open sets are open.
+If \(X\) is a topological space with topology \(\mathcal{T}\) , we say that a subset \(U\) of \(X\) is an \index{Open set} of \(X\) if \(U\) belongs to the collection \(\mathcal{T}\) . Using this terminology, one can say that a topological space is a set \(X\) together with a collection of subsets of \(X\) , called \index{open set@Open set}\index{open set@Open set}\index{open set@Open set}open sets, such that \(\varnothing\) and \(X\) are both open, and such that arbitrary unions and finite intersections of open sets are open.
 
 \begin{centeredblock}
 \begin{example}
@@ -48,13 +48,13 @@ Figure 12.2
 
 \begin{centeredblock}
 \begin{example}
-	If \(X\) is any set, the collection of all subsets of \(X\) is a topology on \(X\) , it is called the \index{discrete topology} The collection consisting of \(X\) and \(\varnothing\) only is also a topology on \(X\) ; we shall call it the \index{indiscrete topology}, or the \index{trivial topology}
+	If \(X\) is any set, the collection of all subsets of \(X\) is a topology on \(X\) , it is called the \index{Discrete topology} The collection consisting of \(X\) and \(\varnothing\) only is also a topology on \(X\) ; we shall call it the \index{Indiscrete topology}, or the \index{Trivial topology}
 \end{example}
 \end{centeredblock}
 
 \begin{centeredblock}
 \begin{example}
-	Let \(X\) be a set, let \({\mathcal{T}}_{f}\) be the collection of all subsets \(U\) of \(X\) such that \(X - U\) either is finite or is all of \(X\) Then \({\mathcal{T}}_{f}\) is a topology on \(X\) , called the \index{finite complement topology}. Both \(X\) and \(\varnothing\) are in \({\mathcal{T}}_{f}\) , since \(X - X\) is finite and \(X - \varnothing\) is all of \(X\) If \(\{  {U}_{\alpha }\}\) is an indexed family of nonempty elements of \({\mathcal{T}}_{f}\) , to show that \(\bigcup {U}_{\alpha }\) is in \({\mathcal{T}}_{f}\) , we compute
+	Let \(X\) be a set, let \({\mathcal{T}}_{f}\) be the collection of all subsets \(U\) of \(X\) such that \(X - U\) either is finite or is all of \(X\) Then \({\mathcal{T}}_{f}\) is a topology on \(X\) , called the \index{Finite complement topology}. Both \(X\) and \(\varnothing\) are in \({\mathcal{T}}_{f}\) , since \(X - X\) is finite and \(X - \varnothing\) is all of \(X\) If \(\{  {U}_{\alpha }\}\) is an indexed family of nonempty elements of \({\mathcal{T}}_{f}\) , to show that \(\bigcup {U}_{\alpha }\) is in \({\mathcal{T}}_{f}\) , we compute
 
 \[
 X - \bigcup {U}_{\alpha } = \bigcap ( {X - {U}_{\alpha }})
@@ -72,22 +72,22 @@ The latter set is a finite union of finite sets and, therefore, finite
 
 \begin{centeredblock}
 \begin{example}
-	Let \(X\) be a set, let \({\mathcal{T}}_{c}\) be the collection of all subsets \(U\) of \(X\) such that \(X - U\) either is \index{Countable basis at a point} countable or is all of \(X\) . Then \({\mathcal{T}}_{c}\) is a topology on \(X\) , as you can check
+	Let \(X\) be a set, let \({\mathcal{T}}_{c}\) be the collection of all subsets \(U\) of \(X\) such that \(X - U\) either is \index{countable basis at a point@Countable basis at a point} countable or is all of \(X\) . Then \({\mathcal{T}}_{c}\) is a topology on \(X\) , as you can check
 \end{example}
 \end{centeredblock}
 
 \begin{definition}
-	Suppose that \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\) are two topologies on a given set \(X\) . If \({\mathcal{T}}^{\prime } \supset  \mathcal{T}\) , we say that \({\mathcal{T}}^{\prime }\) is \index{Finer topology} finer than \(\mathcal{T}\) ; if \({\mathcal{T}}^{\prime }\) properly contains \(\mathcal{T}\) , we say that \({\mathcal{T}}^{\prime }\) is \index{Strictly coarser topology} strictly finer than \(\mathcal{T}\) . We also say that \(\mathcal{T}\) is \index{Coarser topology} coarser than \({\mathcal{T}}^{\prime }\) , or strictly coarser, in these two respective situations. We say \(\mathcal{T}\) is comparable with \({\mathcal{T}}^{\prime }\) if either \({\mathcal{T}}^{\prime } \supset  \mathcal{T}\) or \(\mathcal{T} \supset  {\mathcal{T}}^{\prime }\) .
+	Suppose that \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\) are two topologies on a given set \(X\) . If \({\mathcal{T}}^{\prime } \supset  \mathcal{T}\) , we say that \({\mathcal{T}}^{\prime }\) is \index{finer topology@Finer topology} finer than \(\mathcal{T}\) ; if \({\mathcal{T}}^{\prime }\) properly contains \(\mathcal{T}\) , we say that \({\mathcal{T}}^{\prime }\) is \index{strictly coarser topology@Strictly coarser topology} strictly finer than \(\mathcal{T}\) . We also say that \(\mathcal{T}\) is \index{coarser topology@Coarser topology} coarser than \({\mathcal{T}}^{\prime }\) , or strictly coarser, in these two respective situations. We say \(\mathcal{T}\) is comparable with \({\mathcal{T}}^{\prime }\) if either \({\mathcal{T}}^{\prime } \supset  \mathcal{T}\) or \(\mathcal{T} \supset  {\mathcal{T}}^{\prime }\) .
 \end{definition}
 
 
-This terminology is suggested by thinking of a topological space as being something like a truckload full \index{Closure!of a union}of gravel--the pebbles and all unions of collections of pebbles being the open sets. If now we smash the pebbles into \index{Smaller topology} \index{smaller topology@Smaller topology}smaller ones, the collection of open sets has been enlarged, and the topology, like the gravel, is said to have been made finer by the operation.
+This terminology is suggested by thinking of a topological space as being something like a truckload full \index{Closure!of a union}of gravel--the pebbles and all unions of collections of pebbles being the open sets. If now we smash the pebbles into \index{smaller topology@Smaller topology} \index{smaller topology@Smaller topology}smaller ones, the collection of open sets has been enlarged, and the topology, like the gravel, is said to have been made finer by the operation.
 
 Two topologies on \(X\) need not be comparable, of course. In Figure 121 preceding, the topology in the upper right-hand corner is strictly finer than each of the three topologies in the first column and strictly coarser than each of the other topologies in the third column. But it is not comparable with any of the topologies in the second column.
 
-Other terminology is sometimes used for this concept. If \({\mathcal{T}}^{\prime } \supset  \mathcal{T}\) , some mathematicians would say that \({\mathcal{T}}^{\prime }\) is \index{Larger topology} larger than \(\mathcal{T}\) , and \(\mathcal{T}\) is smaller than \({\mathcal{T}}^{\prime }\) . This is certainly acceptable terminology, if not as vivid as the words ``finer'' and ``\index{coarser topology@Coarser topology}coarser.''
+Other terminology is sometimes used for this concept. If \({\mathcal{T}}^{\prime } \supset  \mathcal{T}\) , some mathematicians would say that \({\mathcal{T}}^{\prime }\) is \index{larger topology@Larger topology} larger than \(\mathcal{T}\) , and \(\mathcal{T}\) is smaller than \({\mathcal{T}}^{\prime }\) . This is certainly acceptable terminology, if not as vivid as the words ``finer'' and ``\index{coarser topology@Coarser topology}coarser.''
 
-Many mathematicians use the words ``\index{Weaker topology} \index{weaker topology@Weaker topology}weaker'' and ``\index{Stronger topology} stronger'' in this context. Unfortunately, some of them (particularly analysts) are apt to say that \({\mathcal{T}}^{\prime }\) is stronger than \(\mathcal{T}\) if \({\mathcal{T}}^{\prime } \supset  \mathcal{T}\) , while others (particularly topologists) are apt to say that \({\mathcal{T}}^{\prime }\) is weaker than \(\mathcal{T}\) in the same situation! If you run across the terms ``strong topology'' or ``weak topology'' in some book, you will have to decide from the context which inclusion is meant. We shall not use these terms in this book.
+Many mathematicians use the words ``\index{weaker topology@Weaker topology} \index{weaker topology@Weaker topology}weaker'' and ``\index{stronger topology@Stronger topology} stronger'' in this context. Unfortunately, some of them (particularly analysts) are apt to say that \({\mathcal{T}}^{\prime }\) is stronger than \(\mathcal{T}\) if \({\mathcal{T}}^{\prime } \supset  \mathcal{T}\) , while others (particularly topologists) are apt to say that \({\mathcal{T}}^{\prime }\) is weaker than \(\mathcal{T}\) in the same situation! If you run across the terms ``strong topology'' or ``weak topology'' in some book, you will have to decide from the context which inclusion is meant. We shall not use these terms in this book.
 
 \section*{§ 13 Basis for a Topology}
 
@@ -128,13 +128,13 @@ Figure 13.2
 
 \begin{centeredblock}
 \begin{example}
-	Let \({\mathcal{B}}^{\prime }\) be the collection of all rectangular regions (interiors of rectangles) in the plane, where the rectangles have sides parallel to the \index{Coordinate: of J-tuple} coordinate axes Then \({\mathcal{B}}^{\prime }\) satisfies both conditions for a basis. The second condition is illustrated in Figure 132; in thus case, the condition is tri\index{Closure!via basis elements}vial, because the intersection of any two basis elements is itself a basis element (or empty) As we shall see later, the basis \({\mathcal{B}}^{\prime }\) generates the same topology on the plane as the basis \(\mathcal{B}\) given in the preceding example
+	Let \({\mathcal{B}}^{\prime }\) be the collection of all rectangular regions (interiors of rectangles) in the plane, where the rectangles have sides parallel to the \index{coordinate: of j-tuple@Coordinate: of J-tuple} coordinate axes Then \({\mathcal{B}}^{\prime }\) satisfies both conditions for a basis. The second condition is illustrated in Figure 132; in thus case, the condition is tri\index{Closure!via basis elements}vial, because the intersection of any two basis elements is itself a basis element (or empty) As we shall see later, the basis \({\mathcal{B}}^{\prime }\) generates the same topology on the plane as the basis \(\mathcal{B}\) given in the preceding example
 \end{example}
 \end{centeredblock}
 
 \begin{centeredblock}
 \begin{example}
-	If \(X\) is any set, the collection of all one-point subsets of \(X\) is a basis \index{Metric!for discrete topology}for the \index{Discrete topology}\index{Discrete topology}\index{discrete topology@Discrete topology}discrete topology on \(X\)
+	If \(X\) is any set, the collection of all one-point subsets of \(X\) is a basis \index{Metric!for discrete topology}for the \index{discrete topology@Discrete topology}\index{discrete topology@Discrete topology}\index{discrete topology@Discrete topology}discrete topology on \(X\)
 \end{example}
 \end{centeredblock}
 
@@ -233,7 +233,7 @@ the topology generated by \(\mathcal{B}\) is called the \index{\(\mathbb{R}\) (r
 \end{definition}
 
 
-If \({\mathcal{B}}^{\prime }\) is the collection of all \index{half-open interval} of the form
+If \({\mathcal{B}}^{\prime }\) is the collection of all \index{Half-open interval} of the form
 
 \[
 \lbrack a,b) = \{ x \mid  a \leq  x < b\} ,
@@ -253,7 +253,7 @@ A similar argument applies to \({\mathbb{R}}_{K}\) . Given a basis element(a, b)
 
 We leave it to you to show that the topologies of \({\mathbb{R}}_{\ell }\) and \({\mathbb{R}}_{K}\) are not comparable.
 
-A question may occur to you at this point. Since the topology generated by a basis \(\mathcal{B}\) may be described as the collection of arbitrary unions of elements of \(\mathcal{B}\) , what happens if you start with a given collection of sets and take finite intersections of them as well as arbitrary unions? This question leads to the notion of a \index{subbasis} for a topology
+A question may occur to you at this point. Since the topology generated by a basis \(\mathcal{B}\) may be described as the collection of arbitrary unions of elements of \(\mathcal{B}\) , what happens if you start with a given collection of sets and take finite intersections of them as well as arbitrary unions? This question leads to the notion of a \index{Subbasis} for a topology
 
 \begin{definition}
 	A \index{Order topology!subbasis}subbasis \(S\) for a topology on \(X\) is a collection of subsets of \(X\) whose union equals \(X\) . The topology generated by the subbasis \(S\) is defined to be the collection \(\mathcal{T}\) of all unions of finite intersections of elements of \(\mathcal{S}\) .
@@ -288,7 +288,7 @@ is also a finite intersection of elements of \(\mathcal{S}\) , so it belongs to 
   \end{enumerate}
 \item Show that if \(\mathcal{A}\) is a basis for a topology on \(X\) , then the topology generated by \(\mathcal{A}\) equals the intersection of all topologies on \(X\) that contain \(\mathcal{A}\) . Prove the same if \(\mathcal{A}\) is a subbasis.
 \item Show that the topologies of \({\mathbb{R}}_{\ell }\) and \({\mathbb{R}}_{K}\) are not comparable.
-\item Consider the following topologies on \(\mathbb{R}\) : \({\mathcal{T}}_{1} =\) the standard topology, \({\mathcal{T}}_{2} =\) the topology of \({\mathbb{R}}_{K}\) , \({\mathcal{T}}_{3} =\) the \index{Finite complement topology}finite complement topology, \({\mathcal{T}}_{4} =\) the upper limit topology, having all sets(a, b)as basis, \({\mathcal{T}}_{5} =\) the topology having all sets \(( {-\infty ,a})  = \{ x \mid  x < a\}\) as basis. Determine, for each of these topologies, which of the others it contains.
+\item Consider the following topologies on \(\mathbb{R}\) : \({\mathcal{T}}_{1} =\) the standard topology, \({\mathcal{T}}_{2} =\) the topology of \({\mathbb{R}}_{K}\) , \({\mathcal{T}}_{3} =\) the \index{finite complement topology@Finite complement topology}finite complement topology, \({\mathcal{T}}_{4} =\) the upper limit topology, having all sets(a, b)as basis, \({\mathcal{T}}_{5} =\) the topology having all sets \(( {-\infty ,a})  = \{ x \mid  x < a\}\) as basis. Determine, for each of these topologies, which of the others it contains.
 \item
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Apply Lemma 13.2 to show that the countable collection \[ \mathcal{B} = \{ ( {a,b})  \mid  a < b,a\text{ and }b\text{ rational }\} \] is a basis that generates the standard topology on \(\mathbb{R}\) .
@@ -298,7 +298,7 @@ is also a finite intersection of elements of \(\mathcal{S}\) , so it belongs to 
 \end{enumerate}
 \section*{§ 14 The Order Topology}
 
-If \(X\) is a simply ordered set, there is a standard topology for \(X\) , defined using the order relation. It is called the \index{order topology}; in this section, we consider it and study some of its properties.
+If \(X\) is a simply ordered set, there is a standard topology for \(X\) , defined using the order relation. It is called the \index{Order topology}; in this section, we consider it and study some of its properties.
 
 Suppose that \(X\) is a set having a simple order relation \(<\) . Given elements \(a\) and \(b\) of \(X\) such that \(a < b\) , there are four subsets of \(X\) that are called the intervals determined by \(a\) and \(b\) . They are the following :
 
@@ -318,7 +318,7 @@ Suppose that \(X\) is a set having a simple order relation \(<\) . Given element
 [  {a,b}]   = \{ x \mid  a \leq  x \leq  b\} .
 \]
 
-The notation used here is familiar to you already in the case where \(X\) is the real line, but these are intervals in an arbitrary ordered set. A set of the first type is called an open interval in \(X\) , a set of the last type is called a \index{closed interval} in \(X\) , and sets of the second and third types are called \index{Half-open interval}half-open intervals. The use of the term ``open'' in this connection suggests that open intervals in \(X\) should turn out to be open sets when we put a topology on \(X\) . And so they will.
+The notation used here is familiar to you already in the case where \(X\) is the real line, but these are intervals in an arbitrary ordered set. A set of the first type is called an open interval in \(X\) , a set of the last type is called a \index{Closed interval} in \(X\) , and sets of the second and third types are called \index{half-open interval@Half-open interval}half-open intervals. The use of the term ``open'' in this connection suggests that open intervals in \(X\) should turn out to be open sets when we put a topology on \(X\) . And so they will.
 
 \begin{definition}
 	Let \(X\) be a set with a simple order relation; assume \(X\) has more than one element. Let \(\mathcal{B}\) be the collection of all sets of the following types:
@@ -327,7 +327,7 @@ The notation used here is familiar to you already in the case where \(X\) is the
 
 (2) All intervals of the form \([  {{a}_{0},b})\) , where \({a}_{0}\) is the smallest element (if any) of \(X\) .
 
-(3) All intervals of the form \(( {a,{b}_{0}}]\) , where \({b}_{0}\) is the largest element (if any) of \(X\) . The collection \(\mathcal{B}\) is a basis for a topology on \(X\) , which is called the \index{Order topology}order topology.
+(3) All intervals of the form \(( {a,{b}_{0}}]\) , where \({b}_{0}\) is the largest element (if any) of \(X\) . The collection \(\mathcal{B}\) is a basis for a topology on \(X\) , which is called the \index{order topology@Order topology}order topology.
 \end{definition}
 
 If \(X\) has no smallest element, there are no sets of type (2), and if \(X\) has no largest element, there are no sets of type (3).
@@ -390,19 +390,19 @@ The order topology on \(X\) is not the discrete topology. Most one-point sets ar
 ( - \infty ,a\rbrack  = \{ x \mid  x \leq  a\} .
 \]
 
-Sets of the first two types are called \index{open ray}, and sets of the last two types are called \index{closed ray}.
+Sets of the first two types are called \index{Open ray}, and sets of the last two types are called \index{Closed ray}.
 \end{definition}
 
-The use of the term ``open'' suggests that \index{Open ray}open rays in \(X\) are open sets in the order topology. And so they are. Consider, for example, the ray \(( {a, + \infty })\) . If \(X\) has a largest element \({b}_{0}\) , then \(( {a, + \infty })\) equals the basis element \(( {a,{b}_{0}}]\) . If \(X\) has no largest element, then \(( {a, + \infty })\) equals the union of all basis elements of the form(a, x), for \(x > a\) . In either case, \(( {a, + \infty })\) is open. A similar argument applies to the ray \(( {-\infty ,a})\) .
+The use of the term ``open'' suggests that \index{open ray@Open ray}open rays in \(X\) are open sets in the order topology. And so they are. Consider, for example, the ray \(( {a, + \infty })\) . If \(X\) has a largest element \({b}_{0}\) , then \(( {a, + \infty })\) equals the basis element \(( {a,{b}_{0}}]\) . If \(X\) has no largest element, then \(( {a, + \infty })\) equals the union of all basis elements of the form(a, x), for \(x > a\) . In either case, \(( {a, + \infty })\) is open. A similar argument applies to the ray \(( {-\infty ,a})\) .
 
 The open rays, in fact, form a subbasis for the order topology on \(X\) , as we now show Because the open rays are open in the order topology, the topology they generate is contained in the order topology. On the other hand, every basis element for the order topology equals a finite intersection of open rays; the interval(a, b)equals the intersection of \(( {-\infty ,b})\) and \(( {a, + \infty })\) , while \([  {{a}_{0},b})\) and \(( {a,{b}_{0}}]\) , if they exist, are themselves open rays. Hence the topology generated by the open rays contains the order topology
 
 \section*{§ 15 The Product Topology on \(X \times  Y\)}
 
-If \(X\) and \(Y\) are topological spaces, there is a standard way of defining a topology on the cartesian \index{Product: of continuous maps} product \(X \times  Y\) . We consider this topology now and study some of its properties.
+If \(X\) and \(Y\) are topological spaces, there is a standard way of defining a topology on the cartesian \index{product: of continuous maps@Product: of continuous maps} product \(X \times  Y\) . We consider this topology now and study some of its properties.
 
 \begin{definition}
-	Let \(X\) and \(Y\) be topological spaces. The \index{product topology} on \(X \times  Y\) is the topology having as basis the collection \(\mathcal{B}\) of all sets of the form \(U \times  V\) , where \(U\) is an open subset of \(X\) and \(V\) is an open subset of \(Y\) .
+	Let \(X\) and \(Y\) be topological spaces. The \index{Product topology} on \(X \times  Y\) is the topology having as basis the collection \(\mathcal{B}\) of all sets of the form \(U \times  V\) , where \(U\) is an open subset of \(X\) and \(V\) is an open subset of \(Y\) .
 \end{definition}
 
 Let us check that \(\mathcal{B}\) is a basis. The first condition is trivial, since \(X \times  Y\) is itself a basis element. The second condition is almost as easy, since the intersection of any two basis elements \({U}_{1} \times  {V}_{1}\) and \({U}_{2} \times  {V}_{2}\) is another basis element. For
@@ -435,12 +435,12 @@ Figure 15.1
 
 \end{theorem}
 \begin{proof}
-We apply Lemma 13.2. Given an open set \(W\) of \(X \times  Y\) and a point \(x \times  y\) of \(W\) , by definition of the \index{Product topology}product topology there is a basis element \(U \times  V\) such that \(x \times  y \in  U \times  V \subset  W\) . Because \(\mathcal{B}\) and \(\mathcal{C}\) are bases for \(X\) and \(Y\) , respectively, we can choose an element \(B\) of \(\mathcal{B}\) such that \(x \in  B \subset  U\) , and an element \(C\) of \(\mathcal{C}\) such that \(y \in  C \subset  V\) . Then \(x \times  y \in  B \times  C \subset  W\) . Thus the collection \(\mathcal{D}\) meets the criterion of Lemma 13.2, so \(\mathcal{D}\) is a basis for \(X \times  Y\) .
+We apply Lemma 13.2. Given an open set \(W\) of \(X \times  Y\) and a point \(x \times  y\) of \(W\) , by definition of the \index{product topology@Product topology}product topology there is a basis element \(U \times  V\) such that \(x \times  y \in  U \times  V \subset  W\) . Because \(\mathcal{B}\) and \(\mathcal{C}\) are bases for \(X\) and \(Y\) , respectively, we can choose an element \(B\) of \(\mathcal{B}\) such that \(x \in  B \subset  U\) , and an element \(C\) of \(\mathcal{C}\) such that \(y \in  C \subset  V\) . Then \(x \times  y \in  B \times  C \subset  W\) . Thus the collection \(\mathcal{D}\) meets the criterion of Lemma 13.2, so \(\mathcal{D}\) is a basis for \(X \times  Y\) .
 \end{proof}
 
 \begin{centeredblock}
 \begin{example}
-	We have a standard topology on \(\mathbb{R}\) the order topology The product of this topology with itself is called the standard topology on \(\mathbb{R} \times  \mathbb{R} = {\mathbb{R}}^{2}\) . It has as basis the collection of all \index{Quotient map!products}products of open sets of \(\mathbb{R}\) , but the theorem just proved tells us that the much smaller collection of all products \(( {a,b})  \times  ( {c,d})\) of open intervals in \(\mathbb{R}\) will also serve as a basis for the topology of \({\mathbb{R}}^{2}\) Each such set can be pictured as the \index{Int A} interior of a rectangle in \({\mathbb{R}}^{2}\) . Thus the standard topology on \({\mathbb{R}}^{2}\) is just the one we considered in Example 2 of \(§{13}\)
+	We have a standard topology on \(\mathbb{R}\) the order topology The product of this topology with itself is called the standard topology on \(\mathbb{R} \times  \mathbb{R} = {\mathbb{R}}^{2}\) . It has as basis the collection of all \index{Quotient map!products}products of open sets of \(\mathbb{R}\) , but the theorem just proved tells us that the much smaller collection of all products \(( {a,b})  \times  ( {c,d})\) of open intervals in \(\mathbb{R}\) will also serve as a basis for the topology of \({\mathbb{R}}^{2}\) Each such set can be pictured as the \index{int a@Int A} interior of a rectangle in \({\mathbb{R}}^{2}\) . Thus the standard topology on \({\mathbb{R}}^{2}\) is just the one we considered in Example 2 of \(§{13}\)
 \end{example}
 \end{centeredblock}
 
@@ -501,7 +501,7 @@ Therefore, \(U \times  V\) belongs to \({\mathcal{T}}^{\prime }\) , so that \(\m
 
 \section*{§ 16 The Subspace Topology}
 
-\index{Subspace Topology}
+\index{subspace topology@Subspace Topology}
 \begin{definition}
 	Let \(X\) be a topological space with topology \(\mathcal{T}\) . If \(Y\) is a subset of \(X\) , the collection
 
@@ -509,7 +509,7 @@ Therefore, \(U \times  V\) belongs to \({\mathcal{T}}^{\prime }\) , so that \(\m
 {\mathcal{T}}_{Y} = \{ Y \cap  U \mid  U \in  \mathcal{T}\}
 \]
 
-is a topology on \(Y\) , called the \index{Subspace topology}subspace topology. With this topology, \(Y\) is called a subspace of \(X\) ; its open sets consist of all intersections of open sets of \(X\) with \(Y\) .
+is a topology on \(Y\) , called the \index{subspace topology@Subspace topology}subspace topology. With this topology, \(Y\) is called a subspace of \(X\) ; its open sets consist of all intersections of open sets of \(X\) with \(Y\) .
 \end{definition}
 
 It is easy to see that \({\mathcal{T}}_{Y}\) is a topology. It contains \(\varnothing\) and \(Y\) because
@@ -606,11 +606,11 @@ for some \(a \in  Y\) , such a set necessarily contains points of \(Y\) less tha
 \end{example}
 \end{centeredblock}
 
-The set \(I \times  I\) in the dictionary order topology will be called the ordered \index{Square metric (see also )} square, and denoted by \(\index{I@\({I}_{o}^{2}\)} {I}_{o}^{2}\) .
+The set \(I \times  I\) in the dictionary order topology will be called the ordered \index{square metric (see also )@Square metric (see also )} square, and denoted by \(\index{I@\({I}_{o}^{2}\)} {I}_{o}^{2}\) .
 
 The anomaly illustrated in Examples 2 and 3 does not occur for intervals or rays in an ordered set \(X\) . This we now prove.
 
-Given an ordered set \(X\) , let us say that a subset \(Y\) of \(X\) is \index{Convex set: in an ordered set} convex in \(X\) if for each pair of points \(a < b\) of \(Y\) , the entire interval(a, b)of points of \(X\) lies in \(Y\) . Note that intervals and rays in \(X\) are convex in \(X\) .
+Given an ordered set \(X\) , let us say that a subset \(Y\) of \(X\) is \index{convex set: in an ordered set@Convex set: in an ordered set} convex in \(X\) if for each pair of points \(a < b\) of \(Y\) , the entire interval(a, b)of points of \(X\) lies in \(Y\) . Note that intervals and rays in \(X\) are convex in \(X\) .
 
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/16.1.jpg}
@@ -644,7 +644,7 @@ To avoid ambiguity, let us agree that whenever \(X\) is an ordered set in the or
 \item Show that if \(Y\) is a subspace of \(X\) , and \(A\) is a subset of \(Y\) , then the topology \(A\) inherits as a subspace of \(Y\) is the same as the topology it inherits as a subspace of \(X\) .
 \item If \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\) are topologies on \(X\) and \({\mathcal{T}}^{\prime }\) is strictly finer than \(\mathcal{T}\) , what can you say about the corresponding subspace topologies on the subset \(Y\) of \(X\) ?
 \item Consider the set \(Y = \{  - 1,1\}\) as a subspace of \(\mathbb{R}\) . Which of the following sets are open in \(Y\) ? Which are open in \(\mathbb{R}\) ? \[ A = \{  {x| {\frac{1}{2} < }| x \mid   < 1}\}  , \] \[ B = \{  {x| {\frac{1}{2} < }| x \mid   \leq  1}\}  , \] \[ C = \{  {x| {\frac{1}{2} \leq  }| x \mid   < 1}\}  , \] \[ D = \{  {x| {\frac{1}{2} \leq  }| x \mid   \leq  1}\}  \text{ , } \] \[ E = \{  {x| {0 < }| x \mid   < 1\text{ and }1/x \notin  {\mathbb{Z}}_{ + }}\}  . \]
-\item A map \(f : X \rightarrow  Y\) is said to be an \index{open map} if for every open set \(U\) of \(X\) , the set \(f( U)\) is open in \(Y\) . Show that \({\pi }_{1} : X \times  Y \rightarrow  X\) and \({\pi }_{2} : X \times  Y \rightarrow  Y\) are \index{Open map}open maps.
+\item A map \(f : X \rightarrow  Y\) is said to be an \index{Open map} if for every open set \(U\) of \(X\) , the set \(f( U)\) is open in \(Y\) . Show that \({\pi }_{1} : X \times  Y \rightarrow  X\) and \({\pi }_{2} : X \times  Y \rightarrow  Y\) are \index{open map@Open map}open maps.
 \item Let \(X\) and \({X}^{\prime }\) denote a single set in the topologies \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\) , respectively; let \(Y\) and \({Y}^{\prime }\) denote a single set in the topologies \(\mathcal{U}\) and \({\mathcal{U}}^{\prime }\) , respectively. Assume these sets are nonempty.
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that if \({\mathcal{T}}^{\prime } \supset  \mathcal{T}\) and \({\mathcal{U}}^{\prime } \supset  \mathcal{U}\) , then the product topology on \({X}^{\prime } \times  {Y}^{\prime }\) is finer than the product topology on \(X \times  Y\) .
@@ -658,7 +658,7 @@ To avoid ambiguity, let us agree that whenever \(X\) is an ordered set in the or
 \end{enumerate}
 \section*{§ 17 Closed Sets and Limit Points}
 
-Now that we have a few examples at hand, we can introduce some of the basic concepts associated with topological spaces. In this section, we treat the notions of closed set, \index{Closure (cont.)} closure of a set, and limit point. These lead naturally to consideration of a certain axiom for topological spaces called the Hausdorff axiom.
+Now that we have a few examples at hand, we can introduce some of the basic concepts associated with topological spaces. In this section, we treat the notions of closed set, \index{closure (cont.)@Closure (cont.)} closure of a set, and limit point. These lead naturally to consideration of a certain axiom for topological spaces called the Hausdorff axiom.
 
 \section*{Closed Sets}
 
@@ -672,7 +672,7 @@ A subset \(A\) of a topological space \(X\) is said to be closed if the set \(X 
 \mathbb{R} - [  {a,b}]   = ( {-\infty ,a})  \cup  ( {b, + \infty }) ,
 \]
 
-is open. Similarly, \(\lbrack a, + \infty )\) is closed, because its complement \(( {-\infty ,a})\) is open. These facts justify our use of the terms ``\index{Closed interval}closed interval'' and ``\index{Closed ray}closed ray'' The subset \(\lbrack a,b)\) of \(\mathbb{R}\) is neither open nor closed.
+is open. Similarly, \(\lbrack a, + \infty )\) is closed, because its complement \(( {-\infty ,a})\) is open. These facts justify our use of the terms ``\index{closed interval@Closed interval}closed interval'' and ``\index{closed ray@Closed ray}closed ray'' The subset \(\lbrack a,b)\) of \(\mathbb{R}\) is neither open nor closed.
 \end{example}
 \end{centeredblock}
 
@@ -751,7 +751,7 @@ X - \mathop{\bigcup }\limits_{{i = 1}}^{n}{A}_{i} = \mathop{\bigcap }\limits_{{i
 
 The set on the right side of this equation is a finite intersection of open sets and is therefore open. Hence \(\bigcup {A}_{i}\) is closed.
 
-Instead of using open sets, one could just as well specify a topology on a space by giving a collection of sets (to be called ``\index{Closed set}closed sets'') satisfying the three properties of this theorem. One could then define open sets as the complements of closed sets and proceed just as before. This procedure has no particular advantage over the one we have adopted, and most mathematicians prefer to use open sets to define topologies.
+Instead of using open sets, one could just as well specify a topology on a space by giving a collection of sets (to be called ``\index{closed set@Closed set}closed sets'') satisfying the three properties of this theorem. One could then define open sets as the complements of closed sets and proceed just as before. This procedure has no particular advantage over the one we have adopted, and most mathematicians prefer to use open sets to define topologies.
 
 Now when dealing with subspaces, one needs to be careful in using the term ``closed set.'' If \(Y\) is a subspace of \(X\) , we say that a set \(A\) is closed in \(Y\) if \(A\) is a subset of \(Y\) and if \(A\) is closed in the subspace topology of \(Y\) (that is, if \(Y - A\) is open in \(Y\) ). We have the following theorem:
 \end{proof}
@@ -787,7 +787,7 @@ The interior of \(A\) is denoted by Int \(A\) and the closure of \(A\) is denote
 
 If \(A\) is open, \(A = \operatorname{Int}A\) ; while if \(A\) is closed, \(A = \bar{A}\) .
 
-We shall not make much use of the interior of a set, but the \index{Closure}closure of a set will be quite important.
+We shall not make much use of the interior of a set, but the \index{closure@Closure}closure of a set will be quite important.
 
 When dealing with a topological space \(X\) and a subspace \(Y\) , one needs to exercise care in taking closures of sets If \(A\) is a subset of \(Y\) , the closure of \(A\) in \(Y\) and the closure of \(A\) in \(X\) will in general be different In such a situation, we reserve the notation \(\bar{A}\) to stand for the closure of \(A\) in \(X\) . The closure of \(A\) in \(Y\) can be expressed in terms of \(\bar{A}\) , as the following theorem shows:
 
@@ -802,7 +802,7 @@ On the other hand, we know that \(B\) is closed in \(Y\) . Hence by Theorem 17.2
 
 The definition of the closure of a set does not give us a convenient way for actually finding the closures of specific sets, since the collection of all closed sets in \(X\) , like the collection of all open sets, is usually much too big to work with. Another way of describing the closure of a set, useful because it involves only a basis for the topology of \(X\) , is given in the following theorem.
 
-First let us introduce some convenient terminology. We shall say that a set \(A\) intersects a set \(B\) if the intersection \(A \cap  B\) is not empty.
+First let us introduce some convenient terminology. We shall say that a set \(A\) intersects a set \(B\) if the intersection \(A \cap  B\) is not empty\index{Axiom of choice!vs. nonemptiness of product}.
 \end{proof}
 
 \begin{theorem}
@@ -830,12 +830,12 @@ Mathematicians often use some special terminology here. They shorten the stateme
 
 Using this terminology, one can write the first half of the preceding theorem as follows:
 
-If \(A\) is a subset of the topological space \(X\) , then \(x \in  \widehat{A}\) if and only if every \index{neighborhood} of \(x\) intersects \(A\) .
+If \(A\) is a subset of the topological space \(X\) , then \(x \in  \widehat{A}\) if and only if every \index{Neighborhood} of \(x\) intersects \(A\) .
 \end{proof}
 
 \begin{centeredblock}
 \begin{example}
-	Let \(X\) be the real line \(\mathbb{R}\) . If \(A = (0,1\rbrack\) , then \(\bar{A} = [  {0,1}]\) , for every \index{Neighborhood}neighborhood of 0 intersects \(A\) , while every point outside \([  {0,1}]\) has a neighborhood disjoint from \(A\) Similar arguments apply to the following subsets of \(X\)
+	Let \(X\) be the real line \(\mathbb{R}\) . If \(A = (0,1\rbrack\) , then \(\bar{A} = [  {0,1}]\) , for every \index{neighborhood@Neighborhood}neighborhood of 0 intersects \(A\) , while every point outside \([  {0,1}]\) has a neighborhood disjoint from \(A\) Similar arguments apply to the following subsets of \(X\)
 
 If \(B = \{  {1/n \mid  n \in  {\mathbb{Z}}_{ + }}\}\) , then \(\bar{B} = \{ 0\}  \cup  B\) If \(C = \{ 0\}  \cup  ( {1,2})\) , then \(\bar{C} = \{ 0\}  \cup  [  {1,2}]\) If \(\mathbb{Q}\) is the set of rational numbers, then \(\widehat{\mathbb{Q}} = \mathbb{R}\) If \({\mathbb{Z}}_{ + }\) is the set of positive integers, then \({\overline{\mathbb{Z}}}_{ + } = {\mathbb{Z}}_{ + }\) . If \({\mathbb{R}}_{ + }\) is the set of positive reals, then the closure of \({\mathbb{R}}_{ + }\) is the set \({\mathbb{R}}_{ + } \cup  \{ 0\}\) . (This is the reason we introduced the notation \({\overline{\mathbb{R}}}_{ + }\) for the set \({\mathbb{R}}_{ + } \cup  \{ 0\}\) , back in \(\$ 2\) )
 \end{example}
@@ -857,13 +857,13 @@ If \(A\) is a subset of the topological space \(X\) and if \(x\) is a point of \
 
 \begin{centeredblock}
 \begin{example}
-	Consider the real line \(\mathbb{R}\) . If \(A = (0,1\rbrack\) , then the point 0 is a limit point of \(A\) and so is the point \(\frac{1}{2}\) . In fact, every point of the interval \([  {0,1}]\) is a \index{Limit point}limit point of \(A\) , but no other point of \(\mathbb{R}\) is a limit point of \(A\)
+	Consider the real line \(\mathbb{R}\) . If \(A = (0,1\rbrack\) , then the point 0 is a limit point of \(A\) and so is the point \(\frac{1}{2}\) . In fact, every point of the interval \([  {0,1}]\) is a \index{limit point@Limit point}limit point of \(A\) , but no other point of \(\mathbb{R}\) is a limit point of \(A\)
 
 If \(B = \{  {1/n \mid  n \in  {\mathbb{Z}}_{ + }}\}\) , then 0 is the only limit point of \(B\) . Every other point \(x\) of \(\mathbb{R}\) has a neighborhood that either does not intersect \(B\) at all, or it intersects \(B\) only in the point \(x\) itself. If \(C = \{ 0\}  \cup  ( {1,2})\) , then the limit points of \(C\) are the points of the interval \([  {1,2}]\) . If \(\mathbb{Q}\) is the set of rational numbers, every point of \(\mathbb{R}\) is a limit point of \(\mathbb{Q}\) . If \({\mathbb{Z}}_{ + }\) is the set of positive integers, no point of \(\mathbb{R}\) is a limit point of \({\mathbb{Z}}_{ + }\) . If \({\mathbb{R}}_{ + }\) is the set of positive reals, then every point of \(\{ 0\}  \cup  {\mathbb{R}}_{ + }\) is a limit point of \({\mathbb{R}}_{ + }\)
 \end{example}
 \end{centeredblock}
 
-\index{Comparison test for infinite series} Comparison of Examples 6 and 8 suggests a relationship between the closure of a set and the limit points of a set. That relationship is given in the following theorem:
+\index{comparison test for infinite series@Comparison test for infinite series} Comparison of Examples 6 and 8 suggests a relationship between the closure of a set and the limit points of a set. That relationship is given in the following theorem:
 
 \begin{theorem}
 	Let \(A\) be a subset of the topological space \(X\) , let \({A}^{\prime }\) be the set of all limit points of \(A\) . Then
@@ -896,12 +896,12 @@ One's experience with open and closed sets and limit points in the real line and
 
 Figure 17.3
 
-Similarly, one's experience with the properties of \index{convergent sequence} in \(\mathbb{R}\) and \({\mathbb{R}}^{2}\) can be misleading when one deals with more general topological spaces. In an arbitrary topological space, one says that a sequence \({x}_{1},{x}_{2},\ldots\) of points of the space \(X\) converges to the point \(x\) of \(X\) provided that, corresponding to each neighborhood \(U\) of \(x\) , there is a positive integer \(N\) such that \({x}_{n} \in  U\) for all \(n \geq  N\) . In \(\mathbb{R}\) and \({\mathbb{R}}^{2}\) , a sequence cannot converge to more than one point, but in an arbitrary space, it can. In the space indicated in Figure 17.3, for example, the sequence defined by setting \({x}_{n} = b\) for all \(n\) converges not only to the point \(b\) , but also to the point \(a\) and to the point \(c\) !
+Similarly, one's experience with the properties of \index{Convergent sequence} in \(\mathbb{R}\) and \({\mathbb{R}}^{2}\) can be misleading when one deals with more general topological spaces. In an arbitrary topological space, one says that a sequence \({x}_{1},{x}_{2},\ldots\) of points of the space \(X\) converges to the point \(x\) of \(X\) provided that, corresponding to each neighborhood \(U\) of \(x\) , there is a positive integer \(N\) such that \({x}_{n} \in  U\) for all \(n \geq  N\) . In \(\mathbb{R}\) and \({\mathbb{R}}^{2}\) , a sequence cannot converge to more than one point, but in an arbitrary space, it can. In the space indicated in Figure 17.3, for example, the sequence defined by setting \({x}_{n} = b\) for all \(n\) converges not only to the point \(b\) , but also to the point \(a\) and to the point \(c\) !
 
-Topologies in which one-point sets are not closed, or in which sequences can converge to more than one point, are considered by many mathematicians to be somewhat strange. They are not really very interesting, for they seldom occur in other branches of mathematics And the theorems that one can prove about topological spaces are rather limited if such examples are allowed. Therefore, one often imposes an additional condition that will rule out examples like this one, bringing the class of spaces under consideration closer to those to which one's geo\index{Metric}metric intuition applies. The condition was suggested by the mathematician Felix Hausdorff, so mathematicians have come to call it by his name.
+Topologies in which one-point sets are not closed, or in which sequences can converge to more than one point, are considered by many mathematicians to be somewhat strange. They are not really very interesting, for they seldom occur in other branches of mathematics And the theorems that one can prove about topological spaces are rather limited if such examples are allowed. Therefore, one often imposes an additional condition that will rule out examples like this one, bringing the class of spaces under consideration closer to those to which one's geo\index{metric@Metric}metric intuition applies. The condition was suggested by the mathematician Felix Hausdorff, so mathematicians have come to call it by his name.
 
 \begin{definition}
-	A topological space \(X\) is called a \index{Hausdorff space} if for each pair \({x}_{1},{x}_{2}\) of distinct points of \(X\) , there exist neighborhoods \({U}_{1}\) , and \({U}_{2}\) of \({x}_{1}\) and \({x}_{2}\) , respectively, that are disjoint.
+	A topological space \(X\) is called a \index{hausdorff space@Hausdorff space} if for each pair \({x}_{1},{x}_{2}\) of distinct points of \(X\) , there exist neighborhoods \({U}_{1}\) , and \({U}_{2}\) of \({x}_{1}\) and \({x}_{2}\) , respectively, that are disjoint.
 \end{definition}
 
 \section*{Theorem 17.8. Every finite point set in a Hausdorff space \(X\) is closed.}
@@ -909,7 +909,7 @@ Topologies in which one-point sets are not closed, or in which sequences can con
 \begin{proof}
 It suffices to show that every one-point set \(\{  {x}_{0}\}\) is closed. If \(x\) is a point of \(X\) different from \({x}_{0}\) , then \(x\) and \({x}_{0}\) have disjoint neighborhoods \(U\) and \(V\) , respectively. Since \(U\) does not intersect \(\{  {x}_{0}\}\) , the point \(x\) cannot belong to the closure of the set \(\{  {x}_{0}\}\) . As a result, the closure of the set \(\{  {x}_{0}\}\) is \(\{  {x}_{0}\}\) itself, so that it is closed.
 
-The condition that finite point sets be closed is in fact weaker than the \index{Hausdorff condition} For example, the real line \(\mathbb{R}\) in the finite complement topology is not a Hausdorff space, but it is a space in which finite point sets are closed The condition that finite point sets be closed has been given a name of its own: it is called the \({T}_{1}{ax}\) - iom. (We shall explain the reason for this strange terminology in Chapter 4.) The \({T}_{1}\) axiom will appear in this book in a few exercises, and in just one theorem, which is the following:
+The condition that finite point sets be closed is in fact weaker than the \index{hausdorff condition@Hausdorff condition} For example, the real line \(\mathbb{R}\) in the finite complement topology is not a Hausdorff space, but it is a space in which finite point sets are closed The condition that finite point sets be closed has been given a name of its own: it is called the \({T}_{1}{ax}\) - iom. (We shall explain the reason for this strange terminology in Chapter 4.) The \({T}_{1}\) axiom will appear in this book in a few exercises, and in just one theorem, which is the following:
 \end{proof}
 
 \begin{theorem}
@@ -927,7 +927,7 @@ U \cap  ( {X - \{  {{x}_{1},\ldots ,{x}_{m}}\}  })
 
 is a neighborhood of \(x\) that intersects the set \(A - \{ x\}\) not at all. This contradicts the assumption that \(x\) is a limit point of \(A\) .
 
-One reason for our lack of interest in the \({T}_{1}\) axiom is the fact that many of the interesting theorems of topology require not just that axiom, but the full strength of the Hausdorff axiom. Furthermore, most of the spaces that are important to mathematicians are \index{Hausdorff space}Hausdorff spaces. The following two theorems give some substance to these remarks.
+One reason for our lack of interest in the \({T}_{1}\) axiom is the fact that many of the interesting theorems of topology require not just that axiom, but the full strength of the Hausdorff axiom. Furthermore, most of the spaces that are important to mathematicians are \index{hausdorff space@Hausdorff space}Hausdorff spaces. The following two theorems give some substance to these remarks.
 \end{proof}
 
 \begin{theorem}
@@ -974,7 +974,7 @@ We shall study a number of such conditions in the next two chapters. The Hausdor
 \item Show that every order topology is Hausdorff.
 \item Show that the product of two Hausdorff spaces is Hausdorff.
 \item Show that a subspace of a Hausdorff space is Hausdorff.
-\item Show that \(X\) is Hausdorff if and only if the \index{diagonal} \(\Delta  = \{ x \times  x \mid  x \in  X\}\) is closed in \(X \times  X\) .
+\item Show that \(X\) is Hausdorff if and only if the \index{Diagonal} \(\Delta  = \{ x \times  x \mid  x \in  X\}\) is closed in \(X \times  X\) .
 \item In the finite complement topology on \(\mathbb{R}\) , to what point or points does the sequence \({x}_{n} = 1/n\) converge?
 \item Show the \({T}_{1}\) axiom is equivalent to the condition that for each pair of points of \(X\) , each has a neighborhood not containing the other.
 \item Consider the five topologies on \(\mathbb{R}\) given in Exercise 7 of \(§{13}\) .
@@ -983,8 +983,8 @@ We shall study a number of such conditions in the next two chapters. The Hausdor
   \item Which of these topologies satisfy the Hausdorff axiom? the \({T}_{1}\) axiom?
   \end{enumerate}
 \item Consider the lower limit topology on \(\mathbb{R}\) and the topology given by the basis \(\mathcal{C}\) of Exercise 8 of \(§{13}\) . Determine the closures of the intervals \(A = ( {0,\sqrt{2}})\) and \(B = ( {\sqrt{2},3})\) in these two topologies.
-\item Determine the closures of the following subsets of the \index{Ordered square}ordered square: \[ A = \{  {( {1/n})  \times  0 \mid  n \in  {\mathbb{Z}}_{ + }}\}  , \] \[ B = \{  {( {1 - 1/n})  \times  \frac{1}{2} \mid  n \in  {\mathbb{Z}}_{ + }}\}  , \] \[ C = \{ x \times  0 \mid  0 < x < 1\} , \] \[ D = \{  {x \times  \frac{1}{2} \mid  0 < x < 1}\}  , \] \[ E = \{  {\frac{1}{2} \times  y \mid  0 < y < 1}\}  . \]
-\item If \(A \subset  X\) , we define the \index{Boundary: of a set} boundary of \(A\) by the equation \[ \text{ Bd }A = \bar{A} \cap  ( \overline{X - A}) \text{ . } \]
+\item Determine the closures of the following subsets of the \index{ordered square@Ordered square}ordered square: \[ A = \{  {( {1/n})  \times  0 \mid  n \in  {\mathbb{Z}}_{ + }}\}  , \] \[ B = \{  {( {1 - 1/n})  \times  \frac{1}{2} \mid  n \in  {\mathbb{Z}}_{ + }}\}  , \] \[ C = \{ x \times  0 \mid  0 < x < 1\} , \] \[ D = \{  {x \times  \frac{1}{2} \mid  0 < x < 1}\}  , \] \[ E = \{  {\frac{1}{2} \times  y \mid  0 < y < 1}\}  . \]
+\item If \(A \subset  X\) , we define the \index{boundary: of a set@Boundary: of a set} boundary of \(A\) by the equation \[ \text{ Bd }A = \bar{A} \cap  ( \overline{X - A}) \text{ . } \]
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that Int \(A\) and Bd \(A\) are disjoint, and \(\bar{A} = \operatorname{Int}A \cup  \operatorname{Bd}A\) .
   \item Show that Bd \(A = \varnothing  \Leftrightarrow  A\) is both open and closed.
@@ -998,14 +998,14 @@ We shall study a number of such conditions in the next two chapters. The Hausdor
   \item \(C = A \cup  B\)
   \item \(D = \{ x \times  y \mid  x\) is rational \(\}\)
   \item \(E = \{  {x \times  y \mid  0 < {x}^{2} - {y}^{2} \leq  1}\}\)
-  \item \(F = \{ x \times  y \mid  x \neq  0\) and \(y \leq  1/x\}\) *21. (\index{Kuratowski 14-set problem} Kuratowski) Consider the collection of all subsets \(A\) of the topological space \(X\) . The operations of closure \(A \rightarrow  \bar{A}\) and complementation \(A \rightarrow  X - A\) are functions from this collection to itself.
+  \item \(F = \{ x \times  y \mid  x \neq  0\) and \(y \leq  1/x\}\) *21. (\index{kuratowski 14-set problem@Kuratowski 14-set problem} Kuratowski) Consider the collection of all subsets \(A\) of the topological space \(X\) . The operations of closure \(A \rightarrow  \bar{A}\) and complementation \(A \rightarrow  X - A\) are functions from this collection to itself.
   \item Show that starting with a given set \(A\) , one can form no more than 14 distinct sets by applying these two operations successively.
   \item Find a subset \(A\) of \(\mathbb{R}\) (in its usual topology) for which the maximum of 14 is obtained
   \end{enumerate}
 \end{enumerate}
 \section*{§ 18 Continuous Functions}
 
-The concept of continuous function is basic to much of mathematics. Continuous functions on the real line appear in the first pages of any calculus book, and continuous functions in the plane and in space follow not far behind. More general kinds of continuous functions arise as one goes further in mathematics. In this section, we shall formulate a definition of \index{Continuity: of algebraic operations in} continuity that will include all these as special cases, and we shall study various properties of continuous functions. Many of these properties are direct generalizations of things you learned about continuous functions in calculus and analysis.
+The concept of continuous function is basic to much of mathematics. Continuous functions on the real line appear in the first pages of any calculus book, and continuous functions in the plane and in space follow not far behind. More general kinds of continuous functions arise as one goes further in mathematics. In this section, we shall formulate a definition of \index{continuity: of algebraic operations in@Continuity: of algebraic operations in} continuity that will include all these as special cases, and we shall study various properties of continuous functions. Many of these properties are direct generalizations of things you learned about continuous functions in calculus and analysis.
 
 \section*{Continuity of a Function}
 
@@ -1049,7 +1049,7 @@ In analysis, one defines continuity of \(f\) via the `` \(\epsilon  - \delta\) d
 
 Given \({x}_{0}\) in \(\mathbb{R}\) , and given \(\epsilon  > 0\) , the interval \(V = ( {f( {x}_{0})  - \epsilon ,f( {x}_{0})  + \epsilon })\) is an open set of the range space \(\mathbb{R}\) Therefore, \({f}^{-1}( V)\) is an open set in the domain space \(\mathbb{R}\) . Because \({f}^{-1}( V)\) contains the point \({x}_{0}\) , it contains some basis element(a, b)about \({x}_{0}\) We choose \(\delta\) to be the smaller of the two numbers \({x}_{0} - a\) and \(b - {x}_{0}\) Then if \(| {x - {x}_{0}}|  < \delta\) , the point \(x\) must be in(a, b), so that \(f( x)  \in  V\) , and \(| {f( x)  - f( {x}_{0}) }|  < \epsilon\) , as desired.
 
-Proving that the \(\epsilon  - \delta\) definition implies our definition is no harder; we leave it to you. We shall return to this example when we study \index{Metric space}metric spaces
+Proving that the \(\epsilon  - \delta\) definition implies our definition is no harder; we leave it to you. We shall return to this example when we study \index{metric space@Metric space}metric spaces
 \end{example}
 \end{centeredblock}
 
@@ -1067,7 +1067,7 @@ Proving that the \(\epsilon  - \delta\) definition implies our definition is no 
 
 \(f.{\mathbb{R}}^{2} \rightarrow  {\mathbb{R}}^{2}\;\) (vector fields \(\mathbf{v}( {x,y})\) in the plane).
 
-Each of them has a notion of continuity defined for it. Our general definition of continuity includes all these as special cases, this fact will be a consequence of general theorems we shall prove concerning continuous functions on \index{product space} and on metric spaces.
+Each of them has a notion of continuity defined for it. Our general definition of continuity includes all these as special cases, this fact will be a consequence of general theorems we shall prove concerning continuous functions on \index{Product space} and on metric spaces.
 \end{example}
 \end{centeredblock}
 
@@ -1139,9 +1139,9 @@ Let \(X\) and \(Y\) be topological spaces; let \(f : X \rightarrow  Y\) be a bij
 {f}^{-1} : Y \rightarrow  X
 \]
 
-are continuous, then \(f\) is called a \index{homeomorphism}.
+are continuous, then \(f\) is called a \index{Homeomorphism}.
 
-The condition that \({f}^{-1}\) be continuous says that for each open set \(U\) of \(X\) , the inverse image of \(U\) under the map \({f}^{-1} : Y \rightarrow  X\) is open in \(Y\) But the inverse image of \(U\) under the map \({f}^{-1}\) is the same as the image of \(U\) under the map \(f\) . See Figure 18.I. So another way to define a \index{Homeomorphism}homeomorphism is to say that it is a bijective correspondence \(f : X \rightarrow  Y\) such that \(f( U)\) is open if and only if \(U\) is open.
+The condition that \({f}^{-1}\) be continuous says that for each open set \(U\) of \(X\) , the inverse image of \(U\) under the map \({f}^{-1} : Y \rightarrow  X\) is open in \(Y\) But the inverse image of \(U\) under the map \({f}^{-1}\) is the same as the image of \(U\) under the map \(f\) . See Figure 18.I. So another way to define a \index{homeomorphism@Homeomorphism}homeomorphism is to say that it is a bijective correspondence \(f : X \rightarrow  Y\) such that \(f( U)\) is open if and only if \(U\) is open.
 
 \begin{center}
 \includegraphics[width=0.9\textwidth]{images/18.1.jpg}
@@ -1150,11 +1150,11 @@ The condition that \({f}^{-1}\) be continuous says that for each open set \(U\) 
 
 Figure 18.1
 
-This remark shows that a homeomorphism \(f : X \rightarrow  Y\) gives us a bijective correspondence not only between \(X\) and \(Y\) but between the collections of open sets of \(X\) and of \(Y\) . As a result, any property of \(X\) that is entirely expressed in terms of the topology of \(X\) (that is, in terms of the open sets of \(X\) ) yields, via the correspondence \(f\) , the corresponding property for the space \(Y\) . Such a property of \(X\) is called a \index{topological property} of \(X\) .
+This remark shows that a homeomorphism \(f : X \rightarrow  Y\) gives us a bijective correspondence not only between \(X\) and \(Y\) but between the collections of open sets of \(X\) and of \(Y\) . As a result, any property of \(X\) that is entirely expressed in terms of the topology of \(X\) (that is, in terms of the open sets of \(X\) ) yields, via the correspondence \(f\) , the corresponding property for the space \(Y\) . Such a property of \(X\) is called a \index{Topological property} of \(X\) .
 
-You may have studied in modern algebra the notion of an \index{isomorphism} between algebraic objects such as groups or rings. An isomorphism is a bijective correspondence that preserves the algebraic structure involved. The analogous concept in topology is that of homeomorphism; it is a bijective correspondence that preserves the topological structure involved.
+You may have studied in modern algebra the notion of an \index{Isomorphism} between algebraic objects such as groups or rings. An isomorphism is a bijective correspondence that preserves the algebraic structure involved. The analogous concept in topology is that of homeomorphism; it is a bijective correspondence that preserves the topological structure involved.
 
-Now suppose that \(f : X \rightarrow  Y\) is an injective continuous map, where \(X\) and \(Y\) are topological spaces. Let \(Z\) be the image set \(f( X)\) , considered as a subspace of \(Y\) ; then the function \({f}^{\prime } : X \rightarrow  Z\) obtained by restricting the range of \(f\) is bijective. If \({f}^{\prime }\) happens to be a homeomorphism of \(X\) with \(Z\) , we say that the map \(f : X \rightarrow  Y\) is a topological \index{imbedding}, or simply an imbedding, of \(X\) in \(Y\) .
+Now suppose that \(f : X \rightarrow  Y\) is an injective continuous map, where \(X\) and \(Y\) are topological spaces. Let \(Z\) be the image set \(f( X)\) , considered as a subspace of \(Y\) ; then the function \({f}^{\prime } : X \rightarrow  Z\) obtained by restricting the range of \(f\) is bijective. If \({f}^{\prime }\) happens to be a homeomorphism of \(X\) with \(Z\) , we say that the map \(f : X \rightarrow  Y\) is a topological \index{Imbedding}, or simply an imbedding, of \(X\) in \(Y\) .
 
 \begin{centeredblock}
 \begin{example}
@@ -1235,7 +1235,7 @@ Figure 18.4
 g : \lbrack 0,1) \rightarrow  {\mathbb{R}}^{2}
 \]
 
-obtained from the function \(f\) of the preceding example by expanding the range. The map \(g\) is an example of a continuous injective map that is not an \index{Imbedding}imbedding
+obtained from the function \(f\) of the preceding example by expanding the range. The map \(g\) is an example of a continuous injective map that is not an \index{imbedding@Imbedding}imbedding
 \end{example}
 \end{centeredblock}
 
@@ -1299,7 +1299,7 @@ because both expressions represent the set of those points \(x\) lying in \({U}_
 so that \({f}^{-1}( V)\) is also open in \(X\) .
 \end{proof}
 
-\begin{theorem}[The \index{pasting lemma}]
+\begin{theorem}[The \index{Pasting lemma}]
 	Let \(X = A \cup  B\) , where \(A\) and \(B\) are closed in \(X\) . Let \(f : A \rightarrow  Y\) and \(g : B \rightarrow  Y\) be continuous. If \(f( x)  = g( x)\) for every \(x \in  A \cap  B\) , then \(f\) and \(g\) combine to give a continuous function \(h : X \rightarrow  Y\) , defined by setting \(h( x)  = f( x)\) if \(x \in  A\) , and \(h( x)  = g( x)\) if \(x \in  B\) .
 \end{theorem}
 \begin{proof}
@@ -1360,7 +1360,7 @@ Then \(f\) is continuous if and only if the functions
 
 are continuous.
 
-The maps \({f}_{1}\) and \({f}_{2}\) are called the \index{coordinate function} of \(f\) .
+The maps \({f}_{1}\) and \({f}_{2}\) are called the \index{Coordinate function} of \(f\) .
 
 \end{theorem}
 \begin{proof}
@@ -1378,7 +1378,7 @@ If the function \(f\) is continuous, then \({f}_{1}\) and \({f}_{2}\) are compos
 
 Since both of the sets \({f}_{1}^{-1}( U)\) and \({f}_{2}^{-1}( V)\) are open, so is their intersection.
 
-There is no useful criterion for the continuity of a map \(f : A \times  B \rightarrow  X\) whose domain is a \index{Product space}product space. One might conjecture that \(f\) is continuous if it is continuous ``in each variable separately,'' but this conjecture is not true. (See Exercise 12.)
+There is no useful criterion for the continuity of a map \(f : A \times  B \rightarrow  X\) whose domain is a \index{product space@Product space}product space. One might conjecture that \(f\) is continuous if it is continuous ``in each variable separately,'' but this conjecture is not true. (See Exercise 12.)
 \end{proof}
 
 \begin{centeredblock}
@@ -1397,9 +1397,9 @@ is said to be continuous if both \(P\) and \(Q\) are continuous functions, or eq
 \end{example}
 \end{centeredblock}
 
-One way of forming continuous functions that is used a great deal in analysis is to take sums, differences, products, or \index{Quotient space (see also Quotient topology)} quotients of continuous real-valued functions. It is a standard theorem that if \(f.g.X \rightarrow  \mathbb{R}\) are continuous, then \(f + g,f - g\) , and \(f \cdot  g\) are continuous, and \(f/g\) is continuous if \(g( x)  \neq  0\) for all \(x\) . We shall consider this theorem in \(§{21}\) .
+One way of forming continuous functions that is used a great deal in analysis is to take sums, differences, products, or \index{quotient space (see also quotient topology)@Quotient space (see also Quotient topology)} quotients of continuous real-valued functions. It is a standard theorem that if \(f.g.X \rightarrow  \mathbb{R}\) are continuous, then \(f + g,f - g\) , and \(f \cdot  g\) are continuous, and \(f/g\) is continuous if \(g( x)  \neq  0\) for all \(x\) . We shall consider this theorem in \(§{21}\) .
 
-Yet another method for constructing continuous functions that is familiar from analysis is to take the limit of an infinite sequence of functions. There is a theorem to the effect that if a sequence of continuous real-valued functions of a real variable converges \index{Uniform metric (see also Uniform topology)} uniformly to a limit function, then the limit function is necessarily continuous. This theorem is called the \index{Uniform Limit Theorem}. It is used, for instance, to demonstrate the continuity of the trigonometric functions, when one defines these functions rigorously using the infinite series definitions of the sine and cosine. This theorem generalizes to a theorem about maps of an arbitrary topological space \(X\) into a metric space \(Y\) . We shall prove it in \(§{21}\) .
+Yet another method for constructing continuous functions that is familiar from analysis is to take the limit of an infinite sequence of functions. There is a theorem to the effect that if a sequence of continuous real-valued functions of a real variable converges \index{uniform metric (see also uniform topology)@Uniform metric (see also Uniform topology)} uniformly to a limit function, then the limit function is necessarily continuous. This theorem is called the \index{uniform limit theorem@Uniform Limit Theorem}. It is used, for instance, to demonstrate the continuity of the trigonometric functions, when one defines these functions rigorously using the infinite series definitions of the sine and cosine. This theorem generalizes to a theorem about maps of an arbitrary topological space \(X\) into a metric space \(Y\) . We shall prove it in \(§{21}\) .
 
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
@@ -1421,13 +1421,13 @@ Yet another method for constructing continuous functions that is familiar from a
   \end{enumerate}
 \item Let \(Y\) be an ordered set in the order topology. Let \(f,g : X \rightarrow  Y\) be continuous. (a) Show that the set \(\{ x \mid  f( x)  \leq  g( x) \}\) is closed in \(X\)
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Let \(h : X \rightarrow  Y\) be the function \[ h( x)  = \min \{ f( x) ,g( x) \} . \] Show that \(h\) is continuous [Hint: Use the \index{Pasting lemma}pasting lemma.]
+  \item Let \(h : X \rightarrow  Y\) be the function \[ h( x)  = \min \{ f( x) ,g( x) \} . \] Show that \(h\) is continuous [Hint: Use the \index{pasting lemma@Pasting lemma}pasting lemma.]
   \end{enumerate}
 \item Let \(\{  {A}_{\alpha }\}\) be a collection of subsets of \(X\) ; let \(X = \mathop{\bigcup }\limits_{\alpha }{A}_{\alpha }\) . Let \(f : X \rightarrow  Y\) ; suppose that \(f \mid  {A}_{\alpha }\) , is continuous for each \(\alpha\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that if the collection \(\{  {A}_{\alpha }\}\) is finite and each set \({A}_{\alpha }\) is closed, then \(f\) is continuous.
   \item Find an example where the collection \(\{  {A}_{\alpha }\}\) is countable and each \({A}_{\alpha }\) is closed, but \(f\) is not continuous.
-  \item An indexed family of sets \(\{  {A}_{\alpha }\}\) is said to be \index{Locally finite family} locally finite if each point \(x\) of \(X\) has a neighborhood that intersects \({A}_{\alpha }\) for only finitely many values of \(\alpha\) . Show that if the family \(\{  {A}_{\alpha }\}\) is locally finite and each \({A}_{\alpha }\) is closed, then \(f\) is continuous.
+  \item An indexed family of sets \(\{  {A}_{\alpha }\}\) is said to be \index{locally finite family@Locally finite family} locally finite if each point \(x\) of \(X\) has a neighborhood that intersects \({A}_{\alpha }\) for only finitely many values of \(\alpha\) . Show that if the family \(\{  {A}_{\alpha }\}\) is locally finite and each \({A}_{\alpha }\) is closed, then \(f\) is continuous.
   \end{enumerate}
 \item Let \(f \cdot  A \rightarrow  B\) and \(g : C \rightarrow  D\) be continuous functions. Let us define a map \(f \times  g : A \times  C \rightarrow  B \times  D\) by the equation \[ ( {f \times  g}) ( {a \times  c})  = f( a)  \times  g( c) . \] Show that \(f \times  g\) is continuous.
 \item Let \(F : X \times  Y \rightarrow  Z\) . We say that \(F\) is continuous in each variable separately if for each \({y}_{0}\) in \(Y\) , the map \(h : X \rightarrow  Z\) defined by \(h( x)  = F( {x \times  {y}_{0}})\) is continuous, and for each \({x}_{0}\) in \(X\) , the map \(k \cdot  Y \rightarrow  Z\) defined by \(k( y)  = F( {{x}_{0} \times  y})\) is continuous. Show that if \(F\) is continuous, then \(F\) is continuous in each variable separately.
@@ -1451,7 +1451,7 @@ So let us consider the cartesian products
 {X}_{1} \times  \cdots  \times  {X}_{n}\;\text{ and }\;{X}_{1} \times  {X}_{2} \times  \cdots ,
 \]
 
-where each \({X}_{i}\) is a topological space There are two possible ways to proceed. One way is to take as basis all sets of the form \({U}_{1} \times  \cdots  \times  {U}_{n}\) in the first case, and of the form \({U}_{1} \times  {U}_{2} \times  \cdots\) in the second case, where \({U}_{i}\) is an open set of \({X}_{i}\) for each \(i\) . This procedure does indeed define a topology on the cartesian product; we shall call it the \index{box topology}.
+where each \({X}_{i}\) is a topological space There are two possible ways to proceed. One way is to take as basis all sets of the form \({U}_{1} \times  \cdots  \times  {U}_{n}\) in the first case, and of the form \({U}_{1} \times  {U}_{2} \times  \cdots\) in the second case, where \({U}_{i}\) is an open set of \({X}_{i}\) for each \(i\) . This procedure does indeed define a topology on the cartesian product; we shall call it the \index{Box topology}.
 
 Another way to proceed is to generalize the subbasis formulation of the definition, given in \(§{15}\) . In this case, we take as a subbasis all sets of the form \({\pi }_{i}^{-1}( {U}_{i})\) , where \(i\) is any index and \({U}_{i}\) is an open set of \({X}_{i}\) . We shall call this topology the product topology.
 
@@ -1504,7 +1504,7 @@ the collection of all sets of the form
 \mathop{\prod }\limits_{{\alpha  \in  J}}{U}_{\alpha }
 \]
 
-where \({U}_{\alpha }\) is open in \({X}_{\alpha }\) , for each \(\alpha  \in  J\) . The topology generated by this basis is called the \index{Box topology}box topology
+where \({U}_{\alpha }\) is open in \({X}_{\alpha }\) , for each \(\alpha  \in  J\) . The topology generated by this basis is called the \index{box topology@Box topology}box topology
 \end{definition}
 
 This collection satisfies the first condition for a basis because \(\prod {X}_{\alpha }\) is itself a basis element; and it satisfies the second condition because the intersection of any two basis elements is another basis element.
@@ -1525,7 +1525,7 @@ be the function assigning to each element of the product space its \(\beta\) th 
 {\pi }_{\beta }( {( {x}_{\alpha }) }_{\alpha  \in  J})  = {x}_{\beta };
 \]
 
-it is called the \index{projection map}ing associated with the index \(\beta\) .
+it is called the \index{Projection map}ing associated with the index \(\beta\) .
 
 \begin{definition}
 	Let \({S}_{\beta }\) denote the collection
@@ -1640,7 +1640,7 @@ where \({f}_{\alpha } : A \rightarrow  {X}_{\alpha }\) for each \(\alpha\) . Let
 \begin{proof}
 Let \({\pi }_{\beta }\) be the projection of the product onto its \(\beta\) th factor. The function \({\pi }_{\beta }\) is continuous, for if \({U}_{\beta }\) is open in \({X}_{\beta }\) , the set \({\pi }_{\beta }^{-1}( {U}_{\beta })\) is a subbasis element for the product topology on \({X}_{\alpha }\) . Now suppose that \(f : A \rightarrow  \prod {X}_{\alpha }\) is continuous. The function \({f}_{\beta }\) equals the composite \({\pi }_{\beta } \circ  f\) ; being the composite of two continuous functions, it is continuous.
 
-Conversely, suppose that each \index{Coordinate function}coordinate function \({f}_{\alpha }\) is continuous. To prove that \(f\) is continuous, it suffices to prove that the inverse image under \(f\) of each subbasis element is open in \(A\) , we remarked on this fact when we defined continuous functions. A typical subbasis element for the product topology on \(\prod {X}_{\alpha }\) is a set of the form \({\pi }_{\beta }^{-1}( {U}_{\beta })\) , where \(\beta\) is some index and \({U}_{\beta }\) is open in \({X}_{\beta }\) . Now
+Conversely, suppose that each \index{coordinate function@Coordinate function}coordinate function \({f}_{\alpha }\) is continuous. To prove that \(f\) is continuous, it suffices to prove that the inverse image under \(f\) of each subbasis element is open in \(A\) , we remarked on this fact when we defined continuous functions. A typical subbasis element for the product topology on \(\prod {X}_{\alpha }\) is a set of the form \({\pi }_{\beta }^{-1}( {U}_{\beta })\) , where \(\beta\) is some index and \({U}_{\beta }\) is open in \({X}_{\beta }\) . Now
 
 \[
 {f}^{-1}( {{\pi }_{\beta }^{-1}( {U}_{\beta }) })  = {f}_{\beta }^{-1}( {U}_{\beta }) ,
@@ -1702,7 +1702,7 @@ for all \(n\) , a contradiction
 \end{enumerate}
 \section*{§ 20 The Metric Topology}
 
-One of the most important and frequently used ways of imposing a topology on a set is to define the topology in terms of a metric on the set. Topologies given in this way lie at the heart of modern analysis, for example. In this section, we shall define the \index{metric topology} and shall give a number of examples. In the next section, we shall consider some of the properties that metric topologies satisfy.
+One of the most important and frequently used ways of imposing a topology on a set is to define the topology in terms of a metric on the set. Topologies given in this way lie at the heart of modern analysis, for example. In this section, we shall define the \index{Metric topology} and shall give a number of examples. In the next section, we shall consider some of the properties that metric topologies satisfy.
 
 \begin{definition}
 	A metric on a set \(X\) is a function
@@ -1717,19 +1717,19 @@ having the following properties:
 
 (2) \(d( {x,y})  = d( {y,x})\) for all \(x,y \in  X\) .
 
-(3) (\index{Triangle inequality}) \(d( {x,y})  + d( {y,z})  \geq  d( {x,z})\) , for all \(x,y,z \in  X\) .
+(3) (\index{triangle inequality@Triangle inequality}) \(d( {x,y})  + d( {y,z})  \geq  d( {x,z})\) , for all \(x,y,z \in  X\) .
 
-Given a metric \(d\) on \(X\) , the number \(d( {x,y})\) is often called the \index{distance} between \(x\) and \(y\) in the metric \(d\) Given \(\epsilon  > 0\) , consider the set
+Given a metric \(d\) on \(X\) , the number \(d( {x,y})\) is often called the \index{Distance} between \(x\) and \(y\) in the metric \(d\) Given \(\epsilon  > 0\) , consider the set
 
 \[
 {B}_{d}( {x,\epsilon })  = \{ y \mid  d( {x,y})  < \epsilon \}
 \]
 
-of all points \(y\) whose \index{Distance}distance from \(x\) is less than \(\epsilon\) . It is called the \(\epsilon\) -ball centered at \(x\) . Sometimes we omit the metric \(d\) from the notation and write this ball simply as \(\index{B@\(B( {x,\epsilon })\)} \index{B@$B( {x,\epsilon })$}B( {x,\epsilon })\) , when no confusion will arise.
+of all points \(y\) whose \index{distance@Distance}distance from \(x\) is less than \(\epsilon\) . It is called the \(\epsilon\) -ball centered at \(x\) . Sometimes we omit the metric \(d\) from the notation and write this ball simply as \(\index{B@\(B( {x,\epsilon })\)} \index{B@$B( {x,\epsilon })$}B( {x,\epsilon })\) , when no confusion will arise.
 \end{definition}
 
 \begin{definition}
-	If \(d\) is a metric on the set \(X\) , then the collection of all \(\epsilon\) -balls \({B}_{d}( {x,\epsilon })\) , for \(x \in  X\) and \(\epsilon  > 0\) , is a basis for a topology on \(X\) , called the \index{Metric topology}metric topology induced by \(d\) .
+	If \(d\) is a metric on the set \(X\) , then the collection of all \(\epsilon\) -balls \({B}_{d}( {x,\epsilon })\) , for \(x \in  X\) and \(\epsilon  > 0\) , is a basis for a topology on \(X\) , called the \index{metric topology@Metric topology}metric topology induced by \(d\) .
 \end{definition}
 
 The first condition for a basis is trivial, since \(x \in  B( {x,\epsilon })\) for any \(\epsilon  > 0\) . Before checking the second condition for a basis, we show that if \(y\) is a point of the basis element \(B( {x,\epsilon })\) , then there is a basis element \(B( {y,\delta })\) centered at \(y\) that is contained in \(B( {x,\epsilon })\) . Define \(\delta\) to be the positive number \(\epsilon  - d( {x,y})\) . Then \(B( {y,\delta })  \subset  B( {x,\epsilon })\) , for if \(z \in  B( {y,\delta })\) , then \(d( {y,z})  < \epsilon  - d( {x,y})\) , from which we conclude that
@@ -1790,7 +1790,7 @@ where \(x = ( {a + b}) /2\) and \(\epsilon  = ( {b - a}) /2\) . And conversely, 
 \end{centeredblock}
 
 \begin{definition}
-	If \(X\) is a topological space, \(X\) is said to be metrizable if there exists a metric \(d\) on the set \(X\) that induces the topology of \(X\) . A metric space is a \index{metrizable space} \(X\) together with a specific metric \(d\) that gives the topology of \(X\) .
+	If \(X\) is a topological space, \(X\) is said to be metrizable if there exists a metric \(d\) on the set \(X\) that induces the topology of \(X\) . A metric space is a \index{Metrizable space} \(X\) together with a specific metric \(d\) that gives the topology of \(X\) .
 \end{definition}
 
 Many of the spaces important for mathematics are metrizable, but some are not. Metrizability is always a highly desirable attribute for a space to possess, for the existence of a metric gives one a valuable tool for proving theorems about the space.
@@ -1800,13 +1800,13 @@ It is, therefore, a problem of fundamental importance in topology to find condit
 Although the \index{Product topology!metrizability}metrizability problem is an important problem in topology, the study \index{First-countability!of metric space}of metric spaces as such does not properly belong to topology as much as it does to analysis Metrzability of a space depends only on the topology of the space in question, but properties that involve a specific \index{Discrete topology!metric for}metric for \(X\) in general do not. For instance, one can make the following definition in a metric space.
 
 \begin{definition}
-	Let \(X\) be a metric space with metric \(d\) . A subset \(A\) of \(X\) is said to be \index{Bounded set} bounded if there is some number \(M\) such that
+	Let \(X\) be a metric space with metric \(d\) . A subset \(A\) of \(X\) is said to be \index{bounded set@Bounded set} bounded if there is some number \(M\) such that
 
 \[
 d( {{a}_{1},{a}_{2}})  \leq  M
 \]
 
-for every pair \({a}_{1},{a}_{2}\) of points of \(A\) . If \(A\) is \index{Metric!bounded}bounded and nonempty, the \index{Diameter of a set} diameter of \(A\) is defined to be the number
+for every pair \({a}_{1},{a}_{2}\) of points of \(A\) . If \(A\) is \index{Metric!bounded}bounded and nonempty, the \index{diameter of a set@Diameter of a set} diameter of \(A\) is defined to be the number
 
 \[
 \operatorname{diam}A = \sup \{  {d( {{a}_{1},{a}_{2}})  \mid  {a}_{1},{a}_{2} \in  A}\}  .
@@ -1824,7 +1824,7 @@ Boundedness of a set is not a topological property, for it depends on the partic
 
 Then \(\bar{d}\) is a metric that induces the same topology as \(d\) .
 
-The metric \(\bar{d}\) is called the standard \index{bounded metric} corresponding to \(d\) .
+The metric \(\bar{d}\) is called the standard \index{Bounded metric} corresponding to \(d\) .
 
 \end{theorem}
 \begin{proof}
@@ -1840,7 +1840,7 @@ Now if either \(d( {x,y})  \geq  1\) or \(d( {y,z})  \geq  1\) , then the right 
 d( {x,z})  \leq  d( {x,y})  + d( {y,z})  = \bar{d}( {x,y})  + \bar{d}( {y,z}) .
 \]
 
-Since \(\bar{d}( {x,z})  \leq  d( {x,z})\) by definition, the \index{Triangle inequality}triangle inequality holds for \(\bar{d}\) .
+Since \(\bar{d}( {x,z})  \leq  d( {x,z})\) by definition, the \index{triangle inequality@Triangle inequality}triangle inequality holds for \(\bar{d}\) .
 
 Now we note that in any metric space, the collection of \(\epsilon\) -balls with \(\epsilon  < 1\) forms a basis for the metric topology, for every basis element containing \(x\) contains such an \(\epsilon\) -ball centered at \(x\) . It follows that \(d\) and \(\bar{d}\) induce the same topology on \(X\) , because the collections of \(\epsilon\) -balls with \(\epsilon  < 1\) under these two metrics are the same collection.
 
@@ -1848,13 +1848,13 @@ Now we consider some familiar spaces and show they are metrizable.
 \end{proof}
 
 \begin{definition}
-	Given \(\mathbf{x} = ( {{x}_{1},\ldots ,{x}_{n}})\) in \({\mathbb{R}}^{n}\) , we define the \index{norm} of \(\mathbf{x}\) by the equation
+	Given \(\mathbf{x} = ( {{x}_{1},\ldots ,{x}_{n}})\) in \({\mathbb{R}}^{n}\) , we define the \index{Norm} of \(\mathbf{x}\) by the equation
 
 \[
 \parallel x\parallel  = {( {x}_{1}^{2} + \cdots  + {x}_{n}^{2}) }^{1/2}
 \]
 
-and we define the \index{euclidean metric} \(d\) on \({\mathbb{R}}^{n}\) by the equation
+and we define the \index{Euclidean metric} \(d\) on \({\mathbb{R}}^{n}\) by the equation
 
 \[
 d( {\mathbf{x},\mathbf{y}})  = \parallel \mathbf{x} - \mathbf{y}\parallel  = {[  {( {x}_{1} - {y}_{1}) }^{2} + \cdots  + {( {x}_{n} - {y}_{n}) }^{2}]  }^{1/2}.
@@ -1908,7 +1908,7 @@ Conversely, suppose the \(\delta\) - \(\epsilon\) condition holds Given a basis 
 \end{proof}
 
 \begin{theorem}
-	The topologies on \({\mathbb{R}}^{n}\) induced by the \index{Euclidean metric}euclidean metric \(d\) and the square metric \(\rho\) are the same as the product topology on \({\mathbb{R}}^{n}\) .
+	The topologies on \({\mathbb{R}}^{n}\) induced by the \index{euclidean metric@Euclidean metric}euclidean metric \(d\) and the square metric \(\rho\) are the same as the product topology on \({\mathbb{R}}^{n}\) .
 
 \end{theorem}
 \begin{proof}
@@ -1986,7 +1986,7 @@ The uniform metric can be defined more generally on the cartesian product \({\ma
 \bar{\rho }( {\mathbf{x},\mathbf{y}})  = \sup \{ \bar{d}( {{x}_{\alpha },{y}_{\alpha }})  \mid  \alpha  \in  J\} ,
 \]
 
-where \(\bar{d}\) is the \index{Standard bounded metric}standard bounded metric on \(\mathbb{R}\) . It is easy to check that \(\bar{\rho }\) is indeed a metric; it is called the uniform metric on \({\mathbb{R}}^{J}\) , and the topology it induces is called the uniform topology.
+where \(\bar{d}\) is the \index{standard bounded metric@Standard bounded metric}standard bounded metric on \(\mathbb{R}\) . It is easy to check that \(\bar{\rho }\) is indeed a metric; it is called the uniform metric on \({\mathbb{R}}^{J}\) , and the topology it induces is called the uniform topology.
 \end{definition}
 
 The relation between this topology and the product and box topologies is the following:
@@ -2034,7 +2034,7 @@ so that
 \sup \{  \frac{\bar{d}( {{x}_{i},{z}_{i}}) }{i}\}   \leq  D( {\mathbf{x},\mathbf{y}})  + D( {\mathbf{y},\mathbf{z}}) .
 \]
 
-The fact that \(D\) gives the product topology requires a \index{Little ell-two topology} little more work. First, let \(U\) be open in the metric topology and let \(\mathbf{x} \in  U\) ; we'find an open set \(V\) in the product topology such that \(\mathbf{x} \in  V \subset  U\) . Choose an \(\epsilon\) -ball \({B}_{D}( {\mathbf{x},\epsilon })\) lying in \(U\) . Then choose \(N\) large enough that \(1/N < \epsilon\) . Finally, let \(V\) be the basis element for the product topology
+The fact that \(D\) gives the product topology requires a \index{little ell-two topology@Little ell-two topology} little more work. First, let \(U\) be open in the metric topology and let \(\mathbf{x} \in  U\) ; we'find an open set \(V\) in the product topology such that \(\mathbf{x} \in  V \subset  U\) . Choose an \(\epsilon\) -ball \({B}_{D}( {\mathbf{x},\epsilon })\) lying in \(U\) . Then choose \(N\) large enough that \(1/N < \epsilon\) . Finally, let \(V\) be the basis element for the product topology
 
 \[
 V = ( {{x}_{1} - \epsilon ,{x}_{1} + \epsilon })  \times  \cdots  \times  ( {{x}_{N} - \epsilon ,{x}_{N} + \epsilon })  \times  \mathbb{R} \times  \mathbb{R} \times  \cdots .
@@ -2109,7 +2109,7 @@ Now if \(i = {\alpha }_{1},\ldots ,{\alpha }_{n}\) , then \(\epsilon  \leq  {\ep
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that on \(X\) , we have the inclusions \[ \text{ box topology } \supset  {\ell }^{2}\text{ -topology } \supset  \text{ uniform topology. } \]
   \item The set \({\mathbb{R}}^{\infty }\) of all sequences that are eventually zero is contained in \(X\) . Show that the four topologies that \({\mathbb{R}}^{\infty }\) inherits as a subspace of \(X\) are all distinct.
-  \item The set \[ H = \mathop{\prod }\limits_{{n \in  {\mathbb{Z}}_{ + }}}[  {0,1/n}] \] is contained in \(X\) , it is called the \index{Hilbert cube}. Compare the four topologies that \(H\) inherits as a subspace of \(X\) .
+  \item The set \[ H = \mathop{\prod }\limits_{{n \in  {\mathbb{Z}}_{ + }}}[  {0,1/n}] \] is contained in \(X\) , it is called the \index{hilbert cube@Hilbert cube}. Compare the four topologies that \(H\) inherits as a subspace of \(X\) .
   \end{enumerate}
 \item Show that the euclidean metric \(d\) on \({\mathbb{R}}^{n}\) is a metric, as follows: If \(\mathbf{x},\mathbf{y} \in  {\mathbb{R}}^{n}\) and \(c \in  \mathbb{R}\) , define \[ \mathbf{x} + \mathbf{y} = ( {{x}_{1} + {y}_{1},\ldots ,{x}_{n} + {y}_{n}}) , \] \[ c\mathbf{x} = ( {c{x}_{1},\ldots ,c{x}_{n}}) , \] \[ \mathbf{x} \cdot  \mathbf{y} = {x}_{1}{y}_{1} + \cdots  + {x}_{n}{y}_{n} \]
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
@@ -2135,13 +2135,13 @@ About order topologies there is nothing to be said; some are metrizable (for ins
 
 The Hausdorff axiom is satisfied by every metric topology. If \(x\) and \(y\) are distinct points of the metric space(X, d), we let \(\epsilon  = \frac{1}{2}d( {x,y})\) ; then the triangle inequality implies that \({B}_{d}( {x,\epsilon })\) and \({B}_{d}( {y,\epsilon })\) are disjoint.
 
-The product topology we have already considered in special cases; we have proved that the products \({\mathbb{R}}^{n}\) and \({\mathbb{R}}^{\omega }\) are metrizable. It is true in general that countable products of \index{Metrizable space}metrizable spaces are metrizable; the proof follows a pattern similar to the proof for \({\mathbb{R}}^{\omega }\) , so we leave it to the exercises.
+The product topology we have already considered in special cases; we have proved that the products \({\mathbb{R}}^{n}\) and \({\mathbb{R}}^{\omega }\) are metrizable. It is true in general that countable products of \index{metrizable space@Metrizable space}metrizable spaces are metrizable; the proof follows a pattern similar to the proof for \({\mathbb{R}}^{\omega }\) , so we leave it to the exercises.
 
 About continuous functions there is a good deal to be said. Consideration of this topic will occupy the remainder of the section.
 
 When we study continuous functions on metric spaces, we are about as close to the study of calculus and analysis as we shall come in this book. There are two things we want to do at this point.
 
-First, we want to show that the familiar `` \(\epsilon  - \delta\) definition'' of continuity carries over to general metric spaces, and so does the ``\index{Convergent sequence}convergent sequence definition'' of continuity.
+First, we want to show that the familiar `` \(\epsilon  - \delta\) definition'' of continuity carries over to general metric spaces, and so does the ``\index{convergent sequence@Convergent sequence}convergent sequence definition'' of continuity.
 
 Second, we want to consider two additional methods for constructing continuous functions, besides those discussed in §18. One is the process of taking sums, differences, products, and quotients of continuous real-valued functions. The other is the process of taking limits of uniformly \index{Product topology!convergent sequences}convergent sequences of continuous functions.
 
@@ -2167,7 +2167,7 @@ Conversely, suppose that the \(\epsilon  - \delta\) condition is satisfied. Let 
 Now we turn to the convergent sequence definition of continuity. We begin by considering the relation between convergent sequences \index{Sequences!and closure}and closures of sets. It is certainly believable, from one's experience in analysis, that if \(x\) lies in the closure of a subset \(A\) of the space \(X\) , then there should exist a sequence of points of \(A\) converging to \(x\) . This is not true in general, but it is true for metrizable spaces.
 \end{proof}
 
-\begin{lemma}[The \index{sequence lemma}]
+\begin{lemma}[The \index{Sequence lemma}]
 	Let \(X\) be a topological space; let \(A \subset  X\) . If there is a sequence of points of \(A\) converging to \(x\) , then \(x \in  \bar{A}\) ; the converse holds if \(X\) is metrizable.
 \end{lemma}
 
@@ -2226,11 +2226,11 @@ is continuous, by Theorem 18.4. The function \(f + g\) equals the composite of \
 
 therefore \(f + g\) is continuous. Similar arguments apply to \(f - g,f \cdot  g\) , and \(f/g\) .
 
-Finally, we come to the notion of \index{uniform convergence}.
+Finally, we come to the notion of \index{Uniform convergence}.
 \end{proof}
 
 \begin{definition}
-	Let \({f}_{n} : X \rightarrow  Y\) be a sequence of functions from the set \(X\) to the metric space \(Y\) . Let \(d\) be the metric for \(Y\) . We say that the sequence \(( {f}_{n})\) \index{Converges uniformly}converges uniformly to the function \(f : X \rightarrow  Y\) if given \(\epsilon  > 0\) , there exists an integer \(N\) such that
+	Let \({f}_{n} : X \rightarrow  Y\) be a sequence of functions from the set \(X\) to the metric space \(Y\) . Let \(d\) be the metric for \(Y\) . We say that the sequence \(( {f}_{n})\) \index{converges uniformly@Converges uniformly}converges uniformly to the function \(f : X \rightarrow  Y\) if given \(\epsilon  > 0\) , there exists an integer \(N\) such that
 
 \[
 d( {{f}_{n}( x) ,f( x) })  < \epsilon
@@ -2248,7 +2248,7 @@ Uniformity of convergence depends not only on the topology of \(Y\) but also on 
 \begin{proof}
 Let \(V\) be open in \(Y\) ; let \({x}_{0}\) be a point of \({f}^{-1}( V)\) . We wish to find a neighborhood \(U\) of \({x}_{0}\) such that \(f( U)  \subset  V\) .
 
-Let \({y}_{0} = f( {x}_{0})\) . First choose \(\epsilon\) so that the \(\epsilon\) -ball \(B( {{y}_{0},\epsilon })\) is contained in \(V\) . Then, using \index{Uniform convergence}uniform convergence, choose \(N\) so that for all \(n \geq  N\) and all \(x \in  X\) ,
+Let \({y}_{0} = f( {x}_{0})\) . First choose \(\epsilon\) so that the \(\epsilon\) -ball \(B( {{y}_{0},\epsilon })\) is contained in \(V\) . Then, using \index{uniform convergence@Uniform convergence}uniform convergence, choose \(N\) so that for all \(n \geq  N\) and all \(x \in  X\) ,
 
 \[
 d( {{f}_{n}( x) ,f( x) })  < \epsilon /3\text{ . }
@@ -2281,7 +2281,7 @@ We conclude the section with some examples of spaces that are not metrizable.
 \begin{example}
 	\({\mathbb{R}}^{\omega }\) in the box topology is not metrizable.
 
-We shall show that the \index{Sequence lemma}sequence lemma does not hold for \({\mathbb{R}}^{\omega }\) . Let \(A\) be the subset of \({\mathbb{R}}^{\omega }\) consisting of those points all of whose coordinates are positive:
+We shall show that the \index{sequence lemma@Sequence lemma}sequence lemma does not hold for \({\mathbb{R}}^{\omega }\) . Let \(A\) be the subset of \({\mathbb{R}}^{\omega }\) consisting of those points all of whose coordinates are positive:
 
 \[
 A = \{  {( {{x}_{1},{x}_{2},\ldots })  \mid  {x}_{i} > 0\text{ for all }i \in  {\mathbb{Z}}_{ + }}\}  .
@@ -2336,7 +2336,7 @@ Now let \({U}_{\beta }\) be the open interval(-1,1)in \(\mathbb{R}\) , and let \
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item Let \(A \subset  X\) . If \(d\) is a metric for the topology of \(X\) , show that \(d \mid  A \times  A\) is a metric for the subspace topology on \(A\) .
-\item Let \(X\) and \(Y\) be metric spaces with metrics \({d}_{X}\) and \({d}_{Y}\) , respectively. Let \(f\) : \(X \rightarrow  Y\) have the property that for every pair of points \({x}_{1},{x}_{2}\) of \(X\) , \[ {d}_{Y}( {f( {x}_{1}) ,f( {x}_{2}) })  = {d}_{X}( {{x}_{1},{x}_{2}}) . \] Show that \(f\) is an imbedding. It is called an \index{isometric imbedding} of \(X\) in \(Y\) .
+\item Let \(X\) and \(Y\) be metric spaces with metrics \({d}_{X}\) and \({d}_{Y}\) , respectively. Let \(f\) : \(X \rightarrow  Y\) have the property that for every pair of points \({x}_{1},{x}_{2}\) of \(X\) , \[ {d}_{Y}( {f( {x}_{1}) ,f( {x}_{2}) })  = {d}_{X}( {{x}_{1},{x}_{2}}) . \] Show that \(f\) is an imbedding. It is called an \index{Isometric imbedding} of \(X\) in \(Y\) .
 \item Let \({X}_{n}\) be a metric space with metric \({d}_{n}\) , for \(n \in  {\mathbb{Z}}_{ + }\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that \[ \rho ( {x,y})  = \max \{  {{d}_{1}( {{x}_{1},{y}_{1}}) ,\ldots ,{d}_{n}( {{x}_{n},{y}_{n}}) }\} \] is a metric for the product space \({X}_{1} \times  \cdots  \times  {X}_{n}\) .
@@ -2352,13 +2352,13 @@ Now let \({U}_{\beta }\) be the open interval(-1,1)in \(\mathbb{R}\) , and let \
   \item Show that \({f}_{n}( x)  \rightarrow  f( x)\) for each \(x \in  \mathbb{R}\) .
   \item Show that \({f}_{n}\) does not converge uniformly to \(f\) . (This shows that the converse of Theorem 21.6 does not hold; the limit function \(f\) may be continuous even though the convergence is not uniform.)
   \end{enumerate}
-\item Using the closed set formulation of continuity (Theorem 18.1), show that the following are closed subsets of \({\mathbb{R}}^{2}\) . \[ A = \{ x \times  y \mid  {xy} = 1\} , \] \[ {S}^{1} = \{  {x \times  y \mid  {x}^{2} + {y}^{2} = 1}\}  , \] \[ \index{B^2@\({B}^{2}\)} {B}^{2} = \{  {x \times  y \mid  {x}^{2} + {y}^{2} \leq  1}\}  . \] \begin{center} \includegraphics[width=0.7\textwidth]{images/21.1.jpg} \end{center} \hspace*{3em} Figure 21.1 The set \({B}^{2}\) is called the (closed) \index{Ball, unit} unit ball in \({\mathbb{R}}^{2}\) .
+\item Using the closed set formulation of continuity (Theorem 18.1), show that the following are closed subsets of \({\mathbb{R}}^{2}\) . \[ A = \{ x \times  y \mid  {xy} = 1\} , \] \[ {S}^{1} = \{  {x \times  y \mid  {x}^{2} + {y}^{2} = 1}\}  , \] \[ \index{B^2@\({B}^{2}\)} {B}^{2} = \{  {x \times  y \mid  {x}^{2} + {y}^{2} \leq  1}\}  . \] \begin{center} \includegraphics[width=0.7\textwidth]{images/21.1.jpg} \end{center} \hspace*{3em} Figure 21.1 The set \({B}^{2}\) is called the (closed) \index{ball, unit@Ball, unit} unit ball in \({\mathbb{R}}^{2}\) .
 \item Prove the following standard facts about infinite series:
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that if \(( {s}_{n})\) is a bounded sequence of real numbers and \({s}_{n} \leq  {s}_{n + 1}\) for each \(n\) , then \(( {s}_{n})\) converges.
   \item Let \(( {a}_{n})\) be a sequence of real numbers; define \[ {s}_{n} = \mathop{\sum }\limits_{{i = 1}}^{n}{a}_{i} \] If \({s}_{n} \rightarrow  s\) , we say that the infinite series \[ \mathop{\sum }\limits_{{i = 1}}^{\infty }{a}_{i} \] converges to \(s\) also. Show that if \(\sum {a}_{i}\) converges to \(s\) and \(\sum {b}_{i}\) converges to \(t\) , then \(\sum ( {c{a}_{i} + {b}_{i}})\) converges to \({cs} + t\) .
   \item Prove the comparison test for infinite series: If \(| {a}_{i}|  \leq  {b}_{i}\) for each \(i\) , and if the series \(\sum {b}_{i}\) converges, then the series \(\sum {a}_{i}\) converges. [Hint: Show that the series \(\sum | {a}_{i}|\) and \(\sum {c}_{i}\) converge, where \({c}_{i} = | {a}_{i}|  + {a}_{i}\) . \(\}\)
-  \item Given a sequence of functions \({f}_{n} : X \rightarrow  \mathbb{R}\) , let \[ {s}_{n}( x)  = \mathop{\sum }\limits_{{i = 1}}^{n}{f}_{i}( x) . \] Prove the \index{Weierstrass M-test} Weierstrass \(M\) -test for uniform convergence: If \(| {{f}_{i}( x) }|  \leq  {M}_{i}\) for all \(x \in  X\) and all \(i\) , and if the series \(\sum {M}_{i}\) converges, then the sequence \(( {s}_{n})\) converges uniformly to a function \(s\) . [Hint: Let \({r}_{n} = \mathop{\sum }\limits_{{i = n + 1}}^{\infty }{M}_{i}\) . Show that if \(k > n\) , then \(| {{s}_{k}( x)  - {s}_{n}( x) }|  \leq  {r}_{n}\) ; conclude that \(| {s( x)  - {s}_{n}( x) }|  \leq  {r}_{n}\) .]
+  \item Given a sequence of functions \({f}_{n} : X \rightarrow  \mathbb{R}\) , let \[ {s}_{n}( x)  = \mathop{\sum }\limits_{{i = 1}}^{n}{f}_{i}( x) . \] Prove the \index{weierstrass m-test@Weierstrass M-test} Weierstrass \(M\) -test for uniform convergence: If \(| {{f}_{i}( x) }|  \leq  {M}_{i}\) for all \(x \in  X\) and all \(i\) , and if the series \(\sum {M}_{i}\) converges, then the sequence \(( {s}_{n})\) converges uniformly to a function \(s\) . [Hint: Let \({r}_{n} = \mathop{\sum }\limits_{{i = n + 1}}^{\infty }{M}_{i}\) . Show that if \(k > n\) , then \(| {{s}_{k}( x)  - {s}_{n}( x) }|  \leq  {r}_{n}\) ; conclude that \(| {s( x)  - {s}_{n}( x) }|  \leq  {r}_{n}\) .]
   \end{enumerate}
 \item Prove continuity of the algebraic operations on \(\mathbb{R}\) , as follows: Use the metric \(d( {a,b})  = | {a - b}|\) on \(\mathbb{R}\) and the metric on \({\mathbb{R}}^{2}\) given by the equation \[ \rho ( {( {x,y}) ,( {{x}_{0},{y}_{0}}) })  = \max \{  {| {x - {x}_{0}}| ,| {y - {y}_{0}}| }\}  . \]
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
@@ -2370,7 +2370,7 @@ Now let \({U}_{\beta }\) be the open interval(-1,1)in \(\mathbb{R}\) , and let \
 \end{enumerate}
 \section*{*§ 22 The Quotient Topology \protect\sectionDagger}
 
-Unlike the topologies we have already considered in this chapter, the \index{quotient topology} is not a natural generalization of something you have already studied in analysis. Nevertheless, it is easy enough to motivate. One motivation comes from geometry, where one often has occasion to use ``cut-and-paste'' techniques to construct such geometric objects as surfaces. The torus (surface of a doughnut), for example, can be constructed by taking a rectangle and ``pasting'' its edges together appropriately, as in Figure 22.1. And the sphere (surface of a ball) can be constructed by taking a disc and collapsing its entire boundary to a single point; see Figure 22 2. Formalizing these constructions involves the concept of quotient topology.
+Unlike the topologies we have already considered in this chapter, the \index{Quotient topology} is not a natural generalization of something you have already studied in analysis. Nevertheless, it is easy enough to motivate. One motivation comes from geometry, where one often has occasion to use ``cut-and-paste'' techniques to construct such geometric objects as surfaces. The torus (surface of a doughnut), for example, can be constructed by taking a rectangle and ``pasting'' its edges together appropriately, as in Figure 22.1. And the sphere (surface of a ball) can be constructed by taking a disc and collapsing its entire boundary to a single point; see Figure 22 2. Formalizing these constructions involves the concept of quotient topology.
 
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/22.1.jpg}
@@ -2393,18 +2393,18 @@ ${}^{\dagger}$ This section will be used throughout Part II of the book. It also
 Figure 22.2
 
 \begin{definition}
-	Let \(X\) and \(Y\) be topological spaces; let \(p : X \rightarrow  Y\) be a surjective map. The map \(p\) is said to be a \index{quotient map} provided a subset \(U\) of \(Y\) is open in \(Y\) if and only if \({p}^{-1}( U)\) is open in \(X\) .
+	Let \(X\) and \(Y\) be topological spaces; let \(p : X \rightarrow  Y\) be a surjective map. The map \(p\) is said to be a \index{Quotient map} provided a subset \(U\) of \(Y\) is open in \(Y\) if and only if \({p}^{-1}( U)\) is open in \(X\) .
 \end{definition}
 
-This condition is stronger than continuity; some mathematicians call it ``\index{strong continuity}.'' An equivalent condition is to require that a subset \(A\) of \(Y\) be closed in \(Y\) if and only if \({p}^{-1}( A)\) is closed in \(X\) . Equivalence of the two conditions follows from equation
+This condition is stronger than continuity; some mathematicians call it ``\index{Strong continuity}.'' An equivalent condition is to require that a subset \(A\) of \(Y\) be closed in \(Y\) if and only if \({p}^{-1}( A)\) is closed in \(X\) . Equivalence of the two conditions follows from equation
 
 \[
 {f}^{-1}( {Y - B})  = X - {f}^{-1}( B) .
 \]
 
-Another way \index{Restriction: of a covering map!of a quotient map}of describing a \index{Quotient map}quotient map is as follows: We say that a subset \(C\) of \(X\) is \index{Saturated set} saturated (with respect to the surjective map \(p : X \rightarrow  Y\) ) if \(C\) contains every set \({p}^{-1}( {\{ y\} })\) that it intersects. Thus \(C\) is \index{saturated set@Saturated set}saturated if it equals the complete inverse image of a subset of \(Y\) . To say that \(p\) is a \index{Quotient map}quotient map is equivalent to saying that \(p\) is continuous and \(p\) maps saturated open sets of \(X\) to open sets of \(Y\) (or saturated \index{Closed set}closed sets of \(X\) to closed sets of \(Y\) ).
+Another way \index{Restriction: of a covering map!of a quotient map}of describing a \index{quotient map@Quotient map}quotient map is as follows: We say that a subset \(C\) of \(X\) is \index{saturated set@Saturated set} saturated (with respect to the surjective map \(p : X \rightarrow  Y\) ) if \(C\) contains every set \({p}^{-1}( {\{ y\} })\) that it intersects. Thus \(C\) is \index{saturated set@Saturated set}saturated if it equals the complete inverse image of a subset of \(Y\) . To say that \(p\) is a \index{quotient map@Quotient map}quotient map is equivalent to saying that \(p\) is continuous and \(p\) maps saturated open sets of \(X\) to open sets of \(Y\) (or saturated \index{closed set@Closed set}closed sets of \(X\) to closed sets of \(Y\) ).
 
-Two special kinds \index{Composite: of functions!of quotient maps}of quotient maps are the open maps and the \index{closed map}. Recall that a map \(f : X \rightarrow  Y\) is said to be an open map if for each open set \(U\) of \(X\) , the set \(f( U)\) is open in \(Y\) . It is said to be a closed map if for each closed set \(A\) of \(X\) , the set \(f( A)\) is closed in \(Y\) . It follows immediately from the definition that if \(p : X \rightarrow  Y\) is a surjective continuous map that is either open or closed, then \(p\) is a quotient map. There are quotient maps that are neither open nor closed. (See Exercise 3.)
+Two special kinds \index{Composite: of functions!of quotient maps}of quotient maps are the open maps and the \index{Closed map}. Recall that a map \(f : X \rightarrow  Y\) is said to be an open map if for each open set \(U\) of \(X\) , the set \(f( U)\) is open in \(Y\) . It is said to be a closed map if for each closed set \(A\) of \(X\) , the set \(f( A)\) is closed in \(Y\) . It follows immediately from the definition that if \(p : X \rightarrow  Y\) is a surjective continuous map that is either open or closed, then \(p\) is a quotient map. There are quotient maps that are neither open nor closed. (See Exercise 3.)
 
 \begin{centeredblock}
 \begin{example}
@@ -2422,7 +2422,7 @@ Note that if \(A\) is the \index{Box topology!subspace}subspace \(\lbrack 0,1) \
 
 \begin{centeredblock}
 \begin{example}
-	Let \({\pi }_{1} : \mathbb{R} \times  \mathbb{R} \rightarrow  \mathbb{R}\) be projection onto the first coordinate; then \({\pi }_{1}\) is continuous and surjective. Furthermore, \({\pi }_{1}\) is an \index{Open map}open map. For if \(U \times  V\) is a nonempty basis element for \(\mathbb{R} \times  \mathbb{R}\) , then \({\pi }_{1}( {U \times  V})  = U\) is open in \(\mathbb{R}\) ; it follows that \({\pi }_{1}\) carries open sets of \(\mathbb{R} \times  \mathbb{R}\) to open sets of \(\mathbb{R}\) . However, \({\pi }_{1}\) is not a \index{Closed map}closed map. The subset
+	Let \({\pi }_{1} : \mathbb{R} \times  \mathbb{R} \rightarrow  \mathbb{R}\) be projection onto the first coordinate; then \({\pi }_{1}\) is continuous and surjective. Furthermore, \({\pi }_{1}\) is an \index{open map@Open map}open map. For if \(U \times  V\) is a nonempty basis element for \(\mathbb{R} \times  \mathbb{R}\) , then \({\pi }_{1}( {U \times  V})  = U\) is open in \(\mathbb{R}\) ; it follows that \({\pi }_{1}\) carries open sets of \(\mathbb{R} \times  \mathbb{R}\) to open sets of \(\mathbb{R}\) . However, \({\pi }_{1}\) is not a \index{closed map@Closed map}closed map. The subset
 
 \[
 C = \{ x \times  y \mid  {xy} = 1\}
@@ -2472,10 +2472,10 @@ Figure 22.3
 There is a special situation in which the quotient topology occurs particularly frequently. It is the following:
 
 \begin{definition}
-	Let \(X\) be a topological space, and let \({X}^{ * }\) be a partition of \(X\) into disjoint subsets whose union is \(X\) . Let \(p : X \rightarrow  {X}^{ * }\) be the surjective map that carries each point of \(X\) to the element of \({X}^{ * }\) containing it. In the \index{Quotient topology}quotient topology induced by \(p\) , the space \({X}^{ * }\) is called a quotient space of \(X\) .
+	Let \(X\) be a topological space, and let \({X}^{ * }\) be a partition of \(X\) into disjoint subsets whose union is \(X\) . Let \(p : X \rightarrow  {X}^{ * }\) be the surjective map that carries each point of \(X\) to the element of \({X}^{ * }\) containing it. In the \index{quotient topology@Quotient topology}quotient topology induced by \(p\) , the space \({X}^{ * }\) is called a quotient space of \(X\) .
 \end{definition}
 
-Given \({X}^{ * }\) , there is an equivalence relation on \(X\) of which the elements of \({X}^{ * }\) are the equivalence classes. One can think of \({X}^{ * }\) as having been obtained by ``ide ntifying'' each pair of equivalent points. \index{Hausdorff condition!for quotient space}For this reason, the quotient space \({X}^{ * }\) is often called an \index{identification space}, or a \index{decomposition space}, of the space \(X\) .
+Given \({X}^{ * }\) , there is an equivalence relation on \(X\) of which the elements of \({X}^{ * }\) are the equivalence classes. One can think of \({X}^{ * }\) as having been obtained by ``ide ntifying'' each pair of equivalent points. \index{Hausdorff condition!for quotient space}For this reason, the quotient space \({X}^{ * }\) is often called an \index{Identification space}, or a \index{Decomposition space}, of the space \(X\) .
 
 We can describe the topology of \({X}^{ * }\) in another way. A subset \(U\) of \({X}^{ * }\) is a collection of equivalence classes, and the set \({p}^{-1}( U)\) is just the union of the equivalence classes belongingg to \(U\) . Thus the typical open set of \({X}^{ * }\) is a collection of equivalence classes whose union is an open set of \(X\) .
 
@@ -2620,10 +2620,10 @@ If \(f\) is a quotient map, then \(g\) is the composite \index{Composite: of fun
 {X}^{ * } = \{  {{g}^{-1}( {\{ z\} })  \mid  z \in  Z}\}  .
 \]
 
-Give \({X}^{ * }\) the \index{Quotient topology}quotient topology.
+Give \({X}^{ * }\) the \index{quotient topology@Quotient topology}quotient topology.
 \end{corollary}
 
-(a) The map \(g\) induces a bijective continuous map \(f : {X}^{ * } \rightarrow  Z\) , which is a \index{Homeomorphism}homeomorphism if and only if \(g\) is a quotient map.
+(a) The map \(g\) induces a bijective continuous map \(f : {X}^{ * } \rightarrow  Z\) , which is a \index{homeomorphism@Homeomorphism}homeomorphism if and only if \(g\) is a quotient map.
 
 \begin{center}
 \includegraphics[width=0.2\textwidth]{images/22.8.jpg}
@@ -2633,9 +2633,9 @@ Give \({X}^{ * }\) the \index{Quotient topology}quotient topology.
 (b) If \(Z\) is Hausdorff, so is \({X}^{ * }\) .
 
 \begin{proof}
-By the preceding theorem, \(g\) induces a continuous map \(f : {X}^{ * } \rightarrow  Z\) ; it is clear that \(f\) is bijective. Suppose that \(f\) is a \index{homeomorphism@Homeomorphism}homeomorphism. Then both \(f\) and the \index{Projection map}projection map \(p : X \rightarrow  {X}^{ * }\) are quotient maps, so that their composite \(q\) is a quotient map. Conversely, suppose that \(g\) is a quotient map Then it follows from the preceding theorem that \(f\) is a quotient map. Being bijective, \(f\) is thus a homeomorphism.
+By the preceding theorem, \(g\) induces a continuous map \(f : {X}^{ * } \rightarrow  Z\) ; it is clear that \(f\) is bijective. Suppose that \(f\) is a \index{homeomorphism@Homeomorphism}homeomorphism. Then both \(f\) and the \index{projection map@Projection map}projection map \(p : X \rightarrow  {X}^{ * }\) are quotient maps, so that their composite \(q\) is a quotient map. Conversely, suppose that \(g\) is a quotient map Then it follows from the preceding theorem that \(f\) is a quotient map. Being bijective, \(f\) is thus a homeomorphism.
 
-Suppose \(Z\) is Hausdorff. Given distinct pomts of \({X}^{ * }\) , their images under \(f\) are distinct and thus possess disjoint \index{Neighborhood}neighborhoods \(U\) and \(V\) . Then \({f}^{-1}( U)\) and \({f}^{-1}( V)\) are disjoint \index{neighborhood@Neighborhood}neighborhoods of the two given points of \({X}^{ * }\) .
+Suppose \(Z\) is Hausdorff. Given distinct pomts of \({X}^{ * }\) , their images under \(f\) are distinct and thus possess disjoint \index{neighborhood@Neighborhood}neighborhoods \(U\) and \(V\) . Then \({f}^{-1}( U)\) and \({f}^{-1}( V)\) are disjoint \index{neighborhood@Neighborhood}neighborhoods of the two given points of \({X}^{ * }\) .
 \end{proof}
 
 \begin{centeredblock}
@@ -2644,7 +2644,7 @@ Suppose \(Z\) is Hausdorff. Given distinct pomts of \({X}^{ * }\) , their images
 
 Define a map \(g : X \rightarrow  Z\) by the equation \(g( {x \times  n})  = x \times  ( {x/n})\) ; then \(g\) is surjective and continuous. The quotient space \({X}^{ * }\) whose elements are the sets \({g}^{-1}( {\{ z\} })\) is simply the space obtained from \(X\) by identifying the subset \(\{ 0\}  \times  {\mathbb{Z}}_{ + }\) to a point. The map \(g\) induces a bijective continuous map \(f : {X}^{ * } \rightarrow  Z\) . But \(f\) is not a homeomorphism.
 
-To verify this fact, it suffices to show that \(g\) is not a quotient map. Consider the sequence of points \({x}_{n} = ( {1/n})  \times  n\) of \(X\) . The set \(A = \{  {x}_{n}\}\) is a closed subset of \(X\) because it has no limut points. Also, it is saturated with respect to \(g\) On the other hand, the set \(g( A)\) is not closed in \(Z\) , for it consists of the points \({z}_{n} = ( {1/n})  \times  ( {1/{n}^{2}})\) ; this set has the origin as a \index{Limit point}limit point.
+To verify this fact, it suffices to show that \(g\) is not a quotient map. Consider the sequence of points \({x}_{n} = ( {1/n})  \times  n\) of \(X\) . The set \(A = \{  {x}_{n}\}\) is a closed subset of \(X\) because it has no limut points. Also, it is saturated with respect to \(g\) On the other hand, the set \(g( A)\) is not closed in \(Z\) , for it consists of the points \({z}_{n} = ( {1/n})  \times  ( {1/{n}^{2}})\) ; this set has the origin as a \index{limit point@Limit point}limit point.
 
 \begin{center}
 \includegraphics[width=0.9\textwidth]{images/22.9.jpg}
@@ -2710,7 +2710,7 @@ Figure 22.8
 \item Recall that \({\mathbb{R}}_{K}\) denotes the real line in the \(K\) -topology. (See \(§{13}\) .) Let \(Y\) be the quotient space obtained from \({\mathbb{R}}_{K}\) by collapsing the set \(K\) to a point; let \(p : {\mathbb{R}}_{K} \rightarrow  Y\) be the quotient map.
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that \(Y\) satisfies the \({T}_{1}\) axiom, but is not Hausdorff.
-  \item Show that \(p \times  p.{\mathbb{R}}_{K} \times  {\mathbb{R}}_{K} \rightarrow  Y \times  Y\) is not a quotient map. [Hint: The \index{Diagonal}diagonal is not closed in \(Y \times  Y\) , but its inverse image is closed in \({\mathbb{R}}_{K} \times  {\mathbb{R}}_{K}\) .]
+  \item Show that \(p \times  p.{\mathbb{R}}_{K} \times  {\mathbb{R}}_{K} \rightarrow  Y \times  Y\) is not a quotient map. [Hint: The \index{diagonal@Diagonal}diagonal is not closed in \(Y \times  Y\) , but its inverse image is closed in \({\mathbb{R}}_{K} \times  {\mathbb{R}}_{K}\) .]
   \end{enumerate}
 \end{enumerate}
 \section*{* Supplementary Exercises: Topological Groups}
@@ -2751,13 +2751,13 @@ are homeomorphisms of \(G\) . Conclude that \(G\) is a homogeneous space. (This 
 
 (c) Show that the quotient map \(p : G \rightarrow  G/H\) is open.
 
-(d) Show that if \(H\) is closed in the topology of \(G\) and is a \index{Norm}normal subgroup of \(G\) , then \(G/H\) is a topological group.
+(d) Show that if \(H\) is closed in the topology of \(G\) and is a \index{norm@Norm}normal subgroup of \(G\) , then \(G/H\) is a topological group.
 
 6. The integers \(\mathbb{Z}\) are a normal subgroup of \(( {\mathbb{R}, + })\) . The quotient \(\mathbb{R}/\mathbb{Z}\) is a familiar topological group; what is it?
 
 7. If \(A\) and \(B\) are subsets of \(G\) , let \(A \cdot  B\) denote the set of all points \(a \cdot  b\) for \(a \in  A\) and \(b \in  B\) . Let \({A}^{-1}\) denote the set of all points \({a}^{-1}\) , for \(a \in  A\) .
 
-(a) A neighborhood \(V\) of the identity element \(e\) is said to be sym\index{Metric}metric if \(V =\)  \({V}^{-1}\) . If \(U\) is a neighborhood of \(e\) , show there is a sym\index{metric@Metric}metric neighborhood \(V\) of \(e\) such that \(V \cdot  V \subset  U\) . [Hint: If \(W\) is a neighborhood of \(e\) , then \(W \cdot  {W}^{-1}\) is symmetric.]
+(a) A neighborhood \(V\) of the identity element \(e\) is said to be sym\index{metric@Metric}metric if \(V =\)  \({V}^{-1}\) . If \(U\) is a neighborhood of \(e\) , show there is a sym\index{metric@Metric}metric neighborhood \(V\) of \(e\) such that \(V \cdot  V \subset  U\) . [Hint: If \(W\) is a neighborhood of \(e\) , then \(W \cdot  {W}^{-1}\) is symmetric.]
 
 (b) Show that \(G\) is Hausdorff. In fact, show that if \(x \neq  y\) , there is a neighborhood \(V\) of \(e\) such that \(V \cdot  x\) and \(V \cdot  y\) are disjoint.
 
