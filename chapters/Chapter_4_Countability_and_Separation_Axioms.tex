@@ -2,18 +2,18 @@
 \vspace{6.5cm}
 \chaptermark{Countability and Separation Axioms}
 
-The concepts we are going to introduce now, unlike compactness and connectedness, do not arise naturally from the study of calculus and analysis. They arise instead from a deeper study of topology itself. Such problems as \index{Imbedding theorem: for a compact manifold} imbedding a given space in a metric space or in a compact Hausdorff space are basically problems of topology rather than analysis. These particular problems have solutions that involve the countability and \index{\({\mathbb{R}}_{K}\)!separation axioms}\index{\({\mathbb{R}}_{K}\)!separation axioms}separation axioms.
+The concepts we are going to introduce now, unlike compactness and connectedness, do not arise naturally from the study of calculus and analysis. They arise instead from a deeper study of topology itself. Such problems as \index{imbedding theorem: for a compact manifold@Imbedding theorem: for a compact manifold} imbedding a given space in a metric space or in a compact Hausdorff space are basically problems of topology rather than analysis. These particular problems have solutions that involve the countability and \index{\({\mathbb{R}}_{K}\)!separation axioms}\index{\({\mathbb{R}}_{K}\)!separation axioms}separation axioms.
 
-We have already introduced the first countability axiom; it arose in connection with our study of \index{Convergent net} convergent sequences in \(\$ {21}\) . We have also studied one of the separation axioms-the Hausdorff axiom, and mentioned another-the \({T}_{1}\) axiom. In this chapter we shall introduce other, and stronger, axioms like these and explore some of their consequences. Our basic goal is to prove the \index{Urysohn metrization theorem}. It says that if a topological space \(X\) satisfies a certain countability axiom (the second) and a certain separation axiom (the \index{Regular space (see also Regularity)} \index{Locally compact Hausdorff space: Baire condition!regularity}\index{Locally compact Hausdorff space: Baire condition!regularity}\index{Locally compact Hausdorff space: Baire condition!regularity}regularity axiom), then \(X\) can be imbedded in a metric space and is thus metrizable.
+We have already introduced the first countability axiom; it arose in connection with our study of \index{convergent net@Convergent net} convergent sequences in \(\$ {21}\) . We have also studied one of the separation axioms-the Hausdorff axiom, and mentioned another-the \({T}_{1}\) axiom. In this chapter we shall introduce other, and stronger, axioms like these and explore some of their consequences. Our basic goal is to prove the \index{urysohn metrization theorem@Urysohn metrization theorem}. It says that if a topological space \(X\) satisfies a certain countability axiom (the second) and a certain separation axiom (the \index{regular space (see also regularity)@Regular space (see also Regularity)} \index{Locally compact Hausdorff space: Baire condition!regularity}\index{Locally compact Hausdorff space: Baire condition!regularity}\index{Locally compact Hausdorff space: Baire condition!regularity}regularity axiom), then \(X\) can be imbedded in a metric space and is thus metrizable.
 
-Another imbedding theorem, important to geometers, appears in the last section \index{Regularity!of manifold}of the chapter. Given a space that is a compact \index{manifold} (the higher-dimensional analogue of a \index{surface}), we show that it can be imbedded in some finite-dimensional euclidean space.
+Another imbedding theorem, important to geometers, appears in the last section \index{Regularity!of manifold}of the chapter. Given a space that is a compact \index{Manifold} (the higher-dimensional analogue of a \index{Surface}), we show that it can be imbedded in some finite-dimensional euclidean space.
 
 \section*{§ 30 The Countability Axioms}
 
 Recall the definition we gave in \(§{21}\) .
 
 \begin{definition}
-	A space \(X\) is said to have a \index{countable basis} at \(x\) if there is a countable collection \(\mathcal{B}\) of neighborhoods of \(x\) such that each neighborhood of \(x\) contains at least one of the elements of \(\mathcal{B}\) . A space that has a \index{Countable basis}\index{Countable basis}\index{countable basis@Countable basis}countable basis at each of its \index{Separates points from closed sets} points is said to satisfy the first countability axiom, or to be first-countable.
+	A space \(X\) is said to have a \index{Countable basis} at \(x\) if there is a countable collection \(\mathcal{B}\) of neighborhoods of \(x\) such that each neighborhood of \(x\) contains at least one of the elements of \(\mathcal{B}\) . A space that has a \index{countable basis@Countable basis}\index{countable basis@Countable basis}\index{countable basis@Countable basis}countable basis at each of its \index{separates points from closed sets@Separates points from closed sets} points is said to satisfy the first countability axiom, or to be first-countable.
 \end{definition}
 
 We have already noted that every metrizable space satisfies this axiom; see §21.
@@ -27,18 +27,18 @@ The most useful fact concerning spaces that satisfy this axiom is the fact that 
 
 (b) Let \(f : X \rightarrow  Y\) . If \(f\) is continuous, then for every convergent sequence \({x}_{n} \rightarrow  x\) in \(X\) , the sequence \(f( {x}_{n})\) converges to \(f( x)\) . The converse holds if \(X\) is first-countable.
 
-The proof is a direct generalization of the proof given in §21 under the hypothesis \index{Normality!of compact Hausdorff space}of \index{Metrizability: of compact Hausdorff space} \index{Compact Hausdorff space: is Baire space!metrizability}\index{Compact Hausdorff space: is Baire space!metrizability}\index{Compact Hausdorff space: is Baire space!metrizability}metrizability, so it will not be repeated here.
+The proof is a direct generalization of the proof given in §21 under the hypothesis \index{Normality!of compact Hausdorff space}of \index{metrizability: of compact hausdorff space@Metrizability: of compact Hausdorff space} \index{Compact Hausdorff space: is Baire space!metrizability}\index{Compact Hausdorff space: is Baire space!metrizability}\index{Compact Hausdorff space: is Baire space!metrizability}metrizability, so it will not be repeated here.
 
 Of much greater importance than the first countability axiom is the following:
 
 \end{theorem}
 \section*{Definition. If a space \(X\) has a countable basis for its topology, then \(X\) is said to satisfy the second countability axiom, or to be second-countable.}
 
-\index{Second-countable space (see also Second-countability)}
+\index{second-countable space (see also second-countability)@Second-countable space (see also Second-countability)}
 
 Obviously, the second axiom implies the first: if \(\mathcal{B}\) is a countable basis for the topology of \(X\) , then the subset of \(\mathcal{B}\) consisting of those basis elements containing the point \(x\) is a countable basis at \(x\) . The second axiom is, in fact, much stronger than the first; it is so strong that not even every metric space satisfies it.
 
-Why then is this second axiom interesting? Well, for one thing, many familiar spaces do satisfy it. For another, it is a crucial hypothesis used in proving such theorems as the \index{Urysohn metrization theorem}\index{Urysohn metrization theorem}\index{urysohn metrization theorem@Urysohn metrization theorem}Urysohn metrization theorem, as we shall see.
+Why then is this second axiom interesting? Well, for one thing, many familiar spaces do satisfy it. For another, it is a crucial hypothesis used in proving such theorems as the \index{urysohn metrization theorem@Urysohn metrization theorem}\index{urysohn metrization theorem@Urysohn metrization theorem}\index{urysohn metrization theorem@Urysohn metrization theorem}Urysohn metrization theorem, as we shall see.
 
 \begin{centeredblock}
 \begin{example}
@@ -87,9 +87,9 @@ Let \(\{  {B}_{n}\}\) be a countable basis for \(X\) .
 
 (b) From each nonempty basis element \({B}_{n}\) , choose a point \({x}_{n}\) . Let \(D\) be the set consisting of the points \({x}_{n}\) . Then \(D\) is dense in \(X\) : Given any point \(x\) of \(X\) , every basis element containing \(x\) intersects \(D\) , so \(x\) belongs to \(\bar{D}\) .
 
-The two properties listed in Theorem 30.3 are sometimes taken as alternative countability axioms. A space for which every open covering contains a countable subcovering is called a Lindelöf space A space having a countable \index{dense subset} is often said to be \index{Separable (see also Countable dense subset)} separable (an unfortunate choice of terminology). ${}^{\dagger}$ Weaker in general than the second countability axiom, each of these properties is equivalent to the second countability axiom when the space is metrizable (see Exercise 5). They are less important than the second countability axiom, but you should be aware of their existence, for they are sometimes useful. It is often easier, for instance, to show that a space \(X\) has a countable dense subset than it is to show that \(X\) has a countable basis. If the space is metrizable (as it usually is in analysis), it follows that \(X\) is second-countable as well.
+The two properties listed in Theorem 30.3 are sometimes taken as alternative countability axioms. A space for which every open covering contains a countable subcovering is called a Lindelöf space A space having a countable \index{Dense subset} is often said to be \index{separable (see also countable dense subset)@Separable (see also Countable dense subset)} separable (an unfortunate choice of terminology). ${}^{\dagger}$ Weaker in general than the second countability axiom, each of these properties is equivalent to the second countability axiom when the space is metrizable (see Exercise 5). They are less important than the second countability axiom, but you should be aware of their existence, for they are sometimes useful. It is often easier, for instance, to show that a space \(X\) has a countable dense subset than it is to show that \(X\) has a countable basis. If the space is metrizable (as it usually is in analysis), it follows that \(X\) is second-countable as well.
 
-We shall not use these properties to prove any theorems, but one of them-the \index{Lindelöf condition}-will be useful in dealing with some examples. They are not as well behaved as one might wish under the operations of taking subspaces and cartesian products, as we shall see in the examples and exercises that follow.
+We shall not use these properties to prove any theorems, but one of them-the \index{lindelöf condition@Lindelöf condition}-will be useful in dealing with some examples. They are not as well behaved as one might wish under the operations of taking subspaces and cartesian products, as we shall see in the examples and exercises that follow.
 \end{proof}
 
 \begin{centeredblock}
@@ -221,7 +221,7 @@ Recall that a space \(X\) is said to be Hausdorff if for each pair \(x,y\) of di
 	Suppose that one-point sets are closed in \(X\) . Then \(X\) is said to be regular if for each pair consisting of a point \(x\) and a closed set \(B\) disjoint from \(x\) , there exist disjoint open sets containing \(x\) and \(B\) , respectively. The space \(X\) is said to be normal if for each pair \(A,B\) of disjoint closed sets of \(X\) , there exist disjoint open sets containing \(A\) and \(B\) , respectively.
 \end{definition}
 
-It is clear that a regular space is Hausdorff, and that a \index{normal space} is regular. (We need to include the condition that one-point sets be closed as part of the definition of regularity and \index{normality} in order for this to be the case. A two-point space in the indiscrete topology satisfies the other part of the definitions of regularity and normality, even though it is not Hausdorff.) For examples showing the regularity axiom stronger than the Hausdorff axiom, and normality stronger than regularity, see Examples 1 and 3.
+It is clear that a regular space is Hausdorff, and that a \index{Normal space} is regular. (We need to include the condition that one-point sets be closed as part of the definition of regularity and \index{Normality} in order for this to be the case. A two-point space in the indiscrete topology satisfies the other part of the definitions of regularity and normality, even though it is not Hausdorff.) For examples showing the regularity axiom stronger than the Hausdorff axiom, and normality stronger than regularity, see Examples 1 and 3.
 
 These axioms are called separation axioms for the reason that they involve ``separating'' certain kinds of sets from one another by disjoint open sets. We have used the word ``separation'' before, of course, when we studied connected spaces. But in that case, we were trying to find disjoint open sets whose union was the entire space.
 
@@ -354,10 +354,10 @@ This proof that \({\mathbb{R}}_{\ell }^{2}\) is not normal is in some ways not v
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that if \(X\) is Hausdorff, then so is \(Y\) .
   \item Show that if \(X\) is regular, then so is \(Y\) .
-  \item Show that if \(X\) is \index{Local metrizability} locally compact, then so is \(Y\) .
+  \item Show that if \(X\) is \index{local metrizability@Local metrizability} locally compact, then so is \(Y\) .
   \item Show that if \(X\) is second-countable, then so is \(Y\) . [Hint: Let \(\mathcal{B}\) be a countable basis for \(X\) . For each finite subset \(J\) of \(\mathcal{B}\) , let \({U}_{J}\) be the union of all sets of the form \({p}^{-1}( W)\) , for \(W\) open in \(Y\) , that are contained in the union of the elements of \(J\) .]
   \end{enumerate}
-\item Let \(X\) be a space; let \(G\) be a topological group. An \index{Action of a group on a space} action of \(G\) on \(X\) is a continuous map \(\alpha  : G \times  X \rightarrow  X\) such that, denoting \(\alpha ( {g \times  x})\) by \(g \cdot  x\) , one has: (i) \(e \cdot  x = x\) for all \(x \in  X\) . (ii) \({g}_{1} \cdot  ( {{g}_{2} \cdot  x})  = ( {{g}_{1} \cdot  {g}_{2}})  \cdot  x\) for all \(x \in  X\) and \({g}_{1},{g}_{2} \in  G\) . Define \(x \sim  g \cdot  x\) for all \(x\) and \(g\) ; the resulting quotient space is denoted \(X/G\) and called the \index{orbit space} of the action \(\alpha\) . \textbf{Theorem.} Let \(G\) be a compact topological group; let \(X\) be a topological space; let \(\alpha\) be an action of \(G\) on \(X\) . If \(X\) is Hausdorff, or regular, or normal, or locally compact, or second-countable, so is \(X/G\) . [Hint: See Exercise 13 of §26.] *9. Let \(A\) be the set of all points of \({\mathbb{R}}_{\ell }^{2}\) of the form \(x \times  ( {-x})\) , for \(x\) rational; let \(B\) be the set of all points of this form for \(x\) irrational. If \(V\) is an open set of \({\mathbb{R}}_{\ell }^{2}\) containing \(B\) , show there exists no open set \(U\) containing \(A\) that is disjoint from \(V\) , as follows:
+\item Let \(X\) be a space; let \(G\) be a topological group. An \index{action of a group on a space@Action of a group on a space} action of \(G\) on \(X\) is a continuous map \(\alpha  : G \times  X \rightarrow  X\) such that, denoting \(\alpha ( {g \times  x})\) by \(g \cdot  x\) , one has: (i) \(e \cdot  x = x\) for all \(x \in  X\) . (ii) \({g}_{1} \cdot  ( {{g}_{2} \cdot  x})  = ( {{g}_{1} \cdot  {g}_{2}})  \cdot  x\) for all \(x \in  X\) and \({g}_{1},{g}_{2} \in  G\) . Define \(x \sim  g \cdot  x\) for all \(x\) and \(g\) ; the resulting quotient space is denoted \(X/G\) and called the \index{Orbit space} of the action \(\alpha\) . \textbf{Theorem.} Let \(G\) be a compact topological group; let \(X\) be a topological space; let \(\alpha\) be an action of \(G\) on \(X\) . If \(X\) is Hausdorff, or regular, or normal, or locally compact, or second-countable, so is \(X/G\) . [Hint: See Exercise 13 of §26.] *9. Let \(A\) be the set of all points of \({\mathbb{R}}_{\ell }^{2}\) of the form \(x \times  ( {-x})\) , for \(x\) rational; let \(B\) be the set of all points of this form for \(x\) irrational. If \(V\) is an open set of \({\mathbb{R}}_{\ell }^{2}\) containing \(B\) , show there exists no open set \(U\) containing \(A\) that is disjoint from \(V\) , as follows:
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Let \({K}_{n}\) consist of all irrational numbers \(x\) in \([  {0,1}]\) such that \(\lbrack x,x + 1/n) \times\)  \(\lbrack  - x, - x + 1/n)\) is contained in \(V\) . Show \([  {0,1}]\) is the union of the sets \({K}_{n}\) and countably many one-point sets.
   \item Use Exercise 5 of \(§{27}\) to show that some set \({\bar{K}}_{n}\) contains an open interval (a, b)of \(\mathbb{R}\) .
@@ -367,7 +367,7 @@ This proof that \({\mathbb{R}}_{\ell }^{2}\) is not normal is in some ways not v
 \end{enumerate}
 \section*{§ 32 Normal Spaces}
 
-Now we turn to a more thorough study of spaces satisfying the normality axiom. In one sense, the term ``normal'' is something of a misnomer, for normal spaces are not as well-behaved as one might wish. On the other hand, most of the spaces with which we are familiar do satisfy this axiom, as we shall see. Its importance comes from the fact that the results one can prove under the hypothesis of normality are central to much of topology. The Urysohn metrization theorem and the \index{Tietze extension theorem} are two such results; we shall deal with them later in this chapter.
+Now we turn to a more thorough study of spaces satisfying the normality axiom. In one sense, the term ``normal'' is something of a misnomer, for normal spaces are not as well-behaved as one might wish. On the other hand, most of the spaces with which we are familiar do satisfy this axiom, as we shall see. Its importance comes from the fact that the results one can prove under the hypothesis of normality are central to much of topology. The Urysohn metrization theorem and the \index{tietze extension theorem@Tietze extension theorem} are two such results; we shall deal with them later in this chapter.
 
 We begin by proving three theorems that give three important sets of hypotheses under which normality of a space is assured.
 
@@ -529,10 +529,10 @@ Figure 32.3
 \item Show that every locally compact Hausdorff space is regular.
 \item Show that every regular Lindelöf space is normal.
 \item Is \({\mathbb{R}}^{\omega }\) normal in the product topology? In the uniform topology? It is not known whether \({\mathbb{R}}^{\omega }\) is normal in the box topology. Mary-Ellen Rudin has shown that the answer is affirmative if one assumes the continuum hypothesis \cite{Rudin1972}. In fact, she shows it satisfies a stronger condition called paracompact-ness.
-\item A space \(X\) is said to be \index{Complete regularity (cont.)} completely normal if every subspace of \(X\) is normal. Show that \(X\) is completely normal if and only if for every pair \(A,B\) of separated sets in \(X\) (that is, sets such that \(\bar{A} \cap  B = \varnothing\) and \(A \cap  \bar{B} = \varnothing\) ), there exist disjoint open sets containing them. [Hint: If \(X\) is completely normal, consider \(X - ( {\bar{A} \cap  \bar{B}})\) .]
+\item A space \(X\) is said to be \index{complete regularity (cont.)@Complete regularity (cont.)} completely normal if every subspace of \(X\) is normal. Show that \(X\) is completely normal if and only if for every pair \(A,B\) of separated sets in \(X\) (that is, sets such that \(\bar{A} \cap  B = \varnothing\) and \(A \cap  \bar{B} = \varnothing\) ), there exist disjoint open sets containing them. [Hint: If \(X\) is completely normal, consider \(X - ( {\bar{A} \cap  \bar{B}})\) .]
 \item Which of the following spaces are completely normal? Justify your answers.
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item A subspace of a \index{completely normal space}.
+  \item A subspace of a \index{Completely normal space}.
   \item The product of two completely normal spaces.
   \item A well-ordered set in the order topology.
   \item A metrizable space.
@@ -553,7 +553,7 @@ Figure 32.3
 \end{enumerate}
 \section*{§ 33 The Urysohn Lemma}
 
-Now we come to the first deep theorem of the book, a theorem that is commonly called the ``\index{Urysohn lemma}.'' It asserts the existence of certain real-valued continuous functions on a normal space \(X\) . It is the crucial tool used in proving a number of important theorems. We shall prove three of them-the Urysohn metrization theorem, the Tietze extension theorem, and an imbedding theorem for manifolds-in succeeding sections of this chapter.
+Now we come to the first deep theorem of the book, a theorem that is commonly called the ``\index{urysohn lemma@Urysohn lemma}.'' It asserts the existence of certain real-valued continuous functions on a normal space \(X\) . It is the crucial tool used in proving a number of important theorems. We shall prove three of them-the Urysohn metrization theorem, the Tietze extension theorem, and an imbedding theorem for manifolds-in succeeding sections of this chapter.
 
 Why do we call the Urysohn lemma a ``deep'' theorem? Because its proof involves a really original idea, which the previous proofs did not. Perhaps we can explain what we mean this way: By and large, one would expect that if one went through this book and deleted all the proofs we have given up to now and then handed the book to a bright student who had not studied topology, that student ought to be able to go through the book and work out the proofs independently. (It would take a good deal of time and effort, of course; and one would not expect the student to handle the trickier examples.) But the Urysohn lemma is on a different level. It would take considerably more originality than most of us possess to prove this lemma unless we were given copious hints \({}^{1}\)
 
@@ -728,9 +728,9 @@ Requiring that one be able to separate a point from a closed set by a continuous
 	A space \(X\) is completely regular if one-point sets are closed in \(X\) and if for each point \({x}_{0}\) and each closed set \(A\) not containing \({x}_{0}\) , there is a continuous function \(f : X \rightarrow  [  {0,1}]\) such that \(f( {x}_{0})  = 1\) and \(f( A)  = \{ 0\}\) .
 \end{definition}
 
-A normal space is completely regular, by the Urysohn lemma, and a \index{completely regular space} is regular, since given \(f\) , the sets \({f}^{-1}( [  {0,\frac{1}{2}}) )\) and \({f}^{-1}( [  {\frac{1}{2},1}]  )\) are disjoint open sets about \(A\) and \({x}_{0}\) , respectively As a result, this new axiom fits in between regularity and normality in the list of separation axioms. Note that in the definition one could just as well require the function to map \({x}_{0}\) to 0, and \(A\) to \(\{ 1\}\) , for \(g( x)  = 1 - f( x)\) satisfies this condition. But our definition is at times a bit more convenient.
+A normal space is completely regular, by the Urysohn lemma, and a \index{Completely regular space} is regular, since given \(f\) , the sets \({f}^{-1}( [  {0,\frac{1}{2}}) )\) and \({f}^{-1}( [  {\frac{1}{2},1}]  )\) are disjoint open sets about \(A\) and \({x}_{0}\) , respectively As a result, this new axiom fits in between regularity and normality in the list of separation axioms. Note that in the definition one could just as well require the function to map \({x}_{0}\) to 0, and \(A\) to \(\{ 1\}\) , for \(g( x)  = 1 - f( x)\) satisfies this condition. But our definition is at times a bit more convenient.
 
-In the early years of topology, the separation axioms, listed in order of increasing strength, were labelled \({T}_{1},{T}_{2}\) (Hausdorff), \({T}_{3}\) (regular), \({T}_{4}\) (normal), and \({T}_{5}\) (completely normal), respectively. The letter ``T'' comes from the German ``Trennungsax-iom,'' which means ``separation axiom.'' Later, when the notion of \index{complete regularity} was introduced, someone suggested facetiously that it should be called the `` \(T - 3\frac{1}{2}\) axiom,'' since it lies between regularity and normality. This terminology is in fact sometimes used in the literature \({}^{1}\)
+In the early years of topology, the separation axioms, listed in order of increasing strength, were labelled \({T}_{1},{T}_{2}\) (Hausdorff), \({T}_{3}\) (regular), \({T}_{4}\) (normal), and \({T}_{5}\) (completely normal), respectively. The letter ``T'' comes from the German ``Trennungsax-iom,'' which means ``separation axiom.'' Later, when the notion of \index{Complete regularity} was introduced, someone suggested facetiously that it should be called the `` \(T - 3\frac{1}{2}\) axiom,'' since it lies between regularity and normality. This terminology is in fact sometimes used in the literature \({}^{1}\)
 
 Unlike normality, this new separation axiom is nicely behaved with regard to subspaces and products:
 
@@ -746,7 +746,7 @@ Let \(X = \prod {X}_{\alpha }\) be a product of completely regular spaces. Let \
 {f}_{i} : {X}_{{\alpha }_{i}} \rightarrow  [  {0,1}]
 \]
 
-such that \({f}_{i}( {b}_{{\alpha }_{i}})  = 1\) and \({f}_{i}( {X - {U}_{{\alpha }_{i}}})  = \{ 0\}\) . Let \({\phi }_{i}( \mathbf{x})  = {f}_{i}( {{\pi }_{{\alpha }_{i}}( \mathbf{x}) })\) ; then \({\phi }_{i}\) maps \(X\) continuously into \(\mathbb{R}\) and \index{Vanish precisely on A} vanishes outside \({\pi }_{{\alpha }_{i}}^{-1}( {U}_{{\alpha }_{i}})\) . The product
+such that \({f}_{i}( {b}_{{\alpha }_{i}})  = 1\) and \({f}_{i}( {X - {U}_{{\alpha }_{i}}})  = \{ 0\}\) . Let \({\phi }_{i}( \mathbf{x})  = {f}_{i}( {{\pi }_{{\alpha }_{i}}( \mathbf{x}) })\) ; then \({\phi }_{i}\) maps \(X\) continuously into \(\mathbb{R}\) and \index{vanish precisely on a@Vanish precisely on A} vanishes outside \({\pi }_{{\alpha }_{i}}^{-1}( {U}_{{\alpha }_{i}})\) . The product
 
 \[
 f( \mathbf{x})  = {\phi }_{1}( \mathbf{x}) \;{\phi }_{2}( \mathbf{x})  \cdot  \cdots \;{\phi }_{n}( \mathbf{x})
@@ -778,7 +778,7 @@ A space that is regular but not completely regular is much harder to find. Most 
 \item A space \(X\) is said to be perfectly normal if \(X\) is normal and if every closed set in \(X\) is a \({G}_{\delta }\) set in \(X\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that every metrizable space is perfectly normal.
-  \item Show that a \index{perfectly normal space} is completely normal. For this reason the condition of perfect normality is sometimes called the `` \({T}_{6}\) axiom.'' [Hint: Let \(A\) and \(B\) be separated sets in \(X\) . Choose continuous functions \(f,g\) : \(X \rightarrow  [  {0,1}]\) that vanish precisely on \(\bar{A}\) and \(\bar{B}\) , respectively. Consider the function \(f - g\) .]
+  \item Show that a \index{Perfectly normal space} is completely normal. For this reason the condition of perfect normality is sometimes called the `` \({T}_{6}\) axiom.'' [Hint: Let \(A\) and \(B\) be separated sets in \(X\) . Choose continuous functions \(f,g\) : \(X \rightarrow  [  {0,1}]\) that vanish precisely on \(\bar{A}\) and \(\bar{B}\) , respectively. Consider the function \(f - g\) .]
   \item There is a familiar space that is completely normal but not perfectly normal. What is it?
   \end{enumerate}
 \item Show that every locally compact Hausdorff space is completely regular.
@@ -929,7 +929,7 @@ A family of continuous functions that satisfies the hypotheses of this theorem i
 \item Let \(X\) be a locally compact Hausdorff space. Let \(Y\) be the one-point compactification of \(X\) . Is it true that if \(X\) has a countable basis, then \(Y\) is metrizable? Is it true that if \(Y\) is metrizable, then \(X\) has a countable basis?
 \item Check the details of the proof of Theorem 34.2.
 \item A space \(X\) is locally metrizable if each point \(x\) of \(X\) has a neighborhood that is metrizable in the subspace topology. Show that a compact Hausdorff space \(X\) is metrizable if it is locally metrizable. [Hint. Show that \(X\) is a finite union of open subspaces, each of which has a countable basis.]
-\item Show that a \index{Regular Lindelöf space: metrizability} regular Lindelof space is metrizable if it is locally metrizable. [Hint: A closed subspace of a Lindelof space is Lindelöf.] Regularity is essential; where do you use it in the proof?
+\item Show that a \index{regular lindelöf space: metrizability@Regular Lindelöf space: metrizability} regular Lindelof space is metrizable if it is locally metrizable. [Hint: A closed subspace of a Lindelof space is Lindelöf.] Regularity is essential; where do you use it in the proof?
 \item Let \(X\) be a compact Hausdorff space that is the union of the closed subspaces \({X}_{1}\) and \({X}_{2}\) . If \({X}_{1}\) and \({X}_{2}\) are metrizable, show that \(X\) is metrizable. [Hint Construct a countable collection \(\mathcal{A}\) of open sets of \(X\) whose intersections with \({X}_{i}\) form a basis for \({X}_{i}\) , for \(i = 1,2\) . Assume \({X}_{1} - {X}_{2}\) and \({X}_{2} - {X}_{1}\) belong to \(\mathcal{A}\) . Let \(\mathcal{B}\) consist of finite intersections of elements of \(\mathcal{A}\) ]
 \end{enumerate}
 \section*{*§ 35 The Tietze Extension Theorem \protect\sectionDagger}
@@ -1129,18 +1129,18 @@ Finally, \(h\) maps all of \(X\) into the open interval(-1,1). For if \(x \in  D
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item \(X\) is bounded under every metric that gives the topology of \(X\) . (ii) Every continuous function \(\phi  \cdot  X \rightarrow  \mathbb{R}\) is bounded. (iii) \(X\) is limit point compact. [Hint: If \(\phi  : X \rightarrow  \mathbb{R}\) is a continuous function, then \(F( x)  = x \times  \phi ( x)\) is an imbedding of \(X\) in \(X \times  \mathbb{R}\) If \(A\) is an infinite subset of \(X\) having no limit point, let \(\phi\) be a surjection of \(A\) onto \({\mathbb{Z}}_{ + }\) ]
   \end{enumerate}
-\item Let \(Z\) be a topological space. If \(Y\) is a subspace of \(Z\) , we say that \(Y\) is a \index{retract} of \(Z\) if there is a continuous map \(r : Z \rightarrow  Y\) such that \(r( y)  = y\) for each \(y \in  Y\)
+\item Let \(Z\) be a topological space. If \(Y\) is a subspace of \(Z\) , we say that \(Y\) is a \index{Retract} of \(Z\) if there is a continuous map \(r : Z \rightarrow  Y\) such that \(r( y)  = y\) for each \(y \in  Y\)
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that if \(Z\) is Hausdorff and \(Y\) is a retract of \(Z\) , then \(Y\) is closed in \(Z\) .
   \item Let \(A\) be a two-point set in \({\mathbb{R}}^{2}\) . Show that \(A\) is not a retract of \({\mathbb{R}}^{2}\) .
   \item Let \({S}^{1}\) be the unit circle in \({\mathbb{R}}^{2}\) ; show that \({S}^{1}\) is a retract of \({\mathbb{R}}^{2} - \{ \mathbf{0}\}\) , where0 is the origin. Can you conjecture whether or not \({S}^{1}\) is a retract of \({\mathbb{R}}^{2}\) ?
   \end{enumerate}
-\item A space \(Y\) is said to have the \index{Absolute retract!vs. universal extension property} if for each triple consisting of a normal space \(X\) , a closed subset \(A\) of \(X\) , and a continuous function \(f : A \rightarrow  Y\) , there exists an extension of \(f\) to a continuous map of \(X\) into \(Y\) .
+\item A space \(Y\) is said to have the \index{Universal extension property} if for each triple consisting of a normal space \(X\) , a closed subset \(A\) of \(X\) , and a continuous function \(f : A \rightarrow  Y\) , there exists an extension of \(f\) to a continuous map of \(X\) into \(Y\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that \({\mathbb{R}}^{J}\) has the universal extension property.
   \item Show that if \(Y\) is homeomorphic to a retract of \({\mathbb{R}}^{J}\) , then \(Y\) has the universal extension property
   \end{enumerate}
-\item Let \(Y\) be a normal space Then \(Y\) is said to be an \index{absolute retract} if for every pair of spaces \(( {{Y}_{0},Z})\) such that \(Z\) is normal and \({Y}_{0}\) is a closed subspace of \(Z\) homeomorphic to \(Y\) , the space \({Y}_{0}\) is a retract of \(Z\) .
+\item Let \(Y\) be a normal space Then \(Y\) is said to be an \index{Absolute retract} if for every pair of spaces \(( {{Y}_{0},Z})\) such that \(Z\) is normal and \({Y}_{0}\) is a closed subspace of \(Z\) homeomorphic to \(Y\) , the space \({Y}_{0}\) is a retract of \(Z\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that if \(Y\) has the universal extension property, then \(Y\) is an absolute retract.
   \item Show that if \(Y\) is an absolute retract and \(Y\) is compact, then \(Y\) has the universal extension property. [Hint. Assume the Tychonoff theorem, so you know \({[  0,1]  }^{J}\) is normal. Imbed \(Y\) in \({[  0,1]  }^{J}\) .]
@@ -1149,11 +1149,11 @@ Finally, \(h\) maps all of \(X\) into the open interval(-1,1). For if \(x \in  D
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show the logarithmic spiral \[ C = \{ 0 \times  0\}  \cup  \{  {{e}^{t}\cos t \times  {e}^{t}\sin t \mid  t \in  \mathbb{R}}\} \] is a retract of \({\mathbb{R}}^{2}\) . Can you define a specific retraction \(r \cdot  {\mathbb{R}}^{2} \rightarrow  C\) ? \begin{center} \includegraphics[width=0.8\textwidth]{images/35.2.jpg} \end{center} \hspace*{3em} Figure 35.2
 
-  \item Show that the ``knotted x-axis'' \(K\) of Figure 35.2 is a retract of \({\mathbb{R}}^{3}\) . *8. Prove the following. \textsl{Theorem.} Let \(Y\) be a normal space. Then \(Y\) is an absolute retract if and only if \(Y\) has the universal extension property. [Hint: If \(X\) and \(Y\) are disjoint normal spaces, \(A\) is closed in \(X\) , and \(f : A \rightarrow  Y\) is a continuous map, define the \index{adjunction space} \({Z}_{f}\) to be the quotient space obtained from \(X \cup  Y\) by identifying each point \(a\) of \(A\) with the point \(f( a)\) and with all the points of \({f}^{-1}( {\{ f( a) \} })\) . Using the Tietze theorem, show that \({Z}_{f}\) is normal. If \(p \cdot  X \cup  Y \rightarrow  {Z}_{f}\) is the quotient map, show that \(p \mid  Y\) is a homeomorphism of \(Y\) with a closed subspace of \({Z}_{f}\) .]
+  \item Show that the ``knotted x-axis'' \(K\) of Figure 35.2 is a retract of \({\mathbb{R}}^{3}\) . *8. Prove the following. \textsl{Theorem.} Let \(Y\) be a normal space. Then \(Y\) is an absolute retract if and only if \(Y\) has the universal extension property. [Hint: If \(X\) and \(Y\) are disjoint normal spaces, \(A\) is closed in \(X\) , and \(f : A \rightarrow  Y\) is a continuous map, define the \index{Adjunction space} \({Z}_{f}\) to be the quotient space obtained from \(X \cup  Y\) by identifying each point \(a\) of \(A\) with the point \(f( a)\) and with all the points of \({f}^{-1}( {\{ f( a) \} })\) . Using the Tietze theorem, show that \({Z}_{f}\) is normal. If \(p \cdot  X \cup  Y \rightarrow  {Z}_{f}\) is the quotient map, show that \(p \mid  Y\) is a homeomorphism of \(Y\) with a closed subspace of \({Z}_{f}\) .]
   \end{enumerate}
 \item Let \({X}_{1} \subset  {X}_{2} \subset  \cdots\) be a sequence of spaces, where \({X}_{i}\) is a closed subspace of \({X}_{i + 1}\) for each \(i\) . Let \(X\) be the union of the \({X}_{i}\) ; let us topologize \(X\) by declaring a set \(U\) to be open in \(X\) if \(U \cap  {X}_{i}\) is open in \(X\) for each \(i\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Show that this is a topology on \(X\) and that each space \(X\) , is a subspace (in fact, a closed subspace) of \(X\) in this topology. This topology is called the topology \index{Coherent topology} coherent with the subspaces \({X}_{i}\) .
+  \item Show that this is a topology on \(X\) and that each space \(X\) , is a subspace (in fact, a closed subspace) of \(X\) in this topology. This topology is called the topology \index{coherent topology@Coherent topology} coherent with the subspaces \({X}_{i}\) .
   \item Show that \(f : X \rightarrow  Y\) is continuous if \(f \mid  {X}_{i}\) is continuous for each \(i\) .
   \item Show that if each space \({X}_{i}\) is normal, then \(X\) is normal. [Hint: Given disjoint closed sets \(A\) and \(B\) in \(X\) , set \(f\) equal to 0 on \(A\) and 1 on \(B\) , and extend \(f\) successively to \(A \cup  B \cup  {X}_{i}\) for \(i = 1,2,\ldots\) ] 
   \end{enumerate}
@@ -1168,13 +1168,13 @@ ${}^{\dagger}$ This section will be assumed when we study \index{\({\mathbb{R}}^
 
 }
 
-A 1-\index{Manifold}\index{Manifold}\index{manifold@Manifold}manifold is often called a \index{curve}, and a \index{2-manifold} is called a \index{Surface}\index{Surface}\index{surface@Surface}surface. Manifolds form a very important class of spaces; they are much studied in differential geometry\cite{GuilleminPollack1974} and algebraic topology.
+A 1-\index{manifold@Manifold}\index{manifold@Manifold}\index{manifold@Manifold}manifold is often called a \index{Curve}, and a \index{T@2-manifold} is called a \index{surface@Surface}\index{surface@Surface}\index{surface@Surface}surface. Manifolds form a very important class of spaces; they are much studied in differential geometry\cite{GuilleminPollack1974} and algebraic topology.
 
 We shall prove that if \(X\) is a compact manifold, then \(X\) can be imbedded in a finite-dimensional euclidean space. The theorem holds without the assumption of compactness, but the proof is a good deal harder.
 
 First, we need some terminology.
 
-If \(\phi  : X \rightarrow  \mathbb{R}\) , then the \index{support} of \(\phi\) is defined to be the closure of the set \({\phi }^{-1}( {\mathbb{R}-\{ 0\} })\) . Thus if \(x\) lies outside the \index{Support}\index{Support}\index{support@Support}support of \(\phi\) , there is some neighborhood of \(x\) on which \(\phi\) vanishes
+If \(\phi  : X \rightarrow  \mathbb{R}\) , then the \index{Support} of \(\phi\) is defined to be the closure of the set \({\phi }^{-1}( {\mathbb{R}-\{ 0\} })\) . Thus if \(x\) lies outside the \index{support@Support}\index{support@Support}\index{support@Support}support of \(\phi\) , there is some neighborhood of \(x\) on which \(\phi\) vanishes
 
 \begin{definition}
 	Let \(\{  {{U}_{1},\ldots ,{U}_{n}}\}\) be a finite indexed open covering of the space \(X\) . An indexed family of continuous functions
@@ -1183,7 +1183,7 @@ If \(\phi  : X \rightarrow  \mathbb{R}\) , then the \index{support} of \(\phi\) 
 {\phi }_{i} : X \rightarrow  [  {0,1}]  \;\text{ for }i = 1,\ldots ,n,
 \]
 
-is said to be a \index{partition of unity} dominated by \(\{  {U}_{t}\}\) if
+is said to be a \index{Partition of unity} dominated by \(\{  {U}_{t}\}\) if
 
 (1) (support \({\phi }_{i}\) ) \(\subset  {U}_{i}\) for each \(i\) .
 
@@ -1191,7 +1191,7 @@ is said to be a \index{partition of unity} dominated by \(\{  {U}_{t}\}\) if
 \end{definition}
 
 \begin{theorem}[\index{Partition of unity!existence}\index{Partition of unity!existence}\index{Partition of unity!existence}Existence of finite partitions of unity]
-	Let \(\{  {{U}_{1},\ldots ,{U}_{n}}\}\) be a finite open covering of the \index{Normal space}\index{Normal space}\index{normal space@Normal space}normal space \(X\) . Then there exists a \index{Partition of unity}\index{Partition of unity}\index{partition of unity@Partition of unity}partition of unity dominated by \(\{  {U}_{i}\}\)
+	Let \(\{  {{U}_{1},\ldots ,{U}_{n}}\}\) be a finite open covering of the \index{normal space@Normal space}\index{normal space@Normal space}\index{normal space@Normal space}normal space \(X\) . Then there exists a \index{partition of unity@Partition of unity}\index{partition of unity@Partition of unity}\index{partition of unity@Partition of unity}partition of unity dominated by \(\{  {U}_{i}\}\)
 
 \end{theorem}
 \begin{proof}
@@ -1219,7 +1219,7 @@ A = X - ( {{V}_{1} \cup  \cdots  \cup  {V}_{k - 1}})  - ( {{U}_{k + 1} \cup  \cd
 
 Then \(A\) is a closed subset of \(X\) which is contained in the open set \({U}_{k}\) . Choose \({V}_{k}\) to be an open set containing \(A\) such that \({\bar{V}}_{k} \subset  {U}_{k}\) . Then \(\{  {{V}_{1},\ldots ,{V}_{k - 1},{V}_{k},{U}_{k + 1},\ldots ,{U}_{n}}\}\) covers \(X\) . At the \(n\) th step of the induction, our result is proved.
 
-Step 2 Now we prove the theorem. Given the open covering \(\{  {{U}_{1},\ldots ,{U}_{n}}\}\) of \(X\) , choose an open covering \(\{  {{V}_{1},\ldots ,{V}_{n}}\}\) of \(X\) such that \({\bar{V}}_{i} \subset  {U}_{i}\) for each \(i\) . Then choose an open covering \(\{  {{W}_{1},\ldots ,{W}_{n}}\}\) of \(X\) such that \({\bar{W}}_{i} \subset  {V}_{i}\) for each \(i\) Using the \index{Urysohn lemma}\index{Urysohn lemma}\index{urysohn lemma@Urysohn lemma}Urysohn lemma, choose for each \(i\) a continuous function
+Step 2 Now we prove the theorem. Given the open covering \(\{  {{U}_{1},\ldots ,{U}_{n}}\}\) of \(X\) , choose an open covering \(\{  {{V}_{1},\ldots ,{V}_{n}}\}\) of \(X\) such that \({\bar{V}}_{i} \subset  {U}_{i}\) for each \(i\) . Then choose an open covering \(\{  {{W}_{1},\ldots ,{W}_{n}}\}\) of \(X\) such that \({\bar{W}}_{i} \subset  {V}_{i}\) for each \(i\) Using the \index{urysohn lemma@Urysohn lemma}\index{urysohn lemma@Urysohn lemma}\index{urysohn lemma@Urysohn lemma}Urysohn lemma, choose for each \(i\) a continuous function
 
 \[
 {\psi }_{i} : X \rightarrow  [  {0,1}]
@@ -1281,8 +1281,8 @@ In many applications of partitions of unity, such as the one just given, all one
 \item Prove that every manifold is regular and hence metrizable. Where do you use the Hausdorff condition?
 \item Let \(X\) be a compact Hausdorff space. Suppose that for each \(x \in  X\) , there is a neighborhood \(U\) of \(x\) and a positive integer \(k\) such that \(U\) can be imbedded in \({\mathbb{R}}^{k}\) . Show that \(X\) can be imbedded in \({\mathbb{R}}^{N}\) for some positive integer \(N\) .
 \item Let \(X\) be a Hausdorff space such that each point of \(X\) has a neighborhood that is homeomorphic with an open subset of \({\mathbb{R}}^{m}\) . Show that if \(X\) is compact, then \(X\) is an \(m\) -manifold.
-\item An indexed family \(\{  {A}_{\alpha }\}\) of subsets of \(X\) is said to be a \index{Point-finite family} point-finite indexed family if each \(x \in  X\) belongs to \({A}_{\alpha }\) for only finitely many values of \(\alpha\) . \textsl{Lemma (The \index{shrinking lemma}).} Let \(X\) be a normal space, let \(\{  {{U}_{1},{U}_{2}\ldots }\}\) be a point-finite indexed open covering of \(X\) . Then there exists an indexed open covering \(\{  {{V}_{1},{V}_{2},\ldots }\}\) of \(X\) such that \({\bar{V}}_{n} \subset  {U}_{n}\) for each \(n\) . 
-\item The Hausdorff condition is an essential part of the definition of a manifold; it is not implied by the other parts of the definition. Consider the following space: Let \(X\) be the union of the set \(\mathbb{R} - \{ 0\}\) and the two-point set \(\{ p,q\}\) . Topologize \(X\) by taking as basis the collection of all open intervals in \(\mathbb{R}\) that do not contain 0, along with all sets of the form \(( {-a,0})  \cup  \{ p\}  \cup  ( {0,a})\) and all sets of the form \(( {-a,0})  \cup  \{ q\}  \cup  ( {0,a})\) , for \(a > 0\) . The space \(X\) is called the \index{line with two origins}
+\item An indexed family \(\{  {A}_{\alpha }\}\) of subsets of \(X\) is said to be a \index{point-finite family@Point-finite family} point-finite indexed family if each \(x \in  X\) belongs to \({A}_{\alpha }\) for only finitely many values of \(\alpha\) . \textsl{Lemma (The \index{Shrinking lemma}).} Let \(X\) be a normal space, let \(\{  {{U}_{1},{U}_{2}\ldots }\}\) be a point-finite indexed open covering of \(X\) . Then there exists an indexed open covering \(\{  {{V}_{1},{V}_{2},\ldots }\}\) of \(X\) such that \({\bar{V}}_{n} \subset  {U}_{n}\) for each \(n\) . 
+\item The Hausdorff condition is an essential part of the definition of a manifold; it is not implied by the other parts of the definition. Consider the following space: Let \(X\) be the union of the set \(\mathbb{R} - \{ 0\}\) and the two-point set \(\{ p,q\}\) . Topologize \(X\) by taking as basis the collection of all open intervals in \(\mathbb{R}\) that do not contain 0, along with all sets of the form \(( {-a,0})  \cup  \{ p\}  \cup  ( {0,a})\) and all sets of the form \(( {-a,0})  \cup  \{ q\}  \cup  ( {0,a})\) , for \(a > 0\) . The space \(X\) is called the \index{Line with two origins}
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Check that this is a basis for a topology
   \item Show that each of the spaces \(X - \{ p\}\) and \(X - \{ q\}\) is homeomorphic to \(\mathbb{R}\) .
