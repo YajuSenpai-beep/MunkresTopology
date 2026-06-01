@@ -120,8 +120,8 @@ class IndexEngine:
                 for pat in patterns:
                     if len(pat) < 2:
                         continue
-                    idx = content.find(pat)
-                    if idx >= 0 and not _is_forbidden(idx):
+                    idx = self._find_text(content, pat, _is_forbidden)
+                    if idx >= 0:
                         insert_pos = idx
                         break
 
@@ -383,6 +383,18 @@ class IndexEngine:
             idx += len(search)
         return -1
 
+    @staticmethod
+    def _sanitize_display(text: str) -> str:
+        r"""清理 display/sort 参数中的 fragile 命令。
+
+        makeindex 无法处理 \left, \right 和 \(...\)（后者被展开为底层原语）。
+        \left/\right 直接移除；\(/\) 替换为 $ 保持数学模式。
+        """
+        for frag in (chr(92)+"left", chr(92)+"right", chr(92)+"lbrack", chr(92)+"rbrack"):
+            text = text.replace(frag, "")
+        text = text.replace(chr(92)+"(", "$").replace(chr(92)+")", "$")
+        return text
+
     def _build_cmd(self, entry: Entry) -> str:
         """根据模板构建索引命令字符串。"""
         t = self.templates.get(
@@ -391,11 +403,15 @@ class IndexEngine:
             self.templates.get("l1", "\\index{${key}}"),
         )
         return (
-            t.replace("${key}", escape_index_term(
-                entry.get("term") or "", self.index_processor,
+            t.replace("${key}", self._sanitize_display(
+                escape_index_term(entry.get("term") or "", self.index_processor)
             ))
-            .replace("${display}", entry.get("display") or entry.get("term") or "")
-            .replace("${sort}", entry.get("sort_key") or "")
+            .replace("${display}", self._sanitize_display(
+                entry.get("display") or entry.get("term") or ""
+            ))
+            .replace("${sort}", self._sanitize_display(
+                entry.get("sort_key") or ""
+            ))
             .replace("${parent}", entry.get("parent") or "")
             .replace("${child}", entry.get("child") or entry.get("term") or "")
         )
