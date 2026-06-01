@@ -402,10 +402,14 @@ class IndexEngine:
             else ("l1Math" if entry.get("sort_key") else "l1"),
             self.templates.get("l1", "\\index{${key}}"),
         )
+        key_sanitized = self._sanitize_display(
+            escape_index_term(entry.get("term") or "", self.index_processor)
+        )
+        key_cap = key_sanitized[:1].upper() + key_sanitized[1:] if key_sanitized else key_sanitized
         return (
-            t.replace("${key}", self._sanitize_display(
-                escape_index_term(entry.get("term") or "", self.index_processor)
-            ))
+            t.replace("${key_lower}", key_sanitized.lower())
+            .replace("${key_cap}", key_cap)
+            .replace("${key}", key_sanitized)
             .replace("${display}", self._sanitize_display(
                 entry.get("display") or entry.get("term") or ""
             ))
