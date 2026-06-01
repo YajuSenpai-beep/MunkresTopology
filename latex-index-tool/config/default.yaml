@@ -4,7 +4,7 @@
 # ---- 索引命令模板 ----
 # ${key}=排序键  ${display}=显示文字  ${sort}=数学排序键  ${parent}=父条目  ${child}=子条目
 templates:
-  l1: "\\index{${key}}"
+  l1: "\\index{${key_lower}@${key_cap}}"
   l1Math: "\\index{${sort}@${display}}"
   l2: "\\index{${parent}!${child}}"
 
