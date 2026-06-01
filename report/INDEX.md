@@ -22,6 +22,7 @@
 |------|------|
 | [idx-system-report.md](idx-system-report.md) | 索引系统完整报告（sty 定义→编译流程→6 类问题→138 处修复→14 章比对） |
 | [idx-fix-list.md](idx-fix-list.md) | `\idx` 条目修正逐条清单（87 条） |
+| [idx-lessons-learned.md](idx-lessons-learned.md) | 索引系统经验总结（模板/排序/编译/陷阱/工作流） |
 
 ## 后续章节
 
