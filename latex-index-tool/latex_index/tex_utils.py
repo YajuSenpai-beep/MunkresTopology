@@ -154,8 +154,9 @@ _STANDARD_COMMANDS = re.compile(
     r"label|ref|pageref|eqref|autoref|"
     r"cite|citep|citet|textcite|parencite|footcite|nocite|Cite|"
     r"index|idx|idxmath|idxsub|gls|acr|ac|"
+    r"href|url|hyperref|"
     r"textbf|textit|textsl|textsc|texttt|textsf|textrm|textup|"
-    r"emph|underline|href|url|hyperref|"
+    r"emph|underline|"
     r"footnote|footnotemark|footnotetext|"
     r"includegraphics|include|input|"
     r"newcommand|renewcommand|providecommand|NewDocumentCommand|"
@@ -197,6 +198,12 @@ def is_inside_command_arg(content: str, pos: int) -> bool:
     # 移除可能存在的可选参数 [...]（如 \\cite[p.42]{key}）
     pre_no_opt = re.sub(r"\[[^]]*\]$", "", pre).rstrip()
     if _STANDARD_COMMANDS.search(pre_no_opt):
+        # 格式化命令（textsl/textbf/textit/emph/underline 等）的内容允许索引
+        formatting_cmds = re.compile(
+            r"\\(?:text(?:bf|it|sl|sc|tt|sf|rm|up)|emph|underline)(?:\*|@)?$"
+        )
+        if formatting_cmds.search(pre_no_opt):
+            return False
         return True
     return False
 

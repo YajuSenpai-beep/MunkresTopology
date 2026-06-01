@@ -358,29 +358,82 @@ class IndexEngine:
 
     # ── 内部方法 ─────────────────────────────────────────
 
+    @staticmethod
+    def _breaks_end_env(content: str, pos: int) -> bool:
+        """检查在 pos 处插入索引是否会破坏 \\end{xxx} 命令。"""
+        # pos 是否在 \\end 的 \\ 和 } 之间？
+        bs = chr(92)
+        # 查找 pos 之前的 \\end{
+        before = content[:pos]
+        end_idx = before.rfind(bs + "end{")
+        if end_idx < 0:
+            return False
+        # \\end{ 之后应该有个 }，检查 pos 是否在 } 之前
+        closing = content.find("}", end_idx + 5)
+        if closing > 0 and pos < closing:
+            return True
+        # 也检查 pos 是否紧贴 \\end（距离 < 3 字符）
+        if pos > 0 and content[pos - 1] == "}":
+            # 可能刚好处在 } 之后，检查前面是不是 \\end{...}
+            open_brace = before.rfind("{")
+            if open_brace > 0 and open_brace < end_idx:
+                return False  # 不是 \\end{，是其他 {
+        return False
+
     def _find_text(
         self,
         content: str,
         search: str,
         is_forbidden: Callable[[int], bool],
     ) -> int:
-        """在 content 中查找 search 的纯文本出现位置（跳过禁区）。"""
+        """在 content 中查找 search 的纯文本出现位置（跳过禁区）。
+
+        先尝试精确子串匹配；失败时退回到近似匹配——
+        检查 search 的所有单词是否在 50 字符窗口内同时出现。
+        这解决了 \"Arzela theorem\" vs \"Arzela's theorem\" 之类的问题。
+        """
         if len(search) < 2:
             return -1
+        bs = chr(92)
         lower_content = content.lower()
         lower_search = search.lower()
+
+        def _safe_pos(p: int) -> bool:
+            return (
+                not is_forbidden(p)
+                and not is_inside_command_arg(content, p)
+                and not is_inside_index(content, p)
+                and not IndexEngine._breaks_end_env(content, p)
+                # 也不要插在 \\end{ 正前方
+                and not (p >= 4 and content[p-4:p+1] == bs + "end{")
+            )
+
+        # 1. 精确匹配
         idx = 0
         while idx < len(lower_content):
             idx = lower_content.find(lower_search, idx)
             if idx < 0:
-                return -1
-            if (
-                not is_forbidden(idx)
-                and not is_inside_command_arg(content, idx)
-                and not is_inside_index(content, idx)
-            ):
+                break
+            if _safe_pos(idx):
                 return idx
             idx += len(search)
+
+        # 2. 近似匹配
+        words = [w for w in lower_search.split() if len(w) >= 2]
+        if len(words) >= 2:
+            first_word = words[0]
+            pos = 0
+            while pos < len(lower_content):
+                pos = lower_content.find(first_word, pos)
+                if pos < 0:
+                    break
+                window_end = min(len(lower_content), pos + 80)
+                window = lower_content[pos:window_end]
+                if all(w in window for w in words[1:]):
+                    if _safe_pos(pos):
+                        return pos
+                pos += len(first_word)
+
         return -1
 
     @staticmethod
