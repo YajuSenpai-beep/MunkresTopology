@@ -197,6 +197,7 @@
 }
 \defbibheading{bibliography}[\bibname]{%
   \chapter*{#1}%
+  \phantomsection
   \addtocontents{toc}{\vskip 1.5em}%
   \addcontentsline{toc}{chapter}{#1}%
   \vspace*{6.5cm}%
@@ -431,7 +432,7 @@
 \usepackage{makeidx}
 \makeindex
 \makeatletter
-\patchcmd{\theindex}{\@makeschapterhead{\indexname}}{\@makeschapterhead{\indexname}\vspace*{6.5cm}\addcontentsline{toc}{chapter}{\indexname}}{}{}
+\patchcmd{\theindex}{\@makeschapterhead{\indexname}}{\@makeschapterhead{\indexname}\vspace*{6.5cm}\phantomsection\addcontentsline{toc}{chapter}{\indexname}}{}{}
 \patchcmd{\theindex}{\@mkboth{\MakeUppercase\indexname}{\MakeUppercase\indexname}}{\@mkboth{\indexname}{\indexname}}{}{}
 \patchcmd{\tableofcontents}{\@starttoc{toc}}{\vspace*{6.5cm}\@starttoc{toc}}{}{}
 \makeatother
