@@ -1,4 +1,4 @@
-"""多文件 LaTeX 项目支持 — 解析 \\input/\\include 指令，按序处理子文件。"""
+r"""多文件 LaTeX 项目支持 — 解析 \\input/\\include 指令，按序处理子文件。"""
 
 from __future__ import annotations
 
@@ -25,7 +25,7 @@ def resolve_tex_project(
     project_dir: Optional[str] = None,
     encoding: str = "utf-8",
 ) -> Tuple[str, List[str], Dict[str, int]]:
-    """解析 LaTeX 项目的文件依赖。
+    r"""解析 LaTeX 项目的文件依赖。
 
     读取主文件，递归解析所有 \\input{} 和 \\include{} 指令，
     将子文件内容合并到主文件中（按出现顺序替换）。
