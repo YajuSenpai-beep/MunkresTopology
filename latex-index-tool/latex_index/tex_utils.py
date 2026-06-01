@@ -223,7 +223,6 @@ def is_inside_index(content: str, pos: int) -> bool:
         i = 6
     elif cmd in ("\\idxmath", "\\idxsub"):
         i = len(cmd)
-        groups = 2
     elif cmd == "\\idx":
         if cmd_start + 5 <= len(content) and content[cmd_start + 4] == "[":
             i = 4
