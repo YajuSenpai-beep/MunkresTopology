@@ -1,16 +1,67 @@
-"""Post-process .ind: redistribute entries from empty group to letter groups.
-Usage: python _fix_ind.py
-Input: ../Topology_by_Munkres.ind (modified in place)
-"""
-import sys, os
-from collections import defaultdict
-bs = chr(92)
+r"""Post-process .ind: merge duplicates, redistribute symbols, capitalize.
 
-ind_path = "../Topology_by_Munkres.ind"
+Usage: python _fix_ind.py
+Input/Output: ../Topology_by_Munkres.ind
+"""
+import sys
+from collections import defaultdict
+
+bs = chr(92)
+import os
+ind_path = os.path.join(os.path.dirname(__file__), "..", "Topology_by_Munkres.ind")
+
+# === Load ===
 with open(ind_path, "r", encoding="utf-8") as f:
     lines = f.readlines()
 
-# === Step 1: Remove empty lettergroup and collect its entries ===
+# === Merge case-duplicate entries ===
+# Group main entries by lowercase text
+entries_by_lower = defaultdict(list)
+i = 0
+while i < len(lines):
+    s = lines[i].strip()
+    if s.startswith(bs + "item ") and not s.startswith(bs + "subitem "):
+        text = s[6:]
+        pages = []
+        clean = text
+        while bs + "hyperpage{" in clean:
+            hp = clean.find(bs + "hyperpage{")
+            he = clean.find("}", hp)
+            if he > hp:
+                pages.append(clean[hp + 11 : he])
+                clean = clean[:hp] + clean[he + 1 :]
+        clean = clean.strip().rstrip(", ").lower()
+        entries_by_lower[clean].append((i, text.strip(), pages))
+    i += 1
+
+to_remove = set()
+for lower, group in entries_by_lower.items():
+    if len(group) > 1:
+        all_pages = []
+        for (_, _, pages) in group:
+            all_pages.extend(pages)
+        unique_pages = sorted(set(all_pages), key=lambda x: int(x) if x.isdigit() else 0)
+        first_idx, first_text, _ = group[0]
+        # Rebuild merged line
+        new_entry = first_text
+        while bs + "hyperpage{" in new_entry:
+            hp = new_entry.find(bs + "hyperpage{")
+            he = new_entry.find("}", hp)
+            if he > hp:
+                new_entry = new_entry[:hp] + new_entry[he + 1 :]
+        new_entry = new_entry.rstrip(", ")
+        if unique_pages:
+            new_entry += ", " + ", ".join(
+                bs + "hyperpage{" + p + "}" for p in unique_pages
+            )
+        lines[first_idx] = bs + "item " + new_entry + "\n"
+        for (idx, _, _) in group[1:]:
+            to_remove.add(idx)
+
+lines = [l for i, l in enumerate(lines) if i not in to_remove]
+print(f"Merged: {len(to_remove)} duplicate lines")
+
+# === Redistribute empty group entries ===
 new_lines = []
 empty_entries = []
 i = 0
@@ -26,33 +77,11 @@ while i < len(lines):
     new_lines.append(lines[i])
     i += 1
 
-if empty_entries:
-    print(f"Found {len(empty_entries)} entries in empty group.")
-else:
-    print("No empty group. Nothing to do.")
-    sys.exit(0)
-
-# === Step 2: Assign each entry to a letter group ===
 letter_map = {
-    # Symbol -> letter mapping
-    "mathbb{R}": "R",
-    "{B}^{n}": "B",
-    "{S}^{1}": "S",
-    "{S}^{n}": "S",
-    "{h}_{ * }": "H",
-    "2-cell": "T",
-    "2-manifold": "T",
-    "{P}^{2}": "P",
-    "bar{A}": "A",
-    "mathbb  {R}": "R",
-    "mathbb{R}}^{J}": "R",
-    "mathbb{R}}_{K}": "R",
-    "mathbb{R}}_{\\ell": "R",
-    "mathbb{R}}(\\ell": "R",
-    "{\\mathbb  {R}}": "R",
-    "{\\mathbb{R}}^{J}": "R",
-    "{\\mathbb{R}}_{K}": "R",
-    "{\\mathbb{R}}_{\\ell": "R",
+    "mathbb{R}": "R", "{B}^{n}": "B", "{S}^{1}": "S", "{S}^{n}": "S",
+    "{h}_{ * }": "H", "2-cell": "T", "2-manifold": "T", "{P}^{2}": "P",
+    "bar{A}": "A", "mathbb  {R}": "R", "mathbb{R}}^{J}": "R",
+    "mathbb{R}}_{K}": "R", "mathbb{R}}_{\\ell": "R",
 }
 
 letter_positions = {}
@@ -64,32 +93,20 @@ for i, line in enumerate(new_lines):
 insertions = defaultdict(list)
 for line in empty_entries:
     s = line.strip()
-    entry = s[6:]  # after \item
+    entry = s[6:]
     letter = None
-
-    # Try exact match first
     for pattern, l in letter_map.items():
         if pattern in entry:
-            letter = l
-            break
-
-    # Try numeric -> word mapping
+            letter = l; break
+    if not letter and entry.startswith("2-"):
+        letter = "T"
     if not letter:
-        if entry.startswith("2-"):
-            letter = "T"
-    # Try mathbb{R} → R, mathbb{N} → N, etc
-    if not letter:
-        for math_letter in [("mathbb{R}", "R"), ("mathbb{N}", "N"), ("mathbb{Z}", "Z"),
-                            ("mathbb{Q}", "Q"), ("mathbb{C}", "C")]:
-            if math_letter[0] in entry:
-                letter = math_letter[1]; break
-
+        for ml in [("mathbb{R}", "R"), ("mathbb{N}", "N"), ("mathbb{Z}", "Z")]:
+            if ml[0] in entry:
+                letter = ml[1]; break
     if letter and letter in letter_positions:
         insertions[letter].append(line)
-    else:
-        print(f"  WARNING: could not assign: {entry[:60]}")
 
-# === Step 3: Rebuild with insertions ===
 final = []
 for i, line in enumerate(new_lines):
     final.append(line)
@@ -101,12 +118,61 @@ for i, line in enumerate(new_lines):
                 final.append(el)
             del insertions[letter]
 
+print(f"Redistributed: {len(empty_entries)} symbol entries")
+
+# === Capitalize first letter (skip math symbols) ===
+for idx, line in enumerate(final):
+    s = line.strip()
+    if s.startswith(bs + "item ") and not s.startswith(bs + "subitem "):
+        rest = s[6:]
+        first_alpha = -1
+        i = 0
+        while i < len(rest):
+            ch = rest[i]
+            if ch == bs:
+                j = i + 1
+                while j < len(rest) and rest[j].isalpha():
+                    j += 1
+                i = j; continue
+            elif ch in "{$":
+                depth = 1 if ch == "{" else 0
+                i += 1
+                while i < len(rest) and depth > 0:
+                    if rest[i] == "{": depth += 1
+                    elif rest[i] == "}": depth -= 1
+                    i += 1
+                continue
+            elif ch.isalpha():
+                first_alpha = i; break
+            else: i += 1
+        if first_alpha >= 0 and rest[first_alpha].islower():
+            rest = rest[:first_alpha] + rest[first_alpha].upper() + rest[first_alpha + 1 :]
+        final[idx] = bs + "item " + rest + "\n"
+
+# === Write ===
 with open(ind_path, "w", encoding="utf-8") as f:
     f.writelines(final)
 
-# Verify
+# === Report ===
 with open(ind_path, "r", encoding="utf-8") as f:
     result = f.read()
-remains = "lettergroup{}" in result
-print(f"Empty group remaining: {remains}")
+has_empty = bs + "lettergroup{}" in result
+
+# Count duplicates
+from collections import Counter
+count_entries = []
+for line in final:
+    s = line.strip()
+    if s.startswith(bs + "item ") and not s.startswith(bs + "subitem "):
+        text = s[6:]
+        while bs + "hyperpage{" in text:
+            hp = text.find(bs + "hyperpage{"); he = text.find("}", hp)
+            if he > hp: text = text[:hp] + text[he + 1 :]
+        count_entries.append(text.strip().rstrip(",").lower())
+
+dupes = {k: v for k, v in Counter(count_entries).items() if v > 1}
+
+print(f"Empty group: {has_empty}")
+print(f"Main entries: {len(count_entries)}")
+print(f"Duplicates: {len(dupes)}")
 print(f"Lines: {len(lines)} -> {len(final)}")
