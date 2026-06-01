@@ -4,9 +4,9 @@
 # ---- 索引命令模板 ----
 # ${key}=排序键  ${display}=显示文字  ${sort}=数学排序键  ${parent}=父条目  ${child}=子条目
 templates:
-  l1: "\\idx{${key}}"
-  l1Math: "\\idxmath{${sort}}{${display}}"
-  l2: "\\idxsub{${parent}}{${child}}"
+  l1: "\\index{${key}}"
+  l1Math: "\\index{${sort}@${display}}"
+  l2: "\\index{${parent}!${child}}"
 
 # ---- 文件匹配 ----
 # ${num} 替换为章节编号
@@ -25,7 +25,7 @@ math_shortcuts:
   "\\mathbb{Q}": ["\\Q", "\\QQ"]
 
 # ---- 源目录 ----
-chapter_source_dir: "chapters"
+chapter_source_dir: "../chapters"
 
 # ---- 日志 ----
 log_level: "INFO"       # DEBUG | INFO | WARNING | ERROR
