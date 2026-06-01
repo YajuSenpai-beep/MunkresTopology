@@ -23,7 +23,7 @@ logger = logging.getLogger("index_tool")
 
 
 def cmd_format_env(args: argparse.Namespace) -> int:
-    """修复环境格式: \begin{env}text -> 三行拆分."""
+    r"""修复环境格式: \begin{env}text -> 三行拆分."""
     envs = [
         "proof",
         "theorem",

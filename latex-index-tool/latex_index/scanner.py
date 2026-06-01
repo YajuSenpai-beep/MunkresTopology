@@ -1,4 +1,4 @@
-"""索引自动发现 — 扫描 .tex 文件中已有的 \\index{} 命令，汇总词条。"""
+r"""索引自动发现 — 扫描 .tex 文件中已有的 \\index{} 命令，汇总词条。"""
 
 from __future__ import annotations
 
