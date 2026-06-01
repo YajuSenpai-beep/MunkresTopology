@@ -1,14 +1,14 @@
-\chapter[\index{topological space@Topological space}Topological Spaces \index{Quotient topology!and continuous functions}and Continuous Functions]{Topological Spaces \\and Continuous Functions}
+\chapter[Topological Spaces and Continuous Functions]{Topological Spaces \\and Continuous Functions}
 \vspace{6.5cm}
 
-The concept of topological \index{First-countable space (see First-countability)} space grew out of the study of the real line and euclidean space and the study of \index{continuous function} on these spaces. In this chapter, we define what a \index{Topological space}\index{Topological space}topological space is, and we study a number of ways of constructing a \index{topology} on a set so as to make it into a topological space. We also consider some of the elementary concepts associated with topological spaces. Open and \index{closed set}, \index{limit point}, \index{Quotient topology!and continuous functions}\index{Quotient topology!and continuous functions}and continuous functions are introduced as natural \index{Cartesian product: countably infinite!general}\index{Cartesian product: countably infinite!general}\index{Cartesian product: countably infinite!general}generalizations of the corresponding ideas for the real line and euclidean space.
+The concept of topological \index{First-countable space (see First-countability)} space grew out of the study of the real line and euclidean space and the study of \index{continuous function} on these spaces. In this chapter, we define what a \index{Topological space}\index{Topological space}topological space is, and we study a number of ways of constructing a \index{topology} on a set so as to make it into a topological space. We also consider some of the elementary concepts associated with topological spaces. Open and \index{closed set}, \index{limit point}, \index{Quotient topology!and continuous functions}\index{Quotient topology!and continuous functions}and continuous functions are introduced as natural \index{Cartesian product: countably infinite!general}\index{Cartesian product: countably infinite!general}generalizations of the corresponding ideas for the real line and euclidean space.
 
 \section*{§ 12 Topological Spaces}
 
 The definition of a topological space that is now \index{Standard topology: on} standard was a long time in being formulated. Various mathematicians-Fréchet, Hausdorff, and others-proposed different definitions over a period of years during the first decades of the twentieth century, but it took quite a while before mathematicians settled on the one that seemed most suitable. They wanted, of course, a definition that was as broad as possible, so that it would include as special cases all the various examples that were useful in mathematics-euclidean space, \index{infinite series} infinite-dimensional euclidean space, and function spaces among them-but they also wanted the definition to be narrow enough that the standard theorems about these familiar spaces would hold for topological spaces in general. This is always the problem when one is trying to formulate a new mathematical concept, to decide how general its definition should be. The definition finally settled on may seem a bit abstract, but as you work through the various ways of constructing topological spaces, you will get a better feeling for what the concept means.
 
 \begin{definition}
-	A \index{Topology}\index{Topology}\index{topology@Topology}topology on a set \(X\) is a collection \(\mathcal{T}\) of subsets of \(X\) having the following properties:
+	A \index{Topology}\index{Topology}topology on a set \(X\) is a collection \(\mathcal{T}\) of subsets of \(X\) having the following properties:
 
 (1) \(\varnothing\) and \(X\) are in \(\mathcal{T}\) .
 
@@ -18,11 +18,11 @@ The definition of a topological space that is now \index{Standard topology: on} 
 
 A set \(X\) for which a topology \(\mathcal{T}\) has been specified is called a topological space.
 
-Properly speaking, a topological space is an \index{Ray in ordered set} ordered pair(X, T)consisting \index{Interior point: of an arc!of a set}\index{Interior point: of an arc!of a set}\index{Interior point: of an arc!of a set}of a set \(X\) and a topology \(\mathcal{T}\) on \(X\) , but we often omit specific mention of \(\mathcal{T}\) if no confusion will anse.
+Properly speaking, a topological space is an \index{Ray in ordered set} ordered pair(X, T)consisting \index{Interior point: of an arc!of a set}\index{Interior point: of an arc!of a set}of a set \(X\) and a topology \(\mathcal{T}\) on \(X\) , but we often omit specific mention of \(\mathcal{T}\) if no confusion will anse.
 \end{definition}
 
 
-If \(X\) is a topological space with topology \(\mathcal{T}\) , we say that a subset \(U\) of \(X\) is an \index{open set} of \(X\) if \(U\) belongs to the collection \(\mathcal{T}\) . Using this terminology, one can say that a topological space is a set \(X\) together with a collection of subsets of \(X\) , called \index{Open set}\index{Open set}\index{open set@Open set}open sets, such that \(\varnothing\) and \(X\) are both open, and such that arbitrary unions and finite intersections of open sets are open.
+If \(X\) is a topological space with topology \(\mathcal{T}\) , we say that a subset \(U\) of \(X\) is an \index{open set} of \(X\) if \(U\) belongs to the collection \(\mathcal{T}\) . Using this terminology, one can say that a topological space is a set \(X\) together with a collection of subsets of \(X\) , called \index{Open set}\index{Open set}open sets, such that \(\varnothing\) and \(X\) are both open, and such that arbitrary unions and finite intersections of open sets are open.
 
 \begin{centeredblock}
 \begin{example}
@@ -94,7 +94,7 @@ Many mathematicians use the words ``\index{Weaker topology} weaker'' and ``\inde
 For each of the examples in the preceding section, we were able to specify the topology by describing the entire collection \(\mathcal{T}\) of open sets. Usually this is too difficult. In most cases, one specifies instead a smaller collection of subsets of \(X\) and defines the topology in terms of that.
 
 \begin{definition}
-	If \(X\) is a set, a \index{Box topology!basis for}\index{Box topology!basis for}\index{Box topology!basis for}basis for a topology on \(X\) is a collection \(\mathcal{B}\) of subsets of \(X\) (called basis elements) such that
+	If \(X\) is a set, a \index{Box topology!basis for}\index{Box topology!basis for}basis for a topology on \(X\) is a collection \(\mathcal{B}\) of subsets of \(X\) (called basis elements) such that
 
 (1) For each \(x \in  X\) , there is at least one basis element \(B\) containing \(x\) .
 
@@ -134,7 +134,7 @@ Figure 13.2
 
 \begin{centeredblock}
 \begin{example}
-	If \(X\) is any set, the collection of all one-point subsets of \(X\) is a basis for the \index{Discrete topology}\index{Discrete topology}\index{discrete topology@Discrete topology}discrete topology on \(X\)
+	If \(X\) is any set, the collection of all one-point subsets of \(X\) is a basis for the \index{Discrete topology}\index{Discrete topology}discrete topology on \(X\)
 \end{example}
 \end{centeredblock}
 
@@ -163,7 +163,7 @@ Finally, we show by induction that any finite intersection \({U}_{1} \cap  \cdot
 
 By hypothesis, \({U}_{1} \cap   \cdot   \cdot   \cap  {U}_{n - 1}\) belongs to \(\mathcal{T}\) ; by the result just proved, the intersection of \({U}_{1} \cap  \cdots  \cap  {U}_{n - 1}\) and \({U}_{n}\) also belongs to \(\mathcal{T}\)
 
-Thus we have checked that collection of open sets \index{Topology!generated by a basis}\index{Topology!generated by a basis}\index{Topology!generated by a basis}generated by a basis \(\mathcal{B}\) is, in fact, a topology.
+Thus we have checked that collection of open sets \index{Topology!generated by a basis}\index{Topology!generated by a basis}generated by a basis \(\mathcal{B}\) is, in fact, a topology.
 
 Another way of describing the topology generated by a basis is given in the following lemma.
 
@@ -229,7 +229,7 @@ We now define three topologies on the real line \(\mathbb{R}\) , all of which ar
 ( {a,b})  = \{ x \mid  a < x < b\} ,
 \]
 
-the topology generated by \(\mathcal{B}\) is called the \index{\(\mathbb{R}\) (reals)!standard topology}\index{\(\mathbb{R}\) (reals)!standard topology}\index{\(\mathbb{R}\) (reals)!standard topology}standard topology on the real line. Whenever we consider \(\mathbb{R}\) , we shall suppose it is given this topology unless we specifically state otherwise.
+the topology generated by \(\mathcal{B}\) is called the \index{\(\mathbb{R}\) (reals)!standard topology}\index{\(\mathbb{R}\) (reals)!standard topology}standard topology on the real line. Whenever we consider \(\mathbb{R}\) , we shall suppose it is given this topology unless we specifically state otherwise.
 \end{definition}
 
 
@@ -2416,7 +2416,7 @@ p( x)  = \{  \begin{array}{ll} x & \text{ for }x \in  [  {0,1}]  , \\  x - 1 & \
 
 is readily seen to be surjective, continuous, and closed. Therefore it is a quotient map. It is not, however, an open map; the image of the open set \([  {0,1}]\) of \(X\) is not open in \(Y\) .
 
-Note that if \(A\) is the \index{Box topology!subspace}subspace \(\lbrack 0,1) \cup  [  {2,3}]\) of \(X\) , then the map \(q : A \rightarrow  Y\) obtained by restricting \(p\) is continuous and surjective, but it is not a \index{quotient map@Quotient map}quotient map. For the set \([  {2,3}]\) is open in \(A\) and is saturated with respect to \(q\) , but its image is not open in \(Y\) .
+Note that if \(A\) is the \index{Box topology!subspace}subspace \(\lbrack 0,1) \cup  [  {2,3}]\) of \(X\) , then the map \(q : A \rightarrow  Y\) obtained by restricting \(p\) is continuous and surjective, but it is not a quotient map. For the set \([  {2,3}]\) is open in \(A\) and is saturated with respect to \(q\) , but its image is not open in \(Y\) .
 \end{example}
 \end{centeredblock}
 
@@ -2487,7 +2487,7 @@ We can describe the topology of \({X}^{ * }\) in another way. A subset \(U\) of 
 \{  {x \times  y \mid  {x}^{2} + {y}^{2} \leq  1}\}
 \]
 
-in \({\mathbb{R}}^{2}\) , and let \({X}^{ * }\) be the partition of \(X\) consisting of all the one-point sets \(\{ x \times  y\}\) for which \({x}^{2} + {y}^{2} < 1\) , along with the set \({S}^{1} = \{ x \times  y\}  \mid  {x}^{2} + {y}^{2} = 1\}\) . Typical saturated open sets in \(X\) are pictured by the shaded regions in Figure 22.4. One can show that \({X}^{ * }\) is homeomorphic with the \index{Box topology!subspace}subspace of \({\mathbb{R}}^{3}\) called the unit 2-sphere, defined by
+in \({\mathbb{R}}^{2}\) , and let \({X}^{ * }\) be the partition of \(X\) consisting of all the one-point sets \(\{ x \times  y\}\) for which \({x}^{2} + {y}^{2} < 1\) , along with the set \({S}^{1} = \{ x \times  y\}  \mid  {x}^{2} + {y}^{2} = 1\}\) . Typical saturated open sets in \(X\) are pictured by the shaded regions in Figure 22.4. One can show that \({X}^{ * }\) is homeomorphic with the subspace of \({\mathbb{R}}^{3}\) called the unit 2-sphere, defined by
 
 \[
 \index{S@\({S}^{2}\)} {S}^{2} = \{  {( {x,y,z})  \mid  {x}^{2} + {y}^{2} + {z}^{2} = 1}\}  .
@@ -2581,7 +2581,7 @@ Now suppose \(p\) is open. Since \({q}^{-1}( V)  = {p}^{-1}( V)\) and \({q}^{-1}
 V = p( {{p}^{-1}( V) })  = p( {U \cap  A})  = p( U)  \cap  p( A) .
 \]
 
-The set \(p( U)\) is open in \(Y\) because \(p\) is an \index{open map@Open map}open map; hence \(V\) is open in \(p( A)\) .
+The set \(p( U)\) is open in \(Y\) because \(p\) is an open map; hence \(V\) is open in \(p( A)\) .
 
 Step 3. The proof when \(A\) or \(p\) is closed is obtained by replacing the word ``open'' by the word ``closed'' throughout Step 2.
 
@@ -2595,7 +2595,7 @@ On the other hand, \index{Quotient map!products}products of maps do not behave w
 
 Finally, the \index{Box topology!Hausdorff condition}Hausdorff condition does not behave well; even if \(X\) is Hausdorff. there is no reason that the quotient space \({X}^{ * }\) needs to be Hausdorff. There is a simple condition for \({X}^{ * }\) to satisfy the \({T}_{1}\) axiom; one simply requires that each element of the partition \({X}^{ * }\) be a closed subset of \(X\) . Conditions that will ensure \({X}^{ * }\) is Hausdorff are harder to find. This is one of the more delicate questions concerning quotient spaces; we shall return to it several times later in the book.
 
-Perhaps the most important result in the study of quotient spaces has to do with the problem of constructing continuous functions on a quotient space. We consider that problem now. When we studied \index{Product space}product spaces, we had a criterion for determining whether a map \(f : Z \rightarrow  \prod {X}_{\alpha }\) into a \index{product space@Product space}product space was continuous. Its counterpart in the theory of quotient spaces is a criterion for determining when a map \(f : {X}^{ * } \rightarrow  Z\) out of a quotient space is continuous. One has the following theorem:
+Perhaps the most important result in the study of quotient spaces has to do with the problem of constructing continuous functions on a quotient space. We consider that problem now. When we studied \index{Product space}product spaces, we had a criterion for determining whether a map \(f : Z \rightarrow  \prod {X}_{\alpha }\) into a product space was continuous. Its counterpart in the theory of quotient spaces is a criterion for determining when a map \(f : {X}^{ * } \rightarrow  Z\) out of a quotient space is continuous. One has the following theorem:
 \end{proof}
 
 \begin{theorem}
@@ -2633,9 +2633,9 @@ Give \({X}^{ * }\) the \index{Quotient topology}quotient topology.
 (b) If \(Z\) is Hausdorff, so is \({X}^{ * }\) .
 
 \begin{proof}
-By the preceding theorem, \(g\) induces a continuous map \(f : {X}^{ * } \rightarrow  Z\) ; it is clear that \(f\) is bijective. Suppose that \(f\) is a \index{homeomorphism@Homeomorphism}homeomorphism. Then both \(f\) and the \index{Projection map}projection map \(p : X \rightarrow  {X}^{ * }\) are quotient maps, so that their composite \(q\) is a quotient map. Conversely, suppose that \(g\) is a quotient map Then it follows from the preceding theorem that \(f\) is a quotient map. Being bijective, \(f\) is thus a homeomorphism.
+By the preceding theorem, \(g\) induces a continuous map \(f : {X}^{ * } \rightarrow  Z\) ; it is clear that \(f\) is bijective. Suppose that \(f\) is a homeomorphism. Then both \(f\) and the \index{Projection map}projection map \(p : X \rightarrow  {X}^{ * }\) are quotient maps, so that their composite \(q\) is a quotient map. Conversely, suppose that \(g\) is a quotient map Then it follows from the preceding theorem that \(f\) is a quotient map. Being bijective, \(f\) is thus a homeomorphism.
 
-Suppose \(Z\) is Hausdorff. Given distinct pomts of \({X}^{ * }\) , their images under \(f\) are distinct and thus possess disjoint \index{Neighborhood}neighborhoods \(U\) and \(V\) . Then \({f}^{-1}( U)\) and \({f}^{-1}( V)\) are disjoint \index{neighborhood@Neighborhood}neighborhoods of the two given points of \({X}^{ * }\) .
+Suppose \(Z\) is Hausdorff. Given distinct pomts of \({X}^{ * }\) , their images under \(f\) are distinct and thus possess disjoint \index{Neighborhood}neighborhoods \(U\) and \(V\) . Then \({f}^{-1}( U)\) and \({f}^{-1}( V)\) are disjoint neighborhoods of the two given points of \({X}^{ * }\) .
 \end{proof}
 
 \begin{centeredblock}
@@ -2743,11 +2743,11 @@ A topological group \(G\) is a group that is also a topological space satisfying
 
 are homeomorphisms of \(G\) . Conclude that \(G\) is a homogeneous space. (This means that for every pair \(x,y\) of points of \(G\) , there exists a homeomorphism of \(G\) onto itself that carries \(x\) to \(y\) .)
 
-5. Let \(H\) be a subgroup of \(G\) . If \(x \in  G\) , define \({xH} = \{ x \cdot  h \mid  h \in  H\}\) ; this set is called a left coset of \(H\) in \(G\) . Let \(G/H\) denote the collection of left cosets of \(H\) in \(G\) ; it is a partition of \(G\) . Give \(G/H\) the \index{quotient topology@Quotient topology}quotient topology.
+5. Let \(H\) be a subgroup of \(G\) . If \(x \in  G\) , define \({xH} = \{ x \cdot  h \mid  h \in  H\}\) ; this set is called a left coset of \(H\) in \(G\) . Let \(G/H\) denote the collection of left cosets of \(H\) in \(G\) ; it is a partition of \(G\) . Give \(G/H\) the quotient topology.
 
 (a) Show that if \(\alpha  \in  G\) , the map \({f}_{\alpha }\) of the preceding exercise induces a homeomorphism of \(G/H\) carrying \({xH}\) to \(( {\alpha  \cdot  x}) H\) . Conclude that \(G/H\) is a homogeneous space.
 
-(b) Show that if \(H\) is a \index{closed set@Closed set}closed set in the topology of \(G\) , then one-point sets are closed in \(G/H\) .
+(b) Show that if \(H\) is a closed set in the topology of \(G\) , then one-point sets are closed in \(G/H\) .
 
 (c) Show that the quotient map \(p : G \rightarrow  G/H\) is open.
 
@@ -2757,7 +2757,7 @@ are homeomorphisms of \(G\) . Conclude that \(G\) is a homogeneous space. (This 
 
 7. If \(A\) and \(B\) are subsets of \(G\) , let \(A \cdot  B\) denote the set of all points \(a \cdot  b\) for \(a \in  A\) and \(b \in  B\) . Let \({A}^{-1}\) denote the set of all points \({a}^{-1}\) , for \(a \in  A\) .
 
-(a) A neighborhood \(V\) of the identity element \(e\) is said to be sym\index{Metric}metric if \(V =\)  \({V}^{-1}\) . If \(U\) is a neighborhood of \(e\) , show there is a sym\index{metric@Metric}metric neighborhood \(V\) of \(e\) such that \(V \cdot  V \subset  U\) . [Hint: If \(W\) is a neighborhood of \(e\) , then \(W \cdot  {W}^{-1}\) is symmetric.]
+(a) A neighborhood \(V\) of the identity element \(e\) is said to be sym\index{Metric}metric if \(V =\)  \({V}^{-1}\) . If \(U\) is a neighborhood of \(e\) , show there is a symmetric neighborhood \(V\) of \(e\) such that \(V \cdot  V \subset  U\) . [Hint: If \(W\) is a neighborhood of \(e\) , then \(W \cdot  {W}^{-1}\) is symmetric.]
 
 (b) Show that \(G\) is Hausdorff. In fact, show that if \(x \neq  y\) , there is a neighborhood \(V\) of \(e\) such that \(V \cdot  x\) and \(V \cdot  y\) are disjoint.
 
