@@ -7,9 +7,9 @@ One of the earliest successes of algebraic topology was its role in solving the 
 
 \section*{§ 74 Fundamental Groups of Surfaces}
 
-In this section, we show how to construct a number of compact \index{Connected sum: of projective planes} connected surfaces, and we compute their \index{Dunce cap!fundamental group}\index{Dunce cap!fundamental group}\index{Dunce cap!fundamental group}fundamental groups We shall construct each of these surfaces as the quotient space obtained from a \index{polygonal region} in the plane by ``\index{Pasting regions together} pasting its edges together.''
+In this section, we show how to construct a number of compact \index{connected sum: of projective planes@Connected sum: of projective planes} connected surfaces, and we compute their \index{Dunce cap!fundamental group}\index{Dunce cap!fundamental group}\index{Dunce cap!fundamental group}fundamental groups We shall construct each of these surfaces as the quotient space obtained from a \index{Polygonal region} in the plane by ``\index{pasting regions together@Pasting regions together} pasting its edges together.''
 
-To treat this pasting process formally requires some care. First, let us define precisely what we shall mean by a ``\index{Polygonal region}\index{Polygonal region}\index{polygonal region@Polygonal region}polygonal region in the plane.'' Given a point \(c\) of \({\mathbb{R}}^{2}\) , and given \(a > 0\) , consider the circle of radius \(a\) in \({\mathbb{R}}^{2}\) with center at \(c\) . Given a finite sequence \({\theta }_{0} < {\theta }_{1} < \cdots  < {\theta }_{n}\) of real numbers, where \(n \geq  3\) and \({\theta }_{n} = {\theta }_{0} + {2\pi }\) , consider the points \({p}_{i} = c + a( {\cos {\theta }_{i},\sin {\theta }_{i}})\) , which lie on this circle. They are numbered in counterclockwise order around the circle, and \({p}_{n} = {p}_{0}\) . The line through \({p}_{i - 1}\) and \({p}_{i}\) splits the plane into two closed half-planes; let \({H}_{i}\) be the one that contains all the points \({p}_{k}\) . Then the space
+To treat this pasting process formally requires some care. First, let us define precisely what we shall mean by a ``\index{polygonal region@Polygonal region}\index{polygonal region@Polygonal region}\index{polygonal region@Polygonal region}polygonal region in the plane.'' Given a point \(c\) of \({\mathbb{R}}^{2}\) , and given \(a > 0\) , consider the circle of radius \(a\) in \({\mathbb{R}}^{2}\) with center at \(c\) . Given a finite sequence \({\theta }_{0} < {\theta }_{1} < \cdots  < {\theta }_{n}\) of real numbers, where \(n \geq  3\) and \({\theta }_{n} = {\theta }_{0} + {2\pi }\) , consider the points \({p}_{i} = c + a( {\cos {\theta }_{i},\sin {\theta }_{i}})\) , which lie on this circle. They are numbered in counterclockwise order around the circle, and \({p}_{n} = {p}_{0}\) . The line through \({p}_{i - 1}\) and \({p}_{i}\) splits the plane into two closed half-planes; let \({H}_{i}\) be the one that contains all the points \({p}_{k}\) . Then the space
 
 \[
 P = {H}_{1} \cap  \cdots  \cap  {H}_{n}
@@ -17,7 +17,7 @@ P = {H}_{1} \cap  \cdots  \cap  {H}_{n}
 
 is called the polygonal region determined by the points \({p}_{i}\) . The points \({p}_{i}\) are called the vertices of \(P\) ; the line segment joining \({p}_{i - 1}\) and \({p}_{i}\) is called an edge of \(P\) ; the union of the edges of \(P\) is denoted Bd \(P\) ; and \(P -\) Bd \(P\) is denoted Int \(P\) . It is not hard to show that if \(p\) is any point of Int \(P\) , then \(P\) is the union of all line segments joining \(p\) and points of \(\mathrm{{Bd}}P\) , and that two such line segments intersect only in the point \(p\) .
 
-Given a line segment \(L\) in \({\mathbb{R}}^{2}\) , an orientation of \(L\) is simply an ordering of its end points; the first, say \(a\) , is called the \index{Initial point: of an oriented line segment} initial point, and the second, say \(b\) , is called the \index{Final point: of oriented line segment} final point, of the \index{oriented line segment}. We often say that \(L\) is oriented from a to \(b\) ; and we picture the orientation by drawing an arrow on \(L\) that points from a towards \(b\) . If \({L}^{\prime }\) is another line segment, oriented from \(c\) to \(d\) , then the positive linear map of \(L\) onto \({L}^{\prime }\) is the homeomorphism \(h\) that carries the point \(x = ( {1 - s}) a + {sb}\) of \(L\) to the point \(h( x)  = ( {1 - s}) c + {sd}\) of \({L}^{\prime }\) .
+Given a line segment \(L\) in \({\mathbb{R}}^{2}\) , an orientation of \(L\) is simply an ordering of its end points; the first, say \(a\) , is called the \index{initial point: of an oriented line segment@Initial point: of an oriented line segment} initial point, and the second, say \(b\) , is called the \index{final point: of oriented line segment@Final point: of oriented line segment} final point, of the \index{Oriented line segment}. We often say that \(L\) is oriented from a to \(b\) ; and we picture the orientation by drawing an arrow on \(L\) that points from a towards \(b\) . If \({L}^{\prime }\) is another line segment, oriented from \(c\) to \(d\) , then the positive linear map of \(L\) onto \({L}^{\prime }\) is the homeomorphism \(h\) that carries the point \(x = ( {1 - s}) a + {sb}\) of \(L\) to the point \(h( x)  = ( {1 - s}) c + {sd}\) of \({L}^{\prime }\) .
 
 If two polygonal regions \(P\) and \(Q\) have the same number of vertices, \({p}_{0},\ldots ,{p}_{n}\) and \({q}_{0},\ldots ,{q}_{n}\) , respectively, with \({p}_{0} = {p}_{n}\) and \({q}_{0} = {q}_{n}\) , then there is an obvious homeomorphism \(h\) of \(\mathrm{{Bd}}P\) with \(\mathrm{{Bd}}Q\) that carries the line segment from \({p}_{t - 1}\) to \({p}_{i}\) by a positive linear map onto the line segment from \({q}_{i - 1}\) to \({q}_{i}\) . If \(p\) and \(q\) are fixed points of Int \(P\) and Int \(Q\) , respectively, then this homeomorphism may be extended to a homeomorphism of \(P\) with \(Q\) by letting it map the line segment from \(p\) to the point \(x\) of Bd \(P\) linearly onto the line segment from \(q\) to \(h( x)\) . See Figure 74.1.
 
@@ -29,7 +29,7 @@ If two polygonal regions \(P\) and \(Q\) have the same number of vertices, \({p}
 Figure 74.1
 
 \begin{definition}
-	Let \(P\) be a polygonal region in the plane. A \index{labelling} of the edges of \(P\) is a map from the set of edges of \(P\) to a set \(S\) called the set of \index{labels}. Given an onentation of each edge of \(P\) , and given a \index{Labelling}\index{Labelling}\index{labelling@Labelling}labelling of the edges of \(P\) , we define an \index{Equivalence of labelling schemes} equivalence relation on the points of \(P\) as follows: Each point of Int \(P\) is equivalent only to itself. Given any two edges of \(P\) that have the same label, let \(h\) be the positive linear map of one onto the other, and define each point \(x\) of the first edge to be equivalent to the point \(h( x)\) of the second edge. This relation generates an equivalence relation on \(P\) . The quotient space \(X\) obtained from this equivalence relation is said to have been obtained by pasting the edges of \(P\) together according to the given orientations and labelling.
+	Let \(P\) be a polygonal region in the plane. A \index{Labelling} of the edges of \(P\) is a map from the set of edges of \(P\) to a set \(S\) called the set of \index{Labels}. Given an onentation of each edge of \(P\) , and given a \index{labelling@Labelling}\index{labelling@Labelling}\index{labelling@Labelling}labelling of the edges of \(P\) , we define an \index{equivalence of labelling schemes@Equivalence of labelling schemes} equivalence relation on the points of \(P\) as follows: Each point of Int \(P\) is equivalent only to itself. Given any two edges of \(P\) that have the same label, let \(h\) be the positive linear map of one onto the other, and define each point \(x\) of the first edge to be equivalent to the point \(h( x)\) of the second edge. This relation generates an equivalence relation on \(P\) . The quotient space \(X\) obtained from this equivalence relation is said to have been obtained by pasting the edges of \(P\) together according to the given orientations and labelling.
 \end{definition}
 
 \begin{centeredblock}
@@ -58,7 +58,7 @@ Figure 74.3
 \end{example}
 \end{centeredblock}
 
-We now describe a convenient method for specifying orientations and \index{Labels}\index{Labels}\index{labels@Labels}labels for the edges \index{Edge: of curved triangle!of a polygonal region}\index{Edge: of curved triangle!of a polygonal region}\index{Edge: of curved triangle!of a polygonal region}of a polygonal region, a method that does not involve drawing a picture.
+We now describe a convenient method for specifying orientations and \index{labels@Labels}\index{labels@Labels}\index{labels@Labels}labels for the edges \index{Edge: of curved triangle!of a polygonal region}\index{Edge: of curved triangle!of a polygonal region}\index{Edge: of curved triangle!of a polygonal region}of a polygonal region, a method that does not involve drawing a picture.
 
 \begin{definition}
 	Let \(P\) be a polygonal region with successive vertices \({p}_{0},\ldots ,{p}_{n}\) , where \({p}_{0} = {p}_{n}\) . Given orientations and a labelling of the edges of \(P\) , let \({a}_{1},\ldots ,{a}_{m}\) be the distinct labels that are assigned to the edges of \(P\) . For each \(k\) , let \({a}_{{i}_{k}}\) be the label assigned to the edge \({p}_{k - 1}{p}_{k}\) , and let \(\cdot  {\epsilon }_{k} =  + 1\) or -1 according as the orientation assigned to this edge goes from \({p}_{k - 1}\) to \({p}_{k}\) or the reverse. Then the number of edges of \(P\) , the orientations of the edges, and the labelling are completely specified by the symbol
@@ -67,10 +67,10 @@ We now describe a convenient method for specifying orientations and \index{Label
 w = {( {a}_{{i}_{1}}) }^{{\epsilon }_{1}}{( {a}_{{i}_{2}}) }^{{\epsilon }_{2}}\cdots {( {a}_{{i}_{n}}) }^{{\epsilon }_{n}}.
 \]
 
-We call this symbol a labelling \index{Projective-type scheme} \index{Scheme}\index{Scheme}\index{scheme@Scheme}scheme of length \(n\) for the edges of \(P\) ; it is simply a sequence of labels with exponents \(+ 1\) or-1.
+We call this symbol a labelling \index{projective-type scheme@Projective-type scheme} \index{scheme@Scheme}\index{scheme@Scheme}\index{scheme@Scheme}scheme of length \(n\) for the edges of \(P\) ; it is simply a sequence of labels with exponents \(+ 1\) or-1.
 \end{definition}
 
-We normally omit the exponents that equal +1 when giving a \index{Labelling scheme}\index{Labelling scheme}\index{labelling scheme@Labelling scheme}labelling scheme. Then the orientations and labelling of Example 1 can be specified by the labelling scheme \({a}^{-1}{ba}\) , if we take \({p}_{0}\) to be the top \index{Vertex: of a curved triangle} vertex of the triangle. If we take one of the other vertices to be \({p}_{0}\) , then we obtain one of the labelling schemes \({ba}{a}^{-1}\) or \(a{a}^{-1}b\) .
+We normally omit the exponents that equal +1 when giving a \index{labelling scheme@Labelling scheme}\index{labelling scheme@Labelling scheme}\index{labelling scheme@Labelling scheme}labelling scheme. Then the orientations and labelling of Example 1 can be specified by the labelling scheme \({a}^{-1}{ba}\) , if we take \({p}_{0}\) to be the top \index{vertex: of a curved triangle@Vertex: of a curved triangle} vertex of the triangle. If we take one of the other vertices to be \({p}_{0}\) , then we obtain one of the labelling schemes \({ba}{a}^{-1}\) or \(a{a}^{-1}b\) .
 
 Similarly, the orientations and labelling indicated in Example 2 can be specified (if we begin at the lower left corner of the square) by the symbol \(a{a}^{-1}b{b}^{-1}\) .
 
@@ -102,11 +102,11 @@ Figure 74.5
 \end{example}
 \end{centeredblock}
 
-Now there is no reason to restrict oneself to a single polygonal region when forming a space by \index{pasting edges together}. Given a finite number \({P}_{1},\ldots ,{P}_{k}\) of disjoint polygonal regions, along with orientations and a labelling of their edges, one can form a quotient space \(X\) in exactly the same way as for a single region, by \index{pasting regions together@Pasting regions together}pasting the edges of these regions together. Also, one specifies orientations and a labelling in a similar way, by means of \(k\) labelling schemes. Depending on the particular schemes, the space \(X\) one obtains may or may not be connected.
+Now there is no reason to restrict oneself to a single polygonal region when forming a space by \index{Pasting edges together}. Given a finite number \({P}_{1},\ldots ,{P}_{k}\) of disjoint polygonal regions, along with orientations and a labelling of their edges, one can form a quotient space \(X\) in exactly the same way as for a single region, by \index{pasting regions together@Pasting regions together}pasting the edges of these regions together. Also, one specifies orientations and a labelling in a similar way, by means of \(k\) labelling schemes. Depending on the particular schemes, the space \(X\) one obtains may or may not be connected.
 
 \begin{centeredblock}
 \begin{example}
-	Figure 74.6 indicates a labelling of the edges of two squares for which the resulting quotient space is connected; it is the space called the \index{Möbius band} Of course, this space could also be obtained from a single square by using the labelling scheme abac, as you can check.
+	Figure 74.6 indicates a labelling of the edges of two squares for which the resulting quotient space is connected; it is the space called the \index{möbius band@Möbius band} Of course, this space could also be obtained from a single square by using the labelling scheme abac, as you can check.
 
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/74.6.jpg}
@@ -131,7 +131,7 @@ Figure 74.7
 \end{centeredblock}
 
 \begin{theorem}
-	Let \(X\) be the space obtained from a finite collection of polygonal regions by \index{Pasting edges together}\index{Pasting edges together}\index{pasting edges together@Pasting edges together}pasting edges together according to some labelling scheme. Then \(X\) is a compact Hausdorff space.
+	Let \(X\) be the space obtained from a finite collection of polygonal regions by \index{pasting edges together@Pasting edges together}\index{pasting edges together@Pasting edges together}\index{pasting edges together@Pasting edges together}pasting edges together according to some labelling scheme. Then \(X\) is a compact Hausdorff space.
 \end{theorem}
 
 \begin{proof}
@@ -230,18 +230,18 @@ There exist many other ways to form compact surfaces. One can for instance delet
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item Find a presentation for the fundamental group of \({P}^{2}\# T\) .
 \item Consider the space \(X\) obtained from a seven-sided polygonal region by means of the labelling scheme abaaab \({}^{-1}{a}^{-1}\) . Show that the fundamental group of \(X\) is the free product of two cyclic groups. [Hint: See Theorem 68.7.]
-\item The \index{Klein bottle} \(K\) is the space obtained from a square by means of the labelling scheme \({ab}{a}^{-1}b\) . Figure 74.11 indicates how \(K\) can be pictured as an immersed surface in \({\mathbb{R}}^{3}\) .
+\item The \index{klein bottle@Klein bottle} \(K\) is the space obtained from a square by means of the labelling scheme \({ab}{a}^{-1}b\) . Figure 74.11 indicates how \(K\) can be pictured as an immersed surface in \({\mathbb{R}}^{3}\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Find a presentation for the fundamental group of \(K\) .
   \item Find a double covering map \(p : T \rightarrow  K\) , where \(T\) is the torus. Describe the induced homomorphism of fundamental groups. \begin{center} \includegraphics[width=1.0\textwidth]{images/74.11.jpg} \end{center} \hspace*{3em} Figure 74.11
   \end{enumerate}
 \item
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Show that the \index{Klein bottle}\index{Klein bottle}\index{klein bottle@Klein bottle}Klein bottle is homeomorphic to \({P}^{2}\# {P}^{2}\) . [Hint: Split the square in Figure 74.11 along a diagonal, flip one of the resulting trangular pieces over, and paste the two pieces together along the edge labelled b.]
+  \item Show that the \index{klein bottle@Klein bottle}\index{klein bottle@Klein bottle}\index{klein bottle@Klein bottle}Klein bottle is homeomorphic to \({P}^{2}\# {P}^{2}\) . [Hint: Split the square in Figure 74.11 along a diagonal, flip one of the resulting trangular pieces over, and paste the two pieces together along the edge labelled b.]
 
   \item Show how to picture the 4-fold projective plane as an immersed surface in \({\mathbb{R}}^{3}\) .
   \end{enumerate}
-\item The \index{Möbius band}\index{Möbius band}\index{möbius band@Möbius band}Möbius band \(M\) is not a surface, but what is called a ``surface with boundary''. Show that \(M\) is homeomorphic to the space obtained by deleting an open disc from \({P}^{2}\) .
+\item The \index{möbius band@Möbius band}\index{möbius band@Möbius band}\index{möbius band@Möbius band}Möbius band \(M\) is not a surface, but what is called a ``surface with boundary''. Show that \(M\) is homeomorphic to the space obtained by deleting an open disc from \({P}^{2}\) .
 \item If \(n > 1\) , show that the fundamental group of the \(n\) -fold torus is not abelian. [Hint: Let \(G\) be the free group on the set \(\{  {{\alpha }_{1},{\beta }_{1},\ldots ,{\alpha }_{n},{\beta }_{n}}\}\) ; let \(F\) be the free group on the set \(\{ \gamma ,\delta \}\) . Consider the homomorphism of \(G\) onto \(F\) that sends \({\alpha }_{1}\) and \({\beta }_{1}\) to \(\gamma\) and all other \({\alpha }_{i}\) and \({\beta }_{i}\) to \(\delta\) .]
 \item If \(m > 1\) , show the fundamental group of the \(m\) -fold projective plane is not abelian. [Hint: There is a homomorphism mapping this group onto the group \(. {\mathbb{Z}/2 * \mathbb{Z}/2.}]\)
 \end{enumerate}
@@ -267,9 +267,9 @@ When we pass to the cosets in the abelian group \({\pi }_{1}/[  {{\pi }_{1},{\pi
 \]
 \end{definition}
 
-We call \({H}_{1}( X)\) the first \index{homology group} of \(X\) . We omit the base point from the notation because there is a unique path-induced isomorphism between the abelianized fundamental groups based at two different points.
+We call \({H}_{1}( X)\) the first \index{Homology group} of \(X\) . We omit the base point from the notation because there is a unique path-induced isomorphism between the abelianized fundamental groups based at two different points.
 
-If you study algebraic topology further, you will see an entirely different definition of \({H}_{1}( X)\) . In fact, you will see groups \({H}_{n}( X)\) called the \index{Homology group}\index{Homology group}\index{homology group@Homology group}homology groups of \(X\) that are defined for all \(n \geq  0\) . These are abelian groups that are topological invariants of \(X\) ; they are of fundamental importance in applying results of algebra to problems of topology. A theorem due to W. Hurewicz establishes a connection between these groups and the homotopy groups of \(X\) . It implies in particular that for a path-connected space \(X\) , the \index{First homology group}\index{First homology group}\index{first homology group@First homology group}first homology group \({H}_{1}( X)\) of \(X\) is isomorphic to the abelianızed fundamental group of \(X\) . This theorem motivates our choice of notation for the abelianized fundamental group.
+If you study algebraic topology further, you will see an entirely different definition of \({H}_{1}( X)\) . In fact, you will see groups \({H}_{n}( X)\) called the \index{homology group@Homology group}\index{homology group@Homology group}\index{homology group@Homology group}homology groups of \(X\) that are defined for all \(n \geq  0\) . These are abelian groups that are topological invariants of \(X\) ; they are of fundamental importance in applying results of algebra to problems of topology. A theorem due to W. Hurewicz establishes a connection between these groups and the homotopy groups of \(X\) . It implies in particular that for a path-connected space \(X\) , the \index{first homology group@First homology group}\index{first homology group@First homology group}\index{first homology group@First homology group}first homology group \({H}_{1}( X)\) of \(X\) is isomorphic to the abelianızed fundamental group of \(X\) . This theorem motivates our choice of notation for the abelianized fundamental group.
 \end{theorem}
 
 To compute \({H}_{1}( X)\) for the surfaces considered earlier, we need the following result:
@@ -347,7 +347,7 @@ To prove the classification theorem, we need to use certain geometric arguments 
 
 First, let us consider what it means to ``cut apart'' a polygonal region. Let \(P\) be a polygonal region with successive vertices \({p}_{0},\ldots ,{p}_{n} = {p}_{0}\) , as usual. Given \(k\) with \(1 < k < n - 1\) , let us consider the polygonal regions \({Q}_{1}\) , with successive vertices \({p}_{0},{p}_{1},\ldots ,{p}_{k},{p}_{0}\) , and \({Q}_{2}\) , with successive vertices \({p}_{0},{p}_{k},\ldots ,{p}_{n} = {p}_{0}\) . These regions have the edge \({p}_{0}{p}_{k}\) in common, and the region \(P\) is their union.
 
-Let us move \({Q}_{1}\) by a translation of \({\mathbb{R}}^{2}\) so as to obtain a polygonal region \({Q}_{1}^{\prime }\) that is disjoint from \({Q}_{2}\) ; then \({Q}_{1}^{\prime }\) has successive vertices \({q}_{0},{q}_{1},\ldots ,{q}_{k},{q}_{0}\) , where \({q}_{i}\) is the image of \({p}_{i}\) under the translation. The regions \({Q}_{1}^{\prime }\) and \({Q}_{2}\) are said to have been obtained by \index{Cutting a region apart} \index{cutting a region apart@Cutting a region apart}cutting \(P\) apart along the line from \({p}_{0}\) to \({p}_{k}\) . The region \(P\) is homeomorphic to the quotient space of \({Q}_{1}^{\prime }\) and \({Q}_{2}\) obtained by pasting the edge of \({Q}_{1}^{\prime }\) going from \({q}_{0}\) to \({q}_{k}\) to the edge of \({Q}_{2}\) going from \({p}_{0}\) to \({p}_{k}\) , by the positive linear map of one edge onto the other. See Figure 76.1.
+Let us move \({Q}_{1}\) by a translation of \({\mathbb{R}}^{2}\) so as to obtain a polygonal region \({Q}_{1}^{\prime }\) that is disjoint from \({Q}_{2}\) ; then \({Q}_{1}^{\prime }\) has successive vertices \({q}_{0},{q}_{1},\ldots ,{q}_{k},{q}_{0}\) , where \({q}_{i}\) is the image of \({p}_{i}\) under the translation. The regions \({Q}_{1}^{\prime }\) and \({Q}_{2}\) are said to have been obtained by \index{cutting a region apart@Cutting a region apart} \index{cutting a region apart@Cutting a region apart}cutting \(P\) apart along the line from \({p}_{0}\) to \({p}_{k}\) . The region \(P\) is homeomorphic to the quotient space of \({Q}_{1}^{\prime }\) and \({Q}_{2}\) obtained by pasting the edge of \({Q}_{1}^{\prime }\) going from \({q}_{0}\) to \({q}_{k}\) to the edge of \({Q}_{2}\) going from \({p}_{0}\) to \({p}_{k}\) , by the positive linear map of one edge onto the other. See Figure 76.1.
 
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/76.1.jpg}
@@ -396,7 +396,7 @@ Conversely, if \(X\) is the space obtained from \(m + 1\) polygonal regions by m
 
 \section*{Elementary operations on schemes}
 
-We now list a number of \index{Elementary operations on schemes} \index{elementary operations on schemes@Elementary operations on schemes}elementary \index{Operation on schemes} operations that can be performed on a labelling scheme \({w}_{1},\ldots ,{w}_{m}\) without affecting the resulting quotient space \(X\) . The first two arise from the theorem just stated.
+We now list a number of \index{elementary operations on schemes@Elementary operations on schemes} \index{elementary operations on schemes@Elementary operations on schemes}elementary \index{operation on schemes@Operation on schemes} operations that can be performed on a labelling scheme \({w}_{1},\ldots ,{w}_{m}\) without affecting the resulting quotient space \(X\) . The first two arise from the theorem just stated.
 
 (i) Cut. One can replace the scheme \({w}_{1} = {y}_{0}{y}_{1}\) by the scheme \({y}_{0}{c}^{-1}\) and \(c{y}_{1}\) , provided \(c\) does not appear elsewhere in the total scheme and \({y}_{0}\) and \({y}_{1}\) have length at least two.
 
@@ -481,12 +481,12 @@ by permuting and relabelling.
 
 We prove in this section the geometric part of our classification theorem for surfaces. We show that every space obtained by pasting the edges of a polygonal region together in pairs is homeomorphic either to \({S}^{2}\) , to the \(n\) -fold torus \({T}_{n}\) , or to the \(m\) -fold projective plane \({P}_{m}\) . Later we discuss the problem of showing that every compact surface can be obtained in this way.
 
-Suppose \({w}_{1},\ldots ,{w}_{k}\) is a labelling scheme for the polygonal regions \({P}_{1},\ldots ,{P}_{k}\) . If each label appears exactly twice in this scheme, we call it a \index{proper labelling scheme}. Note the following important fact:
+Suppose \({w}_{1},\ldots ,{w}_{k}\) is a labelling scheme for the polygonal regions \({P}_{1},\ldots ,{P}_{k}\) . If each label appears exactly twice in this scheme, we call it a \index{Proper labelling scheme}. Note the following important fact:
 
 If one applies any elementary operation to a \index{Scheme!proper}\index{Scheme!proper}\index{Scheme!proper}proper scheme, one obtains another proper scheme.
 
 \begin{definition}
-	Let \(w\) be a \index{Proper labelling scheme}\index{Proper labelling scheme}\index{proper labelling scheme@Proper labelling scheme}proper labelling scheme for a single polygonal region. We say that \(w\) is of \index{Torus-type scheme} \index{Scheme!torus type}\index{Scheme!torus type}\index{Scheme!torus type}torus type if each label in it appears once with exponent \(+ 1\) and once with exponent -1 . Otherwise, we say \(w\) is of \index{Scheme!projective type}\index{Scheme!projective type}\index{Scheme!projective type}projective type.
+	Let \(w\) be a \index{proper labelling scheme@Proper labelling scheme}\index{proper labelling scheme@Proper labelling scheme}\index{proper labelling scheme@Proper labelling scheme}proper labelling scheme for a single polygonal region. We say that \(w\) is of \index{torus-type scheme@Torus-type scheme} \index{Scheme!torus type}\index{Scheme!torus type}\index{Scheme!torus type}torus type if each label in it appears once with exponent \(+ 1\) and once with exponent -1 . Otherwise, we say \(w\) is of \index{Scheme!projective type}\index{Scheme!projective type}\index{Scheme!projective type}projective type.
 \end{definition}
 
 We begin by considering a scheme \(w\) of projective type. We will show that \(w\) is equivalent to a scheme (of the same length) in which all labels having the same exponent are paired and appear at the beginning of the scheme. That is, \(w\) is equivalent to a scheme of the form
@@ -918,13 +918,13 @@ We continue simularly. Eventually we reach a scheme of type (3).
 \end{enumerate}
 \section*{§ 78 Constructing Compact Surfaces}
 
-To complete our classification of the compact surfaces, we must show that every compact connected surface can be obtained by pasting together in pairs the edges of a polygonal region. We shall actually prove something slightly weaker than this, for we shall assume that the surface in question has what is called a \index{triangulation}. We define this notion as follows:
+To complete our classification of the compact surfaces, we must show that every compact connected surface can be obtained by pasting together in pairs the edges of a polygonal region. We shall actually prove something slightly weaker than this, for we shall assume that the surface in question has what is called a \index{Triangulation}. We define this notion as follows:
 
 \begin{definition}
-	Let \(X\) be a compact Hausdorff space. A \index{Edge: of curved triangle} \index{Curved triangle}\index{Curved triangle}\index{curved triangle@Curved triangle}curved triangle in \(X\) is a subspace \(A\) of \(X\) and a homeomorphism \(h : T \rightarrow  A\) , where \(T\) is a closed triangular region in the plane. If \(e\) is an edge of \(T\) , then \(h( e)\) is is said to be an edge of \(A\) ; if \(v\) is a vertex of \(T\) , then \(h( v)\) is said to be a vertex of \(A\) . A \index{Triangulation}\index{Triangulation}\index{triangulation@Triangulation}triangulation of \(X\) is a collection of curved triangles \({A}_{1},\ldots ,{A}_{n}\) in \(X\) whose union is \(X\) such that for \(i \neq  j\) , the intersection \({A}_{i} \cap  {A}_{j}\) is either empty, or a vertex of both \({A}_{i}\) and \({A}_{j}\) , or an edge of both. Furthermore, if \({h}_{i} : {T}_{i} \rightarrow  {A}_{i}\) is the homeomorphism associated with \({A}_{i}\) , we require that when \({A}_{i} \cap  {A}_{j}\) is an edge \(e\) of both, then the map \({h}_{j}^{-1}{h}_{i}\) defines a linear homeomorphism of the edge \({h}_{i}^{-1}( e)\) of \({T}_{i}\) with the edge \({h}_{j}^{-1}( e)\) of \({T}_{j}\) . If \(X\) has a triangulation, it is said to be \index{triangulable}.
+	Let \(X\) be a compact Hausdorff space. A \index{edge: of curved triangle@Edge: of curved triangle} \index{curved triangle@Curved triangle}\index{curved triangle@Curved triangle}\index{curved triangle@Curved triangle}curved triangle in \(X\) is a subspace \(A\) of \(X\) and a homeomorphism \(h : T \rightarrow  A\) , where \(T\) is a closed triangular region in the plane. If \(e\) is an edge of \(T\) , then \(h( e)\) is is said to be an edge of \(A\) ; if \(v\) is a vertex of \(T\) , then \(h( v)\) is said to be a vertex of \(A\) . A \index{triangulation@Triangulation}\index{triangulation@Triangulation}\index{triangulation@Triangulation}triangulation of \(X\) is a collection of curved triangles \({A}_{1},\ldots ,{A}_{n}\) in \(X\) whose union is \(X\) such that for \(i \neq  j\) , the intersection \({A}_{i} \cap  {A}_{j}\) is either empty, or a vertex of both \({A}_{i}\) and \({A}_{j}\) , or an edge of both. Furthermore, if \({h}_{i} : {T}_{i} \rightarrow  {A}_{i}\) is the homeomorphism associated with \({A}_{i}\) , we require that when \({A}_{i} \cap  {A}_{j}\) is an edge \(e\) of both, then the map \({h}_{j}^{-1}{h}_{i}\) defines a linear homeomorphism of the edge \({h}_{i}^{-1}( e)\) of \({T}_{i}\) with the edge \({h}_{j}^{-1}( e)\) of \({T}_{j}\) . If \(X\) has a triangulation, it is said to be \index{Triangulable}.
 \end{definition}
 
-It is a basic theorem that every compact surface is \index{Triangulable}\index{Triangulable}\index{triangulable@Triangulable}triangulable. The proof is long but not exceedingly difficult. (See 		\cite{AhlforsSario1960} or 		\cite{DoyleMoran1968}.)
+It is a basic theorem that every compact surface is \index{triangulable@Triangulable}\index{triangulable@Triangulable}\index{triangulable@Triangulable}triangulable. The proof is long but not exceedingly difficult. (See 		\cite{AhlforsSario1960} or 		\cite{DoyleMoran1968}.)
 
 \begin{theorem}
 	If \(X\) is a compact triangulable surface, then \(X\) is homeomorphic to the quotient space obtained from a collection of disjoint triangular regions in the plane by pasting their edges together in pairs.

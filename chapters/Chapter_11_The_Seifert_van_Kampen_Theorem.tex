@@ -5,9 +5,9 @@
 
 \section*{§ 67 Direct Sums of Abelian Groups}
 
-\index{Direct Sum} \index{Rank of a free abelian group} \index{Sum of groups} In this section, we shall consider only groups that are abelian. As is usual, we shall write such groups additively. Then 0 denotes the identity element of the group, \(- x\) denotes the inverse of \(x\) , and \({nx}\) denotes the \(n\) -fold sum \(x + \cdots  + x\) .
+\index{direct sum@Direct Sum} \index{rank of a free abelian group@Rank of a free abelian group} \index{sum of groups@Sum of groups} In this section, we shall consider only groups that are abelian. As is usual, we shall write such groups additively. Then 0 denotes the identity element of the group, \(- x\) denotes the inverse of \(x\) , and \({nx}\) denotes the \(n\) -fold sum \(x + \cdots  + x\) .
 
-Suppose \(G\) is an abelian group, and \({\{  {G}_{\alpha }\}  }_{\alpha  \in  J}\) is an indexed family of \index{Subgroup: of free abelian group} subgroups of \(G\) . We say that the groups \({G}_{\alpha }\) generate \(G\) if every element \(x\) of \(G\) can be written as a finite \index{sum of groups@Sum of groups}sum of elements of the groups \({G}_{\alpha }\) . Since \(G\) is abelian, we can always rearrange such a sum to group together terms that belong to a single \({G}_{\alpha }\) ; hence we can always write \(x\) in the form
+Suppose \(G\) is an abelian group, and \({\{  {G}_{\alpha }\}  }_{\alpha  \in  J}\) is an indexed family of \index{subgroup: of free abelian group@Subgroup: of free abelian group} subgroups of \(G\) . We say that the groups \({G}_{\alpha }\) generate \(G\) if every element \(x\) of \(G\) can be written as a finite \index{sum of groups@Sum of groups}sum of elements of the groups \({G}_{\alpha }\) . Since \(G\) is abelian, we can always rearrange such a sum to group together terms that belong to a single \({G}_{\alpha }\) ; hence we can always write \(x\) in the form
 
 \[
 x = {x}_{{\alpha }_{1}} + \cdots  + {x}_{{\alpha }_{n}},
@@ -17,7 +17,7 @@ where the indices \({\alpha }_{i}\) are distinct. In this case, we often write \
 
 If the groups \({G}_{\alpha }\) generate \(G\) , we often say that \(G\) is the sum of the groups \({G}_{\alpha }\) , writing \(G = \mathop{\sum }\limits_{{\alpha  \in  J}}{G}_{\alpha }\) in general, or \(G = {G}_{1} + \cdots  + {G}_{n}\) in the case of the finite index set \(\{ 1,\ldots ,n\}\) .
 
-Now suppose that the groups \({G}_{\alpha }\) generate \(G\) , and that for each \(x \in  G\) , the expression \(x = \sum {x}_{\alpha }\) for \(x\) is unique. That is, suppose that for each \(x \in  G\) , there is only one \(J\) -tuple \({( {x}_{\alpha }) }_{\alpha  \in  J}\) with \({x}_{\alpha } = 0\) for all but \index{Finitely generated group} finitely many \(\alpha\) such that \(x = \sum {x}_{\alpha }\) . Then \(G\) is said to be the \index{Direct sum}\index{Direct sum}\index{direct sum@Direct sum}direct sum of the groups \({G}_{\alpha }\) , and we write
+Now suppose that the groups \({G}_{\alpha }\) generate \(G\) , and that for each \(x \in  G\) , the expression \(x = \sum {x}_{\alpha }\) for \(x\) is unique. That is, suppose that for each \(x \in  G\) , there is only one \(J\) -tuple \({( {x}_{\alpha }) }_{\alpha  \in  J}\) with \({x}_{\alpha } = 0\) for all but \index{finitely generated group@Finitely generated group} finitely many \(\alpha\) such that \(x = \sum {x}_{\alpha }\) . Then \(G\) is said to be the \index{direct sum@Direct sum}\index{direct sum@Direct sum}\index{direct sum@Direct sum}direct sum of the groups \({G}_{\alpha }\) , and we write
 
 \[
 G = {\bigoplus }_{\alpha  \in  J}{G}_{\alpha }
@@ -31,7 +31,7 @@ or in the finite case, \(G = {G}_{1} \oplus  \cdots  \oplus  {G}_{n}\)
 \end{example}
 \end{centeredblock}
 
-A useful characterization of direct sums is given in the following lemma, we call it the \index{Extension condition: for direct sums} \index{Direct sum!extension condition}\index{Direct sum!extension condition}\index{Direct sum!extension condition}extension condition for direct sums.
+A useful characterization of direct sums is given in the following lemma, we call it the \index{extension condition: for direct sums@Extension condition: for direct sums} \index{Direct sum!extension condition}\index{Direct sum!extension condition}\index{Direct sum!extension condition}extension condition for direct sums.
 
 \begin{lemma}
 	Let \(G\) be an abelian group; let \(\{  {G}_{\alpha }\}\) be a family of subgroups of \(G\) . If \(G\) is the direct sum of the groups \({G}_{\alpha }\) , then \(G\) satisfies the following condition:
@@ -71,10 +71,10 @@ This corollary implies, for example, that
 
 \begin{proof}
 	Let \(H = {G}_{1}\) , let \({h}_{1} : {G}_{1} \rightarrow  H\) be the identity homomorphism, and let \({h}_{2} : {G}_{2} \rightarrow  H\) be the trivial homomorphism. Let \(h : G \rightarrow  H\) be their extension to \(G\) . Then \(h\) is surjective with kernel \({G}_{2}\) .
-In many situations, one is given a family of abelian groups \(\{  {G}_{\alpha }\}\) and one wishes to find a group \(G\) that contains subgroups \({G}_{\alpha }^{\prime }\) isomorphic to the groups \({G}_{\alpha }\) , such that \(G\) is the direct sum of these subgroups. This can in fact always be done, it leads to a notion called the \index{external direct sum}.
+In many situations, one is given a family of abelian groups \(\{  {G}_{\alpha }\}\) and one wishes to find a group \(G\) that contains subgroups \({G}_{\alpha }^{\prime }\) isomorphic to the groups \({G}_{\alpha }\) , such that \(G\) is the direct sum of these subgroups. This can in fact always be done, it leads to a notion called the \index{External direct sum}.
 \end{proof}
 \begin{definition}
-	Let \({\{  {G}_{\alpha }\}  }_{\alpha  \in  J}\) be an indexed family of abelian groups Suppose that \(G\) is an abelian group, and that \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) is a family of monomorphisms, such that \(G\) is the direct sum of the groups \({i}_{\alpha }( {G}_{\alpha })\) . Then we say that \(G\) is the \index{External direct sum}\index{External direct sum}\index{external direct sum@External direct sum}external direct sum of the groups \({G}_{\alpha }\) , relative to the monomorphisms \({i}_{\alpha }\) .
+	Let \({\{  {G}_{\alpha }\}  }_{\alpha  \in  J}\) be an indexed family of abelian groups Suppose that \(G\) is an abelian group, and that \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) is a family of monomorphisms, such that \(G\) is the direct sum of the groups \({i}_{\alpha }( {G}_{\alpha })\) . Then we say that \(G\) is the \index{external direct sum@External direct sum}\index{external direct sum@External direct sum}\index{external direct sum@External direct sum}external direct sum of the groups \({G}_{\alpha }\) , relative to the monomorphisms \({i}_{\alpha }\) .
 \end{definition}
 
 The group \(G\) is not unique, of course; we show later that it is unique up to isomorphism. Here is one way of constructing \(G\) :
@@ -115,10 +115,10 @@ An immediate consequence is a uniqueness theorem for direct sums:
 	We apply the preceding lemma (four times!). Since \(G\) is the external direct sum of the \({G}_{\alpha }\) and \(\{  {i}_{\alpha }^{\prime }\}\) is a family of homomorphisms, there exists a unique homomorphism \(\phi  : G \rightarrow  {G}^{\prime }\) such that \(\phi  \circ  {i}_{\alpha } = {i}_{\alpha }^{\prime }\) for each \(\alpha\) . Similarly, since \({G}^{\prime }\) is the external direct sum of the \({G}_{\alpha }\) and \(\{  {i}_{\alpha }\}\) is a family of homomorphisms, there exists a unique homomorphism \(\psi .{G}^{\prime } \rightarrow  G\) such that \(\psi  \circ  {i}_{\alpha }^{\prime } = {i}_{\alpha }\) for each \(\alpha\) . Now \(\psi  \circ  \phi  : G \rightarrow  G\) has the property that \(\psi  \circ  \phi  \circ  {i}_{\alpha } = {i}_{\alpha }\) for each \(\alpha\) ; since the identity map of \(G\) has the same property, the uniqueness part of the lemma shows that \(\psi  \circ  \phi\) must equal the identity map of \(G\) . Similarly, \(\phi  \circ  \psi\) must equal the identity map of \({G}^{\prime }\) .
 If \(G\) is the external direct sum of the groups \({G}_{\alpha }\) , relative to the monomorphisms \({i}_{\alpha }\) , we sometimes abuse notation and write \(G = \bigoplus {G}_{\alpha }\) , even though the groups \({G}_{\alpha }\) are not subgroups of \(G\) . That is, we identify each group \({G}_{\alpha }\) with its image under \({i}_{\alpha }\) , and treat \(G\) as an ordinary direct sum rather than an external direct sum. In each case, the context will make the meaning clear.
 
-Now we discuss \index{free abelian group}.
+Now we discuss \index{Free abelian group}.
 \end{proof}
 \begin{definition}
-	Let \(G\) be an abelian group and let \(\{  {a}_{\alpha }\}\) be an indexed family of elements of \(G\) ; let \({G}_{\alpha }\) be the subgroup of \(G\) \index{Generated: by elements} generated by \({a}_{\alpha }\) . If the groups \({G}_{\alpha }\) generate \(G\) , we also say that the elements \({a}_{\alpha }\) generate \(G\) . If each group \({G}_{\alpha }\) is infinite cyclic, and if \(G\) is the direct sum of the groups \({G}_{\alpha }\) , then \(G\) is said to be a \index{Free abelian group}\index{Free abelian group}\index{free abelian group@Free abelian group}free abelian group having the elements \(\{  {a}_{\alpha }\}\) as a \index{Basis: for a free abelian group} basis.
+	Let \(G\) be an abelian group and let \(\{  {a}_{\alpha }\}\) be an indexed family of elements of \(G\) ; let \({G}_{\alpha }\) be the subgroup of \(G\) \index{generated: by elements@Generated: by elements} generated by \({a}_{\alpha }\) . If the groups \({G}_{\alpha }\) generate \(G\) , we also say that the elements \({a}_{\alpha }\) generate \(G\) . If each group \({G}_{\alpha }\) is infinite cyclic, and if \(G\) is the direct sum of the groups \({G}_{\alpha }\) , then \(G\) is said to be a \index{free abelian group@Free abelian group}\index{free abelian group@Free abelian group}\index{free abelian group@Free abelian group}free abelian group having the elements \(\{  {a}_{\alpha }\}\) as a \index{basis: for a free abelian group@Basis: for a free abelian group} basis.
 \end{definition}
 
 The extension condition for direct sums implies the following \index{extension condition: for direct sums@Extension condition: for direct sums}extension condition \index{Extension condition: for direct sums!for free abelian groups}\index{Extension condition: for direct sums!for free abelian groups}\index{Extension condition: for direct sums!for free abelian groups}for free abelian groups:
@@ -128,7 +128,7 @@ The extension condition for direct sums implies the following \index{extension c
 \end{lemma}
 
 \begin{proof}
-	Let \({G}_{\alpha }\) denote the subgroup of \(G\) generated by \({a}_{\alpha }\) . Suppose first that the extension property holds. We show first that each group \({G}_{\alpha }\) is infinite cyclic. Suppose that for some index \(\beta\) , the element \({a}_{\beta }\) generates a finite cyclic subgroup of \(G\) . Then if we set \(H = \mathbb{Z}\) , there is no homomorphism \(h : G \rightarrow  H\) that maps each \({a}_{\alpha }\) to the number 1. For \({a}_{\beta }\) has finite \index{Order of a group element} order and 1 does not! To show that \(G\) is the direct sum of the groups \({G}_{\alpha }\) , we merely apply Lemma 67.1.
+	Let \({G}_{\alpha }\) denote the subgroup of \(G\) generated by \({a}_{\alpha }\) . Suppose first that the extension property holds. We show first that each group \({G}_{\alpha }\) is infinite cyclic. Suppose that for some index \(\beta\) , the element \({a}_{\beta }\) generates a finite cyclic subgroup of \(G\) . Then if we set \(H = \mathbb{Z}\) , there is no homomorphism \(h : G \rightarrow  H\) that maps each \({a}_{\alpha }\) to the number 1. For \({a}_{\beta }\) has finite \index{order of a group element@Order of a group element} order and 1 does not! To show that \(G\) is the direct sum of the groups \({G}_{\alpha }\) , we merely apply Lemma 67.1.
 Conversely, if \(G\) is free abelian with basis \(\{  {a}_{\alpha }\}\) , then given the elements \(\{  {y}_{\alpha }\}\) of \(H\) , there are homomorphisms \({h}_{\alpha } : {G}_{\alpha } \rightarrow  H\) such that \({h}_{\alpha }( {a}_{\alpha })  = {y}_{\alpha }\) (because \({G}_{\alpha }\) is infinite cyclic). Then Lemma 67.1 applies.
 \end{proof}
 \begin{theorem}
@@ -146,7 +146,7 @@ If \(G\) is a free abelian group with a finite basis, the number of elements in 
 \item If \(G\) is free abelian with basis \(\{ x,y\}\) , show that \(\{ {2x} + {3y},x - y\}\) is also a basis for \(G\) .
 \item The \index{order of a group element@Order of a group element}order of an element \(a\) of an abelian group \(G\) is the smallest positive integer \(m\) such that \({ma} = 0\) , if such exists; otherwise, the order of \(a\) is said to be infinite. The order of \(a\) thus equals the order of the subgroup generated by \(a\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Show the elements of finite order in \(G\) form a subgroup of \(G\) , called its \index{torsion subgroup}.
+  \item Show the elements of finite order in \(G\) form a subgroup of \(G\) , called its \index{Torsion subgroup}.
   \item Show that if \(G\) is free abelian, it has no elements of finite order.
   \item Show the additive group of rationals has no elements of finite order, but is not free abelian. [Hint: If \(\{  {a}_{\alpha }\}\) is a basis, express \(\frac{1}{2}{a}_{\alpha }\) in terms of this basis.]
   \end{enumerate}
@@ -162,11 +162,11 @@ If \(G\) is a free abelian group with a finite basis, the number of elements in 
 
 We now consider groups \(G\) that are not necessarily abelian. In this case, we write \(G\) multiplicatively. We denote the identity element of \(G\) by 1, and the inverse of the element \(x\) by \({x}^{-1}\) . The symbol \({x}^{n}\) denotes the \(n\) -fold product of \(x\) with itself, \({x}^{-n}\) denotes the \(n\) -fold product of \({x}^{-1}\) with itself, and \({x}^{0}\) denotes 1 .
 
-In this section, we study a concept that plays a role for arbitrary groups similar to that played by the direct sum for abelian groups. It is called the \index{free product} of groups.
+In this section, we study a concept that plays a role for arbitrary groups similar to that played by the direct sum for abelian groups. It is called the \index{Free product} of groups.
 
-Let \(G\) be a group. If \({\{  {G}_{\alpha }\}  }_{\alpha  \in  J}\) is a family of subgroups of \(G\) , we say (as before) that these groups generate \(G\) if every element \(x\) of \(G\) can be written as a finite product of elements of the groups \({G}_{\alpha }\) . This means that there is a finite sequence \(( {{x}_{1},\ldots ,{x}_{n}})\) of elements of the groups \({G}_{\alpha }\) such that \(x = {x}_{1}\cdots {x}_{n}\) . Such a sequence is called a \index{word} (of \index{Length of a word} length \(n\) ) in the groups \({G}_{\alpha }\) ; it is said to represent the element \(x\) of \(G\) .
+Let \(G\) be a group. If \({\{  {G}_{\alpha }\}  }_{\alpha  \in  J}\) is a family of subgroups of \(G\) , we say (as before) that these groups generate \(G\) if every element \(x\) of \(G\) can be written as a finite product of elements of the groups \({G}_{\alpha }\) . This means that there is a finite sequence \(( {{x}_{1},\ldots ,{x}_{n}})\) of elements of the groups \({G}_{\alpha }\) such that \(x = {x}_{1}\cdots {x}_{n}\) . Such a sequence is called a \index{Word} (of \index{length of a word@Length of a word} length \(n\) ) in the groups \({G}_{\alpha }\) ; it is said to represent the element \(x\) of \(G\) .
 
-Note that because we lack commutativity, we cannot rearrange the factors in the expression for \(x\) so as to group together factors that belong to a single one of the groups \({G}_{\alpha }\) . However, if \({x}_{i}\) and \({x}_{i + 1}\) both belong to the same group \({G}_{\alpha }\) , we can group them together, thereby obtaining the \index{Word}\index{Word}\index{word@Word}word
+Note that because we lack commutativity, we cannot rearrange the factors in the expression for \(x\) so as to group together factors that belong to a single one of the groups \({G}_{\alpha }\) . However, if \({x}_{i}\) and \({x}_{i + 1}\) both belong to the same group \({G}_{\alpha }\) , we can group them together, thereby obtaining the \index{word@Word}\index{word@Word}\index{word@Word}word
 
 \[
 ( {{x}_{1},\ldots ,{x}_{i - 1},{x}_{i}{x}_{i + 1},{x}_{i + 2},\ldots ,{x}_{n}}) ,
@@ -174,12 +174,12 @@ Note that because we lack commutativity, we cannot rearrange the factors in the 
 
 of length \(n - 1\) , which also represents \(x\) . Furthermore, if any \({x}_{i}\) equals 1, we can delete \({x}_{i}\) from the sequence, again obtaining a shorter word that represents \(x\) .
 
-Applying these reduction operations repeatedly, one can in general obtain a word representing \(x\) of the form \(( {{y}_{1},\ldots ,{y}_{m}})\) , where no group \({G}_{\alpha }\) contains both \({y}_{i}\) and \({y}_{i + 1}\) , and where \({y}_{i} \neq  1\) for all \(i\) . Such a word is called a \index{reduced word}. This discussion does not apply, however, if \(x\) is the identity element of \(G\) . For in that case, one might represent \(x\) by a word such as \(( {a,{a}^{-1}})\) , which reduces successively to the word \(( {a{a}^{-1}})\) of length one, and then disappears altogether! Accordingly, we make the convention that the empty set is considered to be a \index{Reduced word}\index{Reduced word}\index{reduced word@Reduced word}reduced word (of length zero) that represents the identity element of \(G\) . With this convention, it is true that if the groups \({G}_{\alpha }\) generate \(G\) , then every element of \(G\) can be \index{Represented by a word} \index{represented by a word@Represented by a word}represented by a reduced word in the elements of the groups \({G}_{\alpha }\) .
+Applying these reduction operations repeatedly, one can in general obtain a word representing \(x\) of the form \(( {{y}_{1},\ldots ,{y}_{m}})\) , where no group \({G}_{\alpha }\) contains both \({y}_{i}\) and \({y}_{i + 1}\) , and where \({y}_{i} \neq  1\) for all \(i\) . Such a word is called a \index{Reduced word}. This discussion does not apply, however, if \(x\) is the identity element of \(G\) . For in that case, one might represent \(x\) by a word such as \(( {a,{a}^{-1}})\) , which reduces successively to the word \(( {a{a}^{-1}})\) of length one, and then disappears altogether! Accordingly, we make the convention that the empty set is considered to be a \index{reduced word@Reduced word}\index{reduced word@Reduced word}\index{reduced word@Reduced word}reduced word (of length zero) that represents the identity element of \(G\) . With this convention, it is true that if the groups \({G}_{\alpha }\) generate \(G\) , then every element of \(G\) can be \index{represented by a word@Represented by a word} \index{represented by a word@Represented by a word}represented by a reduced word in the elements of the groups \({G}_{\alpha }\) .
 
 Note that if \(( {{x}_{1},\ldots ,{x}_{n}})\) and \(( {{y}_{1},\ldots ,{y}_{m}})\) are words representing \(x\) and \(y\) , respectively, then \(( {{x}_{1},\ldots ,{x}_{n},{y}_{1},\ldots ,{y}_{m}})\) is a word representing \({xy}\) . Even if the first two words are reduced words, however, the third will not be a reduced word unless none of the groups \({G}_{\alpha }\) contains both \({x}_{n}\) and \({y}_{1}\) .
 
 \begin{definition}
-	Let \(G\) be a group, let \({\{  {G}_{\alpha }\}  }_{\alpha  \in  J}\) be a family of subgroups of \(G\) that generates \(G\) . Suppose that \({G}_{\alpha } \cap  {G}_{\beta }\) consists of the identity element alone whenever \(\alpha  \neq  \beta\) . We say that \(G\) is the \index{Free product}\index{Free product}\index{free product@Free product}free product of the groups \({G}_{\alpha }\) if for each \(x \in  G\) , there is only one reduced word in the groups \({G}_{\alpha }\) that represents \(x\) . In this case, we write
+	Let \(G\) be a group, let \({\{  {G}_{\alpha }\}  }_{\alpha  \in  J}\) be a family of subgroups of \(G\) that generates \(G\) . Suppose that \({G}_{\alpha } \cap  {G}_{\beta }\) consists of the identity element alone whenever \(\alpha  \neq  \beta\) . We say that \(G\) is the \index{free product@Free product}\index{free product@Free product}\index{free product@Free product}free product of the groups \({G}_{\alpha }\) if for each \(x \in  G\) , there is only one reduced word in the groups \({G}_{\alpha }\) that represents \(x\) . In this case, we write
 
 \[
 G = \mathop{\prod }\limits_{{\alpha  \in  J}}^{ * }{G}_{\alpha }
@@ -190,7 +190,7 @@ or in the finite case, \(G = {G}_{1} * \cdots  * {G}_{n}\) .
 
 Let \(G\) be the free product of the groups \({G}_{\alpha }\) , and let \(( {{x}_{1},\ldots ,{x}_{n}})\) be a word in the groups \({G}_{\alpha }\) satisfying the condition \({x}_{i} \neq  1\) for all \(i\) . Then, for each \(i\) , there is a unique index \({\alpha }_{i}\) such that \({x}_{i} \in  {G}_{{\alpha }_{i}}\) ; to say the word is a reduced word is to say simply that \({\alpha }_{i} \neq  {\alpha }_{i + 1}\) for each \(i\) .
 
-Suppose the groups \({G}_{\alpha }\) generate \(G\) , where \({G}_{\alpha } \cap  {G}_{\beta } = \{ 1\}\) for \(\alpha  \neq  \beta\) . In order for \(G\) to be the free product of these groups, it suffices to know that the re\index{Presentation of a group} presentation of 1 by the empty word is unique. For suppose this weaker condition holds, and suppose that \(( {{x}_{1},\ldots ,{x}_{n}})\) and \(( {{y}_{1},\ldots ,{y}_{m}})\) are two reduced words that represent the same element \(x\) of \(G\) . Let \({\alpha }_{i}\) and \({\beta }_{i}\) be the indices such that \({x}_{i} \in  {G}_{{\alpha }_{i}}\) and \({y}_{i} \in  {G}_{{\beta }_{i}}\) . Since
+Suppose the groups \({G}_{\alpha }\) generate \(G\) , where \({G}_{\alpha } \cap  {G}_{\beta } = \{ 1\}\) for \(\alpha  \neq  \beta\) . In order for \(G\) to be the free product of these groups, it suffices to know that the re\index{presentation of a group@Presentation of a group} presentation of 1 by the empty word is unique. For suppose this weaker condition holds, and suppose that \(( {{x}_{1},\ldots ,{x}_{n}})\) and \(( {{y}_{1},\ldots ,{y}_{m}})\) are two reduced words that represent the same element \(x\) of \(G\) . Let \({\alpha }_{i}\) and \({\beta }_{i}\) be the indices such that \({x}_{i} \in  {G}_{{\alpha }_{i}}\) and \({y}_{i} \in  {G}_{{\beta }_{i}}\) . Since
 
 \[
 {x}_{1}\cdots {x}_{n} = x = {y}_{1}\cdots {y}_{m},
@@ -274,10 +274,10 @@ It follows at once that if \(w\) is any word in the groups \({G}_{\alpha }\) tha
 
 Now we show that \(h\) is a homomorphism. Suppose that \(w = ( {{x}_{1},\ldots ,{x}_{n}})\) and \({w}^{\prime } = ( {{y}_{1},\ldots ,{y}_{m}})\) are words representing \(x\) and \(y\) , respectively. Let \(( {w,{w}^{\prime }})\) denote the word \(( {{x}_{1},\ldots ,{x}_{n},{y}_{1},\ldots ,{y}_{m}})\) , which represents \({xy}\) . It follows from equation (**) that \(\phi ( {w,{w}^{\prime }})  = \phi ( w) \phi ( {w}^{\prime })\) . Then \(h( {xy})  = h( x) h( y)\) .
 
-We now consider the problem of taking an arbitrary family of groups \(\{  {G}_{\alpha }\}\) and finding a group \(G\) that contains subgroups \({G}_{\alpha }^{\prime }\) isomorphic to the groups \({G}_{\alpha }\) , such that \(G\) is the free product of the groups \({G}_{\alpha }^{\prime }\) . This can, in fact, be done; it leads to the notion of \index{external free product}.
+We now consider the problem of taking an arbitrary family of groups \(\{  {G}_{\alpha }\}\) and finding a group \(G\) that contains subgroups \({G}_{\alpha }^{\prime }\) isomorphic to the groups \({G}_{\alpha }\) , such that \(G\) is the free product of the groups \({G}_{\alpha }^{\prime }\) . This can, in fact, be done; it leads to the notion of \index{External free product}.
 \end{proof}
 \begin{definition}
-	Let \({\{  {G}_{\alpha }\}  }_{\alpha  \in  J}\) be an indexed family of groups. Suppose that \(G\) is a group, and that \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) is a family of monomorphisms, such that \(G\) is the free product of the groups \({i}_{\alpha }( {G}_{\alpha })\) . Then we say that \(G\) is the \index{External free product}\index{External free product}\index{external free product@External free product}external free product of the groups \({G}_{\alpha }\) , relative to the monomorphisms \({i}_{\alpha }\) .
+	Let \({\{  {G}_{\alpha }\}  }_{\alpha  \in  J}\) be an indexed family of groups. Suppose that \(G\) is a group, and that \({i}_{\alpha } : {G}_{\alpha } \rightarrow  G\) is a family of monomorphisms, such that \(G\) is the free product of the groups \({i}_{\alpha }( {G}_{\alpha })\) . Then we say that \(G\) is the \index{external free product@External free product}\index{external free product@External free product}\index{external free product@External free product}external free product of the groups \({G}_{\alpha }\) , relative to the monomorphisms \({i}_{\alpha }\) .
 \end{definition}
 
 The group \(G\) is not unique, of course; we show later that it is unique up to isomorphism. Constructing \(G\) is much more difficult than constructing the external direct sum was:
@@ -458,12 +458,12 @@ This result implies in particular that
 {G}_{1} * {G}_{2} * {G}_{3} = {G}_{1} * ( {{G}_{2} * {G}_{3}})  = ( {{G}_{1} * {G}_{2}})  * {G}_{3}.
 \]
 
-In order to state the next theorem, we must recall some terminology from group theory. If \(x\) and \(y\) are elements of a group \(G\) , we say that \(y\) is \index{Conjugate elements} conjugate to \(x\) if \(y =\)  \({cx}{c}^{-1}\) for some \(c \in  G\) . A normal subgroup of \(G\) is one that contains all \index{conjugate elements@Conjugate elements}conjugates of its elements.
+In order to state the next theorem, we must recall some terminology from group theory. If \(x\) and \(y\) are elements of a group \(G\) , we say that \(y\) is \index{conjugate elements@Conjugate elements} conjugate to \(x\) if \(y =\)  \({cx}{c}^{-1}\) for some \(c \in  G\) . A normal subgroup of \(G\) is one that contains all \index{conjugate elements@Conjugate elements}conjugates of its elements.
 
-If \(S\) is a subset of \(G\) , one can consider the intersection \(N\) of all normal subgroups of \(G\) that contain \(S\) . It is easy to see that \(N\) is itself a normal subgroup of \(G\) , it is called the \index{least normal subgroup} of \(G\) that contains \(S\) .
+If \(S\) is a subset of \(G\) , one can consider the intersection \(N\) of all normal subgroups of \(G\) that contain \(S\) . It is easy to see that \(N\) is itself a normal subgroup of \(G\) , it is called the \index{Least normal subgroup} of \(G\) that contains \(S\) .
 \end{proof}
 \begin{theorem}
-	Let \(G = {G}_{1} * {G}_{2}\) . Let \({N}_{i}\) be a normal subgroup of \({G}_{i}\) , for \(i = 1,2\) . If \(N\) is the \index{Least normal subgroup}\index{Least normal subgroup}\index{least normal subgroup@Least normal subgroup}least normal subgroup of \(G\) that contains \({N}_{1}\) and \({N}_{2}\) , then
+	Let \(G = {G}_{1} * {G}_{2}\) . Let \({N}_{i}\) be a normal subgroup of \({G}_{i}\) , for \(i = 1,2\) . If \(N\) is the \index{least normal subgroup@Least normal subgroup}\index{least normal subgroup@Least normal subgroup}\index{least normal subgroup@Least normal subgroup}least normal subgroup of \(G\) that contains \({N}_{1}\) and \({N}_{2}\) , then
 
 \[
 G/N \cong  ( {{G}_{1}/{N}_{1}})  * ( {{G}_{2}/{N}_{2}}) \text{ . }
@@ -535,7 +535,7 @@ We can write \(x\) in the form \(x = {x}_{1}{x}_{2}\cdots {x}_{n}\) , where each
 Let \(G\) be a group; let \(\{  {a}_{\alpha }\}\) be a family of elements of \(G\) , for \(\alpha  \in  J\) . We say the elements \(\{  {a}_{\alpha }\}\) generate \(G\) if every element of \(G\) can be written as a product of powers of the elements \({a}_{\alpha }\) . If the family \(\{  {a}_{\alpha }\}\) is finite, we say \(G\) is finitely generated.
 
 \begin{definition}
-	Let \(\{  {a}_{\alpha }\}\) be a family of elements of a group \(G\) . Suppose each \({a}_{\alpha }\) generates an infinite cyclic subgroup \({G}_{\alpha }\) of \(G\) . If \(G\) is the free product of the groups \(\{  {G}_{\alpha }\}\) , then \(G\) is said to be a \index{free group}, and the family \(\{  {a}_{\alpha }\}\) is called a system of \index{free generators for a group@Free generators for a group}free \index{Free generators for a group} \index{Least normal subgroup!generators}\index{Least normal subgroup!generators}\index{Least normal subgroup!generators}generators for \(G\) .
+	Let \(\{  {a}_{\alpha }\}\) be a family of elements of a group \(G\) . Suppose each \({a}_{\alpha }\) generates an infinite cyclic subgroup \({G}_{\alpha }\) of \(G\) . If \(G\) is the free product of the groups \(\{  {G}_{\alpha }\}\) , then \(G\) is said to be a \index{Free group}, and the family \(\{  {a}_{\alpha }\}\) is called a system of \index{free generators for a group@Free generators for a group}free \index{free generators for a group@Free generators for a group} \index{Least normal subgroup!generators}\index{Least normal subgroup!generators}\index{Least normal subgroup!generators}generators for \(G\) .
 \end{definition}
 
 In this case, for each element \(x\) of \(G\) , there is a unique reduced word in the elements of the groups \({G}_{\alpha }\) that represents \(x\) . This says that if \(x \neq  1\) , then \(x\) can be written uniquely in the form
@@ -546,10 +546,10 @@ x = {( {a}_{{\alpha }_{1}}) }^{{n}_{1}}\cdots {( {a}_{{\alpha }_{k}}) }^{{n}_{k}
 
 where \({\alpha }_{i} \neq  {\alpha }_{i + 1}\) and \({n}_{i} \neq  0\) for each \(i\) . (Of course, \({n}_{i}\) may be negative.)
 
-\index{Free group}\index{Free group}\index{free group@Free group}Free groups are characterized by the following extension property:
+\index{free group@Free group}\index{free group@Free group}\index{free group@Free group}Free groups are characterized by the following extension property:
 
 \begin{lemma}
-	Let \(G\) be a group; let \({\{  {a}_{\alpha }\}  }_{\alpha  \in  J}\) be a family of elements of \(G\) . If \(G\) is a free group with \index{System of free generators}\index{System of free generators}\index{system of free generators@System of free generators}system of free generators \(\{  {a}_{\alpha }\}\) , then \(G\) satisfies the following condition:(*)Given any group \(H\) and any family \(\{  {y}_{\alpha }\}\) of elements of \(H\) , there is a homomorphism \(h : G \rightarrow  H\) such that \(h( {a}_{\alpha })  = {y}_{\alpha }\) for each \(\alpha\) .
+	Let \(G\) be a group; let \({\{  {a}_{\alpha }\}  }_{\alpha  \in  J}\) be a family of elements of \(G\) . If \(G\) is a free group with \index{system of free generators@System of free generators}\index{system of free generators@System of free generators}\index{system of free generators@System of free generators}system of free generators \(\{  {a}_{\alpha }\}\) , then \(G\) satisfies the following condition:(*)Given any group \(H\) and any family \(\{  {y}_{\alpha }\}\) of elements of \(H\) , there is a homomorphism \(h : G \rightarrow  H\) such that \(h( {a}_{\alpha })  = {y}_{\alpha }\) for each \(\alpha\) .
 
 Furthermore, \(h\) is unique. Conversely, if the extension condition (*) holds, then \(G\) is a free group with system of free generators \(\{  {a}_{\alpha }\}\) .
 \end{lemma}
@@ -574,7 +574,7 @@ Then \({a}_{\alpha }^{0}\) is the identity element of \({G}_{\alpha }\) , and \(
 
 If \(G\) is the free group on the elements \({a}_{\alpha }\) , we normally abuse notation and identify the elements of the group \({G}_{\alpha }\) with their images under the monomorphism \({i}_{\alpha } : {G}_{\alpha } \rightarrow\)  \(G\) involved in the construction of the external free product. Then each \({a}_{\alpha }\) is treated as an element of \(G\) , and the family \(\{  {a}_{\alpha }\}\) forms a system of free generators for \(G\) .
 
-There is an important connection between free groups and free abelian groups. In order to describe it, we must recall the notion of \index{commutator subgroup} from algebra.
+There is an important connection between free groups and free abelian groups. In order to describe it, we must recall the notion of \index{Commutator subgroup} from algebra.
 
 \begin{definition}
 	Let \(G\) be a group. If \(x,y \in  G\) , we denote by \([  {x,y}]\) the element
@@ -583,7 +583,7 @@ There is an important connection between free groups and free abelian groups. In
 [  {x,y}] = {xy}{x}^{-1}{y}^{-1}
 \]
 
-of \(G\) ; it is called the \index{Commutator}\index{Commutator}\index{commutator@Commutator}commutator of \(x\) and \(y\) . The subgroup of \(G\) generated by the set of all commutators in \(G\) is called the \index{Commutator subgroup}\index{Commutator subgroup}\index{commutator subgroup@Commutator subgroup}commutator subgroup of \(G\) and denoted \(\index{G@\([  {G,G}]\)}\) .
+of \(G\) ; it is called the \index{commutator@Commutator}\index{commutator@Commutator}\index{commutator@Commutator}commutator of \(x\) and \(y\) . The subgroup of \(G\) generated by the set of all commutators in \(G\) is called the \index{commutator subgroup@Commutator subgroup}\index{commutator subgroup@Commutator subgroup}\index{commutator subgroup@Commutator subgroup}commutator subgroup of \(G\) and denoted \(\index{G@\([  {G,G}]\)}\) .
 \end{definition}
 
 The following result may be familiar; we provide a proof, for completeness:
@@ -669,16 +669,16 @@ A basic problem in group theory is to determine, for two given groups, whether o
 
 For arbitrary groups, however the answer is not so simple. Only in the case of an abelian group that is finitely generated is there a clear-cut answer.
 
-If \(G\) is abelian and finitely generated, then there is a fundamental theorem to the effect that \(G\) is the direct sum of two subgroups, \(G = H \oplus  T\) , where \(H\) is free abelian of finite rank, and \(T\) is the subgroup of \(G\) consisting of all elements of finite order. (We call \(T\) the \index{Torsion subgroup}\index{Torsion subgroup}\index{torsion subgroup@Torsion subgroup}torsion subgroup of \(G\) .) The rank of \(H\) is uniquely determined by \(G\) , since it equals the rank of the quotient of \(G\) by its torsion subgroup. This number is often called the \index{betti number} of \(G\) . Furthermore, the subgroup \(T\) is itself a direct sum; it is the direct sum of a finite number of finite cyclic groups whose orders are powers of primes. The orders of these groups are uniquely determined by \(T\) (and hence by \(G\) ), and are called the \index{elementary divisors} of \(G\) . Thus the isomorphism class of \(G\) is completely determined by specifying its \index{Betti number}\index{Betti number}\index{betti number@Betti number}betti number and its \index{Elementary divisors}\index{Elementary divisors}\index{elementary divisors@Elementary divisors}elementary divisors.
+If \(G\) is abelian and finitely generated, then there is a fundamental theorem to the effect that \(G\) is the direct sum of two subgroups, \(G = H \oplus  T\) , where \(H\) is free abelian of finite rank, and \(T\) is the subgroup of \(G\) consisting of all elements of finite order. (We call \(T\) the \index{torsion subgroup@Torsion subgroup}\index{torsion subgroup@Torsion subgroup}\index{torsion subgroup@Torsion subgroup}torsion subgroup of \(G\) .) The rank of \(H\) is uniquely determined by \(G\) , since it equals the rank of the quotient of \(G\) by its torsion subgroup. This number is often called the \index{Betti number} of \(G\) . Furthermore, the subgroup \(T\) is itself a direct sum; it is the direct sum of a finite number of finite cyclic groups whose orders are powers of primes. The orders of these groups are uniquely determined by \(T\) (and hence by \(G\) ), and are called the \index{Elementary divisors} of \(G\) . Thus the isomorphism class of \(G\) is completely determined by specifying its \index{betti number@Betti number}\index{betti number@Betti number}\index{betti number@Betti number}betti number and its \index{elementary divisors@Elementary divisors}\index{elementary divisors@Elementary divisors}\index{elementary divisors@Elementary divisors}elementary divisors.
 
 If \(G\) is not abelian, matters are not nearly so satisfactory, even if \(G\) is finitely generated. What can we specify that will determine \(G\) ? The best we can do is the following:
 
-Given \(G\) , suppose we are given a family \({\{  {a}_{\alpha }\}  }_{\alpha  \in  J}\) of generators for \(G\) . Let \(F\) be the free group on the elements \(\{  {a}_{\alpha }\}\) . Then the obvious map \(h( {a}_{\alpha })  = {a}_{\alpha }\) of these elements into \(G\) extends to a homomorphism \(h : F \rightarrow  G\) that is surjective. If \(N\) equals the kernel of \(h\) , then \(F/N \cong  G\) . So one way of specifying \(G\) is to give a family \(\{  {a}_{\alpha }\}\) of generators for \(G\) , and somehow to specify the subgroup \(N\) . Each element of \(N\) is called a \index{Relation on a free group} relation on \(F\) , and \(N\) is called the relations subgroup. We can specify \(N\) by giving a set of generators for \(N\) . But since \(N\) is normal in \(F\) , we can also specify \(N\) by a smaller set. Specifically, we can specify \(N\) by giving a family \(\{  {r}_{\beta }\}\) of elements of \(F\) such that these elements and their conjugates generate \(N\) , that is, such that \(N\) is the least normal subgroup of \(F\) that contains the elements \({r}_{\beta }\) . In this case, we call the family \(\{  {r}_{\beta }\}\) a \index{complete set of relations} for \(G\) .
+Given \(G\) , suppose we are given a family \({\{  {a}_{\alpha }\}  }_{\alpha  \in  J}\) of generators for \(G\) . Let \(F\) be the free group on the elements \(\{  {a}_{\alpha }\}\) . Then the obvious map \(h( {a}_{\alpha })  = {a}_{\alpha }\) of these elements into \(G\) extends to a homomorphism \(h : F \rightarrow  G\) that is surjective. If \(N\) equals the kernel of \(h\) , then \(F/N \cong  G\) . So one way of specifying \(G\) is to give a family \(\{  {a}_{\alpha }\}\) of generators for \(G\) , and somehow to specify the subgroup \(N\) . Each element of \(N\) is called a \index{relation on a free group@Relation on a free group} relation on \(F\) , and \(N\) is called the relations subgroup. We can specify \(N\) by giving a set of generators for \(N\) . But since \(N\) is normal in \(F\) , we can also specify \(N\) by a smaller set. Specifically, we can specify \(N\) by giving a family \(\{  {r}_{\beta }\}\) of elements of \(F\) such that these elements and their conjugates generate \(N\) , that is, such that \(N\) is the least normal subgroup of \(F\) that contains the elements \({r}_{\beta }\) . In this case, we call the family \(\{  {r}_{\beta }\}\) a \index{Complete set of relations} for \(G\) .
 
 Each element of \(N\) belongs to \(F\) , so it can of course be represented uniquely by a reduced word in powers of the generators \(\{  {a}_{\alpha }\}\) . When we speak of a relation on the generators of \(G\) , we sometimes refer to this reduced word, rather than to the element of \(N\) it represents. The context will make the meaning clear.
 
 \begin{definition}
-	If \(G\) is a group, a presentation of \(G\) consists of a family \(\{  {a}_{\alpha }\}\) of generators for \(G\) , along with a \index{Relation on a free group!complete set}\index{Relation on a free group!complete set}\index{complete set of relations@Complete set of relations}complete set \(\{  {r}_{\beta }\}\) of relations for \(G\) , where each \({r}_{\beta }\) is an element of the free group on the set \(\{  {a}_{\alpha }\}\) . If the family \(\{  {a}_{\alpha }\}\) is finite, then \(G\) is finitely generated, of course. If both the families \(\{  {a}_{\alpha }\}\) and \(\{  {r}_{\beta }\}\) are finite, then \(G\) is said to be finitely presented, and these families form what is called a \index{finite presentation} for \(G\) .
+	If \(G\) is a group, a presentation of \(G\) consists of a family \(\{  {a}_{\alpha }\}\) of generators for \(G\) , along with a \index{Relation on a free group!complete set}\index{Relation on a free group!complete set}\index{complete set of relations@Complete set of relations}complete set \(\{  {r}_{\beta }\}\) of relations for \(G\) , where each \({r}_{\beta }\) is an element of the free group on the set \(\{  {a}_{\alpha }\}\) . If the family \(\{  {a}_{\alpha }\}\) is finite, then \(G\) is finitely generated, of course. If both the families \(\{  {a}_{\alpha }\}\) and \(\{  {r}_{\beta }\}\) are finite, then \(G\) is said to be finitely presented, and these families form what is called a \index{Finite presentation} for \(G\) .
 \end{definition}
 
 This procedure for specifying \(G\) is far from satisfactory. A presentation for \(G\) does determine \(G\) uniquely, up to isomorphism; but two completely different presentations can lead to groups that are isomorphic. Furthermore, even in the finite case there is no effective procedure for determining, from two different presentations, whether or not the groups they determine are isomorphic. This result is known as the ``unsolvability of the isomorphism problem'' for groups.
@@ -701,7 +701,7 @@ Unsatisfactory as it is, this is the best we can do!
 
 We now return to the problem of determining the \index{Theta space!fundamental group}\index{Theta space!fundamental group}\index{Theta space!fundamental group}fundamental group of a space \(X\) that is written as the union of two open subsets \(U\) and \(V\) having path-connected intersection. We showed in \( \S {59}\) that, if \({x}_{0} \in  U \cap  V\) , the images of the two groups \({\pi }_{1}( {U,{x}_{0}})\) and \({\pi }_{1}( {V,{x}_{0}})\) in \({\pi }_{1}( {X,{x}_{0}})\) , under the homomorphisms induced by inclusion, generate the latter group. In this section, we show that \({\pi }_{1}( {X,{x}_{0}})\) is, in fact, completely determined by these two groups, the group \({\pi }_{1}( {U \cap  V,{x}_{0}})\) , and the various homomorphisms of these groups induced by inclusion. This is a basic result about fundamental groups. It will enable us to compute the fundamental groups of a number of spaces, including the compact 2-manifolds.
 
-\begin{theorem}[\index{Seifert-van Kampen theorem}]
+\begin{theorem}[\index{seifert-van kampen theorem@Seifert-van Kampen theorem}]
 	Let \(X = U \cup  V\) , where \(U\) and \(V\) are open in \(X\) ; assume \(U,V\) , and \(U \cap  V\) are path connected; let \({x}_{0} \in  U \cap  V\) . Let \(H\) be a group, and let
 
 \[
@@ -810,7 +810,7 @@ If \(\tau\) is to be an extension of \(\sigma\) and satisfy (1) and (2), we must
 
 So we shall use this equation as our definition of \(\tau\) .
 
-We show that this definition is independent of the choice of subdivision. It suffices to show that the value of \(\tau ( f)\) remains unchanged if we adjoin a single additional point \(p\) to the subdivision. Let \(i\) be the index such that \({s}_{i - 1} < p < {s}_{i}\) . If we compute \(\tau ( f)\) using this new subdivision, the only change in \index{Cauchy integral formula} formula \(( *)\) is that the factor \(\sigma ( {f}_{i})\) disappears and is replaced by the product \(\sigma ( {f}_{i}^{\prime })  \cdot  \sigma ( {f}_{i}^{\prime \prime })\) , where \({f}_{i}^{\prime }\) and \({f}_{i}^{\prime \prime }\) equal the positive linear maps of \([  {0,1}]\) to \([  {{s}_{i - 1},p}]\) and to \([  {p,{s}_{i}}]\) , respectively, followed by \(f\) . But \({f}_{i}\) is path homotopic to \({f}_{i}^{\prime } * {f}_{i}^{\prime \prime }\) in \(U\) or \(V\) , so that \(\sigma ( {f}_{i})  = \sigma ( {f}_{i}^{\prime }) \;\sigma ( {f}_{i}^{\prime \prime })\) , by conditions (1) and (2) for \(\sigma\) . Thus \(\tau\) is well-defined.
+We show that this definition is independent of the choice of subdivision. It suffices to show that the value of \(\tau ( f)\) remains unchanged if we adjoin a single additional point \(p\) to the subdivision. Let \(i\) be the index such that \({s}_{i - 1} < p < {s}_{i}\) . If we compute \(\tau ( f)\) using this new subdivision, the only change in \index{cauchy integral formula@Cauchy integral formula} formula \(( *)\) is that the factor \(\sigma ( {f}_{i})\) disappears and is replaced by the product \(\sigma ( {f}_{i}^{\prime })  \cdot  \sigma ( {f}_{i}^{\prime \prime })\) , where \({f}_{i}^{\prime }\) and \({f}_{i}^{\prime \prime }\) equal the positive linear maps of \([  {0,1}]\) to \([  {{s}_{i - 1},p}]\) and to \([  {p,{s}_{i}}]\) , respectively, followed by \(f\) . But \({f}_{i}\) is path homotopic to \({f}_{i}^{\prime } * {f}_{i}^{\prime \prime }\) in \(U\) or \(V\) , so that \(\sigma ( {f}_{i})  = \sigma ( {f}_{i}^{\prime }) \;\sigma ( {f}_{i}^{\prime \prime })\) , by conditions (1) and (2) for \(\sigma\) . Thus \(\tau\) is well-defined.
 
 It follows that \(\tau\) is an extension of \(\sigma\) . For if \(f\) already lies in \(U\) or \(V\) , we can use the trivial partition of \([  {0,1}]\) to define \(\tau ( f)\) ; then \(\tau ( f)  = \sigma ( f)\) by definition.
 
@@ -916,7 +916,7 @@ Let us show that \(\Phi  \circ  {j}_{1} = {\phi }_{1}\) . If \(f\) is a loop in 
 
 as desired. The proof that \(\Phi  \circ  {j}_{2} = {\phi }_{2}\) is similar
 
-The preceding theorem is the modern formulation of the \index{Seifert-van Kampen theorem}\index{Seifert-van Kampen theorem}Seifert-van Kampen theorem. We now turn to the \index{Seifert-van Kampen theorem!classical version}\index{Seifert-van Kampen theorem!classical version}\index{Seifert-van Kampen theorem!classical version}classical version, which involves the free product of two groups. Recall that if \(G\) is the external free product \(G = {G}_{1} * {G}_{2}\) , we often treat \({G}_{1}\) and \({G}_{2}\) as if they were subgroups of \(G\) , for simplicity of notation.
+The preceding theorem is the modern formulation of the \index{seifert-van kampen theorem@Seifert-van Kampen theorem}\index{seifert-van kampen theorem@Seifert-van Kampen theorem}Seifert-van Kampen theorem. We now turn to the \index{Seifert-van Kampen theorem!classical version}\index{Seifert-van Kampen theorem!classical version}\index{Seifert-van Kampen theorem!classical version}classical version, which involves the free product of two groups. Recall that if \(G\) is the external free product \(G = {G}_{1} * {G}_{2}\) , we often treat \({G}_{1}\) and \({G}_{2}\) as if they were subgroups of \(G\) , for simplicity of notation.
 \end{proof}
 \begin{theorem}[Seifert-van Kampen theorem, classical version]
 	Assume the hypotheses of the preceding theorem. Let
@@ -1028,14 +1028,14 @@ Figure 70.3
   \end{enumerate}
 \item
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Show that if \({G}_{1}\) and \({G}_{2}\) have \index{Finite presentation}\index{Finite presentation}\index{finite presentation@Finite presentation}finite presentations, so does \({G}_{1} * {G}_{2}\) .
+  \item Show that if \({G}_{1}\) and \({G}_{2}\) have \index{finite presentation@Finite presentation}\index{finite presentation@Finite presentation}\index{finite presentation@Finite presentation}finite presentations, so does \({G}_{1} * {G}_{2}\) .
 
   \item Show that if \({\pi }_{1}( {U \cap  V,{x}_{0}})\) is finitely generated and \({\pi }_{1}( {U,{x}_{0}})\) and \({\pi }_{1}( {V,{x}_{0}})\) have finite presentations, then \({\pi }_{1}( {X,{x}_{0}})\) has a finite \index{presentation of a group@Presentation of a group}presentation. [Hint: If \({N}^{\prime }\) is a normal subgroup of \({\pi }_{1}( {U,{x}_{0}})  * {\pi }_{1}( {V,{x}_{0}})\) that contains the elements \({i}_{1}{( {g}_{i}) }^{-1}{i}_{2}( {g}_{i})\) where \({g}_{i}\) runs over a set of generators for \({\pi }_{1}( {U \cap  V,{x}_{0}})\) , then \({N}^{\prime }\) contains \({i}_{1}{( g) }^{-1}{i}_{2}( g)\) for arbitrary \(g\) .]
   \end{enumerate}
 \end{enumerate}
 \section*{§ 71 The Fundamental Group of a Wedge of Circles}
 
-In this section, we define what we mean by a \index{wedge of circles}, and we compute its fundamental group.
+In this section, we define what we mean by a \index{Wedge of circles}, and we compute its fundamental group.
 
 \begin{definition}
 	Let \(X\) be a Hausdorff space that is the union of the subspaces \({S}_{1},\ldots ,{S}_{n}\) , each of which is homeomorphic to the unit circle \({S}^{1}\) . Assume that there is a point \(p\) of \(X\) such that \({S}_{i} \cap  {S}_{j} = \{ p\}\) whenever \(i \neq  j\) . Then \(X\) is called the wedge of the circles \({S}_{1},\ldots ,{S}_{n}\) .
@@ -1112,7 +1112,7 @@ The preceding theorem depended on the fact that the topology of \(X\) was cohere
 
 \begin{centeredblock}
 \begin{example}
-	Let \({C}_{n}\) be the circle of radius \(1/n\) in \({\mathbb{R}}^{2}\) with center at the point \(( {1/n,0})\) . Let \(X\) be the subspace of \({\mathbb{R}}^{2}\) that is the union of these circles; then \(X\) is the union of a countably infinite collection of circles, each pair of which intersect in the origin \(p\) However, \(X\) is not the wedge of the circles \({C}_{n}\) , we call \(X\) (for convenience) the \index{infinite earring}.
+	Let \({C}_{n}\) be the circle of radius \(1/n\) in \({\mathbb{R}}^{2}\) with center at the point \(( {1/n,0})\) . Let \(X\) be the subspace of \({\mathbb{R}}^{2}\) that is the union of these circles; then \(X\) is the union of a countably infinite collection of circles, each pair of which intersect in the origin \(p\) However, \(X\) is not the wedge of the circles \({C}_{n}\) , we call \(X\) (for convenience) the \index{Infinite earring}.
 
 One can verify directly that \(X\) does not have the topology coherent with the subspaces \({C}_{n}\) ; the intersection of the positive \(x\) -axis with \(X\) contains exactly one point from each circle \({C}_{n}\) , but it is not closed in \(X\) . Alternatively, for each \(n\) , let \({f}_{n}\) be a loop in \({C}_{n}\) that represents a generator of \({\pi }_{1}( {{C}_{n},p})\) , we show that \({\pi }_{1}( {X,p})\) is not a free group with \(\{  [  {f}_{n}]  \}\) as a system of free generators Indeed, we show the elements \([  {f}_{i}]\) do not even generate the group \({\pi }_{1}( {X,p})\) .
 \end{example}
@@ -1129,7 +1129,7 @@ Choose \(N > n\) , and consider the map \(h : X \rightarrow  {C}_{N}\) defined b
 
 Figure 71.2
 
-In the preceding theorem, we calculated the fundamental group of a space that is an infinite \index{Wedge of circles}\index{Wedge of circles}\index{wedge of circles@Wedge of circles}wedge of circles. For later use, we now show that such spaces do exist! (We shall use this result in Chapter 14.)
+In the preceding theorem, we calculated the fundamental group of a space that is an infinite \index{wedge of circles@Wedge of circles}\index{wedge of circles@Wedge of circles}\index{wedge of circles@Wedge of circles}wedge of circles. For later use, we now show that such spaces do exist! (We shall use this result in Chapter 14.)
 \end{proof}
 
 *Lemma 71.4. Given an index set \(J\) , there exists a space \(X\) that is a wedge of circles \({S}_{\alpha }\) for \(\alpha  \in  J\) .
@@ -1252,7 +1252,7 @@ Figure 72.2
 
 The loop \({f}_{0}\) represents a generator of the fundamental group of Int \({B}^{2} - 0\) based at \(q\) . Then the loop \(\bar{\gamma } * ( {{f}_{0} * \gamma })\) represents a generator of the fundamental group of \({B}^{2} - 0\) based at \(p\) . Therefore, it is path homotopic either to \(f\) or its reverse; suppose the former. Following this path homotopy by the map \(h\) , we see that \(\bar{\delta } * ( {{g}_{0} * \delta })\) is path homotopic in \(U\) to \(g\) . Then \(\widehat{\delta }( [  {g}_{0}]  )  = [  g]\) , and the theorem follows.
 
-There is nothing special in this theorem about the unit ball \({B}^{2}\) . The same result holds if we replace \({B}^{2}\) by any space \(B\) homeomorphic to \({B}^{2}\) , if we denote by \(\operatorname{Bd}B\) the subspace corresponding to \({S}^{1}\) under the homeomorphism. Such a space \(B\) is called a 2- cell. The space \(X\) of this theorem is thought of as having been obtained by ``\index{adjoining a 2-cell@Adjoining a 2-cell}adjoining a \index{2-cell}'' to \(A\) . We shall treat this situation more formally later.
+There is nothing special in this theorem about the unit ball \({B}^{2}\) . The same result holds if we replace \({B}^{2}\) by any space \(B\) homeomorphic to \({B}^{2}\) , if we denote by \(\operatorname{Bd}B\) the subspace corresponding to \({S}^{1}\) under the homeomorphism. Such a space \(B\) is called a 2- cell. The space \(X\) of this theorem is thought of as having been obtained by ``\index{adjoining a 2-cell@Adjoining a 2-cell}adjoining a \index{T@2-cell}'' to \(A\) . We shall treat this situation more formally later.
 \end{proof}
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
@@ -1296,7 +1296,7 @@ Then \(f\) represents a generator of \({\pi }_{1}( {\operatorname{Bd}{I}^{2},p})
 It follows from Theorem 69.4 that \(G/N\) is a free abelian group of rank 2.
 \end{proof}
 \begin{definition}
-	Let \(n\) be a positive integer with \(n > 1\) . Let \(r : {S}^{1} \rightarrow  {S}^{1}\) be rotation through the angle \({2\pi }/n\) , mapping the point \(( {\cos \theta ,\sin \theta })\) to the point \((\cos (\theta  +\)  \({2\pi }/n)\) , \(\sin ( {\theta  + {2\pi }/n}) )\) . Form a quotient space \(X\) from the unit ball \({B}^{2}\) by identifying each point \(x\) of \({S}^{1}\) with the points \(r( x) ,{r}^{2}( x) ,\ldots ,{r}^{n - 1}( x)\) . We shall show that \(X\) is a compact Hausdorff space; we call it the \(n\) -fold \index{dunce cap}.
+	Let \(n\) be a positive integer with \(n > 1\) . Let \(r : {S}^{1} \rightarrow  {S}^{1}\) be rotation through the angle \({2\pi }/n\) , mapping the point \(( {\cos \theta ,\sin \theta })\) to the point \((\cos (\theta  +\)  \({2\pi }/n)\) , \(\sin ( {\theta  + {2\pi }/n}) )\) . Form a quotient space \(X\) from the unit ball \({B}^{2}\) by identifying each point \(x\) of \({S}^{1}\) with the points \(r( x) ,{r}^{2}( x) ,\ldots ,{r}^{n - 1}( x)\) . We shall show that \(X\) is a compact Hausdorff space; we call it the \(n\) -fold \index{Dunce cap}.
 \end{definition}
 
 Let \(\pi  : {B}^{2} \rightarrow  X\) be the quotient map; we show that \(\pi\) is a closed map. In order to do this, we must show that if \(C\) is a closed set of \({B}^{2}\) , then \({\pi }^{-1}\pi ( C)\) is also closed in \({B}^{2}\) ; it then will follow from the definition of the quotient topology that \(\pi ( C)\) is closed in \(X\) . Let \({C}_{0} = C \cap  {S}^{1}\) ; it is closed in \({B}^{2}\) . The set \({\pi }^{-1}\pi ( C)\) equals the union of \(C\) and the sets \(r( {C}_{0}) ,{r}^{2}( {C}_{0}) ,\ldots ,{r}^{n - 1}( {C}_{0})\) , all of which are closed in \({B}^{2}\) because \(r\) is a homeomorphism. Hence \({\pi }^{-1}\pi ( C)\) is closed in \({B}^{2}\) , as desired.
@@ -1318,7 +1318,7 @@ Figure 73.2
 
 So we proceed as follows: Let \(C = E - U\) and let \(D = E - V\) . Because \(C\) and \(D\) are closed sets of \(E\) , the sets \(\pi ( C)\) and \(\pi ( D)\) are closed in \(X\) . Because \(C\) contains no point of \({\pi }^{-1}( A)\) , the set \(\pi ( C)\) is disjoint from \(A\) . Then \({U}_{0} = X - \pi ( C)\) is an open set of \(X\) containing \(A\) . Similarly, \({V}_{0} = X - \pi ( D)\) is an open set of \(X\) containing \(B\) . Furthermore, \({U}_{0}\) and \({V}_{0}\) are disjoint. For if \(x \in  {U}_{0}\) , then \({\pi }^{-1}( x)\) is disjoint from \(C\) , so that it is contained in \(U\) . Similarly, if \(x \in  {V}_{0}\) , then \({\pi }^{-1}( x)\) is contained in \(V\) . Since \(U\) and \(V\) are disjoint, so are \({U}_{0}\) and \({V}_{0}\) .
 
-Let us note that the 2-fold \index{Dunce cap}\index{Dunce cap}\index{dunce cap@Dunce cap}dunce cap is a space we have seen before; it is homeomorphic to the projective plane \({P}^{2}\) . To verify this fact, recall that \({P}^{2}\) was defined to be the quotient space obtained from \({S}^{2}\) by identifying \(x\) with \(- x\) for each \(x\) . Let \(p : {S}^{2} \rightarrow  {P}^{2}\) be the quotient map. Let us take the standard homeomorphism \(i\) of \({B}^{2}\) with the upper hemisphere of \({S}^{2}\) , given by the equation
+Let us note that the 2-fold \index{dunce cap@Dunce cap}\index{dunce cap@Dunce cap}\index{dunce cap@Dunce cap}dunce cap is a space we have seen before; it is homeomorphic to the projective plane \({P}^{2}\) . To verify this fact, recall that \({P}^{2}\) was defined to be the quotient space obtained from \({S}^{2}\) by identifying \(x\) with \(- x\) for each \(x\) . Let \(p : {S}^{2} \rightarrow  {P}^{2}\) be the quotient map. Let us take the standard homeomorphism \(i\) of \({B}^{2}\) with the upper hemisphere of \({S}^{2}\) , given by the equation
 
 \[
 i( {x,y})  = ( {x,y,{( 1 - {x}^{2} - {y}^{2}) }^{1/2}}) ,
@@ -1364,7 +1364,7 @@ Figure 73.3
   \item \(\mathbb{Z}/n * \mathbb{Z}/m\) . (See Exercise 2 of  \S 71.)
   \item \(\mathbb{Z}/{n}_{1} * \mathbb{Z}/{n}_{2} * \cdots  * \mathbb{Z}/{n}_{k}\) .
   \end{enumerate}
-\item Prove the following: \textsl{Theorem.} If \(G\) is a \index{finitely presented group}, then there is a compact Hausdorff space \(X\) whose fundamental group is isomorphic to \(G\) .  \textsl{Proof.} Suppose \(G\) has a presentation consisting of \(n\) generators and \(m\) relations. Let \(A\) be the wedge of \(n\) circles; form an adjunction space \(X\) from the union of \(A\) and \(m\) copies \({B}_{1},\ldots ,{B}_{m}\) of the unit ball by means of a continuous map \(f : \bigcup \operatorname{Bd}{B}_{i} \rightarrow  A\) .
+\item Prove the following: \textsl{Theorem.} If \(G\) is a \index{Finitely presented group}, then there is a compact Hausdorff space \(X\) whose fundamental group is isomorphic to \(G\) .  \textsl{Proof.} Suppose \(G\) has a presentation consisting of \(n\) generators and \(m\) relations. Let \(A\) be the wedge of \(n\) circles; form an adjunction space \(X\) from the union of \(A\) and \(m\) copies \({B}_{1},\ldots ,{B}_{m}\) of the unit ball by means of a continuous map \(f : \bigcup \operatorname{Bd}{B}_{i} \rightarrow  A\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that \(X\) is Hausdorff.
   \item Prove the theorem in the case \(m = 1\) .

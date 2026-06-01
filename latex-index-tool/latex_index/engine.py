@@ -359,25 +359,17 @@ class IndexEngine:
     # ── 内部方法 ─────────────────────────────────────────
 
     @staticmethod
-    def _breaks_end_env(content: str, pos: int) -> bool:
-        """检查在 pos 处插入索引是否会破坏 \\end{xxx} 命令。"""
-        # pos 是否在 \\end 的 \\ 和 } 之间？
+    def _breaks_env(content: str, pos: int) -> bool:
+        """检查在 pos 处插入索引是否会破坏 \\begin{xxx} 或 \\end{xxx} 命令。"""
         bs = chr(92)
-        # 查找 pos 之前的 \\end{
         before = content[:pos]
-        end_idx = before.rfind(bs + "end{")
-        if end_idx < 0:
-            return False
-        # \\end{ 之后应该有个 }，检查 pos 是否在 } 之前
-        closing = content.find("}", end_idx + 5)
-        if closing > 0 and pos < closing:
-            return True
-        # 也检查 pos 是否紧贴 \\end（距离 < 3 字符）
-        if pos > 0 and content[pos - 1] == "}":
-            # 可能刚好处在 } 之后，检查前面是不是 \\end{...}
-            open_brace = before.rfind("{")
-            if open_brace > 0 and open_brace < end_idx:
-                return False  # 不是 \\end{，是其他 {
+        for cmd in ("begin{", "end{"):
+            idx = before.rfind(bs + cmd)
+            if idx < 0:
+                continue
+            closing = content.find("}", idx + len(bs) + len(cmd))
+            if closing > 0 and pos < closing:
+                return True
         return False
 
     def _find_text(
@@ -403,7 +395,7 @@ class IndexEngine:
                 not is_forbidden(p)
                 and not is_inside_command_arg(content, p)
                 and not is_inside_index(content, p)
-                and not IndexEngine._breaks_end_env(content, p)
+                and not IndexEngine._breaks_env(content, p)
                 # 也不要插在 \\end{ 正前方
                 and not (p >= 4 and content[p-4:p+1] == bs + "end{")
             )

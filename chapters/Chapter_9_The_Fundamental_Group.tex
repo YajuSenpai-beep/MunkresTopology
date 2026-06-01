@@ -7,23 +7,23 @@ One of the basic problems of topology is to determine whether two given topologi
 
 Showing that two spaces are homeomorphic is a matter of constructing a continuous mapping from one to the other having a continuous inverse, and constructing continuous functions is a problem that we have developed techniques to handle.
 
-Showing that two spaces are not homeomorphic is a different matter. For that, one must show that a continuous function with continuous inverse does not exist. If one can find some topological property that holds for one space but not for the other, then the problem is solved一the spaces cannot be homeomorphic. The closed interval \([  {0,1}]\) cannot be homeomorphic to the open interval(0,1), for instance, because the \index{First homotopy group (see Fundamental group)} first space is compact and the second one is not. And the real line \(\mathbb{R}\) cannot be homeomorphic to the ``long line'' \(L\) , because \(\mathbb{R}\) has a countable basis and \(L\) does not. Nor can the real line \(\mathbb{R}\) be homeomorphic to the plane \({\mathbb{R}}^{2}\) ; deleting a point from \({\mathbb{R}}^{2}\) leaves a connected space remaining, and deleting a point from \(\mathbb{R}\) does not.
+Showing that two spaces are not homeomorphic is a different matter. For that, one must show that a continuous function with continuous inverse does not exist. If one can find some topological property that holds for one space but not for the other, then the problem is solved一the spaces cannot be homeomorphic. The closed interval \([  {0,1}]\) cannot be homeomorphic to the open interval(0,1), for instance, because the \index{first homotopy group (see fundamental group)@First homotopy group (see Fundamental group)} first space is compact and the second one is not. And the real line \(\mathbb{R}\) cannot be homeomorphic to the ``long line'' \(L\) , because \(\mathbb{R}\) has a countable basis and \(L\) does not. Nor can the real line \(\mathbb{R}\) be homeomorphic to the plane \({\mathbb{R}}^{2}\) ; deleting a point from \({\mathbb{R}}^{2}\) leaves a connected space remaining, and deleting a point from \(\mathbb{R}\) does not.
 
-But the \index{Covering space!topological properties}\index{Covering space!topological properties}\index{Covering space!topological properties}topological properties we have studied up to now do not carry us very far in solving the problem. For instance, how does one show that the plane \({\mathbb{R}}^{2}\) is not homeomorphic to three-dimensional space \({\mathbb{R}}^{3}\) ? As one goes down the list of topological properties—compactness, connectedness, local connectedness, metrizability, and so on-one can find no topological property that d\index{\({P}^{2}\)!is surface}istinguishes between them. As another example, consider such surfaces as the 2-sphere \({S}^{2}\) , the \index{torus} \(T\) (surface \index{Covering space!of torus}of a doughnut), and the double \index{Torus}\index{Torus}\index{torus@Torus}torus \(T\# T\) (surface of a two-holed doughnut). None of the topological properties we have studied up to now will distinguish between them.
+But the \index{Covering space!topological properties}\index{Covering space!topological properties}\index{Covering space!topological properties}topological properties we have studied up to now do not carry us very far in solving the problem. For instance, how does one show that the plane \({\mathbb{R}}^{2}\) is not homeomorphic to three-dimensional space \({\mathbb{R}}^{3}\) ? As one goes down the list of topological properties—compactness, connectedness, local connectedness, metrizability, and so on-one can find no topological property that d\index{\({P}^{2}\)!is surface}istinguishes between them. As another example, consider such surfaces as the 2-sphere \({S}^{2}\) , the \index{Torus} \(T\) (surface \index{Covering space!of torus}of a doughnut), and the double \index{torus@Torus}\index{torus@Torus}\index{torus@Torus}torus \(T\# T\) (surface of a two-holed doughnut). None of the topological properties we have studied up to now will distinguish between them.
 
-So we must introduce new properties and new techniques. One \index{Fundamental group!of \({S}^{n}\)}of the most natural such properties is that of \index{\({S}^{n}\) (unit sphere)!simple connectedness}\index{\({S}^{n}\) (unit sphere)!simple connectedness}\index{\({S}^{n}\) (unit sphere)!simple connectedness}simple connectedness. You probably have studied this notion already, when you studied line integrals in the plane. Roughly speaking, one says that a space \(X\) is \index{simply connected} if every closed curve in \(X\) can be shrunk to a point in \(X\) . (We shall make this more precise later.) The property of simple connectedness, it turns out, will distinguish between \({\mathbb{R}}^{2}\) and \({\mathbb{R}}^{3}\) , deleting a point from \({\mathbb{R}}^{3}\) leaves a \index{Simply connected}\index{Simply connected}\index{simply connected@Simply connected}simply connected space remaining, but deleting a point from \({\mathbb{R}}^{2}\) does not. It will also distinguish between \({S}^{2}\) (which is simply connected) and the torus \(T\) (which is not). But it will not distinguish between \(T\) and \(T\# T\) ; neither of them is simply connected.
+So we must introduce new properties and new techniques. One \index{Fundamental group!of \({S}^{n}\)}of the most natural such properties is that of \index{\({S}^{n}\) (unit sphere)!simple connectedness}\index{\({S}^{n}\) (unit sphere)!simple connectedness}\index{\({S}^{n}\) (unit sphere)!simple connectedness}simple connectedness. You probably have studied this notion already, when you studied line integrals in the plane. Roughly speaking, one says that a space \(X\) is \index{Simply connected} if every closed curve in \(X\) can be shrunk to a point in \(X\) . (We shall make this more precise later.) The property of simple connectedness, it turns out, will distinguish between \({\mathbb{R}}^{2}\) and \({\mathbb{R}}^{3}\) , deleting a point from \({\mathbb{R}}^{3}\) leaves a \index{simply connected@Simply connected}\index{simply connected@Simply connected}\index{simply connected@Simply connected}simply connected space remaining, but deleting a point from \({\mathbb{R}}^{2}\) does not. It will also distinguish between \({S}^{2}\) (which is simply connected) and the torus \(T\) (which is not). But it will not distinguish between \(T\) and \(T\# T\) ; neither of them is simply connected.
 
-There is an idea more general than the idea of simple connectedness, an idea that includes simple connectedness as a \index{Seifert-van Kampen theorem!special case}\index{Seifert-van Kampen theorem!special case}\index{Seifert-van Kampen theorem!special case}special case. It involves a certain group that is called the \index{fundamental group} of the space. Two spaces that are homeomorphic have \index{\({B}^{n}\)!fundamental group}\index{\({B}^{n}\)!fundamental group}fundamental groups that are isomorphic. And the condition of simple connectedness is just the condition that the \index{Deformation retract!fundamental group of}\index{Deformation retract!fundamental group of}\index{Deformation retract!fundamental group of}fundamental group of \(X\) is the trivial (one-element) group. Thus, the proof that \({S}^{2}\) and \(T\) are not homeomorphic can be rephrased by saying that the fundamental group of \({S}^{2}\) is trivial and the fundamental group of \(T\) is not. The fundamental group will distinguish between more spaces than the condition of simple connectedness will. It can be used, for example, to show that \(T\) and \(T\# T\) are not homeomorphic; it turns out that \(T\) has an abelian fundamental group and \(T\# T\) does not.
+There is an idea more general than the idea of simple connectedness, an idea that includes simple connectedness as a \index{Seifert-van Kampen theorem!special case}\index{Seifert-van Kampen theorem!special case}\index{Seifert-van Kampen theorem!special case}special case. It involves a certain group that is called the \index{Fundamental group} of the space. Two spaces that are homeomorphic have \index{\({B}^{n}\)!fundamental group}\index{\({B}^{n}\)!fundamental group}fundamental groups that are isomorphic. And the condition of simple connectedness is just the condition that the \index{Deformation retract!fundamental group of}\index{Deformation retract!fundamental group of}\index{Deformation retract!fundamental group of}fundamental group of \(X\) is the trivial (one-element) group. Thus, the proof that \({S}^{2}\) and \(T\) are not homeomorphic can be rephrased by saying that the fundamental group of \({S}^{2}\) is trivial and the fundamental group of \(T\) is not. The fundamental group will distinguish between more spaces than the condition of simple connectedness will. It can be used, for example, to show that \(T\) and \(T\# T\) are not homeomorphic; it turns out that \(T\) has an abelian fundamental group and \(T\# T\) does not.
 
 In this chapter, we define the fundamental group and study its properties. Then we apply it to a number of problems, including the problem of showing that various spaces, such as those already mentioned, are not homeomorphic.
 
-Other applications include theorems about fixed points and \index{antipode-preserving} maps of the sphere, as well as the well-known \index{fundamental theorem of algebra}, which says that every polynomial equation with real or complex coefficients has a root. Finally, there is the famous Jordan curve theorem, which we shall study in the next chapter; it states that every simple closed curve \(C\) in the plane separates the plane into two components, of which \(C\) is the common boundary.
+Other applications include theorems about fixed points and \index{Antipode-preserving} maps of the sphere, as well as the well-known \index{Fundamental theorem of algebra}, which says that every polynomial equation with real or complex coefficients has a root. Finally, there is the famous Jordan curve theorem, which we shall study in the next chapter; it states that every simple closed curve \(C\) in the plane separates the plane into two components, of which \(C\) is the common boundary.
 
-Throughout, we assume familiarity with the \index{Quotient group} quotient topology (\$22) and local connectedness (§25).
+Throughout, we assume familiarity with the \index{quotient group@Quotient group} quotient topology (\$22) and local connectedness (§25).
 
 \section*{§ 51 Homotopy of Paths}
 
-Be\index{Lifting lemma: general!for paths}fore defining the fundamental group \index{Initial point: of an oriented line segment!of a path}of a space \(X\) , we shall consider paths on \(X\) and an equivalence relation called path \index{homotopy} between them. And we shall define a certain operation on the collection of the equivalence classes that makes it into what is called in algebra a groupoid.
+Be\index{Lifting lemma: general!for paths}fore defining the fundamental group \index{Initial point: of an oriented line segment!of a path}of a space \(X\) , we shall consider paths on \(X\) and an equivalence relation called path \index{Homotopy} between them. And we shall define a certain operation on the collection of the equivalence classes that makes it into what is called in algebra a groupoid.
 
 \begin{definition}
 	If \(f\) and \({f}^{\prime }\) are continuous maps of the space \(X\) into the space \(Y\) , we say that \(f\) is homotopic to \({f}^{\prime }\) if there is a continuous map \(F : X \times  I \rightarrow  Y\) such that
@@ -32,7 +32,7 @@ Be\index{Lifting lemma: general!for paths}fore defining the fundamental group \i
 F( {x,0})  = f( x) \;\text{ and }\;F( {x,1})  = {f}^{\prime }( x)
 \]
 
-for each \(x\) . (Here \(I = [  {0,1}]\) .) The map \(F\) is called a \index{Homotopy}\index{Homotopy}\index{homotopy@Homotopy}homotopy between \(f\) and \({f}^{\prime }\) . If \(f\) is homotopic to \({f}^{\prime }\) , we write \(f \simeq  {f}^{\prime }\) . If \(f \simeq  {f}^{\prime }\) and \({f}^{\prime }\) is a constant map, we say that \(f\) is \index{Nulhomotopic map} nulhomotopic.
+for each \(x\) . (Here \(I = [  {0,1}]\) .) The map \(F\) is called a \index{homotopy@Homotopy}\index{homotopy@Homotopy}\index{homotopy@Homotopy}homotopy between \(f\) and \({f}^{\prime }\) . If \(f\) is homotopic to \({f}^{\prime }\) , we write \(f \simeq  {f}^{\prime }\) . If \(f \simeq  {f}^{\prime }\) and \({f}^{\prime }\) is a constant map, we say that \(f\) is \index{nulhomotopic map@Nulhomotopic map} nulhomotopic.
 \end{definition}
 
 We think of a homotopy as a continuous one-parameter family of maps from \(X\) to \(Y\) If we imagine the parameter \(t\) as representing time, then the homotopy \(F\) represents a continuous ``deforming'' of the map \(f\) to the map \({f}^{\prime }\) , as \(t\) goes from 0 to 1.
@@ -52,7 +52,7 @@ F( {s,0})  = f( s) \;\text{ and }\;F( {s,1})  = {f}^{\prime }( s) ,
 F( {0,t})  = {x}_{0}\;\text{ and }\;F( {1,t})  = {x}_{1},
 \]
 
-for each \(s \in  I\) and each \(t \in  I\) . We call \(F\) a \index{Path homotopy}\index{Path homotopy}\index{path homotopy@Path homotopy}path homotopy between \(f\) and \({f}^{\prime }\) See Figure 51.1. If \(f\) is path homotopic to \({f}^{\prime }\) , we write \(f{ \simeq  }_{p}{f}^{\prime }\) .
+for each \(s \in  I\) and each \(t \in  I\) . We call \(F\) a \index{path homotopy@Path homotopy}\index{path homotopy@Path homotopy}\index{path homotopy@Path homotopy}path homotopy between \(f\) and \({f}^{\prime }\) See Figure 51.1. If \(f\) is path homotopic to \({f}^{\prime }\) , we write \(f{ \simeq  }_{p}{f}^{\prime }\) .
 \end{definition}
 
 \begin{center}
@@ -66,7 +66,7 @@ The first condition says simply that \(F\) is a homotopy between \(f\) and \({f}
 
 \section*{Lemma 51.1. The relations \(\simeq\) and \({ \simeq  }_{p}\) are equivalence relations.}
 
-If \(f\) is a path, we shall denote its path-\index{homotopy equivalence} class by \([  f]\) .
+If \(f\) is a path, we shall denote its path-\index{Homotopy equivalence} class by \([  f]\) .
 
 \begin{proof}
 	Let us verify the properties of an equivalence relation.
@@ -82,7 +82,7 @@ G( {x,t})  = \{  \begin{array}{ll} F( {x,{2t}}) & \text{ for }t \in  [  {0,\frac
 
 The map \(G\) is well defined, since if \(t = \frac{1}{2}\) , we have \(F( {x,{2t}})  = {f}^{\prime }( x)  = {F}^{\prime }( {x,{2t} - 1})\) . Because \(G\) is continuous on the two closed subsets \(X \times  [  {0,\frac{1}{2}}]\) and \(X \times  [  {\frac{1}{2},1}]\) of \(X \times  I\) , it is continuous on all of \(X \times  I\) , by the pasting lemma. Thus \(G\) is the required homotopy between \(f\) and \({f}^{\prime \prime }\) .
 
-You can check that if \(F\) and \({F}^{\prime }\) are path homotopies, so is \(G\) . See Figure 51.2. is a homotopy between them. It is called a \index{straight-line homotopy} because it moves the point \(f( x)\) to the point \(g( x)\) along the straight-line segment joining them.
+You can check that if \(F\) and \({F}^{\prime }\) are path homotopies, so is \(G\) . See Figure 51.2. is a homotopy between them. It is called a \index{Straight-line homotopy} because it moves the point \(f( x)\) to the point \(g( x)\) along the straight-line segment joining them.
 
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/51.2.jpg}
@@ -103,7 +103,7 @@ If \(f\) and \(g\) are paths from \({x}_{0}\) to \({x}_{1}\) , then \(F\) will b
 \end{example}
 \end{centeredblock}
 
-More generally, let \(A\) be any convex subspace of \({\mathbb{R}}^{n}\) . (This means that for any two points \(a,b\) of \(A\) , the straight line segment joining \(a\) and \(b\) is contained in \(A\) .) Then any two paths \(f,g\) in \(A\) from \({x}_{0}\) to \({x}_{1}\) are path homotopic in \(A\) , for the \index{Straight-line homotopy}straight-line homotopy \(F\) between them has image set in \(A\)
+More generally, let \(A\) be any convex subspace of \({\mathbb{R}}^{n}\) . (This means that for any two points \(a,b\) of \(A\) , the straight line segment joining \(a\) and \(b\) is contained in \(A\) .) Then any two paths \(f,g\) in \(A\) from \({x}_{0}\) to \({x}_{1}\) are path homotopic in \(A\) , for the \index{straight-line homotopy@Straight-line homotopy}straight-line homotopy \(F\) between them has image set in \(A\)
 
 \begin{center}
 \includegraphics[width=0.4\textwidth]{images/51.3.jpg}
@@ -145,7 +145,7 @@ This example illustrates the fact that you must know what the range space is bef
 \end{example}
 \end{centeredblock}
 
-Now we introduce some algebra into this geometric situation. We define a certain operation on \index{path-homotopy class}s as follows:
+Now we introduce some algebra into this geometric situation. We define a certain operation on \index{Path-homotopy class}s as follows:
 \end{proof}
 \begin{definition}
 	If \(f\) is a path in \(X\) from \({x}_{0}\) to \({x}_{1}\) , and if \(g\) is a path in \(X\) from \({x}_{1}\) to \({x}_{2}\) , we define the product \(\index{f@\(f * g\)} \index{f@$f * g$}f * g\) of \(f\) and \(g\) to be the path \(h\) given by the equations
@@ -178,14 +178,14 @@ Because \(F( {1,t})  = {x}_{1} = G( {0,t})\) for all \(t\) , the map \(H\) is we
 
 Figure 51.5
 
-The operation \(*\) on \index{Path-homotopy class}path-homotopy classes turns out to satisfy properties that look very much like the axioms for a group. They are called the \index{groupoid properties} of \(*\) . One difference from the properties of a group is that \([  f]   * [  g]\) is not defined for every pair of classes, but only for those pairs \([  f]  ,[  g]\) for which \(f( 1)  = g( 0)\) .
+The operation \(*\) on \index{path-homotopy class@Path-homotopy class}path-homotopy classes turns out to satisfy properties that look very much like the axioms for a group. They are called the \index{Groupoid properties} of \(*\) . One difference from the properties of a group is that \([  f]   * [  g]\) is not defined for every pair of classes, but only for those pairs \([  f]  ,[  g]\) for which \(f( 1)  = g( 0)\) .
 
 \begin{theorem}
 	The operation \(*\) has the following properties:
 
 (I) (Associativity) If \([  f]   * ( {[  g]   * [  h]  })\) is defined, so is \(( {[  f]   * [  g]  })  * [  h]\) , and they are equal.
 
-(2) (Right and left identities) Given \(x \in  X\) , let \(\index{e@\({e}_{x}\)} {e}_{x}\) denote the \index{constant path} \({e}_{x} : I \rightarrow\)  \(X\) carrying all of \(I\) to the point \(x\) . If \(f\) is a path in \(X\) from \({x}_{0}\) to \({x}_{1}\) , then
+(2) (Right and left identities) Given \(x \in  X\) , let \(\index{e@\({e}_{x}\)} {e}_{x}\) denote the \index{Constant path} \({e}_{x} : I \rightarrow\)  \(X\) carrying all of \(I\) to the point \(x\) . If \(f\) is a path in \(X\) from \({x}_{0}\) to \({x}_{1}\) , then
 
 \[
 [  f]   * [  {e}_{{x}_{1}}]   = [  f]  \;\text{ and }\;[  {e}_{{x}_{0}}]   * [  f]   = [  f]  .
@@ -215,7 +215,7 @@ k \circ  ( {f * g})  = ( {k \circ  f})  * ( {k \circ  g}) .
 
 This equation follows at once from the definition of the product operation \(*\) .
 
-Step 1. We verify properties (2) and (3). To verify (2), we let \({e}_{0}\) denote the \index{Constant path}constant path in \(I\) at 0, and we let \(i : I \rightarrow  I\) denote the identity map, which is a path in \(I\) from 0 to 1 . Then \({e}_{0} * i\) is also a path in \(I\) from 0 to 1 . (The graphs of these two paths are pictured in Figure 51.7.)
+Step 1. We verify properties (2) and (3). To verify (2), we let \({e}_{0}\) denote the \index{constant path@Constant path}constant path in \(I\) at 0, and we let \(i : I \rightarrow  I\) denote the identity map, which is a path in \(I\) from 0 to 1 . Then \({e}_{0} * i\) is also a path in \(I\) from 0 to 1 . (The graphs of these two paths are pictured in Figure 51.7.)
 
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/51.7.jpg}
@@ -249,7 +249,7 @@ Figure 51.8
 
 Step 2. The proof of (1), associativity, is a bit trickier. For this proof, and for later use as well, it will be convenient to describe the product \(f * g\) in a different way.
 
-If \([  {a,b}]\) and \([  {c,d}]\) are two intervals in \(\mathbb{R}\) , there is a unique map \(p : [  {a,b}]   \rightarrow  [  {c,d}]\) of the form \(p( x)  = {mx} + k\) that carries \(a\) to \(c\) and \(b\) to \(d\) ; we call it the \index{Positive linear map: of intervals in} positive linear map of \([  {a,b}]\) to \([  {c,d}]\) because its graph is a straight line with positive slope. Note that the inverse of such a map is another such map, and so is the \index{Covering map!composite}composite of two such maps.
+If \([  {a,b}]\) and \([  {c,d}]\) are two intervals in \(\mathbb{R}\) , there is a unique map \(p : [  {a,b}]   \rightarrow  [  {c,d}]\) of the form \(p( x)  = {mx} + k\) that carries \(a\) to \(c\) and \(b\) to \(d\) ; we call it the \index{positive linear map: of intervals in@Positive linear map: of intervals in} positive linear map of \([  {a,b}]\) to \([  {c,d}]\) because its graph is a straight line with positive slope. Note that the inverse of such a map is another such map, and so is the \index{Covering map!composite}composite of two such maps.
 
 With this terminology, the product \(f * g\) can be described as follows: \(\operatorname{On}[  {0,\frac{1}{2}}]\) , it equals the positive linear map of \([  {0,\frac{1}{2}}]\) to \([  {0,1}]\) , followed by \(f\) ; and on \([  {\frac{1}{2},1}]\) , it equals the positive linear map of \([  {\frac{1}{2},1}]\) to \([  {0,1}]\) , followed by \(g\) .
 
@@ -287,33 +287,33 @@ The argument just used to prove associativity goes through for any finite produc
 \item A space \(X\) is said to be contractible if the identity map \({i}_{X} : X \rightarrow  X\) is nulho-motopic.
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that \(I\) and \(\mathbb{R}\) are contractible.
-  \item Show that a \index{contractible space} is path connected.
+  \item Show that a \index{Contractible space} is path connected.
   \item Show that if \(Y\) is contractible, then for any \(X\) , the set \([  {X,Y}]\) has a single element.
   \item Show that if \(X\) is contractible and \(Y\) is path connected, then \([  {X,Y}]\) has a single element.
   \end{enumerate}
 \end{enumerate}
 \section*{§ 52 The Fundamental Group}
 
-The set of path-homotopy classes of paths in a space \(X\) does not form a group under the operation \(*\) because the product of two path-homotopy classes is not always defined. But suppose we pick out a point \({x}_{0}\) of \(X\) to serve as a ``\index{base point}'' and restrict ourselves to those paths that begin and end at \({x}_{0}\) The set of these path-homotopy classes does form a group under \(*\) . It will be called the fundamental group of \(X\) .
+The set of path-homotopy classes of paths in a space \(X\) does not form a group under the operation \(*\) because the product of two path-homotopy classes is not always defined. But suppose we pick out a point \({x}_{0}\) of \(X\) to serve as a ``\index{Base point}'' and restrict ourselves to those paths that begin and end at \({x}_{0}\) The set of these path-homotopy classes does form a group under \(*\) . It will be called the fundamental group of \(X\) .
 
 In this section, we shall study the fundamental group and derive some of its properties. In particular, we shall show that the group is a topological invariant of the space \(X\) , the fact that is of crucial importance in using it to study homeomorphism problems.
 
-Let us first review some terminology from group theory. Suppose \(G\) and \({G}^{\prime }\) are groups, written multiplicatively A \index{Path-induced homomorphism} homomorphism \(f : G \rightarrow  {G}^{\prime }\) is a map such that \(f( {x \cdot  y})  = f( x)  \cdot  f( y)\) for all \(x,y\) ; it automatically satisfies the equations \(f( e)  = {e}^{\prime }\) and \(f( {x}^{-1})  = f{( x) }^{-1}\) , where \(e\) and \({e}^{\prime }\) are the identities of \(G\) and \({G}^{\prime }\) , respectively, and the exponent -1 denotes the inverse. The \index{Kernel of homomorphism} kernel of \(f\) is the set \({f}^{-1}( {e}^{\prime })\) ; it is a subgroup of \(G\) . The image of \(f\) , similarly, is a subgroup of \({G}^{\prime }\) . The \index{Homomorphism}homomorphism \(f\) is called a \index{monomorphism} if it is injective (or equivalently, if the kernel of \(f\) consists of \(e\) alone). It is called an \index{epimorphism} if it is surjective; and it is called an isomorphism if it is bijective
+Let us first review some terminology from group theory. Suppose \(G\) and \({G}^{\prime }\) are groups, written multiplicatively A \index{path-induced homomorphism@Path-induced homomorphism} homomorphism \(f : G \rightarrow  {G}^{\prime }\) is a map such that \(f( {x \cdot  y})  = f( x)  \cdot  f( y)\) for all \(x,y\) ; it automatically satisfies the equations \(f( e)  = {e}^{\prime }\) and \(f( {x}^{-1})  = f{( x) }^{-1}\) , where \(e\) and \({e}^{\prime }\) are the identities of \(G\) and \({G}^{\prime }\) , respectively, and the exponent -1 denotes the inverse. The \index{kernel of homomorphism@Kernel of homomorphism} kernel of \(f\) is the set \({f}^{-1}( {e}^{\prime })\) ; it is a subgroup of \(G\) . The image of \(f\) , similarly, is a subgroup of \({G}^{\prime }\) . The \index{homomorphism@Homomorphism}homomorphism \(f\) is called a \index{Monomorphism} if it is injective (or equivalently, if the kernel of \(f\) consists of \(e\) alone). It is called an \index{Epimorphism} if it is surjective; and it is called an isomorphism if it is bijective
 
-Suppose \(G\) is a group and \(H\) is a subgroup of \(G\) . Let \({xH}\) denote the set of all products \({xh}\) , for \(h \in  H\) ; it is called a left coset of \(H\) in \(G\) . The collection of all such cosets forms a partition of \(G\) . Similarly, the collection of all \index{right coset} \({Hx}\) of \(H\) in \(G\) forms a partition of \(G\) . We call \(H\) a \index{normal subgroup} of \(G\) if \(x \cdot  h \cdot  {x}^{-1} \in  H\) for each \(x \in  G\) and each \(h \in  H\) . In this case, we have \({xH} = {Hx}\) for each \(x\) , so that our two partitions of \(G\) are the same. We denote this partition by \(G/H\) ; if one defines
+Suppose \(G\) is a group and \(H\) is a subgroup of \(G\) . Let \({xH}\) denote the set of all products \({xh}\) , for \(h \in  H\) ; it is called a left coset of \(H\) in \(G\) . The collection of all such cosets forms a partition of \(G\) . Similarly, the collection of all \index{Right coset} \({Hx}\) of \(H\) in \(G\) forms a partition of \(G\) . We call \(H\) a \index{Normal subgroup} of \(G\) if \(x \cdot  h \cdot  {x}^{-1} \in  H\) for each \(x \in  G\) and each \(h \in  H\) . In this case, we have \({xH} = {Hx}\) for each \(x\) , so that our two partitions of \(G\) are the same. We denote this partition by \(G/H\) ; if one defines
 
 \[
 ( {xH})  \cdot  ( {yH})  = ( {x \cdot  y}) H
 \]
 
-one obtains a well-defined operation on \(G/H\) that makes it a group. This group is called the quotient of \(G\) by \(H\) . The map \(f : G \rightarrow  G/H\) carrying \(x\) to \({xH}\) is an \index{Epimorphism}epimorphism with kernel \(H\) Conversely, if \(f : G \rightarrow  {G}^{\prime }\) is an epimorphism, then its kernel \(N\) is a \index{Normal subgroup}normal subgroup of \(G\) , and \(f\) induces an isomorphism \(G/N \rightarrow  {G}^{\prime }\) that carries \({xN}\) to \(f( x)\) for each \(x \in  G\) .
+one obtains a well-defined operation on \(G/H\) that makes it a group. This group is called the quotient of \(G\) by \(H\) . The map \(f : G \rightarrow  G/H\) carrying \(x\) to \({xH}\) is an \index{epimorphism@Epimorphism}epimorphism with kernel \(H\) Conversely, if \(f : G \rightarrow  {G}^{\prime }\) is an epimorphism, then its kernel \(N\) is a \index{normal subgroup@Normal subgroup}normal subgroup of \(G\) , and \(f\) induces an isomorphism \(G/N \rightarrow  {G}^{\prime }\) that carries \({xN}\) to \(f( x)\) for each \(x \in  G\) .
 
-If the subgroup \(H\) of \(G\) is not normal, it will still be convenient to use the symbol \(G/H\) ; we will use it to denote the collection of \index{Right coset}right cosets of \(H\) in \(G\) .
+If the subgroup \(H\) of \(G\) is not normal, it will still be convenient to use the symbol \(G/H\) ; we will use it to denote the collection of \index{right coset@Right coset}right cosets of \(H\) in \(G\) .
 
 Now we define the fundamental group.
 
 \begin{definition}
-	Let \(X\) be a space; let \({x}_{0}\) be a point of \(X\) . A path in \(X\) that begins and ends at \({x}_{0}\) is called a \index{loop} based at \({x}_{0}\) . The set of path homotopy classes of \index{Loop}loops based at \({x}_{0}\) , with the operation \(*\) , is called the fundamental group of \(X\) relative to the \index{Base point}base point \({x}_{0}\) . It is denoted by \(\index{pi@\({\pi }_{1}( {X,{x}_{0}})\)} {\pi }_{1}( {X,{x}_{0}})\) .
+	Let \(X\) be a space; let \({x}_{0}\) be a point of \(X\) . A path in \(X\) that begins and ends at \({x}_{0}\) is called a \index{Loop} based at \({x}_{0}\) . The set of path homotopy classes of \index{loop@Loop}loops based at \({x}_{0}\) , with the operation \(*\) , is called the fundamental group of \(X\) relative to the \index{base point@Base point}base point \({x}_{0}\) . It is denoted by \(\index{pi@\({\pi }_{1}( {X,{x}_{0}})\)} {\pi }_{1}( {X,{x}_{0}})\) .
 \end{definition}
 
 It follows from Theorem 51.2 that the operation \(*\) , when restricted to this set, satisfies the axioms for a group. Given two loops \(f\) and \(g\) based at \({x}_{0}\) , the product \(f * g\) is always defined and is a loop based at \({x}_{0}\) . Associativity, the existence of an identity element \([  {e}_{{x}_{0}}]\) , and the existence of an inverse \([  \bar{f}]\) for \([  f]\) are immediate.
@@ -480,15 +480,15 @@ Similarly, \({i}_{ * }( [  f]  )  = [  {i \circ  f}]   = [  f]\)
 \end{proof}
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
-\item A subset \(A\) of \({\mathbb{R}}^{n}\) is said to be \index{Star-convex set} star convex if for some point \({a}_{0}\) of \(A\) , all the line segments joining \({a}_{0}\) to other points of \(A\) lie in \(A\) .
+\item A subset \(A\) of \({\mathbb{R}}^{n}\) is said to be \index{star-convex set@Star-convex set} star convex if for some point \({a}_{0}\) of \(A\) , all the line segments joining \({a}_{0}\) to other points of \(A\) lie in \(A\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Find a star convex set that is not convex.
   \item Show that if \(A\) is star convex, \(A\) is simply connected.
   \end{enumerate}
 \item Let \(\alpha\) be a path in \(X\) from \({x}_{0}\) to \({x}_{1}\) ; let \(\beta\) be a path in \(X\) from \({x}_{1}\) to \({x}_{2}\) . Show that if \(\gamma  = \alpha  * \beta\) , then \(\widehat{\gamma } = \widehat{\beta } \circ  \widehat{\alpha }\) .
 \item Let \({x}_{0}\) and \({x}_{1}\) be points of the path-connected space \(X\) . Show that \({\pi }_{1}( {X,{x}_{0}})\) is abelian if and only if for every pair \(\alpha\) and \(\beta\) of paths from \({x}_{0}\) to \({x}_{1}\) , we have \(\widehat{\alpha } = \widehat{\beta }\) .
-\item Let \(A \subset  X\) ; suppose \(r : X \rightarrow  A\) is a continuous map such that \(r( a)  = a\) for each \(a \in  A\) . (The map \(r\) is called a \index{retraction} of \(X\) onto \(A\) ) If \({a}_{0} \in  A\) , show that \[ {r}_{ * } : {\pi }_{1}( {X,{a}_{0}})  \rightarrow  {\pi }_{1}( {A,{a}_{0}}) \] is surjective.
-\item Let \(A\) be a subspace of \({\mathbb{R}}^{n}\) ; let \(h : ( {A,{a}_{0}})  \rightarrow  ( {Y,{y}_{0}})\) . Show that if \(h\) is extendable to a continuous map of \({\mathbb{R}}^{n}\) into \(Y\) , then \({h}_{ * }\) is the \index{trivial homomorphism} (the homomorphism that maps everything to the identity element).
+\item Let \(A \subset  X\) ; suppose \(r : X \rightarrow  A\) is a continuous map such that \(r( a)  = a\) for each \(a \in  A\) . (The map \(r\) is called a \index{Retraction} of \(X\) onto \(A\) ) If \({a}_{0} \in  A\) , show that \[ {r}_{ * } : {\pi }_{1}( {X,{a}_{0}})  \rightarrow  {\pi }_{1}( {A,{a}_{0}}) \] is surjective.
+\item Let \(A\) be a subspace of \({\mathbb{R}}^{n}\) ; let \(h : ( {A,{a}_{0}})  \rightarrow  ( {Y,{y}_{0}})\) . Show that if \(h\) is extendable to a continuous map of \({\mathbb{R}}^{n}\) into \(Y\) , then \({h}_{ * }\) is the \index{Trivial homomorphism} (the homomorphism that maps everything to the identity element).
 \item Show that if \(X\) is path connected, the homomorphism induced by a continuous map is independent of base point, up to isomorphisms of the groups involved. More precisely, let \(h : X \rightarrow  Y\) be continuous, with \(h( {x}_{0})  = {y}_{0}\) and \(h( {x}_{1})  = {y}_{1}\) . Let \(\alpha\) be a path in \(X\) from \({x}_{0}\) to \({x}_{1}\) , and let \(\beta  = h \circ  \alpha\) . Show that \[ \widehat{\beta } \circ  {( {h}_{{x}_{0}}) }_{ * } = {( {h}_{{x}_{1}}) }_{ * } \circ  \widehat{\alpha }. \] This equation expresses the fact that the following diagram of maps ``commutes.'' \begin{center} \includegraphics[width=0.3\textwidth]{images/52.2.jpg} \end{center} \hspace*{3em}
 \item Let \(G\) be a topological group with operation - and identity element \({x}_{0}\) Let \(\Omega ( {G,{x}_{0}})\) denote the set of all loops in \(G\) based at \({x}_{0}\) . If \(f,g \in  \Omega ( {G,{x}_{0}})\) , let us define a loop \(f \otimes  g\) by the rule \[ ( {f \otimes  g}) ( s)  = f( s)  \cdot  g( s) . \]
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
@@ -500,9 +500,9 @@ Similarly, \({i}_{ * }( [  f]  )  = [  {i \circ  f}]   = [  f]\)
 \end{enumerate}
 \section*{§ 53 Covering Spaces}
 
-\index{Covering Space} We have shown that any convex subspace of \({\mathbb{R}}^{n}\) has a trivial fundamental group; we turn now to the task of computing some fundamental groups that are not trivial. One of the most useful tools for this purpose is the notion of \index{Covering space}covering space, which we introduce in this section. \index{\({S}^{1}\)!covering spaces}Covering spaces are also important in the study of Riemann surfaces and complex \index{Prüfer manifold} manifolds. (See 		\cite{AhlforsSario1960}.) We shall study them in more detail in Chapter 13. Definition. Let \(p\;E \rightarrow  B\) be a continuous surjective map. The open set \(U\) of \(B\) is said to be \index{evenly covered} by \(p\) if the inverse image \({p}^{-1}( U)\) can be written as the union of disjoint open sets \({V}_{\alpha }\) in \(E\) such that for each \(\alpha\) , the \index{Restriction: of a covering map} restriction of \(p\) to \({V}_{\alpha }\) is a homeomorphism of \({V}_{\alpha }\) onto \(U\) The collection \(\{  {V}_{\alpha }\}\) will be called a partition of \({p}^{-1}( U)\) into \index{Slice: in covering space} slices
+\index{covering space@Covering Space} We have shown that any convex subspace of \({\mathbb{R}}^{n}\) has a trivial fundamental group; we turn now to the task of computing some fundamental groups that are not trivial. One of the most useful tools for this purpose is the notion of \index{covering space@Covering space}covering space, which we introduce in this section. \index{\({S}^{1}\)!covering spaces}Covering spaces are also important in the study of Riemann surfaces and complex \index{prüfer manifold@Prüfer manifold} manifolds. (See 		\cite{AhlforsSario1960}.) We shall study them in more detail in Chapter 13. Definition. Let \(p\;E \rightarrow  B\) be a continuous surjective map. The open set \(U\) of \(B\) is said to be \index{Evenly covered} by \(p\) if the inverse image \({p}^{-1}( U)\) can be written as the union of disjoint open sets \({V}_{\alpha }\) in \(E\) such that for each \(\alpha\) , the \index{restriction: of a covering map@Restriction: of a covering map} restriction of \(p\) to \({V}_{\alpha }\) is a homeomorphism of \({V}_{\alpha }\) onto \(U\) The collection \(\{  {V}_{\alpha }\}\) will be called a partition of \({p}^{-1}( U)\) into \index{slice: in covering space@Slice: in covering space} slices
 
-If \(U\) is an open set that is evenly covered by \(p\) , we often picture the set \({p}^{-1}( U)\) as a ``stack of pancakes,'' each having the same size and shape as \(U\) , floating in the arr above \(U\) ; the map \(p\) squashes them all down onto \(U\) . See Figure 53.1. Note that if \(U\) is \index{Evenly covered}evenly covered by \(p\) and \(W\) is an open set contained in \(U\) , then \(W\) is also evenly covered by \(p\) .
+If \(U\) is an open set that is evenly covered by \(p\) , we often picture the set \({p}^{-1}( U)\) as a ``stack of pancakes,'' each having the same size and shape as \(U\) , floating in the arr above \(U\) ; the map \(p\) squashes them all down onto \(U\) . See Figure 53.1. Note that if \(U\) is \index{evenly covered@Evenly covered}evenly covered by \(p\) and \(W\) is an open set contained in \(U\) , then \(W\) is also evenly covered by \(p\) .
 
 \begin{center}
 \includegraphics[width=0.5\textwidth]{images/53.1.jpg}
@@ -512,12 +512,12 @@ If \(U\) is an open set that is evenly covered by \(p\) , we often picture the s
 Figure 53.1
 
 \begin{definition}
-	Let \(p : B \rightarrow  B\) be continuous and surjective. If every point \(b\) of \(B\) has a neighborhood \(U\) that is evenly covered by \(p\) , then \(p\) is called a \index{covering map}, and \(E\) is said to be a covering space of \(B\)
+	Let \(p : B \rightarrow  B\) be continuous and surjective. If every point \(b\) of \(B\) has a neighborhood \(U\) that is evenly covered by \(p\) , then \(p\) is called a \index{Covering map}, and \(E\) is said to be a covering space of \(B\)
 \end{definition}
 
 Note that if \(p : E \rightarrow  B\) is a covering map, then for each \(b \in  B\) the subspace \({p}^{-1}( b)\) of \(E\) has the discrete topology For each slice \({V}_{\alpha }\) \index{Covering map!is open}is open in \(E\) and intersects the set \({p}^{-1}( b)\) in a single point; therefore, this point is open in \({p}^{-1}( b)\) .
 
-Note also that if \(p : E \rightarrow  B\) is a \index{Covering map}covering map, then \(p\) is an open map. For suppose \(A\) is an open set of \(E\) . Given \(x \in  p( A)\) , choose a neighborhood \(U\) of \(x\) that is evenly covered by \(p\) Let \(\{  {V}_{\alpha }\}\) be a partition of \({p}^{-1}( U)\) into slices. There is a point \(y\) of \(A\) such that \(p( y)  = x\) ; let \({V}_{\beta }\) be the slice containing \(y\) . The set \({V}_{\beta } \cap  A\) is open in \(E\) and hence open in \({V}_{\beta }\) , because \(p\) maps \({V}_{\beta }\) homeomorphically onto \(U\) , the set \(p( {{V}_{\beta } \cap  A})\) is open in \(U\) and hence open in \(B\) ; it is thus a neighborhood of \(x\) contained in \(p( A)\) , as desired.
+Note also that if \(p : E \rightarrow  B\) is a \index{covering map@Covering map}covering map, then \(p\) is an open map. For suppose \(A\) is an open set of \(E\) . Given \(x \in  p( A)\) , choose a neighborhood \(U\) of \(x\) that is evenly covered by \(p\) Let \(\{  {V}_{\alpha }\}\) be a partition of \({p}^{-1}( U)\) into slices. There is a point \(y\) of \(A\) such that \(p( y)  = x\) ; let \({V}_{\beta }\) be the slice containing \(y\) . The set \({V}_{\beta } \cap  A\) is open in \(E\) and hence open in \({V}_{\beta }\) , because \(p\) maps \({V}_{\beta }\) homeomorphically onto \(U\) , the set \(p( {{V}_{\beta } \cap  A})\) is open in \(U\) and hence open in \(B\) ; it is thus a neighborhood of \(x\) contained in \(p( A)\) , as desired.
 
 \begin{centeredblock}
 \begin{example}
@@ -556,7 +556,7 @@ Figure 53.2
 
 Similar arguments can be applied to the intersections of \({S}^{1}\) with the upper and lower open half-planes, and with the open left-hand half-plane. These open sets cover \({S}^{1}\) , and each of them is evenly covered by \(p\) . Hence \(p : \mathbb{R} \rightarrow  {S}^{1}\) is a covering map.
 
-If \(p : E \rightarrow  B\) is a covering map, then \(p\) is a \index{local homeomorphism} of \(E\) with \(B\) . That is, each point \(e\) of \(E\) has a neighborhood that is mapped homeomorphically by \(p\) onto an open subset of \(B\) . The condition that \(p\) be a local homeomorphism does not suffice, however, to ensure that \(p\) is a covering map, as the following example shows.
+If \(p : E \rightarrow  B\) is a covering map, then \(p\) is a \index{Local homeomorphism} of \(E\) with \(B\) . That is, each point \(e\) of \(E\) has a neighborhood that is mapped homeomorphically by \(p\) onto an open subset of \(B\) . The condition that \(p\) be a local homeomorphism does not suffice, however, to ensure that \(p\) is a covering map, as the following example shows.
 
 \begin{centeredblock}
 \begin{example}
@@ -566,7 +566,7 @@ If \(p : E \rightarrow  B\) is a covering map, then \(p\) is a \index{local home
 p( x)  = ( {\cos {2\pi x},\sin {2\pi x}})
 \]
 
-is surjective, and it is a \index{Local homeomorphism}local homeomorphism. See Figure 53.3. But it is not a covering map, for the point \({b}_{0} = ( {1,0})\) has no neighborhood \(U\) that is evenly covered by \(p\) . The typical neighborhood \(U\) of \({b}_{0}\) has an inverse image consisting of small neighborhoods \({V}_{n}\) of each integer \(n\) for \(n > 0\) , along with a small interval \({V}_{0}\) of the form \(( {0,\epsilon })\) . Each of the intervals \({V}_{n}\) for \(n > 0\) is mapped homeomorphically onto \(U\) by the map \(p\) , but the interval \({V}_{0}\) is only imbedded in \(U\) by \(p\) .
+is surjective, and it is a \index{local homeomorphism@Local homeomorphism}local homeomorphism. See Figure 53.3. But it is not a covering map, for the point \({b}_{0} = ( {1,0})\) has no neighborhood \(U\) that is evenly covered by \(p\) . The typical neighborhood \(U\) of \({b}_{0}\) has an inverse image consisting of small neighborhoods \({V}_{n}\) of each integer \(n\) for \(n > 0\) , along with a small interval \({V}_{0}\) of the form \(( {0,\epsilon })\) . Each of the intervals \({V}_{n}\) for \(n > 0\) is mapped homeomorphically onto \(U\) by the map \(p\) , but the interval \({V}_{0}\) is only imbedded in \(U\) by \(p\) .
 
 \begin{center}
 \includegraphics[width=0.4\textwidth]{images/53.3.jpg}
@@ -649,7 +649,7 @@ Figure 53.5
 {B}_{0} = ( {{S}^{1} \times  {b}_{0}})  \cup  ( {{b}_{0} \times  {S}^{1}})
 \]
 
-of \({S}^{1} \times  {S}^{1}\) . Then \({B}_{0}\) is the union of two circles that have a point in common, we sometimes call it the \index{figure-eight space} The space \({E}_{0} = {p}^{-1}( {B}_{0})\) is the ``infinite grid''
+of \({S}^{1} \times  {S}^{1}\) . Then \({B}_{0}\) is the union of two circles that have a point in common, we sometimes call it the \index{Figure-eight space} The space \({E}_{0} = {p}^{-1}( {B}_{0})\) is the ``infinite grid''
 
 \[
 {E}_{0} = ( {\mathbb{R} \times  \mathbb{Z}})  \cup  ( {\mathbb{Z} \times  \mathbb{R}})
@@ -705,7 +705,7 @@ Figure 53.6
 The study of covering spaces of a space \(X\) is intimately related to the study of the fundamental group of \(X\) . In this section, we establish the crucial links between the two concepts, and compute the fundamental group of the circle.
 
 \begin{definition}
-	Let \(p : E \rightarrow  B\) be a map. If \(f\) is a continuous mapping of some space \(X\) into \(B\) , a \index{lifting} of \(f\) is a map \(\bar{f} : X \rightarrow  E\) such that \(p \circ  \bar{f} = f\) .
+	Let \(p : E \rightarrow  B\) be a map. If \(f\) is a continuous mapping of some space \(X\) into \(B\) , a \index{Lifting} of \(f\) is a map \(\bar{f} : X \rightarrow  E\) such that \(p \circ  \bar{f} = f\) .
 \end{definition}
 
 \begin{center}
@@ -713,7 +713,7 @@ The study of covering spaces of a space \(X\) is intimately related to the study
 \end{center}
 \hspace*{3em} 
 
-The existence of \index{Lifting}liftings when \(p\) is a covering map is an important tool in studying covering spaces and the fundamental group. First, we show that for a covering space, paths can be lifted; then we show that path homotopies can be lifted as well. First, an example:
+The existence of \index{lifting@Lifting}liftings when \(p\) is a covering map is an important tool in studying covering spaces and the fundamental group. First, we show that for a covering space, paths can be lifted; then we show that path homotopies can be lifted as well. First, an example:
 
 \begin{centeredblock}
 \begin{example}
@@ -819,11 +819,11 @@ The restriction \(\bar{F} \mid  I \times  0\) of \(\bar{F}\) to the bottom edge 
 \phi  : {\pi }_{1}( {B,{b}_{0}})  \rightarrow  {p}^{-1}( {b}_{0}) .
 \]
 
-We call \(\phi\) the \index{lifting correspondence} derived from the covering map \(p\) . It depends of course on the choice of the point \({e}_{0}\) .
+We call \(\phi\) the \index{Lifting correspondence} derived from the covering map \(p\) . It depends of course on the choice of the point \({e}_{0}\) .
 \end{definition}
 
 \begin{theorem}
-	Let \(p : E \rightarrow  B\) be a covering map; let \(p( {e}_{0})  = {b}_{0}\) . If \(E\) is path connected, then the \index{Lifting correspondence}lifting correspondence
+	Let \(p : E \rightarrow  B\) be a covering map; let \(p( {e}_{0})  = {b}_{0}\) . If \(E\) is path connected, then the \index{lifting correspondence@Lifting correspondence}lifting correspondence
 
 \[
 \phi  : {\pi }_{1}( {B,{b}_{0}})  \rightarrow  {p}^{-1}( {b}_{0})
@@ -861,10 +861,10 @@ on \(\mathbb{R}\) . Because \(p( {n + x})  = p( x)\) for all \(x \in  \mathbb{R}
 \]
 \end{proof}
 \begin{definition}
-	Let \(G\) be a group; let \(x\) be an element of \(G\) . We denote the inverse of \(x\) by \({x}^{-1}\) . The symbol \({x}^{n}\) denotes the \(n\) -fold product of \(x\) with itself, \({x}^{-n}\) denotes the \(n\) -fold product of \({x}^{-1}\) with itself, and \({x}^{0}\) denotes the identity element of \(G\) . If the set of all elements of the form \({x}^{m}\) , for \(m \in  \mathbb{Z}\) , equals \(G\) , then \(G\) is said to be a \index{cyclic group}, and \(x\) is said to be a \index{Generator of cyclic group} generator of \(G\) .
+	Let \(G\) be a group; let \(x\) be an element of \(G\) . We denote the inverse of \(x\) by \({x}^{-1}\) . The symbol \({x}^{n}\) denotes the \(n\) -fold product of \(x\) with itself, \({x}^{-n}\) denotes the \(n\) -fold product of \({x}^{-1}\) with itself, and \({x}^{0}\) denotes the identity element of \(G\) . If the set of all elements of the form \({x}^{m}\) , for \(m \in  \mathbb{Z}\) , equals \(G\) , then \(G\) is said to be a \index{Cyclic group}, and \(x\) is said to be a \index{generator of cyclic group@Generator of cyclic group} generator of \(G\) .
 \end{definition}
 
-The cardinality of a group is also called the \index{Order of a group} order of the group. A group is cyclic of infinite order if and only if it is isomorphic to the additive group of integers; it is cyclic of order \(k\) if and only if it is isomorphic to the group \(\mathbb{Z}/k\) of integers modulo \(k\) . The preceding theorem implies that the fundamental group of the circle is infinite cyclic.
+The cardinality of a group is also called the \index{order of a group@Order of a group} order of the group. A group is cyclic of infinite order if and only if it is isomorphic to the additive group of integers; it is cyclic of order \(k\) if and only if it is isomorphic to the group \(\mathbb{Z}/k\) of integers modulo \(k\) . The preceding theorem implies that the fundamental group of the circle is infinite cyclic.
 
 Note that if \(x\) is a generator of the infinite cyclic group \(G\) , and if \(y\) is an element of the arbitrary group \(H\) , then there is a unique homomorphism \(h\) of \(G\) into \(H\) such that \(h( x)  = y\) ; it is defined by setting \(h( {x}^{n})  = {y}^{n}\) for all \(n\) .
 
@@ -872,7 +872,7 @@ For later use, in §65 and in Chapters 13 and 14, we prove here a strengthened v
 
 -Theorem 54.6. Let \(p : E \rightarrow  B\) be a covering map; let \(p( {e}_{0})  = {b}_{0}\) .
 
-(a) The homomorphism \({p}_{ * } : {\pi }_{1}( {E,{e}_{0}})  \rightarrow  {\pi }_{1}( {B,{b}_{0}})\) is a \index{Monomorphism}monomorphism.
+(a) The homomorphism \({p}_{ * } : {\pi }_{1}( {E,{e}_{0}})  \rightarrow  {\pi }_{1}( {B,{b}_{0}})\) is a \index{monomorphism@Monomorphism}monomorphism.
 
 (b) Let \(H = {p}_{ * }( {{\pi }_{1}( {E,{e}_{0}}) })\) . The lifting correspondence \(\phi\) induces an injective map
 
@@ -910,7 +910,7 @@ If \(E\) is path connected, then \(\phi\) is surjective, so that \(\Phi\) is sur
 \item Let \(p : E \rightarrow  B\) be a covering map. Let \(\alpha\) and \(\beta\) be paths in \(B\) with \(\alpha ( 1)  = \beta ( 0)\) ; let \(\bar{\alpha }\) and \(\bar{\beta }\) be liftings of them such that \(\widetilde{\alpha }( 1)  = \widetilde{\beta }( 0)\) . Show that \(\bar{\alpha } * \bar{\beta }\) is a lifting of \(\alpha  * \beta\) .
 \item Consider the covering map \(p : \mathbb{R} \times  {\mathbb{R}}_{ + } \rightarrow  {\mathbb{R}}^{2} - 0\) of Example 6 of \(§{53}\) . Find liftings of the paths \[ f( t)  = ( {2 - t,0}) , \] \[ g( t)  = ( {( {1 + t}) \cos {2\pi t},( {1 + t}) \sin {2\pi t}}) \] \[ h( t)  = f * g. \] Sketch these paths and their liftings.
 \item Consider the covering map \(p \times  p : \mathbb{R} \times  \mathbb{R} \rightarrow  {S}^{1} \times  {S}^{1}\) of Example 4 of \(§{53}\) . Consider the path \[ f( t)  = ( {\cos {2\pi t},\sin {2\pi t}})  \times  ( {\cos {4\pi t},\sin {4\pi t}}) \] in \({S}^{1} \times  {S}^{1}\) . Sketch what \(f\) looks like when \({S}^{1} \times  {S}^{1}\) is identified with the doughnut surface \(D\) . Find a lifting \(\bar{f}\) of \(f\) to \(\mathbb{R} \times  \mathbb{R}\) , and sketch it.
-\item Consider the maps \(g,h : {S}^{1} \rightarrow  {S}^{1}\) given \(g( z)  = {z}^{n}\) and \(h( z)  = 1/{z}^{n}\) . (Here we represent \({S}^{1}\) as the set of complex numbers \(z\) of absolute value 1 .) Compute the induced homomorphisms \({g}_{ * },{h}_{ * }\) of the infinite \index{Cyclic group}cyclic group \({\pi }_{1}( {{S}^{1},{b}_{0}})\) into itself. [Hint: Recall the equation \({( \cos \theta  + i\sin \theta ) }^{n} = \cos {n\theta } + i\sin {n\theta }\) .]
+\item Consider the maps \(g,h : {S}^{1} \rightarrow  {S}^{1}\) given \(g( z)  = {z}^{n}\) and \(h( z)  = 1/{z}^{n}\) . (Here we represent \({S}^{1}\) as the set of complex numbers \(z\) of absolute value 1 .) Compute the induced homomorphisms \({g}_{ * },{h}_{ * }\) of the infinite \index{cyclic group@Cyclic group}cyclic group \({\pi }_{1}( {{S}^{1},{b}_{0}})\) into itself. [Hint: Recall the equation \({( \cos \theta  + i\sin \theta ) }^{n} = \cos {n\theta } + i\sin {n\theta }\) .]
 \item Generalize the proof of Theorem 54.5 to show that the fundamental group of the torus is isomorphic to the group \(\mathbb{Z} \times  \mathbb{Z}\) .
 \item Let \(p : E \rightarrow  B\) be a covering map, with \(E\) path connected. Show that if \(B\) is simply connected, then \(p\) is a homeomorphism.
 \end{enumerate}
@@ -929,7 +929,7 @@ We now prove several classical results of topology that follow from our knowledg
 \begin{proof}
 	If \(r : X \rightarrow  A\) is a retraction, then the composite map \(r \circ  j\) equals the identity map of \(A\) . It follows that \({r}_{ * } \circ  {j}_{ * }\) is the identity map of \({\pi }_{1}( {A,a})\) , so that \({j}_{ * }\) must be injective.
 \end{proof}
-\begin{theorem}[\index{No-retraction theorem}]
+\begin{theorem}[\index{no-retraction theorem@No-retraction theorem}]
 	There is no retraction of \({B}^{2}\) onto \({S}^{1}\) .
 \end{theorem}
 
@@ -943,7 +943,7 @@ We now prove several classical results of topology that follow from our knowledg
 
 (2) \(h\) extends to a continuous map \(k : {B}^{2} \rightarrow  X\) .
 
-(3) \({h}_{ * }\) is the \index{Trivial homomorphism}trivial homomorphism of fundamental groups.
+(3) \({h}_{ * }\) is the \index{trivial homomorphism@Trivial homomorphism}trivial homomorphism of fundamental groups.
 \end{lemma}
 
 \begin{proof}
@@ -988,7 +988,7 @@ Figure 55.2
 	There is a retraction of \({\mathbb{R}}^{2} - 0\) onto \({S}^{1}\) given by the equation \(r( x)  = x/\parallel x\parallel\) . Therefore, \({j}_{ * }\) is injective, and hence nontrivial. Similarly, \({i}_{ * }\) is the identity homomorphism, and hence nontrivial.
 \end{proof}
 \begin{theorem}
-	Given a nonvanishing \index{vector field} on \({B}^{2}\) , there exists a point of \({S}^{1}\) where the \index{Vector field}vector field points directly inward and a point of \({S}^{1}\) where it points directly outward.
+	Given a nonvanishing \index{Vector field} on \({B}^{2}\) , there exists a point of \({S}^{1}\) where the \index{vector field@Vector field}vector field points directly inward and a point of \({S}^{1}\) where it points directly outward.
 \end{theorem}
 
 \begin{proof}
@@ -1022,7 +1022,7 @@ Figure 55.3
 
 We have already seen that every continuous map \(f : [  {0,1}]   \rightarrow  [  {0,1}]\) has a fixed point (see Exercise 3 of \(§{24}\) ). The same is true for the ball \({B}^{2}\) , although the proof is deeper:
 \end{proof}
-\begin{theorem}[\index{Brouwer fixed-point theorem} for the disc]
+\begin{theorem}[\index{brouwer fixed-point theorem@Brouwer fixed-point theorem} for the disc]
 	If \(f : {B}^{2} \rightarrow  {B}^{2}\) is continuous, then there exists a point \(x \in  {B}^{2}\) such that \(f( x)  = x\) .
 \end{theorem}
 
@@ -1034,7 +1034,7 @@ f( x)  - x = {ax}
 
 for some positive real number \(a\) , so that \(f( x)  = ( {1 + a}) x\) would lie outside the unit ball \({B}^{2}\) . We thus arrive at a contradiction.
 
-One might well wonder why fixed-point theorems are of interest in mathematics. It turns out that many problems, such as problems concerning existence of solutions for systems of equations, for instance, can be formulated as fixed-point problems. Here is one example, a classical theorem of \index{Frobenius theorem} Frobenius. We assume some knowledge of linear algebra at this point.
+One might well wonder why fixed-point theorems are of interest in mathematics. It turns out that many problems, such as problems concerning existence of solutions for systems of equations, for instance, can be formulated as fixed-point problems. Here is one example, a classical theorem of \index{frobenius theorem@Frobenius theorem} Frobenius. We assume some knowledge of linear algebra at this point.
 
 *Corollary 55.7. Let \(A\) be a 3 by 3 matrix of positive real numbers. Then \(A\) has a positive real eigenvalue (characteristic value).
 
@@ -1085,9 +1085,9 @@ Let \(h : \operatorname{Bd}T \rightarrow  \operatorname{Bd}T\) be the restrictio
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item Show that if \(A\) is a retract of \({B}^{2}\) , then every continuous map \(f : A \rightarrow  A\) has a fixed point.
-\item Show that if \(h : {S}^{1} \rightarrow  {S}^{1}\) is nulhomotopic, then \(h\) has a fixed point and \(h\) maps some point \(x\) to its \index{Antipode}antipode \(- x\)
+\item Show that if \(h : {S}^{1} \rightarrow  {S}^{1}\) is nulhomotopic, then \(h\) has a fixed point and \(h\) maps some point \(x\) to its \index{antipode@Antipode}antipode \(- x\)
 \item Show that if \(A\) is a nonsingular 3 by 3 matrix having nonnegative entries, then \(A\) has a positive real eigenvalue.
-\item Suppose that you are given the fact that for each \(n\) , there is no \index{Retraction}retraction \(r\) : \({B}^{n + 1} \rightarrow  {S}^{n}\) . (This result can be proved using more advanced techniques of algebraic topology.) Prove the following:
+\item Suppose that you are given the fact that for each \(n\) , there is no \index{retraction@Retraction}retraction \(r\) : \({B}^{n + 1} \rightarrow  {S}^{n}\) . (This result can be proved using more advanced techniques of algebraic topology.) Prove the following:
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item The identity map \(i : {S}^{n} \rightarrow  {S}^{n}\) is not nulhomotopic.
   \item The inclusion map \(j : {S}^{n} \rightarrow  {\mathbb{R}}^{n + 1} - \mathbf{0}\) is not nulhomotopic.
@@ -1105,7 +1105,7 @@ It is a basic fact about the complex numbers that every polynomial equation
 {x}^{n} + {a}_{n - 1}{x}^{n - 1} + \cdots  + {a}_{1}x + {a}_{0} = 0
 \]
 
-of \index{Degree of a map} degree \(n\) with real or complex coefficients has \(n\) roots (if the roots are counted according to their multiplicities). You probably first were told this fact in high school algebra, although it is doubtful that it was proved for you at that time.
+of \index{degree of a map@Degree of a map} degree \(n\) with real or complex coefficients has \(n\) roots (if the roots are counted according to their multiplicities). You probably first were told this fact in high school algebra, although it is doubtful that it was proved for you at that time.
 
 The proof is, in fact, rather hard; the most difficult part is to prove that every polynomial equation of positive degree has at least one root. There are various ways of doing this. One can use only techniques of algebra; this proof is long and arduous. Or one can develop the theory of analytic functions of a complex variable to the point where it becomes a trivial corollary of Liouville's theorem. Or one can prove it as a relatively easy corollary of our computation of the fundamental group of the circle; this we do now.
 
@@ -1221,14 +1221,14 @@ to reduce the theorem to the special case considered in Step 3.
 \end{enumerate}
 \section*{*§ 57 The Borsuk-Ulam Theorem}
 
-\index{Borsuk-Ulam Theorem} Here is a ``brain-teaser'' problem: Suppose you are given a bounded polygonal region \(A\) in the plane \({\mathbb{R}}^{2}\) . No matter what shape \(A\) has, it is easy to show that there exists a straight line that bisects \(A\) , that is, one that cuts the area of \(A\) in half. Simply take the horizontal line \(y = c\) , let \(f( c)\) denote the area of that part of \(A\) that lies beneath this line, note that \(f\) is a continuous function of \(c\) , and use the intermediate-value theorem to find a value of \(c\) for which \(f( c)\) equals exactly half the area of \(A\) .
+\index{borsuk-ulam theorem@Borsuk-Ulam Theorem} Here is a ``brain-teaser'' problem: Suppose you are given a bounded polygonal region \(A\) in the plane \({\mathbb{R}}^{2}\) . No matter what shape \(A\) has, it is easy to show that there exists a straight line that bisects \(A\) , that is, one that cuts the area of \(A\) in half. Simply take the horizontal line \(y = c\) , let \(f( c)\) denote the area of that part of \(A\) that lies beneath this line, note that \(f\) is a continuous function of \(c\) , and use the intermediate-value theorem to find a value of \(c\) for which \(f( c)\) equals exactly half the area of \(A\) .
 
 But now suppose instead that you are given two such regions \({A}_{1}\) and \({A}_{2}\) , you are asked to find a single line that bisects them both. It is not obvious even that there exists such a line. Try to find one for an arbitrary pair \index{Topological dimension!of triangular region}of triangular regions if you have doubts!
 
-In fact, such a line always exists This result is a corollary of a well-known theorem called the \index{Borsuk-Ulam theorem}Borsuk-Ulam theorem, to which we now turn.
+In fact, such a line always exists This result is a corollary of a well-known theorem called the \index{borsuk-ulam theorem@Borsuk-Ulam theorem}Borsuk-Ulam theorem, to which we now turn.
 
 \begin{definition}
-	If \(x\) is a point of \({S}^{n}\) , then its antipode is the point \(- x\) . A map \(h : {S}^{n} \rightarrow\)  \({S}^{m}\) is said to be \index{Antipode-preserving}antipode-preserving if \(h( {-x})  =  - h( x)\) for all \(x \in  {S}^{n}\) .
+	If \(x\) is a point of \({S}^{n}\) , then its antipode is the point \(- x\) . A map \(h : {S}^{n} \rightarrow\)  \({S}^{m}\) is said to be \index{antipode-preserving@Antipode-preserving}antipode-preserving if \(h( {-x})  =  - h( x)\) for all \(x \in  {S}^{n}\) .
 \end{definition}
 
 \begin{theorem}
@@ -1278,7 +1278,7 @@ g( x)  = [  {f( x)  - f( {-x}) }]  /\parallel f( x)  - f( {-x}) \parallel
 
 is a continuous map \(g : {S}^{2} \rightarrow  {S}^{1}\) such that \(g( {-x})  =  - g( x)\) for all \(x\) .
 \end{proof}
-\begin{theorem}[The \index{bisection theorem}]
+\begin{theorem}[The \index{Bisection theorem}]
 	Given two bounded polygonal regions in \({\mathbb{R}}^{2}\) , there exists a line in \({\mathbb{R}}^{2}\) that bisects each of them.
 \end{theorem}
 
@@ -1303,9 +1303,9 @@ Replacing \(u\) by \(- u\) gives us the same plane \(P\) , but the other half-sp
 
 Now consider the map \(F : {S}^{2} \rightarrow  {\mathbb{R}}^{2}\) given by \(F( u)  = ( {{f}_{1}( u) ,{f}_{2}( u) })\) . The Borsuk-Ulam theorem gives us a point \(u\) of \({S}^{2}\) for which \(F( u)  = F( {-u})\) . Then \({f}_{i}( u)  = {f}_{i}( {-u})\) for \(i = 1,2\) , that \({f}_{i}( u)  = \frac{1}{2}\) area \({A}_{i}\) , as desired.
 
-We have proved the \index{Bisection theorem}bisection theorem for bounded polygonal regions in the plane. However, all that was needed in the proof was the existence of an additive area function for \({A}_{1}\) and \({A}_{2}\) . Thus, the theorem holds for any two sets \({A}_{1}\) and \({A}_{2}\) that are ``Jordan-measurable'' in the sense used in analysis.
+We have proved the \index{bisection theorem@Bisection theorem}bisection theorem for bounded polygonal regions in the plane. However, all that was needed in the proof was the existence of an additive area function for \({A}_{1}\) and \({A}_{2}\) . Thus, the theorem holds for any two sets \({A}_{1}\) and \({A}_{2}\) that are ``Jordan-measurable'' in the sense used in analysis.
 
-These theorems generalize to higher dimensions, but the proofs are considerably more sophisticated. The generalized version of the bisection theorem states that given \(n\) Jordan-measurable sets in \({\mathbb{R}}^{n}\) , there exists a plane of dimension \(n - 1\) that bisects them all. In the case \(n = 3\) , this result goes by the pleasant name of the ``\index{ham sandwich theorem}.'' If one considers a ham sandwich to consist of two pieces of bread and a slab of ham, then the bisection theorem says that one can divide each of them precisely in half with a single whack of a cleaver \({}^{1}\)
+These theorems generalize to higher dimensions, but the proofs are considerably more sophisticated. The generalized version of the bisection theorem states that given \(n\) Jordan-measurable sets in \({\mathbb{R}}^{n}\) , there exists a plane of dimension \(n - 1\) that bisects them all. In the case \(n = 3\) , this result goes by the pleasant name of the ``\index{Ham sandwich theorem}.'' If one considers a ham sandwich to consist of two pieces of bread and a slab of ham, then the bisection theorem says that one can divide each of them precisely in half with a single whack of a cleaver \({}^{1}\)
 \end{proof}
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
@@ -1322,7 +1322,7 @@ These theorems generalize to higher dimensions, but the proofs are considerably 
 \end{enumerate}
 \section*{§ 58 Deformation Retracts and Homotopy Type}
 
-\index{Deformation Retract} As we have seen, one way of obtaining information about the fundamental group of a space \(X\) is to study the covering spaces of \(X\) . Another is one we discuss in this section, which involves the notion of \index{homotopy type}. It provides a method for reducing the problem of computing the fundamental group of a space to that of computing the fundamental group of some other space-preferably, one that is more familiar.
+\index{deformation retract@Deformation Retract} As we have seen, one way of obtaining information about the fundamental group of a space \(X\) is to study the covering spaces of \(X\) . Another is one we discuss in this section, which involves the notion of \index{Homotopy type}. It provides a method for reducing the problem of computing the fundamental group of a space to that of computing the fundamental group of some other space-preferably, one that is more familiar.
 
 We begin with a lemma.
 
@@ -1374,7 +1374,7 @@ Figure 58.1
 These comments lead us to formulate a more general situation in which the same procedure applies.
 \end{proof}
 \begin{definition}
-	Let \(A\) be a subspace of \(X\) . We say that \(A\) is a deformation retract of \(X\) if the identity map of \(X\) is homotopic to a map that carries all of \(X\) into \(A\) , such that each point of \(A\) remains fixed during the homotopy. This means that there is a continuous map \(H : X \times  I \rightarrow  X\) such that \(H( {x,0})  = x\) and \(H( {x,1})  \in  A\) for all \(x \in  X\) , and \(H( {a,t})  = a\) for all \(a \in  A\) . The homotopy \(H\) is called a \index{deformation retraction} of \(X\) onto \(A\) . The map \(r : X \rightarrow  A\) defined by the equation \(r( x)  = H( {x,1})\) is a retraction of \(X\) onto \(A\) , and \(H\) is a homotopy between the identity map of \(X\) and the map \(j \circ  r\) , where \(j : A \rightarrow  X\) is inclusion.
+	Let \(A\) be a subspace of \(X\) . We say that \(A\) is a deformation retract of \(X\) if the identity map of \(X\) is homotopic to a map that carries all of \(X\) into \(A\) , such that each point of \(A\) remains fixed during the homotopy. This means that there is a continuous map \(H : X \times  I \rightarrow  X\) such that \(H( {x,0})  = x\) and \(H( {x,1})  \in  A\) for all \(x \in  X\) , and \(H( {a,t})  = a\) for all \(a \in  A\) . The homotopy \(H\) is called a \index{Deformation retraction} of \(X\) onto \(A\) . The map \(r : X \rightarrow  A\) defined by the equation \(r( x)  = H( {x,1})\) is a retraction of \(X\) onto \(A\) , and \(H\) is a homotopy between the identity map of \(X\) and the map \(j \circ  r\) , where \(j : A \rightarrow  X\) is inclusion.
 \end{definition}
 
 The proof of the preceding theorem generalizes immediately to prove the following:
@@ -1394,20 +1394,20 @@ induces an isomorphism of fundamental groups.
 
 \begin{centeredblock}
 \begin{example}
-	Let \(B\) denote the \(z\) -axis in \({\mathbb{R}}^{3}\) Consider the space \({\mathbb{R}}^{3} - B\) It has the punctured \({xy}\) -plane \(( {{\mathbb{R}}^{2} - 0})  \times  0\) as a \index{Deformation retract}deformation retract The map \(H\) defined by the equation
+	Let \(B\) denote the \(z\) -axis in \({\mathbb{R}}^{3}\) Consider the space \({\mathbb{R}}^{3} - B\) It has the punctured \({xy}\) -plane \(( {{\mathbb{R}}^{2} - 0})  \times  0\) as a \index{deformation retract@Deformation retract}deformation retract The map \(H\) defined by the equation
 
 \[
 H( {x,y,z,t})  = ( {x,y,( {1 - t}) z})
 \]
 
-is a \index{Deformation retraction}deformation retraction; it gradually collapses each line parallel to the \(z\) -axis into the point where the line intersects the \({xy}\) -plane. We conclude that the space \({\mathbb{R}}^{3} - B\) has an infinite cyclic fundamental group.
+is a \index{deformation retraction@Deformation retraction}deformation retraction; it gradually collapses each line parallel to the \(z\) -axis into the point where the line intersects the \({xy}\) -plane. We conclude that the space \({\mathbb{R}}^{3} - B\) has an infinite cyclic fundamental group.
 
 \end{example}
 \end{centeredblock}
 
 \begin{centeredblock}
 \begin{example}
-	Consider \({\mathbb{R}}^{2} - p - q\) , the \index{doubly punctured plane}. We assert it has the ``figure eight'' space as a deformation retract. Rather than writing equations, we merely sketch the deformation retraction; it is the three-stage deformation indicated in Figure 58.2.
+	Consider \({\mathbb{R}}^{2} - p - q\) , the \index{Doubly punctured plane}. We assert it has the ``figure eight'' space as a deformation retract. Rather than writing equations, we merely sketch the deformation retraction; it is the three-stage deformation indicated in Figure 58.2.
 
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/58.2.jpg}
@@ -1421,13 +1421,13 @@ Figure 58.2
 
 \begin{centeredblock}
 \begin{example}
-	Another deformation retract of \({\mathbb{R}}^{2} - p - q\) is the ``\index{theta space}''
+	Another deformation retract of \({\mathbb{R}}^{2} - p - q\) is the ``\index{Theta space}''
 
 \[
 \theta  = {S}^{1} \cup  ( {0 \times  [  {-1,1}]  })
 \]
 
-we leave it to you to sketch the maps involved. As a result, the figure eight and the \index{Theta space}theta space have isomorphic fundamental groups, even though neither is a deformation retract of the other.
+we leave it to you to sketch the maps involved. As a result, the figure eight and the \index{theta space@Theta space}theta space have isomorphic fundamental groups, even though neither is a deformation retract of the other.
 \end{example}
 \end{centeredblock}
 
@@ -1436,7 +1436,7 @@ Of course, we do not know anything about the fundamental group of the figure eig
 The example of the figure eight and the theta space suggests the possibility that there might be a more general way of showing two spaces have isomorphic fundamental groups than by showing that one is homeomorphic to a deformation retract of the other. We formulate such a notion now.
 
 \begin{definition}
-	Let \(f : X \rightarrow  Y\) and \(g : Y \rightarrow  X\) be continuous maps. Suppose that the map \(g \circ  f : X \rightarrow  X\) is homotopic to the identity map of \(X\) , and the map \(f \circ  g : Y \rightarrow  Y\) is homotopic to the identity map of \(Y\) . Then the maps \(f\) and \(g\) are called homotopy equivalences, and each is said to be a \index{homotopy inverse} of the other.
+	Let \(f : X \rightarrow  Y\) and \(g : Y \rightarrow  X\) be continuous maps. Suppose that the map \(g \circ  f : X \rightarrow  X\) is homotopic to the identity map of \(X\) , and the map \(f \circ  g : Y \rightarrow  Y\) is homotopic to the identity map of \(Y\) . Then the maps \(f\) and \(g\) are called homotopy equivalences, and each is said to be a \index{Homotopy inverse} of the other.
 \end{definition}
 
 It is straightforward to show that if \(f : X \rightarrow  Y\) is a homotopy equivalence of \(X\) with \(Y\) and \(h : Y \rightarrow  Z\) is a homotopy equivalence of \(Y\) with \(Z\) , then \(h \circ  f : X \rightarrow  Z\) is a homotopy equivalence of \(X\) with \(Z\) . It follows that the relation of homotopy equivalence is an equivalence relation. Two spaces that are homotopy equivalent are said to have the same homotopy type.
@@ -1525,7 +1525,7 @@ as desired.
 	The constant map induces the trivial homomorphism.
 \end{proof}
 \begin{theorem}
-	Let \(f : X \rightarrow  Y\) be continuous; let \(f( {x}_{0})  = {y}_{0}\) . If \(f\) is a \index{Homotopy equivalence}homotopy equivalence, then
+	Let \(f : X \rightarrow  Y\) be continuous; let \(f( {x}_{0})  = {y}_{0}\) . If \(f\) is a \index{homotopy equivalence@Homotopy equivalence}homotopy equivalence, then
 
 \[
 {f}_{ * } : {\pi }_{1}( {X,{x}_{0}})  \rightarrow  {\pi }_{1}( {Y,{y}_{0}})
@@ -1571,9 +1571,9 @@ The first fact implies that \({g}_{ * }\) is surjective, and the second implies 
 
 so that \({( {f}_{{x}_{0}}) }_{ * }\) is also an isomorphism.
 
-Note that although \(g\) is a \index{Homotopy inverse}homotopy inverse for \(f\) , the homomorphism \({g}_{ * }\) is not an inverse for the homomorphism \({( {f}_{{x}_{0}}) }_{ * }\) .
+Note that although \(g\) is a \index{homotopy inverse@Homotopy inverse}homotopy inverse for \(f\) , the homomorphism \({g}_{ * }\) is not an inverse for the homomorphism \({( {f}_{{x}_{0}}) }_{ * }\) .
 
-The relation of homotopy equivalence is clearly more general than the notion \index{Fundamental group!of deformation retract}of deformation retraction. The theta space and the figure eight are both deformation retracts of the \index{Doubly punctured plane}doubly punctured plane. Therefore, they are homotopy equivalent to the doubly punctured plane, and hence to each other. But neither is homeomorphic to a deformation retract of the other; in fact, neither of them can even be imbedded in the other.
+The relation of homotopy equivalence is clearly more general than the notion \index{Fundamental group!of deformation retract}of deformation retraction. The theta space and the figure eight are both deformation retracts of the \index{doubly punctured plane@Doubly punctured plane}doubly punctured plane. Therefore, they are homotopy equivalent to the doubly punctured plane, and hence to each other. But neither is homeomorphic to a deformation retract of the other; in fact, neither of them can even be imbedded in the other.
 
 It is a striking fact that the situation that occurs for these two spaces is the standard situation regarding homotopy equivalences. Martin Fuchs has proved a theorem to the effect that two spaces \(X\) and \(Y\) have the same \index{Contractible space!homotopy type}homotopy type if and only if they are homeomorphic to deformation retracts of a single space \(Z\) . The proof, although it uses only elementary tools, is difficult 		\cite{Fuchs1971}.
 \end{proof}
@@ -1614,11 +1614,11 @@ It is a striking fact that the situation that occurs for these two spaces is the
   \end{enumerate}
 \item Suppose that to every map \(h : {S}^{n} \rightarrow  {S}^{n}\) we have assigned an integer, denoted by deg \(h\) and called the degree of \(h\) , such that:
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item \index{Homotopic maps} have the same degree. (ii) \(\deg ( {h \circ  k})  = ( {\deg h})  \cdot  ( {\deg k})\) . (iii) The identity map has degree 1, any constant map has degree 0, and the reflection map \(\rho ( {{x}_{1},\ldots ,{x}_{n + 1}})  = ( {{x}_{1},\ldots ,{x}_{n}, - {x}_{n + 1}})\) has degree-1. [One can construct such a function, using the tools of algebraic topology. Intuitively, \(\deg h\) measures how many times \(h\) wraps \({S}^{n}\) about itself; the sign tells you whether \(h\) preserves orientation or not.] Prove the following:
+  \item \index{homotopic maps@Homotopic maps} have the same degree. (ii) \(\deg ( {h \circ  k})  = ( {\deg h})  \cdot  ( {\deg k})\) . (iii) The identity map has degree 1, any constant map has degree 0, and the reflection map \(\rho ( {{x}_{1},\ldots ,{x}_{n + 1}})  = ( {{x}_{1},\ldots ,{x}_{n}, - {x}_{n + 1}})\) has degree-1. [One can construct such a function, using the tools of algebraic topology. Intuitively, \(\deg h\) measures how many times \(h\) wraps \({S}^{n}\) about itself; the sign tells you whether \(h\) preserves orientation or not.] Prove the following:
   \item There is no retraction \(r : {B}^{n + 1} \rightarrow  {S}^{n}\) .
-  \item If \(h : {S}^{n} \rightarrow  {S}^{n}\) has degree different from \({( -1) }^{n + 1}\) , then \(h\) has a fixed point. [Hint: Show that if \(h\) has no fixed point, then \(h\) is homotopic to the \index{antipodal map} \(a( x)  =  - x\) .]
+  \item If \(h : {S}^{n} \rightarrow  {S}^{n}\) has degree different from \({( -1) }^{n + 1}\) , then \(h\) has a fixed point. [Hint: Show that if \(h\) has no fixed point, then \(h\) is homotopic to the \index{Antipodal map} \(a( x)  =  - x\) .]
   \item If \(h : {S}^{n} \rightarrow  {S}^{n}\) has degree different from 1, then \(h\) maps some point \(x\) to its antipode \(- x\) .
-  \item If \({S}^{n}\) has a nonvanishing tangent vector field \(v\) , then \(n\) is odd. [Hint: If \(v\) exists, show the identity map is homotopic to the \index{Antipodal map}antipodal map.]
+  \item If \({S}^{n}\) has a nonvanishing tangent vector field \(v\) , then \(n\) is odd. [Hint: If \(v\) exists, show the identity map is homotopic to the \index{antipodal map@Antipodal map}antipodal map.]
   \end{enumerate}
 \end{enumerate}
 \section*{§ 59 The Fundamental Group of \({S}^{n}\)}
@@ -1690,7 +1690,7 @@ Define \(f : ( {{S}^{n} - p})  \rightarrow  {\mathbb{R}}^{n}\) by the equation
 f( x)  = f( {{x}_{1},\ldots ,{x}_{n + 1}})  = \frac{1}{1 - {x}_{n + 1}}( {{x}_{1},\ldots ,{x}_{n}}) .
 \]
 
-The map \(f\) is called \index{stereographic projection}. (If one takes the straight line in \({\mathbb{R}}^{n + 1}\) passing through the north pole \(p\) and the point \(x\) of \({S}^{n} - p\) , then this line intersects the \(n\) -plane \({\mathbb{R}}^{n} \times  0 \subset  {\mathbb{R}}^{n + 1}\) in the point \(f( x)  \times  0\) .) One checks that \(f\) is a homeomorphism by showing that the map \(g : {\mathbb{R}}^{n} \rightarrow  ( {{S}^{n} - p})\) given by
+The map \(f\) is called \index{Stereographic projection}. (If one takes the straight line in \({\mathbb{R}}^{n + 1}\) passing through the north pole \(p\) and the point \(x\) of \({S}^{n} - p\) , then this line intersects the \(n\) -plane \({\mathbb{R}}^{n} \times  0 \subset  {\mathbb{R}}^{n + 1}\) in the point \(f( x)  \times  0\) .) One checks that \(f\) is a homeomorphism by showing that the map \(g : {\mathbb{R}}^{n} \rightarrow  ( {{S}^{n} - p})\) given by
 
 \[
 g( y)  = g( {{y}_{1},\ldots ,{y}_{n}})  = ( {t( y)  \cdot  {y}_{1},\ldots ,t( y)  \cdot  {y}_{n},1 - t( y) }) ,
@@ -1704,7 +1704,7 @@ Step 2. We prove the theorem. Let \(U\) and \(V\) be the open sets \(U = {S}^{n}
 
 Note first that for \(n \geq  1\) , the sphere \({S}^{n}\) is path connected. This follows from the fact that \(U\) and \(V\) are path connected (being homeomorphic to \({\mathbb{R}}^{n}\) ) and have the point \(( {1,0,\ldots ,0})\) of \({S}^{n}\) in common.
 
-Now we show that for \(n \geq  2\) , the sphere \({S}^{n}\) is simply connected. The spaces \(U\) and \(V\) are simply connected, being homeomorphic to \({\mathbb{R}}^{n}\) . Their intersection equals \({S}^{n} - p - q\) , which is homeomorphic under \index{Stereographic projection}stereographic projection to \({\mathbb{R}}^{n} - \mathbf{0}\) . The latter space is path connected, for every point of \({\mathbb{R}}^{n} - 0\) can be joined to a point of \({S}^{n - 1}\) by a straight-line path, and \({S}^{n - 1}\) is path connected if \(n \geq  2\) . Then the preceding corollary applies.
+Now we show that for \(n \geq  2\) , the sphere \({S}^{n}\) is simply connected. The spaces \(U\) and \(V\) are simply connected, being homeomorphic to \({\mathbb{R}}^{n}\) . Their intersection equals \({S}^{n} - p - q\) , which is homeomorphic under \index{stereographic projection@Stereographic projection}stereographic projection to \({\mathbb{R}}^{n} - \mathbf{0}\) . The latter space is path connected, for every point of \({\mathbb{R}}^{n} - 0\) can be joined to a point of \({S}^{n - 1}\) by a straight-line path, and \({S}^{n - 1}\) is path connected if \(n \geq  2\) . Then the preceding corollary applies.
 \end{proof}
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
@@ -1790,7 +1790,7 @@ is a path homotopy between \(f\) and the constant loop based at \({x}_{0} \times
 	The fundamental group of the torus \(T = {S}^{1} \times  {S}^{1}\) is isomorphic to the group \(\mathbb{Z} \times  \mathbb{Z}\) .
 \end{corollary}
 
-Now we define a surface called the \index{Projective n-space} projective plane and compute its fundamental group.
+Now we define a surface called the \index{projective n-space@Projective n-space} projective plane and compute its fundamental group.
 
 \begin{definition}
 	The projective plane \(\index{P@\({P}^{2}\)} \index{P@${P}^{2}$}\index{P@${P}^{2}$}\index{P@${P}^{2}$}{P}^{2}\) is the quotient space obtained from \({S}^{2}\) by identifying each point \(x\) of \({S}^{2}\) with its antipodal point \(- x\) .
@@ -1799,11 +1799,11 @@ Now we define a surface called the \index{Projective n-space} projective plane a
 The projective plane may not be a space that is familiar to you; it cannot be imbedded in \({\mathbb{R}}^{3}\) and is thus difficult to visualize. It is, however, the fundamental object \index{Covering space!of \({\mathbb{R}}^{2} - 0\)}of study in projective geometry, just as the euclidean plane \({\mathbb{R}}^{2}\) is in ordinary euclidean geometry. Topologists are primarily interested in it as an example \index{Covering space!of \({P}^{2}\)}of a surface.
 
 \begin{theorem}
-	The projective plane \({P}^{2}\) is a compact surface, and the quotient map \(p : {S}^{2} \rightarrow  {P}^{2}\) is a \index{Covering map}covering map.
+	The projective plane \({P}^{2}\) is a compact surface, and the quotient map \(p : {S}^{2} \rightarrow  {P}^{2}\) is a \index{covering map@Covering map}covering map.
 \end{theorem}
 
 \begin{proof}
-	First we show that \(p\) is an open map. Let \(U\) be open in \({S}^{2}\) . Now the \index{Antipodal map}antipodal map \(a : {S}^{2} \rightarrow  {S}^{2}\) given by \(a( x)  =  - x\) is a homeomorphism of \({S}^{2}\) ; hence \(a( U)\) \index{Covering map!is open}is open in \({S}^{2}\) . Since
+	First we show that \(p\) is an open map. Let \(U\) be open in \({S}^{2}\) . Now the \index{antipodal map@Antipodal map}antipodal map \(a : {S}^{2} \rightarrow  {S}^{2}\) given by \(a( x)  =  - x\) is a homeomorphism of \({S}^{2}\) ; hence \(a( U)\) \index{Covering map!is open}is open in \({S}^{2}\) . Since
 \[
 {p}^{-1}( {p( U) })  = U \cup  a( U)
 \]
@@ -1822,7 +1822,7 @@ is bijective. Being continuous and open, it is a homeomorphism. Similarly,
 p : a( U)  \rightarrow  p( {a( U) })  = p( U)
 \]
 
-is a homeomorphism. The set \({p}^{-1}( {p( U) })\) is thus the union of the two disjoint open sets \(U\) and \(a( U)\) , each of which is mapped homeomorphically by \(p\) onto \(p( U)\) . Then \(p( U)\) is a neighborhood of \(p( x)  = y\) that is \index{Evenly covered}evenly covered by \(p\) .
+is a homeomorphism. The set \({p}^{-1}( {p( U) })\) is thus the union of the two disjoint open sets \(U\) and \(a( U)\) , each of which is mapped homeomorphically by \(p\) onto \(p( U)\) . Then \(p( U)\) is a neighborhood of \(p( x)  = y\) that is \index{evenly covered@Evenly covered}evenly covered by \(p\) .
 
 Since \({S}^{2}\) has a countable basis \(\{  {U}_{n}\}\) , the space \({P}^{2}\) has a countable basis \(\{  {p( {U}_{n}) }\}\) .
 
@@ -1844,21 +1844,21 @@ Since \({S}^{2}\) is a surface and every point of \({P}^{2}\) has a neighborhood
 	The projection \(p : {S}^{2} \rightarrow  {P}^{2}\) is a covering map. Since \({S}^{2}\) is simply connected, we can apply Theorem 54.4, which tells us there is a bijective correspondence between \({\pi }_{1}( {{P}^{2},y})\) and the set \({p}^{-1}( y)\) . Since this set is a two-element set, \({\pi }_{1}( {{P}^{2},y})\) is a group of \index{order of a group@Order of a group}order 2.
 Any group of order 2 is isomorphic to \(\mathbb{Z}/2\) , the integers mod 2, of course.
 
-One can proceed similarly to define \({P}^{n}\) , for any \(n \in  {\mathbb{Z}}_{ + }\) , as the space obtained from \({S}^{n}\) by identifying each point \(x\) with its \index{Antipode}antipode \(- x\) ; it is called projective \(n\) - space. The proof of Theorem 60.3 goes through without change to prove that the projection \(p : {S}^{n} \rightarrow  {P}^{n}\) is a covering map. Then because \({S}^{n}\) is simply connected for \(n \geq  2\) , it follows that \({\pi }_{1}( {{P}^{n},y})\) is a two-element group for \(n \geq  2\) . We leave it to you to figure out what happens when \(n = 1\) .
+One can proceed similarly to define \({P}^{n}\) , for any \(n \in  {\mathbb{Z}}_{ + }\) , as the space obtained from \({S}^{n}\) by identifying each point \(x\) with its \index{antipode@Antipode}antipode \(- x\) ; it is called projective \(n\) - space. The proof of Theorem 60.3 goes through without change to prove that the projection \(p : {S}^{n} \rightarrow  {P}^{n}\) is a covering map. Then because \({S}^{n}\) is simply connected for \(n \geq  2\) , it follows that \({\pi }_{1}( {{P}^{n},y})\) is a two-element group for \(n \geq  2\) . We leave it to you to figure out what happens when \(n = 1\) .
 
 Now we study the double torus. We begin with a lemma about the figure eight.
 \end{proof}
 \section*{Lemma 60.5. The fundamental group of the figure eight is not abelian.}
 
 \begin{proof}
-	Let \(X\) be the union of two circles \(A\) and \(B\) in \({\mathbb{R}}^{2}\) whose intersection consists of the single point \({x}_{0}\) . We describe a certain \index{Covering space}covering space \(E\) of \(X\) .
+	Let \(X\) be the union of two circles \(A\) and \(B\) in \({\mathbb{R}}^{2}\) whose intersection consists of the single point \({x}_{0}\) . We describe a certain \index{covering space@Covering space}covering space \(E\) of \(X\) .
 The space \(E\) is the subspace of the plane consisting of the \(x\) -axis and the \(y\) -axis, along with tiny circles tangent to these axes, one circle tangent to the \(x\) -axis at each nonzero integer point and one circle tangent to the \(y\) -axis at each nonzero integer point.
 
-The projection map \(p : E \rightarrow  X\) wraps the \(x\) -axis around the circle \(A\) and wraps the \(y\) -axis around the other curcle \(B\) ; in each case the integer points are mapped by \(p\) into the \index{Base point}base point \({x}_{0}\) . Each circle tangent to an integer point on the \(x\) -axis is mapped homeomorphically by \(p\) onto \(B\) , while each circle tangent to an integer point on the \(y\) -axis is mapped homeomorphically onto \(A\) ; in each case the point of targency is mapped onto the point \({x}_{0}\) . We leave it to you to check mentally that the map \(p\) is indeed a covering map.
+The projection map \(p : E \rightarrow  X\) wraps the \(x\) -axis around the circle \(A\) and wraps the \(y\) -axis around the other curcle \(B\) ; in each case the integer points are mapped by \(p\) into the \index{base point@Base point}base point \({x}_{0}\) . Each circle tangent to an integer point on the \(x\) -axis is mapped homeomorphically by \(p\) onto \(B\) , while each circle tangent to an integer point on the \(y\) -axis is mapped homeomorphically onto \(A\) ; in each case the point of targency is mapped onto the point \({x}_{0}\) . We leave it to you to check mentally that the map \(p\) is indeed a covering map.
 
 We could write this description down in equations if we wished, but the informal description seems to us easier to follow.
 
-Now let \(\bar{f} : I \rightarrow  E\) be the path \(\widetilde{f}( s)  = s \times  0\) , going along the \(x\) -axis from the origin to the point \(1 \times  0\) . Let \(\widetilde{g} : I \rightarrow  E\) be the path \(\bar{g}( s)  = 0 \times  s\) , going along the \(y\) -axis from the origin to the point \(0 \times  1\) . Let \(f = p \circ  \widetilde{f}\) and \(g = p \circ  \widetilde{g}\) ; then \(f\) and \(g\) are \index{Loop}loops in the figure eight based at \({x}_{0}\) , going around the circles \(A\) and \(B\) , respectively. See Figure 60.1.
+Now let \(\bar{f} : I \rightarrow  E\) be the path \(\widetilde{f}( s)  = s \times  0\) , going along the \(x\) -axis from the origin to the point \(1 \times  0\) . Let \(\widetilde{g} : I \rightarrow  E\) be the path \(\bar{g}( s)  = 0 \times  s\) , going along the \(y\) -axis from the origin to the point \(0 \times  1\) . Let \(f = p \circ  \widetilde{f}\) and \(g = p \circ  \widetilde{g}\) ; then \(f\) and \(g\) are \index{loop@Loop}loops in the figure eight based at \({x}_{0}\) , going around the circles \(A\) and \(B\) , respectively. See Figure 60.1.
 
 We assert that \(f * g\) and \(g * f\) are not path homotopic, so that the fundamental group \index{Covering space!of figure eight}of the figure eight is not abelian.
 
@@ -1877,7 +1877,7 @@ We shall prove later that the fundamental group of the figure eight is, in fact,
 
 \begin{proof}
 	The double torus \(T\# T\) is the surface obtained by taking two copies of the torus, deleting a small open disc from each of them, and pasting the remaining pieces together along their edges. We assert that the figure eight \(X\) is a retract of \(T\# T\) . This fact implies that inclusion \(j : X \rightarrow  T\# T\) induces a monomorphism \({j}_{ * }\) , so that \({\pi }_{1}( {T\# T,{x}_{0}})\) is not abelian.
-One can write equations for the \index{Retraction}retraction \(r : T\# T \rightarrow  X\) , but it is simpler to indicate it in pictures, as we have done in Figure 60.2. Let \(Y\) be the union of two tori having a point in common. First one maps \(T\# T\) onto \(Y\) by a map that collapses the dotted curcle to a point but is otherwise one-to-one; it defines a homeomorphism \(h\) of the figure eight in \(T\# T\) with the figure eight in \(Y\) . Then one retracts \(Y\) onto its figure eight by mapping each cross-sectional circle to the point where it intersects the figure eight. Then one maps the figure eight in \(Y\) back onto the figure eight in \(T\# T\) by the map \({h}^{-1}\) .
+One can write equations for the \index{retraction@Retraction}retraction \(r : T\# T \rightarrow  X\) , but it is simpler to indicate it in pictures, as we have done in Figure 60.2. Let \(Y\) be the union of two tori having a point in common. First one maps \(T\# T\) onto \(Y\) by a map that collapses the dotted curcle to a point but is otherwise one-to-one; it defines a homeomorphism \(h\) of the figure eight in \(T\# T\) with the figure eight in \(Y\) . Then one retracts \(Y\) onto its figure eight by mapping each cross-sectional circle to the point where it intersects the figure eight. Then one maps the figure eight in \(Y\) back onto the figure eight in \(T\# T\) by the map \({h}^{-1}\) .
 
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/60.2.jpg}
