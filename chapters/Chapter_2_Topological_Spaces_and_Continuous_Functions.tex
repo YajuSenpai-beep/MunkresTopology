@@ -94,7 +94,7 @@ Many mathematicians use the words ``\index{weaker topology@Weaker topology} \ind
 For each of the examples in the preceding section, we were able to specify the topology by describing the entire collection \(\mathcal{T}\) of open sets. Usually this is too difficult. In most cases, one specifies instead a smaller collection of subsets of \(X\) and defines the topology in terms of that.
 
 \begin{definition}
-	If \(X\) is a set, a \index{Box topology!basis for}\index{Box topology!basis for}\index{Box topology!basis for}basis for a topology on \(X\) is a collection \(\mathcal{B}\) of subsets of \(X\) (called basis elements) such that
+	If \(X\) is a set, a \index{Basis!for a topology}\index{Box topology!basis for}\index{Basis!for a topology}basis for a topology on \(X\) is a collection \(\mathcal{B}\) of subsets of \(X\) (called basis elements) such that
 
 (1) For each \(x \in  X\) , there is at least one basis element \(B\) containing \(x\) .
 
@@ -947,7 +947,7 @@ The Hausdorff condition is generally considered to be a very mild extra conditio
 
 The Hausdorff condition is one of a number of extra conditions one can impose on a topological space. Each time one imposes such a condition, one can prove stronger theorems, but one limits the class of spaces to which the theorems apply. Much of the research that has been done in topology since its beginnings has centered on the problem of finding conditions that will be strong enough to enable one to prove interesting theorems about spaces satisfying those conditions, and yet not so strong that they limit severely the range of applications of the results.
 
-We shall study a number of such conditions in the next two chapters. The Hausdorff condition and the \({T}_{1}\) axiom are but two of a collection of conditions similar to one another that are called collectively the separation axioms. Other conditions include the countability axioms, and various compactness and connectedness conditions. Some of these are quite stringent requirements, as you will see.
+We shall study a number of such conditions in the next two chapters. The Hausdorff condition and the \index{T1 axiom@\({T}_{1}\) axiom}\({T}_{1}\) axiom are but two of a collection of conditions similar to one another that are called collectively the separation axioms. Other conditions include the countability axioms, and various compactness and connectedness conditions. Some of these are quite stringent requirements, as you will see.
 
 \end{theorem}
 \section*{Exercises}
@@ -984,7 +984,7 @@ We shall study a number of such conditions in the next two chapters. The Hausdor
   \end{enumerate}
 \item Consider the lower limit topology on \(\mathbb{R}\) and the topology given by the basis \(\mathcal{C}\) of Exercise 8 of \(§{13}\) . Determine the closures of the intervals \(A = ( {0,\sqrt{2}})\) and \(B = ( {\sqrt{2},3})\) in these two topologies.
 \item Determine the closures of the following subsets of the \index{ordered square@Ordered square}ordered square: \[ A = \{  {( {1/n})  \times  0 \mid  n \in  {\mathbb{Z}}_{ + }}\}  , \] \[ B = \{  {( {1 - 1/n})  \times  \frac{1}{2} \mid  n \in  {\mathbb{Z}}_{ + }}\}  , \] \[ C = \{ x \times  0 \mid  0 < x < 1\} , \] \[ D = \{  {x \times  \frac{1}{2} \mid  0 < x < 1}\}  , \] \[ E = \{  {\frac{1}{2} \times  y \mid  0 < y < 1}\}  . \]
-\item If \(A \subset  X\) , we define the \index{boundary: of a set@Boundary: of a set} boundary of \(A\) by the equation \[ \text{ Bd }A = \bar{A} \cap  ( \overline{X - A}) \text{ . } \]
+\item If \(A \subset  X\) , we define the \index{Boundary!of a set}\index{Bd A} boundary of \(A\) by the equation \[ \text{ Bd }A = \bar{A} \cap  ( \overline{X - A}) \text{ . } \]
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that Int \(A\) and Bd \(A\) are disjoint, and \(\bar{A} = \operatorname{Int}A \cup  \operatorname{Bd}A\) .
   \item Show that Bd \(A = \varnothing  \Leftrightarrow  A\) is both open and closed.
@@ -1570,7 +1570,7 @@ All this is summarized in the following theorem:
 \begin{theorem}[Comparison of the box and product topologies]
 	The box topology on \(\prod {X}_{\alpha }\) has as basis all sets of the form \(\prod {U}_{\alpha }\) , where \({U}_{\alpha }\) is open in \({X}_{\alpha }\) for each \(\alpha\) . The product topology on \(\prod {X}_{\alpha }\) has as basis all sets of the form \(\prod {U}_{\alpha }\) , where \({U}_{\alpha }\) is open in \({X}_{\alpha }\) for each \(\alpha\) and \({U}_{\alpha }\) equals \({X}_{\alpha }\) except for finitely many values of \(\alpha\) .
 
-Two things are immediately clear First, for finite products \(\mathop{\prod }\limits_{{\alpha  = 1}}^{n}{X}_{\alpha }\) the two topologies are precisely the same. Second, the box topology is in general finer than the product topology.
+Two things are immediately clear First, for finite products \(\mathop{\prod }\limits_{{\alpha  = 1}}^{n}{X}_{\alpha }\) the two topologies are precisely the same. Second, the box topology is in general finer than the \index{Box topology!vs. product topology}product topology.
 
 What is not so clear is why we prefer the product topology to the box topology. The answer will appear as we continue our study of topology. We shall find that a number of important theorems about finite products will also hold for arbitrary products if we use the product topology, but not if we use the box topology. As a result, the product topology is extremely important in mathematics. The box topology is not so important; we shall use it primarily for constructing counterexamples. Therefore, we make the following convention:
 
@@ -1992,7 +1992,7 @@ where \(\bar{d}\) is the \index{standard bounded metric@Standard bounded metric}
 The relation between this topology and the product and box topologies is the following:
 
 \begin{theorem}
-	The uniform topology on \({\mathbb{R}}^{J}\) is finer than the product topology and coarser than the box topology; these three topologies are all different if \(J\) is infinite.
+	The uniform topology on \({\mathbb{R}}^{J}\) is finer than the product topology and coarser than the \index{Box topology!vs. uniform topology}box topology; these three topologies are all different if \(J\) is infinite.
 
 \end{theorem}
 \begin{proof}
