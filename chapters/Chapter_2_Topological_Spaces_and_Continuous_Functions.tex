@@ -1,14 +1,14 @@
 \chapter[\index{topological space@Topological space}Topological Spaces \index{Quotient topology!and continuous functions}and Continuous Functions]{Topological Spaces \\and Continuous Functions}
 \vspace{6.5cm}
 
-The concept of topological \index{first-countable space (see first-countability)@First-countable space (see First-countability)} space grew out of the study of the real line and euclidean space and the study of \index{Continuous function} on these spaces. In this chapter, we define what a \index{topological space@Topological space}\index{topological space@Topological space}topological space is, and we study a number of ways of constructing a \index{Topology} on a set so as to make it into a topological space. We also consider some of the elementary concepts associ\index{Continuity: of algebraic operations in \(\mathbb{R}\)!at a point}ated with topological spaces. Open and \index{Closed set}, \index{Limit point}, \index{Quotient topology!and continuous functions}\index{Quotient topology!and continuous functions}and cont\index{Closure!in a cartesian product}inuous functions are introduced as natural \index{Cartesian product: countably infinite!general}\index{Cartesian product: countably infinite!general}\index{Cartesian product: countably infinite!general}generalizations of the corresponding ideas for the real line and euclidean space.
+The concept of topological \index{first-countable space (see first-countability)@First-countable space (see First-countability)} space grew out of the study of the real line and euclidean space and the study of \index{Continuous function} on these spaces. In this chapter, we define what a \index{topological space@Topological space}topological space is, and we study a number of ways of constructing a \index{Topology} on a set so as to make it into a topological space. We also consider some of the elementary concepts associ\index{Continuity: of algebraic operations in \(\mathbb{R}\)!at a point}ated with topological spaces. Open and \index{Closed set}, \index{Limit point}, \index{Quotient topology!and continuous functions}and cont\index{Closure!in a cartesian product}inuous functions are introduced as natural \index{Cartesian product: countably infinite!general}generalizations of the corresponding ideas for the real line and euclidean space.
 
 \section*{§ 12 Topological Spaces}
 
 The definition of a topological space that is now \index{standard topology: on@Standard topology: on} standard was a long time in being formulated. Various mathematicians-Fréchet, Hausdorff, and others-proposed different definitions over a period of years during the first decades of the twentieth century, but it took quite a while before mathematicians settled on the one that seemed most suitable. They wanted, of course, a definition that was as broad as possible, so that it would include as special cases all the various examples that were useful in mathematics-euclidean space, \index{Infinite series} infinite-dimensional euclidean space, and function spaces among them-but they also wanted the definition to be narrow enough that the standard theorems about these familiar spaces would hold for topological spaces in general. This is always the problem when one is trying to formulate a new mathematical concept, to decide how general its definition should be. The definition finally settled on may seem a bit abstract, but as you work through the various ways of constructing topological spaces, you will get a better feeling for what the concept means.
 
 \begin{definition}
-	A \index{topology@Topology}\index{topology@Topology}\index{topology@Topology}topology on a set \(X\) is a collection \(\mathcal{T}\) of subsets of \(X\) having the following properties:
+	A \index{topology@Topology}topology on a set \(X\) is a collection \(\mathcal{T}\) of subsets of \(X\) having the following properties:
 
 (1) \(\varnothing\) and \(X\) are in \(\mathcal{T}\) .
 
@@ -18,11 +18,11 @@ The definition of a topological space that is now \index{standard topology: on@S
 
 A set \(X\) for which a topology \(\mathcal{T}\) has been specified is called a topological space.
 
-Properly speaking, a topological space is an \index{ray in ordered set@Ray in ordered set} ordered pair(X, T)consisting \index{Interior point: of an arc!of a set}\index{Interior point: of an arc!of a set}\index{Interior point: of an arc!of a set}of a set \(X\) and a topology \(\mathcal{T}\) on \(X\) , but we often omit specific mention of \(\mathcal{T}\) if no confusion will anse.
+Properly speaking, a topological space is an \index{ray in ordered set@Ray in ordered set} ordered pair(X, T)consisting \index{Interior point: of an arc!of a set}of a set \(X\) and a topology \(\mathcal{T}\) on \(X\) , but we often omit specific mention of \(\mathcal{T}\) if no confusion will anse.
 \end{definition}
 
 
-If \(X\) is a topological space with topology \(\mathcal{T}\) , we say that a subset \(U\) of \(X\) is an \index{Open set} of \(X\) if \(U\) belongs to the collection \(\mathcal{T}\) . Using this terminology, one can say that a topological space is a set \(X\) together with a collection of subsets of \(X\) , called \index{open set@Open set}\index{open set@Open set}\index{open set@Open set}open sets, such that \(\varnothing\) and \(X\) are both open, and such that arbitrary unions and finite intersections of open sets are open.
+If \(X\) is a topological space with topology \(\mathcal{T}\) , we say that a subset \(U\) of \(X\) is an \index{Open set} of \(X\) if \(U\) belongs to the collection \(\mathcal{T}\) . Using this terminology, one can say that a topological space is a set \(X\) together with a collection of subsets of \(X\) , called \index{open set@Open set}open sets, such that \(\varnothing\) and \(X\) are both open, and such that arbitrary unions and finite intersections of open sets are open.
 
 \begin{centeredblock}
 \begin{example}
@@ -134,7 +134,7 @@ Figure 13.2
 
 \begin{centeredblock}
 \begin{example}
-	If \(X\) is any set, the collection of all one-point subsets of \(X\) is a basis \index{Metric!for discrete topology}for the \index{discrete topology@Discrete topology}\index{discrete topology@Discrete topology}\index{discrete topology@Discrete topology}discrete topology on \(X\)
+	If \(X\) is any set, the collection of all one-point subsets of \(X\) is a basis \index{Metric!for discrete topology}for the \index{discrete topology@Discrete topology}discrete topology on \(X\)
 \end{example}
 \end{centeredblock}
 
@@ -163,7 +163,7 @@ Finally, we show by induction that any finite intersection \({U}_{1} \cap  \cdot
 
 By hypothesis, \({U}_{1} \cap   \cdot   \cdot   \cap  {U}_{n - 1}\) belongs to \(\mathcal{T}\) ; by the result just proved, the intersection of \({U}_{1} \cap  \cdots  \cap  {U}_{n - 1}\) and \({U}_{n}\) also belongs to \(\mathcal{T}\)
 
-Thus we have checked that collection of open sets \index{Topology!generated by a basis}\index{Topology!generated by a basis}\index{Topology!generated by a basis}generated by a basis \(\mathcal{B}\) is, in fact, a topology.
+Thus we have checked that collection of open sets \index{Topology!generated by a basis}generated by a basis \(\mathcal{B}\) is, in fact, a topology.
 
 Another way of describing the topology generated by a basis is given in the following lemma.
 
@@ -209,7 +209,7 @@ Some students find this condition hard to remember. ``Which way does the inclusi
 
 \begin{centeredblock}
 \begin{example}
-	One can now see that the collection \(\mathcal{B}\) of all circular regions in the plane generates the same topology as the collection \({\mathcal{B}}^{\prime }\) of all rectangular regions, Figure 134 illustrates the pro\index{First-countability!of metric space}of We shall treat this example more \index{Hausdorff condition!for metric space}formally when we study \\index{Subspace topology!in metric space}index{metric space}
+	One can now see that the collection \(\mathcal{B}\) of all circular regions in the plane generates the same topology as the collection \({\mathcal{B}}^{\prime }\) of all rectangular regions, Figure 13.4 illustrates the proof. \index{First-countability!of metric space}We shall treat this example more \index{Hausdorff condition!for metric space}formally when we study \index{Subspace topology!in metric space}metric space.
 
 \begin{center}
 \includegraphics[width=0.7\textwidth]{images/13.4.jpg}
@@ -229,7 +229,7 @@ We now define three topologies on the real line \(\mathbb{R}\) , all of which ar
 ( {a,b})  = \{ x \mid  a < x < b\} ,
 \]
 
-the topology generated by \(\mathcal{B}\) is called the \index{\(\mathbb{R}\) (reals)!standard topology}\index{\(\mathbb{R}\) (reals)!standard topology}\index{\(\mathbb{R}\) (reals)!standard topology}standard topology on the real line. Whenever we consider \(\mathbb{R}\) , we shall suppose it is given this topology unless we specifically state otherwise.
+the topology generated by \(\mathcal{B}\) is called the \index{\(\mathbb{R}\) (reals)!standard topology}standard topology on the real line. Whenever we consider \(\mathbb{R}\) , we shall suppose it is given this topology unless we specifically state otherwise.
 \end{definition}
 
 
@@ -2595,7 +2595,7 @@ On the other hand, \index{Quotient map!products}products of maps do not behave w
 
 Finally, the \index{Box topology!Hausdorff condition}Hausdorff condition does not behave well; even if \(X\) is Hausdorff. there is no reason that the quotient space \({X}^{ * }\) needs to be \index{Box topology!Hausdorff condition}Hausdorff. There is a simple condition for \({X}^{ * }\) to satisfy the \({T}_{1}\) axiom; one simply requires that each element of the partition \({X}^{ * }\) be a closed subset of \(X\) . Conditions that will ensure \({X}^{ * }\) is Hausdorff are harder to find. This is one of the more delicate questions concerning quotient spaces; we shall return to it several times later in the book.
 
-Perhaps the most important result in the study of quotient spaces has to do with the problem \index{Composite: of functions!of continuous functions}of constructing continuous functions on a quotient space. We consider that problem now. When we studied \\index{Convergent sequence!in a product space}index{Product space}product spaces, we had a criterion for determining whether a map \(f : Z \rightarrow  \prod {X}_{\alpha }\) into a \index{product space@Product space}product space was continuous. Its counterpart in the theory of quotient spaces is a criterion for determining when a map \(f : {X}^{ * } \rightarrow  Z\) out of a quotient space is continuous. One has the following theorem:
+Perhaps the most important result in the study of quotient spaces has to do with the problem \index{Composite: of functions!of continuous functions}of constructing continuous functions on a quotient space. We consider that problem now. When we studied \index{Convergent sequence!in a product space}\index{Product space}product spaces, we had a criterion for determining whether a map \(f : Z \rightarrow  \prod {X}_{\alpha }\) into a \index{product space@Product space}product space was continuous. Its counterpart in the theory of quotient spaces is a criterion for determining when a map \(f : {X}^{ * } \rightarrow  Z\) out of a quotient space is continuous. One has the following theorem:
 \end{proof}
 
 \begin{theorem}
