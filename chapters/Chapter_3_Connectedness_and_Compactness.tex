@@ -387,7 +387,7 @@ is a nonempty subset of \([  {a,b}]\) ; by continuity, it is open in \([  {a,b}]
 S = \{ x \times  \sin ( {1/x})  \mid  0 < x \leq  1\} .
 \]
 
-Because \(S\) is the image of the connected set \((0,1\rbrack\) under a continuous map, \(S\) is connected. Therefore, its closure \(\bar{S}\) in \({\mathbb{R}}^{2}\) is also connected. The set \(\bar{S}\) is a classical example in topology called the \index{topologist's sine curve@Topologist's sine curve}topologist's sine curve. It is illustrated in Figure 24.5; it equals the union of \(S\) and the vertical interval \(0 \times  [  {-1,1}]\) . We show that \(\bar{S}\) is not path connected.
+Because \(S\) is the image of the connected set \((0,1\rbrack\) under a continuous map, \(S\) is connected. Therefore, its closure \(\bar{S}\) in \({\mathbb{R}}^{2}\) is also connected. The set \(\bar{S}\) is a classical example in topology called the \index{Topologist's sine curve!connectedness}\index{topologist's sine curve@Topologist's sine curve}topologist's sine curve. It is illustrated in Figure 24.5; it equals the union of \(S\) and the vertical interval \(0 \times  [  {-1,1}]\) . We show that \(\bar{S}\) is not path connected.
 
 \begin{center}
 \includegraphics[width=0.7\textwidth]{images/24.4.jpg}
@@ -585,7 +585,7 @@ Because \(X\) is locally path connected, each path component of \(X\) is open in
   \item Show that \(T\) is path connected, but is locally connected only at the point \(p\) .
   \item Find a subset of \({\mathbb{R}}^{2}\) that is path connected but is locally connected at none of its points.
   \end{enumerate}
-\item A space \(X\) is said to be \index{weak local connectedness@Weak local connectedness} weakly locally connected at \(x\) if for every neighborhood \(U\) of \(x\) , there is a connected subspace of \(X\) contained in \(U\) that contains a neighborhood of \(x\) . Show that if \(X\) is weakly locally connected at each of its points, then \(X\) is locally connected. [Hint: Show that components of open sets are open.]
+\item A space \(X\) is said to be \index{weak local connectedness@Weak local connectedness} weakly locally connected at \(x\) if for every neighborhood \(U\) of \(x\) , there is a connected subspace of \(X\) contained in \(U\) that contains a neighborhood of \(x\) . Show that if \(X\) is weakly locally connected at each of its points, then \(X\) is \index{Weak local connectedness!vs. connectedness}locally connected. [Hint: Show that components of open sets are open.]
 \item Consider the ``\index{Infinite broom}'' \(X\) pictured in Figure 25.1. Show that \(X\) is not locally connected at \(p\) , but is weakly locally connected at \(p\) . [Hint: Any connected neighborhood of \(p\) must contain all the points \({a}_{i}\) .] \begin{center} \includegraphics[width=1.0\textwidth]{images/25.1.jpg} \end{center} \hspace*{3em} Figure 25.1
 \item Let \(p : X \rightarrow  Y\) be a quotient map. Show that if \(X\) is \index{Quotient topology!local connectedness}locally connected, then \(Y\) is locally connected. [Hint: If \(C\) is a component of the open set \(U\) of \(Y\) , show that \({p}^{-1}( C)\) is a union of components of \({p}^{-1}( U)\) .]
 \item Let \(G\) be a \index{Topological group}; let \(C\) be the component of \(G\) containing the identity element \(e\) . Show that \(C\) is a normal subgroup of \(G\) . [Hint: If \(x \in  G\) , then \({xC}\) is the component of \(G\) containing \(x\) .]
@@ -683,7 +683,7 @@ Conversely, suppose the given condition holds; we wish to prove \(Y\) compact. L
 The collection \(\mathcal{A} = \{  {A}_{\alpha }\}\) is a covering of \(Y\) by sets open in \(X\) By hypothesis, some finite subcollection \(\{  {{A}_{{\alpha }_{1}},\ldots ,{A}_{{\alpha }_{n}}}\}\) covers \(Y\) . Then \(\{  {{A}_{{\alpha }_{1}}^{\prime },\ldots ,{A}_{{\alpha }_{n}}^{\prime }}\}\) is a subcollection of \({\mathcal{A}}^{\prime }\) that covers \(Y\)
 \end{proof}
 
-\section*{Theorem 26.2. Every closed subspace of a compact space is compact.}
+\section*{Theorem 26.2. Every \index{Compactness!of subspace}closed subspace of a compact space is compact.}
 
 \begin{proof}
 Let \(Y\) be a closed subspace of the compact space \(X\) . Given a covering \(\mathcal{A}\) of \(Y\) by sets open in \(X\) , let us form an open covering \(\mathcal{B}\) of \(X\) by adjoining to \(\mathcal{A}\) the single open set \(X - Y\) , that is,
@@ -695,7 +695,7 @@ Let \(Y\) be a closed subspace of the compact space \(X\) . Given a covering \(\
 Some finite subcollection of \(\mathcal{B}\) covers \(X\) . If this subcollection contains the set \(X - Y\) , discard \(X - Y\) ; otherwise, leave the subcollection alone. The resulting collection is a finite subcollection of \(\mathcal{A}\) that covers \(Y\) .
 \end{proof}
 
-\section*{Theorem 26.3. Every compact subspace of a Hausdorff space is closed.}
+\section*{Theorem 26.3. Every \index{Compactness!closed set criterion}compact subspace of a Hausdorff space is closed.}
 
 \begin{proof}
 Let \(Y\) be a compact subspace of the Hausdorff space \(X\) . We shall prove that \(X - Y\) is open, so that \(Y\) is closed.
@@ -941,9 +941,9 @@ We shall use the \index{Compactness!closed set criterion}closed set criterion fo
 \end{enumerate}
 \section*{§ 27 Compact Subspaces of the Real Line}
 
-The theorems of the preceding section enable us to construct new compact spaces from existing ones, but in order to get very far we have to find some compact spaces to start with. The natural place to begin is the real line; we shall prove that every closed interval in \(\mathbb{R}\) is compact. Applications include the \index{Extreme value theorem} and the uniform continuity theorem of calculus, suitably generalized. We also give a characterization of all \index{Linear continuum!compact subspaces}\index{Linear continuum!compact subspaces}compact subspaces \index{Path connectedness!of \({\mathbb{R}}^{n} - 0\)}of \({\mathbb{R}}^{n}\) , and a proof of the \index{\(\mathbb{R}\) (reals)!uncountability}\index{\(\mathbb{R}\) (reals)!uncountability}uncountability of the set of real numbers.
+The theorems of the preceding section enable us to construct new compact spaces from existing ones, but in order to get very far we have to find some compact spaces to start with. The natural place to begin is the real line; we shall prove that every \index{Compactness!in \(\mathbb{R}\) and \({\mathbb{R}}^{n}\)}closed interval in \(\mathbb{R}\) is compact. Applications include the \index{Extreme value theorem} and the uniform continuity theorem of calculus, suitably generalized. We also give a characterization of all \index{Linear continuum!compact subspaces}\index{Linear continuum!compact subspaces}compact subspaces \index{Path connectedness!of \({\mathbb{R}}^{n} - 0\)}of \({\mathbb{R}}^{n}\) , and a proof of the \index{\(\mathbb{R}\) (reals)!uncountability}\index{\(\mathbb{R}\) (reals)!uncountability}uncountability of the set of real numbers.
 
-It turns out that in order to prove every closed interval in \(\mathbb{R}\) is compact, we need only one of the order properties of the real line-the least upper bound property. We shall prove the theorem using only this hypothesis; then it will apply not only to the real line, but to well-ordered sets and other ordered sets as well.
+It turns out that in order to prove every \index{Compactness!in \(\mathbb{R}\) and \({\mathbb{R}}^{n}\)}closed interval in \(\mathbb{R}\) is compact, we need only one of the order properties of the real line-the least upper bound property. We shall prove the theorem using only this hypothesis; then it will apply not only to the real line, but to well-ordered sets and other ordered sets as well.
 
 \begin{theorem}
 	Let \(X\) be a simply ordered set having the least upper bound property. In the order topology, each closed interval in \(X\) is compact.
@@ -982,7 +982,7 @@ can also be covered by finitely many elements of \(\mathcal{A}\) . This means th
 \end{proof}
 
 \begin{corollary}
-	Every closed interval in \(\mathbb{R}\) is compact.
+	Every \index{Compactness!in \(\mathbb{R}\) and \({\mathbb{R}}^{n}\)}closed interval in \(\mathbb{R}\) is compact.
 \end{corollary}
 
 Now we charactenze the compact subspaces of \({\mathbb{R}}^{n}\) :
