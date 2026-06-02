@@ -79,6 +79,11 @@ MISATTACHED = [
     ("{B}^{2}", "compactness", "{B}^{n}"),
     ("{B}^{2}", "fundamental group", "{B}^{n}"),
     ("{B}^{2}", "path connectedness", "{B}^{n}"),
+    # U(A,ε) subitems → Uncountability; Uniform limit thm → Uniform metric
+    ("U( {A,\\epsilon }", "0,1", "Uncountability"),
+    ("U( {A,\\epsilon }", "mathbb", "Uncountability"),
+    ("U( {A,\\epsilon }", "transcendental", "Uncountability"),
+    ("Uniform limit theorem", "completeness", "Uniform metric"),
 ]
 fixed_mis = 0
 i = 0
@@ -170,8 +175,47 @@ while i < len(lines):
         clean = clean.strip().rstrip(", ").lower()
         # Normalize math delimiters: $, \(, \) are all equivalent
         clean = clean.replace(chr(92) + "(", "").replace(chr(92) + ")", "").replace("$", "")
+        # Normalize LaTeX math commands to plain text
+        clean = clean.replace(chr(92) + "mathbb{r}", "r").replace(chr(92) + "mathbb{R}", "r")
+        clean = clean.replace(chr(92) + "mathbb{z}", "z")
+        # Strip trailing punctuation for prefix matching
+        clean = clean.rstrip(", .;:")
+        # Fix engine-generated "in : X" pattern
+        clean = clean.replace(" : ", " ")
+        # Normalize \left/\right
+        clean = clean.replace(chr(92) + "left", "").replace(chr(92) + "right", "")
+        # Strip remaining LaTeX braces
+        clean = clean.replace("{", "").replace("}", "")
         entries_by_lower[clean].append((i, text.strip(), pages))
     i += 1
+
+# === Hard-merge known engine duplicates (text differs only by missing LaTeX) ===
+HARD_MERGES = [
+    ("intervals in compactness", "intervals in r: compactness"),
+    ("uncountability: of p(z+)", "uncountability: of p(z +)"),
+]
+for short_k, long_k in HARD_MERGES:
+    if short_k in entries_by_lower and long_k in entries_by_lower:
+        entries_by_lower[long_k].extend(entries_by_lower[short_k])
+        del entries_by_lower[short_k]
+
+# === Prefix-merge: entries where one clean key is a prefix of another ===
+prefix_merges = []
+keys = list(entries_by_lower.keys())
+for i in range(len(keys)):
+    for j in range(len(keys)):
+        if i != j:
+            ki, kj = keys[i], keys[j]
+            if len(ki) >= 4 and len(kj) > len(ki) and kj.startswith(ki):
+                prefix_merges.append((ki, kj))
+                break
+
+for short_key, long_key in prefix_merges:
+    entries_by_lower[long_key].extend(entries_by_lower[short_key])
+    del entries_by_lower[short_key]
+
+if prefix_merges:
+    print(f"Prefix-merged: {len(prefix_merges)} groups")
 
 to_remove = set()
 for lower, group in entries_by_lower.items():
@@ -199,6 +243,62 @@ for lower, group in entries_by_lower.items():
 
 lines = [l for i, l in enumerate(lines) if i not in to_remove]
 print(f"Merged: {len(to_remove)} duplicate lines")
+
+# === Deduplicate L2 subitems under same parent ===
+i = 0
+sub_removals = set()
+while i < len(lines):
+    s = lines[i].strip()
+    if s.startswith(bs + "item ") and not s.startswith(bs + "subitem "):
+        # Collect subitems under this L1
+        subs = {}
+        j = i + 1
+        while j < len(lines) and not lines[j].strip().startswith(bs + "item "):
+            sj = lines[j].strip()
+            if sj.startswith(bs + "subitem "):
+                sub_text = sj[len(bs + "subitem "):]
+                # Normalize sub text
+                sub_clean = sub_text.strip().lower()
+                sub_clean = sub_clean.replace(bs + "(", "").replace(bs + ")", "").replace("$", "")
+                sub_clean = sub_clean.replace(bs + "mathbb{r}", "r").replace(bs + "mathbb{R}", "r")
+                sub_clean = sub_clean.rstrip(", .;:").replace(" :", "")
+                while bs + "hyperpage{" in sub_clean:
+                    hp = sub_clean.find(bs + "hyperpage{"); he = sub_clean.find("}", hp)
+                    if he > hp: sub_clean = sub_clean[:hp] + sub_clean[he+1:]
+                sub_clean = sub_clean.strip()
+                if sub_clean in subs:
+                    # Duplicate: merge pages from this line into first occurrence
+                    first_idx, first_pages = subs[sub_clean]
+                    # Extract page from current sub
+                    hp = sub_text.find(bs + "hyperpage{")
+                    if hp >= 0:
+                        he = sub_text.find("}", hp)
+                        if he > hp:
+                            page = sub_text[hp+11:he]
+                            if page not in first_pages:
+                                first_pages.append(page)
+                    sub_removals.add(j)
+                else:
+                    # Extract pages
+                    pages = []
+                    hp = 0
+                    temp = sub_text
+                    while bs + "hyperpage{" in temp:
+                        hp = temp.find(bs + "hyperpage{"); he = temp.find("}", hp)
+                        if he > hp:
+                            pages.append(temp[hp+11:he])
+                            temp = temp[:hp] + temp[he+1:]
+                    subs[sub_clean] = (j, pages)
+            elif sj.startswith(bs + "item "):
+                break
+            j += 1
+        i = j
+    else:
+        i += 1
+
+if sub_removals:
+    lines = [l for idx, l in enumerate(lines) if idx not in sub_removals]
+    print(f"Merged L2 duplicates: {len(sub_removals)} lines")
 
 # === Redistribute empty group entries ===
 new_lines = []
