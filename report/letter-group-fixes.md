@@ -1,6 +1,6 @@
 # 字母组索引修复报告
 
-## 已完成字母组：A, B, J, K, U, V, W, X, Z
+## 已完成字母组：A, B, J, K, Q, U, V, W, X, Z
 
 ---
 
@@ -36,6 +36,24 @@
 | k-fold covering | 新增 L1（Ch9 §53 习题） |
 | k-plane | 新增 L1（Ch8 §50 定义处） |
 | K-topology (see also R\_K) | 新增 L1（Ch2 定义处） |
+
+## Q 组
+| 条目 | 操作 |
+|------|------|
+| Quasicomponent!vs. component | 新增 L2（Ch3 习题） |
+| Quotient map!restrictions | 新增 L2（Ch2，修正为复数形式） |
+| Quotient topology!Hausdorff condition | 新增 L2（Ch13） |
+| Quotient topology!local compactness | 新增 L2（Ch13） |
+| Quotient topology!local connectedness | 新增 L2（Ch3 习题） |
+| Quotient topology!normality | 新增 L2（Ch4 orbit space 定义） |
+| Quotient topology!regularity | 新增 L2（Ch13 covering map 定理） |
+| Quotient topology!second-countability | 新增 L2（Ch2 §22 导言） |
+| Quotient topology!T1 condition | 新增 L2（Ch2 §22 导言） |
+| Quotient topology!vs. product topology | 新增 L2（Ch2 习题） |
+
+> **经验**：Quotient topology 的 L2 条目分布在 Ch2、Ch3、Ch4、Ch11、Ch13 共 5 个章节。
+> 其中 second-countability 和 T1 condition 在原文中无直接措辞，通过添加到 §22 导言处兜底。
+> Quotient map!restrictions 需注意 OCR 为复数形式。
 
 ## U 组
 | 条目 | 操作 |
@@ -110,7 +128,8 @@
 
 ## 统计
 
-- 条目数：600（从初始约 624 提升，重复合并后净增约 30+ 条目）
-- `.ind` 行数：975
+- 已完成字母组：10（A, B, J, K, Q, U, V, W, X, Z）
+- 条目数：568
+- `.ind` 行数：939
 - makeindex：0 rejected，0 warnings
 - 编译错误：0

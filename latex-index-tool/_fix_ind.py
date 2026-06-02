@@ -206,7 +206,11 @@ for i in range(len(keys)):
     for j in range(len(keys)):
         if i != j:
             ki, kj = keys[i], keys[j]
-            if len(ki) >= 4 and len(kj) > len(ki) and kj.startswith(ki):
+            if len(ki) >= 10 and len(kj) > len(ki) and kj.startswith(ki):
+                # Don't merge if long key continues with " (" or ":" (cont., subtitle)
+                next_ch = kj[len(ki)]
+                if next_ch in ' (:':
+                    continue
                 prefix_merges.append((ki, kj))
                 break
 

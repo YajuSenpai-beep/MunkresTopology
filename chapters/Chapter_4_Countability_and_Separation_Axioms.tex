@@ -4,7 +4,7 @@
 
 The concepts we are going to introduce now, unlike compactness and connectedness, do not arise naturally from the study of calculus and analysis. They arise instead from a deeper study of topology itself. Such problems as \index{imbedding theorem: for a compact manifold@Imbedding theorem: for a compact manifold} imbedding a given space in a metric space or in a compact Hausdorff space are basically problems of topology rather than analysis. These particular problems have solutions that involve the countability and \index{\({\mathbb{R}}_{K}\)!separation axioms}\index{\({\mathbb{R}}_{K}\)!separation axioms}separation axioms.
 
-We have already introduced the first countability axiom; it arose in connection with our study of \index{convergent net@Convergent net} convergent sequences in \(\$ {21}\) . We have also studied one of the separation axioms-the Hausdorff axiom, and mentioned another-the \({T}_{1}\) axiom. In this chapter we shall introduce other, and stronger, axioms like these and explore some of their consequences. Our basic goal is to prove the \index{urysohn metrization theorem@Urysohn metrization theorem}. It says that if a topological space \(X\) satisfies a certain countability axiom (the second) and a certain separation axiom (the \index{regular space (see also regularity)@Regular space (see also Regularity)} \index{Locally compact Hausdorff space: Baire condition!regularity}\index{Locally compact Hausdorff space: Baire condition!regularity}\index{Locally compact Hausdorff space: Baire condition!regularity}regularity axiom), then \(X\) can be imbedded in a metric space and is thus metrizable.
+We have already introduced the first countability axiom; it arose in connection with our study of \index{convergent net@Convergent net} convergent sequences in \(\$ {21}\) . We have also studied one of the separation axioms-the Hausdorff axiom, and mentioned another-the \({T}_{1}\) axiom. In this chapter we shall introduce other, and stronger, axioms like these and explore some of their consequences. Our basic goal is to prove the \index{urysohn metrization theorem@Urysohn metrization theorem}. It says that if a topological space \(X\) satisfies a certain countability axiom (the second) and a certain separation axiom (the \index{Regularity!vs. metrizability}\index{regular space (see also regularity)@Regular space (see also Regularity)}regularity axiom), then \(X\) can be imbedded in a metric space and is thus metrizable.
 
 Another imbedding theorem, important to geometers, appears in the last section \index{Regularity!of manifold}of the chapter. Given a space that is a compact \index{Manifold} (the higher-dimensional analogue of a \index{Surface}), we show that it can be imbedded in some finite-dimensional euclidean space.
 
@@ -57,7 +57,7 @@ Now we note that the subspace \(A\) of \({\mathbb{R}}^{\omega }\) consisting of 
 Both \\index{Countable dense subset!in \({\mathbb{R}}_{\ell }\)}index{\({\mathbb{R}}_{\ell }\)!countability axioms}\index{\({\mathbb{R}}_{\ell }\)!countability axioms}\index{\({\mathbb{R}}_{\ell }\)!countability axioms}countability axioms are well behaved with respect to the operations \index{Complete regularity!of product space}of taking subspaces or countable products:
 
 \begin{theorem}
-	A subspace of a first-countable space is first-countable, and a countable product of first-countable spaces is first-countable. A subspace of a second-countable space is second-countable, and a countable product of second-countable spaces is second-countable.
+	A subspace of a first-countable space is first-countable, and a countable product of first-countable spaces is first-countable. A \index{Second-countability!of subspace}subspace of a second-countable space is second-countable, and a countable \index{Second-countability!of products}product of second-countable spaces is second-countable.
 
 \end{theorem}
 \begin{proof}
@@ -177,7 +177,7 @@ The terminology here comes from the German. The `` \(G\) `` stands for ``Gebiet,
 
 3. Let \(X\) have a countable basis; let \(A\) be an uncountable subset of \(X\) . Show that uncountably many points of \(A\) are limit points of \(A\) .
 
-4. Show that every compact metrizable space \(X\) has a countable basis. [Hint: Let \({\mathcal{A}}_{n}\) be a finite covering of \(X\) by \(1/n\) -balls.]
+4. Show that every \index{Second-countability!of compact metric space}compact metrizable space \(X\) has a countable basis. [Hint: Let \({\mathcal{A}}_{n}\) be a finite covering of \(X\) by \(1/n\) -balls.]
 
 5. (a) Show that every metrizable space with a countable dense subset has a countable basis.
 
@@ -218,7 +218,7 @@ In this section, we introduce three separation axioms and explore some of their 
 Recall that a space \(X\) is said to be Hausdorff if for each pair \(x,y\) of distinct points of \(X\) , there exist disjoint open sets containing \(x\) and \(y\) , respectively.
 
 \begin{definition}
-	Suppose that one-point sets are closed in \(X\) . Then \(X\) is said to be regular if for each pair consisting of a point \(x\) and a closed set \(B\) disjoint from \(x\) , there exist disjoint open sets containing \(x\) and \(B\) , respectively. The space \(X\) is said to be normal if for each pair \(A,B\) of disjoint closed sets of \(X\) , there exist disjoint open sets containing \(A\) and \(B\) , respectively.
+	Suppose that one-point sets are closed in \(X\) . Then \(X\) is said to be \index{Regularity!vs. normality}regular if for each pair consisting of a point \(x\) and a closed set \(B\) disjoint from \(x\) , there exist disjoint open sets containing \(x\) and \(B\) , respectively. The space \(X\) is said to be normal if for each pair \(A,B\) of disjoint closed sets of \(X\) , there exist disjoint open sets containing \(A\) and \(B\) , respectively.
 \end{definition}
 
 It is clear that a regular space is Hausdorff, and that a \index{Normal space} is regular. (We need to include the condition that one-point sets be closed as part of the definition of regularity and \index{Normality} in order for this to be the case. A two-point space in the indiscrete topology satisfies the other part of the definitions of regularity and normality, even though it is not Hausdorff.) For examples showing the regularity axiom stronger than the Hausdorff axiom, and normality stronger than regularity, see Examples 1 and 3.
@@ -259,7 +259,7 @@ Now we relate the separation axioms with the concepts previously introduced.
 \begin{theorem}
 	(a) A subspace of a Hausdorff space is Hausdorff; a product of Hausdorff spaces is Hausdorff.
 
-(b) A subspace of a regular space is regular; a product of regular spaces is regular.
+(b) A \index{Regularity!of subspaces}subspace of a regular space is regular; a \index{Regularity!of products}product of regular spaces is regular.
 \end{theorem}
 \begin{proof}
 	(a) This result was an exercise in \(§{17}\) . We provide a proof here. Let \(X\) be Hausdorff. Let \(x\) and \(y\) be two points of the subspace \(Y\) of \(X\) . If \(U\) and \(V\) are disjoint neighborhoods in \(X\) of \(x\) and \(y\) , respectively, then \(U \cap  Y\) and \(V \cap  Y\) are disjoint neighborhoods of \(x\) and \(y\) in \(Y\) .
@@ -524,9 +524,9 @@ Figure 32.3
 
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
-\item Show that a closed subspace of a normal space is normal.
+\item Show that a \index{Normality!of closed subspace}closed subspace of a normal space is normal.
 \item Show that if \(\prod {X}_{\alpha }\) is Hausdorff, or regular, or normal, then so is \({X}_{\alpha }\) . (Assume that each \({X}_{\alpha }\) is nonempty.)
-\item Show that every locally compact Hausdorff space is regular.
+\item Show that every locally compact Hausdorff space is \index{Regularity!of locally compact Hausdorff space}regular.
 \item Show that every regular Lindelöf space is normal.
 \item Is \({\mathbb{R}}^{\omega }\) normal in the product topology? In the uniform topology? It is not known whether \({\mathbb{R}}^{\omega }\) is normal in the box topology. Mary-Ellen Rudin has shown that the answer is affirmative if one assumes the continuum hypothesis \cite{Rudin1972}. In fact, she shows it satisfies a stronger condition called paracompact-ness.
 \item A space \(X\) is said to be \index{complete regularity (cont.)@Complete regularity (cont.)} completely normal if every subspace of \(X\) is normal. Show that \(X\) is completely normal if and only if for every pair \(A,B\) of separated sets in \(X\) (that is, sets such that \(\bar{A} \cap  B = \varnothing\) and \(A \cap  \bar{B} = \varnothing\) ), there exist disjoint open sets containing them. [Hint: If \(X\) is completely normal, consider \(X - ( {\bar{A} \cap  \bar{B}})\) .]
@@ -728,14 +728,14 @@ Requiring that one be able to separate a point from a closed set by a continuous
 	A space \(X\) is completely regular if one-point sets are closed in \(X\) and if for each point \({x}_{0}\) and each closed set \(A\) not containing \({x}_{0}\) , there is a continuous function \(f : X \rightarrow  [  {0,1}]\) such that \(f( {x}_{0})  = 1\) and \(f( A)  = \{ 0\}\) .
 \end{definition}
 
-A normal space is completely regular, by the Urysohn lemma, and a \index{Completely regular space} is regular, since given \(f\) , the sets \({f}^{-1}( [  {0,\frac{1}{2}}) )\) and \({f}^{-1}( [  {\frac{1}{2},1}]  )\) are disjoint open sets about \(A\) and \({x}_{0}\) , respectively As a result, this new axiom fits in between regularity and normality in the list of separation axioms. Note that in the definition one could just as well require the function to map \({x}_{0}\) to 0, and \(A\) to \(\{ 1\}\) , for \(g( x)  = 1 - f( x)\) satisfies this condition. But our definition is at times a bit more convenient.
+A \index{Complete regularity!vs. normality}normal space is completely regular, by the Urysohn lemma, and a \index{Completely regular space} is regular, since given \(f\) , the sets \({f}^{-1}( [  {0,\frac{1}{2}}) )\) and \({f}^{-1}( [  {\frac{1}{2},1}]  )\) are disjoint open sets about \(A\) and \({x}_{0}\) , respectively As a result, this new axiom fits in between regularity and normality in the list of separation axioms. Note that in the definition one could just as well require the function to map \({x}_{0}\) to 0, and \(A\) to \(\{ 1\}\) , for \(g( x)  = 1 - f( x)\) satisfies this condition. But our definition is at times a bit more convenient.
 
 In the early years of topology, the separation axioms, listed in order of increasing strength, were labelled \({T}_{1},{T}_{2}\) (Hausdorff), \({T}_{3}\) (regular), \({T}_{4}\) (normal), and \({T}_{5}\) (completely normal), respectively. The letter ``T'' comes from the German ``Trennungsax-iom,'' which means ``separation axiom.'' Later, when the notion of \index{Complete regularity} was introduced, someone suggested facetiously that it should be called the `` \(T - 3\frac{1}{2}\) axiom,'' since it lies between regularity and normality. This terminology is in fact sometimes used in the literature \({}^{1}\)
 
 Unlike normality, this new separation axiom is nicely behaved with regard to subspaces and products:
 
 \begin{theorem}
-	A subspace of a completely regular space is completely regular. A product of completely regular spaces is completely regular.
+	A \index{Complete regularity!of subspace}subspace of a completely regular space is completely regular. A \index{Complete regularity!of product space}product of completely regular spaces is completely regular.
 \end{theorem}
 \begin{proof}
 	Let \(X\) be completely regular; let \(Y\) be a subspace of \(X\) . Let \({x}_{0}\) be a point of \(Y\) , and let \(A\) be a closed set of \(Y\) disjoint from \({x}_{0}\) . Now \(A = \bar{A} \cap  Y\) , where \(\bar{A}\) denotes the closure of \(A\) in \(X\) . Therefore, \({x}_{0} \notin  \bar{A}\) . Since \(X\) is completely regular, we can choose a continuous function \(f : X \rightarrow  [  {0,1}]\) such that \(f( {x}_{0})  = 1\) and \(f( \bar{A})  = \{ 0\}\) . The restriction of \(f\) to \(Y\) is the desired continuous function on \(Y\) .
@@ -781,7 +781,7 @@ A space that is regular but not completely regular is much harder to find. Most 
   \item Show that a \index{Perfectly normal space} is completely normal. For this reason the condition of perfect normality is sometimes called the `` \({T}_{6}\) axiom.'' [Hint: Let \(A\) and \(B\) be separated sets in \(X\) . Choose continuous functions \(f,g\) : \(X \rightarrow  [  {0,1}]\) that vanish precisely on \(\bar{A}\) and \(\bar{B}\) , respectively. Consider the function \(f - g\) .]
   \item There is a familiar space that is completely normal but not perfectly normal. What is it?
   \end{enumerate}
-\item Show that every locally compact Hausdorff space is completely regular.
+\item Show that every \index{Complete regularity!of locally compact Hausdorff space}locally compact Hausdorff space is completely regular.
 \item Let \(X\) be completely regular, let \(A\) and \(B\) be disjoint closed subsets of \(X\) . Show that if \(A\) is compact, there is a continuous function \(f : X \rightarrow  [  {0,1}]\) such that \(f( A)  = [  0]\) and \(f( B)  = [  1]\) .
 \item Show that \({\mathbb{R}}^{J}\) in the box topology is completely regular. [Hint: Show that it suffices to consider the case where the box neighborhood \({( -1,1) }^{J}\) is disjoint from \(A\) and the point is the origin. Then use the fact that a function continuous in the uniform topology is also continuous in the box topology.] *10. Prove the following:  \textsl{Theorem.} Every topological group is completely regular.  \textsl{Proof.} Let \({V}_{0}\) be a neighborhood of the identity element \(e\) , in the topological group \(G\) . In general, choose \({V}_{n}\) to be a neighborhood of \(e\) such that \({V}_{n} \cdot  {V}_{n} \subset\)  \({V}_{n - 1}\) . Consider the set of all dyadic rationals \(p\) , that is, all rational numbers of the form \(k/{2}^{n}\) , with \(k\) and \(n\) integers. For each dyadic rational \(p\) in \((0,1\rbrack\) , define an open set \(U( p)\) inductively as follows: \(U( 1)  = {V}_{0}\) and \(U( \frac{1}{2})  = {V}_{1}\) Given \(n\) , if \(U( {k/{2}^{n}})\) is defined for \(0 < k/{2}^{n} \leq  1\) , define \[ U( {1/{2}^{n + 1}})  = {V}_{n + 1} \] \[ U( {( {{2k} + 1}) /{2}^{n + 1}})  = {V}_{n + 1} \cdot  U( {k/{2}^{n}}) \] for \(0 < k < {2}^{n}\) . For \(p \leq  0\) , let \(U( p)  = \varnothing\) , and for \(p > 1\) , let \(U( p)  = G\) . Show that \[ {V}_{n}\;U( {k/{2}^{n}})  \subset  U( {( {k + 1}) /{2}^{n}}) \] for all \(k\) and \(n\) . Proceed as in the Urysohn lemma. This exercise is adapted from 		\cite{MontgomeryZippin1955}, to which the reader is referred for further results on topological groups. -11. Define a set \(X\) as follows: For each even integer \(m\) , let \({L}_{m}\) denote the line segment \(m \times  [  {-1,0}]\) in the plane. For each odd integer \(n\) and each integer \(k \geq  2\) , let \({C}_{n,k}\) denote the union of the line segments \(( {n + 1 - 1/k})  \times  [  {-1,0}]\) and \(( {n - 1 + 1/k})  \times  [  {-1,0}]\) and the semicircle \[ \{ x \times  y \mid  {( x - n) }^{2} + {y}^{2} = {( 1 - 1/k) }^{2}\text{ and }y \geq  0\} \] in the plane. Let \({p}_{n,k}\) denote the topmost point \(n \times  ( {1 - 1/k})\) of this semicircle. Let \(X\) be the union of all the sets \({L}_{m}\) and \({C}_{n,k}\) , along with two extra points \(a\) and \(b\) . Topologize \(X\) by taking sets of the following four types as basis elements:
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
