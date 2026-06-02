@@ -73,6 +73,34 @@ while i < len(lines):
 if left_fixed:
     print(f"Fixed \\left/\\right duplicates: {left_fixed} entries")
 
+# Remove orphaned (cont.) entries with no subitems
+i = 0
+while i < len(lines):
+    s = lines[i].strip()
+    if s.startswith(bs + "item ") and "(cont.)" in s:
+        has_subs = any(lines[j].strip().startswith(bs + "subitem ")
+                      for j in range(i+1, min(i+5, len(lines)))
+                      if not lines[j].strip().startswith(bs + "item "))
+        if not has_subs:
+            name = s[len(bs+"item "):]
+            hp = name.find(bs+"hyperpage")
+            if hp >= 0: name = name[:hp]
+            ci = name.find("(cont.)")
+            if ci >= 0: name = name[:ci]
+            base = name.strip().rstrip(",:").strip()
+            prev = i - 1
+            while prev >= 0:
+                ps = lines[prev].strip()
+                if ps.startswith(bs + "item ") and not ps.startswith(bs + "subitem "):
+                    pname = ps[len(bs+"item "):]
+                    hp2 = pname.find(bs+"hyperpage")
+                    if hp2 >= 0: pname = pname[:hp2]
+                    if pname.strip().rstrip(",:").strip() == base:
+                        lines.pop(i); i -= 1
+                    break
+                prev -= 1
+    i += 1
+
 # Process L1 splits: rename "XXX: YYY" -> "XXX" (L2 already present)
 for full_frag, base_name in L1_SPLITS:
     for i, line in enumerate(lines):
@@ -127,6 +155,8 @@ FIXES = [
     # Uniform limit theorem completeness -> Uniform metric
     ("Uniform limit theorem", "completeness", "Uniform metric"),
     ("Uniform limit theorem", "vs. sup metric", "Uniform metric"),
+    # 2-Manifold L2 -> 2-Manifold
+    ("2-manifold with boundary", "topological dimension", "2-Manifold,"),
 ]
 
 total_fixed = 0

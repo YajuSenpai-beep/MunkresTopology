@@ -387,7 +387,7 @@ is a nonempty subset of \([  {a,b}]\) ; by continuity, it is open in \([  {a,b}]
 S = \{ x \times  \sin ( {1/x})  \mid  0 < x \leq  1\} .
 \]
 
-Because \(S\) is the image of the connected set \((0,1\rbrack\) under a continuous map, \(S\) is connected. Therefore, its closure \(\bar{S}\) in \({\mathbb{R}}^{2}\) is also connected. The set \(\bar{S}\) is a classical example in topology called the \index{Topologist's sine curve!connectedness}\index{topologist's sine curve@Topologist's sine curve}topologist's sine curve. It is illustrated in Figure 24.5; it equals the union of \(S\) and the vertical interval \(0 \times  [  {-1,1}]\) . We show that \(\bar{S}\) is not path connected.
+Because \(S\) is the image of the connected set \((0,1\rbrack\) under a continuous map, \(S\) is connected. Therefore, its closure \(\bar{S}\) in \({\mathbb{R}}^{2}\) is also connected. The set \(\bar{S}\) is a classical example in topology called the \index{Topologist's sine curve!connectedness}\index{Topologist's sine curve!path connectedness}\index{topologist's sine curve@Topologist's sine curve}topologist's sine curve. It is illustrated in Figure 24.5; it equals the union of \(S\) and the vertical interval \(0 \times  [  {-1,1}]\) . We show that \(\bar{S}\) is not path connected.
 
 \begin{center}
 \includegraphics[width=0.7\textwidth]{images/24.4.jpg}
@@ -504,7 +504,7 @@ Let us show this is an equivalence relation. First we note that if there exists 
 One has the following theorem, whose proof is similar to that of the theorem preceding:
 
 \begin{theorem}
-	The \index{Topologist's sine curve (cont.): connectedness!path components}path components of \(X\) are path-connected disjoint subspaces of \(X\) whose union is \(X\) , such that each nonempty path-connected subspace of \(X\) intersects only one of them.
+	The \index{Topologist's sine curve!path components}path components of \(X\) are path-connected disjoint subspaces of \(X\) whose union is \(X\) , such that each nonempty path-connected subspace of \(X\) intersects only one of them.
 
 Note that each component of a space \(X\) is closed in \(X\) , since the closure \index{Closure!of a connected subspace}of a connected subspace of \(X\) is connected. If \(X\) has only finitely many components, then each component is also open in \(X\) , since its complement is a finite union of closed sets But in general the components of \(X\) need not be open in \(X\) .
 
@@ -518,7 +518,7 @@ One can say even less about the path components of \(X\) , for they need be neit
 
 \begin{centeredblock}
 \begin{example}
-	The ``\index{topologist's sine curve (cont.): connectedness@Topologist's sine curve (cont.): connectedness} topologist's sine curve'' \(\bar{S}\) of the preceding section is a space that has a single component (since it is connected) and two path components One path component is the curve \(S\) and the other is the vertical interval \(V = 0 \times  [  {-1,1}]\) . Note that \(S\) is open in \(\bar{S}\) but not closed, while \(V\) is closed but not open
+	The ``\index{Topologist's sine curve}topologist's sine curve'' \(\bar{S}\) of the preceding section is a space that has a single component (since it is connected) and two \index{Topologist's sine curve!path components}path components One path component is the curve \(S\) and the other is the vertical interval \(V = 0 \times  [  {-1,1}]\) . Note that \(S\) is open in \(\bar{S}\) but not closed, while \(V\) is closed but not open
 
 If one forms a space from \(\widetilde{S}\) by deleting all points of \(V\) having rational second coordinate, one obtains a space that has only one component but uncountably many path components.
 \end{example}
@@ -934,7 +934,7 @@ We shall use the \index{Compactness!closed set criterion}closed set criterion fo
 \item Let \(p : X \rightarrow  Y\) be a closed continuous surjective map such that \({p}^{-1}( {\{ y\} })\) is compact, for each \(y \in  Y\) . (Such a map is called a \index{Perfect map} ) Show that if \(Y\) is compact, then \(X\) is compact. [Hint: If \(U\) is an open set containing \({p}^{-1}( {\{ y\} })\) , there is a neighborhood \(W\) of \(y\) such that \({p}^{-1}( W)\) is contained in \(U\) ]
 \item Let \(G\) be a \index{topological group@Topological group}topological group.
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Let \(A\) and \(B\) be subspaces of \(G\) . If \(A\) is closed and \(B\) is compact, show \(A \cdot  B\) is closed. [Hint: If \(c\) is not in \(A \cdot  B\) , find a neighborhood \(W\) of \(c\) such that \(W \cdot  {B}^{-1}\) is disjoint from \(A\) .]
+  \item Let \(A\) and \(B\) be subspaces of \(G\) . If \(A\) is closed and \(B\) is compact, show \index{Topological group!closedness of \(A \cdot  B\)}\(A \cdot  B\) is closed. [Hint: If \(c\) is not in \(A \cdot  B\) , find a neighborhood \(W\) of \(c\) such that \(W \cdot  {B}^{-1}\) is disjoint from \(A\) .]
   \item Let \(H\) be a subgroup of \(G\) ; let \(p : G \rightarrow  \index{G@\(G/H\)} \index{G@$G/H$}\index{G@$G/H$}\index{G@$G/H$}G/H\) be the quotient map. If \(H\) is compact, show that \(p\) is a closed map.
   \item Let \(H\) be a compact subgroup \index{Regularity!of \(G/H\)}of \(G\) . Show that if \(G/H\) is compact, then \(G\) is compact.
   \end{enumerate}

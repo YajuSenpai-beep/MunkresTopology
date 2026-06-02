@@ -20,12 +20,16 @@ cont_ops = []  # list of (cont_idx, cont_end_idx, cont_text, subs)
 i = 0
 while i < len(lines):
     s = lines[i].strip()
-    if s.startswith(bs + "item ") and s.rstrip().endswith("(cont.)"):
+    if s.startswith(bs + "item ") and ("(cont.)" in s):
         text = s[6:]
         while bs + "hyperpage{" in text:
             hp = text.find(bs + "hyperpage{"); he = text.find("}", hp)
             if he > hp: text = text[:hp] + text[he + 1 :]
-        cont_text = text.strip().rstrip(", ").rstrip("(cont.)").strip()
+        # Strip everything from "(cont.)" onward
+        ci = text.find("(cont.)")
+        if ci >= 0:
+            text = text[:ci]
+        cont_text = text.strip().rstrip(",:").strip()
         subs = []
         j = i + 1
         while j < len(lines) and lines[j].strip().startswith(bs + "subitem "):
@@ -50,16 +54,17 @@ if cont_ops:
                 while bs + "hyperpage{" in btext:
                     hp = btext.find(bs + "hyperpage{"); he = btext.find("}", hp)
                     if he > hp: btext = btext[:hp] + btext[he + 1 :]
-                btext = btext.strip().rstrip(", ").rstrip("(cont.)").strip()
+                btext = btext.strip().rstrip(",:").rstrip("(cont.)").strip()
                 if btext == cont_text:
                     base_idx = k
                 break
-        if base_idx >= 0 and subs:
-            # Find end of base entry's subitems
-            insert_at = base_idx + 1
-            while insert_at < len(lines) and lines[insert_at].strip().startswith(bs + "subitem "):
-                insert_at += 1
-            inserts.append((insert_at, subs))
+        if base_idx >= 0:
+            if subs:
+                # Find end of base entry's subitems
+                insert_at = base_idx + 1
+                while insert_at < len(lines) and lines[insert_at].strip().startswith(bs + "subitem "):
+                    insert_at += 1
+                inserts.append((insert_at, subs))
         removals.update(range(cont_idx, cont_end))
 
     # Apply insertions in reverse order (bottom to top, avoid index drift)
@@ -314,7 +319,14 @@ while i < len(lines):
         i += 1
         while i < len(lines) and not lines[i].strip().startswith(bs + "lettergroup{"):
             if lines[i].strip().startswith(bs + "item "):
-                empty_entries.append(lines[i])
+                entry_lines = [lines[i]]
+                # Collect any subitems under this L1
+                j = i + 1
+                while j < len(lines) and lines[j].strip().startswith(bs + "subitem "):
+                    entry_lines.append(lines[j])
+                    j += 1
+                empty_entries.extend(entry_lines)
+                i = j - 1  # will be incremented below
             i += 1
         continue
     new_lines.append(lines[i])
@@ -322,7 +334,7 @@ while i < len(lines):
 
 letter_map = {
     "mathbb{R}": "R", "{B}^{n}": "B", "{S}^{1}": "S", "{S}^{n}": "S",
-    "{h}_{ * }": "H", "2-cell": "T", "2-manifold": "T", "{P}^{2}": "P",
+    "{h}_{ * }": "H", "2-cell": "T", "2-manifold": "T", "2-sphere": "T", "{P}^{2}": "P",
     "bar{A}": "A", "mathbb  {R}": "R", "mathbb{R}}^{J}": "R",
     "mathbb{R}}_{K}": "R", "mathbb{R}}_{\\ell": "R",
 }
@@ -336,8 +348,14 @@ for i, line in enumerate(new_lines):
 insertions = defaultdict(list)
 for line in empty_entries:
     s = line.strip()
+    if s.startswith(bs + "subitem "):
+        # Subitem: attach to last L1's letter
+        if last_letter and last_letter in letter_positions:
+            insertions[last_letter].append(line)
+        continue
     entry = s[6:]
     letter = None
+    last_letter = None
     for pattern, l in letter_map.items():
         if pattern in entry:
             letter = l; break
@@ -349,6 +367,7 @@ for line in empty_entries:
                 letter = ml[1]; break
     if letter and letter in letter_positions:
         insertions[letter].append(line)
+        last_letter = letter
 
 final = []
 for i, line in enumerate(new_lines):
