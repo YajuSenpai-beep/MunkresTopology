@@ -56,7 +56,7 @@ Conversely, suppose that \(A\) and \(B\) are disjoint nonempty sets whose union 
 
 \begin{centeredblock}
 \begin{example}
-	Let \(Y\) denote the subspace \([  {-1,0)\cup (0,1}]\) \index{Uncountability: of \(\mathcal{P}\left( {\mathbb{Z}}_{ + }\right)\)!of \(\mathbb{R}\)}of the real line \(\mathbb{R}\) . Each of the sets \([  {-1,0)\text{ and }(0,1}]\) is nonempty and open in \(Y\) (although not in \(\mathbb{R}\) ); therefore, they form a separation of \(Y\) . Alternatively, note that neither of these sets contains a limit point of the other. (They do have a limit point 0 in common, but that does not matter.)
+	Let \(Y\) denote the subspace \([  {-1,0)\cup (0,1}]\) \index{Uncountability:!of \(\mathbb{R}\)}of the real line \(\mathbb{R}\) . Each of the sets \([  {-1,0)\text{ and }(0,1}]\) is nonempty and open in \(Y\) (although not in \(\mathbb{R}\) ); therefore, they form a separation of \(Y\) . Alternatively, note that neither of these sets contains a limit point of the other. (They do have a limit point 0 in common, but that does not matter.)
 \end{example}
 \end{centeredblock}
 
@@ -137,8 +137,8 @@ Suppose that \(Z = A \cup  B\) is a separation of \(Z\) into two disjoint nonemp
 
 \section*{Theorem 23.6. A finite cartesian product of connected spaces is connected.}
 
-\beg\index{Slice: in covering space!in product space}in{proof}
-We prove the theorem first for the product of two connected spaces \(X\) and \(Y\) . This proof is easy to visualize. Choose a ``base point'' \(a \times  b\) in the product \(X \times  Y\) . Note that the ``horizontal slice'' \(X \times  b\) is connected, being homeomorphic with \(X\) , and each ``vertical slice'' \(x \times  Y\) is connected, being homeomorphic with \(Y\) . As a result, each ``T-shaped'' space
+\begin{proof}
+We prove the theorem first for the product of two connected spaces \(X\) and \(Y\) . This proof is easy to visualize. Choose a ``base point'' \(a \times  b\) in the product \(X \times  Y\) . Note that the ``horizontal slice'' \(X \times  b\) is connected, being homeomorphic with \(X\) , and each ``vertical slice'' \(x \times  Y\) is connected, being homeomorphic with \(Y\)\index{Slice: in covering space!in product space}. As a result, each ``T-shaped'' space
 
 \[
 {T}_{x} = ( {X \times  b})  \cup  ( {x \times  Y})
@@ -153,7 +153,7 @@ is connected, being the union of two connected spaces that have the point \(x \t
 
 Figure 23.2
 
-The pro\index{Connectedness!of a product space}of for any finite product of connected spaces follows by induction, using the fact (easily proved) that \({X}_{1} \times  \cdots  \times  {X}_{n}\) is homeomorphic with \(( {{X}_{1} \times  \cdots  \times  {X}_{n - 1}})  \times\)  \({X}_{n}\) .
+The proof for any finite product of connected spaces follows by induction, using the fact (easily proved) that \({X}_{1} \times  \cdots  \times  {X}_{n}\) is homeomorphic with \(( {{X}_{1} \times  \cdots  \times  {X}_{n - 1}})  \times\)  \({X}_{n}\)\index{Connectedness!of a product space}.
 
 It is natural to ask whether this theorem extends to arbitrary products of connected spaces. The answer depends on which topology is used for the product, as the following examples show.
 \end{proof}
@@ -223,10 +223,10 @@ The fact that intervals and rays in \(\mathbb{R}\) are connected may be familiar
 \end{definition}
 
 
-\beg\index{Compactness!in order topology}in{theorem}
-	If \(L\) is a linear continuum in the order topology, then \(L\) is connected, and so are intervals and rays in \(L\) .
-
+\begin{theorem}
+  If \(L\) is a linear continuum in the order topology, then \(L\) is connected, and so are intervals and rays in \(L\) .
 \end{theorem}
+
 \begin{proof}
 Recall that a subspace \(Y\) of \(L\) is said to be convex if for every pair of points \(a,b\) of \(Y\) with \(a < b\) , the entire interval \([  {a,b}]\) of points of \(L\) lies in \(Y\) . We prove that if \(Y\) is a convex subspace of \(L\) , then \(Y\) is connected.
 
@@ -319,7 +319,7 @@ The converse does not hold; a connected space need not be path connected. See Ex
 
 \begin{centeredblock}
 \begin{example}
-	Define the unit ball \(\index{B^n@\({B}^{n}\)} \index{B^n@${B}^{n}$}{B}^{n}\) in \({\mathbb{R}}^{n}\) by the equation
+	Define the \index{Unit ball (see also \({B}^{2},{B}^{n}\))}\index{Unit ball (see also \({B}^{2},{B}^{n}\))}unit ball \(\index{B^n@\({B}^{n}\)}{B}^{n}\) in \({\mathbb{R}}^{n}\) by the equation
 
 \[
 {B}^{n} = \{ \mathbf{x} \mid  \parallel \mathbf{x}\parallel  \leq  1\}
@@ -355,7 +355,7 @@ A similar argument shows that every open ball \({B}_{d}( {\mathbf{x},\epsilon })
 
 \begin{centeredblock}
 \begin{example}
-	Define the unit sphere \({S}^{n - 1}\) in \({\mathbb{R}}^{n}\) by the equation
+	Define the \index{Unit sphere (see also \({S}^{n}\))}unit sphere \({S}^{n - 1}\) in \({\mathbb{R}}^{n}\) by the equation
 
 \[
 {S}^{n - 1} = \{ \mathbf{x} \mid  \parallel \mathbf{x}\parallel  = 1\} .
@@ -587,13 +587,12 @@ Because \(X\) is locally path connected, each path component of \(X\) is open in
   \end{enumerate}
 \item A space \(X\) is said to be \index{weak local connectedness@Weak local connectedness} weakly locally connected at \(x\) if for every neighborhood \(U\) of \(x\) , there is a connected subspace of \(X\) contained in \(U\) that contains a neighborhood of \(x\) . Show that if \(X\) is weakly locally connected at each of its points, then \(X\) is locally connected. [Hint: Show that components of open sets are open.]
 \item Consider the ``\index{Infinite broom}'' \(X\) pictured in Figure 25.1. Show that \(X\) is not locally connected at \(p\) , but is weakly locally connected at \(p\) . [Hint: Any connected neighborhood of \(p\) must contain all the points \({a}_{i}\) .] \begin{center} \includegraphics[width=1.0\textwidth]{images/25.1.jpg} \end{center} \hspace*{3em} Figure 25.1
-\item Let \(p : X \rightarrow  Y\) be a quotient map. Show that if \(X\) is locally connected, then \(Y\) is locally connected. [Hint: If \(C\) is a component of the open set \(U\) of \(Y\) , show that \({p}^{-1}( C)\) is a union of components of \({p}^{-1}( U)\) .]
+\item Let \(p : X \rightarrow  Y\) be a quotient map. Show that if \(X\) is \index{Quotient topology!local connectedness}locally connected, then \(Y\) is locally connected. [Hint: If \(C\) is a component of the open set \(U\) of \(Y\) , show that \({p}^{-1}( C)\) is a union of components of \({p}^{-1}( U)\) .]
 \item Let \(G\) be a \index{Topological group}; let \(C\) be the component of \(G\) containing the identity element \(e\) . Show that \(C\) is a normal subgroup of \(G\) . [Hint: If \(x \in  G\) , then \({xC}\) is the component of \(G\) containing \(x\) .]
 \item Let \(X\) be a space. Let us define \(x \sim  y\) if there is no separation \(X = A \cup  B\) of \(X\) into disjoint open sets such that \(x \in  A\) and \(y \in  B\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show this relation is an equivalence relation. The equivalence classes are called the \index{Quasicomponent} of \(X\) .
-  \item Show that each component of \(X\) lies in a \index{quasicomponent@Quasicomponent}quasicomponent of \(X\) , and that the components and quasicomponents of \(X\) are the same if \(X\) is locally connected.
-  \item Let \(K\) denote the set \(\{  {1/n \mid  n \in  {\mathbb{Z}}_{ + }}\}\) and let \(- K\) denote the set \(\{  - 1/n \mid  n \in\)  \(. {\mathbb{Z}}_{ + }\}\) . Determine the components, path components, and quasicomponents of the following subspaces of \({\mathbb{R}}^{2}\) : \[ A = ( {K \times  [  {0,1}]  })  \cup  \{ 0 \times  0\}  \cup  \{ 0 \times  1\} . \] \[ B = A \cup  ( {[  {0,1}]   \times  \{ 0\rbrack }) \text{ . } \] \[ C = ( {K \times  [  {0,1}]  })  \cup  ( {-K \times  [  {-1,0}]  })  \cup  ( {[  {0,1}]   \times   - K})  \cup  ( {[  {-1,0}]   \times  K}) . \]
+  \item Show that each component of \(X\) lies in a \index{quasicomponent@Quasicomponent!vs. component}}_{ + }}\}\) and let \(- K\) denote the set \(\{  - 1/n \mid  n \in\)  \(. {\mathbb{Z}}_{ + }\}\) . Determine the components, path components, and quasicomponents of the following subspaces of \({\mathbb{R}}^{2}\) : \[ A = ( {K \times  [  {0,1}]  })  \cup  \{ 0 \times  0\}  \cup  \{ 0 \times  1\} . \] \[ B = A \cup  ( {[  {0,1}]   \times  \{ 0\rbrack }) \text{ . } \] \[ C = ( {K \times  [  {0,1}]  })  \cup  ( {-K \times  [  {-1,0}]  })  \cup  ( {[  {0,1}]   \times   - K})  \cup  ( {[  {-1,0}]   \times  K}) . \]
   \end{enumerate}
 \end{enumerate}
 \section*{§ 26 Compact Spaces}
@@ -1137,7 +1136,7 @@ where \(d( {{x}_{0},{C}_{m}})\) is the largest of the numbers \(d( {{x}_{0},{C}_
 \begin{proof}
 Given \(\epsilon  > 0\) , take the open covering of \(Y\) by balls \(B( {y,\epsilon /2})\) of radius \(\epsilon /2\) . Let \(\mathcal{A}\) be the open covering of \(X\) by the inverse images of these balls under \(f\) . Choose \(\delta\) to be a Lebesgue number for the covering \(\mathcal{A}\) . Then if \({x}_{1}\) and \({x}_{2}\) are two points of \(X\) such that \({d}_{\chi }( {{x}_{1},{x}_{2}})  < \delta\) , the two-point set \(\{  {{x}_{1},{x}_{2}}\}\) has diameter less than \(\delta\) , so that its image \(\{  {f( {x}_{1}) ,f( {x}_{2}) }\}\) lies in some ball \(B( {y,\epsilon /2})\) . Then \({d}_{Y}( {f( {x}_{1}) ,f( {x}_{2}) })  < \epsilon\) , as desired
 
-Finally, we prove that the real numbers are \index{Uncountability!of \(\mathbb{R}\)}uncountable. The interesting thing about this proof is that it involves no algebra at all-no decimal or binary expansions of real numbers or the like-just the order properties of \(\mathbb{R}\) .
+Finally, we prove that the real numbers are \index{Uncountability:!of \(\mathbb{R}\)}uncountable. The interesting thing about this proof is that it involves no algebra at all-no decimal or binary expansions of real numbers or the like-just the order properties of \(\mathbb{R}\) .
 \end{proof}
 
 \begin{definition}
@@ -1229,7 +1228,7 @@ So suppose \(A\) has no limit point. Then \(A\) contains all its limit points, s
 
 \begin{centeredblock}
 \begin{example}
-	Here is a less trivial example Consider the minimal uncountable well-ordered set \({S}_{\Omega }\) , in the order topology The space \({S}_{\Omega }\) is not compact, since it has no largest element However, it is limit point compact Let \(A\) be an infinite subset of \({S}_{\Omega }\) . Choose a subset \(B\) of \(A\) that is countably infinite Being countable, the set \(B\) has an upper bound \(b\) in \({S}_{\Omega }\) ; then \(B\) is a subset of the interval \([  {{a}_{0},b}]\) of \({S}_{\Omega }\) , where \({a}_{0}\) is the smallest element of \({S}_{\Omega }\) . Since \({S}_{\Omega }\) has the least upper bound property, the interval \([  {{a}_{0},b}]\) is compact By the preceding theorem, \(B\) has a limit point \(x\) in \([  {{a}_{0},b}]\) . The point \(x\) is also a limit point of \(A\) Thus \({S}_{\Omega }\) is limit point compact
+	Here is a less trivial example Consider the minimal uncountable well-ordered set \({S}_{\Omega }\) , in the order topology The space \({S}_{\Omega }\) is not compact, since it has no largest element However, it is limit point compact Let \(A\) be an infinite subset of \({S}_{\Omega }\) . Choose a subset \(B\) of \(A\) that is countably infinite Being countable, the set \(B\) has an upper bound \(b\) in \({S}_{\Omega }\) ; then \(B\) is a subset of the interval \([  {{a}_{0},b}]\) of \({S}_{\Omega }\) , where \({a}_{0}\) is the smallest element of \({S}_{\Omega }\) . Since \({S}_{\Omega }\) has the least upper bound property, the interval \([  {{a}_{0},b}]\) is \index{Well-ordered set!compact subspaces}compact. By the preceding theorem, \(B\) has a limit point \(x\) in \([  {{a}_{0},b}]\) . The point \(x\) is also a limit point of \(A\) Thus \({S}_{\Omega }\) is limit point compact
 \end{example}
 \end{centeredblock}
 

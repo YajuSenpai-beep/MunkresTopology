@@ -4,7 +4,8 @@
 $pdf_mode = 5;
 $xelatex = "xelatex -interaction=nonstopmode %O %S";
 
-# makeindex 使用自定义 .ist，然后在 .ind 上运行修复
-$makeindex = 'makeindex -s Topology_by_Munkres.ist %O -o %D %S && python latex-index-tool/_fix_ind.py';
+# makeindex 通过 Python 包装脚本：makeindex + _fix_ind.py + _fix_bn.py
+# latexmk 自动把 -o output.ind input.idx 追加到命令后面
+$makeindex = 'python latex-index-tool/_makeindex.py';
 
 $clean_ext = "aux bbl blg log out ilg ind idx synctex.gz fls fdb_latexmk";
