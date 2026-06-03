@@ -2,7 +2,6 @@
 \vspace{6.5cm}
 \chaptermark{Set Theory and Logic}
 
-
 We adopt, as most mathematicians do, the naive point of view\cite{Halmos1960} regarding set theory. We shall assume that what is meant by a set of objects is intuitively clear, and we shall proceed on that basis without analyzing the concept further. Such an analysis properly belongs to the foundations of mathematics\cite{Wilder1965} and to mathematical logic, and it is not our purpose to initiate the study of those \\index{index set@Index set}.
 
 Logicians have analyzed set theory in great detail, and they have formulated axioms for the subject. Each of their axioms expresses a \index{Greatest lower bound!property}\index{Greatest lower bound!property}\index{Greatest lower bound!property}property of sets that mathematicians commonly accept, and collectively the axioms provide a foundation broad enough and \index{Induction principle!strong}\index{Induction principle!strong}\index{Induction principle!strong}strong enough that the rest of mathematics can be built on them.
@@ -419,7 +418,7 @@ One often does not even mention the sets \(A\) and \(B\) explicitly, agreeing to
 As one goes further in mathematics, however, one needs to be more precise about what a function is. Mathematicians think of functions in the way we just described, but the definition they use is more exact. First, we define the following:
 
 \begin{definition} 
-    A \index{Rule of assignment} is a subset \(r\) of the cartesian product \(\mathbf{C} \times  \mathbf{D}\) of two sets, having the property that each element of \(C\) appears as the first coordinate of at most one ordered pair belonging to \(r\) .
+    A \index{Rule of assignment} is a subset \(r\) of the cartesian product \(C \times D\) of two sets, having the property that each element of \(C\) appears as the first coordinate of at most one ordered pair belonging to \(r\) .
 
     Thus, a subset \(r\) of \(C \times  D\) is a \index{rule of assignment@Rule of assignment}\index{rule of assignment@Rule of assignment}\index{rule of assignment@Rule of assignment}rule of assignment if
     \[
@@ -948,7 +947,7 @@ We leave it to the exercises to show that \(A\) has the least upper bound proper
   \end{enumerate}
 \item Assume that the real line has the least upper bound property.
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Show that the sets \[ \begin{aligned} [  {0,1}] &= \{ x \mid  0 \leq  x \leq  1\} , \\ \lbrack 0,1) &= \{ x \mid  0 \leq  x < 1\rbrack \end{aligned} \] have the least upper bound property.
+  \item Show that the sets \[ \begin{aligned} [  {0,1}] &= \{ x \mid  0 \leq  x \leq  1\} , \\ \lbrack 0,1) &= \{ x \mid  0 \leq  x < 1\} \end{aligned} \] have the least upper bound property.
   \item Does \([  {0,1}] \times  [  {0,1}]\) in the dictionary order have the least upper bound property? What about \([  {0,1}] \times  \lbrack 0,1)\) ? What about \(\lbrack 0,1) \times  [  {0,1}]\) ?
   \end{enumerate}
 \end{enumerate}
@@ -1040,18 +1039,18 @@ Now there is nothing in this list as it stands to tell us what an integer is. We
     \]
 \end{definition}
 
-Note that the set \({\mathbb{R}}_{ + }\) of positive real numbers is inductive, for it contains 1 and the statement \(x > 0\) implies the statement \(x + 1 > 0\) . Therefore, \({\mathbb{Z}}_{ + } \subset  {\mathbb{R}}_{ + }\) , so the elements of \({\mathbb{Z}}_{ + }\) are indeed positive, as the choice of terminology suggests. Indeed, one sees readily that1is the smallest element of \({\mathbb{Z}}_{ + }\) , because the set of all real numbers \(x\) for which \(x \geq  1\) is inductive.
+Note that the set \({\mathbb{R}}_{ + }\) of positive real numbers is inductive, for it contains 1 and the statement \(x > 0\) implies the statement \(x + 1 > 0\) . Therefore, \({\mathbb{Z}}_{ + } \subset  {\mathbb{R}}_{ + }\) , so the elements of \({\mathbb{Z}}_{ + }\) are indeed positive, as the choice of terminology suggests. Indeed, one sees readily that 1 is the smallest element of \({\mathbb{Z}}_{ + }\) , because the set of all real numbers \(x\) for which \(x \geq  1\) is inductive.
 
 The basic properties of \({\mathbb{Z}}_{ + }\) , which follow readily from the definition, are the following:
 
 (I) \({\mathbb{Z}}_{ + }\) is inductive.
 
-(2) (\index{principle of induction@Principle of induction}). If \(A\) is an \index{Inductive set} of positive integers, then \(A =\)  \({Z}_{ + }\) .\\
+(II) (\index{principle of induction@Principle of induction}Principle of induction). If \(A\) is an \index{Inductive set} of positive integers, then \(A =\)  \({\mathbb{Z}}_{ + }\) .\\
 We define the set \(\mathbb{Z}\) of integers to be the set consisting of the positive integers \({\mathbb{Z}}_{ + }\) , the number 0, and the negatives of the elements of \({\mathbb{Z}}_{ + }\) . One proves that the sum, difference, and product of two integers are integers, but the quotient is not necessarily an integer. The set \(\mathbb{Q}\) of quotients of integers is called the set of \index{Rational number}.
 
 One proves also that, given the integer \(n\) , there is no integer \(a\) such that \(n < a <\)  \(n + 1\) .
 
-If \(n\) is a positive integer, we use the symbol \({S}_{n}\) to denote the set of all positive integers less than \(n\) ; we call it a section of the positive integers. The set \({S}_{1}\) is empty, and \({S}_{n + 1}\) denotes the set of positive integers between1and \(n\) , inclusive. We also use the notation
+If \(n\) is a positive integer, we use the symbol \({S}_{n}\) to denote the set of all positive integers less than \(n\) ; we call it a section of the positive integers. The set \({S}_{1}\) is empty, and \({S}_{n + 1}\) denotes the set of positive integers between 1 and \(n\) , inclusive. We also use the notation
 \[
 \{ 1,\ldots ,n\}  = {S}_{n + 1}
 \]
@@ -1653,7 +1652,7 @@ This principle is the one we actually used in the proof of Lemma 7.2. You can si
     \[
     g( {n,m})  = m/n
     \]
-    Because \({\mathbb{Z}}_{ + } \times  {\mathbb{Z}}_{ + }\) is countable, there is a surjection \(f : {\mathbb{Z}}_{ + } \rightarrow  {\mathbb{Z}}_{ + } \times  {\mathbb{Z}}_{ + }\) . Then the composite \(g \circ  f.{\mathbb{Z}}_{ + } \rightarrow  {\mathbb{Q}}_{ + }\) is a surjection, so that \({\mathbb{Q}}_{ + }\) is countable. And, of course, \({\mathbb{Q}}_{ + }\) is infinite because it contains \({\mathbb{Z}}_{ + }\) .
+    Because \({\mathbb{Z}}_{ + } \times  {\mathbb{Z}}_{ + }\) is countable, there is a surjection \(f : {\mathbb{Z}}_{ + } \rightarrow  {\mathbb{Z}}_{ + } \times  {\mathbb{Z}}_{ + }\) . Then the composite \(g \circ  f : {\mathbb{Z}}_{ + } \rightarrow  {\mathbb{Q}}_{ + }\) is a surjection, so that \({\mathbb{Q}}_{ + }\) is countable. And, of course, \({\mathbb{Q}}_{ + }\) is infinite because it contains \({\mathbb{Z}}_{ + }\) .
     
     We leave it as an exercise to show the set \(\mathbb{Q}\) of all rational numbers is countably infinite.
 \end{example}
@@ -1835,7 +1834,7 @@ The first step is to prove that there exist functions defined on sections \(\{ 1
 \end{proof}
 
 \begin{lemma}
-    Suppose that \(f.\{ 1,\ldots ,n\}  \rightarrow  C\) and \(g : \{ 1,\ldots ,m\}  \rightarrow  C\) both satisfy \(( *)\) for all \(i\) in their respective domains. Then \(f( i)  = g( i)\) for all \(i\) in both domains.
+    Suppose that \(f : \{ 1,\ldots ,n\}  \rightarrow  C\) and \(g : \{ 1,\ldots ,m\}  \rightarrow  C\) both satisfy \(( *)\) for all \(i\) in their respective domains. Then \(f( i)  = g( i)\) for all \(i\) in both domains.
 \end{lemma}
 
 \begin{proof}
@@ -1924,7 +1923,7 @@ The formula \(( *)\) is called a recursion formula for \(h\) . It specifies \(h(
     \end{aligned}
     \]
 
-    We wish to apply Theorem 8.4 to define a function \(h : {\mathbb{Z}}_{ + } \rightarrow  \mathbb{R}\) rigorously such that \(h( n)  = {a}^{n}\) . To apply this theorem, let \({a}_{0}\) denote the element \(a\) of \(\mathbb{R}\) , and define \(\rho\) by the equation \(\rho ( f)  = f( m)  \cdot  a\) , where \(f.\{ 1,\ldots ,m\}  \rightarrow  \mathbb{R}\) Then there exists a unique function \(h : {\mathbb{Z}}_{ + } \rightarrow  \mathbb{R}\) such that
+    We wish to apply Theorem 8.4 to define a function \(h : {\mathbb{Z}}_{ + } \rightarrow  \mathbb{R}\) rigorously such that \(h( n)  = {a}^{n}\) . To apply this theorem, let \({a}_{0}\) denote the element \(a\) of \(\mathbb{R}\) , and define \(\rho\) by the equation \(\rho ( f)  = f( m)  \cdot  a\) , where \(f : \{ 1,\ldots ,m\}  \rightarrow  \mathbb{R}\) Then there exists a unique function \(h : {\mathbb{Z}}_{ + } \rightarrow  \mathbb{R}\) such that
 
     \[
     \begin{aligned}
