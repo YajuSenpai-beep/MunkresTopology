@@ -183,7 +183,6 @@ has as its converse the statement
 \text{ If }x = {23}\text{ , then }{x}^{2} < 0\text{ , }
 \]
 which is false.
-
 If it should happen that both the statement \(P \Rightarrow  Q\) and its converse \(Q \Rightarrow  P\) are true, we express this fact by the notation
 \[
 P \Leftrightarrow  Q\text{ , }
@@ -217,9 +216,7 @@ We return now to our discussion of sets. There is one other \index{operation, bi
 \[
 A - B = \{ x \mid  x \in  A\text{ and }x \notin  B\} .
 \]
-It is sometimes called the \index{Complement} of \(B\) relative to \(A\) , or the \index{complement@Complement}\index{complement@Complement}\index{complement@Complement}complement of \(B\) in \(A\) . 
-
-Our three set operations are represented schematically in Figure 1.1.
+It is sometimes called the \index{Complement} of \(B\) relative to \(A\) , or the \index{complement@Complement}\index{complement@Complement}\index{complement@Complement}complement of \(B\) in \(A\) . Our three set operations are represented schematically in Figure 1.1.
 
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/1.1.jpg}
@@ -255,7 +252,7 @@ Other examples of set-theoretic rules include the \index{second coordinate of or
 \[
 A \cup  ( {B \cap  C})  = ( {A \cup  B})  \cap  ( {A \cup  C}) ,
 \]
-and \index{demorgan's laws@DeMorgan's laws},
+and \index{demorgan's laws@DeMorgan's laws}DeMorgan's laws,
 \[
 \begin{aligned}
 A - ( {B \cup  C})  &= ( {A - B})  \cap  ( {A - C}) ,\\
@@ -291,6 +288,7 @@ Given a collection \(\mathcal{A}\) of sets, the union of the elements of \(\math
 \[
 \mathop{\bigcup }\limits_{{A \in  \mathcal{A}}}A = \{ x \mid  x \in  A\text{ for at least one }A \in  \mathcal{A}\} .
 \]
+
 The intersection of the elements of \(\mathcal{A}\) is defined by the equation
 
 \[
@@ -415,6 +413,7 @@ A function is usually thought of as a rule that assigns to each \index{element o
 \[
 f( x)  = \mathop{\sum }\limits_{{k = 1}}^{\infty }{x}^{k}
 \]
+
 One often does not even mention the sets \(A\) and \(B\) explicitly, agreeing to take \(A\) to be the set of all real numbers for which the rule makes sense and \(B\) to be the set of all real numbers.
 
 As one goes further in mathematics, however, one needs to be more precise about what a function is. Mathematicians think of functions in the way we just described, but the definition they use is more exact. First, we define the following:
@@ -1047,7 +1046,7 @@ The basic properties of \({\mathbb{Z}}_{ + }\) , which follow readily from the d
 
 (I) \({\mathbb{Z}}_{ + }\) is inductive.
 
-(2) (\index{principle of induction@Principle of induction}). If \(A\) is an \index{Inductive set} of positive integers, then \(A =\)  \({\mathbb{Z}}_{ + }\) .\\
+(II) (\index{principle of induction@Principle of induction}Principle of induction). If \(A\) is an \index{Inductive set} of positive integers, then \(A =\)  \({\mathbb{Z}}_{ + }\) .\\
 We define the set \(\mathbb{Z}\) of integers to be the set consisting of the positive integers \({\mathbb{Z}}_{ + }\) , the number 0, and the negatives of the elements of \({\mathbb{Z}}_{ + }\) . One proves that the sum, difference, and product of two integers are integers, but the quotient is not necessarily an integer. The set \(\mathbb{Q}\) of quotients of integers is called the set of \index{Rational number}.
 
 One proves also that, given the integer \(n\) , there is no integer \(a\) such that \(n < a <\)  \(n + 1\) .
@@ -1072,7 +1071,7 @@ Now we prove two properties of the positive integers that may not be quite so fa
     Now we prove the theorem. Suppose that \(D\) is a nonempty subset of \({\mathbb{Z}}_{ + }\) . Choose an element \(n\) of \(D\) . Then the set \(A = D \cap  \{ 1,\ldots ,n\}\) is nonempty, so that \(A\) has a smallest element \(k\) . The element \(k\) is automatically the smallest element of \(D\) as well.
 \end{proof}
 
-\begin{theorem}[\index{strong induction principle@Strong induction principle}]
+\begin{theorem}[\index{strong induction principle@Strong induction principle}Strong induction principle]
     Let \(A\) be a set of positive integers. Suppose that for each positive integer \(n\) , the statement \({S}_{n} \subset  A\) implies the statement \(n \in  A\) . Then \(A = {\mathbb{Z}}_{ + }\) .
 \end{theorem}
 
@@ -1599,7 +1598,7 @@ But there is a problem here. After all, the induction principle states only that
 In the preceding theorem, however, we were not really proving a theorem by induction, but defining something by induction. How then should we start the proof? Can we start by saying, ``Let \(A\) be the set of all integers \(n\) for which the function \(h\) is defined''? But that's silly; the symbol \(h\) has no meaning at the outset of the proof. It only takes on meaning in the course of the proof. So something more is needed.
 
 What is needed is another principle, which we call the principle of \index{recursive definition, principle@Recursive definition, principle} recursive definition. In the proof of the preceding theorem, we wished to assert the following:
-\begin{centeredblock}
+
 Given the infinite subset \(C\) of \({\mathbb{Z}}_{ + }\) , there is a unique function \(h : {\mathbb{Z}}_{ + } \rightarrow  C\) satisfying the formula:
 \[
 ( *) \qquad
@@ -1608,7 +1607,6 @@ h( 1)  &= \text{ smallest element of }C\text{ , } \\
 h( i)  &= \text{ smallest element of }[  {C - h( {\{ 1,\ldots ,i - 1\} }) }]  \;\text{ for all }i > 1\text{ . }
 \end{aligned}
 \]
-\end{centeredblock}
 
 The formula \(( *)\) is called a recursion formula for \(h\) ; it defines the function \(h\) in terms of itself. A definition given by such a formula is called a recursive definition.
 
@@ -1795,6 +1793,7 @@ h( 1)  &= \text{ smallest element of }C\text{ , } \\
 h( i)  &= \text{ smallest element of }[  {C - h( {\{ 1,\ldots ,i - 1\} }) }]  \;\text{ for }i > 1\text{ . }
 \end{aligned}
 \]
+
 We shall prove that there exists a unique function \(h : {\mathbb{Z}}_{ + } \rightarrow  C\) satisfying this recursion formula.
 
 The first step is to prove that there exist functions defined on sections \(\{ 1,\ldots ,n\}\) of \({\mathbb{Z}}_{ + }\) that satisfy \(( *)\) :
@@ -1925,7 +1924,7 @@ The formula \(( *)\) is called a recursion formula for \(h\) . It specifies \(h(
     \end{aligned}
     \]
 
-    We wish to apply Theorem 8.4 to define a function \(h : {\mathbb{Z}}_{ + } \rightarrow  \mathbb{R}\) rigorously such that \(h( n)  = {a}^{n}\) . To apply this theorem, let \({a}_{0}\) denote the element \(a\) of \(\mathbb{R}\) , and define \(\rho\) by the equation \(\rho ( f)  = f( m)  \cdot  a\) , where \(f.\{ 1,\ldots ,m\}  \rightarrow  \mathbb{R}\) Then there exists a unique function \(h : {\mathbb{Z}}_{ + } \rightarrow  \mathbb{R}\) such that
+    We wish to apply Theorem 8.4 to define a function \(h : {\mathbb{Z}}_{ + } \rightarrow  \mathbb{R}\) rigorously such that \(h( n)  = {a}^{n}\) . To apply this theorem, let \({a}_{0}\) denote the element \(a\) of \(\mathbb{R}\) , and define \(\rho\) by the equation \(\rho ( f)  = f( m)  \cdot  a\) , where \(f : \{ 1,\ldots ,m\}  \rightarrow  \mathbb{R}\) Then there exists a unique function \(h : {\mathbb{Z}}_{ + } \rightarrow  \mathbb{R}\) such that
 
     \[
     \begin{aligned}
