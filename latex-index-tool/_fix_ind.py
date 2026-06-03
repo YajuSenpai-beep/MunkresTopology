@@ -320,10 +320,15 @@ while i < len(lines):
         while i < len(lines) and not lines[i].strip().startswith(bs + "lettergroup{"):
             if lines[i].strip().startswith(bs + "item "):
                 entry_lines = [lines[i]]
-                # Collect any subitems under this L1
+                # Collect subitems under this L1, skipping continuation lines
                 j = i + 1
-                while j < len(lines) and lines[j].strip().startswith(bs + "subitem "):
-                    entry_lines.append(lines[j])
+                while j < len(lines):
+                    sj = lines[j].strip()
+                    if sj.startswith(bs + "item ") or sj.startswith(bs + "lettergroup{"):
+                        break
+                    if sj.startswith(bs + "subitem "):
+                        entry_lines.append(lines[j])
+                    # Otherwise it's a continuation line — skip
                     j += 1
                 empty_entries.extend(entry_lines)
                 i = j - 1  # will be incremented below

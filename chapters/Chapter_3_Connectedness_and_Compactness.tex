@@ -135,7 +135,7 @@ g : X \rightarrow  Z\text{ . }
 Suppose that \(Z = A \cup  B\) is a separation of \(Z\) into two disjoint nonempty sets open in \(Z\) . Then \({g}^{-1}( A)\) and \({g}^{-1}( B)\) are disjoint sets whose union is \(X\) ; they are open in \(X\) because \(g\) is continuous, and nonempty because \(g\) is surjective. Therefore, they form a separation of \(X\) , contradicting the assumption that \(X\) is connected.
 \end{proof}
 
-\section*{Theorem 23.6. A finite cartesian product of connected spaces is connected.}
+\section*{Theorem 23.6. \index{Product topology!connectedness}A finite cartesian product of connected spaces is connected.}
 
 \begin{proof}
 We prove the theorem first for the product of two connected spaces \(X\) and \(Y\) . This proof is easy to visualize. Choose a ``base point'' \(a \times  b\) in the product \(X \times  Y\) . Note that the ``horizontal slice'' \(X \times  b\) is connected, being homeomorphic with \(X\) , and each ``vertical slice'' \(x \times  Y\) is connected, being homeomorphic with \(Y\)\index{Slice: in covering space!in product space}. As a result, each ``T-shaped'' space
@@ -191,7 +191,7 @@ The argument just given generalizes to show that an arbitrary product of connect
 \item Let \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\) be two topologies on \(X\) . If \({\mathcal{T}}^{\prime } \supset  \mathcal{T}\) , what does connectedness of \(X\) in one topology imply about connectedness in the other?
 \item Let \(\{  {A}_{n}\}\) be a sequence of connected subspaces of \(X\) , such that \({A}_{n} \cap  {A}_{n + 1} \neq  \varnothing\) for all \(n\) . Show that \(\bigcup {A}_{n}\) is connected.
 \item Let \(\{  {A}_{\alpha }\}\) be a collection of connected subspaces of \(X\) ; let \(A\) be a connected subspace of \(X\) . Show that if \(A \cap  {A}_{\alpha } \neq  \varnothing\) for all \(\alpha\) , then \(A \cup  ( {\bigcup {A}_{\alpha }})\) is connected.
-\item Show that if \(X\) is an \index{Compactness!in finite complement topology}infinite set, it is connected in the finite complement topology.
+\item Show that if \(X\) is an \index{Finite complement topology!connectedness}\index{Compactness!in finite complement topology}infinite set, it is connected in the finite complement topology.
 \item A space is \index{Totally disconnected} if its only connected subspaces are one-point sets. Show that if \(X\) has the discrete topology, then \(X\) is \index{totally disconnected@Totally disconnected}totally disconnected. Does the converse hold?
 \item Let \(A \subset  X\) Show that if \(C\) is a connected subspace of \(X\) that intersects both \(A\) and \(X - A\) , then \(C\) intersects \(\operatorname{Bd}A\) .
 \item Is the space \({\mathbb{R}}_{\ell }\) connected? Justify your answer.
@@ -212,7 +212,7 @@ The theorems of the preceding section show us how to construct new connected spa
 
 One application is the intermediate value theorem of calculus, suitably generalized. Another is the result that such familiar spaces as balls and spheres in euclidean space are connected; the proof involves a new notion, called \index{Path connectedness}, which we also discuss.
 
-The fact that intervals and rays in \(\mathbb{R}\) are connected may be familiar to you from analysis. We prove it again here, in generalized form. It turns out that this fact does not depend on the algebraic properties of \(\mathbb{R}\) , but only on its order properties. To make this clear, we shall prove the theorem for an arbitrary ordered set that has the order properties of \(\mathbb{R}\) . Such a set \index{Ordered square!is linear continuum}is called a linear continuum.
+The fact that intervals and rays in \(\mathbb{R}\) are \index{Subspace topology!connectedness}\index{\(\mathbb{R}\) (reals)!connected subspaces}connected may be familiar to you from analysis. We prove it again here, in generalized form. It turns out that this fact does not depend on the algebraic properties of \(\mathbb{R}\) , but only on its order properties. To make this clear, we shall prove the theorem for an arbitrary ordered set that has the order properties of \(\mathbb{R}\) . Such a set \index{Ordered square!is linear continuum}is called a linear continuum.
 
 \begin{definition}
 	A simply ordered set \(L\) having more than one element is called a linear continuum if the following hold:
@@ -306,7 +306,7 @@ Figure 24.3
 \end{example}
 \end{centeredblock}
 
-Connectedness of intervals in \(\mathbb{R}\) gives rise to an especially useful criterion for showing that a space \(X\) is connected; namely, the condition that every pair of points of \(X\) can be joined by a \index{path@Path}path in \(X\) :
+\index{Intervals in \(\mathbb{R}\): compactness!connectedness}Connectedness of intervals in \(\mathbb{R}\) gives rise to an especially useful criterion for showing that a space \(X\) is connected; namely, the condition that every pair of points of \(X\) can be joined by a \index{path@Path}path in \(X\) :
 
 \begin{definition}
 	Given points \(x\) and \(y\) of the space \(X\) , a path in \(X\) from \(x\) to \(y\) is a continuous map \(f : [  {a,b}]   \rightarrow  X\) of some closed interval in the real line into \(X\) , such that \(f( a)  = x\) and \(f( b)  = y\) . A space \(X\) is said to be path connected if every pair of points of \(X\) can be joined by a path in \(X\) .
@@ -367,7 +367,7 @@ If \(n > 1\) , it is path connected. For the map \(g : {\mathbb{R}}^{n} - \{ \ma
 
 \begin{centeredblock}
 \begin{example}
-	The ordered square \({I}_{o}^{2}\) is connected but not path connected.
+	The \index{Ordered square!connectedness}ordered square \({I}_{o}^{2}\) is connected but not \index{Ordered square!path connectedness}path connected.
 
 Being a linear continuum, the ordered square is connected. Let \(p = 0 \times  0\) and \(q =\)  \(1 \times  1\) . We suppose there is a path \(f : [  {a,b}]   \rightarrow  {I}_{o}^{2}\) joining \(p\) and \(q\) and derive a contradiction. The image set \(f( [  {a,b}]  )\) must contain every point \(x \times  y\) of \({I}_{o}^{2}\) , by the intermediate value theorem. Therefore, for each \(x \in  I\) , the set
 
@@ -533,7 +533,7 @@ Connectedness is a useful property for a space to possess. But for some purposes
 
 \begin{centeredblock}
 \begin{example}
-	Each interval and each ray in the real line is both connected and locally connected The subspace \([  {-1,0)\cup (0,1}]\) of \(\mathbb{R}\) is not connected, but it is locally connected The topologist's sine curve is connected but not locally connected. The rationals \(\mathbb{Q}\) are neither connected nor locally connected.
+	Each interval and each ray in the real line is both connected and locally connected The subspace \([  {-1,0)\cup (0,1}]\) of \(\mathbb{R}\) is not connected, but it is locally connected The topologist's sine curve is \index{Connectedness!of topologist's sine curve}connected but not locally connected. The rationals \(\mathbb{Q}\) are neither connected nor locally connected.
 \end{example}
 \end{centeredblock}
 
@@ -587,12 +587,14 @@ Because \(X\) is locally path connected, each path component of \(X\) is open in
   \end{enumerate}
 \item A space \(X\) is said to be \index{weak local connectedness@Weak local connectedness} weakly locally connected at \(x\) if for every neighborhood \(U\) of \(x\) , there is a connected subspace of \(X\) contained in \(U\) that contains a neighborhood of \(x\) . Show that if \(X\) is weakly locally connected at each of its points, then \(X\) is \index{Weak local connectedness!vs. connectedness}locally connected. [Hint: Show that components of open sets are open.]
 \item Consider the ``\index{Infinite broom}'' \(X\) pictured in Figure 25.1. Show that \(X\) is not locally connected at \(p\) , but is weakly locally connected at \(p\) . [Hint: Any connected neighborhood of \(p\) must contain all the points \({a}_{i}\) .] \begin{center} \includegraphics[width=1.0\textwidth]{images/25.1.jpg} \end{center} \hspace*{3em} Figure 25.1
-\item Let \(p : X \rightarrow  Y\) be a quotient map. Show that if \(X\) is \index{Quotient topology!local connectedness}locally connected, then \(Y\) is locally connected. [Hint: If \(C\) is a component of the open set \(U\) of \(Y\) , show that \({p}^{-1}( C)\) is a union of components of \({p}^{-1}( U)\) .]
+\item Let \(p : X \rightarrow  Y\) be a quotient map. Show that if \(X\) is \index{Weak local connectedness!of quotient space}\index{Quotient topology!local connectedness}locally connected, then \(Y\) is locally connected. [Hint: If \(C\) is a component of the open set \(U\) of \(Y\) , show that \({p}^{-1}( C)\) is a union of components of \({p}^{-1}( U)\) .]
 \item Let \(G\) be a \index{Topological group}; let \(C\) be the component of \(G\) containing the identity element \(e\) . Show that \(C\) is a normal subgroup of \(G\) . [Hint: If \(x \in  G\) , then \({xC}\) is the component of \(G\) containing \(x\) .]
 \item Let \(X\) be a space. Let us define \(x \sim  y\) if there is no separation \(X = A \cup  B\) of \(X\) into disjoint open sets such that \(x \in  A\) and \(y \in  B\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show this relation is an equivalence relation. The equivalence classes are called the \index{Quasicomponent} of \(X\) .
-  \item Show that each component of \(X\) lies in a \index{quasicomponent@Quasicomponent!vs. component}}_{ + }}\}\) and let \(- K\) denote the set \(\{  - 1/n \mid  n \in\)  \(. {\mathbb{Z}}_{ + }\}\) . Determine the components, path components, and quasicomponents of the following subspaces of \({\mathbb{R}}^{2}\) : \[ A = ( {K \times  [  {0,1}]  })  \cup  \{ 0 \times  0\}  \cup  \{ 0 \times  1\} . \] \[ B = A \cup  ( {[  {0,1}]   \times  \{ 0\rbrack }) \text{ . } \] \[ C = ( {K \times  [  {0,1}]  })  \cup  ( {-K \times  [  {-1,0}]  })  \cup  ( {[  {0,1}]   \times   - K})  \cup  ( {[  {-1,0}]   \times  K}) . \]
+  \item Show that each component of \(X\) lies in a \index{quasicomponent@Quasicomponent!vs. component}quasicomponent of \(X\) , and that the components and quasicomponents of \(X\) are the same if \(X\) is locally connected.
+  \item Let \(K\) denote the set \(\{  {1/n \mid  n \in  {\mathbb{Z}}_{ + }}\}\) and let \(- K\) denote the set \(\{  - 1/n \mid  n \in  {\mathbb{Z}}_{ + }\}\) . Determine the components, path components, and quasicomponents of the following subspaces of \({\mathbb{R}}^{2}\) : \[ A = ( {K 	imes  [  {0,1}]  })  \cup  \{ 0 	imes  0\}  \cup  \{ 0 	imes  1\} . \] \[ B = A \cup  ( {[  {0,1}]   	imes  \{ 0
+brack }) 	ext{ . } \] \[ C = ( {K 	imes  [  {0,1}]  })  \cup  ( {-K 	imes  [  {-1,0}]  })  \cup  ( {[  {0,1}]   	imes   - K})  \cup  ( {[  {-1,0}]   	imes  K}) . \]
   \end{enumerate}
 \end{enumerate}
 \section*{§ 26 Compact Spaces}
@@ -683,7 +685,7 @@ Conversely, suppose the given condition holds; we wish to prove \(Y\) compact. L
 The collection \(\mathcal{A} = \{  {A}_{\alpha }\}\) is a covering of \(Y\) by sets open in \(X\) By hypothesis, some finite subcollection \(\{  {{A}_{{\alpha }_{1}},\ldots ,{A}_{{\alpha }_{n}}}\}\) covers \(Y\) . Then \(\{  {{A}_{{\alpha }_{1}}^{\prime },\ldots ,{A}_{{\alpha }_{n}}^{\prime }}\}\) is a subcollection of \({\mathcal{A}}^{\prime }\) that covers \(Y\)
 \end{proof}
 
-\section*{Theorem 26.2. Every \index{Compactness!of subspace}closed subspace of a compact space is compact.}
+\section*{Theorem 26.2. Every \index{Subspace topology!compactness}\index{Compactness!of subspace}closed subspace of a compact space is compact.}
 
 \begin{proof}
 Let \(Y\) be a closed subspace of the compact space \(X\) . Given a covering \(\mathcal{A}\) of \(Y\) by sets open in \(X\) , let us form an open covering \(\mathcal{B}\) of \(X\) by adjoining to \(\mathcal{A}\) the single open set \(X - Y\) , that is,
@@ -738,7 +740,7 @@ The statement we proved in the course of the preceding proof will be useful to u
 
 \begin{centeredblock}
 \begin{example}
-	One needs the Hausdorff condition in the hypothesis of Theorem 263 Consider, for example, the finite complement topology on the real line The only proper subsets of \(\mathbb{R}\) that are closed in this topology are the finite sets. But every subset of \(\mathbb{R}\) is compact in this topology, as you can check.
+	One needs the Hausdorff condition in the hypothesis of Theorem 263 Consider, for example, the finite complement topology on the real line The only proper subsets of \(\mathbb{R}\) that are closed in this topology are the finite sets. But every subset of \(\mathbb{R}\) is \index{Finite complement topology!compactness}compact in this topology, as you can check.
 \end{example}
 \end{centeredblock}
 
@@ -922,7 +924,7 @@ We shall use the \index{Compactness!closed set criterion}closed set criterion fo
 \item Let \(A\) and \(B\) be disjoint compact subspaces of the Hausdorff space \(X\) . Show that there exist disjoint open sets \(U\) and \(V\) containing \(A\) and \(B\) , respectively.
 \item Show that if \(f : X \rightarrow  Y\) is continuous, where \(X\) is compact and \(Y\) is Hausdorff, then \(f\) is a closed map (that is, \(f\) carries closed sets to closed sets).
 \item Show that if \(Y\) is compact, then the projection \({\pi }_{1} : X \times  Y \rightarrow  X\) is a closed map.
-\item Theorem. Let \(f : X \rightarrow  Y\) ; let \(Y\) be compact Hausdorff. Then \(f\) is continuous if and only if the \index{graph of a function@Graph of a function} graph of \(f\) , \[ {G}_{f} = \{ x \times  f( x)  \mid  x \in  X\} \] is closed in \(X \times  Y\) . [Hint: If \({G}_{f}\) is closed and \(V\) is a neighborhood of \(f( {x}_{0})\) , then the intersection of \({G}_{f}\) and \(X \times  ( {Y - V})\) is closed. Apply Exercise 7.]
+\item Theorem. Let \(f : X \rightarrow  Y\) ; let \(Y\) be compact Hausdorff. Then \(f\) is continuous if and only if the \index{Continuity: of algebraic operations in \(\mathbb{R}\)!and closedness of graph}\index{graph of a function@Graph of a function} graph of \(f\) , \[ {G}_{f} = \{ x \times  f( x)  \mid  x \in  X\} \] is closed in \(X \times  Y\) . [Hint: If \({G}_{f}\) is closed and \(V\) is a neighborhood of \(f( {x}_{0})\) , then the intersection of \({G}_{f}\) and \(X \times  ( {Y - V})\) is closed. Apply Exercise 7.]
 \item Generalize the tube lemma as follows: \textbf{Theorem.} Let \(A\) and \(B\) be subspaces of \(X\) and \(Y\) , respectively; let \(N\) be an open set in \(X \times  Y\) containing \(A \times  B\) . If \(A\) and \(B\) are compact, then there exist open sets \(U\) and \(V\) in \(X\) and \(Y\) , respectively, such that \[ A \times  B \subset  U \times  V \subset  N. \]
 \item
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
@@ -931,7 +933,7 @@ We shall use the \index{Compactness!closed set criterion}closed set criterion fo
   \item Give examples to show that this theorem fails if you delete the requirement that \(X\) be compact, or if you delete the requirement that the sequence be monotone. [Hint: See the exercises of §21.]
   \end{enumerate}
 \item Theorem. Let \(X\) be a compact Hausdorff space. Let \(\mathcal{A}\) be a collection of closed connected subsets of \(X\) that is simply ordered by proper inclusion. Then \[ Y = \mathop{\bigcap }\limits_{{A \in  \mathcal{A}}}A \] is connected. [Hint: If \(C \cup  D\) is a separation of \(Y\) , choose disjoint open sets \(U\) and \(V\) of \(X\) containing \(C\) and \(D\) , respectively, and show that \[ \mathop{\bigcap }\limits_{{A \in  \mathcal{A}}}( {A - ( {U \cup  V}) }) \] is not empty.]
-\item Let \(p : X \rightarrow  Y\) be a closed continuous surjective map such that \({p}^{-1}( {\{ y\} })\) is compact, for each \(y \in  Y\) . (Such a map is called a \index{Perfect map} ) Show that if \(Y\) is compact, then \(X\) is compact. [Hint: If \(U\) is an open set containing \({p}^{-1}( {\{ y\} })\) , there is a neighborhood \(W\) of \(y\) such that \({p}^{-1}( W)\) is contained in \(U\) ]
+\item Let \(p : X \rightarrow  Y\) be a closed continuous surjective map such that \({p}^{-1}( {\{ y\} })\) is compact, for each \(y \in  Y\) . (Such a map is called a \index{Perfect map} ) Show that if \(Y\) is compact, then \(X\) is \index{Compactness!and perfect maps}compact. [Hint: If \(U\) is an open set containing \({p}^{-1}( {\{ y\} })\) , there is a neighborhood \(W\) of \(y\) such that \({p}^{-1}( W)\) is contained in \(U\) ]
 \item Let \(G\) be a \index{topological group@Topological group}topological group.
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Let \(A\) and \(B\) be subspaces of \(G\) . If \(A\) is closed and \(B\) is compact, show \index{Topological group!closedness of \(A \cdot  B\)}\(A \cdot  B\) is closed. [Hint: If \(c\) is not in \(A \cdot  B\) , find a neighborhood \(W\) of \(c\) such that \(W \cdot  {B}^{-1}\) is disjoint from \(A\) .]
@@ -941,12 +943,12 @@ We shall use the \index{Compactness!closed set criterion}closed set criterion fo
 \end{enumerate}
 \section*{§ 27 Compact Subspaces of the Real Line}
 
-The theorems of the preceding section enable us to construct new compact spaces from existing ones, but in order to get very far we have to find some compact spaces to start with. The natural place to begin is the real line; we shall prove that every \index{Compactness!in \(\mathbb{R}\) and \({\mathbb{R}}^{n}\)}closed interval in \(\mathbb{R}\) is compact. Applications include the \index{Extreme value theorem} and the uniform continuity theorem of calculus, suitably generalized. We also give a characterization of all \index{Linear continuum!compact subspaces}compact subspaces \index{Path connectedness!of \({\mathbb{R}}^{n} - 0\)}of \({\mathbb{R}}^{n}\) , and a proof of the \index{\(\mathbb{R}\) (reals)!uncountability}uncountability of the set of real numbers.
+The theorems of the preceding section enable us to construct new compact spaces from existing ones, but in order to get very far we have to find some compact spaces to start with. The natural place to begin is the real line; we shall prove that every \index{Compactness!in \(\mathbb{R}\) and \({\mathbb{R}}^{n}\)}closed interval in \(\mathbb{R}\) is compact. Applications include the \index{Maximum value theorem: of calculus!general}\index{Extreme value theorem} and the uniform continuity theorem of calculus, suitably generalized. We also give a characterization of all \index{\(\mathbb{R}\) (reals)!compact subspaces}\index{Linear continuum!compact subspaces}compact subspaces \index{Path connectedness!of \({\mathbb{R}}^{n} - 0\)}of \({\mathbb{R}}^{n}\) , and a proof of the \index{\(\mathbb{R}\) (reals)!uncountability}uncountability of the set of real numbers.
 
 It turns out that in order to prove every \index{Compactness!in \(\mathbb{R}\) and \({\mathbb{R}}^{n}\)}closed interval in \(\mathbb{R}\) is compact, we need only one of the order properties of the real line-the least upper bound property. We shall prove the theorem using only this hypothesis; then it will apply not only to the real line, but to well-ordered sets and other ordered sets as well.
 
 \begin{theorem}
-	Let \(X\) be a simply ordered set having the least upper bound property. In the order topology, each closed interval in \(X\) is compact.
+	Let \(X\) be a simply ordered set having the least upper bound property. In the order topology, each closed interval in \(X\) is \index{Order topology!compact subspaces}\index{Compactness!and least upper bound property}compact.
 
 \end{theorem}
 \begin{proof}
@@ -982,7 +984,7 @@ can also be covered by finitely many elements of \(\mathcal{A}\) . This means th
 \end{proof}
 
 \begin{corollary}
-	Every \index{Compactness!in \(\mathbb{R}\) and \({\mathbb{R}}^{n}\)}closed interval in \(\mathbb{R}\) is compact.
+	Every \index{Compactness!of closed intervals in \(\mathbb{R}\)}\index{Compactness!in \(\mathbb{R}\) and \({\mathbb{R}}^{n}\)}closed interval in \(\mathbb{R}\) is compact.
 \end{corollary}
 
 Now we charactenze the compact subspaces of \({\mathbb{R}}^{n}\) :
@@ -1015,7 +1017,7 @@ Students often remember this theorem as stating that the collection of compact s
 
 \begin{centeredblock}
 \begin{example}
-	The unit sphere \({S}^{n - 1}\) and the closed unit ball \({B}^{n}\) in \({\mathbb{R}}^{n}\) are \index{B^n@\({B}^{n}\)!compactness}compact because they are closed and bounded. The set
+	The unit sphere \({S}^{n - 1}\) and the closed unit ball \({B}^{n}\) in \({\mathbb{R}}^{n}\) are \index{\({S}^{n}\) (Unit sphere)!compactness}\index{B^n@\({B}^{n}\)!compactness}compact because they are closed and bounded. The set
 
 \[
 A = \{ x \times  ( {1/x})  \mid  0 < x \leq  1\}
@@ -1212,7 +1214,7 @@ As indicated when we first mentioned compact sets, there are other formulations 
 
 In some ways this property is more natural and intuitive than that of compactness. In the early days of topology, it was given the name ``compactness,'' while the open covering formulation was called ``\index{Bicompactness}.'' Later, the word ``compact'' was shifted to apply to the open covering definition, leaving this one to search for a new name It still has not found a name on which everyone agrees On historical grounds, some call it ``Fréchet compactness'', others call it the ``Bolzano-Weierstrass property'' We have invented the term ``\index{Limit point compactness}'' It seems as good a term as any; at least it describes what the property is about.
 
-\section*{Theorem 28.1. Compactness implies limit point compactness, but not con versely}
+\section*{Theorem 28.1. \index{Compactness!vs. limit point compactness}Compactness implies limit point compactness, but not con versely}
 
 \begin{proof}
 Let \(X\) be a compact space. Given a subset \(A\) of \(X\) , we wish to prove that if \(A\) is infinite, then \(A\) has a limit point. We prove the contrapositive-if \(A\) has no limit point, then \(A\) must be finite.
@@ -1250,7 +1252,7 @@ is an increasing sequence of positive integers, then the sequence \(( {y}_{i})\)
 
 (2) \(X\) is limit point compact.
 
-(3) \(X\) is sequentially compact. Proof. We have already proved that (1) \(\Rightarrow\) (2). To show that (2) \(\Rightarrow\) (3), assume that \(X\) is limit point compact. Given a sequence \(( {x}_{n})\) of points of \(X\) , consider the set \(A = \{  {{x}_{n} \mid  n \in  {\mathbb{Z}}_{ + }}\}\) . If the set \(A\) is finite, then there is a point \(x\) such that \(x = {x}_{n}\) for infinitely many values of \(n\) . In this case, the sequence \(( {x}_{n})\) has a subsequence that is constant, and therefore converges trivially. On the other hand, if \(A\) is infinite, then \(A\) has a limit point \(x\) . We define a subsequence of \(( {x}_{n})\) converging to \(x\) as follows: First choose \({n}_{1}\) so that
+(3) \(X\) is \index{Compactness!vs. sequential compactness}sequentially compact. Proof. We have already proved that (1) \(\Rightarrow\) (2). To show that (2) \(\Rightarrow\) (3), assume that \(X\) is limit point compact. Given a sequence \(( {x}_{n})\) of points of \(X\) , consider the set \(A = \{  {{x}_{n} \mid  n \in  {\mathbb{Z}}_{ + }}\}\) . If the set \(A\) is finite, then there is a point \(x\) such that \(x = {x}_{n}\) for infinitely many values of \(n\) . In this case, the sequence \(( {x}_{n})\) has a subsequence that is constant, and therefore converges trivially. On the other hand, if \(A\) is infinite, then \(A\) has a limit point \(x\) . We define a subsequence of \(( {x}_{n})\) converging to \(x\) as follows: First choose \({n}_{1}\) so that
 
 \[
 {x}_{{n}_{1}} \in  B( {x,1}) \text{ . }
@@ -1296,14 +1298,14 @@ Finally, we show that if \(X\) is sequentially compact, then \(X\) is compact. L
   \item If \(A\) is a closed subset of \(X\) , does it follow that \(A\) is limit point compact?
   \item If \(X\) is a subspace of the Hausdorff space \(Z\) , does it follow that \(X\) is closed in \(Z\) ? We comment that it is not in general true that the product of two limit point compact spaces is limit point compact, even if the \index{Topological group!Hausdorff condition}Hausdorff condition is assumed. But the examples are fairly sophisticated. See \cite{SteenSeebach1970}, Example II2.
   \end{enumerate}
-\item A space \(X\) is said to be countably compact if every countable open covering of \(X\) contains a finite subcollection that covers \(X\) . Show that for a \({T}_{1}\) space \(X\) , \index{Countable compactness} is equivalent to \index{limit point compactness@Limit point compactness}limit point compactness. [Hint: If no finite subcollection of \({U}_{n}\) covers \(X\) , choose \({x}_{n} \notin  {U}_{1} \cup  \cdots  \cup  {U}_{n}\) , for each \(n\) .]
+\item A space \(X\) is said to be \index{Compactness!vs. countable compactness}countably compact if every countable open covering of \(X\) contains a finite subcollection that covers \(X\) . Show that for a \({T}_{1}\) space \(X\) , \index{Countable compactness} is equivalent to \index{limit point compactness@Limit point compactness}limit point compactness. [Hint: If no finite subcollection of \({U}_{n}\) covers \(X\) , choose \({x}_{n} \notin  {U}_{1} \cup  \cdots  \cup  {U}_{n}\) , for each \(n\) .]
 \item Show that \(X\) is countably compact if and only if every nested sequence \({C}_{1} \supset\)  \({C}_{2} \supset\) - of closed nonempty sets of \(X\) has a nonempty intersection.
 \item Let(X, d)be a metric space. If \(f : X \rightarrow  X\) satisfies the condition \[ d( {f( x) ,f( y) })  = d( {x,y}) \] for all \(x,y \in  X\) , then \(f\) is called an \index{Isometry} of \(X\) . Show that if \(f\) is an \index{isometry@Isometry}isometry and \(X\) is compact, then \(f\) is bijective and hence a homeomorphism. [Hint: If \(a \notin  f( X)\) , choose \(\epsilon\) so that the \(\epsilon\) -neighborhood of \(a\) is disjoint from \(f( X)\) Set \({x}_{1} = a\) , and \({x}_{n + 1} = f( {x}_{n})\) in general. Show that \(d( {{x}_{n},{x}_{m}})  \geq  \epsilon\) for \(n \neq  m\) .]
-\item Let(X, d)be a metric space. If \(f\) satisfies the condition \[ d( {f( x) ,f( y) })  < d( {x,y}) \] for all \(x,y \in  X\) with \(x \neq  y\) , then \(f\) is called a \index{Shrinking map} If there is a number \(\alpha  < 1\) such that \[ d( {f( x) ,f( y) })  \leq  {\alpha d}( {x,y}) \] \index{Fixed point theorem: for \({B}^{n}\)!for a contraction}for all \(x,y \in  X\) , then \(f\) is called a \index{Contraction}. A \index{fixed point@Fixed point}fixed point of \(f\) is a point \(x\) such that \(f( x)  = x\)
+\item Let(X, d)be a metric space. If \(f\) satisfies the condition \[ d( {f( x) ,f( y) })  \index{Fixed point theorem: for \({B}^{n}\)!for a shrinking map}< d( {x,y}) \] for all \(x,y \in  X\) with \(x \neq  y\) , then \(f\) is called a \index{Shrinking map} If there is a number \(\alpha  < 1\) such that \[ d( {f( x) ,f( y) })  \leq  {\alpha d}( {x,y}) \] \index{Fixed point theorem: for \({B}^{n}\)!for a contraction}for all \(x,y \in  X\) , then \(f\) is called a \index{Contraction}. A \index{fixed point@Fixed point}fixed point of \(f\) is a point \(x\) such that \(f( x)  = x\)
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item If \(f\) is a \index{contraction@Contraction}contraction and \(X\) is compact, show \(f\) has a unique fixed point. [Hint: Define \({f}^{1} = f\) and \({f}^{n + 1} = f \circ  {f}^{n}\) . Consider the intersection \(A\) of the sets \(. {{A}_{n} = {f}^{n}( X) \text{ . }}]\)
-  \item Show more generally that if \(f\) is a \index{shrinking map@Shrinking map}shrinking map and \(X\) is compact, then \(f\) has a unique fixed point. [Hint: Let \(A\) be as before. Given \(x \in  A\) , choose \({x}_{n}\) so that \(x = {f}^{n + 1}( {x}_{n})\) . If \(a\) is the limit of some subsequence of the sequence \({y}_{n} = {f}^{n}( {x}_{n})\) , show that \(a \in  A\) and \(f( a)  = x\) . Conclude that \(A = f( A)\) , so that diam \(A = 0\) .]
-  \item Let \(X = [  {0,1}]\) . Show that \(f( x)  = x - {x}^{2}/2\) maps \(X\) into \(X\) and is a shrinking map that is not a contraction. [Hint Use the mean-value theorem of calculus.]
+  \item If \(f\) is a \index{contraction@Contraction}contraction and \(X\) is compact, show \(f\) has a unique \index{Contraction!and fixed points}fixed point. [Hint: Define \({f}^{1} = f\) and \({f}^{n + 1} = f \circ  {f}^{n}\) . Consider the intersection \(A\) of the sets \(. {{A}_{n} = {f}^{n}( X) \text{ . }}]\)
+  \item Show more generally that if \(f\) is a \index{Shrinking map!and fixed points}\index{shrinking map@Shrinking map}shrinking map and \(X\) is compact, then \(f\) has a unique fixed point. [Hint: Let \(A\) be as before. Given \(x \in  A\) , choose \({x}_{n}\) so that \(x = {f}^{n + 1}( {x}_{n})\) . If \(a\) is the limit of some subsequence of the sequence \({y}_{n} = {f}^{n}( {x}_{n})\) , show that \(a \in  A\) and \(f( a)  = x\) . Conclude that \(A = f( A)\) , so that diam \(A = 0\) .]
+  \item Let \(X = [  {0,1}]\) . Show that \(f( x)  = x - {x}^{2}/2\) maps \(X\) into \(X\) and is a \index{Shrinking map!vs. contraction}\index{Contraction!vs. shrinking map}shrinking map that is not a contraction. [Hint Use the mean-value theorem of calculus.]
   \item The result in (a) holds if \(X\) is a complete metric space, such as \(\mathbb{R}\) ; see the exercises of \(§{43}\) . The result in (b) does not. Show that the map \(f : \mathbb{R} \rightarrow\)  \(\mathbb{R}\) given by \(f( x)  = [  {x + {( {x}^{2} + 1) }^{1/2}}]  /2\) is a shrinking map that is not a contraction and has no fixed point.
   \end{enumerate}
 \end{enumerate}
@@ -1325,7 +1327,7 @@ Note that a compact space is automatically locally compact.
 
 \begin{centeredblock}
 \begin{example}
-	The space \({\mathbb{R}}^{n}\) is locally compact, the point \(x\) lies in some basis element \(( {{a}_{1},{b}_{1}})  \times   \cdot   \times  ( {{a}_{n},{b}_{n}})\) , which in turn lies in the compact subspace \([  {{a}_{1},{b}_{1}}]   \times   \cdot   \times  [  {{a}_{n},{b}_{n}}]\) . The space \({\mathbb{R}}^{\omega }\) is not locally compact, none of its basis elements are contained in compact subspaces For if
+	The space \({\mathbb{R}}^{n}\) is \index{Local compactness!of \(\mathbb{R}\) and \({\mathbb{R}}^{n}\) and \({\mathbb{R}}^{\omega }\)}\index{\(\mathbb{R}\) (reals)!local compactness}locally compact, the point \(x\) lies in some basis element \(( {{a}_{1},{b}_{1}})  \times   \cdot   \times  ( {{a}_{n},{b}_{n}})\) , which in turn lies in the compact subspace \([  {{a}_{1},{b}_{1}}]   \times   \cdot   \times  [  {{a}_{n},{b}_{n}}]\) . The space \({\mathbb{R}}^{\omega }\) is not locally compact, none of its basis elements are contained in compact subspaces For if
 
 \[
 B = ( {{a}_{1},{b}_{1}})  \times   \cdot   \times  ( {{a}_{n},{b}_{n}})  \times  \mathbb{R} \times   \cdot   \times  \mathbb{R} \times
@@ -1343,7 +1345,7 @@ would be compact, which it is not.
 
 \begin{centeredblock}
 \begin{example}
-	Every simply ordered set \(X\) having the least upper bound property is locally compact: Given a basis element for \(X\) , it is contained in a closed interval in \(X\) , which is compact.
+	Every \index{Local compactness!and least upper bound property}simply ordered set \(X\) having the least upper bound property is locally compact: Given a basis element for \(X\) , it is contained in a closed interval in \(X\) , which is compact.
 \end{example}
 \end{centeredblock}
 
@@ -1437,7 +1439,7 @@ Clearly this new formulation implies local compactness; the set \(C = \bar{V}\) 
 \end{proof}
 
 \begin{corollary}
-	Let \(X\) be locally compact Hausdorff, let \(A\) be a subspace of \(X\) If \(A\) is closed in \(X\) or open in \(X\) , then \(A\) is locally compact.
+	Let \(X\) be locally compact Hausdorff, let \(A\) be a subspace of \(X\) If \(A\) is closed in \(X\) or open in \(X\) , then \(A\) is \index{Local compactness!of subspace}\index{Subspace topology!local compactness}locally compact.
 \end{corollary}
 
 \begin{proof}
@@ -1459,7 +1461,7 @@ This follows from Theorem 29 1 and Corollary 29.3.
 \item Show that the rationals \(\mathbb{Q}\) are not locally compact.
 \item Let \(\{  {X}_{\alpha }\}\) be an indexed family of nonempty spaces.
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Show that if \(\prod {X}_{\alpha }\) is locally compact, then each \({X}_{\alpha }\) is locally compact and \({X}_{\alpha }\) is compact for all but finitely many values of \(\alpha\) .
+  \item Show that if \(\prod {X}_{\alpha }\) is \index{Local compactness!of products}locally compact, then each \({X}_{\alpha }\) is locally compact and \({X}_{\alpha }\) is compact for all but finitely many values of \(\alpha\) .
   \item Prove the converse, assuming the Tychonoff theorem.
   \end{enumerate}
 \item Let \(X\) be a locally compact space. If \(f : X \rightarrow  Y\) is continuous, does it follow that \(f( X)\) is locally compact? What if \(f\) is both continuous and open? Justify your answer.
@@ -1477,7 +1479,7 @@ This follows from Theorem 29 1 and Corollary 29.3.
 \end{enumerate}
 \section*{* Supplementary Exercises: Nets}
 
-We have already seen that sequences are ``adequate'' to detect limit points, continuous functions, and compact sets in metrizable spaces. There is a generalization of the notion of sequence, called a net, that will do the same thing for an arbitrary topological space. We give the relevant definitions here, and leave the proofs as exercises. Recall that a relation \(\preccurlyeq\) on a set \(A\) is called a partial order relation if the following conditions hold:
+We have already seen that sequences are ``adequate'' to detect \index{Closure!via nets}limit points, continuous functions, and \index{Compactness!via nets}compact sets in metrizable spaces. There is a generalization of the notion of sequence, called a net, that will do the same thing for an arbitrary topological space. We give the relevant definitions here, and leave the proofs as exercises. Recall that a relation \(\preccurlyeq\) on a set \(A\) is called a partial order relation if the following conditions hold:
 
 (1) \(\alpha  \preccurlyeq  \alpha\) for all \(\alpha\) .
 

@@ -288,7 +288,6 @@ Given a collection \(\mathcal{A}\) of sets, the union of the elements of \(\math
 \[
 \mathop{\bigcup }\limits_{{A \in  \mathcal{A}}}A = \{ x \mid  x \in  A\text{ for at least one }A \in  \mathcal{A}\} .
 \]
-
 The intersection of the elements of \(\mathcal{A}\) is defined by the equation
 
 \[
@@ -409,11 +408,9 @@ instead.
 The concept \index{Restriction: of a covering map!of a function}of \index{function@Function}function is one you have seen many times already, so it is hardly necessary to remind you how central it is to all mathematics. In this section, we give the precise mathematical definition, and we explore some of the associated concepts.
 
 A function is usually thought of as a rule that assigns to each \index{element of a set@Element of a set}element of a set \(A\) , an element of a set \(B\) . In calculus, a function is often given by a simple formula such as \(f( x)  = 3{x}^{2} + 2\) or perhaps by a more complicated formula such as
-
 \[
 f( x)  = \mathop{\sum }\limits_{{k = 1}}^{\infty }{x}^{k}
 \]
-
 One often does not even mention the sets \(A\) and \(B\) explicitly, agreeing to take \(A\) to be the set of all real numbers for which the rule makes sense and \(B\) to be the set of all real numbers.
 
 As one goes further in mathematics, however, one needs to be more precise about what a function is. Mathematicians think of functions in the way we just described, but the definition they use is more exact. First, we define the following:
@@ -889,7 +886,7 @@ Now we can define the least upper bound property.
 	An ordered set \(A\) is said to have the least upper bound property if every nonempty subset \({A}_{0}\) of \(A\) that is bounded above has a least upper bound. Analogously, the set \(A\) is said to have the greatest lower bound property if every nonempty subset \({A}_{0}\) of \(A\) that is bounded below has a greatest lower bound.
 \end{definition}
 
-We leave it to the exercises to show that \(A\) has the least upper bound property if and only if it has the greatest lower bound property.
+We leave it to the exercises to show that \(A\) has the \index{Least upper bound property!vs. greatest lower bound property}least upper bound property if and only if it has the greatest lower bound property.
 
 \begin{centeredblock}
 \begin{example}
@@ -1079,7 +1076,7 @@ Now we prove two properties of the positive integers that may not be quite so fa
     If \(A\) does not equal all of \({\mathbb{Z}}_{ + }\) , let \(n\) be the smallest positive integer that is not in \(A\) . Then every positive integer less than \(n\) is in \(A\) , so that \({S}_{n} \subset  A\) . Our hypothesis implies that \(n \in  A\) , contrary to assumption.
 \end{proof}
 
-Everything we have done up to now has used only the axioms for an ordered field, properties (1)-(6) of the real numbers. At what point do you need (7), the least upper bound axiom?
+Everything we have done up to now has used only the axioms for an ordered field, \index{\(\mathbb{R}\) (reals)!algebraic properties}\index{\(\mathbb{R}\) (reals)!order properties}properties (1)-(6) of the real numbers. At what point do you need (7), the least upper bound axiom?
 
 For one thing, you need the least upper bound axiom to prove that the set \({\mathbb{Z}}_{ + }\) of positive integers has no upper bound in \(\mathbb{R}\) . This is the \index{archimedean ordering@Archimedean ordering} property of the real line. To prove it, we assume that \({\mathbb{Z}}_{ + }\) has an upper bound and derive a contradiction. If \({\mathbb{Z}}_{ + }\) has an upper bound, it has a least upper bound \(b\) . There exists \(n \in  {\mathbb{Z}}_{ + }\) such that \(n > b - 1\) ; for otherwise, \(b - 1\) would be an upper bound for \({\mathbb{Z}}_{ + }\) smaller than \(b\) . Then \(n + 1 > b\) , contrary to the fact that \(b\) is an upper bound for \({\mathbb{Z}}_{ + }\) .
 
@@ -1212,7 +1209,7 @@ In the case where the index set is the set \({\mathbb{Z}}_{ + }\) , we denote th
 \]
 
 \begin{definition}
-    Let \(m\) be a positive integer. Given a set \(X\) , we define an \index{m-tuple@\(m\)-tuple}\index{J-tuple@\(J\)-tuple}\(m\) -tuple of elements of \(X\) to be a function
+    Let \(m\) be a positive integer. Given a set \(X\) , we define an \index{Coordinate: of J-tuple!of \(m\) -tuple}\index{m-tuple@\(m\)-tuple}\index{J-tuple@\(J\)-tuple}\(m\) -tuple of elements of \(X\) to be a function
     \[
     \mathbf{x} : \{ 1,\ldots ,m\}  \rightarrow  X.
     \]
@@ -1243,7 +1240,7 @@ In the case where the index set is the set \({\mathbb{Z}}_{ + }\) , we denote th
 \end{centeredblock}
 
 \begin{definition}
-    Given a set \(X\) , we define an \(\omega\) -tuple of elements of \(X\) to be a function
+    Given a set \(X\) , we define an \index{Coordinate: of J-tuple!of \(\omega\) -tuple}\(\omega\) -tuple of elements of \(X\) to be a function
     \[
     \mathbf{x} : {\mathbb{Z}}_{ + } \rightarrow  X
     \]
@@ -1469,7 +1466,7 @@ From this lemma a number of useful con\index{Sequences} follow:
 \begin{proof}
     We first show that if \(A\) and \(B\) are finite, so is \(A \cup  B\) . The result is trivial if \(A\) or \(B\) is empty. Otherwise, there are bijections \(f : \{ 1,\ldots ,m\}  \rightarrow  A\) and \(g\) : \(\{ 1,\ldots ,n\}  \rightarrow  B\) for some choice of \(m\) and \(n\) . Define a function \(h.\{ 1,\ldots ,m +\)  \(n\}  \rightarrow  A \cup  B\) by setting \(h( i)  = f( i)\) for \(i = 1,2,\ldots ,m\) and \(h( i)  = g( {i - m})\) for \(i = m + 1,\ldots ,m + n\) . It is easy to check that \(h\) is surjective, from which it follows that \(A \cup  B\) is finite.
 
-    Now we show by induction that \index{finiteness: of cartesian products@Finiteness: of cartesian products} finiteness of the sets \({A}_{1},\ldots ,{A}_{n}\) implies finiteness of their union. This result is trivial for \(n = 1\). Assuming it true for \(n - 1\) , we note that \({A}_{1} \cup  \cdots  \cup  {A}_{n}\) is the union of the two finite sets \({A}_{1} \cup  \cdots  \cup  {A}_{n - 1}\) and \({A}_{n}\) , so the result of the preceding paragraph applies.
+    Now we show by induction that \index{Finiteness: of cartesian products!of subsets}\index{finiteness: of cartesian products@Finiteness: of cartesian products} finiteness of the sets \({A}_{1},\ldots ,{A}_{n}\) implies finiteness of their union. This result is trivial for \(n = 1\). Assuming it true for \(n - 1\) , we note that \({A}_{1} \cup  \cdots  \cup  {A}_{n}\) is the union of the two finite sets \({A}_{1} \cup  \cdots  \cup  {A}_{n - 1}\) and \({A}_{n}\) , so the result of the preceding paragraph applies.
 
     Now we show that the cartesian product of two finite sets \(A\) and \(B\) is finite. Given \(a \in  A\) , the set \(\{ a\}  \times  B\) is finite, being in bijective correspondence with \(B\) . The set \(A \times  B\) is the union of these sets; since there are only finitely many of them, \(A \times  B\) is a finite union of finite sets and thus finite.
 
@@ -1545,7 +1542,7 @@ Figure 7.1
     A set is said to be countable if it is either finite or countably infinite. A set that is not countable is said to be uncountable.
 \end{definition}
 
-There is a very useful criterion for showing that a set is countable. It is the following:
+There is a very useful \index{Countability!via injective and surjective maps}criterion for showing that a set is countable. It is the following:
 
 \begin{theorem}
     Let \(B\) be a nonempty set. Then the following are equivalent:
@@ -1649,7 +1646,7 @@ This principle is the one we actually used in the proof of Lemma 7.2. You can si
 
 \begin{centeredblock}
 \begin{example}
-    The set \({\mathbb{Q}}_{ + }\) of positive rational numbers is countably infinite. For we can define a surjection \(g \colon {\mathbb{Z}}_{ + } \times  {\mathbb{Z}}_{ + } \rightarrow  {\mathbb{Q}}_{ + }\) by the equation
+    The set \({\mathbb{Q}}_{ + }\) of positive rational numbers is \index{Countability!of rationals}countably infinite. For we can define a surjection \(g \colon {\mathbb{Z}}_{ + } \times  {\mathbb{Z}}_{ + } \rightarrow  {\mathbb{Q}}_{ + }\) by the equation
     \[
     g( {n,m})  = m/n
     \]
@@ -1749,7 +1746,7 @@ Now we have proved the existence of uncountable sets. But we have not yet mentio
 \item Let \(X\) be the two-element set \(\{ 0,1\}\) . Show there is a bijective correspondence between the set \index{Uncountability:!of \(\mathcal{P}({\mathbb{Z}}_{ + })\)}\(\mathcal{P}( {\mathbb{Z}}_{ + })\) and the cartesian product \({X}^{\omega }\) .
 \item
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item A real number \(x\) is said to be algebraic (over the rationals) if it satisfies some polynomial equation of positive degree \[ {x}^{n} + {a}_{n - 1}{x}^{n - 1} + \cdots  + {a}_{1}x + {a}_{0} = 0 \] with rational coefficients \({a}_{i}\) . Assuming that each polynomial equation has only finitely many roots, show that the set of \index{Algebraic number} is countable.
+  \item A real number \(x\) is said to be algebraic (over the rationals) if it satisfies some polynomial equation of positive degree \[ {x}^{n} + {a}_{n - 1}{x}^{n - 1} + \cdots  + {a}_{1}x + {a}_{0} = 0 \] with rational coefficients \({a}_{i}\) . Assuming that each polynomial equation has only finitely many roots, show that the set of \index{Algebraic number} is \index{Countability!of algebraic numbers}countable.
   \item A real number is said to be transcendental if it is not algebraic. Assuming the reals are uncountable, show that the \index{Uncountability:!of transcendental numbers}\index{Transcendental number} are uncountable. (It is a somewhat surprising fact that only two transcendental numbers are familiar to us: \(e\) and \(\pi\) . Even proving these two numbers transcendental is highly nontrivial.)
   \end{enumerate}
 \item Determine, for each of the following sets, whether or not it is countable. Justify your answers.
@@ -1963,7 +1960,7 @@ The formula \(( *)\) is called a recursion formula for \(h\) . It specifies \(h(
 \item Verify the following version of the principle of recursive definition: Let \(A\) be a set. Let \(\rho\) be a function assigning, to every function \(f\) mapping a section \({S}_{n}\) of \({\mathbb{Z}}_{ + }\) into \(A\) , an element \(\rho ( f)\) of \(A\) . Then there is a unique function \(h : {\mathbb{Z}}_{ + } \rightarrow  A\) such that \(h( n)  = \rho ( {h \mid  {S}_{n}})\) for each \(n \in  {\mathbb{Z}}_{ + }\) .
 \end{enumerate}
 \section*{§ 9 Infinite Sets and the Axiom of Choice}
-We have already obtained several criteria for a set to be infinite. We know, for instance, that a set \(A\) is infinite if it has a countably infinite subset, or if there is a bijection of \(A\) with a proper subset of itself. It turns out that either of these properties is sufficient to characterize infinite sets. This we shall now prove. The proof will lead us into a discussion of a point of logic we have not yet mentioned-the \index{Axiom of choice}.
+We have already obtained several criteria for a set to be infinite. We know, for instance, that a set \(A\) is \index{Infinite set!via injective and bijective functions}infinite if it has a countably infinite subset, or if there is a bijection of \(A\) with a proper subset of itself. It turns out that either of these properties is sufficient to characterize infinite sets. This we shall now prove. The proof will lead us into a discussion of a point of logic we have not yet mentioned-the \index{Axiom of choice}.
 
 \begin{theorem} 
     Let \(A\) be a set. The following statements about \(A\) are equivalent:
@@ -2122,7 +2119,7 @@ The stronger form of the axiom of choice, the one that applies to an arbitrary c
   \item The collection \(\mathcal{C}\) of nonempty subsets of the rational numbers \(\mathbb{Q}\) .
   \item The collection \(\mathcal{D}\) of nonempty subsets of \({X}^{\omega }\) , where \(X = \{ 0,1\}\) .
   \end{enumerate}
-\item Suppose that \(A\) is a set and \({\{  {f}_{n}\}  }_{n \in  {\mathbb{Z}}_{ + }}\) is a given indexed family of injective functions \[ {f}_{n} : \{ 1,\ldots ,n\}  \rightarrow  A \] Show that \(A\) is infinite. Can you define an injective function \(f : {\mathbb{Z}}_{ + } \rightarrow  A\) without using the choice axiom?
+\item Suppose that \(A\) is a set and \({\{  {f}_{n}\}  }_{n \in  {\mathbb{Z}}_{ + }}\) is a given indexed family of \index{Finiteness: of cartesian products!vs. injective and surjective maps}injective functions \[ {f}_{n} : \{ 1,\ldots ,n\}  \rightarrow  A \] Show that \(A\) is infinite. Can you define an injective function \(f : {\mathbb{Z}}_{ + } \rightarrow  A\) without using the choice axiom?
 \item There was a theorem in \(§7\) whose proof involved an infinite number of arbitrary choices. Which one was it? Rewrite the proof so as to make explicit the use of the choice axiom. (Several of the earlier exercises have used the choice axiom also.)
 \item
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
@@ -2181,7 +2178,7 @@ Figure 10.1
 
 \begin{centeredblock}
 \begin{example}
-    The set of integers is not well-ordered in the usual order, the subset consisting of the negative integers has no smallest element. Nor is the set of real numbers in the interval \(0 \leq  x \leq  1\) well-ordered; the subset consisting of those \(x\) for which \(0 < x < 1\) has no smallest element (although it has a greatest lower bound, of course).
+    The set of integers is not well-ordered in the usual order, the subset consisting of the negative integers has no smallest element. Nor is the set of real numbers in the interval \(0 \leq  x \leq  1\) well-ordered; the subset consisting of those \(x\) for which \(0 < x < 1\) has no smallest element (although it has a \index{Least upper bound property!for well-ordered sets}greatest lower bound, of course).
 \end{example}
 \end{centeredblock}
 
@@ -2285,7 +2282,7 @@ We now use this result to construct a particular well-ordered set that will prov
 \begin{proof}
     We begin with an uncountable well-ordered set \(B\). Let \(C\) be the well-ordered set \(\{ 1,2\}  \times  B\) in the dictionary order; then some section of \(C\) is uncountable. (Indeed, the section of \(C\) by any element of the form \(2 \times  b\) is uncountable.) Let \(\Omega\) be the smallest element of \(C\) for which the section of \(C\) by \(\Omega\) is uncountable. Then let \(A\) consist of this section along with the element \(\Omega\) .
 
-    Note that \({S}_{\Omega }\) is an uncountable well-ordered set every section of which is countable. Its order type is in fact uniquely determined by this condition. We shall call it a minimal uncountable well-ordered set. Furthermore, we shall denote the well-ordered set \(A = {S}_{\Omega } \cup  \{ \Omega \}\) by the symbol \({\widetilde{S}}_{\Omega }\) (for reasons to be seen later).
+    Note that \({S}_{\Omega }\) is an \index{\({S}_{\Omega }\)!existence}uncountable well-ordered set every section of which is \index{\({S}_{\Omega }\)!countable subsets}countable. Its order type is in fact \index{\({S}_{\Omega }\)!uniqueness}uniquely determined by this condition. We shall call it a minimal uncountable well-ordered set. Furthermore, we shall denote the well-ordered set \(A = {S}_{\Omega } \cup  \{ \Omega \}\) by the symbol \({\widetilde{S}}_{\Omega }\) (for reasons to be seen later).
 
     The most useful property of the set \({S}_{\Omega }\) for our purposes is expressed in the following theorem.
 \end{proof}
@@ -2337,7 +2334,7 @@ We now use this result to construct a particular well-ordered set that will prov
   \item If \(h\) and \(k\) map sections of \(J\) , or all of \(J\) , into \(C\) and satisfy \(( *)\) for all \(x\) in their respective domains, show that \(h( x)  = k( x)\) for all \(x\) in both domains.
   \item If there exists a function \(h : {S}_{\alpha } \rightarrow  C\) satisfying \(( *)\) , show that there exists a function \(k \colon {S}_{\alpha } \cup  \{ \alpha \}  \rightarrow  C\) satisfying \(( *)\) .
   \item If \(K \subset  J\) and for all \(\alpha  \in  K\) there exists a function \({h}_{\alpha } \colon {S}_{\alpha } \rightarrow  C\) satisfying \(( *)\) , show that there exists a function \[ k : \mathop{\bigcup }\limits_{{\alpha  \in  K}}{S}_{\alpha } \rightarrow  C \] satisfying \(( *)\) .
-  \item Show by transfinite induction that for every \(\beta  \in  J\) , there exists a function \({h}_{\beta } : {S}_{\beta } \rightarrow  C\) satisfying \(( *)\) . [Hint: If \(\beta\) has an immediate predecessor \(\alpha\) , then \({S}_{\beta } = {S}_{\alpha } \cup  \{ \alpha \}\) . If not, \({S}_{\beta }\) is the union of all \({S}_{\alpha }\) with \(\alpha  < \beta\) .]
+  \item Show by \index{Induction principle!transfinite}transfinite induction that for every \(\beta  \in  J\) , there exists a function \({h}_{\beta } : {S}_{\beta } \rightarrow  C\) satisfying \(( *)\) . [Hint: If \(\beta\) has an immediate predecessor \(\alpha\) , then \({S}_{\beta } = {S}_{\alpha } \cup  \{ \alpha \}\) . If not, \({S}_{\beta }\) is the union of all \({S}_{\alpha }\) with \(\alpha  < \beta\) .]
   \item Prove the theorem.
   \end{enumerate}
 \item Let \(A\) and \(B\) be two sets Using the well-ordering theorem, prove that either they have the same cardinality, or one has cardinality greater than the other. [Hint: If there is no surjection \(f : A \rightarrow  B\) , apply the preceding exercise.]
@@ -2402,7 +2399,7 @@ By the \index{principle of recursive definition@Principle of recursive definitio
 
 If \(A\) is not countable, a variant of this procedure will work, if we allow ourselves to use the \index{well-ordering theorem@Well-ordering theorem}well-ordering theorem. Instead of indexing the elements of \(A\) with the set \({\mathbb{Z}}_{ + }\) , we index them (in a bijective fashion) with the elements \index{Section: of the positive integers!of a well-ordered set}of some \index{well-ordered set@Well-ordered set}well-ordered set \(J\) , so that \(A = \{  {{a}_{\alpha } \mid  \alpha  \in  J}\}\) . For this we need the \index{well-ordering theorem@Well-ordering theorem}well-ordering theorem, so that we know there is a bijection between \(A\) and some \index{well-ordered set@Well-ordered set}well-ordered set \(J\) . Then we can proceed as in the previous paragraph, letting \(\alpha\) replace \(i\) in the argument. \index{Partial order!strict}Strictly speaking, you need to generalize the principle of recursive definition to well-ordered sets as well, but that is not particularly difficult. (See the Supplementary Exercises.)
 
-Thus, the well-ordering theorem implies the \index{maximum principle@Maximum principle}maximum principle.
+Thus, the \index{Maximum principle!vs. well-ordering theorem}well-ordering theorem implies the \index{maximum principle@Maximum principle}maximum principle.
 
 Although the maximum principle of Hausdorff was the first to be formulated and is probably the simplest to understand, there is another such principle that is nowadays the one most frequently quoted. It is popularly called ``\index{zorn's lemma@Zorn's Lemma},'' although Ku-ratowski (1922) and Bochner (1922) preceded Zorn (1935) in enunciating and proving versions of it. For a history and discussion of the tangled history of these ideas, see \cite{Campbell1978} or \cite{Moore1982}. To state this principle, we need some terminology.
 
@@ -2414,7 +2411,7 @@ Although the maximum principle of Hausdorff was the first to be formulated and i
 
 Zorn's lemma is an easy consequence of the \index{maximum principle@Maximum principle}maximum principle: Given \(A\) , the maximum principle implies that \(A\) has a maximal simply ordered subset \(B\) . The hypothesis of Zorn's lemma tells us that \(B\) has an upper bound \(c\) in \(A\) . The element \(c\) is then automatically a maximal element of \(A\) . For if \(c \prec  d\) for some element \(d\) of \(A\) , then the set \(B \cup  \{ d\}\) , which properly contains \(B\) , is simply ordered because \(b \prec  d\) for every \(b \in  B\) . This fact contradicts maximality of \(B\) .
 
-It is also true that the \index{maximum principle@Maximum principle}maximum principle is an easy consequence of \index{zorn's lemma@Zorn's lemma!vs. maximum principle}Zorn's lemma. See Exercises 5-7.
+It is also true that the \index{maximum principle@Maximum principle}maximum principle is an easy consequence of \index{Maximum principle!vs. Zorn's lemma}\index{zorn's lemma@Zorn's lemma!vs. maximum principle}Zorn's lemma. See Exercises 5-7.
 
 One final remark. We have defined what we mean by a \index{strict partial order@Strict partial order}strict partial order on a set, but we have not said what a partial order itself is. Let \(\prec\) be a strict partial order on a set \(A\). Suppose that we define \(a \preccurlyeq  b\) if either \(a \prec  b\) or \(a = b\) . Then the relation \(\preccurlyeq\) is called a partial order on \(A\). For example, the inclusion relation \(\subset\) on a collection of sets is a partial order, whereas \index{proper inclusion@Proper inclusion}proper inclusion is a strict partial order.
 

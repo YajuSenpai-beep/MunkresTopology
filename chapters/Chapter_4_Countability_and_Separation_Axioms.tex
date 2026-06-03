@@ -54,10 +54,10 @@ Now we note that the subspace \(A\) of \({\mathbb{R}}^{\omega }\) consisting of 
 \end{example}
 \end{centeredblock}
 
-Both \index{Countable dense subset!in \({\mathbb{R}}_{\ell }\)}\index{\({\mathbb{R}}_{\ell }\)!countability axioms}countability axioms are well behaved with respect to the operations \index{Complete regularity!of product space}of taking subspaces or countable products:
+Both \index{Countable dense subset!in \({\mathbb{R}}_{\ell }\)}\index{First-countability!of \({\mathbb{R}}_{\ell }\)}\index{\({\mathbb{R}}_{\ell }\)!countability axioms}countability axioms are well behaved with respect to the operations \index{Complete regularity!of product space}of taking subspaces or countable products:
 
 \begin{theorem}
-	A subspace of a first-countable space is first-countable, and a countable product of first-countable spaces is first-countable. A \index{Second-countability!of subspace}subspace of a second-countable space is second-countable, and a countable \index{Second-countability!of products}product of second-countable spaces is second-countable.
+	A \index{First-countability!of subspace}\index{Subspace topology!first-countability}subspace of a first-countable space is first-countable, and a countable \index{Second-countability!of \(\mathbb{R}\) and \({\mathbb{R}}^{n}\) and \({\mathbb{R}}^{\omega }\)}product of first-countable spaces is first-countable. A \index{Subspace topology!second-countability}\index{Second-countability!of subspace}subspace of a second-countable space is second-countable, and a countable \index{Product topology!second-countability}\index{Second-countability!of products}product of second-countable spaces is second-countable.
 
 \end{theorem}
 \begin{proof}
@@ -87,9 +87,9 @@ Let \(\{  {B}_{n}\}\) be a countable basis for \(X\) .
 
 (b) From each nonempty basis element \({B}_{n}\) , choose a point \({x}_{n}\) . Let \(D\) be the set consisting of the points \({x}_{n}\) . Then \(D\) is dense in \(X\) : Given any point \(x\) of \(X\) , every basis element containing \(x\) intersects \(D\) , so \(x\) belongs to \(\bar{D}\) .
 
-The two properties listed in Theorem 30.3 are sometimes taken as alternative countability axioms. A space for which every open covering contains a countable subcovering is called a Lindelöf space A space having a countable \index{Dense subset} is often said to be \index{separable (see also countable dense subset)@Separable (see also Countable dense subset)} separable (an unfortunate choice of terminology). ${}^{\dagger}$ Weaker in general than the second countability axiom, each of these properties is equivalent to the second countability axiom when the space is metrizable (see Exercise 5). They are less important than the second countability axiom, but you should be aware of their existence, for they are sometimes useful. It is often easier, for instance, to show that a space \(X\) has a countable dense subset than it is to show that \(X\) has a countable basis. If the space is metrizable (as it usually is in analysis), it follows that \(X\) is second-countable as well.
+The two properties listed in Theorem 30.3 are sometimes taken as alternative countability axioms. A space for which every open covering contains a countable subcovering is called a \index{Lindelöf condition!for \({\mathbb{R}}_{\ell }\)}Lindelöf space A space having a countable \index{Dense subset} is often said to be \index{separable (see also countable dense subset)@Separable (see also Countable dense subset)} separable (an unfortunate choice of terminology). ${}^{\dagger}$ Weaker in general than the \index{Second-countability!vs. countable dense subset}\index{Second-countability!vs. Lindelöf condition}second countability axiom, each of these properties is equivalent to the second countability axiom when the space is metrizable (see Exercise 5). They are less important than the second countability axiom, but you should be aware of their existence, for they are sometimes useful. It is often easier, for instance, to show that a space \(X\) has a countable dense subset than it is to show that \(X\) has a countable basis. If the space is metrizable (as it usually is in analysis), it follows that \(X\) is second-countable as well.
 
-We shall not use these properties to prove any theorems, but one of them-the \index{lindelöf condition@Lindelöf condition}-will be useful in dealing with some examples. They are not as well behaved as one might wish under the operations of taking subspaces and cartesian products, as we shall see in the examples and exercises that follow.
+We shall not use these properties to prove any theorems, but one of them-the \index{Lindelöf condition!effect of continuous function}\index{lindelöf condition@Lindelöf condition}-will be useful in dealing with some examples. They are not as well behaved as one might wish under the operations of taking subspaces and cartesian products, as we shall see in the examples and exercises that follow.
 \end{proof}
 
 \begin{centeredblock}
@@ -136,7 +136,7 @@ is a countable subcollection of \(\mathcal{A}\) that covers the set \(C\) , and 
 
 \begin{centeredblock}
 \begin{example}
-	The product of two Lindelof spaces need not be Lindelof. Although the space \({\mathbb{R}}_{\ell }\) is Lindelöf, we shall show that the product space \({\mathbb{R}}_{\ell } \times  {\mathbb{R}}_{\ell } = \index{R@\({\mathbb{R}}_{\ell }^{2}\)} {\mathbb{R}}_{\ell }^{2}\) is not. The space \({\mathbb{R}}_{\ell }^{2}\) is an extremely useful example in topology called the Sorgenfrey plane
+	The product of two Lindelof spaces need not be Lindelof. Although the space \index{Lindelöf condition!for \({\mathbb{R}}_{\ell }^{2}\)}\({\mathbb{R}}_{\ell }\) is Lindelöf, we shall show that the product space \({\mathbb{R}}_{\ell } \times  {\mathbb{R}}_{\ell } = \index{R@\({\mathbb{R}}_{\ell }^{2}\)} {\mathbb{R}}_{\ell }^{2}\) is not. The space \({\mathbb{R}}_{\ell }^{2}\) is an extremely useful example in topology called the Sorgenfrey plane
 
 The space \({\mathbb{R}}_{\ell }^{2}\) has as basis all sets of the form \(\lbrack a,b) \times  \lbrack c,d)\) To show it is not Lindelof, consider the subspace
 
@@ -189,11 +189,11 @@ The terminology here comes from the German. The `` \(G\) `` stands for ``Gebiet,
 
 8. Which of our four countability axioms does \({\mathbb{R}}^{\omega }\) in the uniform topology satisfy?
 
-9. Let \(A\) be a closed subspace of \(X\) . Show that if \(X\) is Lindelóf, then \(A\) is Lindelóf. Show by example that if \(X\) has a countable dense subset, \(A\) need not have a countable dense subset.
+9. Let \(A\) be a closed subspace of \(X\) . Show that if \(X\) is \index{Subspace topology!Lindelöf condition}Lindelóf, then \(A\) is Lindelóf. Show by example that if \(X\) has a \index{Subspace topology!countable dense subset}countable dense subset, \(A\) need not have a countable dense subset.
 
 10. Show that if \(X\) is a countable product of spaces having countable dense subsets, then \(X\) has a countable dense subset.
 
-11. Let \(f : X \rightarrow  Y\) be continuous. Show that if \(X\) is Lindelöf, or if \(X\) has a countable dense subset, then \(f( X)\) satisfies the same condition.
+11. Let \(f : X \rightarrow  Y\) be continuous. Show that if \(X\) is \index{Continuous image!of a Lindelöf space}Lindelöf, or if \(X\) has a \index{Continuous image!of a space with a countable dense subset}countable dense subset, then \(f( X)\) satisfies the same condition.
 
 12. Let \(f : X \rightarrow  Y\) be a continuous open map. Show that if \(X\) satisfies the first or the second countability axiom, then \(f( X)\) satisfies the same axiom.
 
@@ -201,7 +201,7 @@ The terminology here comes from the German. The `` \(G\) `` stands for ``Gebiet,
 
 14. Show that if \(X\) is Lindelöf and \(Y\) is compact, then \(X \times  Y\) is Lindelöf.
 
-15. Give \({\mathbb{R}}^{I}\) the uniform metric, where \(I = [  {0,1}]\) . Let \(\mathcal{C}( {I,\mathbb{R}})\) be the subspace consisting of continuous functions. Show that \(\mathcal{C}( {I,\mathbb{R}})\) has a countable dense subset, and therefore a countable basis. [Hint: Consider those continuous functions whose graphs consist of finitely many line segments with rational end points.]
+15. Give \({\mathbb{R}}^{I}\) the uniform metric, where \(I = [  {0,1}]\) . Let \(\mathcal{C}( {I,\mathbb{R}})\) be the subspace consisting of continuous functions. Show that \(\mathcal{C}( {I,\mathbb{R}})\) has a \index{Second-countability!of \(\mathcal{C}(I,\mathbb{R})\)}countable dense subset, and therefore a countable basis. [Hint: Consider those continuous functions whose graphs consist of finitely many line segments with rational end points.]
 
 16. (a) Show that the product space \({\mathbb{R}}^{I}\) , where \(I = \{ 0,1\}\) , has a countable dense subset.
 
@@ -221,7 +221,7 @@ Recall that a space \(X\) is said to be Hausdorff if for each pair \(x,y\) of di
 	Suppose that one-point sets are closed in \(X\) . Then \(X\) is said to be \index{Regularity!vs. normality}regular if for each pair consisting of a point \(x\) and a closed set \(B\) disjoint from \(x\) , there exist disjoint open sets containing \(x\) and \(B\) , respectively. The space \(X\) is said to be normal if for each pair \(A,B\) of disjoint closed sets of \(X\) , there exist disjoint open sets containing \(A\) and \(B\) , respectively.
 \end{definition}
 
-It is clear that a regular space is Hausdorff, and that a \index{Normal space} is regular. (We need to include the condition that one-point sets be closed as part of the definition of regularity and \index{Normality} in order for this to be the case. A two-point space in the indiscrete topology satisfies the other part of the definitions of regularity and normality, even though it is not Hausdorff.) For examples showing the regularity axiom stronger than the Hausdorff axiom, and normality stronger than regularity, see Examples 1 and 3.
+It is clear that a \index{Hausdorff condition!vs. regularity}regular space is Hausdorff, and that a \index{Normal space} is regular. (We need to include the condition that one-point sets be closed as part of the definition of regularity and \index{Normality} in order for this to be the case. A two-point space in the indiscrete topology satisfies the other part of the definitions of regularity and normality, even though it is not Hausdorff.) For examples showing the regularity axiom stronger than the Hausdorff axiom, and normality stronger than regularity, see Examples 1 and 3.
 
 These axioms are called separation axioms for the reason that they involve ``separating'' certain kinds of sets from one another by disjoint open sets. We have used the word ``separation'' before, of course, when we studied connected spaces. But in that case, we were trying to find disjoint open sets whose union was the entire space.
 
@@ -259,7 +259,7 @@ Now we relate the separation axioms with the concepts previously introduced.
 \begin{theorem}
 	(a) A subspace of a Hausdorff space is Hausdorff; a product of Hausdorff spaces is Hausdorff.
 
-(b) A \index{Regularity!of subspaces}subspace of a regular space is regular; a \index{Regularity!of products}product of regular spaces is regular.
+(b) A \index{Subspace topology!regularity}\index{Regularity!of subspaces}subspace of a regular space is regular; a \index{Regularity!of products}product of regular spaces is regular.
 \end{theorem}
 \begin{proof}
 	(a) This result was an exercise in \(§{17}\) . We provide a proof here. Let \(X\) be Hausdorff. Let \(x\) and \(y\) be two points of the subspace \(Y\) of \(X\) . If \(U\) and \(V\) are disjoint neighborhoods in \(X\) of \(x\) and \(y\) , respectively, then \(U \cap  Y\) and \(V \cap  Y\) are disjoint neighborhoods of \(x\) and \(y\) in \(Y\) .
@@ -348,16 +348,16 @@ This proof that \({\mathbb{R}}_{\ell }^{2}\) is not normal is in some ways not v
 \item Show that if \(X\) is normal, every pair of disjoint closed sets have neighborhoods whose closures are disjoint.
 \item Show that every order topology is regular.
 \item Let \(X\) and \({X}^{\prime }\) denote a single set under two topologies \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\) , respectively: assume that \({\mathcal{T}}^{\prime } \supset  \mathcal{T}\) . If one of the spaces is Hausdorff (or regular, or normal), what does that imply about the other?
-\item Let \(f,g : X \rightarrow  Y\) be continuous; assume that \(Y\) is Hausdorff. Show that \(\{ x \mid\)  \(f( x)  = g( x) \}\) is closed in \(X\) .
+\item Let \(f,g : X \rightarrow  Y\) be continuous; assume that \(Y\) is \index{Hausdorff condition!and uniqueness of extensions}Hausdorff. Show that \(\{ x \mid\)  \(f( x)  = g( x) \}\) is closed in \(X\) .
 \item Let \(p : X \rightarrow  Y\) be a closed continuous surjective map. Show that if \(X\) is normal, then so is \(Y\) . [Hint: If \(U\) is an open set containing \({p}^{-1}( {\{ y\} })\) , show there is a neighborhood \(W\) of \(y\) such that \(. {{p}^{-1}( W)  \subset  U\text{ . }}]\)
 \item Let \(p : X \rightarrow  Y\) be a closed continuous surjective map such that \({p}^{-1}( {\{ y\} })\) is compact for each \(y \in  Y\) . (Such a map is called a perfect map.)
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Show that if \(X\) is Hausdorff, then so is \(Y\) .
+  \item Show that if \(X\) is \index{Hausdorff condition!and perfect maps}Hausdorff, then so is \(Y\) .
   \item Show that if \(X\) is regular, then so is \(Y\) .
-  \item Show that if \(X\) is \index{local metrizability@Local metrizability} locally compact, then so is \(Y\) .
-  \item Show that if \(X\) is second-countable, then so is \(Y\) . [Hint: Let \(\mathcal{B}\) be a countable basis for \(X\) . For each finite subset \(J\) of \(\mathcal{B}\) , let \({U}_{J}\) be the union of all sets of the form \({p}^{-1}( W)\) , for \(W\) open in \(Y\) , that are contained in the union of the elements of \(J\) .]
+  \item Show that if \(X\) is \index{Local compactness!and perfect maps}\index{local metrizability@Local metrizability} locally compact, then so is \(Y\) .
+  \item Show that if \(X\) is \index{Second-countability!and perfect maps}second-countable, then so is \(Y\) . [Hint: Let \(\mathcal{B}\) be a countable basis for \(X\) . For each finite subset \(J\) of \(\mathcal{B}\) , let \({U}_{J}\) be the union of all sets of the form \({p}^{-1}( W)\) , for \(W\) open in \(Y\) , that are contained in the union of the elements of \(J\) .]
   \end{enumerate}
-\item Let \(X\) be a space; let \(G\) be a topological group. An \index{action of a group on a space@Action of a group on a space} action of \(G\) on \(X\) is a continuous map \(\alpha  : G \times  X \rightarrow  X\) such that, denoting \(\alpha ( {g \times  x})\) by \(g \cdot  x\) , one has: (i) \(e \cdot  x = x\) for all \(x \in  X\) . (ii) \({g}_{1} \cdot  ( {{g}_{2} \cdot  x})  = ( {{g}_{1} \cdot  {g}_{2}})  \cdot  x\) for all \(x \in  X\) and \({g}_{1},{g}_{2} \in  G\) . Define \(x \sim  g \cdot  x\) for all \(x\) and \(g\) ; the resulting \index{Quotient topology!normality}quotient space is denoted \(X/G\) and called the \index{Orbit space} of the action \(\alpha\) . \textbf{Theorem.} Let \(G\) be a compact topological group; let \(X\) be a topological space; let \(\alpha\) be an action of \(G\) on \(X\) . If \(X\) is Hausdonormal, or \index{Topological group!regularity}locally compact, or \index{Topological group!second-countability}second-countable, so is\) . [Hint: See Exercise 13 of §26.] *9. Let \(A\) be the set of all points of \({\mathbb{R}}_{\ell }^{2}\) of the form \(x \times  ( {-x})\) , for \(x\) rational; let \(B\) be the set of all points of this form for \(x\) irrational. If \(V\) is an open set of \({\mathbb{R}}_{\ell }^{2}\) containing \(B\) , show there exists no open set \(U\) containing \(A\) that is disjoint from \(V\) , as follows:
+\item Let \(X\) be a space; let \(G\) be a topological group. An \index{action of a group on a space@Action of a group on a space} action of \(G\) on \(X\) is a continuous map \(\alpha  : G \times  X \rightarrow  X\) such that, denoting \(\alpha ( {g \times  x})\) by \(g \cdot  x\) , one has: (i) \(e \cdot  x = x\) for all \(x \in  X\) . (ii) \({g}_{1} \cdot  ( {{g}_{2} \cdot  x})  = ( {{g}_{1} \cdot  {g}_{2}})  \cdot  x\) for all \(x \in  X\) and \({g}_{1},{g}_{2} \in  G\) . Define \(x \sim  g \cdot  x\) for all \(x\) and \(g\) ; the resulting \index{Quotient topology!normality}quotient space is denoted \(X/G\) and called the \index{Orbit space} of the action \(\alpha\) . \textbf{Theorem.} Let \(G\) be a compact topological group; let \(X\) be a topological space; let \(\alpha\) be an action of \(G\) on \(X\) . If \(X\) is Hausdorff, or \index{Topological group!regularity}regular, or \index{Normality!of quotient space}\index{Normality!of orbit space}normal, or \index{Local compactness!for orbit space}locally compact, or \index{Second-countability!of topological group}\index{Second-countability!of orbit space}\index{Topological group!second-countability}second-countable, so is \(X/G\) . [Hint: See Exercise 13 of §26.] *9. Let \(A\) be the set of all points of \({\mathbb{R}}_{\ell }^{2}\) of the form \(x \times  ( {-x})\) , for \(x\) rational; let \(B\) be the set of all points of this form for \(x\) irrational. If \(V\) is an open set of \({\mathbb{R}}_{\ell }^{2}\) containing \(B\) , show there exists no open set \(U\) containing \(A\) that is disjoint from \(V\) , as follows:
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Let \({K}_{n}\) consist of all irrational numbers \(x\) in \([  {0,1}]\) such that \(\lbrack x,x + 1/n) \times\)  \(\lbrack  - x, - x + 1/n)\) is contained in \(V\) . Show \([  {0,1}]\) is the union of the sets \({K}_{n}\) and countably many one-point sets.
   \item Use Exercise 5 of \(§{27}\) to show that some set \({\bar{K}}_{n}\) contains an open interval (a, b)of \(\mathbb{R}\) .
@@ -434,9 +434,9 @@ are disjoint open sets containing \(A\) and \(B\) , respectively.
 Here is a further result about normality that we shall find useful in dealing with some examples.
 
 \begin{theorem}
-	Every \index{Well-ordered set!normality}well-ordered set \(X\) is normal in the order topology.
+	Every \index{Normality!of well-ordered set}\index{Well-ordered set!normality}well-ordered set \(X\) is normal in the order topology.
 
-It is, in fact, true that every order topology is normal (see Example 39 of \cite{SteenSeebach1970}); but we shall not have occasion to use this stronger result.
+It is, in fact, true that every \index{Order topology!normality}order topology is normal (see Example 39 of \cite{SteenSeebach1970}); but we shall not have occasion to use this stronger result.
 
 \end{theorem}
 Proof. Let \(X\) be a well-ordered set. We assert that every interval of the form \((x,y\rbrack\) is open in \(X\) . If \(X\) has a largest element and \(y\) is that element, \((x,y\rbrack\) is just a basis element about \(y\) . If \(y\) is not the largest element of \(X\) , then \((x,y\rbrack\) equals the open set \(( {x,{y}^{\prime }})\) , where \({y}^{\prime }\) is the immediate successor of \(y\) .
@@ -524,11 +524,11 @@ Figure 32.3
 
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
-\item Show that a \index{Normality!of closed subspace}closed subspace of a normal space is normal.
+\item Show that a \index{Subspace topology!normality}\index{Normality!of closed subspace}closed subspace of a normal space is normal.
 \item Show that if \(\prod {X}_{\alpha }\) is Hausdorff, or regular, or normal, then so is \({X}_{\alpha }\) . (Assume that each \({X}_{\alpha }\) is nonempty.)
 \item Show that every locally compact Hausdorff space is \index{Regularity!of locally compact Hausdorff space}regular.
 \item Show that every regular Lindelöf space is normal.
-\item Is \({\mathbb{R}}^{\omega }\) normal in the product topology? In the uniform topology? It is not known whether \({\mathbb{R}}^{\omega }\) is normal in the box topology. Mary-Ellen Rudin has shown that the answer is affirmative if one assumes the continuum hypothesis \cite{Rudin1972}. In fact, she shows it satisfies a stronger condition called paracompact-ness.
+\item Is \({\mathbb{R}}^{\omega }\) normal in the product topology? In the uniform topology? \index{\({\mathbb{R}}^{\omega }\) in box topology: components!normality}It is not known whether \({\mathbb{R}}^{\omega }\) is normal in the box topology. Mary-Ellen Rudin has shown that the answer is affirmative if one assumes the continuum hypothesis \cite{Rudin1972}. In fact, she shows it satisfies a stronger condition called paracompact-ness.
 \item A space \(X\) is said to be \index{complete regularity (cont.)@Complete regularity (cont.)} completely normal if every subspace of \(X\) is normal. Show that \(X\) is completely normal if and only if for every pair \(A,B\) of separated sets in \(X\) (that is, sets such that \(\bar{A} \cap  B = \varnothing\) and \(A \cap  \bar{B} = \varnothing\) ), there exist disjoint open sets containing them. [Hint: If \(X\) is completely normal, consider \(X - ( {\bar{A} \cap  \bar{B}})\) .]
 \item Which of the following spaces are completely normal? Justify your answers.
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
@@ -538,7 +538,7 @@ Figure 32.3
   \item A metrizable space.
   \item A compact Hausdorff space.
   \item A regular space with a countable basis.
-  \item The space \({\mathbb{R}}_{\ell }\) . *8. Prove the following: \textsl{Theorem.} Every linear continuum \(X\) is normal.
+  \item The space \({\mathbb{R}}_{\ell }\) . *8. Prove the following: \textsl{Theorem.} Every \index{Normality!of linear continuum}\index{Linear continuum!normality}linear continuum \(X\) is normal.
   \item Let \(C\) be a nonempty closed subset of \(X\) . If \(U\) is a component of \(X - C\) , show that \(U\) is a set of the form \(( {c,{c}^{\prime }})\) or \(( {c,\infty })\) or \(( {-\infty ,c})\) , where \(c,{c}^{\prime } \in  C\) .
   \item Let \(A\) and \(B\) be closed disjoint subsets of \(X\) . For each component \(W\) of \(X - A \cup  B\) that is an open interval with one end point in \(A\) and the other in \(B\) , choose a point \({c}_{W}\) of \(W\) . Show that the set \(C\) of the points \({c}_{W}\) is closed.
   \item Show that if \(V\) is a component of \(X - C\) , then \(V\) does not intersect both \(A\) and \(B\) .
@@ -713,7 +713,7 @@ Second, we show that \(f( U)  \subset  ( {c,d})\) . Let \(x \in  U\) . Then \(x 
 \end{proof}
 
 \begin{definition}
-	If \(A\) and \(B\) are two subsets of the topological space \(X\) , and if there is a continuous function \(f : X \rightarrow  [  {0,1}]\) such that \(f( A)  = \{ 0\}\) and \(f( B)  = \{ 1\}\) , we say that \(A\) and \(B\) can be separated by a continuous function.
+	If \(A\) and \(B\) are two subsets of the topological space \(X\) , and if there is a continuous function \(f : X \rightarrow  [  {0,1}]\) such that \(f( A)  = \{ 0\}\) and \(f( B)  = \{ 1\}\) , we say that \(A\) and \(B\) can be \index{Separation!by continuous functions}separated by a continuous function.
 \end{definition}
 
 The Urysohn lemma says that if every pair of disjoint closed sets in \(X\) can be separated by disjoint open sets, then each such pair can be separated by a continuous function. The converse is trivial, for if \(f : X \rightarrow  [  {0,1}]\) is the function, then \({f}^{-1}( [ 0,\frac{1}{2}) )\) . and \({f}^{-1}( ( {\frac{1}{2},1}]  )\) are disjoint open sets containing \(A\) and \(B\) , respectively
@@ -735,7 +735,7 @@ In the early years of topology, the separation axioms, listed in order of increa
 Unlike normality, this new separation axiom is nicely behaved with regard to subspaces and products:
 
 \begin{theorem}
-	A \index{Complete regularity!of subspace}subspace of a completely regular space is completely regular. A \index{Complete regularity!of product space}product of completely regular spaces is completely regular.
+	A \index{Subspace topology!complete regularity}\index{Complete regularity!of subspace}subspace of a completely regular space is completely regular. A \index{Complete regularity!of product space}product of completely regular spaces is completely regular.
 \end{theorem}
 \begin{proof}
 	Let \(X\) be completely regular; let \(Y\) be a subspace of \(X\) . Let \({x}_{0}\) be a point of \(Y\) , and let \(A\) be a closed set of \(Y\) disjoint from \({x}_{0}\) . Now \(A = \bar{A} \cap  Y\) , where \(\bar{A}\) denotes the closure of \(A\) in \(X\) . Therefore, \({x}_{0} \notin  \bar{A}\) . Since \(X\) is completely regular, we can choose a continuous function \(f : X \rightarrow  [  {0,1}]\) such that \(f( {x}_{0})  = 1\) and \(f( \bar{A})  = \{ 0\}\) . The restriction of \(f\) to \(Y\) is the desired continuous function on \(Y\) .
@@ -929,7 +929,7 @@ A family of continuous functions that satisfies the hypotheses of this theorem i
 \item Let \(X\) be a locally compact Hausdorff space. Let \(Y\) be the one-point compactification of \(X\) . Is it true that if \(X\) has a countable basis, then \(Y\) is metrizable? Is it true that if \(Y\) is metrizable, then \(X\) has a countable basis?
 \item Check the details of the proof of Theorem 34.2.
 \item A space \(X\) is locally metrizable if each point \(x\) of \(X\) has a neighborhood that is metrizable in the subspace topology. Show that a compact Hausdorff space \(X\) is metrizable if it is locally metrizable. [Hint. Show that \(X\) is a finite union of open subspaces, each of which has a countable basis.]
-\item Show that a \index{regular lindelöf space: metrizability@Regular Lindelöf space: metrizability} regular Lindelof space is metrizable if it is locally metrizable. [Hint: A closed subspace of a Lindelof space is Lindelöf.] Regularity is essential; where do you use it in the proof?
+\item Show that a \index{Metrizability: of compact Hausdorff space!of regular Lindelöf space}\index{regular lindelöf space: metrizability@Regular Lindelöf space: metrizability} regular Lindelof space is metrizable if it is locally metrizable. [Hint: A closed subspace of a Lindelof space is Lindelöf.] Regularity is essential; where do you use it in the proof?
 \item Let \(X\) be a compact Hausdorff space that is the union of the closed subspaces \({X}_{1}\) and \({X}_{2}\) . If \({X}_{1}\) and \({X}_{2}\) are metrizable, show that \(X\) is metrizable. [Hint Construct a countable collection \(\mathcal{A}\) of open sets of \(X\) whose intersections with \({X}_{i}\) form a basis for \({X}_{i}\) , for \(i = 1,2\) . Assume \({X}_{1} - {X}_{2}\) and \({X}_{2} - {X}_{1}\) belong to \(\mathcal{A}\) . Let \(\mathcal{B}\) consist of finite intersections of elements of \(\mathcal{A}\) ]
 \end{enumerate}
 \section*{*§ 35 The Tietze Extension Theorem \protect\sectionDagger}
@@ -1278,7 +1278,7 @@ In many applications of partitions of unity, such as the one just given, all one
 
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
-\item Prove that every manifold is regular and hence metrizable. Where do you use the Hausdorff condition?
+\item Prove that every \index{2-Manifold!regularity}\index{2-Manifold!metrizability}\index{2-Manifold!necessity of Hausdorff condition}manifold is regular and hence metrizable. Where do you use the Hausdorff condition?
 \item Let \(X\) be a compact Hausdorff space. Suppose that for each \(x \in  X\) , there is a neighborhood \(U\) of \(x\) and a positive integer \(k\) such that \(U\) can be imbedded in \({\mathbb{R}}^{k}\) . Show that \(X\) can be imbedded in \({\mathbb{R}}^{N}\) for some positive integer \(N\) .
 \item Let \(X\) be a Hausdorff space such that each point of \(X\) has a neighborhood that is homeomorphic with an open subset of \({\mathbb{R}}^{m}\) . Show that if \(X\) is compact, then \(X\) is an \(m\) -manifold.
 \item An indexed family \(\{  {A}_{\alpha }\}\) of subsets of \(X\) is said to be a \index{point-finite family@Point-finite family} point-finite indexed family if each \(x \in  X\) belongs to \({A}_{\alpha }\) for only finitely many values of \(\alpha\) . \textsl{Lemma (The \index{Shrinking lemma}).} Let \(X\) be a normal space, let \(\{  {{U}_{1},{U}_{2}\ldots }\}\) be a point-finite indexed open covering of \(X\) . Then there exists an indexed open covering \(\{  {{V}_{1},{V}_{2},\ldots }\}\) of \(X\) such that \({\bar{V}}_{n} \subset  {U}_{n}\) for each \(n\) . 
