@@ -1,12 +1,15 @@
-\chapter{Classification of Surfaces}
+\chapter[\index{Surface!classification}Classification \index{Classification: of covering spaces!of surfaces}of Surfaces]{Classification of Surfaces}
+\vspace{6.5cm}
+\chaptermark{Classification of Surfaces}
+
 
 One of the earliest successes of algebraic topology was its role in solving the problem of classifying compact surfaces up to homeomorphism. ``Solving'' this problem means giving a list of compact surfaces such that no two surfaces on the list are homeomorphic, and such that every compact surface is homeomorphic to one of them. This is the problem we tackle in this chapter.
 
 \section*{§ 74 Fundamental Groups of Surfaces}
 
-In this section, we show how to construct a number of compact \index{connected sum: of projective planes@Connected sum: of projective planes}connected sum connected surfaces, and we compute their fundamental groups We shall construct each of these surfaces as the quotient space obtained from a \index{Polygonal region}polygonal region in the plane by ``\index{pasting regions together@Pasting regions together}Pasting regions together pasting its edges together.''
+In this section, we show how to construct a number of compact \index{connected sum: of projective planes@Connected sum: of projective planes} connected surfaces, and we compute their \index{Dunce cap!fundamental group}\index{Dunce cap!fundamental group}\index{Dunce cap!fundamental group}fundamental groups We shall construct each of these surfaces as the quotient space obtained from a \index{Polygonal region} in the plane by ``\index{pasting regions together@Pasting regions together} pasting its edges together.''
 
-To treat this pasting process formally requires some care. First, let us define precisely what we shall mean by a ``polygonal region in the plane.'' Given a point \(c\) of \({\mathbb{R}}^{2}\) , and given \(a > 0\) , consider the circle of radius \(a\) in \({\mathbb{R}}^{2}\) with center at \(c\) . Given a finite sequence \({\theta }_{0} < {\theta }_{1} < \cdots  < {\theta }_{n}\) of real numbers, where \(n \geq  3\) and \({\theta }_{n} = {\theta }_{0} + {2\pi }\) , consider the points \({p}_{i} = c + a\left( {\cos {\theta }_{i},\sin {\theta }_{i}}\right)\) , which lie on this circle. They are numbered in counterclockwise order around the circle, and \({p}_{n} = {p}_{0}\) . The line through \({p}_{i - 1}\) and \({p}_{i}\) splits the plane into two closed half-planes; let \({H}_{i}\) be the one that contains all the points \({p}_{k}\) . Then the space
+To treat this pasting process formally requires some care. First, let us define precisely what we shall mean by a ``\index{polygonal region@Polygonal region}\index{polygonal region@Polygonal region}\index{polygonal region@Polygonal region}polygonal region in the plane.'' Given a point \(c\) of \({\mathbb{R}}^{2}\) , and given \(a > 0\) , consider the circle of radius \(a\) in \({\mathbb{R}}^{2}\) with center at \(c\) . Given a finite sequence \({\theta }_{0} < {\theta }_{1} < \cdots  < {\theta }_{n}\) of real numbers, where \(n \geq  3\) and \({\theta }_{n} = {\theta }_{0} + {2\pi }\) , consider the points \({p}_{i} = c + a( {\cos {\theta }_{i},\sin {\theta }_{i}})\) , which lie on this circle. They are numbered in counterclockwise order around the circle, and \({p}_{n} = {p}_{0}\) . The line through \({p}_{i - 1}\) and \({p}_{i}\) splits the plane into two closed half-planes; let \({H}_{i}\) be the one that contains all the points \({p}_{k}\) . Then the space
 
 \[
 P = {H}_{1} \cap  \cdots  \cap  {H}_{n}
@@ -14,9 +17,9 @@ P = {H}_{1} \cap  \cdots  \cap  {H}_{n}
 
 is called the polygonal region determined by the points \({p}_{i}\) . The points \({p}_{i}\) are called the vertices of \(P\) ; the line segment joining \({p}_{i - 1}\) and \({p}_{i}\) is called an edge of \(P\) ; the union of the edges of \(P\) is denoted Bd \(P\) ; and \(P -\) Bd \(P\) is denoted Int \(P\) . It is not hard to show that if \(p\) is any point of Int \(P\) , then \(P\) is the union of all line segments joining \(p\) and points of \(\mathrm{{Bd}}P\) , and that two such line segments intersect only in the point \(p\) .
 
-Given a line segment \(L\) in \({\mathbb{R}}^{2}\) , an orientation of \(L\) is simply an ordering of its end points; the first, say \(a\) , is called the \index{initial point: of an oriented line segment@Initial point: of an oriented line segment}initial point initial point, and the second, say \(b\) , is called the \index{final point: of oriented line segment@Final point: of oriented line segment}final point final point, of the \index{Oriented line segment}oriented line segment. We often say that \(L\) is oriented from a to \(b\) ; and we picture the orientation by drawing an arrow on \(L\) that points from a towards \(b\) . If \({L}^{\prime }\) is another line segment, oriented from \(c\) to \(d\) , then the positive linear map of \(L\) onto \({L}^{\prime }\) is the homeomorphism \(h\) that carries the point \(x = \left( {1 - s}\right) a + {sb}\) of \(L\) to the point \(h\left( x\right)  = \left( {1 - s}\right) c + {sd}\) of \({L}^{\prime }\) .
+Given a line segment \(L\) in \({\mathbb{R}}^{2}\) , an orientation of \(L\) is simply an ordering of its end points; the first, say \(a\) , is called the \index{initial point: of an oriented line segment@Initial point: of an oriented line segment} initial point, and the second, say \(b\) , is called the \index{final point: of oriented line segment@Final point: of oriented line segment} final point, of the \index{Oriented line segment}. We often say that \(L\) is oriented from a to \(b\) ; and we picture the orientation by drawing an arrow on \(L\) that points from a towards \(b\) . If \({L}^{\prime }\) is another line segment, oriented from \(c\) to \(d\) , then the positive linear map of \(L\) onto \({L}^{\prime }\) is the homeomorphism \(h\) that carries the point \(x = ( {1 - s}) a + {sb}\) of \(L\) to the point \(h( x)  = ( {1 - s}) c + {sd}\) of \({L}^{\prime }\) .
 
-If two polygonal regions \(P\) and \(Q\) have the same number of vertices, \({p}_{0},\ldots ,{p}_{n}\) and \({q}_{0},\ldots ,{q}_{n}\) , respectively, with \({p}_{0} = {p}_{n}\) and \({q}_{0} = {q}_{n}\) , then there is an obvious homeomorphism \(h\) of \(\mathrm{{Bd}}P\) with \(\mathrm{{Bd}}Q\) that carries the line segment from \({p}_{t - 1}\) to \({p}_{i}\) by a positive linear map onto the line segment from \({q}_{i - 1}\) to \({q}_{i}\) . If \(p\) and \(q\) are fixed points of Int \(P\) and Int \(Q\) , respectively, then this homeomorphism may be extended to a homeomorphism of \(P\) with \(Q\) by letting it map the line segment from \(p\) to the point \(x\) of Bd \(P\) linearly onto the line segment from \(q\) to \(h\left( x\right)\) . See Figure 74.1.
+If two polygonal regions \(P\) and \(Q\) have the same number of vertices, \({p}_{0},\ldots ,{p}_{n}\) and \({q}_{0},\ldots ,{q}_{n}\) , respectively, with \({p}_{0} = {p}_{n}\) and \({q}_{0} = {q}_{n}\) , then there is an obvious homeomorphism \(h\) of \(\mathrm{{Bd}}P\) with \(\mathrm{{Bd}}Q\) that carries the line segment from \({p}_{t - 1}\) to \({p}_{i}\) by a positive linear map onto the line segment from \({q}_{i - 1}\) to \({q}_{i}\) . If \(p\) and \(q\) are fixed points of Int \(P\) and Int \(Q\) , respectively, then this homeomorphism may be extended to a homeomorphism of \(P\) with \(Q\) by letting it map the line segment from \(p\) to the point \(x\) of Bd \(P\) linearly onto the line segment from \(q\) to \(h( x)\) . See Figure 74.1.
 
 \begin{center}
 \includegraphics[width=0.9\textwidth]{images/74.1.jpg}
@@ -26,7 +29,7 @@ If two polygonal regions \(P\) and \(Q\) have the same number of vertices, \({p}
 Figure 74.1
 
 \begin{definition}
-	Let \(P\) be a polygonal region in the plane. A \index{Labelling}labelling of the edges of \(P\) is a map from the set of edges of \(P\) to a set \(S\) called the set of \index{Labels}labels. Given an onentation of each edge of \(P\) , and given a labelling of the edges of \(P\) , we define an \index{equivalence of labelling schemes@Equivalence of labelling schemes}Equivalence of labelling schemes equivalence relation on the points of \(P\) as follows: Each point of Int \(P\) is equivalent only to itself. Given any two edges of \(P\) that have the same label, let \(h\) be the positive linear map of one onto the other, and define each point \(x\) of the first edge to be equivalent to the point \(h\left( x\right)\) of the second edge. This relation generates an equivalence relation on \(P\) . The quotient space \(X\) obtained from this equivalence relation is said to have been obtained by pasting the edges of \(P\) together according to the given orientations and labelling.
+	Let \(P\) be a polygonal region in the plane. A \index{Labelling} of the edges of \(P\) is a map from the set of edges of \(P\) to a set \(S\) called the set of \index{Labels}. Given an onentation of each edge of \(P\) , and given a \index{labelling@Labelling}\index{labelling@Labelling}\index{labelling@Labelling}labelling of the edges of \(P\) , we define an \index{equivalence of labelling schemes@Equivalence of labelling schemes} equivalence relation on the points of \(P\) as follows: Each point of Int \(P\) is equivalent only to itself. Given any two edges of \(P\) that have the same label, let \(h\) be the positive linear map of one onto the other, and define each point \(x\) of the first edge to be equivalent to the point \(h( x)\) of the second edge. This relation generates an equivalence relation on \(P\) . The quotient space \(X\) obtained from this equivalence relation is said to have been obtained by pasting the edges of \(P\) together according to the given orientations and labelling.
 \end{definition}
 
 \begin{centeredblock}
@@ -55,19 +58,19 @@ Figure 74.3
 \end{example}
 \end{centeredblock}
 
-We now describe a convenient method for specifying orientations and labels for the edges of a polygonal region, a method that does not involve drawing a picture.
+We now describe a convenient method for specifying orientations and \index{labels@Labels}\index{labels@Labels}\index{labels@Labels}labels for the edges \index{Edge: of curved triangle!of a polygonal region}\index{Edge: of curved triangle!of a polygonal region}\index{Edge: of curved triangle!of a polygonal region}of a polygonal region, a method that does not involve drawing a picture.
 
 \begin{definition}
 	Let \(P\) be a polygonal region with successive vertices \({p}_{0},\ldots ,{p}_{n}\) , where \({p}_{0} = {p}_{n}\) . Given orientations and a labelling of the edges of \(P\) , let \({a}_{1},\ldots ,{a}_{m}\) be the distinct labels that are assigned to the edges of \(P\) . For each \(k\) , let \({a}_{{i}_{k}}\) be the label assigned to the edge \({p}_{k - 1}{p}_{k}\) , and let \(\cdot  {\epsilon }_{k} =  + 1\) or -1 according as the orientation assigned to this edge goes from \({p}_{k - 1}\) to \({p}_{k}\) or the reverse. Then the number of edges of \(P\) , the orientations of the edges, and the labelling are completely specified by the symbol
 
 \[
-w = {\left( {a}_{{i}_{1}}\right) }^{{\epsilon }_{1}}{\left( {a}_{{i}_{2}}\right) }^{{\epsilon }_{2}}\cdots {\left( {a}_{{i}_{n}}\right) }^{{\epsilon }_{n}}.
+w = {( {a}_{{i}_{1}}) }^{{\epsilon }_{1}}{( {a}_{{i}_{2}}) }^{{\epsilon }_{2}}\cdots {( {a}_{{i}_{n}}) }^{{\epsilon }_{n}}.
 \]
 
-We call this symbol a labelling \index{projective-type scheme@Projective-type scheme}Projective-type scheme scheme of length \(n\) for the edges of \(P\) ; it is simply a sequence of labels with exponents \(+ 1\) or-1.
+We call this symbol a labelling \index{projective-type scheme@Projective-type scheme} \index{scheme@Scheme}\index{scheme@Scheme}\index{scheme@Scheme}scheme of length \(n\) for the edges of \(P\) ; it is simply a sequence of labels with exponents \(+ 1\) or-1.
 \end{definition}
 
-We normally omit the exponents that equal +1 when giving a labelling scheme. Then the orientations and labelling of Example 1 can be specified by the labelling scheme \({a}^{-1}{ba}\) , if we take \({p}_{0}\) to be the top \index{vertex: of a curved triangle@Vertex: of a curved triangle}vertex vertex of the triangle. If we take one of the other vertices to be \({p}_{0}\) , then we obtain one of the labelling schemes \({ba}{a}^{-1}\) or \(a{a}^{-1}b\) .
+We normally omit the exponents that equal +1 when giving a \index{labelling scheme@Labelling scheme}\index{labelling scheme@Labelling scheme}\index{labelling scheme@Labelling scheme}labelling scheme. Then the orientations and labelling of Example 1 can be specified by the labelling scheme \({a}^{-1}{ba}\) , if we take \({p}_{0}\) to be the top \index{vertex: of a curved triangle@Vertex: of a curved triangle} vertex of the triangle. If we take one of the other vertices to be \({p}_{0}\) , then we obtain one of the labelling schemes \({ba}{a}^{-1}\) or \(a{a}^{-1}b\) .
 
 Similarly, the orientations and labelling indicated in Example 2 can be specified (if we begin at the lower left corner of the square) by the symbol \(a{a}^{-1}b{b}^{-1}\) .
 
@@ -99,11 +102,11 @@ Figure 74.5
 \end{example}
 \end{centeredblock}
 
-Now there is no reason to restrict oneself to a single polygonal region when forming a space by \index{Pasting edges together}pasting edges together. Given a finite number \({P}_{1},\ldots ,{P}_{k}\) of disjoint polygonal regions, along with orientations and a labelling of their edges, one can form a quotient space \(X\) in exactly the same way as for a single region, by pasting the edges of these regions together. Also, one specifies orientations and a labelling in a similar way, by means of \(k\) labelling schemes. Depending on the particular schemes, the space \(X\) one obtains may or may not be connected.
+Now there is no reason to restrict oneself to a single polygonal region when forming a space by \index{Pasting edges together}. Given a finite number \({P}_{1},\ldots ,{P}_{k}\) of disjoint polygonal regions, along with orientations and a labelling of their edges, one can form a quotient space \(X\) in exactly the same way as for a single region, by \index{pasting regions together@Pasting regions together}pasting the edges of these regions together. Also, one specifies orientations and a labelling in a similar way, by means of \(k\) labelling schemes. Depending on the particular schemes, the space \(X\) one obtains may or may not be connected.
 
 \begin{centeredblock}
 \begin{example}
-	Figure 74.6 indicates a labelling of the edges of two squares for which the resulting quotient space is connected; it is the space called the \index{möbius band@Möbius band}Möbius band Of course, this space could also be obtained from a single square by using the labelling scheme abac, as you can check.
+	Figure 74.6 indicates a labelling of the edges of two squares for which the resulting quotient space is connected; it is the space called the \index{möbius band@Möbius band} Of course, this space could also be obtained from a single square by using the labelling scheme abac, as you can check.
 
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/74.6.jpg}
@@ -128,35 +131,35 @@ Figure 74.7
 \end{centeredblock}
 
 \begin{theorem}
-	Let \(X\) be the space obtained from a finite collection of polygonal regions by pasting edges together according to some labelling scheme. Then \(X\) is a compact Hausdorff space.
+	Let \(X\) be the space obtained from a finite collection of polygonal regions by \index{pasting edges together@Pasting edges together}\index{pasting edges together@Pasting edges together}\index{pasting edges together@Pasting edges together}pasting edges together according to some labelling scheme. Then \(X\) is a compact Hausdorff space.
 \end{theorem}
 
 \begin{proof}
 	For simplicity, we treat the case where \(X\) is formed from a single polygonal region. The general case is simular.
-It is immediate that \(X\) is compact, since the quotient map is continuous. To show \(X\) is Hausdorff, it suffices to show that the quotient map \(\pi\) is a closed map. (See Lemma 73.3.) For this purpose, we must show that for each closed set \(C\) of \(P\) , the set \({\pi }^{-1}\pi \left( C\right)\) is closed in \(P\) Now \({\pi }^{-1}\pi \left( C\right)\) consists of the points of \(C\) and all points of \(P\) that are pasted to points of \(C\) by the map \(\pi\) . These points are easy to determune. For each edge \(e\) of \(P\) , let \({C}_{e}\) denote the compact subspace \(C \cap  e\) of \(P\) . If \({e}_{i}\) is an edge of \(P\) that is pasted to \(e\) , and if \({h}_{i} : {e}_{i} \rightarrow  e\) is the pasting homeomorphism, then the set \({D}_{e} = {\pi }^{-1}\pi \left( C\right)  \cap  e\) contains the space \({h}_{i}\left( {C}_{{e}_{i}}\right)\) . Indeed, \({D}_{e}\) equals the union of \({C}_{e}\) and the spaces \({h}_{i}\left( {C}_{{e}_{i}}\right)\) , as \({e}_{i}\) ranges over all edges of \(P\) that are pasted to \(e\) . This union is compact; therefore, it is closed in \(e\) and in \(P\) .
+It is immediate that \(X\) is compact, since the quotient map is continuous. To show \(X\) is Hausdorff, it suffices to show that the quotient map \(\pi\) is a closed map. (See Lemma 73.3.) For this purpose, we must show that for each closed set \(C\) of \(P\) , the set \({\pi }^{-1}\pi ( C)\) is closed in \(P\) Now \({\pi }^{-1}\pi ( C)\) consists of the points of \(C\) and all points of \(P\) that are pasted to points of \(C\) by the map \(\pi\) . These points are easy to determune. For each edge \(e\) of \(P\) , let \({C}_{e}\) denote the compact subspace \(C \cap  e\) of \(P\) . If \({e}_{i}\) is an edge of \(P\) that is pasted to \(e\) , and if \({h}_{i} : {e}_{i} \rightarrow  e\) is the pasting homeomorphism, then the set \({D}_{e} = {\pi }^{-1}\pi ( C)  \cap  e\) contains the space \({h}_{i}( {C}_{{e}_{i}})\) . Indeed, \({D}_{e}\) equals the union of \({C}_{e}\) and the spaces \({h}_{i}( {C}_{{e}_{i}})\) , as \({e}_{i}\) ranges over all edges of \(P\) that are pasted to \(e\) . This union is compact; therefore, it is closed in \(e\) and in \(P\) .
 
-Since \({\pi }^{-1}\pi \left( C\right)\) is the union of the set \(C\) and the sets \({D}_{e}\) , as \(e\) ranges over all edges of \(P\) , it is closed in \(P\) , as desired.
+Since \({\pi }^{-1}\pi ( C)\) is the union of the set \(C\) and the sets \({D}_{e}\) , as \(e\) ranges over all edges of \(P\) , it is closed in \(P\) , as desired.
 
-Now we note that if \(X\) is obtained by pasting the edges of a polygonal region together, the quotient map \(\pi\) may map all the vertices of the polygonal region to a single point of \(X\) , or it may not. In the case of the torus of Example 3, the quotient map does satisfy this condition, while in the case of the ball and sphere of Examples 1 and 2, it does not. We are especially happy when \(\pi\) satisfies this condition, for in this case one can readily compute the fundamental group of \(X\) :
+Now we note that if \(X\) is obtained by pasting the edges of a polygonal region together, the quotient map \(\pi\) may map all the vertices of the polygonal region to a single point of \(X\) , or it may not. In the case of the torus of Example 3, the quotient map does satisfy this condition, while in the case of the ball and sphere of Examples 1 and 2, it does not. We are especially happy when \(\pi\) satisfies this condition, for in this c\index{Finitely presented group!as fundamental group}ase one can readily compute the fundamental group of \(X\) :
 \end{proof}
 \begin{theorem}
 	Let \(P\) be a polygonal region; let
 
 \[
-w = {\left( {a}_{{i}_{1}}\right) }^{{\epsilon }_{1}}\cdots {\left( {a}_{{i}_{n}}\right) }^{{\epsilon }_{n}}
+w = {( {a}_{{i}_{1}}) }^{{\epsilon }_{1}}\cdots {( {a}_{{i}_{n}}) }^{{\epsilon }_{n}}
 \]
 
-be a labelling scheme for the edges of \(P\) . Let \(X\) be the resulting quotient space; let \(\pi  : P \rightarrow  X\) be the quotient map. If \(\pi\) maps all the vertices of \(P\) to a single point \({x}_{0}\) of \(X\) , and if \({a}_{1},\ldots ,{a}_{k}\) are the distinct labels that appear in the labelling scheme, then \({\pi }_{1}\left( {X,{x}_{0}}\right)\) is isomorphic to the quotient of the free group on \(k\) generators \({\alpha }_{1},\ldots ,{\alpha }_{k}\) by the least normal subgroup containing the element
+be a labelling scheme for the edges of \(P\) . Let \(X\) be the resulting quotient space; let \(\pi  : P \rightarrow  X\) be the quotient map. If \(\pi\) maps all the vertices of \(P\) to a single point \({x}_{0}\) of \(X\) , and if \({a}_{1},\ldots ,{a}_{k}\) are the distinct labels that appear in the labelling scheme, then \({\pi }_{1}( {X,{x}_{0}})\) is isomorphic to the quotient of the free group on \(k\) generators \({\alpha }_{1},\ldots ,{\alpha }_{k}\) by the least normal subgroup containing the element
 
 \[
-{\left( {\alpha }_{{i}_{1}}\right) }^{{\epsilon }_{1}}\cdots {\left( {\alpha }_{{i}_{n}}\right) }^{{\epsilon }_{n}}\text{ . }
+{( {\alpha }_{{i}_{1}}) }^{{\epsilon }_{1}}\cdots {( {\alpha }_{{i}_{n}}) }^{{\epsilon }_{n}}\text{ . }
 \]
 \end{theorem}
 
 \begin{proof}
-	The proof is similar to the proof we gave for the torus in  \S 73. Because \(\pi\) maps all vertices of \(P\) to a single point of \(X\) , the space \(A = \pi \left( {\operatorname{Bd}P}\right)\) is a wedge of \(k\) circles. For each \(i\) , choose an edge of \(P\) that is labelled \({a}_{i}\) ; let \({f}_{i}\) be the positive linear map of \(I\) onto this edge oriented counterclockwise; and let \({g}_{i} = \pi  \circ  {f}_{i}\) . Then the loops \({g}_{1},\ldots ,{g}_{k}\) represent a set of free generators for \({\pi }_{1}\left( {A,{x}_{0}}\right)\) . The loop \(f\) running around \(\mathrm{{Bd}}P\) once in the counterclockwise direction generates the fundamental group of \(\mathrm{{Bd}}P\) , and the loop \(\pi  \circ  f\) equals the loop
+	The proof is similar to the proof we gave for the torus in  \S 73. Because \(\pi\) maps all vertices of \(P\) to a single point of \(X\) , the space \(A = \pi ( {\operatorname{Bd}P})\) is a wedge of \(k\) circles. For each \(i\) , choose an edge of \(P\) that is labelled \({a}_{i}\) ; let \({f}_{i}\) be the positive linear map of \(I\) onto this edge oriented counterclockwise; and let \({g}_{i} = \pi  \circ  {f}_{i}\) . Then the loops \({g}_{1},\ldots ,{g}_{k}\) represent a set of free generators for \({\pi }_{1}( {A,{x}_{0}})\) . The loop \(f\) running around \(\mathrm{{Bd}}P\) once in the counterclockwise direction generates the fundamental group of \(\mathrm{{Bd}}P\) , and the loop \(\pi  \circ  f\) equals the loop
 \[
-{\left( {g}_{{i}_{1}}\right) }^{{\epsilon }_{1}} * \cdots  * {\left( {g}_{{i}_{n}}\right) }^{{\epsilon }_{n}}
+{( {g}_{{i}_{1}}) }^{{\epsilon }_{1}} * \cdots  * {( {g}_{{i}_{n}}) }^{{\epsilon }_{n}}
 \]
 
 The theorem now follows from Theorem 72.1.
@@ -165,10 +168,10 @@ The theorem now follows from Theorem 72.1.
 	Consider the space obtained from a \({4n}\) -sided polygonal region \(P\) by means of the labelling scheme
 
 \[
-\left( {{a}_{1}{b}_{1}{a}_{1}^{-1}{b}_{1}^{-1}}\right) \left( {{a}_{2}{b}_{2}{a}_{2}^{-1}{b}_{2}^{-1}}\right) \cdots \left( {{a}_{n}{b}_{n}{a}_{n}^{-1}{b}_{n}^{-1}}\right) .
+( {{a}_{1}{b}_{1}{a}_{1}^{-1}{b}_{1}^{-1}}) ( {{a}_{2}{b}_{2}{a}_{2}^{-1}{b}_{2}^{-1}}) \cdots ( {{a}_{n}{b}_{n}{a}_{n}^{-1}{b}_{n}^{-1}}) .
 \]
 
-This space is called the \(n\) -fold connected sum of tori, or simply the \(n\) -fold torus, and denoted \(T\# \cdots \# T\) .
+This space is called the \(n\) \index{m@$m$ -fold projective plane}-fold connected sum \index{Connected sum: of projective planes!of tori}\index{Connected sum: of projective planes!of tori}\index{First homology group!of \(n\) -fold torus}of tori, or simply the \(n\) \index{n@$n$ -fold torus}-fold torus, and denoted \(T\# \cdots \# T\) .
 \end{definition}
 
 The 2-fold torus is pictured in Figure 74.8. If we split the polygonal region \(P\) along the indicated line c, each of the resulting pieces represents a torus with an open disc removed If we paste these pieces together along the curve c, we obtain the space we introduced in \( \S {60}\) and called there the double torus. A simular argument shows that the 3-fold torus \(T\# T\# T\) can be pictured as the surface in Figure 74.9.
@@ -181,13 +184,13 @@ The 2-fold torus is pictured in Figure 74.8. If we split the polygonal region \(
 Figure 74.9
 
 \begin{theorem}
-	Let \(X\) denote the \(n\) -fold torus. Then \({\pi }_{1}\left( {X,{x}_{0}}\right)\) is isomorphic to the quotient of the free group on the \({2n}\) generators \({\alpha }_{1},{\beta }_{1},\ldots ,{\alpha }_{n},{\beta }_{n}\) by the least normal subgroup containing the element
+	Let \(X\) denote the \(n\) -fold torus. Then \({\pi }_{1}( {X,{x}_{0}})\) is isomorphic to the quotient of the free group on the \({2n}\) generators \({\alpha }_{1},{\beta }_{1},\ldots ,{\alpha }_{n},{\beta }_{n}\) by the least normal subgroup containing the element
 
 \[
-\left\lbrack  {{\alpha }_{1},{\beta }_{1}}\right\rbrack  \left\lbrack  {{\alpha }_{2},{\beta }_{2}}\right\rbrack  \cdots \left\lbrack  {{\alpha }_{n},{\beta }_{n}}\right\rbrack
+[  {{\alpha }_{1},{\beta }_{1}}]  [  {{\alpha }_{2},{\beta }_{2}}]  \cdots [  {{\alpha }_{n},{\beta }_{n}}]
 \]
 
-where \(\left\lbrack  {\alpha ,\beta }\right\rbrack = {\alpha \beta }{\alpha }^{-1}{\beta }^{-1}\) , as usual.
+where \([  {\alpha ,\beta }] = {\alpha \beta }{\alpha }^{-1}{\beta }^{-1}\) , as usual.
 \end{theorem}
 
 \begin{proof}
@@ -197,10 +200,10 @@ where \(\left\lbrack  {\alpha ,\beta }\right\rbrack = {\alpha \beta }{\alpha }^{
 	Let \(m > 1\) Consider the space obtained from a \({2m}\) -sided polygonal region \(P\) in the plane by means of the labelling scheme
 
 \[
-\left( {{a}_{1}{a}_{1}}\right) \left( {{a}_{2}{a}_{2}}\right) \cdots \left( {{a}_{m}{a}_{m}}\right)
+( {{a}_{1}{a}_{1}}) ( {{a}_{2}{a}_{2}}) \cdots ( {{a}_{m}{a}_{m}})
 \]
 
-This space is called the m-fold connected sum of projective planes, or simply the m-fold projective plane, and denoted \({P}^{2}\# \cdots \# {P}^{2}\) .
+This space is called the m-fold connected sum \index{First homology group!of \(m\) -fold projective plane}of projective planes, or simply the m-fold projective plane, and denoted \({P}^{2}\# \cdots \# {P}^{2}\) .
 \end{definition}
 
 The 2-fold projective plane \({P}^{2}\# {P}^{2}\) is pictured in Figure 74.10. The figure indicates how this space can be obtained from two copies of the projective plane by deleting an open disc from each and pasting the resulting spaces together along the boundaries of the deleted discs. As with \({P}^{2}\) itself, we have no convenient way for pic-turnng the \(m\) -fold projective plane as a surface in \({\mathbb{R}}^{3}\) , for in fact it cannot be imbedded in \({\mathbb{R}}^{3}\) . Sometimes, however, we can picture it in \({\mathbb{R}}^{3}\) as a surface that intersects itself. (We then speak of an immersed surface rather than an imbedded one.) We explore this topic in the exercises.
@@ -213,111 +216,111 @@ The 2-fold projective plane \({P}^{2}\# {P}^{2}\) is pictured in Figure 74.10. T
 Figure 74.10
 
 \begin{theorem}
-	Let \(X\) denote the \(m\) -fold projective plane. Then \({\pi }_{1}\left( {X,{x}_{0}}\right)\) is isomorphic to the quotient of the free group on \(m\) generators \({\alpha }_{1},\ldots ,{\alpha }_{m}\) by the least normal subgroup containing the element
+	Let \(X\) denote the \(m\) -fold projective plane. Then \({\pi }_{1}( {X,{x}_{0}})\) is isomorphic to the quotient of the free group on \(m\) generators \({\alpha }_{1},\ldots ,{\alpha }_{m}\) by the least normal subgroup containing the element
 
 \[
-{\left( {\alpha }_{1}\right) }^{2}{\left( {\alpha }_{2}\right) }^{2}\cdots {\left( {\alpha }_{m}\right) }^{2}.
+{( {\alpha }_{1}) }^{2}{( {\alpha }_{2}) }^{2}\cdots {( {\alpha }_{m}) }^{2}.
 \]
 
 \begin{proof}
 	One needs only to check that under the labelling scheme for \(X\) , all the vertices of the polygonal region belong to the same equivalence class. This we leave to you.
-There exist many other ways to form compact surfaces. One can for instance delete an open disc from each of the spaces \({P}^{2}\) and \(T\) , and paste the resulting spaces together along the boundaries of the deleted discs. You can check that this space can be obtained from a 6-sided polygonal region by means of the labelling scheme \({aabc}{b}^{-1}{c}^{-1}\) . But we shall stop at this point. For it turns out that we have already obtained a complete list of the compact connected surfaces. This is the basic classification theorem for surfaces, which we shall consider shortly.
+There exist many other ways to form compact surfaces. One can for instance delete an open disc from each of the spaces \({P}^{2}\) and \(T\) , and paste the resulting spaces together along the boundaries of the deleted discs. You can check that this space can be obtained from a 6-sided polygonal region by means of the labelling scheme \({aabc}{b}^{-1}{c}^{-1}\) . But we shall stop at this point. For it turns out that we have already obtained a complete list of the compact connected surfaces. This is the basic \index{Surface!classification}\index{Surface!classification}classification theorem for surfaces, which we shall consider shortly.
 \end{proof}
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item Find a presentation for the fundamental group of \({P}^{2}\# T\) .
 \item Consider the space \(X\) obtained from a seven-sided polygonal region by means of the labelling scheme abaaab \({}^{-1}{a}^{-1}\) . Show that the fundamental group of \(X\) is the free product of two cyclic groups. [Hint: See Theorem 68.7.]
-\item The \index{klein bottle@Klein bottle}Klein bottle \(K\) is the space obtained from a square by means of the labelling scheme \({ab}{a}^{-1}b\) . Figure 74.11 indicates how \(K\) can be pictured as an immersed surface in \({\mathbb{R}}^{3}\) .
+\item The \index{klein bottle@Klein bottle} \(K\) is the space obtained from a square by means of the labelling scheme \({ab}{a}^{-1}b\) . Figure 74.11 indicates how \(K\) can be pictured as an immersed surface in \({\mathbb{R}}^{3}\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Find a presentation for the fundamental group of \(K\) .
   \item Find a double covering map \(p : T \rightarrow  K\) , where \(T\) is the torus. Describe the induced homomorphism of fundamental groups. \begin{center} \includegraphics[width=1.0\textwidth]{images/74.11.jpg} \end{center} \hspace*{3em} Figure 74.11
   \end{enumerate}
 \item
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Show that the Klein bottle is homeomorphic to \({P}^{2}\# {P}^{2}\) . [Hint: Split the square in Figure 74.11 along a diagonal, flip one of the resulting trangular pieces over, and paste the two pieces together along the edge labelled b.]
+  \item Show that the \index{klein bottle@Klein bottle}\index{klein bottle@Klein bottle}\index{klein bottle@Klein bottle}Klein bottle is homeomorphic to \({P}^{2}\# {P}^{2}\) . [Hint: Split the square in Figure 74.11 along a diagonal, flip one of the resulting trangular pieces over, and paste the two pieces together along the edge labelled b.]
 
   \item Show how to picture the 4-fold projective plane as an immersed surface in \({\mathbb{R}}^{3}\) .
   \end{enumerate}
-\item The Möbius band \(M\) is not a surface, but what is called a ``surface with boundary''. Show that \(M\) is homeomorphic to the space obtained by deleting an open disc from \({P}^{2}\) .
-\item If \(n > 1\) , show that the fundamental group of the \(n\) -fold torus is not abelian. [Hint: Let \(G\) be the free group on the set \(\left\{  {{\alpha }_{1},{\beta }_{1},\ldots ,{\alpha }_{n},{\beta }_{n}}\right\}\) ; let \(F\) be the free group on the set \(\{ \gamma ,\delta \}\) . Consider the homomorphism of \(G\) onto \(F\) that sends \({\alpha }_{1}\) and \({\beta }_{1}\) to \(\gamma\) and all other \({\alpha }_{i}\) and \({\beta }_{i}\) to \(\delta\) .]
-\item If \(m > 1\) , show the fundamental group of the \(m\) -fold projective plane is not abelian. [Hint: There is a homomorphism mapping this group onto the group \(\left. {\mathbb{Z}/2 * \mathbb{Z}/2.}\right\rbrack\)
+\item The \index{möbius band@Möbius band}\index{Boundary!of a surface with boundary}Möbius band \(M\) is not a surface, but what is called a ``surface with boundary''. Show that \(M\) is homeomorphic to the space obtained by deleting an open disc from \({P}^{2}\) .
+\item If \(n > 1\) , show that the fundamental group of the \(n\) -fold torus is not abelian. [Hint: Let \(G\) be the free group on the set \(\{  {{\alpha }_{1},{\beta }_{1},\ldots ,{\alpha }_{n},{\beta }_{n}}\}\) ; let \(F\) be the free group on the set \(\{ \gamma ,\delta \}\) . Consider the homomorphism of \(G\) onto \(F\) that sends \({\alpha }_{1}\) and \({\beta }_{1}\) to \(\gamma\) and all other \({\alpha }_{i}\) and \({\beta }_{i}\) to \(\delta\) .]
+\item If \(m > 1\) , show the fundamental group of the \(m\) -fold projective plane is not abelian. [Hint: There is a homomorphism mapping this group onto the group \(. {\mathbb{Z}/2 * \mathbb{Z}/2.}]\)
 \end{enumerate}
 \section*{§ 75 Homology of Surfaces}
 
-Although we have succeeded in obtaining presentations for the fundamental groups of a number of surfaces, we now pause to ask ourselves what we have actually accomplished. Can we conclude from our computations, for instance, that the double torus and the triple torus are topologically distinct? Not immediately. For, as we know, we lack an effective procedure for determining from the presentations for two groups whether or not these groups are isomorphic. Matters are much more satisfactory if we pass to the abelian group \({\pi }_{1}/\left\lbrack  {{\pi }_{1},{\pi }_{1}}\right\rbrack\) , where \({\pi }_{1} = {\pi }_{1}\left( {X,{x}_{0}}\right)\) . For then we have some known invariants to work with We explore this situation in this section.
+Although we have succeeded in obtaining presentations for the fundamental groups of a number \index{Classification: of covering spaces!of surfaces}\index{Classification: of covering spaces!of surfaces}of surfaces, we now pause to ask ourselves what we have actually accomplished. Can we conclude from our computations, for instance, that the double torus and the triple torus are topologically distinct? Not immediately. For, as we know, we lack an effective procedure for determining from the presentations for two groups whether or not these groups are isomorphic. Matters are much more satisfactory if we pass to the abelian group \({\pi }_{1}/[  {{\pi }_{1},{\pi }_{1}}]\) , where \({\pi }_{1} = {\pi }_{1}( {X,{x}_{0}})\) . For then we have some known invariants to work with We explore this situation in this section.
 
-We know that if \(X\) is a path-connected space, and if \(\alpha\) is a path in \(X\) from \({x}_{0}\) to \({x}_{1}\) , then there is an isomorphism \(\widehat{\alpha }\) of the fundamental group based at \({x}_{\mathrm{O}}\) with the fundamental group based at \({x}_{1}\) , but the isomorphism depends on the choice of the path \(\alpha\) . A stronger result holds for the group \({\pi }_{1}/\left\lbrack  {{\pi }_{1},{\pi }_{1}}\right\rbrack\) . In this case, the isomorphism of the ``abelianized fundamental group'' based at \({x}_{0}\) with the one based at \({x}_{1}\) , induced by \(\alpha\) , is in fact independent of the choice of the path \(\alpha\) .
+We know that if \(X\) is a path-connected space, and if \(\alpha\) is a path in \(X\) from \({x}_{0}\) to \({x}_{1}\) , then there is an isomorphism \(\widehat{\alpha }\) of the fundamental group based at \({x}_{\mathrm{O}}\) with the fundamental group based at \({x}_{1}\) , but the isomorphism depends on the choice of the path \(\alpha\) . A stronger result holds for the group \({\pi }_{1}/[  {{\pi }_{1},{\pi }_{1}}]\) . In this case, the isomorphism of the ``abelianized fundamental group'' based at \({x}_{0}\) with the one based at \({x}_{1}\) , induced by \(\alpha\) , is in fact independent of the choice of the path \(\alpha\) .
 
-To verify this fact, it suffices to show that if \(\alpha\) and \(\beta\) are two paths from \({x}_{0}\) to \({x}_{1}\) , then the path \(g = \alpha  * \bar{\beta }\) induces the identity isomorphism of \({\pi }_{1}/\left\lbrack  {{\pi }_{1},{\pi }_{1}}\right\rbrack\) with itself. And this is easy. If \(\left\lbrack  f\right\rbrack \in  {\pi }_{1}\left( {X,{x}_{0}}\right)\) , we have
+To verify this fact, it suffices to show that if \(\alpha\) and \(\beta\) are two paths from \({x}_{0}\) to \({x}_{1}\) , then the path \(g = \alpha  * \bar{\beta }\) induces the identity isomorphism of \({\pi }_{1}/[  {{\pi }_{1},{\pi }_{1}}]\) with itself. And this is easy. If \([  f] \in  {\pi }_{1}( {X,{x}_{0}})\) , we have
 
 \[
-\widehat{g}\left\lbrack  f\right\rbrack = \left\lbrack  {\bar{g} * f * g}\right\rbrack = {\left\lbrack  g\right\rbrack  }^{-1} * \left\lbrack  f\right\rbrack * \left\lbrack  g\right\rbrack  .
+\widehat{g}[  f] = [  {\bar{g} * f * g}] = {[  g]  }^{-1} * [  f] * [  g]  .
 \]
 
-When we pass to the cosets in the abelian group \({\pi }_{1}/\left\lbrack  {{\pi }_{1},{\pi }_{1}}\right\rbrack\) , we see that \(\widehat{g}\) induces the identity map.
+When we pass to the cosets in the abelian group \({\pi }_{1}/[  {{\pi }_{1},{\pi }_{1}}]\) , we see that \(\widehat{g}\) induces the identity map.
 
 \begin{definition}
 	If \(X\) is a path-connected space, let
 
 \[
-\index{H@\({H}_{1}\left( X\right)\)} = {\pi }_{1}\left( {X,{x}_{0}}\right) /\left\lbrack  {{\pi }_{1}\left( {X,{x}_{0}}\right) ,{\pi }_{1}\left( {X,{x}_{0}}\right) }\right\rbrack  .
+\index{H@\({H}_{1}( X)\)} = {\pi }_{1}( {X,{x}_{0}}) /[  {{\pi }_{1}( {X,{x}_{0}}) ,{\pi }_{1}( {X,{x}_{0}}) }]  .
 \]
 \end{definition}
 
-We call \({H}_{1}\left( X\right)\) the first \index{Homology group}homology group of \(X\) . We omit the base point from the notation because there is a unique path-induced isomorphism between the abelianized fundamental groups based at two different points.
+We call \({H}_{1}( X)\) the first \index{Homology group} of \(X\) . We omit the base point from the notation because there is a unique path-induced isomorphism between the abelianized fundamental groups based at two different points.
 
-If you study algebraic topology further, you will see an entirely different definition of \({H}_{1}\left( X\right)\) . In fact, you will see groups \({H}_{n}\left( X\right)\) called the homology groups of \(X\) that are defined for all \(n \geq  0\) . These are abelian groups that are topological invariants of \(X\) ; they are of fundamental importance in applying results of algebra to problems of topology. A theorem due to W. Hurewicz establishes a connection between these groups and the homotopy groups of \(X\) . It implies in particular that for a path-connected space \(X\) , the first homology group \({H}_{1}\left( X\right)\) of \(X\) is isomorphic to the abelianızed fundamental group of \(X\) . This theorem motivates our choice of notation for the abelianized fundamental group.
+If you study algebraic topology further, you will see an entirely different definition of \({H}_{1}( X)\) . In fact, you will see groups \({H}_{n}( X)\) called the \index{homology group@Homology group}\index{homology group@Homology group}\index{homology group@Homology group}homology groups of \(X\) that are defined for all \(n \geq  0\) . These are abelian groups that are topological invariants of \(X\) ; they are of fundamental importance in applying results of algebra to problems of topology. A theorem due to W. Hurewicz establishes a connection between these groups and the homotopy groups of \(X\) . It implies in particular that for a path-connected space \(X\) , the \index{first homology group@First homology group}\index{first homology group@First homology group}\index{first homology group@First homology group}first homology group \({H}_{1}( X)\) of \(X\) is isomorphic to the abelianızed fundamental group of \(X\) . This theorem motivates our choice of notation for the abelianized fundamental group.
 \end{theorem}
 
-To compute \({H}_{1}\left( X\right)\) for the surfaces considered earlier, we need the following result:
+To compute \({H}_{1}( X)\) for the surfaces considered earlier, we need the following result:
 
 \begin{theorem}
 	Let \(F\) be a group; let \(N\) be a normal subgroup of \(F\) ; let \(q : F \rightarrow  F/N\) be the projection. The projection homomorphism
 
 \[
-p : F \rightarrow  F/\left\lbrack  {F,F}\right\rbrack
+p : F \rightarrow  F/[  {F,F}]
 \]
 
 induces an isomorphism
 
 \[
-\phi  : q\left( F\right) /\left\lbrack  {q\left( F\right) ,q\left( F\right) }\right\rbrack \rightarrow  p\left( F\right) /p\left( N\right) .
+\phi  : q( F) /[  {q( F) ,q( F) }] \rightarrow  p( F) /p( N) .
 \]
 
 This theorem states, roughly speaking, that if one divides \(F\) by \(N\) and then abelian-izes the quotient, one obtains the same result as if one first abelianizes \(F\) and then divides by the image of \(N\) in this abelian zation.
 \end{theorem}
 
 \begin{proof}
-	One has projection homomorphisms \(p,q,r,s\) , as in the following diagram, where \(q\left( F\right)  = F/N\) and \(p\left( F\right)  = F/\left\lbrack  {F,F}\right\rbrack\) .
+	One has projection homomorphisms \(p,q,r,s\) , as in the following diagram, where \(q( F)  = F/N\) and \(p( F)  = F/[  {F,F}]\) .
 \begin{center}
 \includegraphics[width=0.7\textwidth]{images/75.1.jpg}
 \end{center}
 \hspace*{3em} 
 
-Because \(r \circ  p\) maps \(N\) to 1, it induces a homomorphism \(u : q\left( F\right)  \rightarrow  p\left( F\right) /p\left( N\right)\) . Then because \(p\left( F\right) /p\left( N\right)\) is abelian, the homomorphism \(u\) induces a homomorphism \(\phi\) of \(q\left( F\right) /\left\lbrack  {q\left( F\right) ,q\left( F\right) }\right\rbrack\) . On the other hand, because \(s \circ  q\) maps \(F\) into an abelian group, it induces a homomorphism \(v.p\left( F\right)  \rightarrow  q\left( F\right) /\left\lbrack  {q\left( F\right) ,q\left( F\right) }\right\rbrack\) . Because \(s \circ  q\) carries \(N\) to 1, so does \(v \circ  p\) ; hence \(v\) induces a homomorphism \(\psi\) of \(p\left( F\right) /p\left( N\right)\) .
+Because \(r \circ  p\) maps \(N\) to 1, it induces a homomorphism \(u : q( F)  \rightarrow  p( F) /p( N)\) . Then because \(p( F) /p( N)\) is abelian, the homomorphism \(u\) induces a homomorphism \(\phi\) of \(q( F) /[  {q( F) ,q( F) }]\) . On the other hand, because \(s \circ  q\) maps \(F\) into an abelian group, it induces a homomorphism \(v.p( F)  \rightarrow  q( F) /[  {q( F) ,q( F) }]\) . Because \(s \circ  q\) carries \(N\) to 1, so does \(v \circ  p\) ; hence \(v\) induces a homomorphism \(\psi\) of \(p( F) /p( N)\) .
 
-The homomorphism \(\phi\) can be described as follows: Given an element \(y\) of the group \(q\left( F\right) /\left\lbrack  {q\left( F\right) ,q\left( F\right) }\right\rbrack\) , choose an element \(x\) of \(F\) such that \(s\left( {q\left( x\right) }\right)  = y\) ; then \(\phi \left( y\right)  = r\left( {p\left( x\right) }\right)\) The homomorphism \(\psi\) can be described similarly. It follows that \(\phi\) and \(\psi\) are inverse to each other.
+The homomorphism \(\phi\) can be described as follows: Given an element \(y\) of the group \(q( F) /[  {q( F) ,q( F) }]\) , choose an element \(x\) of \(F\) such that \(s( {q( x) })  = y\) ; then \(\phi ( y)  = r( {p( x) })\) The homomorphism \(\psi\) can be described similarly. It follows that \(\phi\) and \(\psi\) are inverse to each other.
 \end{proof}
 \begin{corollary}
-	Let \(F\) be a free group with free generators \({\alpha }_{1},\ldots ,{\alpha }_{n}\) ; let \(N\) be the least normal subgroup of \(F\) containing the element \(x\) of \(F\) ; let \(G = F/N\) . Let \(p\) . \(F \rightarrow  F/\left\lbrack  {F,F}\right\rbrack\) be projection. Then \(G/\left\lbrack  {G,G}\right\rbrack\) is isomorphic to the quotient of \(F/\left\lbrack  {F,F}\right\rbrack\) , which is free abelian with basis \(p\left( {\alpha }_{1}\right) ,\ldots ,p\left( {\alpha }_{n}\right)\) , by the subgroup generated by \(p\left( x\right)\) .
+	Let \(F\) be a free group with free generators \({\alpha }_{1},\ldots ,{\alpha }_{n}\) ; let \(N\) be the least normal subgroup of \(F\) containing the element \(x\) of \(F\) ; let \(G = F/N\) . Let \(p\) . \(F \rightarrow  F/[  {F,F}]\) be projection. Then \(G/[  {G,G}]\) is isomorphic to the quotient of \(F/[  {F,F}]\) , which is free abelian with basis \(p( {\alpha }_{1}) ,\ldots ,p( {\alpha }_{n})\) , by the subgroup generated by \(p( x)\) .
 \end{corollary}
 
 \begin{proof}
-	Note that because \(N\) is generated by \(x\) and all its conjugates, the group \(p\left( N\right)\) is generated by \(p\left( x\right)\) The corollary then follows from the preceding theorem.
+	Note that because \(N\) is generated by \(x\) and all its conjugates, the group \(p( N)\) is generated by \(p( x)\) The corollary then follows from the preceding theorem.
 \end{proof}
 \begin{theorem}
-	If \(X\) is the \(n\) -fold connected sum of tori, then \({H}_{1}\left( X\right)\) is a free abelian group of rank \({2n}\) .
+	If \(X\) is the \(n\) -fold connected sum of tori, then \({H}_{1}( X)\) is a free abelian group of rank \({2n}\) .
 \end{theorem}
 
 \begin{proof}
-	In view of the preceding corollary, Theorem 74.3 implies that \({H}_{1}\left( X\right)\) is isomorphic to the quotient of the free abelian group \({F}^{\prime }\) on the set \({\alpha }_{1},{\beta }_{1},\ldots ,{\alpha }_{n},{\beta }_{n}\) by the subgroup generated by the element \(\left\lbrack  {{\alpha }_{1},{\beta }_{1}}\right\rbrack  \; \cdot  \left\lbrack  {{\alpha }_{n},{\beta }_{n}}\right\rbrack\) , where \(\left\lbrack  {\alpha ,\beta }\right\rbrack = {\alpha \beta }{\alpha }^{-1}{\beta }^{-1}\) as usual. Because the group \({F}^{\prime }\) is abelian, this element equals the identity element.
+	In view of the preceding corollary, Theorem 74.3 implies that \({H}_{1}( X)\) is isomorphic to the quotient of the free abelian group \({F}^{\prime }\) on the set \({\alpha }_{1},{\beta }_{1},\ldots ,{\alpha }_{n},{\beta }_{n}\) by the subgroup generated by the element \([  {{\alpha }_{1},{\beta }_{1}}]  \; \cdot  [  {{\alpha }_{n},{\beta }_{n}}]\) , where \([  {\alpha ,\beta }] = {\alpha \beta }{\alpha }^{-1}{\beta }^{-1}\) as usual. Because the group \({F}^{\prime }\) is abelian, this element equals the identity element.
 \end{proof}
 \begin{theorem}
-	If \(X\) is the \(m\) -fold connected sum of projective planes, then the torsion subgroup \(T\left( X\right)\) of \({H}_{1}\left( X\right)\) has order 2, and \({H}_{1}\left( X\right) /T\left( X\right)\) is a free abelian group of rank \(m - 1\) .
+	If \(X\) is the \(m\) -fold connected sum of projective planes, then the torsion subgroup \(T( X)\) of \({H}_{1}( X)\) has order 2, and \({H}_{1}( X) /T( X)\) is a free abelian group of rank \(m - 1\) .
 \end{theorem}
 
 \begin{proof}
-	In view of the preceding corollary, Theorem 74.4 implies that \({H}_{1}\left( X\right)\) is isomorphic to the quotient of the free abelian group \({F}^{\prime }\) on the set \({\alpha }_{1},\ldots ,{\alpha }_{m}\) by the subgroup generated by \({\left( {\alpha }_{1}\right) }^{2}\cdots {\left( {\alpha }_{m}\right) }^{2}\) . If we switch to additive notation (which is usual when dealing with abelian groups), this is the subgroup generated by the element \(2\left( {{\alpha }_{1} + \cdots  + {\alpha }_{m}}\right)\) . Let us change bases in the group \({F}^{\prime }\) . If we let \(\beta  = {\alpha }_{1} + \cdots  + {\alpha }_{m}\) , then the elements \({\alpha }_{1},\ldots ,{\alpha }_{m - 1},\beta\) form a basis for \({F}^{\prime }\) , any element of \({F}^{\prime }\) can be written uniquely in terms of these elements. The group \({H}_{1}\left( X\right)\) is isomorphic to the quotient of the free abelian group on \({\alpha }_{1},\ldots ,{\alpha }_{m - 1},\beta\) by the subgroup generated by \({2\beta }\) . Said differently, \({H}_{1}\left( X\right)\) is isomorphic to the quotient of the \(m\) -fold cartesian product \(\mathbb{Z} \times  \cdots  \times  \mathbb{Z}\) by the subgroup \(0 \times  0 \times  2\mathbb{Z}\) . The theorem follows
+	In view of the preceding corollary, Theorem 74.4 implies that \({H}_{1}( X)\) is isomorphic to the quotient of the free abelian group \({F}^{\prime }\) on the set \({\alpha }_{1},\ldots ,{\alpha }_{m}\) by the subgroup generated by \({( {\alpha }_{1}) }^{2}\cdots {( {\alpha }_{m}) }^{2}\) . If we switch to additive notation (which is usual when dealing with abelian groups), this is the subgroup generated by the element \(2( {{\alpha }_{1} + \cdots  + {\alpha }_{m}})\) . Let us change bases in the group \({F}^{\prime }\) . If we let \(\beta  = {\alpha }_{1} + \cdots  + {\alpha }_{m}\) , then the elements \({\alpha }_{1},\ldots ,{\alpha }_{m - 1},\beta\) form a basis for \({F}^{\prime }\) , any element of \({F}^{\prime }\) can be written uniquely in terms of these elements. The group \({H}_{1}( X)\) is isomorphic to the quotient of the free abelian group on \({\alpha }_{1},\ldots ,{\alpha }_{m - 1},\beta\) by the subgroup generated by \({2\beta }\) . Said differently, \({H}_{1}( X)\) is isomorphic to the quotient of the \(m\) -fold cartesian product \(\mathbb{Z} \times  \cdots  \times  \mathbb{Z}\) by the subgroup \(0 \times  0 \times  2\mathbb{Z}\) . The theorem follows
 \end{proof}
 \begin{theorem}
 	Let \({T}_{n}\) and \({P}_{m}\) denote the \(n\) -fold connected sum of tori and the \(m\) - fold connected sum of projective planes, respectively. Then the surfaces \({S}^{2};{T}_{1},{T}_{2}\) , \(\ldots ;{P}_{1},{P}_{2},\ldots\) are topologically distinct.
@@ -325,16 +328,16 @@ The homomorphism \(\phi\) can be described as follows: Given an element \(y\) of
 
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
-\item Calculate \({H}_{1}\left( {{P}^{2}\# T}\right)\) . Assuming that the list of compact surfaces given in Theorem 75.5 is a complete list, to which of these surfaces is \({P}^{2}\# T\) homeomorphic?
-\item If \(K\) is the Klein bottle, calculate \({H}_{1}\left( K\right)\) directly.
+\item Calculate \({H}_{1}( {{P}^{2}\# T})\) . Assuming that the list of compact surfaces given in Theorem 75.5 is a complete list, to which of these surfaces is \({P}^{2}\# T\) homeomorphic?
+\item If \(K\) is the Klein bottle, calculate \({H}_{1}( K)\) directly.
 \item Let \(X\) be the quotient space obtained from an 8-sided polygonal region \(P\) by pasting its edges together according to the labelling scheme \(a\operatorname{cad}b\mathrm{c}{b}^{-1}d\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Check that all vertices of \(P\) are mapped to the same pount of the quotient space \(X\) by the pasting map.
-  \item Calculate \({H}_{1}\left( X\right)\) .
+  \item Calculate \({H}_{1}( X)\) .
   \item Assuming \(X\) is homeomorphic to one of the surfaces given in Theorem 75.5 (which it is), which surface is it? *4. Let \(X\) be the quotient space obtained from an 8-sided polygonal region \(P\) by means of the labelling scheme \({abcda}{d}^{-1}c{b}^{-1}\) . Let \(\pi  : P \rightarrow  X\) be the quotient map.
   \item Show that \(\pi\) does not map all the vertices of \(P\) to the same point of \(X\) .
-  \item Determine the space \(A = \pi \left( {\text{ Bd }P}\right)\) and calculate its fundamental group.
-  \item Calculate \({\pi }_{1}\left( {X,{x}_{0}}\right)\) and \({H}_{1}\left( X\right)\)
+  \item Determine the space \(A = \pi ( {\text{ Bd }P})\) and calculate its fundamental group.
+  \item Calculate \({\pi }_{1}( {X,{x}_{0}})\) and \({H}_{1}( X)\)
   \item Assuming \(X\) is homeomorphic to one of the surfaces given in Theorem 75.5, which surface is it?
   \end{enumerate}
 \end{enumerate}
@@ -344,7 +347,7 @@ To prove the classification theorem, we need to use certain geometric arguments 
 
 First, let us consider what it means to ``cut apart'' a polygonal region. Let \(P\) be a polygonal region with successive vertices \({p}_{0},\ldots ,{p}_{n} = {p}_{0}\) , as usual. Given \(k\) with \(1 < k < n - 1\) , let us consider the polygonal regions \({Q}_{1}\) , with successive vertices \({p}_{0},{p}_{1},\ldots ,{p}_{k},{p}_{0}\) , and \({Q}_{2}\) , with successive vertices \({p}_{0},{p}_{k},\ldots ,{p}_{n} = {p}_{0}\) . These regions have the edge \({p}_{0}{p}_{k}\) in common, and the region \(P\) is their union.
 
-Let us move \({Q}_{1}\) by a translation of \({\mathbb{R}}^{2}\) so as to obtain a polygonal region \({Q}_{1}^{\prime }\) that is disjoint from \({Q}_{2}\) ; then \({Q}_{1}^{\prime }\) has successive vertices \({q}_{0},{q}_{1},\ldots ,{q}_{k},{q}_{0}\) , where \({q}_{i}\) is the image of \({p}_{i}\) under the translation. The regions \({Q}_{1}^{\prime }\) and \({Q}_{2}\) are said to have been obtained by \index{cutting a region apart@Cutting a region apart}Cutting a region apart cutting \(P\) apart along the line from \({p}_{0}\) to \({p}_{k}\) . The region \(P\) is homeomorphic to the quotient space of \({Q}_{1}^{\prime }\) and \({Q}_{2}\) obtained by pasting the edge of \({Q}_{1}^{\prime }\) going from \({q}_{0}\) to \({q}_{k}\) to the edge of \({Q}_{2}\) going from \({p}_{0}\) to \({p}_{k}\) , by the positive linear map of one edge onto the other. See Figure 76.1.
+Let us move \({Q}_{1}\) by a translation of \({\mathbb{R}}^{2}\) so as to obtain a polygonal region \({Q}_{1}^{\prime }\) that is disjoint from \({Q}_{2}\) ; then \({Q}_{1}^{\prime }\) has successive vertices \({q}_{0},{q}_{1},\ldots ,{q}_{k},{q}_{0}\) , where \({q}_{i}\) is the image of \({p}_{i}\) under the translation. The regions \({Q}_{1}^{\prime }\) and \({Q}_{2}\) are said to have been obtained by \index{cutting a region apart@Cutting a region apart} \index{cutting a region apart@Cutting a region apart}cutting \(P\) apart along the line from \({p}_{0}\) to \({p}_{k}\) . The region \(P\) is homeomorphic to the quotient space of \({Q}_{1}^{\prime }\) and \({Q}_{2}\) obtained by pasting the edge of \({Q}_{1}^{\prime }\) going from \({q}_{0}\) to \({q}_{k}\) to the edge of \({Q}_{2}\) going from \({p}_{0}\) to \({p}_{k}\) , by the positive linear map of one edge onto the other. See Figure 76.1.
 
 \begin{center}
 \includegraphics[width=1.0\textwidth]{images/76.1.jpg}
@@ -393,7 +396,7 @@ Conversely, if \(X\) is the space obtained from \(m + 1\) polygonal regions by m
 
 \section*{Elementary operations on schemes}
 
-We now list a number of \index{elementary operations on schemes@Elementary operations on schemes}Elementary operations on schemes elementary \index{operation on schemes@Operation on schemes}Operation on schemes operations that can be performed on a labelling scheme \({w}_{1},\ldots ,{w}_{m}\) without affecting the resulting quotient space \(X\) . The first two arise from the theorem just stated.
+We now list a number of \index{elementary operations on schemes@Elementary operations on schemes} \index{elementary operations on schemes@Elementary operations on schemes}elementary \index{operation on schemes@Operation on schemes} operations that can be performed on a labelling scheme \({w}_{1},\ldots ,{w}_{m}\) without affecting the resulting quotient space \(X\) . The first two arise from the theorem just stated.
 
 (i) Cut. One can replace the scheme \({w}_{1} = {y}_{0}{y}_{1}\) by the scheme \({y}_{0}{c}^{-1}\) and \(c{y}_{1}\) , provided \(c\) does not appear elsewhere in the total scheme and \({y}_{0}\) and \({y}_{1}\) have length at least two.
 
@@ -406,13 +409,13 @@ We now list a number of \index{elementary operations on schemes@Elementary opera
 (v) Flip. One can replace the scheme
 
 \[
-{w}_{i} = {\left( {a}_{{i}_{1}}\right) }^{{\epsilon }_{1}}\cdots {\left( {a}_{{i}_{n}}\right) }^{{\epsilon }_{n}}
+{w}_{i} = {( {a}_{{i}_{1}}) }^{{\epsilon }_{1}}\cdots {( {a}_{{i}_{n}}) }^{{\epsilon }_{n}}
 \]
 
 by its formal inverse
 
 \[
-{w}_{i}^{-1} = {\left( {a}_{{i}_{n}}\right) }^{-{\epsilon }_{n}}\cdots {\left( {a}_{{i}_{1}}\right) }^{-{\epsilon }_{1}}.
+{w}_{i}^{-1} = {( {a}_{{i}_{n}}) }^{-{\epsilon }_{n}}\cdots {( {a}_{{i}_{1}}) }^{-{\epsilon }_{1}}.
 \]
 
 This amounts simply to ``flipping the polygonal region \({P}_{i}\) over.''. The order of the vertices is reversed, and so is the orientation of each edge. The quotient space \(X\) is not affected.
@@ -428,7 +431,7 @@ This last result follows from the three-step argument indicated in Figure 76.3, 
 
 Figure 76.3
 
-(vii) Uncancel. This is the reverse of operation (vi). It replaces the scheme \({y}_{0}{y}_{1}\) by the scheme \({y}_{0}a{a}^{-1}{y}_{1}\) , where \(a\) is a label that does not appear elsewhere in the total scheme. We shall not actually have occasion to use this operation.
+(vii) Uncancel. This is the reverse of operation (vi). It replaces the scheme \({y}_{0}{y}_{1}\) by the scheme \({y}_{0}a{a}^{-1}{y}_{1}\) , where \(a\) is a label that does not appear elsewhere in the total scheme. We shall not actually have occasion to use this \index{operation on schemes@Operation on schemes}operation.
 
 \begin{definition}
 	We define two labelling schemes for collections of polygonal regions to be equivalent if one can be obtained from the other by a sequence of elementary scheme operations. Since each elementary operation has as its inverse another such operation, this is an equivalence relation.
@@ -478,18 +481,18 @@ by permuting and relabelling.
 
 We prove in this section the geometric part of our classification theorem for surfaces. We show that every space obtained by pasting the edges of a polygonal region together in pairs is homeomorphic either to \({S}^{2}\) , to the \(n\) -fold torus \({T}_{n}\) , or to the \(m\) -fold projective plane \({P}_{m}\) . Later we discuss the problem of showing that every compact surface can be obtained in this way.
 
-Suppose \({w}_{1},\ldots ,{w}_{k}\) is a labelling scheme for the polygonal regions \({P}_{1},\ldots ,{P}_{k}\) . If each label appears exactly twice in this scheme, we call it a \index{Proper labelling scheme}proper labelling scheme. Note the following important fact:
+Suppose \({w}_{1},\ldots ,{w}_{k}\) is a labelling scheme for the polygonal regions \({P}_{1},\ldots ,{P}_{k}\) . If each label appears exactly twice in this scheme, we call it a \index{Proper labelling scheme}. Note the following important fact:
 
-If one applies any elementary operation to a proper scheme, one obtains another proper scheme.
+If one applies any elementary operation to a \index{Scheme!proper}\index{Scheme!proper}\index{Scheme!proper}proper scheme, one obtains another proper scheme.
 
 \begin{definition}
-	Let \(w\) be a proper labelling scheme for a single polygonal region. We say that \(w\) is of \index{torus-type scheme@Torus-type scheme}Torus-type scheme torus type if each label in it appears once with exponent \(+ 1\) and once with exponent -1 . Otherwise, we say \(w\) is of projective type.
+	Let \(w\) be a \index{proper labelling scheme@Proper labelling scheme}\index{proper labelling scheme@Proper labelling scheme}\index{proper labelling scheme@Proper labelling scheme}proper labelling scheme for a single polygonal region. We say that \(w\) is of \index{torus-type scheme@Torus-type scheme} \index{Scheme!torus type}\index{Scheme!torus type}\index{Scheme!torus type}torus type if each label in it appears once with exponent \(+ 1\) and once with exponent -1 . Otherwise, we say \(w\) is of \index{Scheme!projective type}\index{Scheme!projective type}\index{Scheme!projective type}projective type.
 \end{definition}
 
 We begin by considering a scheme \(w\) of projective type. We will show that \(w\) is equivalent to a scheme (of the same length) in which all labels having the same exponent are paired and appear at the beginning of the scheme. That is, \(w\) is equivalent to a scheme of the form
 
 \[
-\left( {{a}_{1}{a}_{1}}\right) \left( {{a}_{2}{a}_{2}}\right) \cdots \left( {{a}_{k}{a}_{k}}\right) {w}_{1},
+( {{a}_{1}{a}_{1}}) ( {{a}_{2}{a}_{2}}) \cdots ( {{a}_{k}{a}_{k}}) {w}_{1},
 \]
 
 where \({w}_{1}\) is of torus type or is empty.
@@ -503,7 +506,7 @@ w = {y}_{0}a{y}_{1}a{y}_{2}.
 where some of the \({y}_{i}\) may be empty. We shall insert brackets in this expression for visual convenience, writing it in the form
 
 \[
-w = \left\lbrack  {y}_{0}\right\rbrack  a\left\lbrack  {y}_{1}\right\rbrack  a\left\lbrack  {y}_{2}\right\rbrack  .
+w = [  {y}_{0}]  a[  {y}_{1}]  a[  {y}_{2}]  .
 \]
 
 We have the following result:
@@ -513,13 +516,13 @@ We have the following result:
 	Let \(w\) be a proper scheme of the form
 
 \[
-w = \left\lbrack  {y}_{0}\right\rbrack  a\left\lbrack  {y}_{1}\right\rbrack  a\left\lbrack  {y}_{2}\right\rbrack  ,
+w = [  {y}_{0}]  a[  {y}_{1}]  a[  {y}_{2}]  ,
 \]
 
 where some of the \({y}_{i}\) may be empty. Then one has the equivalence
 
 \[
-w \sim  {aa}\left\lbrack  {{y}_{0}{y}_{1}^{-1}{y}_{2}}\right\rbrack
+w \sim  {aa}[  {{y}_{0}{y}_{1}^{-1}{y}_{2}}]
 \]
 
 where \({y}_{1}^{-1}\) denotes the formal inverse of \({y}_{1}\) .
@@ -528,7 +531,7 @@ where \({y}_{1}^{-1}\) denotes the formal inverse of \({y}_{1}\) .
 \begin{proof}
 	Step 1. We first consider the case where \({y}_{0}\) is empty. We show that
 \[
-a\left\lbrack  {y}_{1}\right\rbrack  a\left\lbrack  {y}_{2}\right\rbrack \sim  {aa}\left\lbrack  {{y}_{1}^{-1}{y}_{2}}\right\rbrack
+a[  {y}_{1}]  a[  {y}_{2}] \sim  {aa}[  {{y}_{1}^{-1}{y}_{2}}]
 \]
 
 \begin{center}
@@ -540,24 +543,24 @@ Figure 77.1
 
 If \({y}_{1}\) is empty, this result is immediate, while if \({y}_{2}\) is empty, it follows from flipping, permuting, and relabelling. If neither is empty, we apply the cutting and pasting argument indicated in Figure 77.1, followed by a relabelling. We leave it to you to write down the sequence of elementary operations involved.
 
-Step 2. Now we consider the general case. Let \(w = \left\lbrack  {y}_{0}\right\rbrack  a\left\lbrack  {y}_{1}\right\rbrack  a\left\lbrack  {y}_{2}\right\rbrack\) , where \({y}_{0}\) is not empty. If both \({y}_{1}\) and \({y}_{2}\) are empty, the lemma follows by permuting. Otherwise, we apply the cutting and pasting argument indicated in Figure 77.2 to show that
+Step 2. Now we consider the general case. Let \(w = [  {y}_{0}]  a[  {y}_{1}]  a[  {y}_{2}]\) , where \({y}_{0}\) is not empty. If both \({y}_{1}\) and \({y}_{2}\) are empty, the lemma follows by permuting. Otherwise, we apply the cutting and pasting argument indicated in Figure 77.2 to show that
 
 \[
-w \sim  b\left\lbrack  {y}_{2}\right\rbrack  b\left\lbrack  {{y}_{1}{y}_{0}^{-1}}\right\rbrack
+w \sim  b[  {y}_{2}]  b[  {{y}_{1}{y}_{0}^{-1}}]
 \]
 
 It follows that
 
 \[
-w \sim  {bb}\left\lbrack  {{y}_{2}^{-1}{y}_{1}{y}_{0}^{-1}}\right\rbrack
+w \sim  {bb}[  {{y}_{2}^{-1}{y}_{1}{y}_{0}^{-1}}]
 \]
 
 \[
-\sim  \left\lbrack  {{y}_{0}{y}_{1}^{-1}{y}_{2}}\right\rbrack  {b}^{-1}{b}^{-1}
+\sim  [  {{y}_{0}{y}_{1}^{-1}{y}_{2}}]  {b}^{-1}{b}^{-1}
 \]
 
 \[
-\sim  {aa}\left\lbrack  {{y}_{0}{y}_{1}^{-1}{y}_{2}}\right\rbrack
+\sim  {aa}[  {{y}_{0}{y}_{1}^{-1}{y}_{2}}]
 \]
 
 by Step 1
@@ -577,7 +580,7 @@ Figure 77.2
 	If \(w\) is a scheme of projective type, then \(w\) is equivalent to a scheme of the same length having the form
 
 \[
-\left( {{a}_{1}{a}_{1}}\right) \left( {{a}_{2}{a}_{2}}\right) \cdots \left( {{a}_{k}{a}_{k}}\right) {w}_{1},
+( {{a}_{1}{a}_{1}}) ( {{a}_{2}{a}_{2}}) \cdots ( {{a}_{k}{a}_{k}}) {w}_{1},
 \]
 
 where \(k \geq  1\) and \({w}_{1}\) is either empty or of torus type.
@@ -586,31 +589,31 @@ where \(k \geq  1\) and \({w}_{1}\) is either empty or of torus type.
 \begin{proof}
 	The scheme \(w\) can be written in the form
 \[
-w = \left\lbrack  {y}_{0}\right\rbrack  a\left\lbrack  {y}_{1}\right\rbrack  a\left\lbrack  {y}_{2}\right\rbrack  ;
+w = [  {y}_{0}]  a[  {y}_{1}]  a[  {y}_{2}]  ;
 \]
 
 then the preceding lemma implies that \(w\) is equivalent to a scheme of the form \({w}^{\prime } =\)  \({aa}{w}_{1}\) that has the same length as \(w\) . If \({w}_{1}\) is of torus type, we are finished; otherwise, we can write \({w}^{\prime }\) in the form
 
 \[
-{w}^{\prime } = {aa}\left\lbrack  {z}_{0}\right\rbrack  b\left\lbrack  {z}_{1}\right\rbrack  b\left\lbrack  {z}_{2}\right\rbrack = \left\lbrack  {{aa}{z}_{0}}\right\rbrack  b\left\lbrack  {z}_{1}\right\rbrack  b\left\lbrack  {z}_{2}\right\rbrack  .
+{w}^{\prime } = {aa}[  {z}_{0}]  b[  {z}_{1}]  b[  {z}_{2}] = [  {{aa}{z}_{0}}]  b[  {z}_{1}]  b[  {z}_{2}]  .
 \]
 
 Applying the preceding lemma again, we conclude that \({w}^{\prime }\) is equivalent to a scheme \({w}^{\prime \prime }\) of the form
 
 \[
-{w}^{\prime \prime } = {bb}\left\lbrack  {{aa}{z}_{0}{z}_{1}^{-1}{z}_{2}}\right\rbrack = {bbaa}{w}_{2},
+{w}^{\prime \prime } = {bb}[  {{aa}{z}_{0}{z}_{1}^{-1}{z}_{2}}] = {bbaa}{w}_{2},
 \]
 
 where \({w}^{\prime \prime }\) has the same length as \(w\) . If \({w}_{2}\) is of torus type, we are finished; otherwise, we continue the argument similarly.
 
-It follows from the preceding corollary that if \(w\) is a proper labelling scheme for a polygonal region, then either (I) \(w\) is of torus type, or (2) \(w\) is equivalent to a scheme of the form \(\left( {{a}_{1}{a}_{1}}\right) \ldots \left( {{a}_{k}{a}_{k}}\right) {w}_{1}\) , where \({w}_{1}\) is of torus type, or (3) \(w\) is equivalent to a scheme of the form \(\left( {{a}_{1}{a}_{1}}\right) \ldots \left( {{a}_{k}{a}_{k}}\right)\) . In case (3), we are finished, for such a scheme represents a connected sum of projective planes. So let us consider cases (1) and (2).
+It follows from the preceding corollary that if \(w\) is a proper labelling scheme for a polygonal region, then either (I) \(w\) is of torus type, or (2) \(w\) is equivalent to a scheme of the form \(( {{a}_{1}{a}_{1}}) \ldots ( {{a}_{k}{a}_{k}}) {w}_{1}\) , where \({w}_{1}\) is of torus type, or (3) \(w\) is equivalent to a scheme of the form \(( {{a}_{1}{a}_{1}}) \ldots ( {{a}_{k}{a}_{k}})\) . In case (3), we are finished, for such a scheme represents a connected sum of projective planes. So let us consider cases (1) and (2).
 
 At this point, we note that if \(w\) is a scheme of length greater than four of the form indicated in case (1) or case (2), and if \(w\) contains two adjacent terms having the same label but opposite exponents, then the cancelling operation may be applied to reduce \(w\) to a shorter scheme that is also of the form indicated in cases (1), (2), or (3). Therefore, we can reduce \(w\) either to a scheme of length four, or to a scheme that does not contain two such adjacent terms.
 
 Schemes of length four are easy to deal with, as we shall see later, so let us assume that \(w\) does not contain two adjacent terms having the same label but opposite exponents. In that case, we show that \(w\) is equivalent to a scheme \({w}^{\prime }\) , of the same length as \(w\) , having the form
 
 \[
-\begin{aligned}  & {w}^{\prime } = {ab}{a}^{-1}{b}^{-1}{w}^{\prime \prime }\;\text{ in case (1) or } \\  & {w}^{\prime } = \left( {{a}_{1}{a}_{1}}\right) \cdots \left( {{a}_{k}{a}_{k}}\right) {ab}{a}^{-1}{b}^{-1}{w}^{\prime \prime }\;\text{ in case (2), } \end{aligned}
+\begin{aligned}  & {w}^{\prime } = {ab}{a}^{-1}{b}^{-1}{w}^{\prime \prime }\;\text{ in case (1) or } \\  & {w}^{\prime } = ( {{a}_{1}{a}_{1}}) \cdots ( {{a}_{k}{a}_{k}}) {ab}{a}^{-1}{b}^{-1}{w}^{\prime \prime }\;\text{ in case (2), } \end{aligned}
 \]
 
 where \({w}^{\prime \prime }\) is of torus type or is empty. This is the substance of the following lemma:
@@ -629,35 +632,35 @@ where \({w}_{3}\) is of torus type or is empty.
 	This is the most elaborate proof of this section; three cuttings and pastings are involved. We show first that, switching labels and exponents if necessary, \(w\) can be written in the form
 (*)
 \[
-w = {w}_{0}\left\lbrack  {y}_{1}\right\rbrack  a\left\lbrack  {y}_{1}\right\rbrack  b\left\lbrack  {y}_{3}\right\rbrack  {a}^{-1}\left\lbrack  {y}_{4}\right\rbrack  {b}^{-1}\left\lbrack  {y}_{5}\right\rbrack  ,
+w = {w}_{0}[  {y}_{1}]  a[  {y}_{1}]  b[  {y}_{3}]  {a}^{-1}[  {y}_{4}]  {b}^{-1}[  {y}_{5}]  ,
 \]
 
 where some of the \({y}_{i}\) may be empty.
 
 Among the labels appearing in \({w}_{1}\) , let \(a\) be one whose two occurrences (with opposite exponents of course) are as close together as possible. These occurrences are nonadjacent, by hypothesis. Switching exponents if necessary, we can assume that the term \(a\) occurs first and the term \({a}^{-1}\) occurs second. Let \(b\) be any label appearing between \(a\) and \({a}^{-1}\) ; we can assume its exponent is +1 . Now the term \({b}^{-1}\) appears in \({w}_{1}\) , but cannot occur between \(a\) and \({a}^{-1}\) because these two are as close together as possible. If \({b}^{-1}\) appears following \({a}^{-1}\) , we are finished. If it appears preceding \(a\) , then all we need to do is to switch exponents on the \(b\) terms, and then switch the labels \(a\) and \(b\) , to obtain a scheme of the desired form.
 
-So let us assume that \(w\) has the form \(\left( *\right)\) .
+So let us assume that \(w\) has the form \(( *)\) .
 
 First cutting and pasting. We show that \(w\) is equivalent to the scheme
 
 \[
-{w}^{\prime } = {w}_{0}a\left\lbrack  {y}_{2}\right\rbrack  b\left\lbrack  {y}_{3}\right\rbrack  {a}^{-1}\left\lbrack  {{y}_{1}{y}_{4}}\right\rbrack  {b}^{-1}\left\lbrack  {y}_{5}\right\rbrack  .
+{w}^{\prime } = {w}_{0}a[  {y}_{2}]  b[  {y}_{3}]  {a}^{-1}[  {{y}_{1}{y}_{4}}]  {b}^{-1}[  {y}_{5}]  .
 \]
 
 To prove this result, we rewrite \(w\) in the form
 
 \[
-w = {w}_{0}\left\lbrack  {y}_{1}\right\rbrack  a\left\lbrack  {{y}_{2}b{y}_{3}}\right\rbrack  {a}^{-1}\left\lbrack  {{y}_{4}{b}^{-1}{y}_{5}}\right\rbrack  .
+w = {w}_{0}[  {y}_{1}]  a[  {{y}_{2}b{y}_{3}}]  {a}^{-1}[  {{y}_{4}{b}^{-1}{y}_{5}}]  .
 \]
 
 We then apply the cutting and pasting argument indicated in Figure 77.3 to conclude that
 
 \[
-w \sim  {w}_{0}c\left\lbrack  {{y}_{2}b{y}_{3}}\right\rbrack  {c}^{-1}\left\lbrack  {{y}_{1}{y}_{4}{b}^{-1}{y}_{5}}\right\rbrack
+w \sim  {w}_{0}c[  {{y}_{2}b{y}_{3}}]  {c}^{-1}[  {{y}_{1}{y}_{4}{b}^{-1}{y}_{5}}]
 \]
 
 \[
-\sim  {w}_{0}a\left\lbrack  {y}_{2}\right\rbrack  b\left\lbrack  {y}_{3}\right\rbrack  {a}^{-1}\left\lbrack  {{y}_{1}{y}_{4}}\right\rbrack  {b}^{-1}\left\lbrack  {y}_{5}\right\rbrack  ,
+\sim  {w}_{0}a[  {y}_{2}]  b[  {y}_{3}]  {a}^{-1}[  {{y}_{1}{y}_{4}}]  {b}^{-1}[  {y}_{5}]  ,
 \]
 
 by relabelling. Note that the cut at \(c\) can be made because both the resulting polygons have at least three sides.
@@ -672,27 +675,27 @@ Figure 77.3
 Second cutting and pasting. Given
 
 \[
-{w}^{\prime } = {w}_{0}a\left\lbrack  {y}_{2}\right\rbrack  b\left\lbrack  {y}_{3}\right\rbrack  {a}^{-1}\left\lbrack  {{y}_{1}{y}_{4}}\right\rbrack  {b}^{-1}\left\lbrack  {y}_{5}\right\rbrack  ,
+{w}^{\prime } = {w}_{0}a[  {y}_{2}]  b[  {y}_{3}]  {a}^{-1}[  {{y}_{1}{y}_{4}}]  {b}^{-1}[  {y}_{5}]  ,
 \]
 
 we show that \({w}^{\prime }\) is equivalent to the scheme
 
 \[
-{w}^{\prime \prime } = {w}_{0}a\left\lbrack  {{y}_{1}{y}_{4}{y}_{3}}\right\rbrack  b{a}^{-1}{b}^{-1}\left\lbrack  {{y}_{2}{y}_{5}}\right\rbrack  .
+{w}^{\prime \prime } = {w}_{0}a[  {{y}_{1}{y}_{4}{y}_{3}}]  b{a}^{-1}{b}^{-1}[  {{y}_{2}{y}_{5}}]  .
 \]
 
 If all the schemes \({y}_{1},{y}_{4},{y}_{5}\) , and \({w}_{0}\) are empty, then the argument is easy, since in that case
 
 \[
-{w}^{\prime } = a\left\lbrack  {y}_{2}\right\rbrack  b\left\lbrack  {y}_{3}\right\rbrack  {a}^{-1}{b}^{-1},
+{w}^{\prime } = a[  {y}_{2}]  b[  {y}_{3}]  {a}^{-1}{b}^{-1},
 \]
 
 \[
-\sim  b\left\lbrack  {y}_{3}\right\rbrack  {a}^{-1}{b}^{-1}a\left\lbrack  {y}_{2}\right\rbrack  \;\text{ by permuting }
+\sim  b[  {y}_{3}]  {a}^{-1}{b}^{-1}a[  {y}_{2}]  \;\text{ by permuting }
 \]
 
 \[
-\sim  a\left\lbrack  {y}_{3}\right\rbrack  b{a}^{-1}{b}^{-1}\left\lbrack  {y}_{2}\right\rbrack  \;\text{ by relabelling }
+\sim  a[  {y}_{3}]  b{a}^{-1}{b}^{-1}[  {y}_{2}]  \;\text{ by relabelling }
 \]
 
 \[
@@ -708,39 +711,39 @@ Figure 77.4
 
 Otherwise, we apply the argument indicated in Figure 77.4 to conclude that
 
-\[\begin{gathered}{w}^{\prime } = {w}_{0}a\left\lbrack  {y}_{2}\right\rbrack  b\left\lbrack  {y}_{3}\right\rbrack  {a}^{-1}\left\lbrack  {{y}_{1}{y}_{4}}\right\rbrack  {b}^{-1}\left\lbrack  {y}_{5}\right\rbrack \\ \sim  {w}_{0}c\left\lbrack  {{y}_{1}{y}_{4}{y}_{3}}\right\rbrack  {a}^{-1}{c}^{-1}a\left\lbrack  {{y}_{2}{y}_{5}}\right\rbrack \\ \sim  {w}_{0}a\left\lbrack  {{y}_{1}{y}_{4}{y}_{3}}\right\rbrack  b{a}^{-1}{b}^{-1}\left\lbrack  {{y}_{2}{y}_{5}}\right\rbrack  ,\end{gathered}\]
+\[\begin{gathered}{w}^{\prime } = {w}_{0}a[  {y}_{2}]  b[  {y}_{3}]  {a}^{-1}[  {{y}_{1}{y}_{4}}]  {b}^{-1}[  {y}_{5}] \\ \sim  {w}_{0}c[  {{y}_{1}{y}_{4}{y}_{3}}]  {a}^{-1}{c}^{-1}a[  {{y}_{2}{y}_{5}}] \\ \sim  {w}_{0}a[  {{y}_{1}{y}_{4}{y}_{3}}]  b{a}^{-1}{b}^{-1}[  {{y}_{2}{y}_{5}}]  ,\end{gathered}\]
 
 by relabelling.
 
 Third cutting and pasting. We complete the proof. Given
 
 \[
-{w}^{\prime \prime } = {w}_{0}a\left\lbrack  {{y}_{1}{y}_{4}{y}_{3}}\right\rbrack  b{a}^{-1}{b}^{-1}\left\lbrack  {{y}_{2}{y}_{5}}\right\rbrack  ,
+{w}^{\prime \prime } = {w}_{0}a[  {{y}_{1}{y}_{4}{y}_{3}}]  b{a}^{-1}{b}^{-1}[  {{y}_{2}{y}_{5}}]  ,
 \]
 
 we show that \({w}^{\prime \prime }\) is equivalent to the scheme
 
 \[
-{w}^{\prime \prime \prime } = {w}_{0}{ab}{a}^{-1}{b}^{-1}\left\lbrack  {{y}_{1}{y}_{4}{y}_{3}{y}_{2}{y}_{5}}\right\rbrack  .
+{w}^{\prime \prime \prime } = {w}_{0}{ab}{a}^{-1}{b}^{-1}[  {{y}_{1}{y}_{4}{y}_{3}{y}_{2}{y}_{5}}]  .
 \]
 
 If the schemes \({w}_{0},{y}_{5}\) , and \({y}_{2}\) are empty, the argument is easy, since in that case
 
 \[
-{w}^{\prime \prime } = a\left\lbrack  {{y}_{1}{y}_{4}{y}_{3}}\right\rbrack  b{a}^{-1}{b}^{-1}
+{w}^{\prime \prime } = a[  {{y}_{1}{y}_{4}{y}_{3}}]  b{a}^{-1}{b}^{-1}
 \]
 
 \[
-\sim  b{a}^{-1}{b}^{-1}a\left\lbrack  {{y}_{1}{y}_{4}{y}_{3}}\right\rbrack  \;\text{ by permuting }
+\sim  b{a}^{-1}{b}^{-1}a[  {{y}_{1}{y}_{4}{y}_{3}}]  \;\text{ by permuting }
 \]
 
 \[
-\sim  {ab}{a}^{-1}{b}^{-1}\left\lbrack  {{y}_{1}{y}_{4}{y}_{3}}\right\rbrack  \text{ by relabelling }
+\sim  {ab}{a}^{-1}{b}^{-1}[  {{y}_{1}{y}_{4}{y}_{3}}]  \text{ by relabelling }
 \]
 
 Otherwise, we apply the argument indicated in Figure 77.5 to conclude that
 
-\[\begin{gathered}{w}^{\prime \prime } = {w}_{0}a\left\lbrack  {{y}_{1}{y}_{4}{y}_{3}}\right\rbrack  b{a}^{-1}{b}^{-1}\left\lbrack  {{y}_{2}{y}_{5}}\right\rbrack \\ \sim  {w}_{0}c{a}^{-1}{c}^{-1}a\left\lbrack  {{y}_{1}{y}_{4}{y}_{3}{y}_{2}{y}_{5}}\right\rbrack \\ \sim  {w}_{0}{ab}{a}^{-1}{b}^{-1}\left\lbrack  {{y}_{1}{y}_{4}{y}_{3}{y}_{2}{y}_{5}}\right\rbrack  ,\end{gathered}\]
+\[\begin{gathered}{w}^{\prime \prime } = {w}_{0}a[  {{y}_{1}{y}_{4}{y}_{3}}]  b{a}^{-1}{b}^{-1}[  {{y}_{2}{y}_{5}}] \\ \sim  {w}_{0}c{a}^{-1}{c}^{-1}a[  {{y}_{1}{y}_{4}{y}_{3}{y}_{2}{y}_{5}}] \\ \sim  {w}_{0}{ab}{a}^{-1}{b}^{-1}[  {{y}_{1}{y}_{4}{y}_{3}{y}_{2}{y}_{5}}]  ,\end{gathered}\]
 
 by relabelling, as desired.
 
@@ -757,13 +760,13 @@ The final step of our classification procedure involves showing that a connected
 	Let \(w\) be a proper scheme of the form
 
 \[
-w = {w}_{0}\left( {cc}\right) \left( {{ab}{a}^{-1}{b}^{-1}}\right) {w}_{1}.
+w = {w}_{0}( {cc}) ( {{ab}{a}^{-1}{b}^{-1}}) {w}_{1}.
 \]
 
 Then \(w\) is equivalent to the scheme
 
 \[
-{w}^{\prime } = {w}_{0}\left( {aabbcc}\right) {w}_{1}.
+{w}^{\prime } = {w}_{0}( {aabbcc}) {w}_{1}.
 \]
 \end{lemma}
 
@@ -771,49 +774,49 @@ Then \(w\) is equivalent to the scheme
 	Recall Lemma 77.1, whuch states that for proper schemes we have
 (*)
 \[
-\left\lbrack  {y}_{0}\right\rbrack  a\left\lbrack  {y}_{1}\right\rbrack  a\left\lbrack  {y}_{2}\right\rbrack \sim  {aa}\left\lbrack  {{y}_{0}{y}_{1}^{-1}{y}_{2}}\right\rbrack  .
+[  {y}_{0}]  a[  {y}_{1}]  a[  {y}_{2}] \sim  {aa}[  {{y}_{0}{y}_{1}^{-1}{y}_{2}}]  .
 \]
 
 We proceed as follows:
 
 \[
-w \sim  \left( {cc}\right) \left( {{ab}{a}^{-1}{b}^{-1}}\right) {w}_{1}{w}_{0}
+w \sim  ( {cc}) ( {{ab}{a}^{-1}{b}^{-1}}) {w}_{1}{w}_{0}
 \]
 
 by permuting
 
 \[
-= {cc}\left\lbrack  {ab}\right\rbrack  {\left\lbrack  ba\right\rbrack  }^{-1}\left\lbrack  {{w}_{1}{w}_{0}}\right\rbrack
+= {cc}[  {ab}]  {[  ba]  }^{-1}[  {{w}_{1}{w}_{0}}]
 \]
 
 \[
-\sim  \left\lbrack  {ab}\right\rbrack  c\left\lbrack  {ba}\right\rbrack  c\left\lbrack  {{w}_{1}{w}_{0}}\right\rbrack
+\sim  [  {ab}]  c[  {ba}]  c[  {{w}_{1}{w}_{0}}]
 \]
 
-by \(\left( *\right)\) read backwards
+by \(( *)\) read backwards
 
 \[
-= \left\lbrack  a\right\rbrack  b\left\lbrack  c\right\rbrack  b\left\lbrack  {{ac}{w}_{1}{w}_{0}}\right\rbrack
+= [  a]  b[  c]  b[  {{ac}{w}_{1}{w}_{0}}]
 \]
 
 \[
-\sim  {bb}\left\lbrack  {a{c}^{-1}{ac}{w}_{1}{w}_{0}}\right\rbrack
+\sim  {bb}[  {a{c}^{-1}{ac}{w}_{1}{w}_{0}}]
 \]
  by
 \[
-\left( *\right)
+( *)
 \]
 
 \[
-= \left\lbrack  {bb}\right\rbrack  a{\left\lbrack  c\right\rbrack  }^{-1}a\left\lbrack  {c{w}_{1}{w}_{0}}\right\rbrack
+= [  {bb}]  a{[  c]  }^{-1}a[  {c{w}_{1}{w}_{0}}]
 \]
 
 \[
-\sim  {aa}\left\lbrack  {{bbcc}{w}_{1}{w}_{0}}\right\rbrack
+\sim  {aa}[  {{bbcc}{w}_{1}{w}_{0}}]
 \]
  by
 \[
-\left( *\right)
+( *)
 \]
 
 \[
@@ -833,9 +836,9 @@ by permuting.
 
 (2) abab,
 
-(3) \(\left( {{a}_{1}{a}_{1}}\right) \left( {{a}_{2}{a}_{2}}\right) \cdots \left( {{a}_{m}{a}_{m}}\right) \;\) with \(m \geq  2\) ,
+(3) \(( {{a}_{1}{a}_{1}}) ( {{a}_{2}{a}_{2}}) \cdots ( {{a}_{m}{a}_{m}}) \;\) with \(m \geq  2\) ,
 
-(4) \(\left( {{a}_{1}{b}_{1}{a}_{1}^{-1}{b}_{1}^{-1}}\right) \left( {{a}_{2}{b}_{2}{a}_{2}^{-1}{b}_{2}^{-1}}\right) \cdots \left( {{a}_{n}{b}_{n}{a}_{n}^{-1}{b}_{n}^{-1}}\right) \;\) with \(n \geq  1\) .
+(4) \(( {{a}_{1}{b}_{1}{a}_{1}^{-1}{b}_{1}^{-1}}) ( {{a}_{2}{b}_{2}{a}_{2}^{-1}{b}_{2}^{-1}}) \cdots ( {{a}_{n}{b}_{n}{a}_{n}^{-1}{b}_{n}^{-1}}) \;\) with \(n \geq  1\) .
 
 The first scheme gives rise to the space \({S}^{2}\) , and the second, to the space \({P}^{2}\) , as we noted in Examples 2 and 4 of \( \S {74}\) . The third leads to the space \({P}_{m}\) and the fourth to the space \({T}_{n}\) .
 
@@ -858,7 +861,7 @@ We proceed by induction on the length of \(w\) . Assume \(w\) has length greater
 where \({w}_{3}\) is of torus type. Note that \({w}_{3}\) is not empty because \(w\) has length greater than four. Again, \({w}_{3}\) cannot contain two adjacent terms having the same label, since \(w\) is not equivalent to a shorter scheme of torus type. Applying the lemma again, with \({w}_{0} = {ab}{a}^{-1}{b}^{-1}\) , we conclude that \(w\) is equivalent to a scheme of the form
 
 \[
-\left( {{ab}{a}^{-1}{b}^{-1}}\right) \left( {{cd}{c}^{-1}{d}^{-1}}\right) {w}_{4},
+( {{ab}{a}^{-1}{b}^{-1}}) ( {{cd}{c}^{-1}{d}^{-1}}) {w}_{4},
 \]
 
 where \({w}_{4}\) is empty or of torus type. If \({w}_{4}\) is empty, we are finished; otherwise we apply the lemma again. Continue similarly.
@@ -870,19 +873,19 @@ If \(w\) has length four, Corollary 77.2 implies that \(w\) is equivalent to one
 We proceed by induction on the length of \(w\) . Assume \(w\) has length greater than four. Corollary 77.2 tells us that \(w\) is equivalent to a scheme of the form
 
 \[
-{w}^{\prime } = \left( {{a}_{1}{a}_{1}}\right) \cdots \left( {{a}_{k}{a}_{k}}\right) {w}_{1},
+{w}^{\prime } = ( {{a}_{1}{a}_{1}}) \cdots ( {{a}_{k}{a}_{k}}) {w}_{1},
 \]
 
 where \(k \geq  1\) and \({w}_{1}\) is of torus type or empty. If \({w}_{1}\) is empty, we are finished. If \({w}_{1}\) has two adjacent terms having the same label, then \({w}^{\prime }\) is equivalent to a shorter scheme of projective type and the induction hypothesis applies. Otherwise, Lemma 77.3 tells us that \({w}^{\prime }\) is equivalent to a scheme of the form
 
 \[
-{w}^{\prime \prime } = \left( {{a}_{1}{a}_{1}}\right) \cdots \left( {{a}_{k}{a}_{k}}\right) {ab}{a}^{-1}{b}^{-1}{w}_{2},
+{w}^{\prime \prime } = ( {{a}_{1}{a}_{1}}) \cdots ( {{a}_{k}{a}_{k}}) {ab}{a}^{-1}{b}^{-1}{w}_{2},
 \]
 
 where \({w}_{2}\) is either empty or of torus type. Then we apply Lemma 77.4 to conclude that \({w}^{\prime \prime }\) is equivalent to the scheme
 
 \[
-\left( {{a}_{1}{a}_{1}}\right) \cdots \left( {{a}_{k}{a}_{k}}\right) {aabb}{w}_{2}.
+( {{a}_{1}{a}_{1}}) \cdots ( {{a}_{k}{a}_{k}}) {aabb}{w}_{2}.
 \]
 
 We continue simularly. Eventually we reach a scheme of type (3).
@@ -902,7 +905,7 @@ We continue simularly. Eventually we reach a scheme of type (3).
   \end{enumerate}
 \item The proof of the classification theorem provides an algorithm for taking a proper labelling scheme for a polygonal region and reducing it to one of the four standard forms indicated in the theorem. The appropriate equivalences are the following:
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item \(\left\lbrack  {y}_{0}\right\rbrack  a\left\lbrack  {y}_{1}\right\rbrack  a\left\lbrack  {y}_{2}\right\rbrack \sim  {aa}\left\lbrack  {{y}_{0}{y}_{1}^{-1}{y}_{2}}\right\rbrack\) . (ii) \(\left\lbrack  {y}_{0}\right\rbrack  a{a}^{-1}\left\lbrack  {y}_{1}\right\rbrack \sim  \left\lbrack  {{y}_{0}{y}_{1}}\right\rbrack\) if \({y}_{0}{y}_{1}\) has length at least 4 . (iii) \({w}_{0}\left\lbrack  {y}_{1}\right\rbrack  a\left\lbrack  {y}_{2}\right\rbrack  b\left\lbrack  {y}_{3}\right\rbrack  {a}^{-1}\left\lbrack  {y}_{4}\right\rbrack  {b}^{-1}\left\lbrack  {y}_{5}\right\rbrack \sim  {w}_{0}{ab}{a}^{-1}{b}^{-1}\left\lbrack  {{y}_{1}{y}_{4}{y}_{3}{y}_{2}{y}_{5}}\right\rbrack\) . (iv) \({w}_{0}\left( {cc}\right) \left( {{ab}{a}^{-1}{b}^{-1}}\right) {w}_{1} \sim  {w}_{0}{aabbcc}{w}_{1}\) . Using this algorithm, reduce each of the following schemes to one of the standard forms.
+  \item \([  {y}_{0}]  a[  {y}_{1}]  a[  {y}_{2}] \sim  {aa}[  {{y}_{0}{y}_{1}^{-1}{y}_{2}}]\) . (ii) \([  {y}_{0}]  a{a}^{-1}[  {y}_{1}] \sim  [  {{y}_{0}{y}_{1}}]\) if \({y}_{0}{y}_{1}\) has length at least 4 . (iii) \({w}_{0}[  {y}_{1}]  a[  {y}_{2}]  b[  {y}_{3}]  {a}^{-1}[  {y}_{4}]  {b}^{-1}[  {y}_{5}] \sim  {w}_{0}{ab}{a}^{-1}{b}^{-1}[  {{y}_{1}{y}_{4}{y}_{3}{y}_{2}{y}_{5}}]\) . (iv) \({w}_{0}( {cc}) ( {{ab}{a}^{-1}{b}^{-1}}) {w}_{1} \sim  {w}_{0}{aabbcc}{w}_{1}\) . Using this algorithm, reduce each of the following schemes to one of the standard forms.
   \item \({abac}{b}^{-1}{c}^{-1}\) .
   \item \({abc}{a}^{-1}{cb}\) .
   \item \({abbc}{a}^{-1}{dd}{c}^{-1}\) . \begin{itemize} \item (d) \({abcd}{a}^{-1}{b}^{-1}{c}^{-1}{d}^{-1}\) . \end{itemize}
@@ -915,13 +918,13 @@ We continue simularly. Eventually we reach a scheme of type (3).
 \end{enumerate}
 \section*{§ 78 Constructing Compact Surfaces}
 
-To complete our classification of the compact surfaces, we must show that every compact connected surface can be obtained by pasting together in pairs the edges of a polygonal region. We shall actually prove something slightly weaker than this, for we shall assume that the surface in question has what is called a \index{Triangulation}triangulation. We define this notion as follows:
+To complete our classification of the compact surfaces, we must show that every compact connected surface can be obtained by pasting together in pairs the edges of a polygonal region. We shall actually prove something slightly weaker than this, for we shall assume that the surface in question has what is called a \index{Triangulation}. We define this notion as follows:
 
 \begin{definition}
-	Let \(X\) be a compact Hausdorff space. A \index{edge: of curved triangle@Edge: of curved triangle}edge curved triangle in \(X\) is a subspace \(A\) of \(X\) and a homeomorphism \(h : T \rightarrow  A\) , where \(T\) is a closed triangular region in the plane. If \(e\) is an edge of \(T\) , then \(h\left( e\right)\) is is said to be an edge of \(A\) ; if \(v\) is a vertex of \(T\) , then \(h\left( v\right)\) is said to be a vertex of \(A\) . A triangulation of \(X\) is a collection of curved triangles \({A}_{1},\ldots ,{A}_{n}\) in \(X\) whose union is \(X\) such that for \(i \neq  j\) , the intersection \({A}_{i} \cap  {A}_{j}\) is either empty, or a vertex of both \({A}_{i}\) and \({A}_{j}\) , or an edge of both. Furthermore, if \({h}_{i} : {T}_{i} \rightarrow  {A}_{i}\) is the homeomorphism associated with \({A}_{i}\) , we require that when \({A}_{i} \cap  {A}_{j}\) is an edge \(e\) of both, then the map \({h}_{j}^{-1}{h}_{i}\) defines a linear homeomorphism of the edge \({h}_{i}^{-1}\left( e\right)\) of \({T}_{i}\) with the edge \({h}_{j}^{-1}\left( e\right)\) of \({T}_{j}\) . If \(X\) has a triangulation, it is said to be \index{Triangulable}triangulable.
+	Let \(X\) be a compact Hausdorff space. A \index{edge: of curved triangle@Edge: of curved triangle} \index{curved triangle@Curved triangle}\index{curved triangle@Curved triangle}\index{curved triangle@Curved triangle}curved triangle in \(X\) is a subspace \(A\) of \(X\) and a homeomorphism \(h : T \rightarrow  A\) , where \(T\) is a closed triangular region in the plane. If \(e\) is an edge of \(T\) , then \(h( e)\) is is said to be an edge of \(A\) ; if \(v\) is a vertex of \(T\) , then \(h( v)\) is said to be a vertex of \(A\) . A \index{triangulation@Triangulation}\index{triangulation@Triangulation}\index{triangulation@Triangulation}triangulation of \(X\) is a collection of curved triangles \({A}_{1},\ldots ,{A}_{n}\) in \(X\) whose union is \(X\) such that for \(i \neq  j\) , the intersection \({A}_{i} \cap  {A}_{j}\) is either empty, or a vertex of both \({A}_{i}\) and \({A}_{j}\) , or an edge of both. Furthermore, if \({h}_{i} : {T}_{i} \rightarrow  {A}_{i}\) is the homeomorphism associated with \({A}_{i}\) , we require that when \({A}_{i} \cap  {A}_{j}\) is an edge \(e\) of both, then the map \({h}_{j}^{-1}{h}_{i}\) defines a linear homeomorphism of the edge \({h}_{i}^{-1}( e)\) of \({T}_{i}\) with the edge \({h}_{j}^{-1}( e)\) of \({T}_{j}\) . If \(X\) has a triangulation, it is said to be \index{Triangulable}.
 \end{definition}
 
-It is a basic theorem that every compact surface is triangulable. The proof is long but not exceedingly difficult. (See 		\cite{AhlforsSario1960} or 		\cite{DoyleMoran1968}.)
+It is a basic theorem that every compact surface is \index{triangulable@Triangulable}\index{triangulable@Triangulable}\index{triangulable@Triangulable}triangulable. The proof is long but not exceedingly difficult. (See 		\cite{AhlforsSario1960} or 		\cite{DoyleMoran1968}.)
 
 \begin{theorem}
 	If \(X\) is a compact triangulable surface, then \(X\) is homeomorphic to the quotient space obtained from a collection of disjoint triangular regions in the plane by pasting their edges together in pairs.
@@ -977,7 +980,7 @@ Indeed, let \(B\) be the open unit ball in \({\mathbb{R}}^{2}\) centered at the 
 \end{center}
 \hspace*{3em} 
 
-The inclusion \(i\) is homotopic to the homeomorphism \(h\left( x\right)  = x/\epsilon\) , so it induces an isomorphism of fundamental groups. Therefore, \({k}_{ * }\) is surjective; it follows that \(V - 0\) cannot be simply connected. See Figure 78.4.
+The inclusion \(i\) is homotopic to the homeomorphism \(h( x)  = x/\epsilon\) , so it induces an isomorphism of fundamental groups. Therefore, \({k}_{ * }\) is surjective; it follows that \(V - 0\) cannot be simply connected. See Figure 78.4.
 
 \begin{center}
 \includegraphics[width=0.3\textwidth]{images/78.4.jpg}
@@ -996,7 +999,7 @@ To begin, we show that if \(A\) is the union of all the edges of the triangles o
 
 It follows that the fundamental group of \(X - x\) is not abelian, for it is easy to see that \(A\) is a deformation retract of \(X - x\) . See Figure 78.5.
 
-Now we prove our result. For convenience, assume \(x\) is the origin in \({\mathbb{R}}^{3}\) . If \(W\) is an arbitrary neighborhood of 0, we can find a ``shrinking map'' \(f\left( x\right)  = {\epsilon x}\) that carries \(X\) into \(W\) . The space \({X}_{\epsilon } = f\left( X\right)\) is a copy of \(X\) lying inside \(W\) . Consider the inclusions
+Now we prove our result. For convenience, assume \(x\) is the origin in \({\mathbb{R}}^{3}\) . If \(W\) is an arbitrary neighborhood of 0, we can find a ``shrinking map'' \(f( x)  = {\epsilon x}\) that carries \(X\) into \(W\) . The space \({X}_{\epsilon } = f( X)\) is a copy of \(X\) lying inside \(W\) . Consider the inclusions
 
 \begin{center}
 \includegraphics[width=0.5\textwidth]{images/78.5.jpg}
@@ -1010,7 +1013,7 @@ Figure 78.5
 \end{center}
 \hspace*{3em} 
 
-The inclusion \(i\) is homotopic to the homeomorphism \(h\left( x\right)  = x/\epsilon\) , so it induces an isomorphism of fundamental groups. It follows that \({k}_{ * }\) is surjective, so the fundamental group of \(W - 0\) cannot be abelian.
+The inclusion \(i\) is homotopic to the homeomorphism \(h( x)  = x/\epsilon\) , so it induces an isomorphism of fundamental groups. It follows that \({k}_{ * }\) is surjective, so the fundamental group of \(W - 0\) cannot be abelian.
 \end{proof}
 \begin{theorem}
 	If \(X\) is a compact connected triangulable surface, then \(X\) is homeomorphic to a space obtained from a polygonal region in the plane by pasting the edges together in pairs.
@@ -1029,13 +1032,13 @@ Eventually one reaches the situation where either one has a single polygonal reg
   \item \({abc},{dae},{bef},{cdf}\) .
   \item \({abc},{cba},{def},{df}{e}^{-1}\) .
   \end{enumerate}
-\item Let \({H}^{2}\) be the subspace of \({\mathbb{R}}^{2}\) consisting of all points \(\left( {{x}_{1},{x}_{2}}\right)\) with \({x}_{2} \geq  0\) . A 2- manifold with boundary (or surface with boundary) is a Hausdorff space \(X\) with a countable basis such that each point \(x\) of \(X\) has a neighborhood homeomorphic with an open set of \({\mathbb{R}}^{2}\) or \({H}^{2}\) . The boundary of \(X\) (denoted \(\partial X\) ) consists of those points \(x\) such that \(x\) has no neighborhood homeomorphic with an open set of \({\mathbb{R}}^{2}\) .
+\item Let \({H}^{2}\) be the subspace of \({\mathbb{R}}^{2}\) consisting of all points \(( {{x}_{1},{x}_{2}})\) with \({x}_{2} \geq  0\) . A 2- manifold with boundary (or surface with boundary) is a Hausdorff space \(X\) with a countable basis such that each point \(x\) of \(X\) has a neighborhood homeomorphic with an open set of \({\mathbb{R}}^{2}\) or \({H}^{2}\) . The boundary of \(X\) (denoted \(\partial X\) ) consists of those points \(x\) such that \(x\) has no neighborhood homeomorphic with an open set of \({\mathbb{R}}^{2}\) .
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item Show that no point of \({H}^{2}\) of the form \(\left( {{x}_{1},0}\right)\) has a neighborhood (in \({H}^{2}\) ) that is homeomorphic to an open set of \({\mathbb{R}}^{2}\) .
-  \item Show that \(x \in  \partial X\) if and only if there is a homeomorphism \(h\) mapping a neighborhood of \(x\) onto an open set of \({H}^{2}\) such that \(h\left( x\right)  \in  \mathbb{R} \times  0\) .
+  \item Show that no point of \({H}^{2}\) of the form \(( {{x}_{1},0})\) has a neighborhood (in \({H}^{2}\) ) that is homeomorphic to an open set of \({\mathbb{R}}^{2}\) .
+  \item Show that \(x \in  \partial X\) if and only if there is a homeomorphism \(h\) mapping a neighborhood of \(x\) onto an open set of \({H}^{2}\) such that \(h( x)  \in  \mathbb{R} \times  0\) .
   \item Show that \(\partial X\) is a 1-manifold.
   \end{enumerate}
 \item Show that the closed unit ball in \({\mathbb{R}}^{2}\) is a 2-manifold with boundary.
-\item Let \(X\) be a 2-manifold; let \({U}_{1},\ldots ,{U}_{k}\) be a collection of disjoint open sets in \(X\) ; and suppose that for each \(i\) , there is a homeomorphism \({h}_{i}\) of the open unit ball \({B}^{2}\) with \({U}_{i}\) . Let \(\epsilon  = 1/2\) and let \({B}_{\epsilon }\) be the open ball of radius \(\epsilon\) . Show that the space \(Y = X - \bigcup {h}_{t}\left( {B}_{\epsilon }\right)\) is a 2-manifold with boundary, and that \(\partial Y\) has \(k\) components. The space \(Y\) is called `` \(X\) -with- \(k\) -holes.''
+\item Let \(X\) be a 2-manifold; let \({U}_{1},\ldots ,{U}_{k}\) be a collection of disjoint open sets in \(X\) ; and suppose that for each \(i\) , there is a homeomorphism \({h}_{i}\) of the open unit ball \({B}^{2}\) with \({U}_{i}\) . Let \(\epsilon  = 1/2\) and let \({B}_{\epsilon }\) be the open ball of radius \(\epsilon\) . Show that the space \(Y = X - \bigcup {h}_{t}( {B}_{\epsilon })\) is a 2-manifold with boundary, and that \(\partial Y\) has \(k\) components. The space \(Y\) is called `` \(X\) -with- \(k\) -holes.''
 \item Prove the following: \textsl{Theorem.} Given a compact connected triangulable 2-manifold \(Y\) with boundary, such that \(\partial Y\) has \(k\) components, then \(Y\) is homeomorphic to \(X\) -with- \(k\) -holes, where \(X\) is either \({S}^{2}\) or the \(n\) -fold torus \({T}_{n}\) or the \(m\) -fold projective plane \({P}_{m}\) .  [Hint: Each component of \(\partial Y\) is homeomorphic to a circle.]
 \end{enumerate}
