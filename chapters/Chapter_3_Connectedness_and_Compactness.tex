@@ -108,7 +108,9 @@ Since \(C\) and \(D\) are both open in \(X\) , the sets \(C \cap  Y\) and \(D \c
 	The union of a collection of connected subspaces of \(X\) that have a point in common is connected.
 
 \end{theorem}
-Proof. Let \(\{  {A}_{\alpha }\}\) be a collection of connected subspaces of a space \(X\) ; let \(p\) be a point of \(\bigcap {A}_{\alpha }\) . We prove that the space \(Y = \bigcup {A}_{\alpha }\) is connected. Suppose that \(Y = C \cup  D\) is a separation of \(Y\) . The point \(p\) is in one of the sets \(C\) or \(D\) ; suppose \(p \in  C\) . Since \({A}_{\alpha }\) is connected, it must lie entirely in either \(C\) or \(D\) , and it cannot lie in \(D\) because it contains the point \(p\) of \(C\) . Hence \({A}_{\alpha } \subset  C\) for every \(\alpha\) , so that \(\bigcup {A}_{\alpha } \subset  C\) , contradicting the fact that \(D\) is nonempty.
+\begin{proof}
+	Let \(\{  {A}_{\alpha }\}\) be a collection of connected subspaces of a space \(X\) ; let \(p\) be a point of \(\bigcap {A}_{\alpha }\) . We prove that the space \(Y = \bigcup {A}_{\alpha }\) is connected. Suppose that \(Y = C \cup  D\) is a separation of \(Y\) . The point \(p\) is in one of the sets \(C\) or \(D\) ; suppose \(p \in  C\) . Since \({A}_{\alpha }\) is connected, it must lie entirely in either \(C\) or \(D\) , and it cannot lie in \(D\) because it contains the point \(p\) of \(C\) . Hence \({A}_{\alpha } \subset  C\) for every \(\alpha\) , so that \(\bigcup {A}_{\alpha } \subset  C\) , contradicting the fact that \(D\) is nonempty.
+\end{proof}
 
 \begin{theorem}
 	Let \(A\) be a connected subspace of \(X\) . If \(A \subset  B \subset  \bar{A}\) , then \(B\) is also connected.
@@ -760,6 +762,7 @@ is a collection of sets covering \(X\) ; these sets are open in \(X\) because \(
 \]
 
 cover \(X\) . Then the sets \({A}_{1},\ldots ,{A}_{n}\) cover \(f( X)\) .
+\end{proof}
 
 One important use of the preceding theorem is as a tool for verifying that a map is a homeomorphism:
 
@@ -767,13 +770,16 @@ One important use of the preceding theorem is as a tool for verifying that a map
 	Let \(f : X \rightarrow  Y\) be a bijective continuous function If \(X\) is compact and \(Y\) is Hausdorff, then \(f\) is a homeomorphism
 
 \end{theorem}
-Proof. We shall prove that images of closed sets of \(X\) under \(f\) are closed in \(Y\) ; this will prove continuity of the map \({f}^{-1}\) . If \(A\) is closed in \(X\) , then \(A\) is compact, by Theorem 26.2. Therefore, by the theorem just proved, \(f( A)\) is compact. Since \(Y\) is Hausdorff, \(f( A)\) is closed in \(Y\) , by Theorem 26.3.
+\begin{proof}
+	We shall prove that images of closed sets of \(X\) under \(f\) are closed in \(Y\) ; this will prove continuity of the map \({f}^{-1}\) . If \(A\) is closed in \(X\) , then \(A\) is compact, by Theorem 26.2. Therefore, by the theorem just proved, \(f( A)\) is compact. Since \(Y\) is Hausdorff, \(f( A)\) is closed in \(Y\) , by Theorem 26.3.
+\end{proof}
 
 \begin{theorem}
 	The product of finitely many compact spaces is compact.
 
 \end{theorem}
-Proof. We shall prove that the product of two compact spaces is compact; the theorem follows by induction for any finite product.
+\begin{proof}
+	We shall prove that the product of two compact spaces is compact; the theorem follows by induction for any finite product.
 
 Step 1. Suppose that we are given spaces \(X\) and \(Y\) , with \(Y\) compact. Suppose that \({x}_{0}\) is a point of \(X\) , and \(N\) is an open set of \(X \times  Y\) containing the ``slice'' \({x}_{0} \times  Y\) of \(X \times  Y\) We prove the following
 
