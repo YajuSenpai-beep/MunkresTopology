@@ -12,7 +12,7 @@ for fn in sorted(glob.glob("../chapters/Chapter_*.tex")):
         c = f.read()
 
     # ── 1. Convert \idx commands to \index ──
-    # \idx[display]{key} → \index{key}
+    # \idx[display]{key} → \index{key}display  (keep display as body text)
     while True:
         i = c.find(bs + "idx[")
         if i < 0:
@@ -21,8 +21,20 @@ for fn in sorted(glob.glob("../chapters/Chapter_*.tex")):
         b2 = c.find("{", bd + 1)
         b3 = c.find("}", b2 + 1)
         if bd > 0 and b3 > 0:
-            c = c[:i] + bs + "index{" + c[b2 + 1 : b3] + "}" + c[b3 + 1 :]
-    c = c.replace(bs + "idx{", bs + "index{")
+            key = c[b2 + 1 : b3]
+            # display text is between [ and ]: c[i+5:bd]
+            display = c[i + 5 : bd]
+            c = c[:i] + bs + "index{" + key + "}" + display + c[b3 + 1 :]
+    # \idx{key} → \index{key}key  (key IS the body text)
+    while True:
+        i = c.find(bs + "idx{")
+        if i < 0:
+            break
+        b1 = c.find("}", i + 5)
+        if b1 < 0:
+            break
+        key = c[i + 5 : b1]
+        c = c[:i] + bs + "index{" + key + "}" + key + c[b1 + 1 :]
     c = c.replace(bs + "idxmath{", bs + "index{")
     c = c.replace(bs + "idxsub{", bs + "index{")
 
