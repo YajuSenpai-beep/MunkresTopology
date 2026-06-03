@@ -1,0 +1,387 @@
+# The Tychonoff Theorem
+
+We now return to a problem we left unresolved in Chapter 3. We shall prove the Tychonoff theorem,to the effect that arbitrary products of compact spaces are compact. The proof makes use of Zorn's Lemma (see §I1). An altermate proof,which relies instead on the well-ordering theorem,is outlined in the exercises.
+
+The Tychonoff theorem is of great usefulness to analysts (less so to geometers). We apply it in \$38 to construct the Stone-Cech compactification of acompletely regular space,and in \$47 in proving the general version of Ascol's theorem.
+
+## \$37The Tychonoff Theorem
+
+Like the Urysohn lemma,the Tychonoff theorem is what we call a “deep"theorem. Its proof involves not one but several original ideas; it is anything but straightforward. We shall discuss the crucial ideas of the proof in some detail before turning to the proof itself.
+
+In Chapter 3, we proved the product X × Y of two compact spaces to be compact. For that proof the open covering formulation of compactness was quite satisfactory. Given an open covering of X × Y by basis elements,we covered each slice x × Y by finitely many of them,and proceeded from that to construct a finite covering of X × Y.
+
+It is quite tricky to make this approach work for an arbitrary product of compact spaces; one must well-order the index set and use transfinite induction.(See
+
+Exercise 5.） An alternate approach is to abandon open coverings and to approach the problem by applying the closed set formulation of compactness,using $\bf { Z o m } ^ { * } s$ lemma.
+
+To see how this idea mught work,let us consider first the simplest possible case: the product of two compact spaces $\pmb { X } _ { 1 } \times \pmb { X } _ { 2 }$ .Suppose that $\pmb { \mathcal { A } }$ is a collection of closed subsets of $X _ { 1 } \times X _ { 2 }$ that has the finite intersection property. Consider the projection map $\pi _ { 1 } : X _ { 1 } \times X _ { 2 } \to X _ { 1 }$ .The collection
+
+$$
+\{ \pi _ { 1 } ( A ) \mid A \in { \mathcal { A } } \}
+$$
+
+of subsets of $X _ { 1 }$ also has the finite intersection property,and so does the collection of their closures $\overline { { \pi _ { 1 } ( A ) } }$ .Compactness of $\scriptstyle { \pmb { \cal X } } _ { 1 }$ guarantees that the intersection of all the sets $\overline { { \pi _ { 1 } ( A ) } }$ is nonempty.Let us choose a point $\pmb { x } _ { 1 }$ belonging to thus intersection. Similarly, let us choose a point $\pmb { x } _ { 2 }$ belonging to all the sets $\overline { { \pi _ { 2 } ( A ) } }$ . The obvious conclusion we would like to draw is that the point ${ \pmb x } _ { 1 } \times { \pmb x } _ { 2 }$ lies in $\cap _ { A \in { \pmb { \mathcal { A } } } } { \pmb { A } }$ ,for then our theorem would be proved.
+
+But that is unfortunately not true.Consider the following example,in which $\textstyle X _ { 1 } =$ $X _ { 2 } = \left. 0 , 1 \right.$ and the collection A consists of all closed elliptical regions bounded by ellipses that have the points $\begin{array} { r } { p = ( \frac { 1 } { 3 } , \frac { 1 } { 3 } ) } \end{array}$ and $\begin{array} { r } { \mathbf { \nabla } \mathbf { \mathfrak { q } } = ( \frac { 1 } { 2 } , \frac { 2 } { 3 } ) } \end{array}$ as their foci. See Figure 37.1. Certainly A has the finite intersection property. Now let us pick a point $x _ { 1 }$ in the intersection of the sets $\{ { \overline { { \pi _ { 1 } ( A ) } } } \ | \ A \ \in \ A \}$ Any point of the interval $[ \frac { 1 } { 3 } , \frac { 1 } { 2 } ]$ will do; suppose we choose $\begin{array} { r } { x _ { 1 } = \frac { 1 } { 2 } } \end{array}$ .Similarly,choose a point $\pmb { x } _ { 2 }$ in the intersection of the sets $\{ { \overline { { \pi _ { 2 } ( A ) } } } \ | \ A \in { \mathcal { A } } \}$ ．Any point of the interval $\bigl [ \frac 1 3 , \frac 2 3 \bigr ]$ will do; suppose we pick $\begin{array} { r } { x _ { 2 } = \frac { 1 } { 2 } } \end{array}$ This proves to be an unfortunate choice,for the point
+
+$$
+\begin{array} { r } { x _ { 1 } \times x _ { 2 } = \frac { 1 } { 2 } \times \frac { 1 } { 2 } } \end{array}
+$$
+
+does not lie in the intersection of the sets A.
+
+<!-- image-->  
+Figure 37.1
+
+“Aha!” you say,“you made a bad choice.lf after choosing $\begin{array} { r } { x _ { 1 } = \frac { 1 } { 2 } } \end{array}$ you had chosen $\begin{array} { r } { x _ { 2 } = \frac { 2 } { 3 } } \end{array}$ ,then you would have found a point in $\cap _ { A \in { \mathcal { A } } } A _ { \cdot } ^ { \cdot \cdot }$ The difficulty with our tentative proof is that it gave us too much freedom in picking $x _ { 1 }$ and $\pmb { x } _ { 2 } ;$ it allowed us to make a “bad"choice instead of a“good"choice.
+
+How can we alter the proof so as to avoid this difficulty?
+
+This question leads to the second idea of the proof: Perhaps if we expand the collection $\pmb { \mathcal { A } }$ (retaining the finite intersection property,of course),that expansion will restrict the choices of $x _ { 1 }$ and $\pmb { x } _ { 2 }$ sufficiently that we will be forced to make the "right" choice.To illustrate,suppose that in the previous example we expand the collection $\pmb { \mathcal { A } }$ to the collection $\pmb { \mathcal { D } }$ consisting of all closed elliptical regions bounded by ellipses that have $\boldsymbol { p } = ( \frac { 1 } { 3 } , \frac { 1 } { 3 } )$ as one focus and any point of the line segment $p q$ as the other focus. This collection is illustrated in Figure 37.2. The new collection $\pmb { \mathcal { D } }$ still has the finite intersection property. But if you try to choose a point $x _ { 1 }$ in
+
+$$
+\bigcap _ { D \in { \mathcal { D } } } { \overline { { \pi _ { 1 } ( D ) } } } ,
+$$
+
+the only possible choice for $\pmb { x } _ { 1 }$ is $\frac { 1 } { 3 }$ Similarly,the only possible choice for $\pmb { x } _ { 2 }$ is $\frac { 1 } { 3 }$ And ${ \frac { 1 } { 3 } } \times { \frac { 1 } { 3 } }$ does belong to every set $_ D$ ，and hence to every set $\pmb { A }$ In other words, expanding the collection A to the collection $\mathbfcal { D }$ forces the proper choice on us.
+
+<!-- image-->  
+Figure 37.2
+
+Now of course in this example we chose $\pmb { \mathcal { D } }$ carefully so that the proof would work. What hope can we have for choosing $\pmb { \mathcal { D } }$ corTectly in general? Here is the third idea of the proof: Why not simply choose $\pmb { \mathcal { D } }$ to be a collection that is “as large as possible"— so that no larger collection has the finite intersection property-and see whether such a $\pmb { \mathcal { D } }$ will work? lt is not at all obvious that such a collection $\pmb { \mathcal { D } }$ exists; to prove it, we must appeal to ${ \bf { Z o r n " s } }$ lemma.But after we prove that $\pmb { \mathcal { D } }$ exists,we shall in fact be able to show that $\pmb { \mathcal { D } }$ is large enough to force the proper choices on us.
+
+A final remark.The assumption that the elements of the collection A were closed sets was irrelevant in this discussion.For even if the set $A \in \mathcal A$ is closed, the set $\pi _ { 1 } ( A )$ need not be closed,so we had to take its closure in order to apply the closed set formulationof compactnes.Therefore, we may as wellbegin withan arbitrarycollection of subsets of X having thefinite intersectonpropertyand prove that theintersection of their closures is nonempty. This approach actually proves to be more convenient.
+
+Lemma 37.1.Let X be a set; let A be a collection of subsets of X having the finite intersection property.Then there is a collection D of subsets of X such thatD contains A,and D has the finite intersection property,and no collection of subsets of X that properly contains D has this property.
+
+We often say that a collection D satisfying the conclusion of this theorem is maximal with respect to the finite intersection property
+
+Proof.As you might expect, we construct D by using Zorn's lemma. It states that, given a set A that is strictly partially ordered,in which every simply ordered subset has an upper bound,A itself has a maximal element.
+
+The set A to which we shall apply Zorn's lemma is not a subset of X,nor even a collection of subsets of X,but a set whose elements are collections of subsets of X. For purposes of this proof,we shall call a set whose elements are collections of subsets of X a“superset"and shall denote it by an outline letter. To summarize the riotation:
+
+c is an element of X.
+
+C is a subset of X
+
+C is a collection of subsets of X
+
+C is a superset whose elements are collections of subsets of X.
+
+Now by hypothesis,we have a collection A of subsets of X that has the finite intersection property. Let A denote the superset consisting of all collections B of subsets of X such that $\mathcal { B } \supset \mathcal { A }$ and B has the finite intersection property. We use proper inclusion $\subsetneq$ as our strict partial order on A.To prove our lemma,we need to show that A has a maximal elementD.
+
+In order to apply Zorn's lemma,we must show that if B is a “subsuperset"of A that is simply ordered by proper inclusion,then B has an upper bound in A.We shall show in fact that the collection
+
+$$
+{ \mathfrak { C } } = \bigcup _ { { \mathcal { B } } \in \mathbb { B } } { \mathcal { B } } ,
+$$
+
+which is the union of the collections belonging to B,is an element of A,then it is the required upper bound on B.
+
+To show that C is an element of A,we must show that $c > { \mathcal { A } }$ and that C has the finite intersection property. Certainly C contains A,since each element of B contains A.To show that C has the finite intersection property, let $C _ { 1 } , \ldots , C _ { n }$ be elements , of C.Because C is the union of the elements of B,there is,for each i,an element ${ \mathcal { B } } _ { i }$ of B such that $C _ { i } \in \mathcal { B } _ { i }$ . The superset $\{ \mathcal { B } _ { 1 } , \ldots , \mathcal { B } _ { n } \}$ Is contained in B,so it is simply ordered by the relation of proper inclusion.Being finite,it has a largest element; that is,there is an index k such that $\mathcal { B } _ { i } \subset \mathcal { B } _ { k }$ for $i = 1 , \ldots , n$ .Then all the sets $c _ { 1 } , \ldots , c _ { n }$ are elements of $\mathcal { B } _ { k }$ . Since $\mathcal { B } _ { k }$ has the finite intersection property,the intersection of the sets $c _ { 1 } , \ldots , c _ { n }$ is nonempty,as desired. □
+
+Lemma 37.2. Let X be a set; let D be a collection of subsets of X that is maximal with respect to the finite intersection property. Then:
+
+(a)Any finite intersecton of elements of D is an element of D.
+
+(b)If A is a subset of X that intersects every element of $\mathcal { D }$ ，thenAisanelement of D.
+
+Proof.(a) Let B equal the intersection of finitely many elements of D.Define a collection ε by adjoining B to $\mathbfcal { D }$ so that ${ \pmb { \mathcal { E } } } = { \mathcal { D } } \cup \{ { \pmb { B } } \}$ .We show that & has the finite intersection property; then maximality of D implies that $\pmb { \mathcal { E } } = \pmb { \mathcal { D } }$ ，so that $\pmb { { \cal B } } \in \mathcal { D }$ as desired
+
+Take finitely many elements of ε. If none of them is the set B,then their intersection is nonempty because $\mathcal { D }$ has the finite intersection property. If one of them is the set B,then their intersection is of the form
+
+$$
+D _ { 1 } \cap \cdot \ \cdot \cap D _ { m } \cap B
+$$
+
+Since B equals a finite intersection of elements of D,this set is nonempty.
+
+(b) Given A,define ${ \mathcal { E } } = { \mathcal { D } } \cup \{ A \}$ We show that & has the finite intersection property, from which we conclude that A belongs to ${ \mathcal { D } } .$ Take finitely many elements of ε. If none of them is the set A,their intersection is automatically nonempty. Otherwise, it is of the form
+
+$$
+D _ { 1 } \cap \cdots \cap D _ { n } \cap A .
+$$
+
+Now $D _ { 1 } \cap \cdots \cap D _ { n }$ belongs to D,by (a); therefore,this intersection is nonempty,by hypothesis.
+
+Theorem 37.3 (Tychonoff theorem).An arbitrary product of compact spaces is compact in the product topology
+
+Proof. Let
+
+$$
+X = \prod _ { \alpha \in J } X _ { \alpha } ,
+$$
+
+where each space Xq $\pmb { \chi } _ { \pmb { \alpha } }$ is compact.Let A be a collection of subsets of X having the finite intersection property. We prove that the intersection
+
+$$
+\bigcap _ { A \in \mathcal { A } } \bar { A }
+$$
+
+is nonempty. Compactness of X follows.
+
+Applying Lemma 37.1,choose a collection D of subsets of X such that $\mathcal { D } \supset \mathcal { A }$ and D is maximal with respect to the finite intersection property It will suffice to show that the intersection $\cap _ { \boldsymbol { D } \in \mathcal { D } } \bar { \boldsymbol { D } }$ is nonempty.
+
+Given $\alpha \in J$ let $\pi _ { \alpha } : X \to X _ { \alpha }$ be the projection map,as usual Consider the collection
+
+$$
+\{ \pi _ { \alpha } ( D ) \mid D \in { \mathcal { D } } \}
+$$
+
+of subsets of $\pmb { \chi } _ { \pmb { \alpha } }$ .This collection has the finite intersection property because $\mathcal { D }$ does. By compactness of $X _ { \alpha }$ ,we can for each α choose a point $\pmb { x _ { \alpha } }$ of $X _ { \alpha }$ such that
+
+$$
+x _ { \alpha } \in \bigcap _ { D \in \mathcal { D } } \overline { { \pi _ { \alpha } ( D ) } } .
+$$
+
+Let x be the point $( x _ { \alpha } ) _ { \alpha \in J }$ of X.We shall show that $\mathbf { x } \in \bar { D }$ for every $D \in { \mathcal { D } }$ ; then our proof will be finished.
+
+First we show that if $\pi _ { \beta } ^ { - 1 } ( U _ { \beta } )$ is any subbasis element (for the product topology on $\pmb { \chi } )$ containing x,then $\pi _ { \beta } ^ { - 1 } ( U _ { \beta } )$ intersects every element of $\pmb { \mathcal { D } }$ The set $U _ { \beta }$ 1s a neighborhood of $x _ { \beta }$ in $\scriptstyle \pmb { X _ { \pmb { \beta } } }$ Since $x _ { \beta } \in { \overline { { \pi _ { \beta } ( D ) } } }$ by definition, $U _ { \beta }$ intersects $\pi _ { \beta } ( D )$ in some point $\pi _ { \beta } ( \mathbf { y } )$ ,where $\pmb { y } \in D$ Then it follows that $\mathbf { y } \in \pi _ { B } ^ { - 1 } ( U _ { \beta } ) \cap D$
+
+lt follows from (b) of Lemma 37.2 that every subbasis element containing x belongs to $\pmb { \mathcal { D } }$ . And then it follows from (a) of the same lemma that every basis element containing x belongs to $\mathcal { D }$ Since D has the finite intersection property,this means that every basis element containing x intersects every element of $\pmb { \mathcal { D } }$ ; hence $\mathbf { x } \in \bar { D }$ for every $\pmb { D } \in \mathcal { D }$ as desired. ■
+
+## Exercises
+
+1.Let X be a space.Let D be a collection of subsets of X that is maximal with respect to the finite intersection property
+
+(a) Show that $\pmb { x } \in \bar { D }$ for every $\smash { D \in \mathcal { D } }$ if and only if every neighborhood of x belongs to D.Which implication uses maximality of D?
+
+(b) Let $\pmb { D } \in \mathcal { D }$ . Show that if $A \supset D$ , then $\pmb { A } \in \mathcal { D }$
+
+(c） Show that if X satisfies the $\pmb { T } _ { 1 }$ axiom,there is at most one point belonging to $\cap _ { D \in \mathcal { D } } \bar { D }$
+
+2. A collection A of subsets of X has the countable intersection property if every countable intersecuon of elements of A is nonempty. Show that X is a Lindelof space if and only if for every collection A of subsets of X having the countable intersection property,
+
+$$
+\bigcap _ { A \in \mathcal { A } } \bar { A }
+$$
+
+is nonempty.
+
+3.Consider the three statements:
+
+(i)If X is a set and A is a collection of subsets of X having the countable intersection property, then there is a collection D of subsets of X such that $\mathcal { D } \supset \mathcal { A }$ and $\mathcal { D }$ is maximal with respect to the countable intersection property
+
+(ii） Suppose $\pmb { \mathcal { D } }$ is maximal with respect to the countable intersection property Then countable intersections of elements of D are in D.Furthermore,if A is a subset of X that intersects every element of D,then A is an element of D.
+
+(iii) Products of Lindelof spaces are Lindelof.
+
+(a) Show that (i) and (ii) together imply (ii).
+
+(b） Show that (ii) holds.
+
+(c）Products of Lindelof spaces need not be Lindelof (see \$30).Therefore (i) does not hold.lf one attempts to generalize the proof of Lemma 37.l to the countable intersection property,at what point does the proof break down?
+
+4.Here is another theorem whose proof uses Zorn's lemma.Recallthat if A is a space and if $x , y \in A$ ,we say that x and y belong to the same quasicomponent of A if there is no separation $A = C \cup D$ of A into two disjoint sets open in A such that $x \in C$ and $\pmb { y } \in \pmb { D }$
+
+Theorem.Let X be a compact Hausdorff space.Then x and y belong to the same quasicomponent of X if and only if they belong to the same component of x.
+
+(a)Let A be the collection of all closed subspaces A of X such that x and y lie in the same quasicomponent of A. Let B be a subcollction of A that is simply ordered by proper inclusion. Show that the intersection of the elements of B belongs to A. {Hint: Compare Exercise ll of \$26.]
+
+(b) Show A has a minimal element D.
+
+(c） Show D is connected.
+
+\*5.Here is a proof of the Tychonoff theorem that relies on the well-ordering theorem rather than on Zorn's lemma. First, prove the following version of the tube lemma; then prove the theorem.
+
+Lemma.Let A be a collection of basis elements for the topology of the product space $X \times Y$ ，such that no finite subcollection of A covers $\textit { \textbf { X } } \times \textit { \textbf { Y } }$ If Xis compact, there is a point $x \in { \pmb X }$ such that no finite subcollection of A covers the slice $\{ x \} \times Y$
+
+Theorem.An arbitrary product of compact spaces is compact in the product topology.
+
+Proof. Let $\{ X _ { \alpha } \} _ { \alpha \in J }$ be an indexed family of compact spaces,let
+
+$$
+X = \prod _ { \alpha \in J } X _ { \alpha } .
+$$
+
+Let $\pi _ { \alpha } : X \to X _ { \alpha }$ be the projection map.Well-order J,once and for all, in such a way that J has a largest element.
+
+(a) Let $\beta \in { \mathcal { I } }$ Suppose points $p _ { i } \in X _ { i }$ are given, for all $i < \beta$ 8.For any ${ \pmb { \alpha } } < { \pmb { \beta } } .$ let $\pmb { \ Y _ { \pmb { \alpha } } }$ denote the subspace of X defined by the equation
+
+$$
+Y _ { \alpha } = \{ { \bf x } \mid \pi _ { \imath } ( { \bf x } ) = p _ { i } ~ { \mathrm { f o r } } ~ i \leq \alpha \} .
+$$
+
+Note that if $\alpha < \alpha ^ { \prime }$ then $Y _ { \alpha } \supset Y _ { \alpha ^ { \prime } }$ . Show that if A is a finite collection of
+
+basis elements for X that covers the space
+
+$$
+Z _ { \beta } = \bigcap _ { \alpha < \beta } Y _ { \alpha } = \{ \mathbf { x } \mid \pi _ { i } ( \mathbf { x } ) = p _ { i } { \mathrm { ~ f o r ~ } } i < \beta \} ,
+$$
+
+then A actually covers $\Upsilon _ { \alpha }$ for some $\alpha < \beta .$ [Hint. If $\beta$ has an immediate predecessor in J,let α be that immediate predecessor Otherwise,for each $A \in { \mathcal { A } }$ ,let $\pmb { J _ { A } }$ denote the set of those indices $i < \beta$ for which $\pi _ { \iota } ( { \boldsymbol { A } } ) \neq { \boldsymbol { X } } _ { i }$ the union of the sets $J _ { A }$ ,for $A \in { \mathcal { A } }$ ,is finite;letα be the largest element of this union.]
+
+(b) Assume A is a collection of basis elements for X such that no finite subcollection of A covers X. Show that one can choose points $p _ { 1 } \in X _ { i }$ for all $i ,$ such that for each α,the space $\pmb { \ Y _ { \alpha } }$ defined in (a) cannot be finitely covered by $\star$ When $\pmb { \alpha }$ is the largest element of J,one has a contradiction.[Hint: If α is the smallest element of J,use the preceding lemma to choose $\pmb { p _ { \alpha } }$ . If ${ \pmb p } _ { i }$ is defined for all $~ i ~ < ~ \beta$ 、note that (a) implies that the space $Z _ { \beta }$ cannot be finitely covered by A and use the Iemma to find $p _ { \beta }$ 】
+
+## \$38 The Stone-Cech Compactification
+
+We have aIready studied one way of compactifying a topological space X,the onepoint compactification (\$29); it is in some sense the minimal compactification of X. The Stone-Cech compactification of X,which we study now,is in some sense the maximal compactification of X. It was constructed by M. Stone and E.Cech,independently,in l937 It has a number of applications in modern analysis,but these lie outside the scope of this book
+
+We recall the following definition'
+
+Definition. A compactification of a space X is a compact Hausdorff space Y containing X as a subspace such that $\bar { \boldsymbol { x } } = \bar { \boldsymbol { Y } }$ .Two compactifications $\boldsymbol { \gamma } _ { \mathrm { 1 } }$ and $\pmb { \gamma _ { 2 } }$ of X are said to be equivalent if there is a homeomorphism $h : Y _ { 1 } \to Y _ { 2 }$ such that $\pmb { h } ( \pmb { x } ) = \pmb { x }$ for every ${ \pmb x } \in { \pmb X }$
+
+If X has a compactification Y,then X must be completely regular, being a subspace of the completely regular space Y. Conversely,if X is completely regular, then X has a compactification.For X can be imbedded in the compact Hausdorff space $[ 0 , 1 ] ^ { J }$ for some J,and any such imbedding gives rise to a compactificatiori of X,as the following lemma shows'
+
+Lemma 38.1. Let X be a space; suppose that h . $X  Z$ is an imbedding of X in the compact Hausdorff space Z. Then there exists a corresponding compactification Y of X; it has the property that there is an imbedding $\pmb { H } : \pmb { Y }  \pmb { Z }$ that equals h on X. The compactification Y is uniquely determined up to equivalence.
+
+We call Y the compactification induced by the imbedding h.
+
+Proof.Given h,let $\scriptstyle x _ { 0 }$ denote the subspace $h ( X )$ of $z ,$ and let $\pmb { Y } _ { 0 }$ denote its closure in Z. Then $\boldsymbol { \gamma } _ { 0 }$ is a compact Hausdorff space and $\bar { \boldsymbol { X } } _ { 0 } = \boldsymbol { Y } _ { 0 }$ ；therefore, $\boldsymbol { { Y } } _ { 0 }$ is a compactification of $\pmb { \chi } _ { 0 }$ ：
+
+We now construct a space Y containing X such that the pair $( \pmb { { X } } , \pmb { { Y } } )$ is homeomorphuc to the pair $( X _ { 0 } , Y _ { 0 } )$ .Let us choose a set A disjoint from X that is in bijective correspondence with the set $\ Y _ { 0 } \mathrm { ~ - ~ } X _ { 0 }$ under some map $k : A \to Y _ { 0 } - X _ { 0 }$ Define $Y = X \cup A$ ,and define a bijective correspondence $\pmb { H } : \pmb { Y }  \pmb { Y } _ { 0 }$ by the rule
+
+$$
+\begin{array} { r l } { H ( x ) = h ( x ) } & { { } { \mathrm { ~ f o r ~ } } x \in X , } \\ { H ( a ) = k ( a ) } & { { } { \mathrm { ~ f o r ~ } } a \in A . } \end{array}
+$$
+
+Then topologize Y by declaring U to be open in Y if and only if $H ( U )$ is open in $\pmb { \gamma _ { 0 } }$ The map H is automatically a homeomorphism;and the space X is a subspace of Y because H equals the homeomorphism h when restricted to the subspace X of Y. By expanding the range of H,we obtain the required imbedding of Y into $Z .$
+
+Now suppose $\boldsymbol { Y } _ { i }$ is a compactification of X and that $H _ { i } : Y _ { i }  Z$ is an imbedding that is an extension of h,for i = 1,2. Now $H _ { i }$ maps X onto $h ( X ) = X _ { 0 }$ Because $H _ { t }$ is continuous,it must map $\boldsymbol { Y } _ { \iota }$ into $\bar { \pmb { \chi } } _ { 0 } ;$ because $H _ { i } ( Y _ { i } )$ contains $\scriptstyle { \pmb { \chi } } _ { 0 }$ and is closed (being compact), it contains $\scriptstyle { \pmb { \chi } } _ { 0 }$ .Hence $H _ { i } ( Y _ { t } ) = \bar { X } _ { 0 }$ and $H _ { 2 } ^ { - 1 } \circ H _ { 1 }$ defines a homeomorphism of $\boldsymbol { Y } _ { 1 }$ with $\boldsymbol { \gamma } _ { 2 }$ that equals the identity on X.
+
+In general,there are many different ways of compactifying a given space X. Consider for instance the following compactifications of the open interval $\pmb { X } = ( 0 , 1 )$ ·
+
+EXAMPLE 1Take the unit circle $s ^ { 1 }$ .m $\mathbb { R } ^ { 2 }$ and let h . $( 0 , 1 )  S ^ { 1 }$ be the map
+
+$$
+h ( \iota ) = ( \cos 2 \pi \iota ) \times ( \sin 2 \pi \iota ) .
+$$
+
+The compactification induced by the imbedding h is equivalent to the one-point compactification of X
+
+EXAMPLE 2Let Ybe the space [O.I] Then Y is a compacufication of X,it is obtained by"adding one point at each end of (O,1)"
+
+EXAMPLE 3．Consider the square $\{ - 1 , 1 \} ^ { 2 }$ in $\pmb { \mathbb { R } } ^ { 2 }$ and let h $( 0 , 1 )  [ - 1 , 1 ] ^ { 2 }$ be the map
+
+$$
+h ( x ) = x \times \sin ( 1 / x ) .
+$$
+
+The space $Y _ { 0 } = { \overline { { h ( X ) } } }$ is the topologist's sine curve (see Example 7 of §24). The imbedding h gives rise to a compactification of (O.l） quite different from the other two.It is obtained by adding one point at the right-hand end of (O.l),and an entire line segment of points at the left-hand end!
+
+A basic problem that occurs in studying compactifications is the following:
+
+If Y is a compactification of X.under what conditions can a continuous real-valued function f defined on X be extended continuousty to Y?
+
+The function f will have to be bounded if it is to be extendable,since its extension will carry the compact space Y into R and will thus be bounded. But boundedness is not enough,in general. Consider the following example'
+
+EXAMPLE4 Let $\pmb { X } = ( 0 , 1 )$ Consider the one-point compactification of X given in Example  A bounded continuous function $f : ( 0 , 1 ) \to \mathbb { R }$ is extendable to this compacuficatuon if and only if the limis
+
+$$
+\operatorname* { l i m } _ { x \to 0 + } f ( x ) \quad { \mathrm { ~ a n d ~ } } \quad \operatorname* { l i m } _ { \mathrm { ~ r \to ~ l - } } f ( x )
+$$
+
+exist and are equal.
+
+For the “the two-point compactification"of X considered in Example 2,the function f is extendable if and only if both these limuts Simply exist
+
+For the compactification of Example 3,extensions exist for a still broader class of functions It is easy to see that f is extendable if both the above limits exist But the function $f ( x ) = \sin ( 1 / x )$ is also extendable to this compactification:Let Hbe the imbedding of Y in $\mathbb { R } ^ { 2 }$ that equals h on the subspace X Then the composite map
+
+$$
+Y \xrightarrow { H } \mathbb { R } \times \mathbb { R } \xrightarrow { \pi _ { 2 } } \mathbb { R }
+$$
+
+is the desired extension of f. For if $x \in X .$ then $H ( x ) = h ( x ) = x \times \sin ( 1 / x )$ ,so that $\pi _ { 2 } ( H ( x ) ) = \sin ( 1 / x )$ ,as desired
+
+There is something especially interesting about this last compactification.We constructed it by choosing an imbedding
+
+$$
+\boldsymbol { h } \mathbin { \lrcorner } ( 0 , 1 ) \longrightarrow { \mathbb { R } } ^ { 2 }
+$$
+
+whose component functions were the functions x and sin(l/x） Then we found that both the functions x and $\sin ( 1 / x )$ could be extended to the compactification This suggests that if we have a whole collection of bounded continuous functions defined on (0,l),we might use them as component functions of an imbedding of (O.1) into $\mathbb { R } ^ { J }$ for some J,and thereby obtain a compactification for which every function in the collection is extendable.
+
+This idea is the basic idea behind the Stone-Cech compactfication.It is defined as follows:
+
+Theorem 38.2. Let X be a completely regular space. There exists a compactification Y of X having the property that every bounded continuous map $f : X \to \mathbb { R }$ extends uniquely to a continuous map of Y into R.
+
+Proof. Let $\{ f _ { \alpha } \} _ { \alpha \in J }$ be the collection of al bounded continuous real-valued functions on X,indexed by some index set J For each $\alpha \in J$ ,choose a closed interval $\scriptstyle { I _ { \alpha } }$ in R containing $f _ { \alpha } ( X )$ . To be definite,choose
+
+$$
+I _ { \alpha } = \{ \operatorname* { i n f } f _ { \alpha } ( X ) , \operatorname* { s u p } f _ { \alpha } ( X ) \} .
+$$
+
+Then define h . $\begin{array} { r } { X  \prod _ { \alpha \in J } I _ { \alpha } } \end{array}$ by the rule
+
+$$
+h ( x ) = ( f _ { \alpha } ( x ) ) _ { \alpha \epsilon } \ j .
+$$
+
+By the Tychonoff theorem, $\prod I _ { \alpha }$ is compact Because X is completely regular, the collection $\{ f _ { \alpha } \}$ separates points from closed sets in X. Therefore,by Theorem 34.2, the map h is an imbedding.
+
+Let Y be the compactification of X induced by the imbedding h. Then there is animbedding $\pmb { H } : \pmb { Y }  \prod \pmb { I _ { \alpha } }$ that equals h when restricted to the subspace X of Y. Given a bounded continuous real-valued function f on $\pmb { \chi } .$ ，we show it extends to Y. The function f belongs to the collection $\{ f _ { \alpha } \} _ { \alpha \in J }$ ,so it equals $f _ { \pmb { \beta } }$ for some index $\pmb { \beta }$ Let $\pi _ { \beta } \mathrm { ~ . ~ } \prod I _ { \alpha }  I _ { \beta }$ be the projection mapping Then the continuous map $\pi _ { \beta }$ oH: $Y  I _ { \beta }$ is the desired extension of f.For if $x \in { \pmb X }$ ,we have
+
+$$
+\pi _ { \beta } ( H ( \boldsymbol { x } ) ) = \pi _ { \beta } ( h ( \boldsymbol { x } ) ) = \pi _ { \beta } ( ( f _ { \alpha } ( \boldsymbol { x } ) ) _ { \alpha \in J } ) = f _ { \beta } ( \boldsymbol { x } ) .
+$$
+
+Uniqueness of the extension is aconsequence of the following lemma.
+
+Lemma 38.3.Let $\textbf { \em A } \subset \textbf { \em X }$ let $f : A  z$ be a continuous map of A into the Hausdorff space Z．There is at most one extension of f to a continuous function $g : { \bar { A } }  Z .$
+
+Proof.This lemma was given as an exercise in \$18;we give a proof here. Suppose that $g , g ^ { \prime } \cdot \bar { A }  X$ are two different extensions of f,choose x so that $g ( x ) \neq g ^ { \prime } ( x )$ Let U and $\pmb { U } ^ { \prime }$ be disjoint neighborhoods of $g ( { \pmb x } )$ and $g ^ { \prime } ( \pmb { x } )$ ,respectively.Choose a neighborhood V of x so that $g ( V ) \subset U$ and $g ^ { \prime } ( V ) \subset U ^ { \prime }$ Now V intersects A in some point y; then $g ( y ) \in U$ and $g ^ { \prime } ( y ) \in U ^ { \prime }$ .But since $y \in A$ ,wehave $g ( y ) = f ( y )$ and $g ^ { \prime } ( y ) = f ( y )$ .This contradicts the fact that U and ${ \pmb U } ^ { \prime }$ are disjoint. □
+
+Theorem 38.4.Let X be a completely regular space; let Y be a compactification of X sausfying the extension property of Theorem 38.2 Given any continuous map $f \cdot X \to C$ of X into a compact Hausdorff space C,the map f extends uniquely to a continuous map $g \cdot Y \to C$
+
+Proof.Note that C is completely regular,so that it can be imbedded in $\{ 0 , 1 \} ^ { J }$ for some J So we may as well assume that $C \subset \{ 0 , 1 \} ^ { J }$ .Then each component function $f _ { \alpha }$ of the map f is a bounded continuous real-valued function on X,by hypothesis, $f _ { \alpha }$ can be extended to a continuous map ${ \pmb g } _ { \pmb { \alpha } }$ of Y into R. Define $g : Y  \mathbb { R } ^ { J }$ by setting $g ( y ) = ( g _ { \alpha } ( y ) ) _ { \alpha \epsilon { } J }$ ;then $\pmb { \mathscr { z } }$ is continuous because $\mathbb { R } ^ { J }$ has the product topology. Now in fact g maps Y into the subspace C of $\mathbb { R } ^ { J }$ .For continuity of g implies that
+
+$$
+g ( Y ) = g ( \bar { X } ) \subset \overline { { { g ( X ) } } } = \overline { { { f ( X ) } } } \subset \bar { C } = C .
+$$
+
+Thus g is the desired extension of f
+
+Theorem 38.5. Let X be a completely regular space. $I f Y _ { \parallel }$ and $\boldsymbol { Y } _ { 2 }$ are two compactifications of X satisfying the extension property of Theorem 38.2,then $\gamma _ { 1 }$ and $\boldsymbol { Y } _ { 2 }$ are equivalent.
+
+Proof. Consider the inclusion mapping $j _ { 2 } : X \to Y _ { 2 }$ .It is a continuous map of X into the compact Hausdorff space $\boldsymbol { \gamma } _ { 2 }$ .Because $\gamma _ { \parallel }$ has the extension property,we may, by the preceding theorem, extend $j _ { 2 }$ to a continuous map $f _ { 2 } : Y _ { 1 }  Y _ { 2 }$ Similarly, we may extend the inclusion map $j _ { 1 } : X \to Y _ { 1 }$ to a continuous map $f _ { 1 } : Y _ { 2 } \to Y _ { 1 }$ (because $\boldsymbol { Y } _ { 2 }$ has the extension property and $\boldsymbol { \gamma } _ { 1 }$ is compact Hausdorff.
+
+$$
+\begin{array} { c c } { { X } } & { { \subset \quad Y _ { 1 } } } \\ { { j _ { 2 } \left\downarrow \begin{array} { c c } { { \subset \quad Y _ { 1 } } } & { { \qquad X } } \\ { { f _ { 2 } } } & { { \qquad 1 } } \end{array} \right\downarrow \begin{array} { c c } { { \subset \quad Y _ { 2 } } } \\ { { f _ { 1 } } } \\ { { Y _ { 1 } } } \end{array} } } \end{array}
+$$
+
+The composite $f _ { 1 } \circ f _ { 2 } : Y _ { 1 }  Y _ { 1 }$ has the property that for every $x \ \in \ X$ ,one has $f _ { 1 } ( f _ { 2 } ( x ) ) \ = \ x$ Therefore, $f _ { 1 } \circ f _ { 2 }$ is a continuous extension of the identity map $i _ { X } : X \to X$ ．But the identity map of $\gamma _ { 1 }$ is also a continuous extension of $i _ { X }$ By uniqueness of extensions (Lemma 38.3), $f _ { 1 } \circ f _ { 2 }$ must equal the identity map of $\gamma _ { 1 }$ Similarly, $f _ { 2 } \circ f _ { 1 }$ must equal the identity map of $\boldsymbol { Y } _ { 2 }$ Thus $f _ { \mathrm { l } }$ and $f _ { 2 }$ are homeomorphisms.
+
+Definition. For each completely regular space X,let us choose,once and for all, a compactification of X satsfying the extension condition of Theorem 38.2. We will denote this compactification of X by $\beta ( X )$ and callithe Stone-Cech compactification of X.It is characterized by the fact that any continuous map f . $X  C$ of X into a compact Hausdorff space C extends uniquely to a continuous map g $\beta ( X )  C$
+
+## Exercises
+
+1. Venfy the statements made in Example 4.
+
+2.Show that the bounded continuous function $\begin{array} { r l } { g } & { { } ( 0 , \lfloor ) \to \mathbb { R } } \end{array}$ defined by $g ( x ) =$ cos $( 1 / x )$ cannot be extended to the compactification of Example 3.Define an imbedding $h : ( 0 , 1 )  [ 0 , 1 ] ^ { 3 }$ such that the functions x,sin(l/x),and cos(1/x) are all extendable to the compactification induced by h.
+
+3. Under what conditions does a metrizable space have a metrizable compactification？
+
+4.Let Y be an arbitrary compactification of X; let $\beta ( X )$ be the Stone-Cech compactification. Show there is a continuous surjective closed map $g : \beta ( X ) \to Y$ that equals the identity on X
+
+[This exercise makes precise what we mean by saying that $\beta ( X )$ is the"maximal' compactification of X.It shows that every compactification of X is equivalent to a quotient space of $\beta ( X ) . ]$
+
+5.(a） Show that every continuous real-valued function defined on ${ \pmb S } _ { \Omega }$ is “eventually constant."[Hint·First prove that for each ∈,there is an element α of ${ \pmb S } _ { \Omega }$ such that $| f ( \beta ) - f ( \alpha ) | < \epsilon$ for all $\beta > \alpha$ Then let $\epsilon = 1 / n$ for $\pmb { n } \in \mathbb { Z } _ { + }$ and consider the corresponding points $\alpha _ { n } . ]$
+
+(b） Show that the one-point compactification of $s _ { \Omega }$ and the $\sin e \cdot \tilde { C }$ ech compactification are equivalent.
+
+(c） Conclude that every compactification of $s _ { \Omega }$ is equivalent to the one-point compactification.
+
+6.Let X be completely regular. Show that X is connected if and only if $\beta ( X )$ is connected.[Hint:If $\pmb { { \cal X } } = \pmb { { \cal A } } \cup \pmb { { \cal B } }$ is a separation of X,let $f ( x ) = 0$ for $x \in A$ and $f ( x ) = 1 \mathrm { f o r } x \in B . \mathrm { ] }$
+
+7. Let X be a discrete space; consider the space $\beta ( X )$
+
+(a） Show that if $A \subset X$ ,then A and $\overline { { { X - A } } }$ are disjoint, where the closures are taken in $\beta ( X )$
+
+(b） Show that if U is open in $\beta ( X )$ , then $\bar { U }$ is open in $\beta ( X )$
+
+(c） Show that $\beta ( X )$ is totally disconnected.
+
+8. Show that $\pmb { \beta } ( \mathbb { Z } _ { + } )$ has cardinalityat least as great as $I ^ { I }$ ,where $I = [ 0 , 1 ]$ [Hint: The space $I ^ { I }$ has a countable dense subset.]
+
+9.(a)If X is normal and y is a point of $\beta ( X ) - X$ ,show that y is not the limit of a sequence of points of X.
+
+(b） Show that if X is completely regular and noncompact,then $\beta ( X )$ is not metrzable.
+
+10.We have constructed a correspondence $X \to \beta ( X )$ that assigns,to each completely regular space, its Stone-Cech compactification. Now let us assign,to each continuous map $f : X \to Y$ of completely regular spaces,the unique continuous map $\beta ( f ) : \beta ( X ) \to \beta ( Y )$ that extends the map $i \circ f$ where $i : Y \to \beta ( Y )$ is the inclusion map.Verify the following:
+
+(i) If $1 _ { X } : X \to X$ is the identity map of X,then $\pmb { \beta } ( \mathbf { l } _ { X } )$ is the identity map of $\beta ( X )$
+
+(ii)If $f : X \to Y$ and $g : Y \to Z$ ,then $\beta ( g \circ f ) = \beta ( g ) \circ \beta ( f )$
+
+These properties tellus that the correspondence we have constructed is what is called a functor; it is a functor from the "category"of completely regular spaces and continuous maps of such spaces,to the“category"of compact Hausdorff spaces and continuous maps of such spaces. You will see these properties again in Part II of the book; they are fundamental in algebra and inalgebraic topology.
