@@ -11,56 +11,44 @@
 \newfontfamily{\Trajan}{TrajanPro-Regular.otf}
 
 \newcommand{\reversedpattern}{
-    \begin{tikzpicture}[x=0.5\patternwidth/6, y=0.5\patternwidth/6]
-        
-        % 添加径向渐变光源效果 - 放在最底层
-        \shade[inner color=white, outer color=covercolor] (0,0) circle (5.8);
-
-        % 外框正方形
-        \draw[linecolor, line width=3pt] (-6,-6) rectangle (6,6);
-        
-        % 定义正方形大小
-        \def\sqsize{4.0}
-        
-        % 完全逆转的绘制顺序
-        \foreach \angle in {315, 270, 225, 180, 135, 90, 45, 0} {
-            \begin{scope}[rotate=\angle]
-                % 使用底色填充遮盖前面的正方形
-                \fill[covercolor] (0,0) -- (\sqsize,0) -- (\sqsize,\sqsize) -- (0,\sqsize) -- cycle;
-                
-                % 绘制边框
-                \draw[linecolor, line width=2.2pt] (0,0) -- (\sqsize,0) -- (\sqsize,\sqsize) -- (0,\sqsize) -- cycle;
-            \end{scope}
+    \begin{tikzpicture}[x=0.5\patternwidth/6, y=0.5\patternwidth/6,
+        armfill/.style={fill=covercolor,draw=linecolor,line width=2.2pt},
+        armline/.style={draw=linecolor,line width=2.2pt},
+        arm/.pic={
+            \draw[##1]
+                (0,0) |- (4,4)
+                -- ++(0,-\fpeval{4*(2-sqrt(2))})
+                -- (45:4) -- cycle;
         }
-        
-        % 添加两条黄色线段
-        % 第一条线段：从中心点出发，长度为4，与x轴夹角为45度
-        \draw[linecolor, line width=2pt] (0,0) -- (45:4);
-        
-        % 用背景色覆盖从交点到(4,0)之间的线段，加宽了线宽
-        % 交点坐标计算：(4, 1.656)
-        \draw[covercolor, line width=3.5pt] (4,1.656) -- (4,0);
-        
-        % 第二条线段：从第一条线段的终点出发，与水平线夹角为-45度，长度为4
-        \draw[linecolor, line width=2pt] (45:4) -- ++(-45:4);
-        
-        % 添加从中心到点(4,0)的黄色线段
-        \draw[linecolor, line width=2pt] (0,0) -- (4,0);
-        
-        % 添加从(4,0)到(4,-2)的黄色线段
-        \draw[linecolor, line width=2pt] (4,0.03) -- (4,-2);
+    ]
 
-        % 使用函数控制亮度的连续光照效果
+        % ═══ 底层：光晕 ═══
+        \draw[line width=3pt,linecolor,fill=covercolor] (-6,-6) rectangle (6,6);
+        \foreach \i in {5.8, 5.75, ..., 3.9} {
+            \def\tmp{\fpeval{100*(\i/5.8)}}
+            \fill[covercolor!\tmp!white] circle[radius=\i];
+        }
+
+        % ═══ 8臂填充 ═══
+        \foreach \angle in {0,45,...,315} {
+            \pic[rotate=\angle] {arm={armfill}};
+        }
+
+        % ═══ 顶层：指数衰减高光 ═══
         \begin{scope}
-            \clip (-6,-6) rectangle (6,6); % 限制效果在边界内
-            
-            % 使用函数定义连续的光照强度
-            \foreach \i in {0,1,...,50} { % 减少迭代次数以提高性能
-                \pgfmathsetmacro{\radius}{\i/50*5.0} % 半径从0到5.0
-                \pgfmathsetmacro{\opacity}{0.15 * exp(-\radius/1.2)} % 指数衰减函数
+            \clip (-6,-6) rectangle (6,6);
+            \foreach \i in {0,1,...,50} {
+                \pgfmathsetmacro{\radius}{\i/50*5.0}
+                \pgfmathsetmacro{\opacity}{0.15 * exp(-\radius/1.2)}
                 \fill[white, opacity=\opacity] (0,0) circle (\radius);
             }
         \end{scope}
+
+        % ═══ 8臂边框 ═══
+        \foreach \angle in {0,45,...,315} {
+            \pic[rotate=\angle] {arm={armline}};
+        }
+
     \end{tikzpicture}
 }
 
