@@ -1,0 +1,675 @@
+## Index
+
+## A
+
+Å (closure), 95   
+Absolute retract, 223 vs. universal extension property, 223, 224   
+Accumulation point of a net, 188   
+Action of a group on a space, 199   
+Adjoining a 2-cell, 441 effect on fundamental group, 439   
+Adjunction space, 224   
+Affinely independent, 309   
+Alexander horned sphere, 393   
+Algebraic number, 51   
+α, 331 independence of path, 335 is isomorphism, 332   
+Antipodal map, 372   
+Antipode, 356   
+Antipode-preserving, 356   
+Arc, 308, 379 does not separate S2, 389   
+Archimedean orderng, 33   
+Arzela's theorem, 280, 293   
+Ascoli's theorem, 278, 290   
+Axiom of choice, 59 finite, 61 vs. nonemptiness of product, 118 vs. well-orderng theorem, 73 B   
+Baire category theorem, 296 special case, 178   
+Bare space, 295 compact Hausdorff space, 296 complete metric space, 296 fine topology on C(X, Y), 300 locally compact Hausdorff space, 299   
+Baire space (cont.) open subspace of Baire space, 297 op gies, 300   
+Ball, unit, 135, 156 (see also B")   
+Barber of Seville paradox, 47   
+Base point, 331   
+Base point choice: effect on h., 335 effect on π1, 332   
+Basis: for a free abelian group, 411 for a topology, 78, 80   
+Bd A, 102   
+β(X) (see Stone-ech compactification)   
+Betti number, 424   
+Bicompactness, 178   
+Bijective function, 18   
+Binary operation, 30   
+Bing metrization theorem, 252   
+Bisection theorem, 358, 359   
+B", 156 compactness, 174 fundamental group, 331 path connectedness, 156   
+Borsuk lemma, 382, 385   
+Borsuk-Ulam theorem, 358, 359   
+Boundary: of a set, 102 of a surface with boundary, 476   
+Bounded above, 27   
+Bounded below, 27   
+Bounded function, 267   
+Bounded metric, 121, 129   
+Bounded set, 121   
+Box topology, 114 basis for, 115, 116 Hausdorff condition, 116 subspace, 116 vs. fine topology, 290 vs. product topology, 115 vs. uniform topology, 124, 289, 290   
+Brouwer fixed-point theorem, 351, 353
+
+B2, 135 (see also Bn) B(x, ), 119
+
+## C
+
+Cantor set, 178   
+Cardinality: comparability, 68 of a finite set, 39, 42 greater, 62 same, 51   
+Cartesian product: countably infinite, 38 finite, 13, 37 general, 113   
+Cauchy integral formula, 405   
+Cauchy sequence, 264   
+C(E, p, B), 487 (see also Group of covering transformations)   
+Choice axiom (see Axiom of choice)   
+Choice function, 59   
+Circle, unit (see S')   
+Classification: of covering spaces, 482 of covering transformations, 488 of surfaces, 469   
+Clock wise loop, 405   
+Closed edge path, 566   
+Closed graph theorem, 171   
+Closed interval, 84   
+Closed map, 137   
+Closed ray, 86   
+Closed refinement, 245   
+Closed topologist's sine curve, 381 separates S2, 381, 393   
+Closed set, 93 in subspace, 94 vs. limit points, 98   
+Closure, 95 in a cartesian product, 101, 116 of a connected subspace, 150 in a subspace, 95 of a union, 101, 245 via basis elements, 96 via nets, 187   
+Closure (cont.) via sequences, 130, 190 via limit points, 97   
+Coarser topology, 77   
+Cofinal, 187   
+Coherent topology, 224, 435   
+Collection, 12   
+Commutator, 422   
+Commutator subgroup, 422   
+Compact, 164 (see also Compact Hausdorff space, Compactness)   
+Compact convergence topology 283 convergent sequences in, 283 independence of metric, 286 vs. compact-open topology, 285 vs. pointwise convergence topology, 285 vs. uniform topology, 285   
+Compact Hausdorf space: is Baire space, 296 components equal quasicomponents, 236 metrizability, 218 normality, 202 paracompactness, 252   
+Compactification, 185, 237 induced by an imbedding, 238 one-point, 185 of (0, 1), 238   
+Compactly generated space, 283   
+Compactness, 164 (see also Compact Hausdorff space) of closed intervals in R, 173 closed set criterion, 169 of continuous image, 166 of countable products, 280 in C(X, R"), 278, 279 in C(X, Y), 290, 293 in finite complement topology, 166 of finite products, 167 in Hausdorff metric, 281 and least upper bound property, 172 in order topology, 172 and perfect maps, 172 of product space, 234, 236 in R and R", 173 of subspace, 164 via nets, 188 vs. completeness, 276 vs. limit point compactness, 179 vs. sequential compactness, 179   
+Compact-open topology, 285 continuity of evaluation map, 286 vs. compact convergence topology, 285   
+Comparability: of cardinalities, 68 of topologies, 77 of well-ordered sets, 73   
+Comparison test for infinite senes, 135   
+Complement, 10   
+Complete graph, 394 on five vertices, 308, 397   
+Completely normal space, 205   
+Completely regular space, 211 (see also Complete regularity)   
+Complete metric space, 264 (see also Completeness)   
+Completeness: and Baire condition, 296 of B(X, Y) in uniform metric, 267 of closed subspace, 264 of C(X, Y) in uniform metric, 267 of C(X, Y) in sup metric, 268 of $\ell ^ { 2 } ,$ 271 of R", 265 of R, 265 of $\mathbb { R } ^ { J }$ in uniform metric, 267 of $\gamma ^ { x }$ in compact-open topology, 289 of $\gamma ^ { J }$ in uniform metric, 267 vs. compactness, 276   
+Complete regularity, 211 of locally compact Hausdorff space, 213 of product space, 211 of $\mathbf { \bar { R } ^ { J } }$ in box topology, 213   
+Complete regularity (cont.) of R2, 212 of S × n, 212 of subspace, 211 of topological group, 213 vs. normality, 211, 212 vs. regularity, 214   
+Complete set of relations, 425   
+Completion, 269 uniqueness, 271   
+Component, 159 of R in box topology, 162 of R in uniform topology, 162 vs. path component, 161 vs. quasicomponent, 163, 236   
+Composite: of functions, 17 of continuous functions, 107 of covering maps, 341, 485, 487 of quotient maps, 141   
+Conclusion, 7   
+Cone, 499   
+Conjugacy class, 481   
+Conjugate elements, 419   
+Conjugate subgroups, 481   
+Connected component, 159   
+Connectedness, 148 in box topology, 151 of closure, 150 of continuous image, 150 in finite complement topology, 152 of finite products, 150 in a linear continuum, 153 of long line, 159 of ordered square, 156 of a product space, 152 of Rk, 177 of R, 151 of subspace, 148 of topologist's sine curve, 156 vs. path connectedness, 156   
+Connected sum: of projective planes, 452 of tori, 451   
+Connected space, 148 (see also Connectedness)   
+Constant path, 327   
+Contains, 4   
+Continuity: of algebraic operations in R, 131, 135 basis criterion, 103 and change of range, 108 and closedness of graph, 171 closed set critenon, 104 closure criterion, 104 of composites, 107 of constant function, 107 €-δ formulation, 129 of inclusion, 107 local formulation, 108 of maps from quotient spaces, 142 of maps into products, 110, 117 of metric, 126 of min{f,g}, 112 at a point, 104 of products of maps, 112 of restriction, 108 subbasis criterion, 103 of uniform limit, 132 in variables separately, 112 via nets, 188 via sequences, 130, 190   
+Continuous function, 102 (see also Continuity)   
+Continuous image: of a compact space, 166 of a connected space, 150 of a Lindelöf space, 194 of a space with a countable dense subset, 194   
+Continuum hypothesis 62, 205   
+Contractible space, 330 homotopy type, 366   
+Contraction, 182, 270 and fixed points, 182 vs. shrinking map, 182   
+Contrapositive, 8   
+Convergent net, 187   
+Convergent sequence, 98 in compact convergence topology, 283 in Hausdorff space, 99 in point-open topology, 282 in a product space, 118, 265   
+Converges uniformly, 131   
+Converse, 9   
+Convex set: in an ordered set, 90, 153 in R", 325   
+Coordinate: of J-tuple, 113 of m-tuple, 37 of ω-tuple, 38   
+Coordinate function, 110   
+Coset, 146, 330   
+Countable basis, 190 (see also Secondcountability)   
+Countable basis at a point, 130, 190 (see also First-countability   
+Countable compactness, 181   
+Countable dense subset, 192 effect of continuous function, 194 in R', 195 in RJ, 195 in Re, 192 in subspace, 194   
+Countable intersection property, 235   
+Countable set, 45 (see also Countability)   
+Countability, 45 of algebraic numbers, 51 of countable unions, 48 of finite products, 49 of rationals, 48 of subsets, 48 via injective and surjective maps, 45 of Z, 44 of Z+× Z+, 45, 48   
+Countably infinite, 44   
+Countably locally discrete, 252   
+Countably locally finite, 245   
+Counterclockwise loop, 404   
+Counterimage, 19   
+Covering, 164 of subspace, 164   
+Covering dimension, 305   
+Covering map, 336 composite, 341, 485, 487 is local homeomorphism, 338 is open, 336 products of, 339 restrictions, 338, 484   
+Covering space, 336 classification, 482 equivalence, 478 existence, 495 of figure eight, 340, 374, 375, 492, 493 k-fold, 341 of linear graph, 505 of P2, 372 regular, 489 of R{2-0, 340 of S', 337, 338, 482 topological properties, 341, 500 of torus, 339, 483 universal, 484   
+Covering transformation, 487   
+Cube in R", 314   
+Curve, 225 simple closed, 379   
+Curved triangle, 471   
+Cutting a region apart, 458   
+CW complex, 445   
+Cyclic group, 346
+
+## D
+
+d, 121   
+Decomposition space, 139   
+Deformation retract, 361 fundamental group of, 361   
+Deformation retraction, 361 vs. homotopy equivalence, 365, 366   
+Degree of a map, 367   
+DeMorgan's laws, 11   
+Dense subset, 191   
+Diagonal, 101   
+Diameter of a set, 121   
+Dictionary order, 26   
+Difference of two sets, 10   
+Dimension, topological, 305 (see also Topological dimension)   
+Directed set, 187, 188   
+Direct sum, 408, 409 existence, 409 extension condition, 408, 410 unuqueness, 410   
+Discrete topology, 77 metric for, 120   
+Disjoint sets, 6   
+Distance, 119   
+Distance from x to A, 175   
+Distributive laws for  and ∩, 11   
+Domain, 16   
+Double torus, 374, 452 fundamental group, 374   
+Doubly punctured plane, 362   
+Dunce cap, 443 fundamental group, 444   
+d(x, A), 175
+
+## E
+
+Edge: of curved triangle, 471 of a linear graph, 308, 394, 502 of a polygonal region, 447   
+Edge path, 506 reduced, 507   
+Element of a set, 4   
+Elementary divisors, 424   
+Elementary operations on schemes, 460   
+Empty interior, 295   
+Empty set, 6   
+End points of arc, 308, 378   
+Epimorphism, 330 -ball, 119 €-neighborhood of a set, 177   
+Equality symbol, 4   
+Equicontinuity, 276 vs. compactness, 278, 279 vs. total boundedness, 277   
+Equivalence class, 22   
+Equivalence of compactifications, 237   
+Equivalence of covering maps, 478 existence, 480, 482   
+Equivalence of labelling schemes, 461   
+Equivalence relation, 22   
+Euclidean metrc, 122, 128   
+Euclidean space, 38   
+Euler number, 506, 514, 515   
+Evaluation map, 271, 286   
+Evenly covered, 336   
+Eventually zero, 51   
+ex (constant path), 327   
+Expansion lemma, 260   
+Extension condition: for direct sums, 408, 410 for free abelian groups, 411 for free groups, 421 for free products, 414, 418, 419   
+External direct sum, 409   
+External free product, 415   
+Extreme value theorem, 174
+
+## F
+
+[f], 324   
+Family of sets, 36   
+f \* g, 326   
+Fibonacci numbers, 56   
+Field, 31   
+Figure-eight space, 340, 362 covering space, 340, 374, 375, 492, 493 fundamental group, 373   
+Final point: of oriented line segment, 447, 506 of path, 323   
+Finer topology, 77 basis criterion, 81   
+Fine topology, 289 is Baire, 300   
+Finite axiom of choice, 61   
+Finite complement topology, 77 compactness, 166 connectedness, 152   
+Finite dimensional, 305   
+Finite intersection property, 169   
+Fintely generated group, 421   
+Finitely presented group, 425 as fundamental group, 445   
+Finiteness: of cartesian products, 43 of subsets, 43 of unions, 43 injective and surjective maps, 43   
+Finite presentation, 425   
+Finite set, 39   
+First category set, 295   
+First coordinate, 13   
+First-countability, 131, 190 implies compactly generated, 283 of metric space, 131 of product, 191 of subspace, 191 of Re, 192   
+First-countable space (see First-countability)   
+First homology group, 455 of m-fold projective plane, 456 of n-fold torus, 456   
+First homotopy group (see Fundamental group)   
+Fixed point, 158, 182   
+Fixed-point-free action, 493   
+Fixed point theorem: for Bn", 353 for B2, 351 for a contraction, 182, 270 for retract of B², 353 for a shrinking map, 182 for [0, 1], 158   
+Free abelian group, 411 extension condition, 411 rank, 411 subgroup is free abelian, 412   
+Free generators for a group, 421   
+Free group, 421 extension condition, 421 on a set, 422 subgroup is free, 514   
+Free homotopy of loops, 403   
+Free product, 413 existence, 415 extension condition, 414, 418, 419 extemal, 415 uniqueness, 418   
+Frobenius theorem, 351   
+F set, 252   
+Function, 16   
+Functor, 242   
+Functorial properties of h., 334   
+Fundamental group, 331 of dunce cap, 444 of deformation retract, 361 of double torus, 374, 452 of figure eight, 362, 373, 434 of infinite earring, 500 of linear graph, 511 of m-fold projective plane, 453 of n-fold torus, 452 of a product, 371 of P2, 373 of R" - 0, 360 of S1, 345 of Sn, 369 of theta space, 362, 432 of torus, 371, 442 of wedge of circles, 434, 436 of wedge of spaces, 438 when abelian, 335 when countable, 499, 500 when finitely generated, 500 when uncountable, 500   
+Fundamental theorem of algebra, 354
+
+G Gs set, 194, 249 Generalized continuum hypothesis, 62 General lifting lemma, 478
+
+General linear group, 146   
+General nonseparation theorem, 390   
+General position, 308, 310   
+General separation theorem, 380, 392   
+Generated: by elements, 411, 421. by subgroups, 407, 412   
+Generator of cyclic group, 346   
+Geometrically independent, 309   
+[G, G], 422   
+G/H, 146, 331 regularity, 146 as topological group, 146   
+Graph of a function, 171   
+Greater cardinality, 62   
+Greatest lower bound, 27 property, 27   
+Group of covering transformations, 487   
+Groupoid properties 326
+
+## H
+
+h., 333 dependence on base point, 335 functorial properties, 334   
+Hahn-Mazurkiewicz theorem, 275   
+Half-open interval, 84   
+Ham sandwich theorem, 359   
+Hausdorff condition, 98 for box topology, 116 and closedness of diagonal, 100 and convergent sequences, 99 for manifold, 227 for metric space, 129 for orbit space, 199 for order topology, 100 and perfect maps, 199 for product space, 100, 116, 196 for quotient space, 142 for subspace, 100, 196 for topological group, 146 and uniqueness of extensions, 112, 240 vs. regularity, 195, 197
+
+vs. T axiom, 99 Hausdorff maximum principle, 69 Hausdorff metric, 281 Hausdorff space, 98 (see also Hausdorff condition) Have the same cardinality, 51 Hilbert cube, 128 Homeomorphism, 105 vs. continuous bijective map, 106, 167 Homogeneous space, 146 Homology group, 455 Homomorphism, 330 induced by a map, 333 (see also h\*) induced by a path, 331 (see also ) Homotopic maps, 323 Homotopy, 323 effect on h., 360, 363, 364 as path in function space, 288 straight-line, 325 Homotopy equivalence, 363 induces isomorphism of π1, 364 vs. deformation retraction, 365, 366 Homotopy extension lemma, 381 Homotopy inverse, 363 Homotopy type, 363 of contractible space, 366 H1(X) (see First homology group) Hypothesis, 7
+
+I   
+2 (see Ordered square)   
+Identification space, 139   
+Identity function, 21   
+"If . .. then," meaning of, 7   
+Image, 16, 19   
+Imbedding, 105 isometric, 133   
+Imbedding theorem: for a compact manifold, 226, 314 for a completely regular space, 217 for a linear graph, 308 for a manifold, 316 for a space of dimension m, 311   
+Immediate predecessor, 25   
+Immediate successor, 25   
+Inclusion, 4   
+Indexed family of sets, 36   
+Indexing function, 36   
+Index set, 36   
+Index of a subgroup, 514   
+Indiscrete topology, 77   
+Induction principle, 32 strong, 33 transfinite, 67   
+Inductive definition, 47 (see also Recursive definition)   
+Inductive dimension, 315   
+Inductive set, 32, 67   
+Inf A, 27   
+Infimum, 27   
+Infinite broom, 162   
+Infinite earring, 436 fundamental group, 500 no universal covering, 487   
+Infinite sequence, 38   
+Infinite series, 135   
+Infinite set, 44 via injective and bijective functions, 57   
+Initial point: of an oriented line segment, 447, 506 of a path, 323   
+Injective function, 18   
+Int A, 95   
+Integers, 32   
+Interior point: of an arc, 379 of a set, 95   
+Intermediate-value theorem, 147, 154   
+Intersection, 6, 12, 36   
+Interval, 25, 84   
+Intervals in R: compactness, 173 connectedness, 154 topological dimension, 305   
+Invariance of domain, 383, 385
+
+Inverse function, 18   
+Inverse image, 19   
+Isolated point, 176   
+Isometric imbedding, 133   
+in complete metric space, 269, 271   
+Isometry, 181   
+Isomorphism, 105, 330
+
+## J
+
+Jordan curve theorem, 390   
+Jordan separation theorem, 379   
+J-tuple, 113
+
+## K
+
+Kernel of homomorphism, 330   
+k-fold covering, 341   
+Klein bottle, 454   
+-plane, 310   
+K -topology on R, 82 (see also Rk)   
+Kuratowski 14-set problem, 102   
+Kuratowski lemma, 72
+
+## L
+
+Labelling, 447   
+Labelling scheme, 449 (see also Scheme)   
+Labels, 447   
+Larger topology, 77   
+Largest element, 27   
+Least normal subgroup, 419 generators, 420   
+Lebesgue number, 175   
+Lebesgue number lemma, 175   
+Least upper bound, 27   
+Least upper bound property, 27 and compactness, 172, 177 and local compactness, 183 for R, 31 for well-ordered sets, 66 vs. greatest lower bound property, 29   
+Left coset, 146, 330   
+Left inverse, 21   
+Length of a word, 412   
+Lens space, 494   
+Lifting, 342   
+Lifting correspondence, 345   
+Lifting lemma: general, 478 for path homotopies, 343 for paths, 342   
+Limit point, 97 vs. Ti axiom, 99   
+Limit point compactness, 178 vs. compactness, 179 vs. countable compactness, 181   
+Limit of a sequence, 100   
+Line ondition, 12 e als Regular Lindelöf space) for closed subspace, 194 effect of continuous function, 194 for products, 193 for R, 192 for R2, 193 for subspace, 193   
+Linear continuum, 31, 153 compact subspaces, 172 connected subspaces, 153 long line, 158 normality, 206 ordered square, 155   
+Linear graph, 308, 394, 502 covering space of, 505 fundamental group, 511 imbedding in R3, 308 local path connectedness, 504 local simple connectedness, 504 semilocal simple connectedness, 504 topological dimension, 308   
+Linear order, 24   
+Line with two ongins, 227   
+Little ell-two topology, 128   
+Local compactness, 182 implies compactly generated, 283 and least upper bound property, 183 for orbit space, 199 and perfect maps, 199 of products, 186
+
+of R and R" and R, 182 of subspace, 185 Local connectedness, 161 of quotient space, 163 vs. weak local connectedness, 162 Local homeomorphism, 338 Locally compact Hausdorff space: Baire condition, 299 complete regularity, 213 regularity, 205 Locally discrete, 254 Locally euclidean, 316 Locally finite collection, 244 Locally finite family, 112 vs. locally finite collection, 245 Local metrizability, 218, 261 Local path connectedness, 161 Local simple connectedness, 495 vs. simple connectedness, 499 Logical equivalence, 8 Logical quantifiers, 9 Long line, 158, 317 connectedness, 159 path connectedness, 159 Loop, 331 Lower bound, 27 Lower limit topology, 82 (see also R) {²-topology, 128
+
+M   
+Manifold 225, 316 imbedding in R", 226, 314, 316 metrizability, 227 necessity of Hausdorff condition, 227 regularity, 227 topological dimension, 314, 316   
+Mapping, 16   
+Maximal element, 70   
+Maximal tree, 509   
+Maximum principle, 69 vs. well-ordering theorem, 73 vs. Zorn's lemma, 70, 72   
+Maximum value theorem: of calculus, 147 general, 174   
+Metric, 119 bounded, 129 for discrete topology, 120 for R, 120 for R", 122 for R, 125   
+Metrically equivalent, 270   
+Metric space, 120   
+Hausdorff condition, 129 normality, 202 paracompactness, 257 subspace, 129   
+Metric topology, 119   
+Metrizable space, 120   
+Metrizability: of compact Hausdorff space, 218 of manifolds, 227 of ordered square, 194 of products, 133, 134 of regular Lindelöf space, 218 of regular second-countable space, 215 of R, 133 of Re, 194 of R", 123 of R, 125, 132 of S and S, 181 of Stone-Cech compactification, 242   
+m-fold projective plane, 452 first homology group, 456 fundamental group, 453   
+Minimal uncountable well-ordered set, 66 (see also SΩ)   
+Möbius band, 450   
+Monomorphism, 330   
+m-tuple, 37 N   
+Nagata-Smirnov metrization theorem, 250   
+Negation, 9   
+Neighborhood, 96   
+Nested sequence of sets, 170   
+Net, 187   
+n(f,a) (see Winding number)   
+n-fold torus, 451 first homology group, 456 fundamental group, 452   
+Nonseparation theorem: arc in S2, 389 general, 390 topologist's sine curve in S2, 393   
+No-retraction theorem, 348   
+Norm, 122   
+Normality, 195 of adjunction space, 224 of closed subspace, 205 of coherent topology, 224 of compact Hausdorff space, 202 of linear continuum, 206 of linear graph, 502 of metric space, 202 of orbit space, 199 of product, 198, 203 of paracompact Hausdorff space, 253 of quotient space, 199, 443 of regular Lindelöff space, 205 of regular second-countable space, 200 of Re, 198 of RJ, 203 of subspace, 203 of topological group, 207 vs. complete regularity, 211, 212 vs. regularity, 195, 198, 203 of well-ordered set, 202   
+Normalizer, 487   
+Normal space, 195 (see also Normality)   
+Normal subgroup, 330   
+Nowhere-differentiable function, 300   
+Nulhomotopy lemma, 377   
+Nulhomotopic map, 323 induces trivial homomorphism, 364
+
+## 0
+
+ω-tuple, 38   
+One-point compactification, 185 uniqueness, 183   
+One-to-one correspondence, 18   
+"Onto" function, 18   
+Open covering, 164   
+Open interval, 25, 84   
+Open map, 92, 137   
+Open ray, 86   
+Open refinement, 245   
+Open set, 76 relative to subspace, 89   
+Operation, binary, 30   
+Operation on schemes, 460   
+Orbit, 490   
+Orbit space, 199, 490   
+Order of a covering, 305   
+Ordered field, 31   
+Ordered pair, 13   
+Ordered square, 90 connectedness, 156 is linear continuum, 155 metrizability, 194 path connectedness, 156   
+Order of a group, 346   
+Order of a group element, 412   
+Order relation, 24   
+Order topology, 84 compact subspaces, 172 normality, 202, 206 Hausdorff condition, 100 subbasis, 86 vs. subspace topology, 91   
+Order type, 25   
+Oriented edge of a graph, 506   
+Oriented line segment, 447   
+"Or," meaning of, 5 P   
+P(A), 12   
+Paracompactness, 253 of compact Hausdorff space, 252 of closed subspace, 254
+
+of metric space, 257 and perfect maps, 260 of regular Lindelöf space, 257 of R", 253 of R in box topology, 260 of R' , 257 of R, 257 of SΩ, 260, 261 of topological groups, 261 vs. normality, 253 Paracompact space, 253 (see also Paracompactness) Partial order, 71 axioms, 187 strict, 68 Partition of a set, 23 Partition of unity, 225, 258 existence, 225, 259 Pasting lemma, 108 Pasting edges together, 448 Pasting regions together, 458 Path, 155 corresponding to edge path, 506 Path component, 160 vs. component, 161 Path connectedness, 155 of Bn, 156 of long line, 159 of ordered square, 156 of R" - 0, 156 of S", 156 of topologist's sine curve, 157 vs. connectedness, 156 Path homotopy, 323 Path-homotopy class, 324 Path-induced homomorphism, 331 Peano curve, 271 Peano space, 275 Perfectly normal space, 213 Perfect map, 172, 199 and compactness, 172 and paracompactness, 260 Piecewise linear function, 302
+
+π1(X, x0), 331 (see also Fundamental group),   
+Plane in RN, 10   
+Point-finite collection, 248   
+Point-finite family, 227   
+Point-open topology, 281 convergent sequences in, 282 equals product topology, 282 . compact convergence topology, 285 vs. compact-open topology, 285   
+Pointwise bounded, 278   
+Pointwise convergence topology, 281 (see also Point-open topology)   
+Polygonal region, 447   
+Positive integers, 32   
+Positive linear map: of intervals in R, 328 of oriented line segments, 447   
+Power set, 12   
+Precise refinement, 258   
+Preimage, 19   
+Presentation of a group, 425   
+Principle of induction, 32 transfinite, 67   
+Principle of recursive definition, 47, 54 general, 72   
+Product: of continuous maps, 112 of covering maps, 339 of open maps, 141 of path-homotopy classes, 326 of paths, 326 of quotient maps, 141, 143, 145, 186, 289   
+Product space, 114 (see also Product topology)   
+fundamental group, 371   
+Product topology, 86, 114 basis, 86, 115, 116 closures in, 101, 116 compactness, 167, 234 complete regularity, 211 connectedness, 150, 152 convergent sequences, 118, 265 first-countability, 191 Hausdorff condition, 100, 1 16, 196 Lindelöf condition, 193 local compactness, 186 metrizability, 133, 134 normality, 198, 203 paracompactness, 257 regularity, 196 second-countability, 191 subbasis, 88, 114 vs. box topology, 115 vs. point-open topology, 282 vs. quotient topology, 141, 143. 145, 186, 289 vs. subspace topology, 89, 116 vs. uniform topology, 124   
+Projection map, 87, 114 is open map, 92   
+Projective n-space, 373   
+Projective plane, 372 (see also P2)   
+Projective-type scheme, 463   
+Proper inclusion, 4   
+Proper labelling scheme, 463   
+Proper subset, 4   
+Properly discontinuous, 490   
+Prüfer manifold, 317   
+p2, 372 fundamental group, 373 is surface, 372   
+Punctured euclidean space, 156 (see also R" - 0)   
+Punctured plane, 325 (see also R2 - 0) Q   
+Q, 195   
+Quantifiers, logical, 9   
+Quasicomponent, 163 vs. component, 163, 236   
+Quotient group, 331   
+Quotient map, 137 composites, 141 products, 141, 143, 145, 186, 289 restrictions, 137, 138, 140   
+Quotient space, 139 (see also Quotient topology)   
+Quotient topology, 138 and continuous functions, 142 Hausdorff condition, 142, 199 local compactness, 199 local connectedness, 163 normality, 199 regularity, 199 second-countability, 199 Ti condition, 141 vs. product topology, 141, 143, 145, 186, 289
+
+## R
+
+R (reals), 30 algebraic properties, 30 compact subspaces, 173 connected subspaces, 154 local compactness, 182 K -topology, 82 (see also Rk) lower limit topology, 82 (see also Rl) metric for, 120 order properties, 31 second-countability, 190 standard topology, 81 uncountability, 177   
+R+,31   
+Range of a function, 16   
+Rank of a free abelian group, 411   
+Rational number, 32   
+Ray in ordered set, 85   
+Recursive definition, principle, 47, 54 general principle, 72   
+Reduced edge path, 507   
+Reduced word, 413   
+Refinement, 245, 305   
+Regular covering space, 489 is orbit space, 491   
+Regularity, 195 of G/H, 146 of locally compact Hausdorff space, 205 of manifold, 227 of orbit space, 199 and perfect maps, 199 of products, 196 of subspaces, 196 of topological groups, 146 vs. complete regularity, 214 vs. Hausdorff condition, 195, 197 vs. metrizability, 215 vs. normality, 195, 198, 203   
+Regular Lindelöf space: metrizability, 218 normality, 205 paracompactness, 257   
+Regular space, 195 (see also Regularity)   
+Restriction: of a covering map, 338, 484 of a function, 17 of a quotient map, 137, 138, 140 of a relation, 28   
+Retract, 223, 348   
+Retraction, 335, 348 as quotient map, 144   
+Represented by a word, 412   
+Reverse of a path, 327   
+Relation, 21   
+Relation on a free group, 424 complete set, 425   
+ρ, 122, 268 (see also sup metric)   
+p, 124, 266 (see also uniform metric)   
+R'countable dense subset, 195   
+Right coset, 330   
+Right inverse, 21   
+R18 closure in R, 118, 127 paracompactness, 260   
+R in box topology: is Baire, 300 complete regularity, 213   
+R in product topology: is Baire, 300 countable dense subset, 195 metrizability, 133   
+Rin product topology (cont.) normality, 203 paracompactness, 257   
+Rin uniform topology, 124 is Baire, 300 completeness, 267   
+Rk,82 connectedness, 178 separation axioms, 197 vs. standard topology, 82   
+Re, 82 countability axioms, 192 metrizability, 194 normality, 198 paracompactness, 257 vs. standard topology, 82   
+\$R{293 complete regularity, 212 Lindelöf condition, 193 paracompactness, 257 separation axioms, 198   
+R",38 basis, 116 compact subspaces, 173 local compactness, 182 metrics for, 122, 123 paracompactness, 253 second-countability, 190   
+R - 0,156 fundamental group, 360 path connectedness, 156   
+R, 38   
+R in box topology: components, 162 connectedness, 151 metrizability, 132 normality, 205 paracompactness, 205   
+R in product topology: completeness, 265 connectedness, 151 local compactness, 182 metrizability, 125 paracompactness, 257
+
+second-countability, 190 R in uniform topology: components, 162 paracompactness, 257 second-countability, 190 R2, standard topology, 87 \$R{2 - 0, 325 covering space, 340 fundamental group, 360 Rule of assignment, 15 Russell's paradox, 62
+
+## S S
+
+Sα (section of well-ordered set), 66   
+Saturated set, 137   
+Scheme, 449 projective type, 463 proper, 463 torus type, 463   
+Schroeder-Bernstein theorem, 52   
+Schoenflies theorem, 392   
+Second category set, 295   
+Second coordinate of ordered pair, 13   
+Second-countability, 190 of compact metric space, 194 of C(1, R), 194 of orbit space, 199 and perfect maps, 199 of products, 191 of R and R" and R, 190 of Re, 192 of R in uniform topology, 190 of subspace, 191 of topological group, 195 vs. countable dense subset, 194 vs. Lindelöf condition, 194   
+Second-countable space, 190 (see also Second-countability   
+Section: of the positive integers, 32 of a well-ordered set, 66   
+Seifert-van Kampen theorem 426 classical version, 431 special case, 369   
+Semilocally simply connected, 494   
+Separable, 192 (see also Countable dense subset)   
+Separates points from closed sets, 218   
+Separates a space, 378 into n components, 378   
+Separation, 148 by continuous functions, 211   
+Separation theorem: closed topologist's sine curve in $\textstyle s ^ { 2 }$ 393 general, 380, 392 simple closed curve in $\pmb { S } ^ { 2 }$ ,379, 390 theta space in $\pmb { S } ^ { 2 }$ ,395   
+Sequences, 38 and closure, 130, 190 and continuity, 130, 190   
+Sequence lemma, 130   
+Sequential compactness, 179 vs. compactness, 179   
+Shrinking lemma, 227 general, 258   
+Shrinking map, 182 and fixed points, 182 vs. contraction, 182   
+σ-compact, 289, 316   
+σ-locally discrete, 252   
+σ-locally finite, 245   
+Simple closed curve, 379 generates π1 of R2 - 0, 401 separates $\pmb { S } ^ { 2 }$ ,379, 390 winding number, 404, 406   
+Simply connected, 333 $\pmb { S } ^ { n }$ ,369 star-convex set, 334 tree, 508 vs. locally simply connected, 499   
+Simple loop, 404   
+Simple order, 24   
+Slice: in covering space, 336 in product space, 167   
+Smaller topology, 77   
+Smallest element of ordered set, 27   
+Smirnov metrization theorem, 261   
+$\pmb { S } ^ { n }$ (unit sphere), 156 compactness, 174 fundamental group, 369 path connectedness, 156 simple connectedness, 369   
+$\pmb { S } _ { \Omega }$ , 66 compactification, 242 countable subsets, 66, 74 existence, 74 metrizability, 181 paracompactness, 260, 261 uniqueness, 73   
+$\bar { \pmb { S } } _ { \Omega }$ , 66 metrizability, 181   
+\$S_S_, 203 complete regularity, 212 normality, 203 paracompactness, 254   
+$s ^ { 1 }$ , 106 covering spaces, 337, 482 fundamental group, 345   
+Sphere, unit, 139, 156 (see also $s ^ { 2 }$   
+Sorgenfrey plane, 193 (see also $\mathbb { R } ^ { 2 }$   
+Square metric, 122 (see also ρ)   
+Standard bounded metric, 121   
+Standard topology:   
+on R, 81   
+on R{2,87   
+Star-convex set, 334   
+Stereographic projection, 369   
+Stone-Cech compactification, 241 existence, 239 extension condition, 240 metrizability, 242 of $\pmb { S } _ { \Omega }$ ,242 uniqueness, 240 of $\mathbb { Z } _ { + }$ , 242   
+Straight-line homotopy, 325   
+Strictly coarser topology, 77   
+Strictly finer topology, 77   
+Strict partial order, 68   
+Strong continuity, 137   
+Stronger topology, 78   
+Strong induction principle, 33   
+\$s {, 139 as quotient space, 136, 139   
+Subbasis, 82 for order topology, 86 for product topology, 88, 114   
+Subgraph, 503   
+Subgroup: of free abelian group, 412 of free group, 514   
+Subnet, 188   
+Subsequence, 179   
+Subset, 4   
+Subspace topology, 88 basis, 89 compactness, 164 complete regularity, 211 connectedness, 148 countable dense subset, 194 first-countability, 191 Hausdorff condition, 100, 196 Lindelöf condition, 193, 194 local compactness, 185 in metric space, 129 normality, 203, 205 paracompactness, 254 regularity, 196 second-countability, 191 topological dimension, 306 vs. box topology, 116 vs. order topology, 91 vs. product topology, 89, 116   
+Sum of groups, 407   
+Sup A, 27   
+Superset, 233   
+Sup metric, 268 vs. uniform metric, 268   
+Support, 225, 257   
+Supremum, 27   
+Surface, 225, 370 classification, 457, 469   
+Surface with boundary, 476   
+Surjective function, 18   
+Symmetric neighborhood, 146
+
+System of free generators, 42 1
+
+## T
+
+Theta space, 362, 394 fundamental group, 432 separates S², 395   
+Ti axioms, 211, 213   
+Tietze extension theorem, 219   
+Ti axiom, 99 vs. Hausdorff condition, 99 vs. limit points, 99 for quotient space, 141   
+Topological completeness, 270 (see also Complete metric space)   
+Topological dimension, 305 of closed subspace, 306 of closed subspace of RN , 316 of compact manifold, 314 of compact subspace of R, 305 of compact subspace of R , 313 of compact subspace of R², 306 of linear graph, 308 of manifold, 316 of 1-manifold, 308 of triangular region, 352 of 2-manifold, 308, 352 of a union, 307, 308 of [0, 1], 305   
+Topological group, 145 closedness of A · B, 172, 188 complete regularity, 213 covering space of, 483 Hausdorff condition, 146 normality, 207 π is abelian, 335 paracompactness, 261 regularity, 146 second-countability, 195   
+Topological imbedding, 105   
+Topological property, 105   
+Topological space, 76   
+Topologist's sine curve, 157 components, 160   
+Topologist's sine curve (cont.) connectedness, 156 does not separate S², 393 path components, 160 path connectedness, 157   
+Topology, 76 generated by a basis, 78, 80 generated by a subbasis, 82   
+Torsion subgroup, 412, 424   
+Torus, 339 covering space of, 339, 483 equals doughnut surface, 339 fundamental group, 371, 442 as quotient space, 136, 140   
+Torus-type scheme, 463   
+Totally bounded, 275 vs. equicontinuity, 277   
+Totally disconnected, 152   
+Tower, 73   
+Transcendental number, 51   
+Transfinite induction, 67   
+Translation of RN , 310   
+Tree, 507 fundamental group, 508 maximal, 509   
+Triangle inequality, 119   
+Triangulable, 471   
+Triangulation, 471   
+Trivial homomorphism, 335   
+Trivial topology, 77   
+Tube, 167   
+Tube lemma, 168 generalized, 171   
+Tukey lemma, 72   
+2-cell, 441   
+2-manifold, 225 topological dimension, 308, 352   
+2-manifold with boundary, 476   
+2-sphere, 139 (see also S2)   
+Tychonoff theorem, 234 for countable products, 280 for finite products, 167 via well-ordering theorem 236
+
+U U(A, ), 177 Uncountability: of P(Z+),50 of R, 177 of transcendental numbers, 51 of {0, 1}, 49 Uncountable set, 45 Uncountable well-ordered set, 74 (see also Sa) Uniform boundedness principle, 299 Uniform continuity theorem, 147, 176 Uniform convergence, 131 on compact sets, 283 Weierstrass M-test for, 135 Uniform limit theorem, 132 converse fails, 134 partial converse, 171 Uniformly continuous, 176 Uniform metric, 124, 266 (see also Uniform topology) completeness, 267 vs. sup metric, 268 Uniform structure, 292 Uniform topology, 124, 266 vs. box topology, 124 s. compact convergence topology, 285 Union, 5, 12, 36 Unit ball, 135, 331 (see also B2, B) Unit circle, 106 (see also S) Unit sphere, 156 (see also ) Universal covering space, 484 existence, 498 Universal extension property, 223 Upper bound, 27, 70 Urysohn lemma, 207 strong form, 213 Urysohn metrization theorem, 215 Utilities graph, 308, 394 nonembeddability, 396 V Vacuously true, 7
+
+Value of a function, 16   
+Vanish at infinity, 280   
+Vanish precisely on A, 213   
+Vector field, 350   
+Vertex: of a curved triangle, 471 of a linear graph, 308, 394, 502 of a polygonal region, 447
+
+## W
+
+Weaker topology, 78   
+Weak local connectedness, 162 vs. connectedness, 162   
+Wedge of circles, 434, 435 existence, 437 fundamental group, 434, 436   
+Wedge of spaces, 438   
+Weierstrass M-test, 135   
+Well-ordered set, 63 compact subspaces, 172 dictionary order, 64 finite, 64 normality, 202 subsets well-ordered, 63 uncountable, 66 Z+,32 Z +x Z+,63   
+Well-ordering theorem, 65 applied, 236, 246 and axiom of choice, 67, 73 and maximum principle, 70, 73   
+Winding number, 398, 403 as an integral, 405 of simple closed curve, 404, 406   
+Word, 412, 415 reduced, 413
+
+X   
+\$x J , 113   
+\$x m83   
+\$X   38   
+[X, Y], 330
+
+Z   
+Z, 32   
+Z+,32 not finite, 42 well-ordered, 32   
+Zermelo, 65   
+Zorn's lemma, 70 applied, 72, 233, 236, 509 vs. maximum principle, 72
