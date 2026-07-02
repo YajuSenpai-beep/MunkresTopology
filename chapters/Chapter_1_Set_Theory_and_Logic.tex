@@ -440,7 +440,7 @@ If \(f : A \rightarrow  B\) and if \(a\) is an element of \(A\) , we denote by \
 
 Using this notation, one can go back to defining functions almost as one did before, with no lack of rigor. For instance, one can write (letting \(\mathbb{R}\) denote the real numbers)
 \begin{centeredblock}
-``Let \(f\) be the function whose rule is \(\{  {( {x,{x}^{3} + 1})  \mid  x \in  \mathbb{R}}\}\) and whose range is \(\mathbf{R}\) ,''
+``Let \(f\) be the function whose rule is \(\{  {( {x,{x}^{3} + 1})  \mid  x \in  \mathbb{R}}\}\) and whose range is \(\mathbb{R}\) ,''
 \end{centeredblock}
 or one can equally well write
 
@@ -988,7 +988,7 @@ Now there is nothing in this list as it stands to tell us what an integer is. We
 \begin{definition}
     A subset \(A\) of the real numbers is said to be inductive if it contains the number 1, and if for every \(x\) in \(A\) , the number \(x + 1\) is also in \(A\) . Let \(\mathcal{A}\) be the collection of all inductive subsets of \(\mathbb{R}\) . Then the set \({\mathbb{Z}}_{ + }\) of positive integers is defined by the equation
     \[
-    {\mathbb{Z}}_{ + } = \mathop{\bigcap }\limits_{{A \in  A}}A
+    {\mathbb{Z}}_{ + } = \mathop{\bigcap }\limits_{{A \in \mathcal{A}}}A
     \]
 \end{definition}
 
@@ -1413,7 +1413,7 @@ From this lemma a number of useful con\index{Sequences} follow:
 \end{corollary}
 
 \begin{proof}
-    We first show that if \(A\) and \(B\) are finite, so is \(A \cup  B\) . The result is trivial if \(A\) or \(B\) is empty. Otherwise, there are bijections \(f : \{ 1,\ldots ,m\}  \rightarrow  A\) and \(g\) : \(\{ 1,\ldots ,n\}  \rightarrow  B\) for some choice of \(m\) and \(n\) . Define a function \(h.\{ 1,\ldots ,m +\)  \(n\}  \rightarrow  A \cup  B\) by setting \(h( i)  = f( i)\) for \(i = 1,2,\ldots ,m\) and \(h( i)  = g( {i - m})\) for \(i = m + 1,\ldots ,m + n\) . It is easy to check that \(h\) is surjective, from which it follows that \(A \cup  B\) is finite.
+    We first show that if \(A\) and \(B\) are finite, so is \(A \cup  B\) . The result is trivial if \(A\) or \(B\) is empty. Otherwise, there are bijections \(f : \{ 1,\ldots ,m\}  \rightarrow  A\) and \(g\) : \(\{ 1,\ldots ,n\}  \rightarrow  B\) for some choice of \(m\) and \(n\) . Define a function \(h : \{ 1,\ldots ,m +\)  \(n\}  \rightarrow  A \cup  B\) by setting \(h( i)  = f( i)\) for \(i = 1,2,\ldots ,m\) and \(h( i)  = g( {i - m})\) for \(i = m + 1,\ldots ,m + n\) . It is easy to check that \(h\) is surjective, from which it follows that \(A \cup  B\) is finite.
 
     Now we show by induction that \index{finiteness: of cartesian products@Finiteness: of cartesian products} finiteness of the sets \({A}_{1},\ldots ,{A}_{n}\) implies finiteness of their union. This result is trivial for \(n = 1\). Assuming it true for \(n - 1\) , we note that \({A}_{1} \cup  \cdots  \cup  {A}_{n}\) is the union of the two finite sets \({A}_{1} \cup  \cdots  \cup  {A}_{n - 1}\) and \({A}_{n}\) , so the result of the preceding paragraph applies.
 
@@ -1787,7 +1787,7 @@ The first step is to prove that there exist functions defined on sections \(\{ 1
     by \(( *)\) . Now for all \(j < i\) , we have \(f( j)  = g( j)\) . Because \(f\) and \(g\) satisfy \(( *)\) ,
     \[
     \begin{aligned}
-    f( i)  &= \text{ smallest element of }\lbrack C - f( {\{ 1,\ldots ,i - 1\} }) \} , \\
+    f( i)  &= \text{ smallest element of }[  {C - f( {\{ 1,\ldots ,i - 1\} }) }]  , \\
     g( i)  &= \text{ smallest element of }[  {C - g( {\{ 1,\ldots ,i - 1\} }) }]  \text{ . }
     \end{aligned}
     \]
@@ -2320,7 +2320,7 @@ Now we define a function \(h : {\mathbb{Z}}_{ + } \rightarrow  \{ 0,1\}\) , by l
 \[
 \{  {{a}_{j} \mid  j < i\text{ and }h( j)  = 0}\}  \text{ . }
 \]
-By the \index{principle of recursive definition@Principle of recursive definition}principle of recursive definition, this formula determines a unique function \(h.{\mathbb{Z}}_{ + } \rightarrow  \{ 0,1\}\) It is easy to check that the set of those \({a}_{j}\) for which \(h( j)  = 0\) is a maximal simply ordered subset of \(A\) .
+By the \index{principle of recursive definition@Principle of recursive definition}principle of recursive definition, this formula determines a unique function \(h : {\mathbb{Z}}_{ + } \rightarrow  \{ 0,1\}\) It is easy to check that the set of those \({a}_{j}\) for which \(h( j)  = 0\) is a maximal simply ordered subset of \(A\) .
 
 If \(A\) is not countable, a variant of this procedure will work, if we allow ourselves to use the \index{well-ordering theorem@Well-ordering theorem}well-ordering theorem. Instead of indexing the elements of \(A\) with the set \({\mathbb{Z}}_{ + }\) , we index them (in a bijective fashion) with the elements \index{Section: of the positive integers!of a well-ordered set}of some \index{well-ordered set@Well-ordered set}well-ordered set \(J\) , so that \(A = \{  {{a}_{\alpha } \mid  \alpha  \in  J}\}\) . For this we need the \index{well-ordering theorem@Well-ordering theorem}well-ordering theorem, so that we know there is a bijection between \(A\) and some \index{well-ordered set@Well-ordered set}well-ordered set \(J\) . Then we can proceed as in the previous paragraph, letting \(\alpha\) replace \(i\) in the argument. \index{Partial order!strict}Strictly speaking, you need to generalize the principle of recursive definition to well-ordered sets as well, but that is not particularly difficult. (See the Supplementary Exercises.)
 
