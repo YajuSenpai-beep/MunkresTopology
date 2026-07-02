@@ -30,13 +30,7 @@ But that is unfortunately not true. Consider the following example, in which \({
 
 does not lie in the intersection of the sets \(A\) .
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{images/37.1.jpg}
-\end{center}
-\hspace*{3em} 
-
-Figure 37.1
-
+\munkresfig[0.5]{37.1}[Figure 37.1]
 ``Aha!'' you say,''you made a bad choice. If after choosing \({x}_{1} = \frac{1}{2}\) you had chosen \({x}_{2} = \frac{2}{3}\) , then you would have found a point in \(\mathop{\bigcap }\limits_{{A \in  \mathcal{A}}}A\) .'' The difficulty with our tentative proof is that it gave us too much freedom in picking \({x}_{1}\) and \({x}_{2}\) ; it allowed us to make a ``bad'' choice instead of a ``good'' choice.
 
 How can we alter the proof so as to avoid this difficulty?
@@ -49,13 +43,7 @@ This question leads to the second idea of the proof: Perhaps if we expand the co
 
 the only possible choice for \({x}_{1}\) is \(\frac{1}{3}\) Similarly, the only possible choice for \({x}_{2}\) is \(\frac{1}{3}\) . And \(\frac{1}{3} \times  \frac{1}{3}\) does belong to every set \(D\) , and hence to every set \(A\) . In other words, expanding the collection \(\mathcal{A}\) to the collection \(\mathcal{D}\) forces the proper choice on us.
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{images/37.2.jpg}
-\end{center}
-\hspace*{3em} 
-
-Figure 37.2
-
+\munkresfig[0.5]{37.2}[Figure 37.2]
 Now of course in this example we chose \(\mathcal{D}\) carefully so that the proof would work. What hope can we have for choosing \(\mathcal{D}\) correctly in general? Here is the third idea of the proof: Why not simply choose \(\mathcal{D}\) to be a collection that is ``as large as possible''- so that no larger collection has the finite intersection property—and see whether such a \(\mathcal{D}\) will work? It is not at all obvious that such a collection \(\mathcal{D}\) exists; to prove it, we must appeal to Zorn's lemma. But after we prove that \(\mathcal{D}\) exists, we shall in fact be able to show that \(\mathcal{D}\) is large enough to force the proper choices on us.
 
 A final remark. The assumption that the elements of the collection \(\mathcal{A}\) were closed sets was irrelevant in this discussion. For even if the set \(A \in  \mathcal{A}\) is closed, the set \({\pi }_{1}( A)\) need not be closed, so we had to take its closure in order to apply the closed set formulation of compactness. Therefore, we may as well begin with an arbitrary collection of subsets of \(X\) having the finite intersection property, and prove that the intersection of their closures is nonempty. This approach actually proves to be more convenient.
@@ -383,10 +371,7 @@ Thus \(g\) is the desired extension of \(f\)
 
 \begin{proof}
 	Consider the inclusion mapping \({j}_{2} : X \rightarrow  {Y}_{2}\) . It is a continuous map of \(X\) into the compact Hausdorff space \({Y}_{2}\) . Because \({Y}_{1}\) has the extension property, we may, by the preceding theorem, extend \({j}_{2}\) to a continuous map \({f}_{2} : {Y}_{1} \rightarrow  {Y}_{2}\) . Similarly, we may extend the inclusion map \({j}_{1} : X \rightarrow  {Y}_{1}\) to a continuous map \({f}_{1} : {Y}_{2} \rightarrow  {Y}_{1}\) (because \({Y}_{2}\) has the extension property and \({Y}_{1}\) is compact Hausdorff).
-\begin{center}
-\includegraphics[width=0.4\textwidth]{images/37.3.jpg}
-\end{center}
-\hspace*{3em} 
+\munkresfig[0.4]{37.3} 
 
 The composite \({f}_{1} \circ  {f}_{2} : {Y}_{1} \rightarrow  {Y}_{1}\) has the property that for every \(x \in  X\) , one has \({f}_{1}( {{f}_{2}( x) })  = x\) Therefore, \({f}_{1} \circ  {f}_{2}\) is a continuous extension of the identity map \({i}_{X} : X \rightarrow  X\) . But the identity map of \({Y}_{1}\) is also a continuous extension of \({i}_{X}\) . By uniqueness of extensions (Lemma 38.3), \({f}_{1} \circ  {f}_{2}\) must equal the identity map of \({Y}_{1}\) . Similarly, \({f}_{2} \circ  {f}_{1}\) must equal the identity map of \({Y}_{2}\) Thus \({f}_{1}\) and \({f}_{2}\) are homeomorphisms.
 \end{proof}
