@@ -37,7 +37,7 @@
         % ═══ 顶层：指数衰减高光 ═══
         \begin{scope}
             \clip (-6,-6) rectangle (6,6);
-            \foreach \i in {0,1,...,50} {
+            \foreach \i in {0,1,...,100} {
                 \pgfmathsetmacro{\radius}{\i/50*5.0}
                 \pgfmathsetmacro{\opacity}{0.15 * exp(-\radius/1.2)}
                 \fill[white, opacity=\opacity] (0,0) circle (\radius);
