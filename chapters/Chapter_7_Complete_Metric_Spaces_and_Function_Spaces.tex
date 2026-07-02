@@ -347,40 +347,16 @@ The existence of this path violates one's naive geometric intuition in much the 
 	Step 1. We shall construct the map \(f\) as the limit of a sequence of continuous functions \({f}_{n}\) . First we describe a particular operation on paths, which will be used to generate the sequence \({f}_{n}\) .
 Begin with an arbitrary closed interval \([  {a,b}]\) in the real line and an arbitrary square in the plane with sides parallel to the coordinate axes, and consider the triangular path \(g\) pictured in Figure 44.1. It is a continuous map of \([  {a,b}]\) into the square. The operation we wish to describe replaces the path \(g\) by the path \({g}^{\prime }\) pictured in Figure 44.2. It is made up of four triangular paths, each half the size of \(g\) . Note that \(g\) and \({g}^{\prime }\) have the same initial point and the same final point You can write the equations for \(g\) and \({g}^{\prime }\) if you like.
 
-\begin{center}
-\includegraphics[width=0.6\textwidth]{images/44.1.jpg}
-\end{center}
-\hspace*{3em} 
-
-Figure 44.1
-
-\begin{center}
-\includegraphics[width=0.6\textwidth]{images/44.2.jpg}
-\end{center}
-\hspace*{3em} 
-
-Figure 44.2
-
+\munkresfig[0.6]{44.1}[Figure 44.1]
+\munkresfig[0.6]{44.2}[Figure 44.2]
 This same operation can also be applied to any triangular path connecting two adjacent corners of the square. For instance, when applied to the path \(h\) pictured in Figure 443, it gives the path \({h}^{\prime }\)
 
 Step 2. Now we define a sequence of functions \({f}_{n} : I \rightarrow  {I}^{2}\) . The first function, which we label \({f}_{0}\) for convenience, is the triangular path pictured in Figure 44.1, letting \(a = 0\) and \(b = 1\) . The next function \({f}_{1}\) is the function obtained by applying the operation described in Step 1 to the function \({f}_{0}\) ; it is pictured in Figure 44.2. The next function \({f}_{2}\) is the function obtained by applying this same operation to each of the four
 
-\begin{center}
-\includegraphics[width=1.0\textwidth]{images/44.3.jpg}
-\end{center}
-\hspace*{3em} 
-
-Figure 44.3
-
+\munkresfig[1.0]{44.3}[Figure 44.3]
 triangular paths that make up \({f}_{1}\) . It is pictured in Figure 44.4. The next function \({f}_{3}\) is obtained by applying the operation to each of the 16 triangular paths that make up \({f}_{2}\) ; it is pictured in Figure 44.5. And so on. At the general step, \({f}_{n}\) is a path made up of \({4}^{n}\) triangular paths of the type considered in Step 1, each lying in a square of edge length \(1/{2}^{n}\) . The function \({f}_{n + 1}\) is obtained by applying the operation of Step1 to these triangular paths, replacing each one by four smaller triangular paths.
 
-\begin{center}
-\includegraphics[width=1.0\textwidth]{images/44.4.jpg}
-\end{center}
-\hspace*{3em} 
-
-Figure 44.5
-
+\munkresfig[1.0]{44.4}[Figure 44.5]
 Step 3. For purposes of this proof, let \(d( {\mathbf{x},\mathbf{y}})\) denote the square metric on \({\mathbb{R}}^{2}\) ,
 
 \[
@@ -650,13 +626,7 @@ The sets \(S( {x,U})\) are a subbasis for topology on \({Y}^{X}\) , which is cal
 
 The general basis element for this topology is a finite intersection of subbasis elements \(S( {x,U})\) . Thus a typical basis element about the function \(f\) consists of all functions \(g\) that are ``close'' to \(f\) at finitely many points. Such a neighborhood is illustrated in Figure 46.1; it consists of all functions \(g\) whose graphs intersect the three vertical intervals pictured.
 
-\begin{center}
-\includegraphics[width=0.9\textwidth]{images/46.1.jpg}
-\end{center}
-\hspace*{3em} 
-
-Figure 46.1
-
+\munkresfig[0.9]{46.1}[Figure 46.1]
 The topology of pointwise convergence on \({Y}^{X}\) is nothing new. It is just the product topology we have already studied. If we replace \(X\) by \(J\) and denote the general element of \(J\) by \(\alpha\) to make it look more familiar, then the set \(S( {\alpha ,U})\) of all functions \(\mathbf{x} : J \rightarrow  Y\) such that \(\mathbf{x}( \alpha )  \in  U\) is just the subset \({\pi }_{\alpha }^{-1}( U)\) of \({Y}^{J}\) , which is the standard subbasis element for the product topology.
 
 The reason for calling it the topology of pointwise convergence comes from the following theorem:
@@ -854,13 +824,7 @@ The statement that \(F( {z}_{0})\) lies in \(S( {C,U})\) means simply that \(( {
 
 is an open set in the subspace \(C \times  Z\) containing the slice \(C \times  {z}_{0}\) . The tube lemma of \(§{26}\) implies that there is a neighborhood \(W\) of \({z}_{0}\) in \(Z\) such that the entire tube \(C \times  W\) lies in \({f}^{-1}( U)\) . See Figure 46.2. Then for \(z \in  W\) and \(x \in  C\) , we have \(f( {x,z})  \in  U\) . Hence \(F( W)  \subset  S( {C,U})\) , as desired.
 
-\begin{center}
-\includegraphics[width=1.0\textwidth]{images/46.2.jpg}
-\end{center}
-\hspace*{3em} 
-
-Figure 46.2
-
+\munkresfig[1.0]{46.2}[Figure 46.2]
 We discuss briefly the connections between the compact-open topology and the concept of homotopy, which arises in algebraic topology
 
 If \(f\) and \(g\) are continuous maps of \(X\) into \(Y\) , we say that \(f\) and \(g\) are homotopic if there is a continuous map
