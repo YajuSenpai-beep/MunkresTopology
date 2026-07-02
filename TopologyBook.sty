@@ -16,13 +16,14 @@
 
 % ---------- 章节格式（\part） ----------
 \RequirePackage{titlesec}
-\newcommand{\partfontsize}{\fontsize{48}{60}\bfseries\selectfont}
+\RequirePackage{varwidth}
+\newcommand{\partfontsize}{\fontsize{36}{48}\bfseries\selectfont}
 \titleformat{\part}[display]
   {\filright\partfontsize}
   {\partname~\Roman{part}}
   {20pt}
-  {\partfontsize}
-\titlespacing*{\part}{0.05\textwidth}{\fill}{\fill}[0.05\textwidth]
+  {\partfontsize\MakeUppercase}
+\titlespacing*{\part}{0.05\textwidth}{\fill}{\fill}[0.01\textwidth]
 \assignpagestyle{\part}{empty}  % 需加载 titlesec 后使用
 \RequirePackage{etoolbox}
 \makeatletter
@@ -124,7 +125,7 @@
 %         \munkresfig[1.0]{1.1}[Figure 1.1][\upshape]   → 正常字体（覆盖默认）
 \NewDocumentCommand{\munkresfig}{O{0.8} m o o}{%
   \begin{center}%
-    \includegraphics[width=#1\linewidth]{images/#2.jpg}%
+    \includegraphics[width=#1\linewidth]{images/#2.png}%
     \IfValueT{#3}{\par\vskip 0.5em \IfValueTF{#4}{#4{#3}}{\textbf{\textsl{#3}}}\par}%
   \end{center}%
 }
