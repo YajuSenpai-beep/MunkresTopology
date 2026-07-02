@@ -89,7 +89,7 @@ We shall be concerned with locally finite indexed families only in §41, when we
 Most authors use the term `` \(\sigma\) -locally finite'' for this concept. The \(\sigma\) comes from measure theory and stands for the phrase ``countable union of'' Note that both a countable collection and a locally finite collection are countably locally finite.
 
 \begin{definition}
-	Let \(\mathcal{A}\) be a collection of subsets of the space \(X\) . A collection \(\mathcal{B}\) of subsets of \(X\) is said to be a refinement of \(\mathcal{A}\) (or is said to refine \(\mathcal{A}\) ) if for each element \(B\) of \(\mathcal{B}\) , there is an element \(A\) of \(\mathcal{A}\) containing \(B\) . If the elements of \(\mathcal{B}\) are open sets, we call \(\mathcal{B}\)an open refinement of \(\mathcal{A}\) ; if they are closed sets, we call \(\mathcal{B}\) a 
+	Let \(\mathcal{A}\) be a collection of subsets of the space \(X\) . A collection \(\mathcal{B}\) of subsets of \(X\) is said to be a refinement of \(\mathcal{A}\) (or is said to refine \(\mathcal{A}\) ) if for each element \(B\) of \(\mathcal{B}\) , there is an element \(A\) of \(\mathcal{A}\) containing \(B\) . If the elements of \(\mathcal{B}\) are open sets, we call \(\mathcal{B}\) an open refinement of \(\mathcal{A}\) ; if they are closed sets, we call \(\mathcal{B}\) a 
 \end{definition}
 
 \begin{lemma}
@@ -240,7 +240,7 @@ are disjoint open sets about \(C\) and \(D\) , respectively.
 \begin{proof}
 	We gave this as an exercise in \(\$ {33}\) , we provide a proof here. Write \(A\) as the intersection of the open sets \({U}_{n}\) , for \(n \in {\mathbb{Z}}_{ + }\) For each \(n\) , choose a continuous function \({f}_{n} : X \rightarrow [ {0,1}]\) such that \(f( x) = 0\) for \(x \in A\) and \(f( x) = 1\) for \(x \in X - {U}_{n}\) Define \(f( x) = \sum {f}_{n}( x) /{2}^{n}\) The series converges uniformly, by comparison with \(\sum 1/{2}^{n}\) , so that \(f\) is continuous. Also, \(f\) vanishes on \(A\) and is positive on \(X - A\)
 \end{proof}
-begin{theorem}[Nagata-Smirnov metrization theorem]
+\begin{theorem}[Nagata-Smirnov metrization theorem]
 	A space \(X\) is metrizable if and only if \(X\) is regular and has a basis that is countably locally finite.
 \end{theorem}
 
@@ -450,11 +450,11 @@ of \(x\) intersects only finitely many elements of \(\mathcal{C}\) .
 
 Then \(\mathcal{D}\) also covers \(X\) ; it is locally finite by Lemma 39.1; and it refines \(\mathcal{A}\) .
 
-\(( 3) \Rightarrow ( 4)\) . Let \(\mathcal{A}\) be an open covering of \(X\) . Using(3), choose \(\mathcal{B}\) to be a refinement of \(\mathcal{A}\) that covers \(X\) and is locally finite (We can take \(\mathcal{B}\) to bea closed refinement if we like, but that is irrelevant.) We seek to expand each element \(B\) of \(\mathcal{B}\) slightly to an open set, making the expansion slight enough that the resulting collection of open sets will still be locally finite and will still refine \(\mathcal{A}\) .
+\(( 3) \Rightarrow ( 4)\) . Let \(\mathcal{A}\) be an open covering of \(X\) . Using(3), choose \(\mathcal{B}\) to be a refinement of \(\mathcal{A}\) that covers \(X\) and is locally finite (We can take \(\mathcal{B}\) to be a closed refinement if we like, but that is irrelevant.) We seek to expand each element \(B\) of \(\mathcal{B}\) slightly to an open set, making the expansion slight enough that the resulting collection of open sets will still be locally finite and will still refine \(\mathcal{A}\) .
 
 This step involves a new trick. The previous trick, used several times, consisted of ordering the sets in some way and forming a new set by subtracting off all the previous ones. That trick shrinks the sets; to expand them we need something different. We shall introduce an auxiliary locally finite closed covering \(\mathcal{C}\) of \(X\) and use it to expand the elements of \(\mathcal{B}\) .
 
-For each point \(x\) of \(X\) , there is a neighborhood of \(x\) that intersects only finitely many elements of \(\mathcal{B}\) . The collection of all open sets that intersect only finitely many elements of \(\mathcal{B}\) is thus an open covering of \(X\) . Using (3) again, let \(\mathcal{C}\) bea closed refinement of this covering that covers \(X\) and is locally finite. Each element of \(\mathcal{C}\) intersects only finitely many elements of \(\mathcal{B}\) .
+For each point \(x\) of \(X\) , there is a neighborhood of \(x\) that intersects only finitely many elements of \(\mathcal{B}\) . The collection of all open sets that intersect only finitely many elements of \(\mathcal{B}\) is thus an open covering of \(X\) . Using (3) again, let \(\mathcal{C}\) be a closed refinement of this covering that covers \(X\) and is locally finite. Each element of \(\mathcal{C}\) intersects only finitely many elements of \(\mathcal{B}\) .
 
 For each element \(B\) of \(B\) , let
 
@@ -613,7 +613,7 @@ then the desired inequality follows by summing, as \(\sum {\phi }_{\alpha }( x) 
 
  \item Show that if \(f : X \rightarrow Y\) is continuous and \(X\) is paracompact, the subspace \(f( X)\) of \(Y\) need not be paracompact.
  \end{enumerate}
-\item Let \(X\) be paracompact. We proved a ``shrinking lemma'' for arbitrary indexed open coverings of \(X\) . Here is an ``'' for arbitrary locally finite indexed families in \(X\) . \textsl{Lemma} Let \({\{ {B}_{\alpha }\} }_{\alpha \in J}\) be a locally finite indexed family of subsets of the para-compact Hausdorff space \(X\) . Then there \(\iota\) s a locally finite indexed family \({\{ {U}_{\alpha }\} }_{\alpha \in J}\) of open sets in \(X\) such that \({B}_{\alpha } \subset {U}_{\alpha }\) for each \(\alpha\) . 
+\item Let \(X\) be paracompact. We proved a ``shrinking lemma'' for arbitrary indexed open coverings of \(X\) . Here is an ``expansion lemma'' for arbitrary locally finite indexed families in \(X\) . \textsl{Lemma} Let \({\{ {B}_{\alpha }\} }_{\alpha \in J}\) be a locally finite indexed family of subsets of the para-compact Hausdorff space \(X\) . Then there \(\iota\) s a locally finite indexed family \({\{ {U}_{\alpha }\} }_{\alpha \in J}\) of open sets in \(X\) such that \({B}_{\alpha } \subset {U}_{\alpha }\) for each \(\alpha\) . 
 \item
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Let \(X\) be a regular space. If \(X\) is a countable union of compact subspaces of \(X\) , then \(X\) is paracompact.
