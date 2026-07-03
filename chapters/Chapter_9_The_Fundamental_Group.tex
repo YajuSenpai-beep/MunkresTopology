@@ -416,7 +416,7 @@ Similarly, \({i}_{ * }( [ f] ) = [ {i \circ f}] = [ f]\)
 \end{corollary}
 
 \begin{proof}
-	Let \(k \cdot ( {Y,{y}_{0}}) \rightarrow ( {X,{x}_{0}})\) be the inverse of \(h\) . Then \({k}_{ * } \circ {h}_{ * } = {( k \circ h) }_{ * } = {i}_{ * }\) , where \(i\) is the identity map of \(( {X,{x}_{0}})\) ; and \({h}_{ * } \circ {k}_{ * } = {( h \circ k) }_{ * } = {j}_{ * }\) , where \(j\) is the identity map of \(( {Y,{y}_{0}})\) . Since \({i}_{ * }\) and \({j}_{ * }\) are the identity homomorphisms of the groups \({\pi }_{1}( {X,{x}_{0}})\) and \({\pi }_{1}( {Y,{y}_{0}})\) , respectively, \({k}_{ * }\) is the inverse of \({h}_{ * }\) .
+	Let \(k : ( {Y,{y}_{0}}) \rightarrow ( {X,{x}_{0}})\) be the inverse of \(h\) . Then \({k}_{ * } \circ {h}_{ * } = {( k \circ h) }_{ * } = {i}_{ * }\) , where \(i\) is the identity map of \(( {X,{x}_{0}})\) ; and \({h}_{ * } \circ {k}_{ * } = {( h \circ k) }_{ * } = {j}_{ * }\) , where \(j\) is the identity map of \(( {Y,{y}_{0}})\) . Since \({i}_{ * }\) and \({j}_{ * }\) are the identity homomorphisms of the groups \({\pi }_{1}( {X,{x}_{0}})\) and \({\pi }_{1}( {Y,{y}_{0}})\) , respectively, \({k}_{ * }\) is the inverse of \({h}_{ * }\) .
 \end{proof}
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
@@ -427,8 +427,8 @@ Similarly, \({i}_{ * }( [ f] ) = [ {i \circ f}] = [ f]\)
  \end{enumerate}
 \item Let \(\alpha\) be a path in \(X\) from \({x}_{0}\) to \({x}_{1}\) ; let \(\beta\) be a path in \(X\) from \({x}_{1}\) to \({x}_{2}\) . Show that if \(\gamma = \alpha * \beta\) , then \(\widehat{\gamma } = \widehat{\beta } \circ \widehat{\alpha }\) .
 \item Let \({x}_{0}\) and \({x}_{1}\) be points of the path-connected space \(X\) . Show that \({\pi }_{1}( {X,{x}_{0}})\) is abelian if and only if for every pair \(\alpha\) and \(\beta\) of paths from \({x}_{0}\) to \({x}_{1}\) , we have \(\widehat{\alpha } = \widehat{\beta }\) .
-\item Let \(A \subset X\) ; suppose \(r : X \rightarrow A\) is a continuous map such that \(r( a) = a\) for each \(a \in A\) . (The map \(r\) is called a of \(X\) onto \(A\) ) If \({a}_{0} \in A\) , show that \[ {r}_{ * } : {\pi }_{1}( {X,{a}_{0}}) \rightarrow {\pi }_{1}( {A,{a}_{0}}) \] is surjective.
-\item Let \(A\) be a subspace of \({\mathbb{R}}^{n}\) ; let \(h : ( {A,{a}_{0}}) \rightarrow ( {Y,{y}_{0}})\) . Show that if \(h\) is extendable to a continuous map of \({\mathbb{R}}^{n}\) into \(Y\) , then \({h}_{ * }\) is the (the homomorphism that maps everything to the identity element).
+\item Let \(A \subset X\) ; suppose \(r : X \rightarrow A\) is a continuous map such that \(r( a) = a\) for each \(a \in A\) . (The map \(r\) is called a retraction of \(X\) onto \(A\).) If \({a}_{0} \in A\) , show that \[ {r}_{ * } : {\pi }_{1}( {X,{a}_{0}}) \rightarrow {\pi }_{1}( {A,{a}_{0}}) \] is surjective.
+\item Let \(A\) be a subspace of \({\mathbb{R}}^{n}\) ; let \(h : ( {A,{a}_{0}}) \rightarrow ( {Y,{y}_{0}})\) . Show that if \(h\) is extendable to a continuous map of \({\mathbb{R}}^{n}\) into \(Y\) , then \({h}_{ * }\) is the trivial homomorphism (the homomorphism that maps everything to the identity element).
 \item Show that if \(X\) is path connected, the homomorphism induced by a continuous map is independent of base point, up to isomorphisms of the groups involved. More precisely, let \(h : X \rightarrow Y\) be continuous, with \(h( {x}_{0}) = {y}_{0}\) and \(h( {x}_{1}) = {y}_{1}\) . Let \(\alpha\) be a path in \(X\) from \({x}_{0}\) to \({x}_{1}\) , and let \(\beta = h \circ \alpha\) . Show that \[ \widehat{\beta } \circ {( {h}_{{x}_{0}}) }_{ * } = {( {h}_{{x}_{1}}) }_{ * } \circ \widehat{\alpha }. \] This equation expresses the fact that the following diagram of maps ``commutes.'' \munkresfig[0.3]{52.2}
 \item Let \(G\) be a topological group with operation - and identity element \({x}_{0}\) Let \(\Omega ( {G,{x}_{0}})\) denote the set of all loops in \(G\) based at \({x}_{0}\) . If \(f,g \in \Omega ( {G,{x}_{0}})\) , let us define a loop \(f \otimes g\) by the rule \[ ( {f \otimes g}) ( s) = f( s) \cdot g( s) . \]
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
@@ -440,13 +440,13 @@ Similarly, \({i}_{ * }( [ f] ) = [ {i \circ f}] = [ f]\)
 \end{enumerate}
 \section*{§ 53 Covering Spaces}
 
- We have shown that any convex subspace of \({\mathbb{R}}^{n}\) has a trivial fundamental group; we turn now to the task of computing some fundamental groups that are not trivial. One of the most useful tools for this purpose is the notion of covering space, which we introduce in this section. Covering spaces are also important in the study of Riemann surfaces and complex manifolds. (See 		\cite{AhlforsSario1960}.) We shall study them in more detail in Chapter 13. Definition. Let \(p\;E \rightarrow B\) be a continuous surjective map. The open set \(U\) of \(B\) is said to be by \(p\) if the inverse image \({p}^{-1}( U)\) can be written as the union of disjoint open sets \({V}_{\alpha }\) in \(E\) such that for each \(\alpha\) , the restriction of \(p\) to \({V}_{\alpha }\) is a homeomorphism of \({V}_{\alpha }\) onto \(U\) The collection \(\{ {V}_{\alpha }\}\) will be called a partition of \({p}^{-1}( U)\) into slices
+ We have shown that any convex subspace of \({\mathbb{R}}^{n}\) has a trivial fundamental group; we turn now to the task of computing some fundamental groups that are not trivial. One of the most useful tools for this purpose is the notion of covering space, which we introduce in this section. Covering spaces are also important in the study of Riemann surfaces and complex manifolds. (See 		\cite{AhlforsSario1960}.) We shall study them in more detail in Chapter 13. Definition. Let \(p : E \rightarrow B\) be a continuous surjective map. The open set \(U\) of \(B\) is said to be evenly covered by \(p\) if the inverse image \({p}^{-1}( U)\) can be written as the union of disjoint open sets \({V}_{\alpha }\) in \(E\) such that for each \(\alpha\) , the restriction of \(p\) to \({V}_{\alpha }\) is a homeomorphism of \({V}_{\alpha }\) onto \(U\). The collection \(\{ {V}_{\alpha }\}\) will be called a partition of \({p}^{-1}( U)\) into slices
 
 If \(U\) is an open set that is evenly covered by \(p\) , we often picture the set \({p}^{-1}( U)\) as a ``stack of pancakes,'' each having the same size and shape as \(U\) , floating in the arr above \(U\) ; the map \(p\) squashes them all down onto \(U\) . See Figure 53.1. Note that if \(U\) is evenly covered by \(p\) and \(W\) is an open set contained in \(U\) , then \(W\) is also evenly covered by \(p\) .
 
 \munkresfig[0.5]{53.1}[Figure 53.1]
 \begin{definition}
-	Let \(p : B \rightarrow B\) be continuous and surjective. If every point \(b\) of \(B\) has a neighborhood \(U\) that is evenly covered by \(p\) , then \(p\) is called a covering map, and \(E\) is said to be a covering space of \(B\)
+	Let \(p : E \rightarrow B\) be continuous and surjective. If every point \(b\) of \(B\) has a neighborhood \(U\) that is evenly covered by \(p\) , then \(p\) is called a covering map, and \(E\) is said to be a covering space of \(B\)
 \end{definition}
 
 Note that if \(p : E \rightarrow B\) is a covering map, then for each \(b \in B\) the subspace \({p}^{-1}( b)\) of \(E\) has the discrete topology For each slice \({V}_{\alpha }\) is open in \(E\) and intersects the set \({p}^{-1}( b)\) in a single point; therefore, this point is open in \({p}^{-1}( b)\) .
@@ -462,7 +462,7 @@ Note also that if \(p : E \rightarrow B\) is a covering map, then \(p\) is an op
 In practice, one often restricts oneself to covering spaces that are path connected, to eliminate trivial coverings of the pancake-stack variety. An example of such a nontrivial covering space is the following.
 
 \begin{theorem}
-	The map \(p.\mathbb{R} \rightarrow {S}^{1}\) given by the equation
+	The map \(p : \mathbb{R} \rightarrow {S}^{1}\) given by the equation
 
 \[
 p( x) = ( {\cos {2\pi x},\sin {2\pi x}})
@@ -542,7 +542,7 @@ is a covering map.
 p \times p\mathbb{R} \times \mathbb{R} \rightarrow {S}^{1} \times {S}^{1}
 \]
 
-is a covering of the torus by the plane \({\mathbb{R}}^{2}\) , where \(p\) denotes the covering map of Theorem 53 1 Each of the unit squares \([ {n,n + 1}] \times [ {m,m + 1}]\) gets wrapped by \(p \times p\) entirely around the torus. See Figure 53.4
+is a covering of the torus by the plane \({\mathbb{R}}^{2}\) , where \(p\) denotes the covering map of Theorem 53.1. Each of the unit squares \([ {n,n + 1}] \times [ {m,m + 1}]\) gets wrapped by \(p \times p\) entirely around the torus. See Figure 53.4
 
 \munkresfig[0.9]{53.4}[Figure 53.4]
 In this figure, we have pictured the torus not as the product \({S}^{1} \times {S}^{1}\) , which is a subspace of \({\mathbb{R}}^{4}\) and thus difficult to visualize, but as the familiar doughnut-shaped surface \(D\) in \({\mathbb{R}}^{3}\) obtained by rotating the circle \({C}_{1}\) in the \({xz}\) -plane of radius \(\frac{1}{3}\) centered at(1,0,0)about the \(z\) -axis. It is not hard to see that \({S}^{1} \times {S}^{1}\) is homeomorphic with the surface \(D\) Let \({C}_{2}\) be the circle of radius 1 in the \({xy}\) -plane centered at the origin. Then let us map \({C}_{1} \times {C}_{2}\) into \(D\) by defining \(f( {a \times b})\) to be that point into which \(a\) is carried when one rotates the circle \({C}_{1}\) about the \(z\) -axis until its center hits the point \(b\) See Figure 53.5. The map \(f\) will be a homeomorphism of \({C}_{1} \times {C}_{2}\) with \(D\) , as you can check mentally. If you wish, you can write equations for \(f\) and check continuity, injectivity, and surjectivity directly. (Continuity of \({f}^{-1}\) will follow from compactness of \({C}_{1} \times {C}_{2}\) .)
