@@ -51,7 +51,7 @@ F( {s,0}) = f( s) \;\text{ and }\;F( {s,1}) = {f}^{\prime }( s) ,
 F( {0,t}) = {x}_{0}\;\text{ and }\;F( {1,t}) = {x}_{1},
 \]
 
-for each \(s \in I\) and each \(t \in I\) . We call \(F\) a path homotopy between \(f\) and \({f}^{\prime }\) See Figure 51.1. If \(f\) is path homotopic to \({f}^{\prime }\) , we write \(f{ \simeq }_{p}{f}^{\prime }\) .
+for each \(s \in I\) and each \(t \in I\) . We call \(F\) a path homotopy between \(f\) and \({f}^{\prime }\) . See Figure 51.1. If \(f\) is path homotopic to \({f}^{\prime }\) , we write \(f{ \simeq }_{p}{f}^{\prime }\) .
 \end{definition}
 
 \munkresfig[1.0]{51.1}[Figure 51.1]
@@ -59,7 +59,7 @@ The first condition says simply that \(F\) is a homotopy between \(f\) and \({f}
 
 \section*{Lemma 51.1. The relations \(\simeq\) and \({ \simeq }_{p}\) are equivalence relations.}
 
-If \(f\) is a path, we shall denote its path- class by \([ f]\) .
+If \(f\) is a path, we shall denote its path-homotopy equivalence class by \([ f]\) .
 
 \begin{proof}
 	Let us verify the properties of an equivalence relation.
@@ -67,7 +67,7 @@ Given \(f\) , it is trivial that \(f \simeq f\) ; the map \(F( {x,t}) = f( x)\) 
 
 Given \(f \simeq {f}^{\prime }\) , we show that \({f}^{\prime } \simeq f\) . Let \(F\) be a homotopy between \(f\) and \({f}^{\prime }\) . Then \(G( {x,t}) = F( {x,1 - t})\) is a homotopy between \({f}^{\prime }\) and \(f\) . If \(F\) is a path homotopy, so is \(G\) .
 
-Suppose that \(f \simeq {f}^{\prime }\) and \({f}^{\prime } \simeq {f}^{\prime \prime }\) . We show that \(f \simeq {f}^{\prime \prime }\) . Let \(F\) be a homotopy between \(f\) and \({f}^{\prime }\) , and let \({F}^{\prime }\) be a homotopy between \({f}^{\prime }\) and \({f}^{\prime \prime }\) . Define \(G : X \times I \rightarrow\) \(\gamma\) by the equation
+Suppose that \(f \simeq {f}^{\prime }\) and \({f}^{\prime } \simeq {f}^{\prime \prime }\) . We show that \(f \simeq {f}^{\prime \prime }\) . Let \(F\) be a homotopy between \(f\) and \({f}^{\prime }\) , and let \({F}^{\prime }\) be a homotopy between \({f}^{\prime }\) and \({f}^{\prime \prime }\) . Define \(G : X \times I \rightarrow Y\) by the equation
 
 \[
 G( {x,t}) = \{ \begin{array}{ll} F( {x,{2t}}) & \text{ for }t \in [ {0,\frac{1}{2}}] , \\ {F}^{\prime }( {x,{2t} - 1}) & \text{ for }t \in [ {\frac{1}{2},1}] . \end{array}.
@@ -75,28 +75,29 @@ G( {x,t}) = \{ \begin{array}{ll} F( {x,{2t}}) & \text{ for }t \in [ {0,\frac{1}{
 
 The map \(G\) is well defined, since if \(t = \frac{1}{2}\) , we have \(F( {x,{2t}}) = {f}^{\prime }( x) = {F}^{\prime }( {x,{2t} - 1})\) . Because \(G\) is continuous on the two closed subsets \(X \times [ {0,\frac{1}{2}}]\) and \(X \times [ {\frac{1}{2},1}]\) of \(X \times I\) , it is continuous on all of \(X \times I\) , by the pasting lemma. Thus \(G\) is the required homotopy between \(f\) and \({f}^{\prime \prime }\) .
 
-You can check that if \(F\) and \({F}^{\prime }\) are path homotopies, so is \(G\) . See Figure 51.2. is a homotopy between them. It is called a because it moves the point \(f( x)\) to the point \(g( x)\) along the straight-line segment joining them.
+You can check that if \(F\) and \({F}^{\prime }\) are path homotopies, so is \(G\) . See Figure 51.2.
 
-\munkresfig[1.0]{51.2}[Figure 51.2]
 \begin{centeredblock}
 \begin{example}
-	Let \(f\) and \(g\) be any two maps of a space \(X\) into \({\mathbb{R}}^{2}\) It is easy to see that \(f\) and \(g\) are homotopic; the map
+	Let \(f\) and \(g\) be any two maps of a space \(X\) into \({\mathbb{R}}^{2}\). It is easy to see that \(f\) and \(g\) are homotopic; the map
 
 \[
 F( {x,t}) = ( {1 - t}) f( x) + {tg}( x)
 \]
 
-If \(f\) and \(g\) are paths from \({x}_{0}\) to \({x}_{1}\) , then \(F\) will be a path homotopy, as you can check. This situation is pictured in Figure 5.1.3.
+is a homotopy between them. It is called a straight-line homotopy because it moves the point \(f( x)\) to the point \(g( x)\) along the straight-line segment joining them.
+
+If \(f\) and \(g\) are paths from \({x}_{0}\) to \({x}_{1}\) , then \(F\) will be a path homotopy, as you can check. This situation is pictured in Figure 51.3.
 \end{example}
 \end{centeredblock}
 
-More generally, let \(A\) be any convex subspace of \({\mathbb{R}}^{n}\) . (This means that for any two points \(a,b\) of \(A\) , the straight line segment joining \(a\) and \(b\) is contained in \(A\) .) Then any two paths \(f,g\) in \(A\) from \({x}_{0}\) to \({x}_{1}\) are path homotopic in \(A\) , for the straight-line homotopy \(F\) between them has image set in \(A\)
+More generally, let \(A\) be any convex subspace of \({\mathbb{R}}^{n}\) . (This means that for any two points \(a,b\) of \(A\) , the straight line segment joining \(a\) and \(b\) is contained in \(A\) .) Then any two paths \(f,g\) in \(A\) from \({x}_{0}\) to \({x}_{1}\) are path homotopic in \(A\) , for the straight-line homotopy \(F\) between them has image set in \(A\).
 
 \munkresfig[0.4]{51.3}[Figure 51.3]
 \munkresfig[0.4]{51.4}[Figure 51.4]
 \begin{centeredblock}
 \begin{example}
-	Let \(X\) denote the punctured plane, \({\mathbb{R}}^{2} - \{ 0\}\) , which we shall denote by \( {\mathbb{R}}^{2} - 0\) for short The following paths in \(X\) ,
+	Let \(X\) denote the punctured plane, \({\mathbb{R}}^{2} - \{ 0\}\) , which we shall denote by \( {\mathbb{R}}^{2} - 0\) for short. The following paths in \(X\) ,
 
 \[
 f( s) = ( {\cos {\pi s},\sin {\pi s}}) ,
@@ -120,7 +121,7 @@ This example illustrates the fact that you must know what the range space is bef
 \end{example}
 \end{centeredblock}
 
-Now we introduce some algebra into this geometric situation. We define a certain operation on s as follows:
+Now we introduce some algebra into this geometric situation. We define a certain operation on path-homotopy classes as follows:
 \end{proof}
 \begin{definition}
 	If \(f\) is a path in \(X\) from \({x}_{0}\) to \({x}_{1}\) , and if \(g\) is a path in \(X\) from \({x}_{1}\) to \({x}_{2}\) , we define the product \( f * g\) of \(f\) and \(g\) to be the path \(h\) given by the equations
@@ -147,7 +148,7 @@ H( {s,t}) = \{ \begin{array}{ll} F( {{2s},t}) & \text{ for }s \in [ {0,\frac{1}{
 Because \(F( {1,t}) = {x}_{1} = G( {0,t})\) for all \(t\) , the map \(H\) is well-defined; it is continuous by the pasting lemma. You can check that \(H\) is the required path homotopy between \(f * g\) and \({f}^{\prime } * {g}^{\prime }\) It is pictured in Figure 51.5.
 
 \munkresfig[1.0]{51.5}[Figure 51.5]
-The operation \(*\) on path-homotopy classes turns out to satisfy properties that look very much like the axioms for a group. They are called the of \(*\) . One difference from the properties of a group is that \([ f] * [ g]\) is not defined for every pair of classes, but only for those pairs \([ f] ,[ g]\) for which \(f( 1) = g( 0)\) .
+The operation \(*\) on path-homotopy classes turns out to satisfy properties that look very much like the axioms for a group. They are called the groupoid properties of \(*\) . One difference from the properties of a group is that \([ f] * [ g]\) is not defined for every pair of classes, but only for those pairs \([ f] ,[ g]\) for which \(f( 1) = g( 0)\) .
 
 \begin{theorem}
 	The operation \(*\) has the following properties:
@@ -204,7 +205,7 @@ If \([ {a,b}]\) and \([ {c,d}]\) are two intervals in \(\mathbb{R}\) , there is 
 
 With this terminology, the product \(f * g\) can be described as follows: \(\operatorname{On}[ {0,\frac{1}{2}}]\) , it equals the positive linear map of \([ {0,\frac{1}{2}}]\) to \([ {0,1}]\) , followed by \(f\) ; and on \([ {\frac{1}{2},1}]\) , it equals the positive linear map of \([ {\frac{1}{2},1}]\) to \([ {0,1}]\) , followed by \(g\) .
 
-Now we verify (1). Given paths \(f,g\) , and \(h\) in \(X\) , the products \(f * ( {g * h})\) and \(( {f * g}) * h\) are defined precisely when \(f( 1) = g( 0)\) and \(g( 1) = h( 0)\) . Assuming these two conditions, we define also a ``triple product'' of the paths \(f,g\) , and \(h\) as follows: Choose points \(a\) and \(b\) of \(I\) so that \(0 < a < b < 1\) . Define a path \({k}_{a,b}\) in \(X\) as follows: On \([ {0,a}]\) it equals the positive linear map of \([ {0,a}]\) to \(I\) followed by \(f\) ; on \([ {a,b}]\) it equals the positive linear map of \([ {a,b}]\) to \(l\) followed by \(g\) ; and on \([ {b,1}]\) it equals the positive linear map of \([ {b,1}]\) to \(l\) followed by \(h\) . The path \({k}_{a,b}\) depends of course on the choice of the points \(a\) and \(b\) . But its path-homotopy class does not! We show that if \(c\) and \(d\) are another pair of points of \(I\) with \(0 < c < d < 1\) , then \({k}_{c,d}\) is path homotopic to \({k}_{a,b}\) .
+Now we verify (1). Given paths \(f,g\) , and \(h\) in \(X\) , the products \(f * ( {g * h})\) and \(( {f * g}) * h\) are defined precisely when \(f( 1) = g( 0)\) and \(g( 1) = h( 0)\) . Assuming these two conditions, we define also a ``triple product'' of the paths \(f,g\) , and \(h\) as follows: Choose points \(a\) and \(b\) of \(I\) so that \(0 < a < b < 1\) . Define a path \({k}_{a,b}\) in \(X\) as follows: On \([ {0,a}]\) it equals the positive linear map of \([ {0,a}]\) to \(I\) followed by \(f\) ; on \([ {a,b}]\) it equals the positive linear map of \([ {a,b}]\) to \(I\) followed by \(g\) ; and on \([ {b,1}]\) it equals the positive linear map of \([ {b,1}]\) to \(I\) followed by \(h\) . The path \({k}_{a,b}\) depends of course on the choice of the points \(a\) and \(b\) . But its path-homotopy class does not! We show that if \(c\) and \(d\) are another pair of points of \(I\) with \(0 < c < d < 1\) , then \({k}_{c,d}\) is path homotopic to \({k}_{a,b}\) .
 
 Let \(p : I \rightarrow I\) be the map whose graph is pictured in Figure 51.9. When restricted to \([ {0,a}] ,[ {a,b}]\) , and \([ {b,1}]\) , respectively, it equals the positive linear maps of these intervals onto \([ {0,c}] ,[ {c,d}]\) , and \([ {d,1}]\) , respectively. It follows at once that \({k}_{c,d} \circ p\) equals \({k}_{a,b}\) . But \(p\) is a path in \(I\) from 0 to 1 ; and so is the identity map \(i : I \rightarrow I\) . Hence, there is a path homotopy \(P\) in \(I\) between \(p\) and \(i\) . Then \({k}_{c,d} \circ P\) is a path homotopy in \(X\) between \({k}_{a,b}\) and \({k}_{c,d}\)
 
@@ -224,7 +225,7 @@ The argument just used to prove associativity goes through for any finite produc
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item Show that if \(h,{h}^{\prime } : X \rightarrow Y\) are homotopic and \(k,{k}^{\prime } : Y \rightarrow Z\) are homotopic, then \(k \circ h\) and \({k}^{\prime } \circ {h}^{\prime }\) are homotopic.
-\item Given spaces \(X\) and \(Y\) , let \(\) denote the set of homotopy classes of maps of \(X\) into \(Y\) .
+\item Given spaces \(X\) and \(Y\) , let \([X,Y]\) denote the set of homotopy classes of maps of \(X\) into \(Y\) .
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Let \(I = [ {0,1}]\) . Show that for any \(X\) , the set \([ {X,I}]\) has a single element.
  \item Show that if \(Y\) is path connected, the set \([ {I,Y}]\) has a single element.
@@ -232,33 +233,33 @@ The argument just used to prove associativity goes through for any finite produc
 \item A space \(X\) is said to be contractible if the identity map \({i}_{X} : X \rightarrow X\) is nulho-motopic.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show that \(I\) and \(\mathbb{R}\) are contractible.
- \item Show that a is path connected.
+ \item Show that a contractible space is path connected.
  \item Show that if \(Y\) is contractible, then for any \(X\) , the set \([ {X,Y}]\) has a single element.
  \item Show that if \(X\) is contractible and \(Y\) is path connected, then \([ {X,Y}]\) has a single element.
  \end{enumerate}
 \end{enumerate}
 \section*{§ 52 The Fundamental Group}
 
-The set of path-homotopy classes of paths in a space \(X\) does not form a group under the operation \(*\) because the product of two path-homotopy classes is not always defined. But suppose we pick out a point \({x}_{0}\) of \(X\) to serve as a ``'' and restrict ourselves to those paths that begin and end at \({x}_{0}\) The set of these path-homotopy classes does form a group under \(*\) . It will be called the fundamental group of \(X\) .
+The set of path-homotopy classes of paths in a space \(X\) does not form a group under the operation \(*\) because the product of two path-homotopy classes is not always defined. But suppose we pick out a point \({x}_{0}\) of \(X\) to serve as a ``base point'' and restrict ourselves to those paths that begin and end at \({x}_{0}\) The set of these path-homotopy classes does form a group under \(*\) . It will be called the fundamental group of \(X\) .
 
 In this section, we shall study the fundamental group and derive some of its properties. In particular, we shall show that the group is a topological invariant of the space \(X\) , the fact that is of crucial importance in using it to study homeomorphism problems.
 
-Let us first review some terminology from group theory. Suppose \(G\) and \({G}^{\prime }\) are groups, written multiplicatively A homomorphism \(f : G \rightarrow {G}^{\prime }\) is a map such that \(f( {x \cdot y}) = f( x) \cdot f( y)\) for all \(x,y\) ; it automatically satisfies the equations \(f( e) = {e}^{\prime }\) and \(f( {x}^{-1}) = f{( x) }^{-1}\) , where \(e\) and \({e}^{\prime }\) are the identities of \(G\) and \({G}^{\prime }\) , respectively, and the exponent -1 denotes the inverse. The kernel of \(f\) is the set \({f}^{-1}( {e}^{\prime })\) ; it is a subgroup of \(G\) . The image of \(f\) , similarly, is a subgroup of \({G}^{\prime }\) . The homomorphism \(f\) is called a if it is injective (or equivalently, if the kernel of \(f\) consists of \(e\) alone). It is called an if it is surjective; and it is called an isomorphism if it is bijective
+Let us first review some terminology from group theory. Suppose \(G\) and \({G}^{\prime }\) are groups, written multiplicatively. A homomorphism \(f : G \rightarrow {G}^{\prime }\) is a map such that \(f( {x \cdot y}) = f( x) \cdot f( y)\) for all \(x,y\) ; it automatically satisfies the equations \(f( e) = {e}^{\prime }\) and \(f( {x}^{-1}) = f{( x) }^{-1}\) , where \(e\) and \({e}^{\prime }\) are the identities of \(G\) and \({G}^{\prime }\) , respectively, and the exponent -1 denotes the inverse. The kernel of \(f\) is the set \({f}^{-1}( {e}^{\prime })\) ; it is a subgroup of \(G\) . The image of \(f\) , similarly, is a subgroup of \({G}^{\prime }\) . The homomorphism \(f\) is called a monomorphism if it is injective (or equivalently, if the kernel of \(f\) consists of \(e\) alone). It is called an if it is surjective; and it is called an isomorphism if it is bijective
 
-Suppose \(G\) is a group and \(H\) is a subgroup of \(G\) . Let \({xH}\) denote the set of all products \({xh}\) , for \(h \in H\) ; it is called a left coset of \(H\) in \(G\) . The collection of all such cosets forms a partition of \(G\) . Similarly, the collection of all \({Hx}\) of \(H\) in \(G\) forms a partition of \(G\) . We call \(H\) a of \(G\) if \(x \cdot h \cdot {x}^{-1} \in H\) for each \(x \in G\) and each \(h \in H\) . In this case, we have \({xH} = {Hx}\) for each \(x\) , so that our two partitions of \(G\) are the same. We denote this partition by \(G/H\) ; if one defines
+Suppose \(G\) is a group and \(H\) is a subgroup of \(G\) . Let \({xH}\) denote the set of all products \({xh}\) , for \(h \in H\) ; it is called a left coset of \(H\) in \(G\) . The collection of all such cosets forms a partition of \(G\) . Similarly, the collection of all right cosets \({Hx}\) of \(H\) in \(G\) forms a partition of \(G\) . We call \(H\) a normal subgroup of \(G\) if \(x \cdot h \cdot {x}^{-1} \in H\) for each \(x \in G\) and each \(h \in H\) . In this case, we have \({xH} = {Hx}\) for each \(x\) , so that our two partitions of \(G\) are the same. We denote this partition by \(G/H\) ; if one defines
 
 \[
 ( {xH}) \cdot ( {yH}) = ( {x \cdot y}) H
 \]
 
-one obtains a well-defined operation on \(G/H\) that makes it a group. This group is called the quotient of \(G\) by \(H\) . The map \(f : G \rightarrow G/H\) carrying \(x\) to \({xH}\) is an epimorphism with kernel \(H\) Conversely, if \(f : G \rightarrow {G}^{\prime }\) is an epimorphism, then its kernel \(N\) is a normal subgroup of \(G\) , and \(f\) induces an isomorphism \(G/N \rightarrow {G}^{\prime }\) that carries \({xN}\) to \(f( x)\) for each \(x \in G\) .
+one obtains a well-defined operation on \(G/H\) that makes it a group. This group is called the quotient of \(G\) by \(H\) . The map \(f : G \rightarrow G/H\) carrying \(x\) to \({xH}\) is an epimorphism with kernel \(H\). Conversely, if \(f : G \rightarrow {G}^{\prime }\) is an epimorphism, then its kernel \(N\) is a normal subgroup of \(G\) , and \(f\) induces an isomorphism \(G/N \rightarrow {G}^{\prime }\) that carries \({xN}\) to \(f( x)\) for each \(x \in G\) .
 
 If the subgroup \(H\) of \(G\) is not normal, it will still be convenient to use the symbol \(G/H\) ; we will use it to denote the collection of right cosets of \(H\) in \(G\) .
 
 Now we define the fundamental group.
 
 \begin{definition}
-	Let \(X\) be a space; let \({x}_{0}\) be a point of \(X\) . A path in \(X\) that begins and ends at \({x}_{0}\) is called a based at \({x}_{0}\) . The set of path homotopy classes of loops based at \({x}_{0}\) , with the operation \(*\) , is called the fundamental group of \(X\) relative to the base point \({x}_{0}\) . It is denoted by \( {\pi }_{1}( {X,{x}_{0}})\) .
+	Let \(X\) be a space; let \({x}_{0}\) be a point of \(X\) . A path in \(X\) that begins and ends at \({x}_{0}\) is called a loop based at \({x}_{0}\) . The set of path homotopy classes of loops based at \({x}_{0}\) , with the operation \(*\) , is called the fundamental group of \(X\) relative to the base point \({x}_{0}\) . It is denoted by \( {\pi }_{1}( {X,{x}_{0}})\) .
 \end{definition}
 
 It follows from Theorem 51.2 that the operation \(*\) , when restricted to this set, satisfies the axioms for a group. Given two loops \(f\) and \(g\) based at \({x}_{0}\) , the product \(f * g\) is always defined and is a loop based at \({x}_{0}\) . Associativity, the existence of an identity element \([ {e}_{{x}_{0}}]\) , and the existence of an inverse \([ \bar{f}]\) for \([ f]\) are immediate.
@@ -270,7 +271,7 @@ Sometimes this group is called the first homotopy group of \(X\) , which term im
 	Let \({\mathbb{R}}^{n}\) denote euclidean \(n\) -space. Then \({\pi }_{1}( {{\mathbb{R}}^{n},{x}_{0}})\) is the trivial group (the group consisting of the identity alone). For if \(f\) is a loop in \({\mathbb{R}}^{n}\) based at \({x}_{0}\) , the straight-line homotopy is a path homotopy between \(f\) and the constant path at \({x}_{0}\) . More generally, if \(X\) is any convex subset of \({\mathbb{R}}^{n}\) , then \({\pi }_{1}( {X,{x}_{0}})\) is the trivial group. In particular, the unit ball \({B}^{n}\) in \({\mathbb{R}}^{n}\) .
 
 \[
-{B}^{n} = \{ {\mathbf{x} \mid {x}_{1}^{2} + \; + {x}_{n}^{2} \leq 1}\} ,
+{B}^{n} = \{ {\mathbf{x} \mid {x}_{1}^{2} + \cdots + {x}_{n}^{2} \leq 1}\} ,
 \]
 
 has trivial fundamental group.
@@ -347,7 +348,7 @@ It turns out that the isomorphism of \({\pi }_{1}( {X,{x}_{0}})\) with \({\pi }_
 \begin{proof}
 	Let \(\alpha\) and \(\beta\) be two paths from \({x}_{0}\) to \({x}_{1}\) Then \(\alpha * \bar{\beta }\) is defined and is a loop on \(X\) based at \({x}_{0}\) . Since \(X\) is simply connected, this loop is path homotopic to the constant loop at \({x}_{0}\) . Then
 \[
-[ {\alpha * \bar{\beta }}] * [ \dot{\beta }] = [ {e}_{{x}_{0}}] * [ \beta ] ,
+[ {\alpha * \bar{\beta }}] * [ \beta ] = [ {e}_{{x}_{0}}] * [ \beta ] ,
 \]
 
 from which it follows that \([ \alpha ] = [ \beta ]\) .
@@ -363,10 +364,10 @@ h : ( {X,{x}_{0}}) \rightarrow ( {Y,{y}_{0}}) .
 If \(f\) is a loop in \(X\) based at \({x}_{0}\) , then the composite \(h \circ f : I \rightarrow Y\) is a loop in \(Y\) based at \({y}_{0}\) . The correspondence \(f \rightarrow h \circ f\) thus gives rise to a map carrying \({\pi }_{1}( {X,{x}_{0}})\) into \({\pi }_{1}( {Y,{y}_{0}})\) . We define it formally as follows:
 \end{proof}
 \begin{definition}
-	Let \(h.( {X,{x}_{0}}) \rightarrow ( {Y,{y}_{0}})\) be a continuous map. Define
+	Let \(h : ( {X,{x}_{0}}) \rightarrow ( {Y,{y}_{0}})\) be a continuous map. Define
 
 \[
- {h}_{ * }.{\pi }_{1}( {X,{x}_{0}}) \rightarrow {\pi }_{1}( {Y,{y}_{0}})
+ {h}_{ * } : {\pi }_{1}( {X,{x}_{0}}) \rightarrow {\pi }_{1}( {Y,{y}_{0}})
 \]
 
 by the equation
