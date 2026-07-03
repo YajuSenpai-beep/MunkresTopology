@@ -214,7 +214,7 @@ Recall that a space \(X\) is said to be Hausdorff if for each pair \(x,y\) of di
 	Suppose that one-point sets are closed in \(X\) . Then \(X\) is said to be regular if for each pair consisting of a point \(x\) and a closed set \(B\) disjoint from \(x\) , there exist disjoint open sets containing \(x\) and \(B\) , respectively. The space \(X\) is said to be normal if for each pair \(A,B\) of disjoint closed sets of \(X\) , there exist disjoint open sets containing \(A\) and \(B\) , respectively.
 \end{definition}
 
-It is clear that a regular space is Hausdorff, and that a is regular. (We need to include the condition that one-point sets be closed as part of the definition of regularity and in order for this to be the case. A two-point space in the indiscrete topology satisfies the other part of the definitions of regularity and normality, even though it is not Hausdorff.) For examples showing the regularity axiom stronger than the Hausdorff axiom, and normality stronger than regularity, see Examples 1 and 3.
+It is clear that a regular space is Hausdorff, and that a normal space is regular. (We need to include the condition that one-point sets be closed as part of the definition of regularity and in order for this to be the case. A two-point space in the indiscrete topology satisfies the other part of the definitions of regularity and normality, even though it is not Hausdorff.) For examples showing the regularity axiom stronger than the Hausdorff axiom, and normality stronger than regularity, see Examples 1 and 3.
 
 These axioms are called separation axioms for the reason that they involve ``separating'' certain kinds of sets from one another by disjoint open sets. We have used the word ``separation'' before, of course, when we studied connected spaces. But in that case, we were trying to find disjoint open sets whose union was the entire space.
 
@@ -285,7 +285,7 @@ are disjoint open sets about \(A\) and \(B\) , respectively.
 
 The space \({\mathbb{R}}_{\ell }\) is regular (in fact, normal), so the product space \({\mathbb{R}}_{\ell }^{2}\) is also regular. Thus this example serves two purposes. It shows that a regular space need not be normal, and it shows that the product of two normal spaces need not be normal
 
-We suppose \({\mathbb{R}}_{\ell }^{2}\) is normal and derive a contradiction Let \(L\) be the subspace of \({\mathbb{R}}_{\ell }^{2}\) consisting of all points of the form \(x \times ( {-x})\) Then \(L\) is closed in \({\mathbb{R}}_{\ell }^{2}\) , and \(L\) has the discrete topology. Hence every subset \(A\) of \(L\) , being closed in \(L\) , is closed in \({\mathbb{R}}_{I}^{2}\) . Because \(L - A\) is also closed in \({\mathbb{R}}_{\ell }^{2}\) , this neans that for every nonempty proper subset \(A\) of \(L\) , one can find disjoint open sets \({U}_{A}\) and \({V}_{A}\) containing \(A\) and \(L - A\) , respectively
+We suppose \({\mathbb{R}}_{\ell }^{2}\) is normal and derive a contradiction Let \(L\) be the subspace of \({\mathbb{R}}_{\ell }^{2}\) consisting of all points of the form \(x \times ( {-x})\) Then \(L\) is closed in \({\mathbb{R}}_{\ell }^{2}\) , and \(L\) has the discrete topology. Hence every subset \(A\) of \(L\) , being closed in \(L\) , is closed in \({\mathbb{R}}_{\ell }^{2}\) . Because \(L - A\) is also closed in \({\mathbb{R}}_{\ell }^{2}\) , this means that for every nonempty proper subset \(A\) of \(L\) , one can find disjoint open sets \({U}_{A}\) and \({V}_{A}\) containing \(A\) and \(L - A\) , respectively
 
 Let \(D\) denote the set of points of \({\mathbb{R}}_{\ell }^{2}\) having rational coordinates; it is dense in \({\mathbb{R}}_{\ell }^{2}\) . We define a map \(\theta\) that assigns, to each subset of the line \(L\) , a subset of the set \(D\) , by setting
 
@@ -301,9 +301,9 @@ Let \(D\) denote the set of points of \({\mathbb{R}}_{\ell }^{2}\) having ration
 \theta ( L) = D\text{ . }
 \]
 
-We show that \(\theta \cdot \mathcal{P}( L) \rightarrow \mathcal{P}( D)\) is injective.
+We show that \(\theta : \mathcal{P}( L) \rightarrow \mathcal{P}( D)\) is injective.
 
-Let \(A\) be a proper nonempty subset of \(L\) . Then \(\theta ( A) = D \cap {U}_{A}\) is neither empty (since \({U}_{A}\) is open and \(D\) is dense in \({\mathbb{R}}_{t}^{2}\) ) nor all of \(D\) (since \(D \cap {V}_{A}\) is nonempty). It remains to show that if \(B\) is another proper nonempty subset of \(L\) , then \(\theta ( A) \neq \theta ( B)\) .
+Let \(A\) be a proper nonempty subset of \(L\) . Then \(\theta ( A) = D \cap {U}_{A}\) is neither empty (since \({U}_{A}\) is open and \(D\) is dense in \({\mathbb{R}}_{\ell }^{2}\) ) nor all of \(D\) (since \(D \cap {V}_{A}\) is nonempty). It remains to show that if \(B\) is another proper nonempty subset of \(L\) , then \(\theta ( A) \neq \theta ( B)\) .
 
 One of the sets \(A,B\) contains a point not in the other; suppose that \(x \in A\) and \(x \notin B\) . Then \(x \in L - B\) , so that \(x \in {U}_{A} \cap {V}_{B}\) ; since the latter set is open and nonempty, it must contain points of \(D\) These points belong to \({U}_{A}\) and not to \({U}_{B}\) , therefore, \(D \cap {U}_{A} \neq D \cap {U}_{B}\) , as desired. Thus \(\theta\) is injective
 
@@ -495,7 +495,7 @@ in the product space. See Figure 32.3. Now we have a contradiction, for the poin
 \item A space \(X\) is said to be completely normal if every subspace of \(X\) is normal. Show that \(X\) is completely normal if and only if for every pair \(A,B\) of separated sets in \(X\) (that is, sets such that \(\bar{A} \cap B = \varnothing\) and \(A \cap \bar{B} = \varnothing\) ), there exist disjoint open sets containing them. [Hint: If \(X\) is completely normal, consider \(X - ( {\bar{A} \cap \bar{B}})\) .]
 \item Which of the following spaces are completely normal? Justify your answers.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
- \item A subspace of a .
+ \item A subspace of a completely normal space.
  \item The product of two completely normal spaces.
  \item A well-ordered set in the order topology.
  \item A metrizable space.
@@ -516,7 +516,7 @@ in the product space. See Figure 32.3. Now we have a contradiction, for the poin
 \end{enumerate}
 \section*{§ 33 The Urysohn Lemma}
 
-Now we come to the first deep theorem of the book, a theorem that is commonly called the ``.'' It asserts the existence of certain real-valued continuous functions on a normal space \(X\) . It is the crucial tool used in proving a number of important theorems. We shall prove three of them-the Urysohn metrization theorem, the Tietze extension theorem, and an imbedding theorem for manifolds-in succeeding sections of this chapter.
+Now we come to the first deep theorem of the book, a theorem that is commonly called the ``Urysohn lemma.'' It asserts the existence of certain real-valued continuous functions on a normal space \(X\) . It is the crucial tool used in proving a number of important theorems. We shall prove three of them-the Urysohn metrization theorem, the Tietze extension theorem, and an imbedding theorem for manifolds-in succeeding sections of this chapter.
 
 Why do we call the Urysohn lemma a ``deep'' theorem? Because its proof involves a really original idea, which the previous proofs did not. Perhaps we can explain what we mean this way: By and large, one would expect that if one went through this book and deleted all the proofs we have given up to now and then handed the book to a bright student who had not studied topology, that student ought to be able to go through the book and work out the proofs independently. (It would take a good deal of time and effort, of course; and one would not expect the student to handle the trickier examples.) But the Urysohn lemma is on a different level. It would take considerably more originality than most of us possess to prove this lemma unless we were given copious hints \({}^{1}\)
 
@@ -543,13 +543,13 @@ Thus, the sets \({U}_{p}\) will be simply ordered by inclusion in the same way t
 
 Because \(P\) is countable, we can use induction to define the sets \({U}_{p}\) (or rather, the principle of recursive definition). Arrange the elements of \(P\) in an infinite sequence in some way; for convenience, let us suppose that the numbers 1 and 0 are the first two elements of the sequence.
 
-Now define the sets \({U}_{p}\) , as follows. First, define \({U}_{1} = X - B\) . Second, becond, because \(A\) is a closed set contained in the open set \({U}_{1}\) , we may by normality of \(X\) choose an open set \({U}_{0}\) such that
+Now define the sets \({U}_{p}\) , as follows. First, define \({U}_{1} = X - B\) . Second, because \(A\) is a closed set contained in the open set \({U}_{1}\) , we may by normality of \(X\) choose an open set \({U}_{0}\) such that
 
 \[
 A \subset {U}_{0}\;\text{ and }\;{\bar{U}}_{0} \subset {U}_{1}
 \]
 
-In general, let \({P}_{n}\) denote the set consisting of the first \(n\) rational numbers in the sequence. Suppose that \({U}_{p}\) is defined for all rational numbers \(p\) belongingg to the set \({P}_{n}\) , satisfying the condition
+In general, let \({P}_{n}\) denote the set consisting of the first \(n\) rational numbers in the sequence. Suppose that \({U}_{p}\) is defined for all rational numbers \(p\) belonging to the set \({P}_{n}\) , satisfying the condition
 
 (*)
 \[
@@ -1099,7 +1099,7 @@ Finally, \(h\) maps all of \(X\) into the open interval(-1,1). For if \(x \in D\
 \end{enumerate}
 \section*{*§ 36 Imbeddings of Manifolds \protect\sectionDagger}
 
-We have shown that every regular space with a countable basis can be imbedded in the ``infinite-dimensional'' euclidean space \({\mathbb{R}}^{\omega }\) It is natural to ask under what conditions a space \(X\) can be umbedded in some finite-dimensional euclidean space \({\mathbb{R}}^{N}\) . One answer to this question is given in this section. A more general answer will be obtained in Chapter 8, when we study dimension theory. Definition. An \(m\) -manifold is a Hausdorff space \(X\) with a countable basis such that each point \(x\) of \(X\) has a neighborhood that is homeomorphic with an open subset of \({\mathbb{R}}^{m}\) .
+We have shown that every regular space with a countable basis can be imbedded in the ``infinite-dimensional'' euclidean space \({\mathbb{R}}^{\omega }\) It is natural to ask under what conditions a space \(X\) can be imbedded in some finite-dimensional euclidean space \({\mathbb{R}}^{N}\) . One answer to this question is given in this section. A more general answer will be obtained in Chapter 8, when we study dimension theory. Definition. An \(m\) -manifold is a Hausdorff space \(X\) with a countable basis such that each point \(x\) of \(X\) has a neighborhood that is homeomorphic with an open subset of \({\mathbb{R}}^{m}\) .
 
 \customfootnote{
 
@@ -1113,7 +1113,7 @@ We shall prove that if \(X\) is a compact manifold, then \(X\) can be imbedded i
 
 First, we need some terminology.
 
-If \(\phi : X \rightarrow \mathbb{R}\) , then the of \(\phi\) is defined to be the closure of the set \({\phi }^{-1}( {\mathbb{R}-\{ 0\} })\) . Thus if \(x\) lies outside the support of \(\phi\) , there is some neighborhood of \(x\) on which \(\phi\) vanishes
+If \(\phi : X \rightarrow \mathbb{R}\) , then the support of \(\phi\) is defined to be the closure of the set \({\phi }^{-1}( {\mathbb{R}-\{ 0\} })\) . Thus if \(x\) lies outside the support of \(\phi\) , there is some neighborhood of \(x\) on which \(\phi\) vanishes
 
 \begin{definition}
 	Let \(\{ {{U}_{1},\ldots ,{U}_{n}}\}\) be a finite indexed open covering of the space \(X\) . An indexed family of continuous functions
@@ -1122,11 +1122,11 @@ If \(\phi : X \rightarrow \mathbb{R}\) , then the of \(\phi\) is defined to be t
 {\phi }_{i} : X \rightarrow [ {0,1}] \;\text{ for }i = 1,\ldots ,n,
 \]
 
-is said to be a dominated by \(\{ {U}_{t}\}\) if
+is said to be a partition of unity dominated by \(\{ {U}_{i}\}\) if
 
 (1) (support \({\phi }_{i}\) ) \(\subset {U}_{i}\) for each \(i\) .
 
-(2) \(\mathop{\sum }\limits_{{i = 1}}^{n}{\phi }_{i}( x) = 1\) for each \(\lambda\) .
+(2) \(\mathop{\sum }\limits_{{i = 1}}^{n}{\phi }_{i}( x) = 1\) for each \(x\) .
 \end{definition}
 
 \begin{theorem}[Existence of finite partitions of unity]
