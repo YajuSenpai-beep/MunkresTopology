@@ -665,7 +665,7 @@ Choose subdivisions
 of \(I\) fine enough that each rectangle
 
 \[
-{I}_{i} \times {J}_{j} = [ {{s}_{i - 1},{s}_{i}}] \times [ {{t}_{j - 1},{t}_{j}}\}
+{I}_{i} \times {J}_{j} = [ {{s}_{i - 1},{s}_{i}}] \times [ {{t}_{j - 1},{t}_{j}}]
 \]
 
 is mapped by \(F\) into an open set of \(B\) that is evenly covered by \(p\) . (Use the Lebesgue number lemma.) We define the lifting \(\widetilde{F}\) step by step, beginning with the rectangle \({I}_{1} \times {J}_{1}\) , continuing with the other rectangles \({I}_{t} \times {J}_{1}\) in the ``bottom row,'' then with the rectangles \({I}_{i} \times {J}_{2}\) in the next row, and so on.
@@ -697,7 +697,7 @@ Now suppose that \(F\) is a path homotopy. We wish to show that \(\widetilde{F}\
 	Let \(p : E \rightarrow B\) be a covering map; let \(p( {e}_{0}) = {b}_{0}\) . Let \(f\) and \(g\) be two paths in \(B\) from \({b}_{0}\) to \({b}_{1}\) , let \(\widetilde{f}\) and \(\widetilde{g}\) be their respective liftings to paths in \(E\) beginning at \({e}_{0}\) . If \(f\) and \(g\) are path homotopic, then \(\widetilde{f}\) and \(\widetilde{g}\) end at the same point of \(E\) and are path homotopic.
 \end{theorem}
 \begin{proof}
-	Let \(F : I \times I \rightarrow B\) be the path homotopy between \(f\) and \(g\) . Then \(F( {0,0}) =\) \({b}_{0}\) Let \(\bar{F} : I \times I \rightarrow E\) be the lifting of \(F\) to \(E\) such that \(\bar{F}( {0,0}) = {e}_{0}\) . By the preceding lemma, \(\bar{F}\) is a path homotopy, so that \(\bar{F}( {0 \times I}) = \{ {e}_{0}]\) and \(\bar{F}( {1 \times I})\) is a one-point set \(\{ {e}_{1}]\)
+	Let \(F : I \times I \rightarrow B\) be the path homotopy between \(f\) and \(g\) . Then \(F( {0,0}) =\) \({b}_{0}\). Let \(\bar{F} : I \times I \rightarrow E\) be the lifting of \(F\) to \(E\) such that \(\bar{F}( {0,0}) = {e}_{0}\) . By the preceding lemma, \(\bar{F}\) is a path homotopy, so that \(\bar{F}( {0 \times I}) = \{ {e}_{0}]\) and \(\bar{F}( {1 \times I})\) is a one-point set \(\{ {e}_{1}]\)
 
 The restriction \(\bar{F} \mid I \times 0\) of \(\bar{F}\) to the bottom edge of \(I \times I\) is a path on \(E\) beginning at \({e}_{0}\) that is a lifting of \(F \mid I \times 0\) . By uniqueness of path liftings, we must have \(\bar{F}( {s,0}) =\) \(\widetilde{f}( s)\) . Similarly, \(\bar{F} \mid I \times 1\) is a path on \(E\) that is a lifting of \(F \mid I \times 1\) , and it begins at \({e}_{0}\) because \(\bar{F}( {0 \times I}) = \{ {e}_{0}]\) . By uniqueness of path liftings, \(\bar{F}( {s,1}) = \widetilde{g}( s)\) Therefore, both \(\bar{f}\) and \(\bar{g}\) end at \({e}_{1}\) , and \(\bar{F}\) is a path homotopy between them.
 \end{proof}
@@ -709,7 +709,7 @@ The restriction \(\bar{F} \mid I \times 0\) of \(\bar{F}\) to the bottom edge of
 \phi : {\pi }_{1}( {B,{b}_{0}}) \rightarrow {p}^{-1}( {b}_{0}) .
 \]
 
-We call \(\phi\) the derived from the covering map \(p\) . It depends of course on the choice of the point \({e}_{0}\) .
+We call \(\phi\) the lifting correspondence derived from the covering map \(p\) . It depends of course on the choice of the point \({e}_{0}\) .
 \end{definition}
 
 \begin{theorem}
@@ -751,7 +751,7 @@ on \(\mathbb{R}\) . Because \(p( {n + x}) = p( x)\) for all \(x \in \mathbb{R}\)
 \]
 \end{proof}
 \begin{definition}
-	Let \(G\) be a group; let \(x\) be an element of \(G\) . We denote the inverse of \(x\) by \({x}^{-1}\) . The symbol \({x}^{n}\) denotes the \(n\) -fold product of \(x\) with itself, \({x}^{-n}\) denotes the \(n\) -fold product of \({x}^{-1}\) with itself, and \({x}^{0}\) denotes the identity element of \(G\) . If the set of all elements of the form \({x}^{m}\) , for \(m \in \mathbb{Z}\) , equals \(G\) , then \(G\) is said to be a , and \(x\) is said to be a generator of \(G\) .
+	Let \(G\) be a group; let \(x\) be an element of \(G\) . We denote the inverse of \(x\) by \({x}^{-1}\) . The symbol \({x}^{n}\) denotes the \(n\) -fold product of \(x\) with itself, \({x}^{-n}\) denotes the \(n\) -fold product of \({x}^{-1}\) with itself, and \({x}^{0}\) denotes the identity element of \(G\) . If the set of all elements of the form \({x}^{m}\) , for \(m \in \mathbb{Z}\) , equals \(G\) , then \(G\) is said to be a cyclic group, and \(x\) is said to be a generator of \(G\) .
 \end{definition}
 
 The cardinality of a group is also called the order of the group. A group is cyclic of infinite order if and only if it is isomorphic to the additive group of integers; it is cyclic of order \(k\) if and only if it is isomorphic to the group \(\mathbb{Z}/k\) of integers modulo \(k\) . The preceding theorem implies that the fundamental group of the circle is infinite cyclic.
