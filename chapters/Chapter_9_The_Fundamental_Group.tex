@@ -1152,7 +1152,7 @@ Now consider the map \(F : {S}^{2} \rightarrow {\mathbb{R}}^{2}\) given by \(F( 
 
 We have proved the bisection theorem for bounded polygonal regions in the plane. However, all that was needed in the proof was the existence of an additive area function for \({A}_{1}\) and \({A}_{2}\) . Thus, the theorem holds for any two sets \({A}_{1}\) and \({A}_{2}\) that are ``Jordan-measurable'' in the sense used in analysis.
 
-These theorems generalize to higher dimensions, but the proofs are considerably more sophisticated. The generalized version of the bisection theorem states that given \(n\) Jordan-measurable sets in \({\mathbb{R}}^{n}\) , there exists a plane of dimension \(n - 1\) that bisects them all. In the case \(n = 3\) , this result goes by the pleasant name of the ``.'' If one considers a ham sandwich to consist of two pieces of bread and a slab of ham, then the bisection theorem says that one can divide each of them precisely in half with a single whack of a cleaver \({}^{1}\)
+These theorems generalize to higher dimensions, but the proofs are considerably more sophisticated. The generalized version of the bisection theorem states that given \(n\) Jordan-measurable sets in \({\mathbb{R}}^{n}\) , there exists a plane of dimension \(n - 1\) that bisects them all. In the case \(n = 3\) , this result goes by the pleasant name of the ``ham sandwich theorem.'' If one considers a ham sandwich to consist of two pieces of bread and a slab of ham, then the bisection theorem says that one can divide each of them precisely in half with a single whack of a cleaver \({}^{1}\)
 \end{proof}
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
@@ -1169,12 +1169,12 @@ These theorems generalize to higher dimensions, but the proofs are considerably 
 \end{enumerate}
 \section*{§ 58 Deformation Retracts and Homotopy Type}
 
- As we have seen, one way of obtaining information about the fundamental group of a space \(X\) is to study the covering spaces of \(X\) . Another is one we discuss in this section, which involves the notion of . It provides a method for reducing the problem of computing the fundamental group of a space to that of computing the fundamental group of some other space-preferably, one that is more familiar.
+ As we have seen, one way of obtaining information about the fundamental group of a space \(X\) is to study the covering spaces of \(X\) . Another is one we discuss in this section, which involves the notion of homotopy type. It provides a method for reducing the problem of computing the fundamental group of a space to that of computing the fundamental group of some other space-preferably, one that is more familiar.
 
 We begin with a lemma.
 
 \begin{lemma}
-	Let \(h,k.( {X,{x}_{0}}) \rightarrow ( {Y,{y}_{0}})\) be continuous maps. If \(h\) and \(k\) are homotopic, and if the image of the base point \({x}_{0}\) of \(X\) remains fixed at \({y}_{0}\) during the homotopy, then the homomorphisms \({h}_{ * }\) and \({k}_{ * }\) are equal.
+	Let \(h,k : ( {X,{x}_{0}}) \rightarrow ( {Y,{y}_{0}})\) be continuous maps. If \(h\) and \(k\) are homotopic, and if the image of the base point \({x}_{0}\) of \(X\) remains fixed at \({y}_{0}\) during the homotopy, then the homomorphisms \({h}_{ * }\) and \({k}_{ * }\) are equal.
 \end{lemma}
 
 \begin{proof}
@@ -1183,7 +1183,7 @@ We begin with a lemma.
 I \times I\xrightarrow[]{f \times \mathrm{{id}}}X \times I\xrightarrow[]{H}Y
 \]
 
-is a homotopy between \(h \circ f\) and \(k \circ f\) ; it is a path homotopy because \(f\) is a loop at \({x}_{0}\) and \(H\) maps \({x}_{0} \times l\) to \({y}_{0}\) .
+is a homotopy between \(h \circ f\) and \(k \circ f\) ; it is a path homotopy because \(f\) is a loop at \({x}_{0}\) and \(H\) maps \({x}_{0} \times I\) to \({y}_{0}\) .
 
 Using this lemma, we generalize a result about the space \({\mathbb{R}}^{2} - \mathbf{0}\) proved earlier, proving that the homomorphism induced by inclusion \(j : {S}^{1} \rightarrow {\mathbb{R}}^{2} - \mathbf{0}\) is not only injective but surjective as well. More generally, we prove the following:
 \end{proof}
@@ -1221,7 +1221,7 @@ Figure 58.1
 These comments lead us to formulate a more general situation in which the same procedure applies.
 \end{proof}
 \begin{definition}
-	Let \(A\) be a subspace of \(X\) . We say that \(A\) is a deformation retract of \(X\) if the identity map of \(X\) is homotopic to a map that carries all of \(X\) into \(A\) , such that each point of \(A\) remains fixed during the homotopy. This means that there is a continuous map \(H : X \times I \rightarrow X\) such that \(H( {x,0}) = x\) and \(H( {x,1}) \in A\) for all \(x \in X\) , and \(H( {a,t}) = a\) for all \(a \in A\) . The homotopy \(H\) is called a of \(X\) onto \(A\) . The map \(r : X \rightarrow A\) defined by the equation \(r( x) = H( {x,1})\) is a retraction of \(X\) onto \(A\) , and \(H\) is a homotopy between the identity map of \(X\) and the map \(j \circ r\) , where \(j : A \rightarrow X\) is inclusion.
+	Let \(A\) be a subspace of \(X\) . We say that \(A\) is a deformation retract of \(X\) if the identity map of \(X\) is homotopic to a map that carries all of \(X\) into \(A\) , such that each point of \(A\) remains fixed during the homotopy. This means that there is a continuous map \(H : X \times I \rightarrow X\) such that \(H( {x,0}) = x\) and \(H( {x,1}) \in A\) for all \(x \in X\) , and \(H( {a,t}) = a\) for all \(a \in A\) . The homotopy \(H\) is called a deformation retraction of \(X\) onto \(A\). The map \(r : X \rightarrow A\) defined by the equation \(r( x) = H( {x,1})\) is a retraction of \(X\) onto \(A\) , and \(H\) is a homotopy between the identity map of \(X\) and the map \(j \circ r\) , where \(j : A \rightarrow X\) is inclusion.
 \end{definition}
 
 The proof of the preceding theorem generalizes immediately to prove the following:
@@ -1254,7 +1254,7 @@ is a deformation retraction; it gradually collapses each line parallel to the \(
 
 \begin{centeredblock}
 \begin{example}
-	Consider \({\mathbb{R}}^{2} - p - q\) , the . We assert it has the ``figure eight'' space as a deformation retract. Rather than writing equations, we merely sketch the deformation retraction; it is the three-stage deformation indicated in Figure 58.2.
+	Consider \({\mathbb{R}}^{2} - p - q\) , the punctured plane. We assert it has the ``figure eight'' space as a deformation retract. Rather than writing equations, we merely sketch the deformation retraction; it is the three-stage deformation indicated in Figure 58.2.
 
 \munkresfig[1.0]{58.2}[Figure 58.2]
 \end{example}
@@ -1262,7 +1262,7 @@ is a deformation retraction; it gradually collapses each line parallel to the \(
 
 \begin{centeredblock}
 \begin{example}
-	Another deformation retract of \({\mathbb{R}}^{2} - p - q\) is the ``''
+	Another deformation retract of \({\mathbb{R}}^{2} - p - q\) is the ``theta space''
 
 \[
 \theta = {S}^{1} \cup ( {0 \times [ {-1,1}] })
@@ -1277,7 +1277,7 @@ Of course, we do not know anything about the fundamental group of the figure eig
 The example of the figure eight and the theta space suggests the possibility that there might be a more general way of showing two spaces have isomorphic fundamental groups than by showing that one is homeomorphic to a deformation retract of the other. We formulate such a notion now.
 
 \begin{definition}
-	Let \(f : X \rightarrow Y\) and \(g : Y \rightarrow X\) be continuous maps. Suppose that the map \(g \circ f : X \rightarrow X\) is homotopic to the identity map of \(X\) , and the map \(f \circ g : Y \rightarrow Y\) is homotopic to the identity map of \(Y\) . Then the maps \(f\) and \(g\) are called homotopy equivalences, and each is said to be a of the other.
+	Let \(f : X \rightarrow Y\) and \(g : Y \rightarrow X\) be continuous maps. Suppose that the map \(g \circ f : X \rightarrow X\) is homotopic to the identity map of \(X\) , and the map \(f \circ g : Y \rightarrow Y\) is homotopic to the identity map of \(Y\) . Then the maps \(f\) and \(g\) are called homotopy equivalences, and each is said to be a homotopy inverse of the other.
 \end{definition}
 
 It is straightforward to show that if \(f : X \rightarrow Y\) is a homotopy equivalence of \(X\) with \(Y\) and \(h : Y \rightarrow Z\) is a homotopy equivalence of \(Y\) with \(Z\) , then \(h \circ f : X \rightarrow Z\) is a homotopy equivalence of \(X\) with \(Z\) . It follows that the relation of homotopy equivalence is an equivalence relation. Two spaces that are homotopy equivalent are said to have the same homotopy type.
@@ -1385,7 +1385,7 @@ g \circ f : ( {X,{x}_{0}}) \rightarrow ( {X,{x}_{1}})
 is by hypothesis homotopic to the identity map, so there is a path \(\alpha\) in \(X\) such that
 
 \[
-{( g \circ f) }_{ * } = \widehat{\alpha } \circ {( i\chi ) }_{ * } = \widehat{\alpha }.
+{( g \circ f) }_{ * } = \widehat{\alpha } \circ {( i_X ) }_{ * } = \widehat{\alpha }.
 \]
 
 It follows that \({( g \circ f) }_{ * } = {g}_{ * } \circ {( {f}_{{x}_{0}}) }_{ * }\) is an isomorphism.
