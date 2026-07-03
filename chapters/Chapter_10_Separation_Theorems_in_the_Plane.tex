@@ -8,7 +8,7 @@ There are several difficult questions concerning the topology of the plane that 
 
 We consider first one of the classical theorems of mathematics, the Jordan curve theorem. It states a fact that is geometrically quite believable, the fact that a simple closed curve in the plane always separates the plane into two pieces, its ``inside'' and its ``outside.'' It was originally conjectured in 1892 by Camille Jordan, and several incorrect proofs were published, including one by Jordan himself. Eventually, a correct proof was provided by Oswald Veblen, in 1905. The early proofs were complicated, but over the years, simpler proofs have been found. If one uses the tools of modern algebraic topology, singular homology theory in particular, the proof is quite straightforward. The proof we give here is the simplest one we know that uses only results from the theory of covering spaces and the fundamental group.
 
-Our proof of the Jordan curve theorem divides into three parts. The first, which we call the , states that a simple closed curve in the plane separates it into at least two components. The second says that an arc in the plane does not separate the plane. And the third, the Jordan curve theorem proper, says that a simple closed curve \(C\) in the plane separates it into precisely two components, of which \(C\) is the common boundary. The first of these theorems will be treated in this section.
+Our proof of the Jordan curve theorem divides into three parts. The first, which we call the Jordan separation theorem, states that a simple closed curve in the plane separates it into at least two components. The second says that an arc in the plane does not separate the plane. And the third, the Jordan curve theorem proper, says that a simple closed curve \(C\) in the plane separates it into precisely two components, of which \(C\) is the common boundary. The first of these theorems will be treated in this section.
 
 In dealing with separation theorems, it will often be convenient to formulate them as separation theorems for subsets of \({S}^{2}\) rather than \({\mathbb{R}}^{2}\) . The separation theorems for \({\mathbb{R}}^{2}\) will follow. The connection between the two sets of theorems is provided by the following lemma.
 
@@ -39,8 +39,8 @@ be a continuous map. If \(a\) and \(b\) lie in the same component of \({S}^{2} -
 \end{lemma}
 
 \begin{proof}
-	One can replace \({S}^{2}\) by the one-point compactification \({\mathbb{R}}^{2} \cup \{ \infty \}\) of \({\mathbb{R}}^{2}\) , letting \(a\) and \(b\) correspond to the points0and \(\infty\) . Then our lemma reduces to the following: Let \(A\) be a compact space and let \(g : A \rightarrow {\mathbb{R}}^{2} - 0\) be a continuous map. If0lies in the unbounded component of \({\mathbb{R}}^{2} - g( A)\) , then \(g\) is nulhomotopic.
-This statement is easy to prove. Choose a ball \(B\) centered at the orgin, of sufficiently large radius that it contains the set \(g( A)\) . Choose a point \(p\) of \({\mathbb{R}}^{2}\) lying outside \(B\) . Then0and \(p\) both lie in the unbounded component of \({\mathbb{R}}^{2} - g( A)\) .
+	One can replace \({S}^{2}\) by the one-point compactification \({\mathbb{R}}^{2} \cup \{ \infty \}\) of \({\mathbb{R}}^{2}\) , letting \(a\) and \(b\) correspond to the points 0 and \(\infty\) . Then our lemma reduces to the following: Let \(A\) be a compact space and let \(g : A \rightarrow {\mathbb{R}}^{2} - 0\) be a continuous map. If0lies in the unbounded component of \({\mathbb{R}}^{2} - g( A)\) , then \(g\) is nulhomotopic.
+This statement is easy to prove. Choose a ball \(B\) centered at the orgin, of sufficiently large radius that it contains the set \(g( A)\) . Choose a point \(p\) of \({\mathbb{R}}^{2}\) lying outside \(B\) . Then 0 and \(p\) both lie in the unbounded component of \({\mathbb{R}}^{2} - g( A)\) .
 
 Because \({\mathbb{R}}^{2}\) is locally path connected, so is the open set \({\mathbb{R}}^{2} - g( A)\) . Therefore, the components and path components of \({\mathbb{R}}^{2} - g( A)\) are the same. Hence we can choose a path \(\alpha\) in \({\mathbb{R}}^{2} - g( A)\) from 0 to \(p\) . We define a homotopy \(G : A \times I \rightarrow {\mathbb{R}}^{2} -\) 0 by the equation
 
@@ -91,7 +91,7 @@ induce trivial homomorphisms of the fundamental groups involved. It then follows
 
 Let us prove that \({i}_{ * }\) is the trivial homomorphism; given a loop \(f : I \rightarrow U\) based at \({x}_{0}\) , we show that \({i}_{ * }( [ f] )\) is trivial. For this purpose, let \(p : I \rightarrow {S}^{1}\) be the standard loop generating \({\pi }_{1}( {{S}^{1},{b}_{0}})\) . The map \(f : I \rightarrow U\) induces a continuous map \(h : {S}^{1} \rightarrow\) \(U\) such that \(h \circ p = f\) . See Figure 61.3.
 
-Consider the map \(i \circ h.{S}^{1} \rightarrow {S}^{2} - a - b\) . By hypothesis, the set \(i( {h( {S}^{1}) }) = h( {S}^{1})\) does not intersect the connected set \({A}_{1}\) containing \(a\) and \(b\) . Therefore, \(a\) and \(b\) lie in the same component of \({S}^{2} - i( {h( {S}^{1}) })\) . By the preceding lemma, the map \(i \circ h\) is nulhomotopic. It follows from Lemma 55.3 that \({( i \circ h) }_{ * }\) is the trivial homomorphism of fundamental groups. But
+Consider the map \(i \circ h : {S}^{1} \rightarrow {S}^{2} - a - b\) . By hypothesis, the set \(i( {h( {S}^{1}) }) = h( {S}^{1})\) does not intersect the connected set \({A}_{1}\) containing \(a\) and \(b\) . Therefore, \(a\) and \(b\) lie in the same component of \({S}^{2} - i( {h( {S}^{1}) })\) . By the preceding lemma, the map \(i \circ h\) is nulhomotopic. It follows from Lemma 55.3 that \({( i \circ h) }_{ * }\) is the trivial homomorphism of fundamental groups. But
 
 \[
 {( i \circ h) }_{ * }( [ p] ) = [ {i \circ h \circ p}] = [ {i \circ f}] = {i}_{ * }( [ f] ) .
@@ -144,7 +144,7 @@ The following lemma is a partial converse to the nulhomotopy lemma of the preced
 
 \begin{proof}
 	Because \(A\) is compact and \({S}^{2}\) is Hausdorff, \(f( A)\) is a compact subspace of \({S}^{2}\) that is homeomorphic to \(A\) . Because \(f\) is nulhomotopic, so is the inclusion mapping of \(f( A)\) into \({S}^{2} - a - b\) . Hence it suffices to prove the lemma in the special case where \(f\) is simply an inclusion map. Furthermore, we can replace \({S}^{2}\) by \({\mathbb{R}}^{2} \cup \{ \infty \}\) , letting \(a\) correspond to 0, and \(b\) to \(\infty\) . Then our lemma reduces to the following statement:
-Let \(A\) be a compact subspace of \({\mathbb{R}}^{2} - \mathbf{0}\) . If the inclusion \(j : A \rightarrow {\mathbb{R}}^{2} - \mathbf{0}\) is nulhomotopic, then0lies in the unbounded component of \({\mathbb{R}}^{2} - A\) .
+Let \(A\) be a compact subspace of \({\mathbb{R}}^{2} - \mathbf{0}\) . If the inclusion \(j : A \rightarrow {\mathbb{R}}^{2} - \mathbf{0}\) is nulhomotopic, then 0 lies in the unbounded component of \({\mathbb{R}}^{2} - A\) .
 
 This we now prove. Let \(C\) be the component of \({\mathbb{R}}^{2} - A\) containing 0; we suppose \(C\) is bounded and derive a contradiction. Let \(D\) be the union of the other components of \({\mathbb{R}}^{2} - A\) , including the unbounded component. Then \(C\) and \(D\) are disjoint open sets of \({\mathbb{R}}^{2}\) , and \({\mathbb{R}}^{2} - A = C \cup D\) . See Figure 62.2.
 
@@ -152,7 +152,7 @@ We define a continuous map \(h : {\mathbb{R}}^{2} \rightarrow {\mathbb{R}}^{2} -
 
 Begin with the inclusion map \(j : A \rightarrow {\mathbb{R}}^{2} - \mathbf{0}\) . Since \(j\) is by hypothesis nulho-motopic, the preceding lemma implies that \(j\) can be extended to a continuous map \(k\) of \(C \cup A\) into \({\mathbb{R}}^{2} - \mathbf{0}\) . Then \(k\) equals the identity at points of \(A\) . Extend \(k\) to a map \(h : {\mathbb{R}}^{2} \rightarrow {\mathbb{R}}^{2} - \mathbf{0}\) by setting \(h( x) = x\) for \(x \in D \cup A\) , then \(h\) is continuous by the pasting lemma.
 
-Now we derive a contradiction. Let \(B\) be the closed ball in \({\mathbb{R}}^{2}\) of radius \(M\) centered at the origin, where \(M\) is so large that Int \(B\) contains \(C \cup A\) . (Here, we use the fact that \(C\) is bounded.) If we restrict \(h\) to \(B\) , we obtain a map \(g : B \rightarrow {\mathbb{R}}^{2} - 0\) such that \(g( x) = x\) for \(x \in \operatorname{Bd}B\) . If we follow \(g\) by the standard retraction \(x \rightarrow {Mx}/\parallel x\parallel\) of \({\mathbb{R}}^{2} - 0\) onto Bd \(B\) , we obtain a retraction of \(B\) onto Bd \(B\) . Such a retraction does not exist.
+Now we derive a contradiction. Let \(B\) be the closed ball in \({\mathbb{R}}^{2}\) of radius \(M\) centered at the origin, where \(M\) is so large that Int \(B\) contains \(C \cup A\) . (Here, we use the fact that \(C\) is bounded.) If we restrict \(h\) to \(B\) , we obtain a map \(g : B \rightarrow {\mathbb{R}}^{2} - \mathbf{0}\) such that \(g( x) = x\) for \(x \in \operatorname{Bd}B\) . If we follow \(g\) by the standard retraction \(x \rightarrow {Mx}/\parallel x\parallel\) of \({\mathbb{R}}^{2} - 0\) onto Bd \(B\) , we obtain a retraction of \(B\) onto Bd \(B\) . Such a retraction does not exist.
 
 \munkresfig[0.5]{62.2}[Figure 62.2]
 \end{proof}
@@ -227,7 +227,7 @@ x \times ( {2n}) \;\text{ and }\;x \times ( {{2n} + 1}) \;\text{ for }x \in B.
 
 Let \(\pi : Y \rightarrow E\) be the quotient map.
 
-Now the map \(\rho : Y \rightarrow X\) defined by \(\rho ( {x \times m}) = x\) induces a map \(p : E \rightarrow X\) ; the map \(p\) is continuous because \(E\) has the quotient topology. The map \(p\) is also surjective. We shall show that \(p\) is a covernng map. See Figure 63.1.
+Now the map \(\rho : Y \rightarrow X\) defined by \(\rho ( {x \times m}) = x\) induces a map \(p : E \rightarrow X\) ; the map \(p\) is continuous because \(E\) has the quotient topology. The map \(p\) is also surjective. We shall show that \(p\) is a covering map. See Figure 63.1.
 
 First let us show that the map \(\pi\) is an open map. Since \(Y\) is the union of the disjoint open sets \(\{ U \times ( {2n}) \}\) and \(\{ V \times ( {{2n} + 1}) \}\) , it will suffice to show that \(\pi \mid ( {U \times {2n}})\) and \(\pi \mid ( {V \times ( {{2n} + 1}) })\) are open maps. And this is easy. Take an open set in \(U \times {2n}\) , for example; it will be of the form \(W \times {2n}\) , where \(W\) is open in \(U\) . Then
 
@@ -380,7 +380,7 @@ Example 1. The second half of the Jordan curve theorem, to the effect that \(C\)
 For instance, consider the space indicated in Figure 63.5. It is the union of two arcs whose intersection consists of two points, so it separates \({S}^{2}\) into two components \({W}_{1}\) and \({W}_{2}\) just as the circle does, by Theorem 63.5. But \(C\) does not equal the common boundary of \({W}_{1}\) and \({W}_{2}\) in this case.
 
 \munkresfig[0.6]{63.5}[Figure 63.5]
-There is a fourth theorem that is often considered along with these three separation theorems. It is called the , and it states that if \(C\) is a simple closed curve in \({S}^{2}\) and \(U\) and \(V\) are the components of \({S}^{2} - C\) , then \(\bar{U}\) and \(\bar{V}\) are each homeomorphic to the closed unit ball \({B}^{2}\) . A proof may be found in 		\cite{HallSpencer1955}.
+There is a fourth theorem that is often considered along with these three separation theorems. It is called the Schoenflies theorem, and it states that if \(C\) is a simple closed curve in \({S}^{2}\) and \(U\) and \(V\) are the components of \({S}^{2} - C\) , then \(\bar{U}\) and \(\bar{V}\) are each homeomorphic to the closed unit ball \({B}^{2}\) . A proof may be found in 		\cite{HallSpencer1955}.
 
 The separation theorems can be generalized to higher dimensions as follows: (1) Any subspace \(C\) of \({S}^{n}\) homeomorphic to \({S}^{n - 1}\) separates \({S}^{n}\) .
 
@@ -419,7 +419,7 @@ Note that any graph is determined completely (up to homeomorphism) by listing it
 
 \begin{centeredblock}
 \begin{example}
-	If \(G\) contains exactly \(n\) vertices, and if for every pair of distinct vertices of \(G\) there is an edge of \(G\) joining them, then \(G\) is called the on \(n\) vertices and is denoted \({G}_{n}\) . Several such graphs are pictured in Figure 64.1. Note that the first three of these graphs are pictured as subspaces of \({\mathbb{R}}^{2}\) , but the fourth is pictured instead as a subspace of \({\mathbb{R}}^{3}\) . A little experimentation will convince you that this graph cannot in fact be imbedded in \({\mathbb{R}}^{2}\) . We shall prove this result shortly.
+	If \(G\) contains exactly \(n\) vertices, and if for every pair of distinct vertices of \(G\) there is an edge of \(G\) joining them, then \(G\) is called the complete graph on \(n\) vertices and is denoted \({G}_{n}\) . Several such graphs are pictured in Figure 64.1. Note that the first three of these graphs are pictured as subspaces of \({\mathbb{R}}^{2}\) , but the fourth is pictured instead as a subspace of \({\mathbb{R}}^{3}\) . A little experimentation will convince you that this graph cannot in fact be imbedded in \({\mathbb{R}}^{2}\) . We shall prove this result shortly.
 
 \munkresfig[1.0]{64.1}[Figure 64.1]
 \end{example}
@@ -427,7 +427,7 @@ Note that any graph is determined completely (up to homeomorphism) by listing it
 
 \begin{centeredblock}
 \begin{example}
-	Another interesting graph arises in considering the classical puzzle: ``Given three houses, \({h}_{1},{h}_{2}\) , and \({h}_{3}\) , and three utilities, \(g\) (for gas), \(w\) (for water), and \(e\) (for electricity), can you connect each utility to each house without letting any of the connecting lines cross?'' Formulated mathematically, this is just the question whether the graph pictured in Figure 64.2, which is called the utilities graph. can be imbedded in \({\mathbb{R}}^{2}\) . Again, a little experimentation will convince you that it cannot, a fact that we shall prove shortly
+	Another interesting graph arises in considering the classical puzzle: ``Given three houses, \({h}_{1},{h}_{2}\) , and \({h}_{3}\) , and three utilities, \(g\) (for gas), \(w\) (for water), and \(e\) (for electricity), can you connect each utility to each house without letting any of the connecting lines cross?'' Formulated mathematically, this is just the question whether the graph pictured in Figure 64.2, which is called the utilities graph, can be imbedded in \({\mathbb{R}}^{2}\) . Again, a little experimentation will convince you that it cannot, a fact that we shall prove shortly
 \end{example}
 \end{centeredblock}
 
@@ -463,7 +463,7 @@ We use the notation of Example 2, where \(g,w,e,{h}_{1},{h}_{2}\) , and \({h}_{3
 
 Each pair of these arcs intersect in their end points \(g\) and \(w\) alone; hence \(Y = A \cup B \cup C\) is a theta space. The space \(Y\) separates \({S}^{2}\) into three components \(U,V\) , and \(W\) , whose boundaries are \(A \cup B,B \cup C\) , and \(A \cup C\) , respectively. See Figure 64.4.
 
-Now the vertex \(e\) of \(X\) lies in one of these three components, so that the arcs \(e{h}_{1}\) and \(e{h}_{2}\) and \(e{h}_{3}\) of \(X\) lie in the closure of that component. That component cannot be \(U\) , for \(\widetilde{U}\) is contained in \(U \cup A \cup B\) , a set that does not contain the point \({h}_{3}\) . Similarly, the component containing \(e\) cannot be \(V\) or \(W\) , because \(\widetilde{V}\) does not contain \({h}_{1}\) , and \(\bar{W}\) does not contain \({h}_{2}\) . Thus, we have reached a contradiction.
+Now the vertex \(e\) of \(X\) lies in one of these three components, so that the arcs \(e{h}_{1}\) and \(e{h}_{2}\) and \(e{h}_{3}\) of \(X\) lie in the closure of that component. That component cannot be \(U\) , for \(\bar{U}\) is contained in \(U \cup A \cup B\) , a set that does not contain the point \({h}_{3}\) . Similarly, the component containing \(e\) cannot be \(V\) or \(W\) , because \(\widetilde{V}\) does not contain \({h}_{1}\) , and \(\bar{W}\) does not contain \({h}_{2}\) . Thus, we have reached a contradiction.
 
 \munkresfig[0.4]{64.4}[Figure 64.4]
 \end{proof}
@@ -532,7 +532,7 @@ First, we prove our result in the case where the simple closed curve \(C\) is co
 \end{lemma}
 
 \begin{proof}
-	(a) As in the proof of Lemma 64.3, the theta space \(C \cup {a}_{1}{a}_{3}\) separates \({S}^{2}\) into three components \(U,V\) , and \(W\) . One of these, say \(W\) , has \(C\) as its boundary; it is the only component whose boundary contains both \({a}_{2}\) and \({a}_{4}\) . Therefore, \({a}_{2}{a}_{4} - {a}_{2} - {a}_{4}\) must lie in \(W\) , so that in partucular, \(q\) belongs to \(W\) . Of course, \(p\) is not in \(W\) because \(p\) belongs to the theta space \(C \cup {a}_{1}{a}_{3}\) . Now Lemma 64.1 tells us that \(W\) is one of the components of \({S}^{2} - C\) ; therefore, \(p\) and \(q\) belong to different components of \({S}^{2} - C\) .
+	(a) As in the proof of Lemma 64.3, the theta space \(C \cup {a}_{1}{a}_{3}\) separates \({S}^{2}\) into three components \(U,V\) , and \(W\) . One of these, say \(W\) , has \(C\) as its boundary; it is the only component whose boundary contains both \({a}_{2}\) and \({a}_{4}\) . Therefore, \({a}_{2}{a}_{4} - {a}_{2} - {a}_{4}\) must lie in \(W\) , so that in particular, \(q\) belongs to \(W\) . Of course, \(p\) is not in \(W\) because \(p\) belongs to the theta space \(C \cup {a}_{1}{a}_{3}\) . Now Lemma 64.1 tells us that \(W\) is one of the components of \({S}^{2} - C\) ; therefore, \(p\) and \(q\) belong to different components of \({S}^{2} - C\) .
 (b) Let \(X = {S}^{2} - p - q\) . The idea of the proof is the following: We choose a point \(x\) interior to the arc \({a}_{1}{a}_{2}\) , and a point \(y\) interior to the arc \({a}_{3}{a}_{4}\) . And we let \(\alpha\) and \(\beta\) be the broken-line paths
 
 \[
@@ -561,7 +561,7 @@ Now we prove our main theorem.
 
 \begin{proof}
 	The proof involves constructing a complete graph on four vertices that contains \(C\) as a subgraph.
-Step 1. Let \(a,b\) , and \(c\) be three distinct points of \({\mathbb{R}}^{2}\) . If \(A\) is an arc with end points points \(a\) and \(b\) , and if \(B\) is an arc with end points \(b\) and \(c\) , then there exists an arc contained in \(A \cup B\) with end points \(a\) and \(c\) .
+Step 1. Let \(a,b\) , and \(c\) be three distinct points of \({\mathbb{R}}^{2}\) . If \(A\) is an arc with end points \(a\) and \(b\) , and if \(B\) is an arc with end points \(b\) and \(c\) , then there exists an arc contained in \(A \cup B\) with end points \(a\) and \(c\) .
 
 Choose paths \(f : I \rightarrow A\) from \(a\) to \(b\) , and \(g : I \rightarrow B\) from \(b\) to \(c\) , such that \(f\) and \(g\) are homeomorphisms. Let \({t}_{0}\) be a smallest point of \(I\) such that \(f( {t}_{0}) \in B\) ; and let \({t}_{1}\) be the point of \(I\) such that \(g( {t}_{1}) = f( {t}_{0})\) . Then the set \(f( [ {0,{t}_{0}}] ) \cup g( [ {{t}_{1},1}] )\) is the required arc. (If \({t}_{0} = 0\) or \({t}_{1} = 1\) , one of these sets consists of a single point.) See Figure 65.5.
 
@@ -587,7 +587,7 @@ Let \(f.{\mathbb{R}}^{2} - p \rightarrow {\mathbb{R}}^{2} - 0\) be the homeomorp
 D\overset{k}{ \rightarrow }{\mathbb{R}}^{2} - p\overset{f}{ \rightarrow }{\mathbb{R}}^{2} - 0
 \]
 
-indices an isomorphism of fundamental groups. Let \(\alpha\) be a path in \({\mathbb{R}}^{2} - D\) from 0 to \(p\) , and let \(F : D \times I \rightarrow {\mathbb{R}}^{2} - 0\) be the map \(F( {x,t}) = x - \alpha ( t)\) . Then \(F\) is a homotopy between \(j\) and \(f \circ k\) ; since \(j\) induces an isomorphism, so does \(f \circ k\) . (See Corollary 58.5).
+induces an isomorphism of fundamental groups. Let \(\alpha\) be a path in \({\mathbb{R}}^{2} - D\) from 0 to \(p\) , and let \(F : D \times I \rightarrow {\mathbb{R}}^{2} - 0\) be the map \(F( {x,t}) = x - \alpha ( t)\) . Then \(F\) is a homotopy between \(j\) and \(f \circ k\) ; since \(j\) induces an isomorphism, so does \(f \circ k\) . (See Corollary 58.5).
 
 This theorem is a special case of a rather deep theorem of algebraic topology, concerning the ``linking number'' of two disjoint subspaces of \({S}^{m + n + 1}\) , one homeomorphic to an \(m\) -sphere and the other homeomorphic to an \(n\) -sphere; it is related to the Alexander duality theorem. (See 		\cite{Munkres1993}, p. 433.) The special case of our theorem is that of a 0-sphere (i.e., a two-point space) and a 1-sphere (i.e., a simple closed curve) in \({S}^{2}\) .
 \end{proof}
@@ -606,7 +606,7 @@ We begin by introducing the notion of ``winding number'' more formally.
 g( s) = [ {f( s) - a}] /\parallel f( s) - a\parallel
 \]
 
-then \(g\) is a loop in \({S}^{1}\) . Let \(p : \mathbb{R} \rightarrow {S}^{1}\) be the standard covering map, and let \(\widetilde{g}\) be a lifting of \(g\) to \({S}^{1}\) . Because \(g\) is a loop, the difference \(\widetilde{g}( 1) - \widetilde{g}( 0)\) is an integer. This integer is called the winding number of \(f\) with respect to \(a\) , and is denoted \( n( {f,a})\) .
+then \(g\) is a loop in \({S}^{1}\) . Let \(p : \mathbb{R} \rightarrow {S}^{1}\) be the standard covering map, and let \(\widetilde{g}\) be a lifting of \(g\) to \(\mathbb{R}\) . Because \(g\) is a loop, the difference \(\widetilde{g}( 1) - \widetilde{g}( 0)\) is an integer. This integer is called the winding number of \(f\) with respect to \(a\) , and is denoted \( n( {f,a})\) .
 \end{definition}
 
 Note that \(n( {f,a})\) is independent of the choice of the lifting of \(g\) . For if \(\widetilde{g}\) is one lifting of \(g\) , then uniqueness of liftings implies that any other lifting of \(g\) has the form \(\widetilde{g}( s) + m\) for some integer \(m\) .
@@ -627,7 +627,7 @@ Note that \(n( {f,a})\) is independent of the choice of the lifting of \(g\) . F
 
 \begin{proof}
 	(a) To compute \(n( {\bar{f},a})\) , one replace \(s\) by \(1 - s\) throughout the definition. This has the effect of changing \(\widetilde{g}( 1) - \widetilde{g}( 0)\) by a sign
-(b) Let \(F\) be a free homotopy between \(f\) and \({f}^{\prime }\) . Define \(G : 1 \times I \rightarrow {S}^{1}\) by the equation
+(b) Let \(F\) be a free homotopy between \(f\) and \({f}^{\prime }\) . Define \(G : I \times I \rightarrow {S}^{1}\) by the equation
 
 \[
 G( {s,t}) = [ {F( {s,t}) - a}] /\parallel F( {s,t}) - a\parallel .
@@ -635,10 +635,10 @@ G( {s,t}) = [ {F( {s,t}) - a}] /\parallel F( {s,t}) - a\parallel .
 
 Let \(\bar{G}\) be a lifting of \(G\) to \(\mathbb{R}\) . Then \(\widetilde{G}( {1,t}) - \widetilde{G}( {0,t})\) is an integer for each \(t\) ; being continuous, it is constant.
 
-(c) Let \(\alpha\) be a path in \({\mathbb{R}}^{2} - f( l)\) from \(a\) to \(b\) . Note that by definition, \(n( {f,a}) =\) \(n( {f - a,0})\) . Since \(f( s) - \alpha ( t)\) is a free homotopy in \({\mathbb{R}}^{2} - 0\) between \(f - a\) and \(f - b\) , our result follows.
+(c) Let \(\alpha\) be a path in \({\mathbb{R}}^{2} - f( I)\) from \(a\) to \(b\) . Note that by definition, \(n( {f,a}) =\) \(n( {f - a,0})\) . Since \(f( s) - \alpha ( t)\) is a free homotopy in \({\mathbb{R}}^{2} - 0\) between \(f - a\) and \(f - b\) , our result follows.
 \end{proof}
 \begin{definition}
-	Let \(f\) be a loop in \(X\) . We call \(f\) a provided \(f( s) = f( {s}^{\prime })\) only if \(s = {s}^{\prime }\) or if one of the points \(s,{s}^{\prime }\) is 0 and the other is 1 . If \(f\) is a simple loop, its image set is a simple closed curve in \(X\) .
+	Let \(f\) be a loop in \(X\) . We call \(f\) a simple loop provided \(f( s) = f( {s}^{\prime })\) only if \(s = {s}^{\prime }\) or if one of the points \(s,{s}^{\prime }\) is 0 and the other is 1 . If \(f\) is a simple loop, its image set is a simple closed curve in \(X\) .
 \end{definition}
 
 \begin{theorem}
