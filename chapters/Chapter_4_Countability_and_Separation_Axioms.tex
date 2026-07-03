@@ -283,7 +283,9 @@ are disjoint open sets about \(A\) and \(B\), respectively.
 \end{example}
 \end{centeredblock}
 
-\section*{EXAMPLE 3 The Sorgenfrey plane \({\mathbb{R}}_{\ell }^{2}\) is not normal}
+\begin{centeredblock}
+\begin{example}
+ The Sorgenfrey plane \({\mathbb{R}}_{\ell }^{2}\) is not normal.
 
 The space \({\mathbb{R}}_{\ell }\) is regular (in fact, normal), so the product space \({\mathbb{R}}_{\ell }^{2}\) is also regular. Thus this example serves two purposes. It shows that a regular space need not be normal, and it shows that the product of two normal spaces need not be normal
 
@@ -324,6 +326,8 @@ Now the composite
 is an injective map of \(\mathcal{P}( L)\) into \(L\). But Theorem 7.8 tells us such a map does not exist! Thus we have reached a contradiction
 
 This proof that \({\mathbb{R}}_{\ell }^{2}\) is not normal is in some ways not very satisfying. We showed only that there must exist some proper nonempty subset \(A\) of \(L\) such that the sets \(A\) and \(B = L - A\) are not contained in disjoint open sets of \({\mathbb{R}}_{\ell }^{2}\). But we did not actually find such a set \(A\). In fact, the set \(A\) of points of \(L\) having rational coordinates is such a set, but the proof is not easy. It is left to the exercises.
+\end{example}
+\end{centeredblock}
 
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
@@ -442,7 +446,7 @@ Finally, assume that \(A\) and \(B\) are disjoint closed sets in \(X\), and \(A\
 
 \begin{centeredblock}
 \begin{example}
-If \(J\) is uncountable, the product space \({\mathbb{R}}^{J}\) is not normal. The proof is fairly difficult; we leave it as a challenging exercise (see Exercise 9).
+ If \(J\) is uncountable, the product space \({\mathbb{R}}^{J}\) is not normal. The proof is fairly difficult; we leave it as a challenging exercise (see Exercise 9).
 
 This example serves three purposes. It shows that a regular space \({\mathbb{R}}^{J}\) need not be normal. It shows that a subspace of a normal space need not be normal, for \({\mathbb{R}}^{J}\) is homeomorphic to the subspace \({( 0,1) }^{J}\) of \({[ 0,1] }^{J}\), which (assuming the Tychonoff theorem) is compact Hausdorff and therefore normal And it shows that an uncountable product of normal spaces need not be normal. It leaves unsettled the question as to whether a finite or a countable product of normal spaces might be normal.
 \end{example}
@@ -534,7 +538,7 @@ Now we come to the first deep theorem of the book, a theorem that is commonly ca
 Why do we call the Urysohn lemma a ``deep'' theorem? Because its proof involves a really original idea, which the previous proofs did not. Perhaps we can explain what we mean this way: By and large, one would expect that if one went through this book and deleted all the proofs we have given up to now and then handed the book to a bright student who had not studied topology, that student ought to be able to go through the book and work out the proofs independently. (It would take a good deal of time and effort, of course; and one would not expect the student to handle the trickier examples.) But the Urysohn lemma is on a different level. It would take considerably more originality than most of us possess to prove this lemma unless we were given copious hints \({}^{1}\)
 
 \begin{theorem}[Urysohn lemma]
-Let \(X\) be a normal space, let \(A\) and \(B\) be disjoint closed subsets of \(X\). Let \([ {a,b}]\) be a closed interval in the real line. Then there exists a continuous map
+ Let \(X\) be a normal space, let \(A\) and \(B\) be disjoint closed subsets of \(X\). Let \([ {a,b}]\) be a closed interval in the real line. Then there exists a continuous map
 
 \[
 f : X \rightarrow [ {a,b}]
@@ -678,7 +682,7 @@ Second, we show that \(f( U) \subset ( {c,d})\). Let \(x \in U\). Then \(x \in {
 \end{proof}
 
 \begin{definition}
-If \(A\) and \(B\) are two subsets of the topological space \(X\), and if there is a continuous function \(f : X \rightarrow [ {0,1}]\) such that \(f( A) = \{ 0\}\) and \(f( B) = \{ 1\}\), we say that \(A\) and \(B\) can be separated by a continuous function.
+ If \(A\) and \(B\) are two subsets of the topological space \(X\), and if there is a continuous function \(f : X \rightarrow [ {0,1}]\) such that \(f( A) = \{ 0\}\) and \(f( B) = \{ 1\}\), we say that \(A\) and \(B\) can be separated by a continuous function.
 \end{definition}
 
 The Urysohn lemma says that if every pair of disjoint closed sets in \(X\) can be separated by disjoint open sets, then each such pair can be separated by a continuous function. The converse is trivial, for if \(f : X \rightarrow [ {0,1}]\) is the function, then \({f}^{-1}( [ 0,\frac{1}{2}) )\) and \({f}^{-1}( ( {\frac{1}{2},1}] )\) are disjoint open sets containing \(A\) and \(B\), respectively
@@ -748,7 +752,11 @@ A space that is regular but not completely regular is much harder to find. Most 
  \end{enumerate}
 \item Show that every locally compact Hausdorff space is completely regular.
 \item Let \(X\) be completely regular, let \(A\) and \(B\) be disjoint closed subsets of \(X\). Show that if \(A\) is compact, there is a continuous function \(f : X \rightarrow [ {0,1}]\) such that \(f( A) = \{ 0\}\) and \(f( B) = \{ 1\}\).
-\item Show that \({\mathbb{R}}^{J}\) in the box topology is completely regular. [Hint: Show that it suffices to consider the case where the box neighborhood \({( -1,1) }^{J}\) is disjoint from \(A\) and the point is the origin. Then use the fact that a function continuous in the uniform topology is also continuous in the box topology.] *10. Prove the following: \textsl{Theorem.} Every topological group is completely regular. \textsl{Proof.} Let \({V}_{0}\) be a neighborhood of the identity element \(e\), in the topological group \(G\). In general, choose \({V}_{n}\) to be a neighborhood of \(e\) such that \({V}_{n} \cdot {V}_{n} \subset\) \({V}_{n - 1}\). Consider the set of all dyadic rationals \(p\), that is, all rational numbers of the form \(k/{2}^{n}\), with \(k\) and \(n\) integers. For each dyadic rational \(p\) in \((0,1\rbrack\), define an open set \(U( p)\) inductively as follows: \(U(1) = {V}_{0}\) and \(U( \frac{1}{2}) = {V}_{1}\) Given \(n\), if \(U( {k/{2}^{n}})\) is defined for \(0 < k/{2}^{n} \leq 1\), define \[ U( {1/{2}^{n + 1}}) = {V}_{n + 1} \] \[ U( {( {{2k} + 1}) /{2}^{n + 1}}) = {V}_{n + 1} \cdot U( {k/{2}^{n}}) \] for \(0 < k < {2}^{n}\). For \(p \leq 0\), let \(U( p) = \varnothing\), and for \(p > 1\), let \(U( p) = G\). Show that \[ {V}_{n}\;U( {k/{2}^{n}}) \subset U( {( {k + 1}) /{2}^{n}}) \] for all \(k\) and \(n\). Proceed as in the Urysohn lemma. This exercise is adapted from \cite{MontgomeryZippin1955}, to which the reader is referred for further results on topological groups. -11. Define a set \(X\) as follows: For each even integer \(m\), let \({L}_{m}\) denote the line segment \(m \times [ {-1,0}]\) in the plane. For each odd integer \(n\) and each integer \(k \geq 2\), let \({C}_{n,k}\) denote the union of the line segments \(( {n + 1 - 1/k}) \times [ {-1,0}]\) and \(( {n - 1 + 1/k}) \times [ {-1,0}]\) and the semicircle \[ \{ x \times y \mid {( x - n) }^{2} + {y}^{2} = {( 1 - 1/k) }^{2}\text{ and }y \geq 0\} \] in the plane. Let \({p}_{n,k}\) denote the topmost point \(n \times ( {1 - 1/k})\) of this semicircle. Let \(X\) be the union of all the sets \({L}_{m}\) and \({C}_{n,k}\), along with two extra points \(a\) and \(b\). Topologize \(X\) by taking sets of the following four types as basis elements:
+\item Show that \({\mathbb{R}}^{J}\) in the box topology is completely regular. [Hint: Show that it suffices to consider the case where the box neighborhood \({( -1,1) }^{J}\) is disjoint from \(A\) and the point is the origin. Then use the fact that a function continuous in the uniform topology is also continuous in the box topology.]
+
+\item *10. Prove the following: \textsl{Theorem.} Every topological group is completely regular. \textsl{Proof.} Let \({V}_{0}\) be a neighborhood of the identity element \(e\), in the topological group \(G\). In general, choose \({V}_{n}\) to be a neighborhood of \(e\) such that \({V}_{n} \cdot {V}_{n} \subset\) \({V}_{n - 1}\). Consider the set of all dyadic rationals \(p\), that is, all rational numbers of the form \(k/{2}^{n}\), with \(k\) and \(n\) integers. For each dyadic rational \(p\) in \((0,1\rbrack\), define an open set \(U( p)\) inductively as follows: \(U(1) = {V}_{0}\) and \(U( \frac{1}{2}) = {V}_{1}\) Given \(n\), if \(U( {k/{2}^{n}})\) is defined for \(0 < k/{2}^{n} \leq 1\), define \[ U( {1/{2}^{n + 1}}) = {V}_{n + 1} \] \[ U( {( {{2k} + 1}) /{2}^{n + 1}}) = {V}_{n + 1} \cdot U( {k/{2}^{n}}) \] for \(0 < k < {2}^{n}\). For \(p \leq 0\), let \(U( p) = \varnothing\), and for \(p > 1\), let \(U( p) = G\). Show that \[ {V}_{n}\;U( {k/{2}^{n}}) \subset U( {( {k + 1}) /{2}^{n}}) \] for all \(k\) and \(n\). Proceed as in the Urysohn lemma. This exercise is adapted from \cite{MontgomeryZippin1955}, to which the reader is referred for further results on topological groups.
+
+\item *11. Define a set \(X\) as follows: For each even integer \(m\), let \({L}_{m}\) denote the line segment \(m \times [ {-1,0}]\) in the plane. For each odd integer \(n\) and each integer \(k \geq 2\), let \({C}_{n,k}\) denote the union of the line segments \(( {n + 1 - 1/k}) \times [ {-1,0}]\) and \(( {n - 1 + 1/k}) \times [ {-1,0}]\) and the semicircle \[ \{ x \times y \mid {( x - n) }^{2} + {y}^{2} = {( 1 - 1/k) }^{2}\text{ and }y \geq 0\} \] in the plane. Let \({p}_{n,k}\) denote the topmost point \(n \times ( {1 - 1/k})\) of this semicircle. Let \(X\) be the union of all the sets \({L}_{m}\) and \({C}_{n,k}\), along with two extra points \(a\) and \(b\). Topologize \(X\) by taking sets of the following four types as basis elements:
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item The intersection of \(X\) with a horizontal open line segment that contains none of the points \({p}_{n,k}\). (ii) A set formed from one of the sets \({C}_{n,k}\) by deleting finitely many points (iii) For each even integer \(m\), the union of \(\{ a\}\) and the set of points \(x \times y\) of \(X\) for which \(x < m\). (iv) For each even integer \(m\), the union of \(\{ b\}\) and the set of points \(x \times y\) of \(X\) for which \(x > m\).
  \item Sketch \(X\) ; show that these sets form a basis for a topology on \(X\).
@@ -767,7 +775,7 @@ There are two versions of the proof, and since each has useful generalizations t
 
 \end{theorem}
 \begin{proof}
-We shall prove that \(X\) is metrizable by imbedding \(X\) in a metrizable space \(Y\), that is, by showing \(X\) homeomorphic with a subspace of \(Y\). The two versions of the proof differ in the choice of the metrizable space \(Y\). In the first version, \(Y\) is the space \({\mathbb{R}}^{\omega }\) in the product topology, a space that we have previously proved to be metrizable (Theorem 20.5) In the second version, the space \(Y\) is also \({\mathbb{R}}^{\omega }\), but this time in the topology given by the uniform metric \(\bar{\rho }\) (see \(\$ {20}\) ). In each case, it turns out that our construction actually imbeds \(X\) in the subspace \({[ 0,1] }^{\omega }\) of \({\mathbb{R}}^{\omega }\)
+ We shall prove that \(X\) is metrizable by imbedding \(X\) in a metrizable space \(Y\), that is, by showing \(X\) homeomorphic with a subspace of \(Y\). The two versions of the proof differ in the choice of the metrizable space \(Y\). In the first version, \(Y\) is the space \({\mathbb{R}}^{\omega }\) in the product topology, a space that we have previously proved to be metrizable (Theorem 20.5) In the second version, the space \(Y\) is also \({\mathbb{R}}^{\omega }\), but this time in the topology given by the uniform metric \(\bar{\rho }\) (see \(\$ {20}\) ). In each case, it turns out that our construction actually imbeds \(X\) in the subspace \({[ 0,1] }^{\omega }\) of \({\mathbb{R}}^{\omega }\)
 
 Step 1 We prove the following: There exists a countable collection of continuous functions \({f}_{n} : X \rightarrow [ {0,1}]\) having the property that given any point \({x}_{0}\) of \(X\) and any neighborhood \(U\) of \({x}_{0}\), there exists an index \(n\) such that \({f}_{n}\) is positive at \({x}_{0}\) and vanishes outside \(U\).
 
@@ -904,7 +912,7 @@ One immediate consequence of the Urysohn lemma is the useful theorem called the 
 
 \end{theorem}
 \begin{proof}
-The idea of the proof is to construct a sequence of continuous functions \({s}_{n}\) defined on the entire space \(X\), such that the sequence \({s}_{n}\) converges uniformly, and such that the restriction of \({s}_{n}\) to \(A\) approximates \(f\) more and more closely as \(n\) becomes large. Then the limit function will be continuous, and its restriction to \(A\) will equal \(f\).
+ The idea of the proof is to construct a sequence of continuous functions \({s}_{n}\) defined on the entire space \(X\), such that the sequence \({s}_{n}\) converges uniformly, and such that the restriction of \({s}_{n}\) to \(A\) approximates \(f\) more and more closely as \(n\) becomes large. Then the limit function will be continuous, and its restriction to \(A\) will equal \(f\).
 
 Step 1. The first step is to construct a particular function \(g\) defined on all of \(X\) such that \(g\) is not too large, and such that \(g\) approximates \(f\) on the set \(A\) to a fair degree of accuracy To be more precise, let us take the case \(f : A \rightarrow [ {-r,r}]\). We assert that there exists a continuous function \(g : X \rightarrow \mathbb{R}\) such that
 
@@ -1113,7 +1121,11 @@ Finally, \(h\) maps all of \(X\) into the open interval(-1,1). For if \(x \in D\
 \end{enumerate}
 \section*{*§ 36 Imbeddings of Manifolds \protect\sectionDagger}
 
-We have shown that every regular space with a countable basis can be imbedded in the ``infinite-dimensional'' euclidean space \({\mathbb{R}}^{\omega }\) It is natural to ask under what conditions a space \(X\) can be imbedded in some finite-dimensional euclidean space \({\mathbb{R}}^{N}\). One answer to this question is given in this section. A more general answer will be obtained in Chapter 8, when we study dimension theory. Definition. An \(m\) -manifold is a Hausdorff space \(X\) with a countable basis such that each point \(x\) of \(X\) has a neighborhood that is homeomorphic with an open subset of \({\mathbb{R}}^{m}\).
+We have shown that every regular space with a countable basis can be imbedded in the ``infinite-dimensional'' euclidean space \({\mathbb{R}}^{\omega }\) It is natural to ask under what conditions a space \(X\) can be imbedded in some finite-dimensional euclidean space \({\mathbb{R}}^{N}\). One answer to this question is given in this section. A more general answer will be obtained in Chapter 8, when we study dimension theory.
+
+\begin{definition}
+ An \(m\) -manifold is a Hausdorff space \(X\) with a countable basis such that each point \(x\) of \(X\) has a neighborhood that is homeomorphic with an open subset of \({\mathbb{R}}^{m}\).
+\end{definition}
 
 \customfootnote{
 
@@ -1149,7 +1161,7 @@ is said to be a partition of unity dominated by \(\{ {U}_{i}\}\) if
 
 \end{theorem}
 \begin{proof}
-Step 1. First, we prove that one can ``shrink'' the covering \(\{ {U}_{i}\}\) to an open covering \(\{ {{V}_{1},\ldots ,{V}_{n}}\}\) of \(X\) such that \({\bar{V}}_{i} \subset {U}_{i}\) for each \(i\).
+ Step 1. First, we prove that one can ``shrink'' the covering \(\{ {U}_{i}\}\) to an open covering \(\{ {{V}_{1},\ldots ,{V}_{n}}\}\) of \(X\) such that \({\bar{V}}_{i} \subset {U}_{i}\) for each \(i\).
 
 We proceed by induction. First, note that the set
 
