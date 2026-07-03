@@ -41,7 +41,7 @@ For a subspace \(Y\) of a topological space \(X\) , there is another useful way 
 \end{lemma}
 
 \begin{proof}
-Suppose first that \(A\) and \(B\) form a separation of \(Y\) . Then \(A\) is both open and closed in \(Y\) . The closure of \(A\) in \(Y\) is the set \(\bar{A} \cap Y\) (where \(\bar{A}\) as usual denotes the closure of \(A\) in \(X\) ). Since \(A\) is closed in \(Y,A = \bar{A} \cap Y\) ; or to say the same thing, \(\bar{A} \cap B = \varnothing\) . Since \\bar{A}\ is the union of \(A\) and its limit points, \(B\) contains no limit points of \(A\) . A similar argument shows that \(A\) contains no limit points of \(B\) .
+Suppose first that \(A\) and \(B\) form a separation of \(Y\) . Then \(A\) is both open and closed in \(Y\) . The closure of \(A\) in \(Y\) is the set \(\bar{A} \cap Y\) (where \(\bar{A}\) as usual denotes the closure of \(A\) in \(X\) ). Since \(A\) is closed in \(Y,A = \bar{A} \cap Y\) ; or to say the same thing, \(\bar{A} \cap B = \varnothing\) . Since \(\bar{A}\) is the union of \(A\) and its limit points, \(B\) contains no limit points of \(A\) . A similar argument shows that \(A\) contains no limit points of \(B\) .
 
 Conversely, suppose that \(A\) and \(B\) are disjoint nonempty sets whose union is \(Y\) , neither of which contains a limit point of the other. Then \(\bar{A} \cap B = \varnothing\) and \(A \cap \bar{B} = \varnothing\) ; therefore, we conclude that \(\bar{A} \cap Y = A\) and \(\bar{B} \cap Y = B\) . Thus both \(A\) and \(B\) are closed in \(Y\) , and since \(A = Y - B\) and \(B = Y - A\) , they are open in \(Y\) as well.
 \end{proof}
@@ -66,7 +66,7 @@ Conversely, suppose that \(A\) and \(B\) are disjoint nonempty sets whose union 
 
 \begin{centeredblock}
 \begin{example}
-	The rationals \(\mathbb{Q}\) are not connected. Indeed, the only connected subspaces of \(\mathbb{Q}\) are the one-point sets \(\cdot\) If \(Y\) is a subspace of \(\mathbb{Q}\) containing two points \(p\) and \(q\) , one can choose an irrational number a lying between \(p\) and \(q\) , and write \(Y\) as the union of the open sets
+	The rationals \(\mathbb{Q}\) are not connected. Indeed, the only connected subspaces of \(\mathbb{Q}\) are the one-point sets. If \(Y\) is a subspace of \(\mathbb{Q}\) containing two points \(p\) and \(q\) , one can choose an irrational number a lying between \(p\) and \(q\) , and write \(Y\) as the union of the open sets
 
 \[
 Y \cap ( {-\infty ,a}) \;\text{ and }\;Y \cap ( {a, + \infty }) .
@@ -155,7 +155,7 @@ It is natural to ask whether this theorem extends to arbitrary products of conne
 U = ( {{a}_{1} - 1,{a}_{1} + 1}) \times ( {{a}_{2} - 1,{a}_{2} + 1}) \times
 \]
 
-consists enturely of bounded sequences if \(a\) is bounded, and of unbounded sequences if \(a\) if unbounded. Thus, even though \(\mathbb{R}\) is connected (as we shall prove in the next section), \({\mathbb{R}}^{\omega }\) is not connected in the box topology.
+consists entirely of bounded sequences if \(a\) is bounded, and of unbounded sequences if \(a\) if unbounded. Thus, even though \(\mathbb{R}\) is connected (as we shall prove in the next section), \({\mathbb{R}}^{\omega }\) is not connected in the box topology.
 \end{example}
 \end{centeredblock}
 
@@ -181,7 +181,7 @@ The argument just given generalizes to show that an arbitrary product of connect
 \item Let \(\{ {A}_{n}\}\) be a sequence of connected subspaces of \(X\) , such that \({A}_{n} \cap {A}_{n + 1} \neq \varnothing\) for all \(n\) . Show that \(\bigcup {A}_{n}\) is connected.
 \item Let \(\{ {A}_{\alpha }\}\) be a collection of connected subspaces of \(X\) ; let \(A\) be a connected subspace of \(X\) . Show that if \(A \cap {A}_{\alpha } \neq \varnothing\) for all \(\alpha\) , then \(A \cup ( {\bigcup {A}_{\alpha }})\) is connected.
 \item Show that if \(X\) is an infinite set, it is connected in the finite complement topology.
-\item A space is if its only connected subspaces are one-point sets. Show that if \(X\) has the discrete topology, then \(X\) is totally disconnected. Does the converse hold?
+\item A space is totally disconnected if its only connected subspaces are one-point sets. Show that if \(X\) has the discrete topology, then \(X\) is totally disconnected. Does the converse hold?
 \item Let \(A \subset X\) Show that if \(C\) is a connected subspace of \(X\) that intersects both \(A\) and \(X - A\) , then \(C\) intersects \(\operatorname{Bd}A\) .
 \item Is the space \({\mathbb{R}}_{\ell }\) connected? Justify your answer.
 \item Determine whether or not \({\mathbb{R}}^{\omega }\) is connected in the uniform topology.
@@ -265,7 +265,7 @@ are disjoint, and they are nonempty because one contains \(f( a)\) and the other
 
 \begin{centeredblock}
 \begin{example}
-	One example of a linear continuum different from \(\mathbb{R}\) is the ordered square. We check the least upper bound property. (The second property of a linear continuum is trivial to check.) Let \(A\) be a subset of \(I \times I\) , let \({\pi }_{1}I \times I \rightarrow I\) be projection on the first coordinate; let \(b = \sup {\pi }_{1}( A)\) . If \(b \in {\pi }_{1}( A)\) , then \(A\) intersects the subset \(b \times I\) of \(I \times I\) . Because \(b \times I\) has the order type of \(I\) , the set \(A \cap ( {b \times I})\) will have a least upper bound \(b \times c\) , which will be the least upper bound of \(A\) . See Figure 24.3. If \(b \notin {\pi }_{1}( A)\) , then \(b \times 0\) is the least upper bound of \(A\) ; no element of the form \({b}^{\prime } \times c\) with \({b}^{\prime } < b\) can be an upper bound for \(A\) , for then \({b}^{\prime }\) would be an upper bound for \({\pi }_{l}( A)\) .
+	One example of a linear continuum different from \(\mathbb{R}\) is the ordered square. We check the least upper bound property. (The second property of a linear continuum is trivial to check.) Let \(A\) be a subset of \(I \times I\) , let \({\pi }_{1} : I \times I \rightarrow I\) be projection on the first coordinate; let \(b = \sup {\pi }_{1}( A)\) . If \(b \in {\pi }_{1}( A)\) , then \(A\) intersects the subset \(b \times I\) of \(I \times I\) . Because \(b \times I\) has the order type of \(I\) , the set \(A \cap ( {b \times I})\) will have a least upper bound \(b \times c\) , which will be the least upper bound of \(A\) . See Figure 24.3. If \(b \notin {\pi }_{1}( A)\) , then \(b \times 0\) is the least upper bound of \(A\) ; no element of the form \({b}^{\prime } \times c\) with \({b}^{\prime } < b\) can be an upper bound for \(A\) , for then \({b}^{\prime }\) would be an upper bound for \({\pi }_{l}( A)\) .
 
 \munkresfig[1.0]{24.3}[Figure 24.3]
 \end{example}
@@ -655,7 +655,7 @@ Some finite subcollection of \(\mathcal{B}\) covers \(X\) . If this subcollectio
 \begin{proof}
 Let \(Y\) be a compact subspace of the Hausdorff space \(X\) . We shall prove that \(X - Y\) is open, so that \(Y\) is closed.
 
-Let \({x}_{0}\) be a point of \(X - Y\) . We show there is a neighborhood of \({x}_{0}\) that is disjoint from \(Y\) . For each point \(y\) of \(Y\) , let us choose disjoint neighborhoods \({U}_{y}\) and \({V}_{y}\) of the points \({x}_{0}\) and \(y\) , respectively (using the Hausdorff condition). The collection \(\{ {{V}_{y} \mid y \in }.\) \(Y\}\) is a covering of \(Y\) by sets open in \(X\) ; therefore, finitely many of them \({V}_{{y}_{1}},\ldots ,{V}_{{y}_{n}}\) cover \(Y\) . The open set
+Let \({x}_{0}\) be a point of \(X - Y\) . We show there is a neighborhood of \({x}_{0}\) that is disjoint from \(Y\) . For each point \(y\) of \(Y\) , let us choose disjoint neighborhoods \({U}_{y}\) and \({V}_{y}\) of the points \({x}_{0}\) and \(y\) , respectively (using the Hausdorff condition). The collection \(\{ {{V}_{y} \mid y \in Y}\}\) is a covering of \(Y\) by sets open in \(X\) ; therefore, finitely many of them \({V}_{{y}_{1}},\ldots ,{V}_{{y}_{n}}\) cover \(Y\) . The open set
 
 \[
 V = {V}_{{y}_{1}} \cup \cdot \cup {V}_{{y}_{n}}
@@ -681,13 +681,13 @@ The statement we proved in the course of the preceding proof will be useful to u
 
 \begin{centeredblock}
 \begin{example}
-	Once we prove that the interval \([ {a,b}]\) in \(\mathbb{R}\) is compact, it follows from Theorem 26 2 that any closed subspace of \([ {a,b}]\) is compact. On the other hand, it follows from Theorem 26.3 that the intervals \((a,b\rbrack\) and(a, b)in \(\mathbb{R}\) cannot be compact (which we knew already) because they are not closed in the Hausdorff space \(\mathbb{R}\)
+	Once we prove that the interval \([ {a,b}]\) in \(\mathbb{R}\) is compact, it follows from Theorem 26.2 that any closed subspace of \([ {a,b}]\) is compact. On the other hand, it follows from Theorem 26.3 that the intervals \((a,b\rbrack\) and(a, b)in \(\mathbb{R}\) cannot be compact (which we knew already) because they are not closed in the Hausdorff space \(\mathbb{R}\)
 \end{example}
 \end{centeredblock}
 
 \begin{centeredblock}
 \begin{example}
-	One needs the Hausdorff condition in the hypothesis of Theorem 263 Consider, for example, the finite complement topology on the real line The only proper subsets of \(\mathbb{R}\) that are closed in this topology are the finite sets. But every subset of \(\mathbb{R}\) is compact in this topology, as you can check.
+	One needs the Hausdorff condition in the hypothesis of Theorem 26.3. Consider, for example, the finite complement topology on the real line The only proper subsets of \(\mathbb{R}\) that are closed in this topology are the finite sets. But every subset of \(\mathbb{R}\) is compact in this topology, as you can check.
 \end{example}
 \end{centeredblock}
 
@@ -732,7 +732,7 @@ Step 1. Suppose that we are given spaces \(X\) and \(Y\) , with \(Y\) compact. S
 
 There is a neighborhood \(W\) of \({x}_{0}\) in \(X\) such that \(N\) contains the entire set \(W \times Y\)
 
-The set \(W \times Y\) is often called a about \({x}_{0} \times Y\) .
+The set \(W \times Y\) is often called a tube about \({x}_{0} \times Y\) .
 
 First let us cover \({x}_{0} \times Y\) by basis elements \(U \times V\) (for the topology of \(X \times Y\) ) lying in \(N\) . The space \({x}_{0} \times Y\) is compact, being homeomorphic to \(Y\) . Therefore, we can cover \({x}_{0} \times Y\) by finitely many such basis elements
 
@@ -873,7 +873,7 @@ We shall use the closed set criterion for compactness in the next section to pro
  \item Give examples to show that this theorem fails if you delete the requirement that \(X\) be compact, or if you delete the requirement that the sequence be monotone. [Hint: See the exercises of §21.]
  \end{enumerate}
 \item \textsl{Theorem.} Let \(X\) be a compact Hausdorff space. Let \(\mathcal{A}\) be a collection of closed connected subsets of \(X\) that is simply ordered by proper inclusion. Then \[ Y = \mathop{\bigcap }\limits_{{A \in \mathcal{A}}}A \] is connected. [Hint: If \(C \cup D\) is a separation of \(Y\) , choose disjoint open sets \(U\) and \(V\) of \(X\) containing \(C\) and \(D\) , respectively, and show that \[ \mathop{\bigcap }\limits_{{A \in \mathcal{A}}}( {A - ( {U \cup V}) }) \] is not empty.]
-\item Let \(p : X \rightarrow Y\) be a closed continuous surjective map such that \({p}^{-1}( {\{ y\} })\) is compact, for each \(y \in Y\) . (Such a map is called a ) Show that if \(Y\) is compact, then \(X\) is compact. [Hint: If \(U\) is an open set containing \({p}^{-1}( {\{ y\} })\) , there is a neighborhood \(W\) of \(y\) such that \({p}^{-1}( W)\) is contained in \(U\) ]
+\item Let \(p : X \rightarrow Y\) be a closed continuous surjective map such that \({p}^{-1}( {\{ y\} })\) is compact, for each \(y \in Y\) . (Such a map is called a perfect map.) Show that if \(Y\) is compact, then \(X\) is compact. [Hint: If \(U\) is an open set containing \({p}^{-1}( {\{ y\} })\) , there is a neighborhood \(W\) of \(y\) such that \({p}^{-1}( W)\) is contained in \(U\) ]
 \item Let \(G\) be a topological group.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Let \(A\) and \(B\) be subspaces of \(G\) . If \(A\) is closed and \(B\) is compact, show \(A \cdot B\) is closed. [Hint: If \(c\) is not in \(A \cdot B\) , find a neighborhood \(W\) of \(c\) such that \(W \cdot {B}^{-1}\) is disjoint from \(A\) .]
@@ -1134,7 +1134,7 @@ As indicated when we first mentioned compact sets, there are other formulations 
 	A space \(X\) is said to be limit point compact if every infinite subset of \(X\) has a limit point.
 \end{definition}
 
-In some ways this property is more natural and intuitive than that of compactness. In the early days of topology, it was given the name ``compactness,'' while the open covering formulation was called ``.'' Later, the word ``compact'' was shifted to apply to the open covering definition, leaving this one to search for a new name It still has not found a name on which everyone agrees On historical grounds, some call it ``Fréchet compactness'', others call it the ``Bolzano-Weierstrass property'' We have invented the term ``'' It seems as good a term as any; at least it describes what the property is about.
+In some ways this property is more natural and intuitive than that of compactness. In the early days of topology, it was given the name ``compactness,'' while the open covering formulation was called ``bicompactness.'' Later, the word ``compact'' was shifted to apply to the open covering definition, leaving this one to search for a new name. It still has not found a name on which everyone agrees. On historical grounds, some call it ``Fréchet compactness'', others call it the ``Bolzano-Weierstrass property''. We have invented the term ``limit point compactness''. It seems as good a term as any; at least it describes what the property is about.
 
 \section*{Theorem 28.1. Compactness implies limit point compactness, but not con versely}
 
@@ -1183,7 +1183,7 @@ is an increasing sequence of positive integers, then the sequence \(( {y}_{i})\)
 Then suppose that the positive integer \({n}_{i - 1}\) is given. Because the ball \(B( {x,1/i})\) intersects \(A\) in infinitely many points, we can choose an index \({n}_{i} > {n}_{i - 1}\) such that
 
 \[
-{x}_{{n}_{i}} \in B( {x,1/\iota }) \text{ . }
+{x}_{{n}_{i}} \in B( {x,1/i}) \text{ . }
 \]
 
 Then the subsequence \({x}_{{n}_{1}},{x}_{{n}_{2}},\ldots\) converges to \(x\) .
@@ -1192,7 +1192,7 @@ Finally, we show that \(( 3) \Rightarrow ( 1)\) . This is the hardest part of th
 
 First, we show that if \(X\) is sequentially compact, then the Lebesgue number lemma holds for \(X\) . (This would follow from compactness, but compactness is what we are trying to prove!) Let \(\mathcal{A}\) be an open covering of \(X\) . We assume that there is no \(\delta > 0\) such that each set of diameter less than \(\delta\) has an element of \(\mathcal{A}\) containing it, and derive a contradiction.
 
-Our assumption implies in particular that for each positive integer \(n\) , there exists a set of diameter less than \(1/n\) that is not contained in any element of \(\mathcal{A}\) ; let \({C}_{n}\) be such a set. Choose a point \({x}_{n} \in {C}_{n}\) , for each \(n\) . By hypothesis, some subsequence \(( {x}_{{n}_{i}})\) of the sequence \(( {x}_{n})\) converges, say to the point \(a\) . Now \(a\) belongs to some element \(A\) of the collection \(\mathcal{A}\) ; because \(A\) is open, we may choose an \(\epsilon > 0\) such that \(B( {a,\epsilon }) \subset A\) . If \(i\) is large enough that \(1/{n}_{i} < \epsilon /2\) , then the set \({C}_{{n}_{i}}\) lies in the \(\epsilon /2\) -neighborhood of \({x}_{{n}_{i}}\) ; if \(i\) is also chosen large enough that \(d( {{x}_{{n}_{i}},a}) < \epsilon /2\) , then \({C}_{{n}_{i}}\) lies in the \(\epsilon\) -neighborhood of \(a\) . But this means that \({C}_{{n}_{t}} \subset A\) , contrary to hypothesis.
+Our assumption implies in particular that for each positive integer \(n\) , there exists a set of diameter less than \(1/n\) that is not contained in any element of \(\mathcal{A}\) ; let \({C}_{n}\) be such a set. Choose a point \({x}_{n} \in {C}_{n}\) , for each \(n\) . By hypothesis, some subsequence \(( {x}_{{n}_{i}})\) of the sequence \(( {x}_{n})\) converges, say to the point \(a\) . Now \(a\) belongs to some element \(A\) of the collection \(\mathcal{A}\) ; because \(A\) is open, we may choose an \(\epsilon > 0\) such that \(B( {a,\epsilon }) \subset A\) . If \(i\) is large enough that \(1/{n}_{i} < \epsilon /2\) , then the set \({C}_{{n}_{i}}\) lies in the \(\epsilon /2\) -neighborhood of \({x}_{{n}_{i}}\) ; if \(i\) is also chosen large enough that \(d( {{x}_{{n}_{i}},a}) < \epsilon /2\) , then \({C}_{{n}_{i}}\) lies in the \(\epsilon\) -neighborhood of \(a\) . But this means that \({C}_{{n}_{i}} \subset A\) , contrary to hypothesis.
 
 Second, we show that if \(X\) is sequentially compact, then given \(\epsilon > 0\) , there exists a finite covering of \(X\) by open \(\epsilon\) -balls. Once again, we proceed by contradiction. Assume that there exists an \(\epsilon > 0\) such that \(X\) cannot be covered by finitely many \(\epsilon\) -balls. Construct a sequence of points \({x}_{n}\) of \(X\) as follows: First, choose \({x}_{1}\) to be any point of \(X\) . Noting that the ball \(B( {{x}_{1},\epsilon })\) is not all of \(X\) (otherwise \(X\) could be covered by a single \(\epsilon\) -ball), choose \({x}_{2}\) to be a point of \(X\) not in \(B( {{x}_{1},\epsilon })\) . In general, given \({x}_{1},\ldots ,{x}_{n}\) , choose \({x}_{n + 1}\) to be a point not in the union
 
@@ -1220,9 +1220,9 @@ Finally, we show that if \(X\) is sequentially compact, then \(X\) is compact. L
  \item If \(A\) is a closed subset of \(X\) , does it follow that \(A\) is limit point compact?
  \item If \(X\) is a subspace of the Hausdorff space \(Z\) , does it follow that \(X\) is closed in \(Z\) ? We comment that it is not in general true that the product of two limit point compact spaces is limit point compact, even if the Hausdorff condition is assumed. But the examples are fairly sophisticated. See \cite{SteenSeebach1970}, Example II2.
  \end{enumerate}
-\item A space \(X\) is said to be countably compact if every countable open covering of \(X\) contains a finite subcollection that covers \(X\) . Show that for a \({T}_{1}\) space \(X\) , is equivalent to limit point compactness. [Hint: If no finite subcollection of \({U}_{n}\) covers \(X\) , choose \({x}_{n} \notin {U}_{1} \cup \cdots \cup {U}_{n}\) , for each \(n\) .]
+\item A space \(X\) is said to be countably compact if every countable open covering of \(X\) contains a finite subcollection that covers \(X\) . Show that for a \({T}_{1}\) space \(X\) , countable compactness is equivalent to limit point compactness. [Hint: If no finite subcollection of \({U}_{n}\) covers \(X\) , choose \({x}_{n} \notin {U}_{1} \cup \cdots \cup {U}_{n}\) , for each \(n\) .]
 \item Show that \(X\) is countably compact if and only if every nested sequence \({C}_{1} \supset\) \({C}_{2} \supset\) - of closed nonempty sets of \(X\) has a nonempty intersection.
-\item Let(X, d)be a metric space. If \(f : X \rightarrow X\) satisfies the condition \[ d( {f( x) ,f( y) }) = d( {x,y}) \] for all \(x,y \in X\) , then \(f\) is called an of \(X\) . Show that if \(f\) is an isometry and \(X\) is compact, then \(f\) is bijective and hence a homeomorphism. [Hint: If \(a \notin f( X)\) , choose \(\epsilon\) so that the \(\epsilon\) -neighborhood of \(a\) is disjoint from \(f( X)\) Set \({x}_{1} = a\) , and \({x}_{n + 1} = f( {x}_{n})\) in general. Show that \(d( {{x}_{n},{x}_{m}}) \geq \epsilon\) for \(n \neq m\) .]
+\item Let(X, d)be a metric space. If \(f : X \rightarrow X\) satisfies the condition \[ d( {f( x) ,f( y) }) = d( {x,y}) \] for all \(x,y \in X\) , then \(f\) is called an isometry of \(X\) . Show that if \(f\) is an isometry and \(X\) is compact, then \(f\) is bijective and hence a homeomorphism. [Hint: If \(a \notin f( X)\) , choose \(\epsilon\) so that the \(\epsilon\) -neighborhood of \(a\) is disjoint from \(f( X)\) Set \({x}_{1} = a\) , and \({x}_{n + 1} = f( {x}_{n})\) in general. Show that \(d( {{x}_{n},{x}_{m}}) \geq \epsilon\) for \(n \neq m\) .]
 \item Let(X, d)be a metric space. If \(f\) satisfies the condition \[ d( {f( x) ,f( y) }) < d( {x,y}) \] for all \(x,y \in X\) with \(x \neq y\) , then \(f\) is called a shrinking map. If there is a number \(\alpha < 1\) such that \[ d( {f( x) ,f( y) }) \leq {\alpha d}( {x,y}) \] for all \(x,y \in X\) , then \(f\) is called a contraction. A fixed point of \(f\) is a point \(x\) such that \(f( x) = x\)
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item If \(f\) is a contraction and \(X\) is compact, show \(f\) has a unique fixed point. [Hint: Define \({f}^{1} = f\) and \({f}^{n + 1} = f \circ {f}^{n}\) . Consider the intersection \(A\) of the sets \(. {{A}_{n} = {f}^{n}( X) \text{ . }}]\)
@@ -1233,7 +1233,7 @@ Finally, we show that if \(X\) is sequentially compact, then \(X\) is compact. L
 \end{enumerate}
 \section*{§ 29 Local Compactness}
 
-In this section we study the notion of , and we prove the basic theorem that any locally compact Hausdorff space can be imbedded in a certain compact Hausdorff space that is called its one-point .
+In this section we study the notion of local compactness, and we prove the basic theorem that any locally compact Hausdorff space can be imbedded in a certain compact Hausdorff space that is called its one-point compactification.
 
 \begin{definition}
 	A space \(X\) is said to be locally compact at \(x\) if there is some compact subspace \(C\) of \(X\) that contains a neighborhood of \(x\) . If \(X\) is locally compact at each of its points, \(X\) is said simply to be locally compact.
