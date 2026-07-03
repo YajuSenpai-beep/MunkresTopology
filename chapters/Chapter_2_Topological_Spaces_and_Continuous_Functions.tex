@@ -830,12 +830,12 @@ To demonstrate the reverse inclusion, we let \(x\) be a point of \(\bar{A}\) and
 One's experience with open and closed sets and limit points in the real line and the plane can be misleading when one considers more general topological spaces. For example, in the spaces \(\mathbb{R}\) and \({\mathbb{R}}^{2}\), each one-point set \(\{ {x}_{0}\}\) is closed. This fact is easily proved; every point different from \({x}_{0}\) has a neighborhood not intersecting \(\{ {x}_{0}\}\), so that \(\{ {x}_{0}\}\) is its own closure. But this fact is not true for arbitrary topological spaces. Consider the topology on the three-point set \(\{ a,b,c\}\) indicated in Figure 17.3. In this space, the one-point set \(\{ b\}\) is not closed, for its complement is not open.
 
 \munkresfig[0.2]{17.3}[Figure 17.3]
-Similarly, one's experience with the properties of in \(\mathbb{R}\) and \({\mathbb{R}}^{2}\) can be misleading when one deals with more general topological spaces. In an arbitrary topological space, one says that a sequence \({x}_{1},{x}_{2},\ldots\) of points of the space \(X\) converges to the point \(x\) of \(X\) provided that, corresponding to each neighborhood \(U\) of \(x\), there is a positive integer \(N\) such that \({x}_{n} \in U\) for all \(n \geq N\) . In \(\mathbb{R}\) and \({\mathbb{R}}^{2}\), a sequence cannot converge to more than one point, but in an arbitrary space, it can. In the space indicated in Figure 17.3, for example, the sequence defined by setting \({x}_{n} = b\) for all \(n\) converges not only to the point \(b\), but also to the point \(a\) and to the point \(c\) !
+Similarly, one's experience with the properties of convergent sequences in \(\mathbb{R}\) and \({\mathbb{R}}^{2}\) can be misleading when one deals with more general topological spaces. In an arbitrary topological space, one says that a sequence \({x}_{1},{x}_{2},\ldots\) of points of the space \(X\) converges to the point \(x\) of \(X\) provided that, corresponding to each neighborhood \(U\) of \(x\), there is a positive integer \(N\) such that \({x}_{n} \in U\) for all \(n \geq N\) . In \(\mathbb{R}\) and \({\mathbb{R}}^{2}\), a sequence cannot converge to more than one point, but in an arbitrary space, it can. In the space indicated in Figure 17.3, for example, the sequence defined by setting \({x}_{n} = b\) for all \(n\) converges not only to the point \(b\), but also to the point \(a\) and to the point \(c\) !
 
 Topologies in which one-point sets are not closed, or in which sequences can converge to more than one point, are considered by many mathematicians to be somewhat strange. They are not really very interesting, for they seldom occur in other branches of mathematics And the theorems that one can prove about topological spaces are rather limited if such examples are allowed. Therefore, one often imposes an additional condition that will rule out examples like this one, bringing the class of spaces under consideration closer to those to which one's geometric intuition applies. The condition was suggested by the mathematician Felix Hausdorff, so mathematicians have come to call it by his name.
 
 \begin{definition}
-	A topological space \(X\) is called a if for each pair \({x}_{1},{x}_{2}\) of distinct points of \(X\), there exist neighborhoods \({U}_{1}\), and \({U}_{2}\) of \({x}_{1}\) and \({x}_{2}\), respectively, that are disjoint.
+	A topological space \(X\) is called a Hausdorff space if for each pair \({x}_{1},{x}_{2}\) of distinct points of \(X\), there exist neighborhoods \({U}_{1}\), and \({U}_{2}\) of \({x}_{1}\) and \({x}_{2}\), respectively, that are disjoint.
 \end{definition}
 
 \section*{Theorem 17.8. Every finite point set in a Hausdorff space \(X\) is closed.}
@@ -1075,7 +1075,7 @@ Let \(X\) and \(Y\) be topological spaces; let \(f : X \rightarrow Y\) be a bije
 {f}^{-1} : Y \rightarrow X
 \]
 
-are continuous, then \(f\) is called a .
+are continuous, then \(f\) is called a homeomorphism.
 
 The condition that \({f}^{-1}\) be continuous says that for each open set \(U\) of \(X\), the inverse image of \(U\) under the map \({f}^{-1} : Y \rightarrow X\) is open in \(Y\) But the inverse image of \(U\) under the map \({f}^{-1}\) is the same as the image of \(U\) under the map \(f\) . See Figure 18.I. So another way to define a homeomorphism is to say that it is a bijective correspondence \(f : X \rightarrow Y\) such that \(f( U)\) is open if and only if \(U\) is open.
 
@@ -2360,7 +2360,7 @@ There is a special situation in which the quotient topology occurs particularly 
 	Let \(X\) be a topological space, and let \({X}^{ * }\) be a partition of \(X\) into disjoint subsets whose union is \(X\) . Let \(p : X \rightarrow {X}^{ * }\) be the surjective map that carries each point of \(X\) to the element of \({X}^{ * }\) containing it. In the quotient topology induced by \(p\), the space \({X}^{ * }\) is called a quotient space of \(X\) .
 \end{definition}
 
-Given \({X}^{ * }\), there is an equivalence relation on \(X\) of which the elements of \({X}^{ * }\) are the equivalence classes. One can think of \({X}^{ * }\) as having been obtained by ``ide ntifying'' each pair of equivalent points. For this reason, the quotient space \({X}^{ * }\) is often called an, or a, of the space \(X\) .
+Given \({X}^{ * }\), there is an equivalence relation on \(X\) of which the elements of \({X}^{ * }\) are the equivalence classes. One can think of \({X}^{ * }\) as having been obtained by ``ide ntifying'' each pair of equivalent points. For this reason, the quotient space \({X}^{ * }\) is often called an identification space, or a decomposition space, of the space \(X\) .
 
 We can describe the topology of \({X}^{ * }\) in another way. A subset \(U\) of \({X}^{ * }\) is a collection of equivalence classes, and the set \({p}^{-1}( U)\) is just the union of the equivalence classes belongingg to \(U\) . Thus the typical open set of \({X}^{ * }\) is a collection of equivalence classes whose union is an open set of \(X\) .
 
@@ -2506,7 +2506,7 @@ Suppose \(Z\) is Hausdorff. Given distinct pomts of \({X}^{ * }\), their images 
 
 Define a map \(g : X \rightarrow Z\) by the equation \(g( {x \times n}) = x \times ( {x/n})\) ; then \(g\) is surjective and continuous. The quotient space \({X}^{ * }\) whose elements are the sets \({g}^{-1}( {\{ z\} })\) is simply the space obtained from \(X\) by identifying the subset \(\{ 0\} \times {\mathbb{Z}}_{ + }\) to a point. The map \(g\) induces a bijective continuous map \(f : {X}^{ * } \rightarrow Z\) . But \(f\) is not a homeomorphism.
 
-To verify this fact, it suffices to show that \(g\) is not a quotient map. Consider the sequence of points \({x}_{n} = ( {1/n}) \times n\) of \(X\) . The set \(A = \{ {x}_{n}\}\) is a closed subset of \(X\) because it has no limut points. Also, it is saturated with respect to \(g\) On the other hand, the set \(g( A)\) is not closed in \(Z\), for it consists of the points \({z}_{n} = ( {1/n}) \times ( {1/{n}^{2}})\) ; this set has the origin as a limit point.
+To verify this fact, it suffices to show that \(g\) is not a quotient map. Consider the sequence of points \({x}_{n} = ( {1/n}) \times n\) of \(X\) . The set \(A = \{ {x}_{n}\}\) is a closed subset of \(X\) because it has no limit points. Also, it is saturated with respect to \(g\) On the other hand, the set \(g( A)\) is not closed in \(Z\), for it consists of the points \({z}_{n} = ( {1/n}) \times ( {1/{n}^{2}})\) ; this set has the origin as a limit point.
 
 \munkresfig[0.9]{22.9}[Figure 22.7]
 \end{example}
