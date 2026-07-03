@@ -11,58 +11,55 @@ The definition of a topological space that is now standard was a long time in be
 \begin{definition}
 	A topology on a set \(X\) is a collection \(\mathcal{T}\) of subsets of \(X\) having the following properties:
 
-(1) \(\varnothing\) and \(X\) are in \(\mathcal{T}\) .
+	(1) \(\varnothing\) and \(X\) are in \(\mathcal{T}\) .
 
-(2) The union of the elements of any subcollection of \(\mathcal{T}\) is in \(\mathcal{T}\) .
+	(2) The union of the elements of any subcollection of \(\mathcal{T}\) is in \(\mathcal{T}\) .
 
-(3) The intersection of the elements of any finite subcollection of \(\mathcal{T}\) is in \(\mathcal{T}\) .
+	(3) The intersection of the elements of any finite subcollection of \(\mathcal{T}\) is in \(\mathcal{T}\) .
+	A set \(X\) for which a topology \(\mathcal{T}\) has been specified is called a topological space.
 
-A set \(X\) for which a topology \(\mathcal{T}\) has been specified is called a topological space.
-
-Properly speaking, a topological space is an ordered pair \((X, \mathcal{T})\) consisting of a set \(X\) and a topology \(\mathcal{T}\) on \(X\), but we often omit specific mention of \(\mathcal{T}\) if no confusion will arise.
+	Properly speaking, a topological space is an ordered pair \((X, \mathcal{T})\) consisting of a set \(X\) and a topology \(\mathcal{T}\) on \(X\), but we often omit specific mention of \(\mathcal{T}\) if no confusion will arise.
 \end{definition}
 
 If \(X\) is a topological space with topology \(\mathcal{T}\), we say that a subset \(U\) of \(X\) is an open set of \(X\) if \(U\) belongs to the collection \(\mathcal{T}\) . Using this terminology, one can say that a topological space is a set \(X\) together with a collection of subsets of \(X\), called open sets, such that \(\varnothing\) and \(X\) are both open, and such that arbitrary unions and finite intersections of open sets are open.
 
-\begin{centeredblock}
-\begin{example}
-	Let \(X\) be a three-element set, \(X = \{ a,b,c\}\) There are many possible topologies on \(X\), some of which are indicated schematically in Figure 12.1. The diagram in the upper right-hand corner indicates the topology in which the open sets are \(X,\varnothing\), \(\{ a,b\},\{ b\}\), and \(\{ b,c\}\) The topology in the upper left-hand corner contains only \(X\) and \(\varnothing\), while the topology in the lower right-hand corner contains every subset of \(X\) . You can get other topologies on \(X\) by permuting \(a,b\), and \(c\)
+\begin{centeredblock*}
+	\begin{example}
+		Let \(X\) be a three-element set, \(X = \{ a,b,c\}\) There are many possible topologies on \(X\), some of which are indicated schematically in Figure 12.1. The diagram in the upper right-hand corner indicates the topology in which the open sets are \(X,\varnothing\), \(\{ a,b\},\{ b\}\), and \(\{ b,c\}\) The topology in the upper left-hand corner contains only \(X\) and \(\varnothing\), while the topology in the lower right-hand corner contains every subset of \(X\) . You can get other topologies on \(X\) by permuting \(a,b\), and \(c\).
+	\end{example}
+	\munkresfig[0.9]{12.1}[Figure 12.1]
+	From this example, you can see that even a three-element set has many different topologies. But not every collection of subsets of \(X\) is a topology on \(X\) Neither of the collections indicated in Figure 12.2 is a topology, for instance.
+	\munkresfig[0.9]{12.2}[Figure 12.2]
+\end{centeredblock*}
 
-\munkresfig[0.9]{12.1}[Figure 12.1]
-\end{example}
+\begin{centeredblock}
+	\begin{example}
+		If \(X\) is any set, the collection of all subsets of \(X\) is a topology on \(X\), it is called the discrete topology. The collection consisting of \(X\) and \(\varnothing\) only is also a topology on \(X\) ; we shall call it the indiscrete topology, or the trivial topology.
+	\end{example}
 \end{centeredblock}
 
-From this example, you can see that even a three-element set has many different topologies. But not every collection of subsets of \(X\) is a topology on \(X\) Neither of the collections indicated in Figure 12.2 is a topology, for instance.
+\begin{centeredblock*}
+	\begin{example}
+		Let \(X\) be a set, let \({\mathcal{T}}_{f}\) be the collection of all subsets \(U\) of \(X\) such that \(X - U\) either is finite or is all of \(X\) Then \({\mathcal{T}}_{f}\) is a topology on \(X\), called the finite complement topology. Both \(X\) and \(\varnothing\) are in \({\mathcal{T}}_{f}\), since \(X - X\) is finite and \(X - \varnothing\) is all of \(X\) If \(\{ {U}_{\alpha }\}\) is an indexed family of nonempty elements of \({\mathcal{T}}_{f}\), to show that \(\bigcup {U}_{\alpha }\) is in \({\mathcal{T}}_{f}\), we compute
 
-\munkresfig[0.6]{12.2}[Figure 12.2]
-\begin{centeredblock}
-\begin{example}
-	If \(X\) is any set, the collection of all subsets of \(X\) is a topology on \(X\), it is called the discrete topology. The collection consisting of \(X\) and \(\varnothing\) only is also a topology on \(X\) ; we shall call it the indiscrete topology, or the trivial topology.
-\end{example}
-\end{centeredblock}
+		\[
+		X - \bigcup {U}_{\alpha } = \bigcap ( {X - {U}_{\alpha }})
+		\]
 
-\begin{centeredblock}
-\begin{example}
-	Let \(X\) be a set, let \({\mathcal{T}}_{f}\) be the collection of all subsets \(U\) of \(X\) such that \(X - U\) either is finite or is all of \(X\) Then \({\mathcal{T}}_{f}\) is a topology on \(X\), called the finite complement topology. Both \(X\) and \(\varnothing\) are in \({\mathcal{T}}_{f}\), since \(X - X\) is finite and \(X - \varnothing\) is all of \(X\) If \(\{ {U}_{\alpha }\}\) is an indexed family of nonempty elements of \({\mathcal{T}}_{f}\), to show that \(\bigcup {U}_{\alpha }\) is in \({\mathcal{T}}_{f}\), we compute
+		The latter set is finite because each set \(X - {U}_{\alpha }\) is finite If \({U}_{1},\;,{U}_{n}\) are nonempty elements of \({\mathcal{T}}_{f}\), to show that \(\bigcap {U}_{t}\) is in \({\mathcal{T}}_{f}\), we compute
 
-\[
-X - \bigcup {U}_{\alpha } = \bigcap ( {X - {U}_{\alpha }})
-\]
+		\[
+		X - \mathop{\bigcap }\limits_{{i = 1}}^{n}{U}_{i} = \mathop{\bigcup }\limits_{{i = 1}}^{n}( {X - {U}_{i}})
+		\]
 
-The latter set is finite because each set \(X - {U}_{\alpha }\) is finite If \({U}_{1},\;,{U}_{n}\) are nonempty elements of \({\mathcal{T}}_{f}\), to show that \(\bigcap {U}_{t}\) is in \({\mathcal{T}}_{f}\), we compute
-
-\[
-X - \mathop{\bigcap }\limits_{{i = 1}}^{n}{U}_{i} = \mathop{\bigcup }\limits_{{i = 1}}^{n}( {X - {U}_{i}})
-\]
-
-The latter set is a finite union of finite sets and, therefore, finite
-\end{example}
-\end{centeredblock}
+		The latter set is a finite union of finite sets and, therefore, finite
+	\end{example}
+\end{centeredblock*}
 
 \begin{centeredblock}
-\begin{example}
-	Let \(X\) be a set, let \({\mathcal{T}}_{c}\) be the collection of all subsets \(U\) of \(X\) such that \(X - U\) either is countable or is all of \(X\) . Then \({\mathcal{T}}_{c}\) is a topology on \(X\), as you can check
-\end{example}
+	\begin{example}
+		Let \(X\) be a set, let \({\mathcal{T}}_{c}\) be the collection of all subsets \(U\) of \(X\) such that \(X - U\) either is countable or is all of \(X\) . Then \({\mathcal{T}}_{c}\) is a topology on \(X\), as you can check
+	\end{example}
 \end{centeredblock}
 
 \begin{definition}
@@ -84,34 +81,33 @@ For each of the examples in the preceding section, we were able to specify the t
 \begin{definition}
 	If \(X\) is a set, a basis for a topology on \(X\) is a collection \(\mathcal{B}\) of subsets of \(X\) (called basis elements) such that
 
-(1) For each \(x \in X\), there is at least one basis element \(B\) containing \(x\) .
+	(1) For each \(x \in X\), there is at least one basis element \(B\) containing \(x\) .
 
-(2) If \(x\) belongs to the intersection of two basis elements \({B}_{1}\) and \({B}_{2}\), then there is a basis element \({B}_{3}\) containing \(x\) such that \({B}_{3} \subset {B}_{1} \cap {B}_{2}\) .
-
-If \(\mathcal{B}\) satisfies these two conditions, then we define the topology \(\mathcal{T}\) generated by \(\mathcal{B}\) as follows: \(A\) subset \(U\) of \(X\) is said to be open in \(X\) (that is, to be an element of \(\mathcal{T}\) ) if for each \(x \in U\), there is a basis element \(B \in \mathcal{B}\) such that \(x \in B\) and \(B \subset U\) . Note that each basis element is itself an element of \(\mathcal{T}\) .
+	(2) If \(x\) belongs to the intersection of two basis elements \({B}_{1}\) and \({B}_{2}\), then there is a basis element \({B}_{3}\) containing \(x\) such that \({B}_{3} \subset {B}_{1} \cap {B}_{2}\) .
+	If \(\mathcal{B}\) satisfies these two conditions, then we define the topology \(\mathcal{T}\) generated by \(\mathcal{B}\) as follows: \(A\) subset \(U\) of \(X\) is said to be open in \(X\) (that is, to be an element of \(\mathcal{T}\) ) if for each \(x \in U\), there is a basis element \(B \in \mathcal{B}\) such that \(x \in B\) and \(B \subset U\) . Note that each basis element is itself an element of \(\mathcal{T}\) .
 \end{definition}
 
 We will check shortly that the collection \(\mathcal{T}\) is indeed a topology on \(X\) . But first let us consider some examples.
 
 \begin{centeredblock}
-\begin{example}
-	Let \(\mathcal{B}\) be the collection of all circular regions (interiors of circles) in the plane. Then \(\mathcal{B}\) satisfies both conditions for a basis The second condition is illustrated in Figure 13.1. In the topology generated by \(\mathcal{B}\), a subset \(U\) of the plane is open if every \(x\) in \(U\) lies in some circular region contained in \(U\)
+	\begin{example}
+		Let \(\mathcal{B}\) be the collection of all circular regions (interiors of circles) in the plane. Then \(\mathcal{B}\) satisfies both conditions for a basis The second condition is illustrated in Figure 13.1. In the topology generated by \(\mathcal{B}\), a subset \(U\) of the plane is open if every \(x\) in \(U\) lies in some circular region contained in \(U\)
 
-\munkresfig[0.4]{13.1}[Figure 13.1]
-\munkresfig[0.3]{13.2}[Figure 13.2]
-\end{example}
+		\munkresfig[0.4]{13.1}[Figure 13.1]
+		\munkresfig[0.3]{13.2}[Figure 13.2]
+	\end{example}
 \end{centeredblock}
 
 \begin{centeredblock}
-\begin{example}
-	Let \({\mathcal{B}}^{\prime }\) be the collection of all rectangular regions (interiors of rectangles) in the plane, where the rectangles have sides parallel to the coordinate axes Then \({\mathcal{B}}^{\prime }\) satisfies both conditions for a basis. The second condition is illustrated in Figure 13.2; in this case, the condition is trivial, because the intersection of any two basis elements is itself a basis element (or empty) As we shall see later, the basis \({\mathcal{B}}^{\prime }\) generates the same topology on the plane as the basis \(\mathcal{B}\) given in the preceding example
-\end{example}
+	\begin{example}
+		Let \({\mathcal{B}}^{\prime }\) be the collection of all rectangular regions (interiors of rectangles) in the plane, where the rectangles have sides parallel to the coordinate axes Then \({\mathcal{B}}^{\prime }\) satisfies both conditions for a basis. The second condition is illustrated in Figure 13.2; in this case, the condition is trivial, because the intersection of any two basis elements is itself a basis element (or empty) As we shall see later, the basis \({\mathcal{B}}^{\prime }\) generates the same topology on the plane as the basis \(\mathcal{B}\) given in the preceding example
+	\end{example}
 \end{centeredblock}
 
 \begin{centeredblock}
-\begin{example}
-	If \(X\) is any set, the collection of all one-point subsets of \(X\) is a basis for the discrete topology on \(X\)
-\end{example}
+	\begin{example}
+		If \(X\) is any set, the collection of all one-point subsets of \(X\) is a basis for the discrete topology on \(X\)
+	\end{example}
 \end{centeredblock}
 
 Let us check now that the collection \(\mathcal{T}\) generated by the basis \(\mathcal{B}\) is, in fact, a topology on \(X\) . If \(U\) is the empty set, it satisfies the defining condition of openness vacuously. Likewise, \(X\) is in \(\mathcal{T}\), since for each \(x \in X\) there is some basis element \(B\) containing \(x\) and contained in \(X\) Now let us take an indexed family \({\{ {U}_{\alpha }\} }_{\alpha \in J}\), of elements of \(\mathcal{T}\) and show that
@@ -119,12 +115,12 @@ Let us check now that the collection \(\mathcal{T}\) generated by the basis \(\m
 \[
 U = \mathop{\bigcup }\limits_{{\alpha \in J}}{U}_{\alpha }
 \]
-
 belongs to \(\mathcal{T}\) . Given \(x \in U\), there is an index \(\alpha\) such that \(x \in {U}_{\alpha }\) . Since \({U}_{\alpha }\) is open, there is a basis element \(B\) such that \(x \in B \subset {U}_{\alpha }\) . Then \(x \in B\) and \(B \subset U\), so that \(U\) is open, by definition.
 
 Now let us take two elements \({U}_{1}\) and \({U}_{2}\) of \(\mathcal{T}\) and show that \({U}_{1} \cap {U}_{2}\) belongs to \(\mathcal{T}\) . Given \(x \in {U}_{1} \cap {U}_{2}\), choose a basis element \({B}_{1}\) containing \(x\) such that \({B}_{1} \subset {U}_{1}\) ; choose also a basis element \({B}_{2}\) containing \(x\) such that \({B}_{2} \subset {U}_{2}\) . The second condition for a basis enables us to choose a basis element \({B}_{3}\) containing \(x\) such that \({B}_{3} \subset {B}_{1} \cap {B}_{2}\) . See Figure 13.3. Then \(x \in {B}_{3}\) and \({B}_{3} \subset {U}_{1} \cap {U}_{2}\), so \({U}_{1} \cap {U}_{2}\) belongs to \(\mathcal{T}\), by definition.
 
-\munkresfig[0.9]{13.3}[Figure 13.3]
+\munkresfig[0.7]{13.3}[Figure 13.3]
+
 Finally, we show by induction that any finite intersection \({U}_{1} \cap \cdots \cap {U}_{n}\) of elements of \(\mathcal{T}\) is in \(\mathcal{T}\) . This fact is trivial for \(n = 1\) ; we suppose it true for \(n - 1\) and prove it for \(n\) . Now
 
 \[
@@ -142,59 +138,57 @@ Another way of describing the topology generated by a basis is given in the foll
 \end{lemma}
 
 \begin{proof}
-Given a collection of elements of \(\mathcal{B}\), they are also elements of \(\mathcal{T}\) . Because \(\mathcal{T}\) is a topology, their union is in \(\mathcal{T}\) . Conversely, given \(U \in \mathcal{T}\), choose for each \(x \in U\) an element \({B}_{x}\) of \(\mathcal{B}\) such that \(x \in {B}_{x} \subset U\) . Then \(U = \mathop{\bigcup }\limits_{{x \in U}}{B}_{x}\), so \(U\) equals a union of elements of \(\mathcal{B}\) .
+	Given a collection of elements of \(\mathcal{B}\), they are also elements of \(\mathcal{T}\) . Because \(\mathcal{T}\) is a topology, their union is in \(\mathcal{T}\) . Conversely, given \(U \in \mathcal{T}\), choose for each \(x \in U\) an element \({B}_{x}\) of \(\mathcal{B}\) such that \(x \in {B}_{x} \subset U\) . Then \(U = \mathop{\bigcup }\limits_{{x \in U}}{B}_{x}\), so \(U\) equals a union of elements of \(\mathcal{B}\) .
+\end{proof}
 
 This lemma states that every open set \(U\) in \(X\) can be expressed as a union of basis elements. This expression for \(U\) is not, however, unique. Thus the use of the term ``basis'' in topology differs drastically from its use in linear algebra, where the equation expressing a given vector as a linear combination of basis vectors is unique.
 
 We have described in two different ways how to go from a basis to the topology it generates. Sometimes we need to go in the reverse direction, from a topology to a basis generating it. Here is one way of obtaining a basis for a given topology; we shall use it frequently.
-\end{proof}
 
 \begin{lemma}
 	Let \(X\) be a topological space. Suppose that \(\mathcal{C}\) is a collection of open sets of \(X\) such that for each open set \(U\) of \(X\) and each \(x\) in \(U\), there is an element \(C\) of \(\mathcal{C}\) such that \(x \in C \subset U\) . Then \(\mathcal{C}\) is a basis for the topology of \(X\) .
 \end{lemma}
 
 \begin{proof}
-We must show that \(\mathcal{C}\) is a basis. The first condition for a basis is easy: Given \(x \in X\), since \(X\) is itself an open set, there is by hypothesis an element \(C\) of \(\mathcal{C}\) such that \(x \in C \subset X\) . To check the second condition, let \(x\) belong to \({C}_{1} \cap {C}_{2}\), where \({C}_{1}\) and \({C}_{2}\) are elements of \(\mathcal{C}\) . Since \({C}_{1}\) and \({C}_{2}\) are open, so is \({C}_{1} \cap {C}_{2}\) . Therefore, there exists by hypothesis an element \({C}_{3}\) in \(\mathcal{C}\) such that \(x \in {C}_{3} \subset {C}_{1} \cap {C}_{2}\) .
+	We must show that \(\mathcal{C}\) is a basis. The first condition for a basis is easy: Given \(x \in X\), since \(X\) is itself an open set, there is by hypothesis an element \(C\) of \(\mathcal{C}\) such that \(x \in C \subset X\) . To check the second condition, let \(x\) belong to \({C}_{1} \cap {C}_{2}\), where \({C}_{1}\) and \({C}_{2}\) are elements of \(\mathcal{C}\) . Since \({C}_{1}\) and \({C}_{2}\) are open, so is \({C}_{1} \cap {C}_{2}\) . Therefore, there exists by hypothesis an element \({C}_{3}\) in \(\mathcal{C}\) such that \(x \in {C}_{3} \subset {C}_{1} \cap {C}_{2}\) .
 
-Let \(\mathcal{T}\) be the collection of open sets of \(X\) ; we must show that the topology \({\mathcal{T}}^{\prime }\) generated by \(\mathcal{C}\) equals the topology \(\mathcal{T}\) . First, note that if \(U\) belongs to \(\mathcal{T}\) and if \(x \in U\), then there is by hypothesis an element \(C\) of \(\mathcal{C}\) such that \(x \in C \subset U\) . It follows that \(U\) belongs to the topology \({\mathcal{T}}^{\prime }\), by definition. Conversely, if \(W\) belongs to the topology \({\mathcal{T}}^{\prime }\), then \(W\) equals a union of elements of \(\mathcal{C}\), by the preceding lemma. Since each element of \(\mathcal{C}\) belongs to \(\mathcal{T}\) and \(\mathcal{T}\) is a topology, \(W\) also belongs to \(\mathcal{T}\) .
+	Let \(\mathcal{T}\) be the collection of open sets of \(X\) ; we must show that the topology \({\mathcal{T}}^{\prime }\) generated by \(\mathcal{C}\) equals the topology \(\mathcal{T}\) . First, note that if \(U\) belongs to \(\mathcal{T}\) and if \(x \in U\), then there is by hypothesis an element \(C\) of \(\mathcal{C}\) such that \(x \in C \subset U\) . It follows that \(U\) belongs to the topology \({\mathcal{T}}^{\prime }\), by definition. Conversely, if \(W\) belongs to the topology \({\mathcal{T}}^{\prime }\), then \(W\) equals a union of elements of \(\mathcal{C}\), by the preceding lemma. Since each element of \(\mathcal{C}\) belongs to \(\mathcal{T}\) and \(\mathcal{T}\) is a topology, \(W\) also belongs to \(\mathcal{T}\) .
+\end{proof}
 
 When topologies are given by bases, it is useful to have a criterion in terms of the bases for determining whether one topology is finer than another. One such criterion is the following.
-\end{proof}
 
 \begin{lemma}
 	Let \(\mathcal{B}\) and \({\mathcal{B}}^{\prime }\) be bases for the topologies \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\), respectively, on \(X\) . Then the following are equivalent:
 
-(1) \({\mathcal{T}}^{\prime }\) is finer than \(\mathcal{T}\) .
+	(1) \({\mathcal{T}}^{\prime }\) is finer than \(\mathcal{T}\) .
 
-(2) For each \(x \in X\) and each basis element \(B \in \mathcal{B}\) containing \(x\), there is a basis element \({B}^{\prime } \in {\mathcal{B}}^{\prime }\) such that \(x \in {B}^{\prime } \subset B\) .
+	(2) For each \(x \in X\) and each basis element \(B \in \mathcal{B}\) containing \(x\), there is a basis element \({B}^{\prime } \in {\mathcal{B}}^{\prime }\) such that \(x \in {B}^{\prime } \subset B\) .
 \end{lemma}
 
 \begin{proof}
-(2) \(\Rightarrow\) (1). Given an element \(U\) of \(\mathcal{T}\), we wish to show that \(U \in {\mathcal{T}}^{\prime }\) . Let \(x \in U\) . Since \(\mathcal{B}\) generates \(\mathcal{T}\), there is an element \(B \in \mathcal{B}\) such that \(x \in B \subset U\) . Condition (2) tells us there exists an element \({B}^{\prime } \in {\mathcal{B}}^{\prime }\) such that \(x \in {B}^{\prime } \subset B\) . Then \(x \in {B}^{\prime } \subset U\), so \(U \in {\mathcal{T}}^{\prime }\), by definition.
+	(2) \(\Rightarrow\) (1). Given an element \(U\) of \(\mathcal{T}\), we wish to show that \(U \in {\mathcal{T}}^{\prime }\) . Let \(x \in U\) . Since \(\mathcal{B}\) generates \(\mathcal{T}\), there is an element \(B \in \mathcal{B}\) such that \(x \in B \subset U\) . Condition (2) tells us there exists an element \({B}^{\prime } \in {\mathcal{B}}^{\prime }\) such that \(x \in {B}^{\prime } \subset B\) . Then \(x \in {B}^{\prime } \subset U\), so \(U \in {\mathcal{T}}^{\prime }\), by definition.
 
-(1) \(\Rightarrow\) (2). We are given \(x \in X\) and \(B \in \mathcal{B}\), with \(x \in B\) . Now \(B\) belongs to \(\mathcal{T}\) by definition and \(\mathcal{T} \subset {\mathcal{T}}^{\prime }\) by condition (1); therefore, \(B \in {\mathcal{T}}^{\prime }\) Since \({\mathcal{T}}^{\prime }\) is generated by \({\mathcal{B}}^{\prime }\), there is an element \({B}^{\prime } \in {\mathcal{B}}^{\prime }\) such that \(x \in {B}^{\prime } \subset B\) .
-
-Some students find this condition hard to remember. ``Which way does the inclusion go?'' they ask. It may be easier to remember if you recall the analogy between a topological space and a truckload full of gravel. Think of the pebbles as the basis elements of the topology; after the pebbles are smashed to dust, the dust particles are the basis elements of the new topology. The new topology is finer than the old one, and each dust particle was contained inside a pebble, as the criterion states.
+	(1) \(\Rightarrow\) (2). We are given \(x \in X\) and \(B \in \mathcal{B}\), with \(x \in B\) . Now \(B\) belongs to \(\mathcal{T}\) by definition and \(\mathcal{T} \subset {\mathcal{T}}^{\prime }\) by condition (1); therefore, \(B \in {\mathcal{T}}^{\prime }\) Since \({\mathcal{T}}^{\prime }\) is generated by \({\mathcal{B}}^{\prime }\), there is an element \({B}^{\prime } \in {\mathcal{B}}^{\prime }\) such that \(x \in {B}^{\prime } \subset B\) .
 \end{proof}
 
+Some students find this condition hard to remember. ``Which way does the inclusion go?'' they ask. It may be easier to remember if you recall the analogy between a topological space and a truckload full of gravel. Think of the pebbles as the basis elements of the topology; after the pebbles are smashed to dust, the dust particles are the basis elements of the new topology. The new topology is finer than the old one, and each dust particle was contained inside a pebble, as the criterion states.
+
 \begin{centeredblock}
-\begin{example}
-	One can now see that the collection \(\mathcal{B}\) of all circular regions in the plane generates the same topology as the collection \({\mathcal{B}}^{\prime }\) of all rectangular regions, Figure 13.4 illustrates the proof. We shall treat this example more formally when we study metric spaces.
+	\begin{example}
+		One can now see that the collection \(\mathcal{B}\) of all circular regions in the plane generates the same topology as the collection \({\mathcal{B}}^{\prime }\) of all rectangular regions, Figure 13.4 illustrates the proof. We shall treat this example more formally when we study metric spaces.
 
-\munkresfig[0.7]{13.4}[Figure 13.4]
-\end{example}
+		\munkresfig[0.7]{13.4}[Figure 13.4]
+		We now define three topologies on the real line \(\mathbb{R}\), all of which are of interest.
+	\end{example}
 \end{centeredblock}
-
-We now define three topologies on the real line \(\mathbb{R}\), all of which are of interest.
 
 \begin{definition}
 	If \(\mathcal{B}\) is the collection of all open intervals in the real line,
 
-\[
-( {a,b}) = \{ x \mid a < x < b\},
-\]
-
-the topology generated by \(\mathcal{B}\) is called the standard topology on the real line. Whenever we consider \(\mathbb{R}\), we shall suppose it is given this topology unless we specifically state otherwise.
+	\[
+	( {a,b}) = \{ x \mid a < x < b\},
+	\]
+	the topology generated by \(\mathcal{B}\) is called the standard topology on the real line. Whenever we consider \(\mathbb{R}\), we shall suppose it is given this topology unless we specifically state otherwise.
 \end{definition}
 
 If \({\mathcal{B}}^{\prime }\) is the collection of all half-open intervals of the form
@@ -202,7 +196,6 @@ If \({\mathcal{B}}^{\prime }\) is the collection of all half-open intervals of t
 \[
 \lbrack a,b) = \{ x \mid a \leq x < b\},
 \]
-
 where \(a < b\), the topology generated by \({\mathcal{B}}^{\prime }\) is called the lower limit topology on \(\mathbb{R}\) . When \(\mathbb{R}\) is given the lower limit topology, we denote it by \( {\mathbb{R}}_{\ell }\) . Finally let \(K\) denote the set of all numbers of the form \(1/n\), for \(n \in {\mathbb{Z}}_{ + }\), and let \({\mathcal{B}}^{\prime \prime }\) be the collection of all open intervals(a, b), along with all sets of the form \(( {a,b}) - K\) . The topology generated by \({\mathcal{B}}^{\prime \prime }\) will be called the \(K\) -topology on \(\mathbb{R}\) . When \(\mathbb{R}\) is given this topology, we denote it by \( {\mathbb{R}}_{K}\) .
 
 It is easy to see that all three of these collections are bases; in each case, the intersection of two basis elements is either another basis element or is empty. The relation between these topologies is the following
@@ -214,9 +207,9 @@ It is easy to see that all three of these collections are bases; in each case, t
 \begin{proof}
 	Let \(\mathcal{T},{\mathcal{T}}^{\prime }\), and \({\mathcal{T}}^{\prime \prime }\) be the topologies of \(\mathbb{R},{\mathbb{R}}_{\ell }\), and \({\mathbb{R}}_{K}\), respectively. Given a basis element(a, b)for \(\mathcal{T}\) and a point \(x\) of(a, b), the basis element \(\lbrack x,b)\) for \({\mathcal{T}}^{\prime }\) contains \(x\) and lies in(a, b). On the other hand, given the basis element \(\lbrack x,d)\) for \({\mathcal{T}}^{\prime }\), there is no open interval(a, b)that contains \(x\) and lies in \(\lbrack x,d)\) . Thus \({\mathcal{T}}^{\prime }\) is strictly finer than \(\mathcal{T}\)
 
-A similar argument applies to \({\mathbb{R}}_{K}\) . Given a basis element(a, b)for \(\mathcal{T}\) and a point \(x\) of(a, b), this same interval is a basis element for \({\mathcal{T}}^{\prime \prime }\) that contains \(x\) . On the other hand, given the basis element \(B = ( {-1,1}) - K\) for \({\mathcal{T}}^{\prime \prime }\) and the point0of \(B\), there is no open interval that contains 0 and lies in \(B\) .
+	A similar argument applies to \({\mathbb{R}}_{K}\) . Given a basis element(a, b)for \(\mathcal{T}\) and a point \(x\) of(a, b), this same interval is a basis element for \({\mathcal{T}}^{\prime \prime }\) that contains \(x\) . On the other hand, given the basis element \(B = ( {-1,1}) - K\) for \({\mathcal{T}}^{\prime \prime }\) and the point0of \(B\), there is no open interval that contains 0 and lies in \(B\) .
 
-We leave it to you to show that the topologies of \({\mathbb{R}}_{\ell }\) and \({\mathbb{R}}_{K}\) are not comparable.
+	We leave it to you to show that the topologies of \({\mathbb{R}}_{\ell }\) and \({\mathbb{R}}_{K}\) are not comparable.
 \end{proof}
 
 A question may occur to you at this point. Since the topology generated by a basis \(\mathcal{B}\) may be described as the collection of arbitrary unions of elements of \(\mathcal{B}\), what happens if you start with a given collection of sets and take finite intersections of them as well as arbitrary unions? This question leads to the notion of a for a topology
@@ -230,13 +223,11 @@ We must of course check that \(\mathcal{T}\) is a topology. For this purpose it 
 \[
 {B}_{1} = {S}_{1} \cap \cdots \cap {S}_{m}\;\text{ and }\;{B}_{2} = {S}_{1}^{\prime } \cap \cdots \cap {S}_{n}^{\prime }
 \]
-
 be two elements of \(\mathcal{B}\) . Their intersection
 
 \[
 {B}_{1} \cap {B}_{2} = ( {{S}_{1} \cap \cdots \cap {S}_{m}}) \cap ( {{S}_{1}^{\prime } \cap \cdots \cap {S}_{n}^{\prime }})
 \]
-
 is also a finite intersection of elements of \(\mathcal{S}\), so it belongs to \(\mathcal{B}\) .
 
 \section*{Exercises}
@@ -261,6 +252,7 @@ is also a finite intersection of elements of \(\mathcal{S}\), so it belongs to \
  \item Show that the collection \[ \mathcal{C} = \{ \lbrack a,b) \mid a < b,a\text{ and }b\text{ rational }\} \] is a basis that generates a topology different from the lower limit topology on \(\mathbb{R}\) .
  \end{enumerate}
 \end{enumerate}
+
 \section*{§ 14 The Order Topology}
 
 If \(X\) is a simply ordered set, there is a standard topology for \(X\), defined using the order relation. It is called the order topology; in this section, we consider it and study some of its properties.
@@ -288,11 +280,11 @@ The notation used here is familiar to you already in the case where \(X\) is the
 \begin{definition}
 	Let \(X\) be a set with a simple order relation; assume \(X\) has more than one element. Let \(\mathcal{B}\) be the collection of all sets of the following types:
 
-(I) All open intervals(a, b)in \(X\) .
+	(1) All open intervals(a, b)in \(X\) .
 
-(2) All intervals of the form \([ {{a}_{0},b})\), where \({a}_{0}\) is the smallest element (if any) of \(X\) .
+	(2) All intervals of the form \([ {{a}_{0},b})\), where \({a}_{0}\) is the smallest element (if any) of \(X\) .
 
-(3) All intervals of the form \(( {a,{b}_{0}}]\), where \({b}_{0}\) is the largest element (if any) of \(X\) . The collection \(\mathcal{B}\) is a basis for a topology on \(X\), which is called the order topology.
+	(3) All intervals of the form \(( {a,{b}_{0}}]\), where \({b}_{0}\) is the largest element (if any) of \(X\) . The collection \(\mathcal{B}\) is a basis for a topology on \(X\), which is called the order topology.
 \end{definition}
 
 If \(X\) has no smallest element, there are no sets of type (2), and if \(X\) has no largest element, there are no sets of type (3).
@@ -300,53 +292,53 @@ If \(X\) has no smallest element, there are no sets of type (2), and if \(X\) ha
 One has to check that \(\mathcal{B}\) satisfies the requirements for a basis. First, note that every element \(x\) of \(X\) lies in at least one element of \(\mathcal{B}\) : The smallest element (if any) lies in all sets of type (2), the largest element (if any) lies in all sets of type (3), and every other element lies in a set of type (1). Second, note that the intersection of any two sets of the preceding types is again a set of one of these types, or is empty. Several cases need to be checked; we leave it to you.
 
 \begin{centeredblock}
-\begin{example}
-	The standard topology on \(\mathbb{R}\), as defined in the preceding section, is just the order topology derived from the usual order on \(\mathbb{R}\) .
-\end{example}
+	\begin{example}
+		The standard topology on \(\mathbb{R}\), as defined in the preceding section, is just the order topology derived from the usual order on \(\mathbb{R}\) .
+	\end{example}
 \end{centeredblock}
 
 \begin{centeredblock}
-\begin{example}
-	Consider the set \(\mathbb{R} \times \mathbb{R}\) in the dictionary order, we shall denote the general element of \(\mathbb{R} \times \mathbb{R}\) by \(x \times y\), to avoid difficulty with notation The set \(\mathbb{R} \times \mathbb{R}\) has neither a largest nor a smallest element, so the order topology on \(\mathbb{R} \times \mathbb{R}\) has as basis the collection of all open intervals of the form \(( {a \times b,c \times d})\) for \(a < c\), and for \(a = c\) and \(b < d\) . These two types of intervals are indicated in Figure 14.1. The subcollection consisting of only intervals of the second type is also a basis for the order topology on \(\mathbb{R} \times \mathbb{R}\), as you can check
+	\begin{example}
+		Consider the set \(\mathbb{R} \times \mathbb{R}\) in the dictionary order, we shall denote the general element of \(\mathbb{R} \times \mathbb{R}\) by \(x \times y\), to avoid difficulty with notation The set \(\mathbb{R} \times \mathbb{R}\) has neither a largest nor a smallest element, so the order topology on \(\mathbb{R} \times \mathbb{R}\) has as basis the collection of all open intervals of the form \(( {a \times b,c \times d})\) for \(a < c\), and for \(a = c\) and \(b < d\) . These two types of intervals are indicated in Figure 14.1. The subcollection consisting of only intervals of the second type is also a basis for the order topology on \(\mathbb{R} \times \mathbb{R}\), as you can check
 
-\munkresfig[0.9]{14.1}[Figure 14.1]
-\end{example}
+	\munkresfig[0.9]{14.1}[Figure 14.1]
+	\end{example}
 \end{centeredblock}
 
 \begin{centeredblock}
-\begin{example}
-	The positive integers \({\mathbb{Z}}_{ + }\) form an ordered set with a smallest element. The order topology on \({\mathbb{Z}}_{ + }\) is the discrete topology, for every one-point set is open If \(n > 1\), then the one-point set \(\{ n\} = ( {n - 1,n + 1})\) is a basis element; and if \(n = 1\), the one-point set \(\{ 1\} = \lbrack 1,2)\) is a basis element.
-\end{example}
+	\begin{example}
+		The positive integers \({\mathbb{Z}}_{ + }\) form an ordered set with a smallest element. The order topology on \({\mathbb{Z}}_{ + }\) is the discrete topology, for every one-point set is open If \(n > 1\), then the one-point set \(\{ n\} = ( {n - 1,n + 1})\) is a basis element; and if \(n = 1\), the one-point set \(\{ 1\} = \lbrack 1,2)\) is a basis element.
+	\end{example}
 \end{centeredblock}
 
 \begin{centeredblock}
-\begin{example}
-	The set \(X = \{ 1,2\} \times {\mathbb{Z}}_{ + }\) in the dictionary order is another example of an ordered set with a smallest element Denoting \(1 \times n\) by \({a}_{n}\) and \(2 \times n\) by \({b}_{n}\), we can represent \(X\) by
+	\begin{example}
+		The set \(X = \{ 1,2\} \times {\mathbb{Z}}_{ + }\) in the dictionary order is another example of an ordered set with a smallest element Denoting \(1 \times n\) by \({a}_{n}\) and \(2 \times n\) by \({b}_{n}\), we can represent \(X\) by
 
-\[
-{a}_{1},{a}_{2},.\;;{b}_{1},{b}_{2},\ldots
-\]
+		\[
+		{a}_{1},{a}_{2},.\;;{b}_{1},{b}_{2},\ldots
+		\]
 
-The order topology on \(X\) is not the discrete topology. Most one-point sets are open, but there is an exception-the one-point set \(\{ {b}_{1}\}\) . Any open set containing \({b}_{1}\) must contain a basis element about \({b}_{1}\) (by definition), and any basis element containing \({b}_{1}\) contains points of the \({a}_{i}\) sequence.
-\end{example}
+		The order topology on \(X\) is not the discrete topology. Most one-point sets are open, but there is an exception-the one-point set \(\{ {b}_{1}\}\) . Any open set containing \({b}_{1}\) must contain a basis element about \({b}_{1}\) (by definition), and any basis element containing \({b}_{1}\) contains points of the \({a}_{i}\) sequence.
+	\end{example}
 \end{centeredblock}
 
 \begin{definition}
 	If \(X\) is an ordered set, and \(a\) is an element of \(X\), there are four subsets of \(X\) that are called the rays determined by \(a\) They are the following
 
-\[
-( {a, + \infty }) = \{ x \mid x > a\},
-\]
+	\[
+	( {a, + \infty }) = \{ x \mid x > a\},
+	\]
 
-\[
-( {-\infty,a}) = \{ x \mid x < a\},
-\]
+	\[
+	( {-\infty,a}) = \{ x \mid x < a\},
+	\]
 
-\[
-\lbrack a, + \infty ) = \{ x \mid x \geq a\},
-\]
+	\[
+	\lbrack a, + \infty ) = \{ x \mid x \geq a\},
+	\]
 
-\[
+	\[
 ( - \infty,a\rbrack = \{ x \mid x \leq a\} .
 \]
 
