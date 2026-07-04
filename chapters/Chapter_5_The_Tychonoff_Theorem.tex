@@ -4,7 +4,7 @@
 
 We now return to a problem we left unresolved in Chapter 3. We shall prove the Tychonoff theorem, to the effect that arbitrary products of compact spaces are compact. The proof makes use of Zorn's Lemma (see §11). An alternate proof, which relies instead on the well-ordering theorem, is outlined in the exercises.
 
-The Tychonoff theorem is of great usefulness to analysts (less so to geometers). We apply it in §38 to construct the Stone-Čech compactification of a completely regular space, and in \(\$ {47}\) in proving the general version of Ascoli's theorem.
+The Tychonoff theorem is of great usefulness to analysts (less so to geometers). We apply it in §38 to construct the Stone-Čech compactification of a completely regular space, and in \S 47 in proving the general version of Ascoli's theorem.
 
 \section*{§ 37 The Tychonoff Theorem}
 
@@ -52,7 +52,7 @@ A final remark. The assumption that the elements of the collection \(\mathcal{A}
  Let \(X\) be a set; let \(\mathcal{A}\) be a collection of subsets of \(X\) having the finite intersection property. Then there is a collection \(\mathcal{D}\) of subsets of \(X\) such that \(\mathcal{D}\) contains \(\mathcal{A}\), and \(\mathcal{D}\) has the finite intersection property, and no collection of subsets of \(X\) that properly contains \(\mathcal{D}\) has this property.
 \end{lemma}
 
-We often say that a collection \(\mathcal{D}\) satisfying the conclusion of this theorem is maximal with respect to the finite intersection property
+We often say that a collection \(\mathcal{D}\) satisfying the conclusion of this theorem is maximal with respect to the finite intersection property.
 
 \begin{proof}
  As you might expect, we construct \(\mathcal{D}\) by using Zorn's lemma. It states that, given a set \(A\) that is strictly partially ordered, in which every simply ordered subset has an upper bound, \(A\) itself has a maximal element.
@@ -87,7 +87,7 @@ To show that \(\mathcal{C}\) is an element of \(A\), we must show that \(\mathca
 \end{lemma}
 
 \begin{proof}
- (a) Let \(B\) equal the intersection of finitely many elements of \(\mathcal{D}\). Define a collection \(\mathcal{E}\) by adjoining \(B\) to \(\mathcal{D}\), so that \(\mathcal{E} = \mathcal{D} \cup \{ B\}\). We show that \(\mathcal{E}\) has the finite intersection property; then maximality of \(\mathcal{D}\) implies that \(\mathcal{E} = \mathcal{D}\), so that \(B \in \mathcal{D}\) as desired
+ (a) Let \(B\) equal the intersection of finitely many elements of \(\mathcal{D}\). Define a collection \(\mathcal{E}\) by adjoining \(B\) to \(\mathcal{D}\), so that \(\mathcal{E} = \mathcal{D} \cup \{ B\}\). We show that \(\mathcal{E}\) has the finite intersection property; then maximality of \(\mathcal{D}\) implies that \(\mathcal{E} = \mathcal{D}\), so that \(B \in \mathcal{D}\) as desired.
 Take finitely many elements of \(\mathcal{E}\). If none of them is the set \(B\), then their intersection is nonempty because \(\mathcal{D}\) has the finite intersection property. If one of them is the set \(B\), then their intersection is of the form
 
 \[
@@ -144,7 +144,7 @@ It follows from (b) of Lemma 37.2 that every subbasis element containing \(\math
 \end{proof}
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
-\item Let \(X\) be a space. Let \(\mathcal{D}\) be a collection of subsets of \(X\) that is maximal with respect to the finite intersection property
+\item Let \(X\) be a space. Let \(\mathcal{D}\) be a collection of subsets of \(X\) that is maximal with respect to the finite intersection property.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show that \(x \in \bar{D}\) for every \(D \in \mathcal{D}\) if and only if every neighborhood of \(x\) belongs to \(\mathcal{D}\). Which implication uses maximality of \(\mathcal{D}\) ?
  \item Let \(D \in \mathcal{D}\). Show that if \(A \supset D\), then \(A \in \mathcal{D}\).
@@ -158,7 +158,7 @@ is nonempty.
 
 \item 3. Consider the three statements:
 
-(i) If \(X\) is a set and \(\mathcal{A}\) is a collection of subsets of \(X\) having the countable intersection property, then there is a collection \(\mathcal{D}\) of subsets of \(X\) such that \(\mathcal{D} \supset \mathcal{A}\) and \(\mathcal{D}\) is maximal with respect to the countable intersection property
+(i) If \(X\) is a set and \(\mathcal{A}\) is a collection of subsets of \(X\) having the countable intersection property, then there is a collection \(\mathcal{D}\) of subsets of \(X\) such that \(\mathcal{D} \supset \mathcal{A}\) and \(\mathcal{D}\) is maximal with respect to the countable intersection property.
 
 (ii) Suppose \(\mathcal{D}\) is maximal with respect to the countable intersection property. Then countable intersections of elements of \(\mathcal{D}\) are in \(\mathcal{D}\). Furthermore, if \(A\) is a subset of \(X\) that intersects every element of \(\mathcal{D}\), then \(A\) is an element of \(\mathcal{D}\).
 
@@ -345,7 +345,7 @@ Uniqueness of the extension is a consequence of the following lemma.
 \end{lemma}
 
 \begin{proof}
- This lemma was given as an exercise in \(\$ {18}\) ; we give a proof here. Suppose that \(g,{g}^{\prime } : \bar{A} \rightarrow Z\) are two different extensions of \(f\), choose \(x\) so that \(g(x) \neq {g}^{\prime }(x)\). Let \(U\) and \({U}^{\prime }\) be disjoint neighborhoods of \(g(x)\) and \({g}^{\prime }(x)\), respectively. Choose a neighborhood \(V\) of \(x\) so that \(g( V) \subset U\) and \({g}^{\prime }( V) \subset {U}^{\prime }\) Now \(V\) intersects \(A\) in some point \(y\) ; then \(g(y) \in U\) and \({g}^{\prime }(y) \in {U}^{\prime }\). But since \(y \in A\), we have \(g(y) = f(y)\) and \({g}^{\prime }(y) = f(y)\). This contradicts the fact that \(U\) and \({U}^{\prime }\) are disjoint.
+ This lemma was given as an exercise in \S 18; we give a proof here. Suppose that \(g,{g}^{\prime } : \bar{A} \rightarrow Z\) are two different extensions of \(f\), choose \(x\) so that \(g(x) \neq {g}^{\prime }(x)\). Let \(U\) and \({U}^{\prime }\) be disjoint neighborhoods of \(g(x)\) and \({g}^{\prime }(x)\), respectively. Choose a neighborhood \(V\) of \(x\) so that \(g( V) \subset U\) and \({g}^{\prime }( V) \subset {U}^{\prime }\) Now \(V\) intersects \(A\) in some point \(y\) ; then \(g(y) \in U\) and \({g}^{\prime }(y) \in {U}^{\prime }\). But since \(y \in A\), we have \(g(y) = f(y)\) and \({g}^{\prime }(y) = f(y)\). This contradicts the fact that \(U\) and \({U}^{\prime }\) are disjoint.
 \end{proof}
 \begin{theorem}
  Let \(X\) be a completely regular space; let \(Y\) be a compactification of \(X\) satisfying the extension property of Theorem 38.2 Given any continuous map \(f : X \rightarrow C\) of \(X\) into a compact Hausdorff space \(C\), the map \(f\) extends uniquely to a continuous map \(g : Y \rightarrow C\).

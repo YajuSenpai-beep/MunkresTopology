@@ -10,7 +10,7 @@ Another imbedding theorem, important to geometers, appears in the last section o
 
 \section*{§ 30 The Countability Axioms}
 
-Recall the definition we gave in \(§{21}\).
+Recall the definition we gave in \S 21.
 
 \begin{definition}
  A space \(X\) is said to have a countable basis at \(x\) if there is a countable collection \(\mathcal{B}\) of neighborhoods of \(x\) such that each neighborhood of \(x\) contains at least one of the elements of \(\mathcal{B}\). A space that has a countable basis at each of its points is said to satisfy the first countability axiom, or to be first-countable.
@@ -42,7 +42,7 @@ Why then is this second axiom interesting? Well, for one thing, many familiar sp
 
 \begin{centeredblock}
 \begin{example}
- The real line \(\mathbb{R}\) has a countable basis-the collection of all open intervals(a, b)with rational end points. Likewise, \({\mathbb{R}}^{n}\) has a countable basis—the collection of all products of intervals having rational end points. Even \({\mathbb{R}}^{\omega }\) has a countable basis-the collection of all products \(\mathop{\prod }\limits_{{n \in {\mathbb{Z}}_{ + }}}{U}_{n}\), where \({U}_{n}\) is an open interval with rational end points for finitely many values of \(n\), and \({U}_{n} = \mathbb{R}\) for all other values of \(n\).
+ The real line \(\mathbb{R}\) has a countable basis-the collection of all open intervals \((a, b)\) with rational end points. Likewise, \({\mathbb{R}}^{n}\) has a countable basis—the collection of all products of intervals having rational end points. Even \({\mathbb{R}}^{\omega }\) has a countable basis-the collection of all products \(\mathop{\prod }\limits_{{n \in {\mathbb{Z}}_{ + }}}{U}_{n}\), where \({U}_{n}\) is an open interval with rational end points for finitely many values of \(n\), and \({U}_{n} = \mathbb{R}\) for all other values of \(n\).
 \end{example}
 \end{centeredblock}
 
@@ -50,7 +50,7 @@ Why then is this second axiom interesting? Well, for one thing, many familiar sp
 \begin{example}
  In the uniform topology, \({\mathbb{R}}^{\omega }\) satisfies the first countability axiom (being metrizable). However, it does not satisfy the second. To verify this fact, we first show that if \(X\) is a space having a countable basis \(\mathcal{B}\), then any discrete subspace \(A\) of \(X\) must be countable. Choose, for each \(a \in A\), a basis element \({B}_{a}\) that intersects \(A\) in the point \(a\) alone. If \(a\) and \(b\) are distinct points of \(A\), the sets \({B}_{a}\) and \({B}_{b}\) are different, since the first contains \(a\) and the second does not. It follows that the map \(a \rightarrow {B}_{a}\) is an injection of \(A\) into \(\mathcal{B}\), so \(A\) must be countable.
 
-Now we note that the subspace \(A\) of \({\mathbb{R}}^{\omega }\) consisting of all sequences of0's and1's is uncountable; and it has the discrete topology because \(\bar{\rho }( {a,b}) = 1\) for any two distinct points \(a\) and \(b\) of \(A\). Therefore, in the uniform topology \({\mathbb{R}}^{\omega }\) does not have a countable basis.
+Now we note that the subspace \(A\) of \({\mathbb{R}}^{\omega }\) consisting of all sequences of 0's and 1's is uncountable; and it has the discrete topology because \(\bar{\rho }( {a,b}) = 1\) for any two distinct points \(a\) and \(b\) of \(A\). Therefore, in the uniform topology \({\mathbb{R}}^{\omega }\) does not have a countable basis.
 \end{example}
 \end{centeredblock}
 
@@ -61,7 +61,7 @@ Both countability axioms are well behaved with respect to the operations of taki
 
 \end{theorem}
 \begin{proof}
-Consider the second countability axiom. If \(\mathcal{B}\) is a countable basis for \(X\), then \(\{ B \cap A \mid B \in \mathcal{B}\}\) is a countable basis for the subspace \(A\) of \(X\) If \({\mathcal{B}}_{i}\) is a countable basis for the space \({X}_{i}\), then the collection of all products \(\prod {U}_{i}\), where \({U}_{i} \in {\mathcal{B}}_{i}\) for finitely many values of \(i\) and \({U}_{i} = {X}_{i}\) for all other values of \(i\), is a countable basis for \(\prod {X}_{i}\).
+Consider the second countability axiom. If \(\mathcal{B}\) is a countable basis for \(X\), then \(\{ B \cap A \mid B \in \mathcal{B}\}\) is a countable basis for the subspace \(A\) of \(X\). If \({\mathcal{B}}_{i}\) is a countable basis for the space \({X}_{i}\), then the collection of all products \(\prod {U}_{i}\), where \({U}_{i} \in {\mathcal{B}}_{i}\) for finitely many values of \(i\) and \({U}_{i} = {X}_{i}\) for all other values of \(i\), is a countable basis for \(\prod {X}_{i}\).
 
 The proof for the first countability axiom is similar.
 
@@ -87,7 +87,7 @@ Let \(\{ {B}_{n}\}\) be a countable basis for \(X\).
 
 (b) From each nonempty basis element \({B}_{n}\), choose a point \({x}_{n}\). Let \(D\) be the set consisting of the points \({x}_{n}\). Then \(D\) is dense in \(X\) : Given any point \(x\) of \(X\), every basis element containing \(x\) intersects \(D\), so \(x\) belongs to \(\bar{D}\).
 
-The two properties listed in Theorem 30.3 are sometimes taken as alternative countability axioms. A space for which every open covering contains a countable subcovering is called a Lindelöf space A space having a countable dense subset is often said to be separable (an unfortunate choice of terminology). ${}^{\dagger}$ Weaker in general than the second countability axiom, each of these properties is equivalent to the second countability axiom when the space is metrizable (see Exercise 5). They are less important than the second countability axiom, but you should be aware of their existence, for they are sometimes useful. It is often easier, for instance, to show that a space \(X\) has a countable dense subset than it is to show that \(X\) has a countable basis. If the space is metrizable (as it usually is in analysis), it follows that \(X\) is second-countable as well.
+The two properties listed in Theorem 30.3 are sometimes taken as alternative countability axioms. A space for which every open covering contains a countable subcovering is called a Lindelöf space. A space having a countable dense subset is often said to be separable (an unfortunate choice of terminology). ${}^{\dagger}$ Weaker in general than the second countability axiom, each of these properties is equivalent to the second countability axiom when the space is metrizable (see Exercise 5). They are less important than the second countability axiom, but you should be aware of their existence, for they are sometimes useful. It is often easier, for instance, to show that a space \(X\) has a countable dense subset than it is to show that \(X\) has a countable basis. If the space is metrizable (as it usually is in analysis), it follows that \(X\) is second-countable as well.
 
 We shall not use these properties to prove any theorems, but one of them-the Lindelöf condition-will be useful in dealing with some examples. They are not as well behaved as one might wish under the operations of taking subspaces and cartesian products, as we shall see in the examples and exercises that follow.
 \end{proof}
@@ -98,15 +98,15 @@ We shall not use these properties to prove any theorems, but one of them-the Lin
 
 Given \(x \in {\mathbb{R}}_{\ell }\), the set of all basis elements of the form \(\lbrack x,x + 1/n)\) is a countable basis at \(x\). And it is easy to see that the rational numbers are dense in \({\mathbb{R}}_{\ell }\).
 
-To see that \({\mathbb{R}}_{\ell }\) has no countable basis, let \(\mathcal{B}\) be a basis for \({\mathbb{R}}_{\ell }\). Choose for each \(x\), an element \({B}_{x}\) of \(\mathcal{B}\) such that \(x \in {B}_{x} \subset \lbrack x,x + 1)\). If \(x \neq y\), then \({B}_{x} \neq {B}_{y}\), since \(x = \inf {B}_{x}\) and \(y = \inf {B}_{y}\). Therefore, \(\mathcal{B}\) must be uncountable
+To see that \({\mathbb{R}}_{\ell }\) has no countable basis, let \(\mathcal{B}\) be a basis for \({\mathbb{R}}_{\ell }\). Choose for each \(x\), an element \({B}_{x}\) of \(\mathcal{B}\) such that \(x \in {B}_{x} \subset \lbrack x,x + 1)\). If \(x \neq y\), then \({B}_{x} \neq {B}_{y}\), since \(x = \inf {B}_{x}\) and \(y = \inf {B}_{y}\). Therefore, \(\mathcal{B}\) must be uncountable.
 
-To show that \({\mathbb{R}}_{\ell }\) is Lindelof requires more work. It will suffice to show that every open covering of \({\mathbb{R}}_{\ell }\) by basis elements contains a countable subcollection covering \({\mathbb{R}}_{\ell }\). (You can check this ) So let
+To show that \({\mathbb{R}}_{\ell }\) is Lindelöf requires more work. It will suffice to show that every open covering of \({\mathbb{R}}_{\ell }\) by basis elements contains a countable subcollection covering \({\mathbb{R}}_{\ell }\). (You can check this.) So let
 
 \[
 \mathcal{A} = {\{ ( {a}_{\alpha },{b}_{\alpha }) \} }_{\alpha \in J}
 \]
 
-be a covering of \(\mathbb{R}\) by basis elements for the lower limit topology We wish to find a countable subcollection that covers \(\mathbb{R}\).
+be a covering of \(\mathbb{R}\) by basis elements for the lower limit topology. We wish to find a countable subcollection that covers \(\mathbb{R}\).
 
 Let \(C\) be the set
 
@@ -116,9 +116,9 @@ C = \mathop{\bigcup }\limits_{{\alpha \in J}}( {{a}_{\alpha },{b}_{\alpha }})
 
 which is a subset of \(\mathbb{R}\). We show the set \(\mathbb{R} - C\) is countable.
 
-Let \(x\) be a point of \(\mathbb{R} - C\). We know that \(x\) belongs to no open interval \(( {{a}_{\alpha },{b}_{\alpha }})\), therefore \(x = {a}_{\beta }\) for some index \(\beta\). Choose such a \(\beta\) and then choose \({q}_{\tau }\) to be a rational number belonging to the interval \(( {{a}_{\beta },{b}_{\beta }})\). Because \(( {{a}_{\beta },{b}_{\beta }})\) is contained in \(C\), so is the interval \(( {{a}_{\beta },{q}_{t}}) = ( {x,{q}_{\lambda }})\). It follows that if \(x\) and \(y\) are two points of \(\mathbb{R} - C\) with \(x < y\), then \({q}_{x} < {q}_{y}\) (For otherwise, we would have \(x < y < {q}_{y} \leq {q}_{x}\), so that \(y\) would lie in the interval \(( {x,{q}_{\tau }})\) and hence in \(C\).) Therefore the map \(x \rightarrow {q}_{\tau }\) of \(\mathbb{R} - C\) into \(\mathbb{Q}\) is injective, so that \(\mathbb{R} - C\) is countable.
+Let \(x\) be a point of \(\mathbb{R} - C\). We know that \(x\) belongs to no open interval \(( {{a}_{\alpha },{b}_{\alpha }})\), therefore \(x = {a}_{\beta }\) for some index \(\beta\). Choose such a \(\beta\) and then choose \({q}_{x}\) to be a rational number belonging to the interval \(( {{a}_{\beta },{b}_{\beta }})\). Because \(( {{a}_{\beta },{b}_{\beta }})\) is contained in \(C\), so is the interval \(( {{a}_{\beta },{q}_{x}}) = ( {x,{q}_{x}})\). It follows that if \(x\) and \(y\) are two points of \(\mathbb{R} - C\) with \(x < y\), then \({q}_{x} < {q}_{y}\) (For otherwise, we would have \(x < y < {q}_{y} \leq {q}_{x}\), so that \(y\) would lie in the interval \(( {x,{q}_{x}})\) and hence in \(C\).) Therefore the map \(x \rightarrow {q}_{x}\) of \(\mathbb{R} - C\) into \(\mathbb{Q}\) is injective, so that \(\mathbb{R} - C\) is countable.
 
-Now we show that some countable subcollection of \(\mathcal{A}\) covers \(\mathbb{R}\) To begin, choose for each element of \(\mathbb{R} - C\) an element of \(\mathcal{A}\) containing it; one obtains a countable subcollec-tion \({\mathcal{A}}^{\prime }\) of \(\mathcal{A}\) that covers \(\mathbb{R} - C\). Now take the set \(C\) and topologize it as a subspace of \(\mathbb{R}\) ; in this topology, \(C\) satisfies the second countability axiom. Now \(C\) is covered by the sets \(( {{a}_{\alpha },{b}_{\alpha }})\), which are open in \(\mathbb{R}\) and hence open in \(C\) Then some countable subcollection covers \(C\). Suppose this subcollection consists of the elements \(( {{a}_{\alpha },{b}_{\alpha }})\) for \(\alpha = {\alpha }_{1},{\alpha }_{2},\ldots\) Then the collection
+Now we show that some countable subcollection of \(\mathcal{A}\) covers \(\mathbb{R}\). To begin, choose for each element of \(\mathbb{R} - C\) an element of \(\mathcal{A}\) containing it; one obtains a countable subcollec-tion \({\mathcal{A}}^{\prime }\) of \(\mathcal{A}\) that covers \(\mathbb{R} - C\). Now take the set \(C\) and topologize it as a subspace of \(\mathbb{R}\) ; in this topology, \(C\) satisfies the second countability axiom. Now \(C\) is covered by the sets \(( {{a}_{\alpha },{b}_{\alpha }})\), which are open in \(\mathbb{R}\) and hence open in \(C\). Then some countable subcollection covers \(C\). Suppose this subcollection consists of the elements \(( {{a}_{\alpha },{b}_{\alpha }})\) for \(\alpha = {\alpha }_{1},{\alpha }_{2},\ldots\) Then the collection
 
 \[
 {\mathcal{A}}^{\prime \prime } = \{ {[ {{a}_{\alpha },{b}_{\alpha }}) \mid \alpha = {\alpha }_{1},{\alpha }_{2},\ldots}\}
@@ -136,7 +136,7 @@ is a countable subcollection of \(\mathcal{A}\) that covers the set \(C\), and \
 
 \begin{centeredblock}
 \begin{example}
- The product of two Lindelof spaces need not be Lindelof. Although the space \({\mathbb{R}}_{\ell }\) is Lindelöf, we shall show that the product space \({\mathbb{R}}_{\ell } \times {\mathbb{R}}_{\ell } = {\mathbb{R}}_{\ell }^{2}\) is not. The space \({\mathbb{R}}_{\ell }^{2}\) is an extremely useful example in topology called the Sorgenfrey plane
+ The product of two Lindelöf spaces need not be Lindelöf. Although the space \({\mathbb{R}}_{\ell }\) is Lindelöf, we shall show that the product space \({\mathbb{R}}_{\ell } \times {\mathbb{R}}_{\ell } = {\mathbb{R}}_{\ell }^{2}\) is not. The space \({\mathbb{R}}_{\ell }^{2}\) is an extremely useful example in topology called the Sorgenfrey plane
 
 The space \({\mathbb{R}}_{\ell }^{2}\) has as basis all sets of the form \(\lbrack a,b) \times \lbrack c,d)\) To show it is not Lindelof, consider the subspace
 
@@ -150,7 +150,7 @@ It is easy to check that \(L\) is closed in \({\mathbb{R}}_{\ell }^{2}\) Let us 
 \lbrack a,b) \times \lbrack - a,d).
 \]
 
-Each of these open sets intersects \(L\) in at most one point. Since \(L\) is uncountable, no countable subcollection covers \({\mathbb{R}}_{\ell }^{2}\) See Figure 30.1. Exercises
+Each of these open sets intersects \(L\) in at most one point. Since \(L\) is uncountable, no countable subcollection covers \({\mathbb{R}}_{\ell }^{2}\). See Figure 30.1.
 
 \munkresfig[0.9]{30.1}[Figure 30.1]
 \end{example}
@@ -158,9 +158,11 @@ Each of these open sets intersects \(L\) in at most one point. Since \(L\) is un
 
 \begin{centeredblock}
 \begin{example}
- A subspace of a Lindelof space need not be Lindelof The ordered square \({I}_{o}^{2}\) is compact; therefore it is Lindelöf, trivially However, the subspace \(A = I \times ( {0,1})\) is not Lindelöf. For \(A\) is the union of the disjoint sets \({U}_{\tau } = \{ x\} \times ( {0,1})\), each of which is open in \(A\). This collection of sets is uncountable, and no proper subcollection covers \(A\).
+ A subspace of a Lindelöf space need not be Lindelöf. The ordered square \({I}_{o}^{2}\) is compact; therefore it is Lindelöf, trivially. However, the subspace \(A = I \times ( {0,1})\) is not Lindelöf. For \(A\) is the union of the disjoint sets \({U}_{x} = \{ x\} \times ( {0,1})\), each of which is open in \(A\). This collection of sets is uncountable, and no proper subcollection covers \(A\).
 \end{example}
 \end{centeredblock}
+
+\section*{Exercises}
 
 1. (a) A \({G}_{\delta }\) set in a space \(X\) is a set \(A\) that equals a countable intersection of open sets of \(X\). Show that in a first-countable \({T}_{1}\) space, every one-point set is a \({G}_{\delta }\) set.
 
@@ -251,7 +253,7 @@ Now we relate the separation axioms with the concepts previously introduced.
 (b) A subspace of a regular space is regular; a product of regular spaces is regular.
 \end{theorem}
 \begin{proof}
- (a) This result was an exercise in \(§{17}\). We provide a proof here. Let \(X\) be Hausdorff. Let \(x\) and \(y\) be two points of the subspace \(Y\) of \(X\). If \(U\) and \(V\) are disjoint neighborhoods in \(X\) of \(x\) and \(y\), respectively, then \(U \cap Y\) and \(V \cap Y\) are disjoint neighborhoods of \(x\) and \(y\) in \(Y\).
+ (a) This result was an exercise in \S 17. We provide a proof here. Let \(X\) be Hausdorff. Let \(x\) and \(y\) be two points of the subspace \(Y\) of \(X\). If \(U\) and \(V\) are disjoint neighborhoods in \(X\) of \(x\) and \(y\), respectively, then \(U \cap Y\) and \(V \cap Y\) are disjoint neighborhoods of \(x\) and \(y\) in \(Y\).
 
 Let \(\{ {X}_{\alpha }\}\) be a family of Hausdorff spaces. Let \(\mathbf{x} = ( {x}_{\alpha })\) and \(\mathbf{y} = ( {y}_{\alpha })\) be distinct points of the product space \(\prod {X}_{\alpha }\). Because \(\mathbf{x} \neq \mathbf{y}\), there is some index \(\beta\) such that \({x}_{\beta } \neq {y}_{\beta }\). Choose disjoint open sets \(U\) and \(V\) in \({X}_{\beta }\) containing \({x}_{\beta }\) and \({y}_{\beta }\), respectively. Then the sets \({\pi }_{\beta }^{-1}( U)\) and \({\pi }_{\beta }^{-1}( V)\) are disjoint open sets in \(\prod {X}_{\alpha }\) containing \(\mathbf{x}\) and \(\mathbf{y}\), respectively.
 
@@ -264,9 +266,9 @@ There is no analogous theorem for normal spaces, as we shall see shortly, in thi
 
 \begin{centeredblock}
 \begin{example}
- The space \({\mathbb{R}}_{K}\) is Hausdorff but not regular. Recall that \({\mathbb{R}}_{K}\) denotes the reals in the topology having as basis all open intervals(a, b)and all sets of the form \(( {a,b}) - K\), where \(K = \{ {1/n \mid n \in {\mathbb{Z}}_{ + }}\}\). This space is Hausdorff, because any two distinct points have disjoint open intervals containing them.
+ The space \({\mathbb{R}}_{K}\) is Hausdorff but not regular. Recall that \({\mathbb{R}}_{K}\) denotes the reals in the topology having as basis all open intervals \((a, b)\) and all sets of the form \(( {a,b}) - K\), where \(K = \{ {1/n \mid n \in {\mathbb{Z}}_{ + }}\}\). This space is Hausdorff, because any two distinct points have disjoint open intervals containing them.
 
-But it is not regular. The set \(K\) is closed in \({\mathbb{R}}_{K}\), and it does not contain the point 0 . Suppose that there exist disjoint open sets \(U\) and \(V\) containing 0 and \(K\), respectively. Choose a basis element containing 0 and lying in \(U\). It must be a basis element of the form \(( {a,b}) - K\), since each basis element of the form(a, b)containing 0 intersects \(K\). Choose \(n\) large enough that \(1/n \in ( {a,b})\). Then choose a basis element about \(1/n\) contained in \(V\) ; it must be a basis element of the form(c, d). Finally, choose \(z\) so that \(z < 1/n\) and \(z > \max \{ c,1/( {n + 1}) \}\). Then \(z\) belongs to both \(U\) and \(V\), so they are not disjoint. See Figure 31.2
+But it is not regular. The set \(K\) is closed in \({\mathbb{R}}_{K}\), and it does not contain the point 0 . Suppose that there exist disjoint open sets \(U\) and \(V\) containing 0 and \(K\), respectively. Choose a basis element containing 0 and lying in \(U\). It must be a basis element of the form \(( {a,b}) - K\), since each basis element of the form \((a, b)\) containing 0 intersects \(K\). Choose \(n\) large enough that \(1/n \in ( {a,b})\). Then choose a basis element about \(1/n\) contained in \(V\) ; it must be a basis element of the form \((c, d)\). Finally, choose \(z\) so that \(z < 1/n\) and \(z > \max \{ c,1/( {n + 1}) \}\). Then \(z\) belongs to both \(U\) and \(V\), so they are not disjoint. See Figure 31.2.
 \end{example}
 \end{centeredblock}
 
@@ -347,7 +349,7 @@ This proof that \({\mathbb{R}}_{\ell }^{2}\) is not normal is in some ways not v
 \item Let \(X\) be a space; let \(G\) be a topological group. An action of \(G\) on \(X\) is a continuous map \(\alpha : G \times X \rightarrow X\) such that, denoting \(\alpha ( {g \times x})\) by \(g \cdot x\), one has: (i) \(e \cdot x = x\) for all \(x \in X\). (ii) \({g}_{1} \cdot ( {{g}_{2} \cdot x}) = ( {{g}_{1} \cdot {g}_{2}}) \cdot x\) for all \(x \in X\) and \({g}_{1},{g}_{2} \in G\). Define \(x \sim g \cdot x\) for all \(x\) and \(g\) ; the resulting quotient space is denoted \(X/G\) and called the orbit space of the action \(\alpha\). \textsl{Theorem.} Let \(G\) be a compact topological group; let \(X\) be a topological space; let \(\alpha\) be an action of \(G\) on \(X\). If \(X\) is Hausdorff, or regular, or normal, or locally compact, or second-countable, so is \(X/G\). [Hint: See Exercise 13 of §26.] *9. Let \(A\) be the set of all points of \({\mathbb{R}}_{\ell }^{2}\) of the form \(x \times ( {-x})\), for \(x\) rational; let \(B\) be the set of all points of this form for \(x\) irrational. If \(V\) is an open set of \({\mathbb{R}}_{\ell }^{2}\) containing \(B\), show there exists no open set \(U\) containing \(A\) that is disjoint from \(V\), as follows:
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Let \({K}_{n}\) consist of all irrational numbers \(x\) in \([ {0,1}]\) such that \(\lbrack x,x + 1/n) \times\) \(\lbrack - x, - x + 1/n)\) is contained in \(V\). Show \([ {0,1}]\) is the union of the sets \({K}_{n}\) and countably many one-point sets.
- \item Use Exercise 5 of \(§{27}\) to show that some set \({\bar{K}}_{n}\) contains an open interval (a, b) of \(\mathbb{R}\).
+ \item Use Exercise 5 of \S 27 to show that some set \({\bar{K}}_{n}\) contains an open interval (a, b) of \(\mathbb{R}\).
  \item Show that \(V\) contains the open parallelogram consisting of all points of the form \(x \times ( {-x + \epsilon })\) for which \(a < x < b\) and \(0 < \epsilon < 1/n\).
  \item Conclude that if \(q\) is a rational number with \(a < q < b\), then the point \(q \times ( {-q})\) of \({\mathbb{R}}_{\ell }^{2}\) is a limit point of \(V\). 
  \end{enumerate}
@@ -661,7 +663,7 @@ To prove (2), note that if \(x \notin {U}_{r}\), then \(x\) is not in \({U}_{s}\
 f(x) = \inf \mathbb{Q}(x) \geq r
 \]
 
-Now we prove continuity of \(f\). Given a point \({x}_{0}\) of \(X\) and an open interval(c, d) in \(\mathbb{R}\) containing the point \(f( {x}_{0})\), we wish to find a neighborhood \(U\) of \({x}_{0}\) such that \(f( U) \subset ( {c,d})\). Choose rational numbers \(p\) and \(q\) such that
+Now we prove continuity of \(f\). Given a point \({x}_{0}\) of \(X\) and an open interval \((c, d)\) in \(\mathbb{R}\) containing the point \(f( {x}_{0})\), we wish to find a neighborhood \(U\) of \({x}_{0}\) such that \(f( U) \subset ( {c,d})\). Choose rational numbers \(p\) and \(q\) such that
 
 \[
 c < p < f( {x}_{0}) < q < d\text{.}
@@ -896,7 +898,7 @@ A family of continuous functions that satisfies the hypotheses of this theorem i
 \item Let \(X\) be a locally compact Hausdorff space. Let \(Y\) be the one-point compactification of \(X\). Is it true that if \(X\) has a countable basis, then \(Y\) is metrizable? Is it true that if \(Y\) is metrizable, then \(X\) has a countable basis?
 \item Check the details of the proof of Theorem 34.2.
 \item A space \(X\) is locally metrizable if each point \(x\) of \(X\) has a neighborhood that is metrizable in the subspace topology. Show that a compact Hausdorff space \(X\) is metrizable if it is locally metrizable. [Hint. Show that \(X\) is a finite union of open subspaces, each of which has a countable basis.]
-\item Show that a regular Lindelof space is metrizable if it is locally metrizable. [Hint: A closed subspace of a Lindelof space is Lindelöf.] Regularity is essential; where do you use it in the proof?
+\item Show that a regular Lindelöf space is metrizable if it is locally metrizable. [Hint: A closed subspace of a Lindelöf space is Lindelöf.] Regularity is essential; where do you use it in the proof?
 \item Let \(X\) be a compact Hausdorff space that is the union of the closed subspaces \({X}_{1}\) and \({X}_{2}\). If \({X}_{1}\) and \({X}_{2}\) are metrizable, show that \(X\) is metrizable. [Hint Construct a countable collection \(\mathcal{A}\) of open sets of \(X\) whose intersections with \({X}_{i}\) form a basis for \({X}_{i}\), for \(i = 1,2\). Assume \({X}_{1} - {X}_{2}\) and \({X}_{2} - {X}_{1}\) belong to \(\mathcal{A}\). Let \(\mathcal{B}\) consist of finite intersections of elements of \(\mathcal{A}\) ]
 \end{enumerate}
 \section*{*§ 35 The Tietze Extension Theorem \protect\sectionDagger}
@@ -954,7 +956,7 @@ Then \(| {g(x) }| \leq \frac{1}{3}r\) for all \(x\). We assert that for each \(a
 
 \customfootnote{
 
-${}^{\dagger}$ This section will be assumed in \(§{62}\). It is also used in a number of exercises.
+${}^{\dagger}$ This section will be assumed in \S 62. It is also used in a number of exercises.
 
 }
 
@@ -1057,7 +1059,7 @@ r( y) = y/| y| \;\text{ if }| y| \geq 1,
 
 would be an extension of \(f\) mapping \(X\) into \([ {-1,1}]\).
 
-Step 3 We now prove part (b) of the theorem, in which \(f\) maps \(A\) into \(\mathbb{R}\). We can replace \(\mathbb{R}\) by the open interval(-1,1), since this interval is homeomorphic to \(\mathbb{R}\).
+Step 3 We now prove part (b) of the theorem, in which \(f\) maps \(A\) into \(\mathbb{R}\). We can replace \(\mathbb{R}\) by the open interval \((-1,1)\), since this interval is homeomorphic to \(\mathbb{R}\).
 
 So let \(f\) be a continuous map from \(A\) into(-1,1). The half of the Tietze theorem already proved shows that we can extend \(f\) to a continuous map \(g : X \rightarrow [ {-1,1}]\) mapping \(X\) into the closed interval. How can we find a map \(h\) carrying \(X\) into the open interval?
 
@@ -1067,7 +1069,7 @@ Given \(g\), let us define a subset \(D\) of \(X\) by the equation
 D = {g}^{-1}( {\{ - 1\} }) \cup {g}^{-1}( {\{ 1\} }).
 \]
 
-Since \(g\) is continuous, \(D\) is a closed subset of \(X\). Because \(g( A) = f( A)\), which is contained in(-1,1), the set \(A\) is disjoint from \(D\). By the Urysohn lemma, there is a continuous function \(\phi : X \rightarrow [ {0,1}]\) such that \(\phi ( D) = \{ 0\}\) and \(\phi ( A) = \{ 1\}\). Define
+Since \(g\) is continuous, \(D\) is a closed subset of \(X\). Because \(g( A) = f( A)\), which is contained in \((-1,1)\), the set \(A\) is disjoint from \(D\). By the Urysohn lemma, there is a continuous function \(\phi : X \rightarrow [ {0,1}]\) such that \(\phi ( D) = \{ 0\}\) and \(\phi ( A) = \{ 1\}\). Define
 
 \[
 h(x) = \phi (x) g(x).
@@ -1079,7 +1081,7 @@ Then \(h\) is continuous, being the product of two continuous functions. Also, \
 h( a) = \phi ( a) g( a) = 1 \cdot g( a) = f( a).
 \]
 
-Finally, \(h\) maps all of \(X\) into the open interval(-1,1). For if \(x \in D\), then \(h(x) =\) \(0 \cdot g(x) = 0\). And if \(x \notin D\), then \(| {g(x) }| < 1\) ; it follows that \(| {h(x) }| \leq 1 \cdot | {g(x) }| < 1\).
+Finally, \(h\) maps all of \(X\) into the open interval \((-1,1)\). For if \(x \in D\), then \(h(x) =\) \(0 \cdot g(x) = 0\). And if \(x \notin D\), then \(| {g(x) }| < 1\) ; it follows that \(| {h(x) }| \leq 1 \cdot | {g(x) }| < 1\).
 \end{proof}
 
 \section*{Exercises}
@@ -1129,7 +1131,7 @@ We have shown that every regular space with a countable basis can be imbedded in
 
 \customfootnote{
 
-${}^{\dagger}$ This section will be assumed when we study paracompactness in \(§{41}\) and when we study dimension theory in \(§{50}\).
+${}^{\dagger}$ This section will be assumed when we study paracompactness in \S 41 and when we study dimension theory in \S 50.
 
 }
 
@@ -1241,7 +1243,7 @@ Clearly, \(F\) is continuous. To prove that \(F\) is an imbedding we need only t
 
 Because \({\phi }_{i}(x) = {\phi }_{i}( y) > 0\), we conclude that \({g}_{i}(x) = {g}_{i}( y)\). But \({g}_{i} : {U}_{i} \rightarrow {\mathbb{R}}^{m}\) is injective, so that \(x = y\), as desired.
 
-In many applications of partitions of unity, such as the one just given, all one needs to know is that the sum \(\sum {\phi }_{i}(x)\) is positive for each \(x\). In others, however, one needs the stronger condition that \(\sum {\phi }_{i}(x) = 1\). See \(§{50}\).
+In many applications of partitions of unity, such as the one just given, all one needs to know is that the sum \(\sum {\phi }_{i}(x)\) is positive for each \(x\). In others, however, one needs the stronger condition that \(\sum {\phi }_{i}(x) = 1\). See \S 50.
 \end{proof}
 
 \section*{Exercises}
