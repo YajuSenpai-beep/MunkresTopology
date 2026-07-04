@@ -130,7 +130,9 @@ Said differently: If \(B\) is formed by adjoining to the connected subspace \(A\
 Suppose that \(Z = A \cup B\) is a separation of \(Z\) into two disjoint nonempty sets open in \(Z\). Then \({g}^{-1}( A)\) and \({g}^{-1}( B)\) are disjoint sets whose union is \(X\) ; they are open in \(X\) because \(g\) is continuous, and nonempty because \(g\) is surjective. Therefore, they form a separation of \(X\), contradicting the assumption that \(X\) is connected.
 \end{proof}
 
-\section*{Theorem 23.6. A finite cartesian product of connected spaces is connected.}
+\begin{theorem}
+A finite cartesian product of connected spaces is connected.
+\end{theorem}
 
 \begin{proof}
 We prove the theorem first for the product of two connected spaces \(X\) and \(Y\). This proof is easy to visualize. Choose a ``base point'' \(a \times b\) in the product \(X \times Y\). Note that the ``horizontal slice'' \(X \times b\) is connected, being homeomorphic with \(X\), and each ``vertical slice'' \(x \times Y\) is connected, being homeomorphic with \(Y\). As a result, each ``T-shaped'' space
@@ -410,7 +412,7 @@ To find \({t}_{n}\), we proceed as follows: Given \(n\), choose \(u\) with \(0 <
 \item Show that if \(U\) is an open connected subspace of \({\mathbb{R}}^{2}\), then \(U\) is path connected. [Hint: Show that given \({x}_{0} \in U\), the set of points that can be joined to \({x}_{0}\) by a path in \(U\) is both open and closed in \(U\).]
 \item If \(A\) is a connected subspace of \(X\), does it follow that Int \(A\) and Bd \(A\) are connected? Does the converse hold? Justify your answers.
 
-\item *12. Recall that \({S}_{\Omega }\) denotes the minimal uncountable well-ordered set. Let \(L\) denote the ordered set \({S}_{\Omega } \times \lbrack 0,1)\) in the dictionary order, with its smallest element deleted. The set \(L\) is a classical example in topology called the long line. \textsl{Theorem.} The long line is path connected and locally homeomorphic to \(\mathbb{R}\), but it cannot be imbedded in \(\mathbb{R}\).
+\item[*12.] Recall that \({S}_{\Omega }\) denotes the minimal uncountable well-ordered set. Let \(L\) denote the ordered set \({S}_{\Omega } \times \lbrack 0,1)\) in the dictionary order, with its smallest element deleted. The set \(L\) is a classical example in topology called the long line. \textsl{Theorem.} The long line is path connected and locally homeomorphic to \(\mathbb{R}\), but it cannot be imbedded in \(\mathbb{R}\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Let \(X\) be an ordered set; let \(a < b < c\) be points of \(X\). Show that \(\lbrack a,c)\) has the order type of \(\lbrack 0,1)\) if and only if both \(\lbrack a,b)\) and \(\lbrack b,c)\) have the order type of \(\lbrack 0,1)\)
  \item Let \(X\) be an ordered set. Let \({x}_{0} < {x}_{1} < \cdots\) be an increasing sequence of points of \(X\) ; suppose \(b = \sup \{ {x}_{t}\}\) Show that \([ {{x}_{0},b})\) has the order type of \(\lbrack 0,1)\) if and only if each interval \([ {{x}_{i},{x}_{i + 1}})\) has the order type of \(\lbrack 0,1)\).
@@ -600,7 +602,7 @@ Given an open covering \(\mathcal{A}\) of \(X\), there is an element \(U\) of \(
 \mathcal{A} = \{ {(1/n,1\rbrack \mid n \in {\mathbb{Z}}_{ + }}\}
 \]
 
-contains no finite subcollection covering \((0,1\}\). Nor is the interval(0,1)compact; the same argument applies. On the other hand, the interval \([ {0,1}]\) is compact; you are probably already familiar with this fact from analysis. In any case, we shall prove it shortly.
+contains no finite subcollection covering \((0,1)\). Nor is the interval \((0,1)\) compact; the same argument applies. On the other hand, the interval \([ {0,1}]\) is compact; you are probably already familiar with this fact from analysis. In any case, we shall prove it shortly.
 \end{example}
 \end{centeredblock}
 
@@ -636,7 +638,9 @@ Conversely, suppose the given condition holds; we wish to prove \(Y\) compact. L
 The collection \(\mathcal{A} = \{ {A}_{\alpha }\}\) is a covering of \(Y\) by sets open in \(X\) By hypothesis, some finite subcollection \(\{ {{A}_{{\alpha }_{1}},\ldots ,{A}_{{\alpha }_{n}}}\}\) covers \(Y\). Then \(\{ {{A}_{{\alpha }_{1}}^{\prime },\ldots ,{A}_{{\alpha }_{n}}^{\prime }}\}\) is a subcollection of \({\mathcal{A}}^{\prime }\) that covers \(Y\)
 \end{proof}
 
-\section*{Theorem 26.2. Every closed subspace of a compact space is compact.}
+\begin{theorem}
+Every closed subspace of a compact space is compact.
+\end{theorem}
 
 \begin{proof}
 Let \(Y\) be a closed subspace of the compact space \(X\). Given a covering \(\mathcal{A}\) of \(Y\) by sets open in \(X\), let us form an open covering \(\mathcal{B}\) of \(X\) by adjoining to \(\mathcal{A}\) the single open set \(X - Y\), that is,
@@ -648,7 +652,9 @@ Let \(Y\) be a closed subspace of the compact space \(X\). Given a covering \(\m
 Some finite subcollection of \(\mathcal{B}\) covers \(X\). If this subcollection contains the set \(X - Y\), discard \(X - Y\) ; otherwise, leave the subcollection alone. The resulting collection is a finite subcollection of \(\mathcal{A}\) that covers \(Y\).
 \end{proof}
 
-\section*{Theorem 26.3. Every compact subspace of a Hausdorff space is closed.}
+\begin{theorem}
+Every compact subspace of a Hausdorff space is closed.
+\end{theorem}
 
 \begin{proof}
 Let \(Y\) be a compact subspace of the Hausdorff space \(X\). We shall prove that \(X - Y\) is open, so that \(Y\) is closed.
@@ -1134,7 +1140,9 @@ As indicated when we first mentioned compact sets, there are other formulations 
 
 In some ways this property is more natural and intuitive than that of compactness. In the early days of topology, it was given the name ``compactness,'' while the open covering formulation was called ``bicompactness.'' Later, the word ``compact'' was shifted to apply to the open covering definition, leaving this one to search for a new name. It still has not found a name on which everyone agrees. On historical grounds, some call it ``Fréchet compactness'', others call it the ``Bolzano-Weierstrass property''. We have invented the term ``limit point compactness''. It seems as good a term as any; at least it describes what the property is about.
 
-\section*{Theorem 28.1. Compactness implies limit point compactness, but not conversely}
+\begin{theorem}
+Compactness implies limit point compactness, but not conversely.
+\end{theorem}
 
 \begin{proof}
 Let \(X\) be a compact space. Given a subset \(A\) of \(X\), we wish to prove that if \(A\) is infinite, then \(A\) has a limit point. We prove the contrapositive-if \(A\) has no limit point, then \(A\) must be finite.
@@ -1243,7 +1251,7 @@ Note that a compact space is automatically locally compact.
 
 \begin{centeredblock}
 \begin{example}
- The real line \(\mathbb{R}\) is locally compact. The point \(x\) lies in some interval(a, b), which in turn is contained in the compact subspace \([ {a,b}]\) The subspace \(\mathbb{Q}\) of rational numbers is not locally compact, as you can check.
+ The real line \(\mathbb{R}\) is locally compact. The point \(x\) lies in some interval \((a, b)\), which in turn is contained in the compact subspace \([ {a,b}]\) The subspace \(\mathbb{Q}\) of rational numbers is not locally compact, as you can check.
 \end{example}
 \end{centeredblock}
 
@@ -1395,7 +1403,7 @@ This follows from Theorem 29.1 and Corollary 29.3.
 \item Show that if \(G\) is a locally compact topological group and \(H\) is a subgroup, then \(G/H\) is locally compact.
 \item Show that if \(X\) is a Hausdorff space that is locally compact at the point \(x\), then for each neighborhood \(U\) of \(x\), there is a neighborhood \(V\) of \(x\) such that \(\bar{V}\) is compact and \(\bar{V} \subset U\).
 
-\item *11. Prove the following:
+\item[*11.] Prove the following:
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item \textsl{Lemma.} If \(p : X \rightarrow Y\) is a quotient map and if \(Z\) is a locally compact Hausdorff space, then the map \[ \pi = p \times {i}_{Z} : X \times Z \rightarrow Y \times Z \] is a quotient map. [Hint: If \({\pi }^{-1}( A)\) is open and contains \(x \times y\), choose open sets \({U}_{1}\) and \(V\) with \(\bar{V}\) compact, such that \(x \times y \in {U}_{1} \times V\) and \({U}_{1} \times \bar{V} \subset {\pi }^{-1}( A)\). Given \({U}_{i} \times \bar{V} \subset {\pi }^{-1}( A)\), use the tube lemma to choose an open set \({U}_{i + 1}\) containing \({p}^{-1}( {p( {U}_{i}) })\) such that \({U}_{i + 1} \times \bar{V} \subset {\pi }^{-1}( A)\). Let \(U = \bigcup {U}_{i}\) ; show that \(U \times V\) is a saturated neighborhood of \(x \times y\) that is contained in \({\pi }^{-1}( A)\). An entirely different proof of this result will be outlined in the exercises of §46.
  \item \textsl{Theorem.} Let \(p : A \rightarrow B\) and \(q : C \rightarrow D\) be quotient maps. If \(B\) and \(C\) are locally compact Hausdorff spaces, then \(p \times q : A \times C \rightarrow B \times D\) is a quotient map.

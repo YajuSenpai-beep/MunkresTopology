@@ -289,7 +289,7 @@ The homomorphism \(\phi\) can be described as follows: Given an element \(y\) of
  \item Calculate \({H}_{1}( X)\).
  \item Assuming \(X\) is homeomorphic to one of the surfaces given in Theorem 75.5 (which it is), which surface is it?
  \end{enumerate}
-\item *4. Let \(X\) be the quotient space obtained from an 8-sided polygonal region \(P\) by means of the labelling scheme \({abcda}{d}^{-1}c{b}^{-1}\). Let \(\pi : P \rightarrow X\) be the quotient map.
+\item[*4.] Let \(X\) be the quotient space obtained from an 8-sided polygonal region \(P\) by means of the labelling scheme \({abcda}{d}^{-1}c{b}^{-1}\). Let \(\pi : P \rightarrow X\) be the quotient map.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show that \(\pi\) does not map all the vertices of \(P\) to the same point of \(X\).
  \item Determine the space \(A = \pi ( {\text{ Bd }P})\) and calculate its fundamental group.
@@ -343,15 +343,16 @@ Conversely, if \(X\) is the space obtained from \(m + 1\) polygonal regions by m
 
 We now list a number of elementary operations that can be performed on a labelling scheme \({w}_{1},\ldots ,{w}_{m}\) without affecting the resulting quotient space \(X\). The first two arise from the theorem just stated.
 
-(i) Cut. One can replace the scheme \({w}_{1} = {y}_{0}{y}_{1}\) by the scheme \({y}_{0}{c}^{-1}\) and \(c{y}_{1}\), provided \(c\) does not appear elsewhere in the total scheme and \({y}_{0}\) and \({y}_{1}\) have length at least two.
+\begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\roman*), align=left]
+\item \textbf{Cut.} One can replace the scheme \({w}_{1} = {y}_{0}{y}_{1}\) by the scheme \({y}_{0}{c}^{-1}\) and \(c{y}_{1}\), provided \(c\) does not appear elsewhere in the total scheme and \({y}_{0}\) and \({y}_{1}\) have length at least two.
 
-(ii) Paste. One can replace the scheme \({y}_{0}{c}^{-1}\) and \(c{y}_{1}\) by the scheme \({y}_{0}{y}_{1}\), provided \(c\) does not appear elsewhere in the total scheme.
+\item \textbf{Paste.} One can replace the scheme \({y}_{0}{c}^{-1}\) and \(c{y}_{1}\) by the scheme \({y}_{0}{y}_{1}\), provided \(c\) does not appear elsewhere in the total scheme.
 
-(iii) Relabel. One can replace all occurrences of any given label by some other label that does not appear elsewhere in the scheme. Similarly, one can change the sign of the exponent of all occurrences of a given label \(a\) ; this amounts to reversing the orientations of all the edges labelled ``a''. Neither of these alterations affects the pasting map.
+\item \textbf{Relabel.} One can replace all occurrences of any given label by some other label that does not appear elsewhere in the scheme. Similarly, one can change the sign of the exponent of all occurrences of a given label \(a\) ; this amounts to reversing the orientations of all the edges labelled ``a''. Neither of these alterations affects the pasting map.
 
-(iv) Permute. One can replace any one of the schemes \({w}_{i}\) by a cyclic permutation of \({w}_{i}\). Specifically, if \({w}_{i} = {y}_{0}{y}_{1}\), we can replace \({w}_{i}\) by \({y}_{1}{y}_{0}\). This amounts to renumbering the vertices of the polygonal region \({P}_{i}\) so as to begin with a different vertex; it does not affect the resulting quotient space.
+\item \textbf{Permute.} One can replace any one of the schemes \({w}_{i}\) by a cyclic permutation of \({w}_{i}\). Specifically, if \({w}_{i} = {y}_{0}{y}_{1}\), we can replace \({w}_{i}\) by \({y}_{1}{y}_{0}\). This amounts to renumbering the vertices of the polygonal region \({P}_{i}\) so as to begin with a different vertex; it does not affect the resulting quotient space.
 
-(v) Flip. One can replace the scheme
+\item \textbf{Flip.} One can replace the scheme
 
 \[
 {w}_{i} = {( {a}_{{i}_{1}}) }^{{\epsilon }_{1}}\cdots {( {a}_{{i}_{n}}) }^{{\epsilon }_{n}}
@@ -363,14 +364,15 @@ by its formal inverse
 {w}_{i}^{-1} = {( {a}_{{i}_{n}}) }^{-{\epsilon }_{n}}\cdots {( {a}_{{i}_{1}}) }^{-{\epsilon }_{1}}.
 \]
 
-This amounts simply to ``flipping the polygonal region \({P}_{i}\) over.''. The order of the vertices is reversed, and so is the orientation of each edge. The quotient space \(X\) is not affected.
+This amounts simply to ``flipping the polygonal region \({P}_{i}\) over.'' The order of the vertices is reversed, and so is the orientation of each edge. The quotient space \(X\) is not affected.
 
-(vi) Cancel. One can replace the scheme \({w}_{i} = {y}_{0}a{a}^{-1}{y}_{1}\) by the scheme \({y}_{0}{y}_{1}\), provided \(a\) does not appear elsewhere in the total scheme and both \({y}_{0}\) and \({y}_{1}\) have length at least two.
+\item \textbf{Cancel.} One can replace the scheme \({w}_{i} = {y}_{0}a{a}^{-1}{y}_{1}\) by the scheme \({y}_{0}{y}_{1}\), provided \(a\) does not appear elsewhere in the total scheme and both \({y}_{0}\) and \({y}_{1}\) have length at least two.
 
 This last result follows from the three-step argument indicated in Figure 76.3, only one step of which is new. Letting \(b\) and \(c\) be labels that do not appear elsewhere in the total scheme, one first replaces \({y}_{0}a{a}^{-1}{y}_{1}\) by the scheme \({y}_{0}{ab}\) and \({b}^{-1}{a}^{-1}{y}_{1}\), using the cutting operation (i). Then one combines the edges labelled \(a\) and \(b\) in each polygonal region into a single edge, with a new label. This is the step that is new. The result is the scheme \({y}_{0}c\) and \({c}^{-1}{y}_{1}\), which one can replace by the single scheme \({y}_{0}{y}_{1}\), using the pasting operation (ii).
 
 \munkresfig[1.0]{76.3}[Figure 76.3]
-(vii) Uncancel. This is the reverse of operation (vi). It replaces the scheme \({y}_{0}{y}_{1}\) by the scheme \({y}_{0}a{a}^{-1}{y}_{1}\), where \(a\) is a label that does not appear elsewhere in the total scheme. We shall not actually have occasion to use this operation.
+\item \textbf{Uncancel.} This is the reverse of operation (vi). It replaces the scheme \({y}_{0}{y}_{1}\) by the scheme \({y}_{0}a{a}^{-1}{y}_{1}\), where \(a\) is a label that does not appear elsewhere in the total scheme. We shall not actually have occasion to use this operation.
+\end{enumerate}
 
 \begin{definition}
 	We define two labelling schemes for collections of polygonal regions to be equivalent if one can be obtained from the other by a sequence of elementary scheme operations. Since each elementary operation has as its inverse another such operation, this is an equivalence relation.
