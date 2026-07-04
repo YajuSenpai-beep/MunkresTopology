@@ -18,7 +18,7 @@ If \(p : E \rightarrow B\) is a covering map, with \(p( {e}_{0}) = {b}_{0}\), th
 {H}_{0} = {p}_{ * }( {{\pi }_{1}( {E,{e}_{0}}) })
 \]
 
-is a subgroup of \({\pi }_{1}( {B,{b}_{0}})\) isomorphic to \({\pi }_{1}( {E,{e}_{0}})\). It turns out that the subgroup \({H}_{0}\) determines the covering \(p\) completely, up to a suitable notion of equivalence of coverings. This we shall prove in \S 79. Furthermore, under a (fairly mild) additional ``local niceness'' condition on \(B\), there exists, for each subgroup \({H}_{0}\) of \({\pi }_{1}( {B,{b}_{0}})\), a covering \(p : E \rightarrow B\) of \(B\) whose corresponding subgroup is \({H}_{0}\). This we shall prove in \( \S {82}\).
+is a subgroup of \({\pi }_{1}( {B,{b}_{0}})\) isomorphic to \({\pi }_{1}( {E,{e}_{0}})\). It turns out that the subgroup \({H}_{0}\) determines the covering \(p\) completely, up to a suitable notion of equivalence of coverings. This we shall prove in \S 79. Furthermore, under a (fairly mild) additional ``local niceness'' condition on \(B\), there exists, for each subgroup \({H}_{0}\) of \({\pi }_{1}( {B,{b}_{0}})\), a covering \(p : E \rightarrow B\) of \(B\) whose corresponding subgroup is \({H}_{0}\). This we shall prove in \S 82.
 
 Roughly speaking, these results show that one can determine all covering spaces of \(B\) merely by examining the collection of all subgroups of \({\pi }_{1}( {B,{b}_{0}})\). This is the classical procedure of algebraic topology; one ``solves'' a problem of topology by reducing it to a problem of algebra, hopefully one that is more tractable.
 
@@ -29,14 +29,14 @@ Throughout the chapter, we assume the general lifting correspondence theorem, Th
 In this section, we show that the subgroup \({H}_{0}\) of \({\pi }_{1}( {B,{b}_{0}})\) determines the covering \(p : E \rightarrow B\) completely, up to a suitable notion of equivalence of coverings.
 
 \begin{definition}
-	Let \(p : E \rightarrow B\) and \({p}^{\prime } : {E}^{\prime } \rightarrow B\) be covering maps. They are said to be equivalent if there exists a homeomorphism \(h : E \rightarrow {E}^{\prime }\) such that \(p = {p}^{\prime } \circ h\). The homeomorphism \(h\) is called an or an equivalence of covering spaces
+	Let \(p : E \rightarrow B\) and \({p}^{\prime } : {E}^{\prime } \rightarrow B\) be covering maps. They are said to be equivalent if there exists a homeomorphism \(h : E \rightarrow {E}^{\prime }\) such that \(p = {p}^{\prime } \circ h\). The homeomorphism \(h\) is called an equivalence of covering maps or an equivalence of covering spaces.
 \end{definition}
 
 \munkresfig[0.3]{79.0} 
 
-Given two covering maps \(p : E \rightarrow B\) and \({p}^{\prime } : {E}^{\prime } \rightarrow B\) whose corresponding subgroups \({H}_{0}\) and \({H}_{0}^{\prime }\) are equal, we shall prove that there exists an equivalence \(h\) : \(E \rightarrow {E}^{\prime }\). For this purpose, we need to generalize the lifting lemmas of \( \S {54}\).
+Given two covering maps \(p : E \rightarrow B\) and \({p}^{\prime } : {E}^{\prime } \rightarrow B\) whose corresponding subgroups \({H}_{0}\) and \({H}_{0}^{\prime }\) are equal, we shall prove that there exists an equivalence \(h\) : \(E \rightarrow {E}^{\prime }\). For this purpose, we need to generalize the lifting lemmas of \S 54.
 
-\begin{lemma}[The ]
+\begin{lemma}[The general lifting lemma]
 	Let \(p : E \rightarrow B\) be a covering map; let \(p( {e}_{0}) = {b}_{0}\). Let \(f : Y \rightarrow B\) be a continuous map, with \(f( {y}_{0}) = {b}_{0}\). Suppose \(Y\) is path connected and locally path connected. The map \(f\) can be lifted to a map \(\widetilde{f} : Y \rightarrow E\) such that \(\bar{f}( {y}_{0}) = {e}_{0}\) if and only if
 
 \[
@@ -49,7 +49,7 @@ Furthermore, if such a lifting exists, it is unique.
 \begin{proof}
 	If the lifting \(\widetilde{f}\) exists, then
 \[
-{f}_{ * }( {{\pi }_{1}( {Y,{Y}_{0}}) }) = {p}_{ * }( {{\bar{f}}_{ * }( {{\pi }_{1}( {Y,{y}_{0}}) }) }) \subset {p}_{ * }( {{\pi }_{1}( {E,{e}_{0}}) }).
+{f}_{ * }( {{\pi }_{1}( {Y,{y}_{0}}) }) = {p}_{ * }( {{\widetilde{f}}_{ * }( {{\pi }_{1}( {Y,{y}_{0}}) }) }) \subset {p}_{ * }( {{\pi }_{1}( {E,{e}_{0}}) }).
 \]
 
 This proves the ``only if'' part of the theorem.
@@ -97,13 +97,15 @@ Now we prove the ``if'' part of the theorem; we assume that \({H}_{0} = {H}_{0}^
 
 \munkresfig[0.2]{79.11} 
 
-Because \({p}^{\prime }\) is a covering map and \(E\) is path connected and locally path connected, there exists a map \(h : E \rightarrow {E}^{\prime }\) with \(h( {e}_{0}) = {e}_{0}^{\prime }\) that is a lifting of \(p\) (that is, such that \(. {{p}^{\prime } \circ h = p})\). Reversing the roles of \(E\) and \({E}^{\prime }\) in this argument, we see there is a map \(k : {E}^{\prime } \rightarrow E\) with \(k( {e}_{0}^{\prime }) = {e}_{0}\) such that \(p \circ k = {p}^{\prime }\). Now consider the maps The map \(k \circ h : E \rightarrow E\) is a lifting of \(p\) (since \(p \circ k \circ h = {p}^{\prime } \circ h = p\) ), with \(p( {e}_{0}) = {e}_{0}\). The identity map \({i}_{E}\) of \(E\) is another such lifting. The uniqueness part of the preceding lemma implies that \(k \circ h = {i}_{E}\). A similar argument shows that \(h \circ k\) equals the identity map of \({E}^{\prime }\).
+Because \({p}^{\prime }\) is a covering map and \(E\) is path connected and locally path connected, there exists a map \(h : E \rightarrow {E}^{\prime }\) with \(h( {e}_{0}) = {e}_{0}^{\prime }\) that is a lifting of \(p\) (that is, such that \({p}^{\prime } \circ h = p)\). Reversing the roles of \(E\) and \({E}^{\prime }\) in this argument, we see there is a map \(k : {E}^{\prime } \rightarrow E\) with \(k( {e}_{0}^{\prime }) = {e}_{0}\) such that \(p \circ k = {p}^{\prime }\). Now consider the maps
 
-\munkresfig[0.2]{79.12} 
+\munkresfig[0.2]{79.12}
 
-We seem to have solved our equivalence problem. But there is a somewhat subtle point we have overlooked. We have obtained a necessary and sufficient condition for there to exist an equivalence \(h \cdot E \rightarrow {E}^{\prime }\) that carries the point \({e}_{0}\) to the point \({e}_{0}^{\prime }\). But we have not yet determined under what conditions there exists an equivalence in general. It is possible that there may be no equivalence carrying \({e}_{0}\) to \({e}_{0}^{\prime }\) but that there is an equivalence carrying \({e}_{0}\) to some other point \({e}_{1}^{\prime }\) of \({( {p}^{\prime }) }^{-1}( {b}_{0})\). Can we determine whether this is the case merely by examining the subgroups \({H}_{0}\) and \({H}_{0}^{\prime }\) ? We consider this problem now.
+The map \(k \circ h : E \rightarrow E\) is a lifting of \(p\) (since \(p \circ k \circ h = {p}^{\prime } \circ h = p\) ), with \(p( {e}_{0}) = {e}_{0}\). The identity map \({i}_{E}\) of \(E\) is another such lifting. The uniqueness part of the preceding lemma implies that \(k \circ h = {i}_{E}\). A similar argument shows that \(h \circ k\) equals the identity map of \({E}^{\prime }\). 
 
-If \({H}_{1}\) and \({H}_{2}\) are subgroups of a group \(G\), you may recall from algebra that they are said to be if \({H}_{2} = \alpha \cdot {H}_{1} \cdot {\alpha }^{-1}\) for some element \(\alpha\) of \(G\). Said differently, they are conjugate if the isomorphism of \(G\) with itself that maps \(x\) to \(\alpha \cdot x \cdot {\alpha }^{-1}\) carries the group \({H}_{1}\) onto the group \({H}_{2}\). It is easy to check that conjugacy is an equivalence relation on the collection of subgroups of \(G\). The equivalence class of the subgroup \(H\) is called the of \(H\).
+We seem to have solved our equivalence problem. But there is a somewhat subtle point we have overlooked. We have obtained a necessary and sufficient condition for there to exist an equivalence \(h : E \rightarrow {E}^{\prime }\) that carries the point \({e}_{0}\) to the point \({e}_{0}^{\prime }\). But we have not yet determined under what conditions there exists an equivalence in general. It is possible that there may be no equivalence carrying \({e}_{0}\) to \({e}_{0}^{\prime }\) but that there is an equivalence carrying \({e}_{0}\) to some other point \({e}_{1}^{\prime }\) of \({( {p}^{\prime }) }^{-1}( {b}_{0})\). Can we determine whether this is the case merely by examining the subgroups \({H}_{0}\) and \({H}_{0}^{\prime }\) ? We consider this problem now.
+
+If \({H}_{1}\) and \({H}_{2}\) are subgroups of a group \(G\), you may recall from algebra that they are said to be conjugate subgroups if \({H}_{2} = \alpha \cdot {H}_{1} \cdot {\alpha }^{-1}\) for some element \(\alpha\) of \(G\). Said differently, they are conjugate if the isomorphism of \(G\) with itself that maps \(x\) to \(\alpha \cdot x \cdot {\alpha }^{-1}\) carries the group \({H}_{1}\) onto the group \({H}_{2}\). It is easy to check that conjugacy is an equivalence relation on the collection of subgroups of \(G\). The equivalence class of the subgroup \(H\) is called the conjugacy class of \(H\).
 \end{proof}
 \begin{lemma}
 	Let \(p : E \rightarrow B\) be a covering map. Let \({e}_{0}\) and \({e}_{1}\) be points of \({p}^{-1}( {b}_{0})\), and let \({H}_{i} = {p}_{ * }( {{\pi }_{1}( {E,{e}_{i}}) })\).
@@ -127,7 +129,7 @@ Now we show that \([ \alpha ] * {H}_{1} * {[ \alpha ] }^{-1} \supset {H}_{0}\). 
 [ \bar{\alpha }] * {H}_{0} * {[ \bar{\alpha }] }^{-1} \subset {H}_{1}
 \]
 
-which implies out desired result.
+which implies our desired result.
 
 (b) To prove the converse, let \({e}_{0}\) be given and let \(H\) be conjugate to \({H}_{0}\). Then \({H}_{0} = [ \alpha ] * H * {[ \alpha ] }^{-1}\) for some loop \(\alpha\) in \(B\) based at \({b}_{0}\). Let \(\gamma\) be the lifting of \(\alpha\) to a path in \(E\) beginning at \({e}_{0}\), and let \({e}_{1} = \gamma (1)\). Then (a) implies that \({H}_{0} = [ \alpha ] * {H}_{1} * {[ \alpha ] }^{-1}\). We conclude that \(H = {H}_{1}\).
 
@@ -144,16 +146,16 @@ of \({\pi }_{1}( {B,{b}_{0}})\) are conjugate.
 \end{theorem}
 
 \begin{proof}
-	If \(h : E \rightarrow {E}^{\prime }\) is an equivalence, let \({e}_{1}^{\prime } = h( {e}_{0})\), and let \({H}_{1}^{\prime } = {p}_{ * }( {{\pi }_{1}( {{E}^{\prime },{e}_{1}^{\prime }}) })\) Theorem 79.2 implies that \({H}_{0} = {H}_{1}^{\prime }\), while the preceding lemma tells us that \({H}_{1}^{\prime }\) is conjugate to \({H}_{0}^{\prime }\).
+	If \(h : E \rightarrow {E}^{\prime }\) is an equivalence, let \({e}_{1}^{\prime } = h( {e}_{0})\), and let \({H}_{1}^{\prime } = {p}_{ * }^{\prime }( {{\pi }_{1}( {{E}^{\prime },{e}_{1}^{\prime }}) })\). Theorem 79.2 implies that \({H}_{0} = {H}_{1}^{\prime }\), while the preceding lemma tells us that \({H}_{1}^{\prime }\) is conjugate to \({H}_{0}^{\prime }\).
 Conversely, if the groups \({H}_{0}\) and \({H}_{0}^{\prime }\) are conjugate, the preceding lemma implies there is a point \({e}_{1}^{\prime }\) of \({E}^{\prime }\) such that \({H}_{1}^{\prime } = {H}_{0}\). Theorem 79.2 then gives us an equivalence \(h : E \rightarrow {E}^{\prime }\) such that \(h( {e}_{0}) = {e}_{1}^{\prime }\).
 
 \begin{centeredblock}
 \begin{example}
 	Consider covering spaces of the circle \(B = {S}^{1}\). Because \({\pi }_{1}( {B,{b}_{0}})\) is abelian, two subgroups of \({\pi }_{1}( {B,{b}_{0}})\) are conjugate if and only if they are equal. Therefore two coverings of \(B\) are equivalent if and only if they correspond to the same subgroup of \({\pi }_{1}( {B,{b}_{0}})\).
 
-Now \({\pi }_{1}( {B,{b}_{0}})\) is isomorphic to the integers \(\mathbb{Z}\). What are the subgroups of \({\mathbb{Z}}^{2}\) It is standard theorem of modern algebra that, given a nontrivial subgroup of \(\mathbb{Z}\), it must be the group \({G}_{n}\) consisting of all multiples of \(n\), for some \(n \in {\mathbb{Z}}_{ + }\).
+Now \({\pi }_{1}( {B,{b}_{0}})\) is isomorphic to the integers \(\mathbb{Z}\). What are the subgroups of \(\mathbb{Z}\) ? It is a standard theorem of modern algebra that, given a nontrivial subgroup of \(\mathbb{Z}\), it must be the group \({G}_{n}\) consisting of all multiples of \(n\), for some \(n \in {\mathbb{Z}}_{ + }\).
 
-We have studied one covering space of the circle, the covering \(p : \mathbb{R} \rightarrow {S}^{1}\) It must correspond to the trivial subgroup of \({\pi }_{1}( {{S}^{1},{b}_{0}})\), because \(\mathbb{R}\) is simply connected We have also considered the covering \(p : {S}^{1} \rightarrow {S}^{1}\) defined by \(p( z) = {z}^{n}\), where \(z\) is a complex number. In this case, the map \({p}_{ * }\) carries a generator of \({\pi }_{1}( {{S}^{1},{b}_{0}})\) into \(n\) times itself. Therefore, the group \({p}_{ * }( {{\pi }_{1}( {{S}^{1},{b}_{0}}) })\) corresponds to the subgroup \({G}_{n}\) of \(\mathbb{Z}\) under the standard isomorphism of \({\pi }_{1}( {{S}^{1},{b}_{0}})\) with \(\mathbb{Z}\).
+We have studied one covering space of the circle, the covering \(p : \mathbb{R} \rightarrow {S}^{1}\). It must correspond to the trivial subgroup of \({\pi }_{1}( {{S}^{1},{b}_{0}})\), because \(\mathbb{R}\) is simply connected. We have also considered the covering \(p : {S}^{1} \rightarrow {S}^{1}\) defined by \(p( z) = {z}^{n}\), where \(z\) is a complex number. In this case, the map \({p}_{ * }\) carries a generator of \({\pi }_{1}( {{S}^{1},{b}_{0}})\) into \(n\) times itself. Therefore, the group \({p}_{ * }( {{\pi }_{1}( {{S}^{1},{b}_{0}}) })\) corresponds to the subgroup \({G}_{n}\) of \(\mathbb{Z}\) under the standard isomorphism of \({\pi }_{1}( {{S}^{1},{b}_{0}})\) with \(\mathbb{Z}\).
 
 We conclude from the preceding theorem that every path-connected covering space of \({S}^{1}\) is equivalent to one of these coverings.
 \end{example}
@@ -173,25 +175,31 @@ We conclude from the preceding theorem that every path-connected covering space 
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Find a covering space of \(T\) corresponding to the subgroup of \(\mathbb{Z} \times \mathbb{Z}\) generated by the element \(m \times 0\), where \(m\) is a positive integer.
  \item Find a covering space of \(T\) corresponding to the trivial subgroup of \(\mathbb{Z} \times \mathbb{Z}\).
- \item Find a covering space of \(T\) corresponding to the subgroup of \(\mathbb{Z} \times \mathbb{Z}\) generated by \(m \times 0\) and \(0 \times n\), where \(m\) and \(n\) are positive integers. *5. Let \(T = {S}^{1} \times {S}^{1}\) be the torus; let \({x}_{0} = {b}_{0} \times {b}_{0}\).
+ \item Find a covering space of \(T\) corresponding to the subgroup of \(\mathbb{Z} \times \mathbb{Z}\) generated by \(m \times 0\) and \(0 \times n\), where \(m\) and \(n\) are positive integers.
+ \end{enumerate}
+\item *5. Let \(T = {S}^{1} \times {S}^{1}\) be the torus; let \({x}_{0} = {b}_{0} \times {b}_{0}\).
+ \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Prove the following: \textsl{Theorem.} Every isomorphism of \({\pi }_{1}( {T,{x}_{0}})\) with itself is induced by a homeomorphism of \(T\) with itself that maps \({x}_{0}\) to \({x}_{0}\). [Hint: Let \(p : {\mathbb{R}}^{2} \rightarrow T\) be the usual covering map. If \(A\) is a \(2 \times 2\) matrix with integer entries, the linear map \({T}_{A} : {\mathbb{R}}^{2} \rightarrow {\mathbb{R}}^{2}\) with matrix \(A\) induces a continuous map \(f : T \rightarrow T\). Furthermore, \(f\) is a homeomorphism if \(A\) is invertible over the integers.]
- \item Prove the following: \textsl{Theorem.} If \(E\) is a covering space of \(T\), then \(E\) is homeomorphic either to \({\mathbb{R}}^{2}\), or to \({S}^{1} \times \mathbb{R}\), or to \(T\). [Hint: You may use the following result from algebra: If \(F\) is a free abelian group of rank 2 and \(N\) is a nontrivial subgroup, then there is a basis \({a}_{1},{a}_{2}\) for \(F\) such that either (1) \(m{a}_{1}\) is a basis for \(N\), for some positive integer \(m\), or \((2) m{a}_{1},n{a}_{2}\) is a basis for \(N\), where \(m\) and \(n\) are positive integers.] *6. Prove the following: \textsl{Theorem.} Let \(G\) be a topological group with multiplication operation \(m : G \times\) \(G \rightarrow G\) and identity element \(e\). Assume \(p : \bar{G} \rightarrow G\) is a covering map. Given \(\widetilde{e}\) with \(p( \widetilde{e}) = e\), there is a unique multiplication operation on \(\bar{G}\) that makes it into a topological group such that \(\widetilde{e}\) is the identity element and \(p\) is a homomorphism. Proof. Recall that, by our convention, \(G\) and \(\widetilde{G}\) are path connected and locally path connected.
- \item Let \(I : G \rightarrow G\) be the map \(I( g) = {g}^{-1}\). Show there exist unique maps \(\bar{m} : \widetilde{G} \times \widetilde{G} \rightarrow \widetilde{G}\) and \(\widetilde{I} : \widetilde{G} \rightarrow \widetilde{G}\) with \(\widetilde{m}( {\widetilde{e} \times \widetilde{e}}) = \widetilde{e}\) and \(\widetilde{I}( \bar{e}) = \bar{e}\) such that \(p \circ \widetilde{m} = m \circ ( {p \times p})\) and \(p \circ \widetilde{I} = I \circ p\).
+ \item Prove the following: \textsl{Theorem.} If \(E\) is a covering space of \(T\), then \(E\) is homeomorphic either to \({\mathbb{R}}^{2}\), or to \({S}^{1} \times \mathbb{R}\), or to \(T\). [Hint: You may use the following result from algebra: If \(F\) is a free abelian group of rank 2 and \(N\) is a nontrivial subgroup, then there is a basis \({a}_{1},{a}_{2}\) for \(F\) such that either (1) \(m{a}_{1}\) is a basis for \(N\), for some positive integer \(m\), or (2) \(m{a}_{1},n{a}_{2}\) is a basis for \(N\), where \(m\) and \(n\) are positive integers.]
+ \end{enumerate}
+\item *6. Prove the following: \textsl{Theorem.} Let \(G\) be a topological group with multiplication operation \(m : G \times G \rightarrow G\) and identity element \(e\). Assume \(p : \widetilde{G} \rightarrow G\) is a covering map. Given \(\widetilde{e}\) with \(p( \widetilde{e}) = e\), there is a unique multiplication operation on \(\widetilde{G}\) that makes it into a topological group such that \(\widetilde{e}\) is the identity element and \(p\) is a homomorphism. Proof. Recall that, by our convention, \(G\) and \(\widetilde{G}\) are path connected and locally path connected.
+ \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+ \item Let \(I : G \rightarrow G\) be the map \(I( g) = {g}^{-1}\). Show there exist unique maps \(\widetilde{m} : \widetilde{G} \times \widetilde{G} \rightarrow \widetilde{G}\) and \(\widetilde{I} : \widetilde{G} \rightarrow \widetilde{G}\) with \(\widetilde{m}( {\widetilde{e} \times \widetilde{e}}) = \widetilde{e}\) and \(\widetilde{I}( \widetilde{e}) = \widetilde{e}\) such that \(p \circ \widetilde{m} = m \circ ( {p \times p})\) and \(p \circ \widetilde{I} = I \circ p\).
  \item Show the maps \(\widetilde{G} \rightarrow \widetilde{G}\) given by \(\widetilde{g} \rightarrow \widetilde{m}( {\widetilde{e} \times \widetilde{g}})\) and \(\widetilde{g} \rightarrow \widetilde{m}( {\widetilde{g} \times \widetilde{e}})\) equal the identity map of \(\widetilde{G}\). [Hint: Use the uniqueness part of Lemma 79.1.]
  \item Show the maps \(\widetilde{G} \rightarrow \widetilde{G}\) given by \(\widetilde{g} \rightarrow \widetilde{m}( {\widetilde{g} \times \widetilde{I}( \widetilde{g}) })\) and \(\widetilde{g} \rightarrow \widetilde{m}( {\widetilde{I}( \widetilde{g}) \times \widetilde{g}})\) map \(\widetilde{G}\) to \(\widetilde{e}\).
- \item Show the maps \(\bar{G} \times \widetilde{G} \times \bar{G} \rightarrow \bar{G}\) given by \[ \begin{aligned} & \widetilde{g} \times {\widetilde{g}}^{\prime } \times {\widetilde{g}}^{\prime \prime } \rightarrow \widetilde{m}( {\widetilde{g} \times \bar{m}( {{\widetilde{g}}^{\prime } \times {\widetilde{g}}^{\prime \prime }}) }) \\ & \widetilde{g} \times {\widetilde{g}}^{\prime } \times {\widetilde{g}}^{\prime \prime } \rightarrow \bar{m}( {\widetilde{m}( {\widetilde{g} \times {\widetilde{g}}^{\prime }}) \times {\widetilde{g}}^{\prime \prime }}) \end{aligned} \] are equal.
+ \item Show the maps \(\widetilde{G} \times \widetilde{G} \times \widetilde{G} \rightarrow \widetilde{G}\) given by \[ \begin{aligned} & \widetilde{g} \times {\widetilde{g}}^{\prime } \times {\widetilde{g}}^{\prime \prime } \rightarrow \widetilde{m}( {\widetilde{g} \times \widetilde{m}( {{\widetilde{g}}^{\prime } \times {\widetilde{g}}^{\prime \prime }}) }) \\ & \widetilde{g} \times {\widetilde{g}}^{\prime } \times {\widetilde{g}}^{\prime \prime } \rightarrow \widetilde{m}( {\widetilde{m}( {\widetilde{g} \times {\widetilde{g}}^{\prime }}) \times {\widetilde{g}}^{\prime \prime }}) \end{aligned} \] are equal.
  \item Complete the proof.
  \end{enumerate}
-\item Let \(p : \widetilde{G} \rightarrow G\) be a homomorphism of topological groups that is a covering map. Show that if \(G\) is abelian, so is \(\bar{G}\).
+\item Let \(p : \widetilde{G} \rightarrow G\) be a homomorphism of topological groups that is a covering map. Show that if \(G\) is abelian, so is \(\widetilde{G}\).
 \end{enumerate}
 \section*{§ 80 The Universal Covering Space}
 
-Suppose \(p : E \rightarrow B\) is a covering map, with \(p( {e}_{0}) = {b}_{0}\). If \(E\) is simply connected, then \(E\) is called a of \(B\). Since \({\pi }_{1}( {E,{e}_{0}})\) is trivial, this covering space corresponds to the trivial subgroup of \({\pi }_{1}( {B,{b}_{0}})\) under the correspondence defined in the preceding section. Theorem 79.4 thus implies that any two universal covering spaces of \(B\) are equivalent. For this reason, we often speak of ``the'' universal covering space of a given space \(B\). Not every space has a universal covering space, as we shall see. For the moment, we shall simply assume that B has a universal covering space and derive some consequences of this assumption.
+Suppose \(p : E \rightarrow B\) is a covering map, with \(p( {e}_{0}) = {b}_{0}\). If \(E\) is simply connected, then \(E\) is called a universal covering space of \(B\). Since \({\pi }_{1}( {E,{e}_{0}})\) is trivial, this covering space corresponds to the trivial subgroup of \({\pi }_{1}( {B,{b}_{0}})\) under the correspondence defined in the preceding section. Theorem 79.4 thus implies that any two universal covering spaces of \(B\) are equivalent. For this reason, we often speak of ``the'' universal covering space of a given space \(B\). Not every space has a universal covering space, as we shall see. For the moment, we shall simply assume that B has a universal covering space and derive some consequences of this assumption.
 
 We prove two preliminary lemmas:
 
 \begin{lemma}
-	Let \(B\) be path connected and locally path connected. Let \(p : E \rightarrow B\) be a covering map in the former sense (so that \(E\) is not required to be path connected). If \({E}_{0}\) is a path component of \(E\), then the map \({p}_{0} : {E}_{0} \rightarrow B\) obtained by restricting \(p\) is a covenng map.
+	Let \(B\) be path connected and locally path connected. Let \(p : E \rightarrow B\) be a covering map in the former sense (so that \(E\) is not required to be path connected). If \({E}_{0}\) is a path component of \(E\), then the map \({p}_{0} : {E}_{0} \rightarrow B\) obtained by restricting \(p\) is a covering map.
 \end{lemma}
 
 \begin{proof}
@@ -205,7 +213,7 @@ Now we show \({p}_{0} : {E}_{0} \rightarrow B\) is a covering map. Given \(x \in
 
 \munkresfig[0.2]{80.01} 
 
-(a) If \(p\) and \(q\) are covering maps, so is \(q\).
+(a) If \(p\) and \(r\) are covering maps, so is \(q\).
 
 *(b) If \(p\) and \(q\) are covering maps, so is \(r\).
 \end{lemma}
@@ -260,9 +268,9 @@ Now we give an example of a space that has no universal covering space. We need 
 	Let \(U\) be a neighborhood of \({b}_{0}\) that is evenly covered by \(p\) ; break \({p}^{-1}( U)\) up into slices; let \({U}_{\alpha }\) be the slice containing \({e}_{0}\). Let \(f\) be a loop in \(U\) based at \({b}_{0}\). Because \(p\) defines a homeomorphism of \({U}_{\alpha }\) with \(U\), the loop \(f\) lifts to a loop \(\widetilde{f}\) in \({U}_{\alpha }\) based at \({e}_{0}\). Since \(E\) is simply connected, there is a path homotopy \(\widetilde{F}\) in \(E\) between \(\widetilde{f}\) and a constant loop. Then \(p \circ \widetilde{F}\) is a path homotopy in \(B\) between \(f\) and a constant loop.
 \begin{centeredblock}
 \begin{example}
-	Let \(X\) be our familiar ``infinite earring'' in the plane, if \({C}_{n}\) is the circle of radius \(1/n\) in the plane with center at the point \(( {1/n,0})\), then \(X\) is the union of the circles \({C}_{n}\). Let \({b}_{0}\) be the origin; we show that if \(U\) is any neighborhood of \({b}_{0}\) in \(X\), then the homomorphism of fundamental groups induced by inclusion \(i : U \rightarrow X\) is not trivial.
+	Let \(X\) be our familiar ``infinite earring'' in the plane, where \({C}_{n}\) is the circle of radius \(1/n\) in the plane with center at the point \(( {1/n,0})\), then \(X\) is the union of the circles \({C}_{n}\). Let \({b}_{0}\) be the origin; we show that if \(U\) is any neighborhood of \({b}_{0}\) in \(X\), then the homomorphism of fundamental groups induced by inclusion \(i : U \rightarrow X\) is not trivial.
 
-Given \(n\), there is a retraction \(r : X \rightarrow {C}_{n}\) obtained by letting \(r\) map each circle \({C}_{t}\) for \(i \neq n\) to the point \({b}_{0}\). Choose \(n\) large enough that \({C}_{n}\) lies in \(U\). Then in the following diagram of homomorphisms induced by inclusion, \({j}_{ * }\) is injective, hence \({i}_{ * }\) cannot be trivial.
+Given \(n\), there is a retraction \(r : X \rightarrow {C}_{n}\) obtained by letting \(r\) map each circle \({C}_{i}\) for \(i \neq n\) to the point \({b}_{0}\). Choose \(n\) large enough that \({C}_{n}\) lies in \(U\). Then in the following diagram of homomorphisms induced by inclusion, \({j}_{ * }\) is injective, hence \({i}_{ * }\) cannot be trivial.
 
 \munkresfig[0.4]{80.05}
 
@@ -280,14 +288,14 @@ It follows that even though \(X\) is path connected and locally path connected, 
 
 \section*{*§ 81 Covering Transformations}
 
-Given a covering map \(p : E \rightarrow B\), it is of some interest to consider the set of all equivalences of this covering space with itself. Such an equivalence is called a covering transformation. Composites and inverses of covering transformations are covering transformations, so this set forms a group; it is called the and denoted \(\mathcal{C}( {E,p,B})\).
+Given a covering map \(p : E \rightarrow B\), it is of some interest to consider the set of all equivalences of this covering space with itself. Such an equivalence is called a covering transformation. Composites and inverses of covering transformations are covering transformations, so this set forms a group; it is called the group of covering transformations and denoted \(\mathcal{C}( {E,p,B})\).
 
 Throughout this section, we shall assume that \(p : E \rightarrow B\) is a covering map with \(p( {e}_{0}) = {b}_{0}\) ; and we shall let \({H}_{0} = {p}_{ * }( {{\pi }_{1}( {E,{e}_{0}}) })\). We shall show that the group \(\mathcal{C}( {E,p,B})\) is completely determined by the group \({\pi }_{1}( {B,{b}_{0}})\) and the subgroup \({H}_{0}\). Specifically, we shall show that if \(N( {H}_{0})\) is the largest subgroup of \({\pi }_{1}( {B,{b}_{0}})\) of which \({H}_{0}\) is a normal subgroup, then \(\mathcal{C}( {E,p,B})\) is isomorphic to \(N( {H}_{0}) /{H}_{0}\).
 
 We define \(N( {H}_{0})\) formally as follows:
 
 \begin{definition}
-	If \(H\) is a subgroup of the group \(G\), then the of \(H\) in \(G\) is the subset of \(G\) defined by the equation
+	If \(H\) is a subgroup of the group \(G\), then the normalizer of \(H\) in \(G\) is the subset of \(G\) defined by the equation
 
 \[
 N( H) = \{ {g \mid {gH}{g}^{-1} = H}\}.
@@ -296,10 +304,10 @@ N( H) = \{ {g \mid {gH}{g}^{-1} = H}\}.
 
 It is easy to see that \(N( H)\) is a subgroup of \(G\). It follows from the definition that it contains \(H\) as a normal subgroup and is the largest such subgroup of \(G\).
 
-The correspondence between the groups \(N( {H}_{0}) /{H}_{0}\) and \(\mathcal{C}( {E,p,B})\) is established by using the lifting correspondence of \( \S {54}\) and the results about the existence of equivalences proved in \( \S {79}\). We make the following definition:
+The correspondence between the groups \(N( {H}_{0}) /{H}_{0}\) and \(\mathcal{C}( {E,p,B})\) is established by using the lifting correspondence of \S 54 and the results about the existence of equivalences proved in \S 79. We make the following definition:
 
 \begin{definition}
-	Given \(p : E \rightarrow B\) with \(p( {e}_{0}) = {b}_{0}\), let \(F\) be the set \(F = {p}^{-1}( {e}_{0})\). Let
+	Given \(p : E \rightarrow B\) with \(p( {e}_{0}) = {b}_{0}\), let \(F\) be the set \(F = {p}^{-1}( {b}_{0})\). Let
 
 \[
 \Phi : {\pi }_{1}( {B,{b}_{0}}) /{H}_{0} \rightarrow F
@@ -376,7 +384,7 @@ If \({H}_{0}\) is a normal subgroup of \({\pi }_{1}( {B,{b}_{0}})\), then \(p : 
 
 \begin{centeredblock}
 \begin{example}
-	Because the fundamental group of the circle is abelian, every covering of \({S}^{1}\) is regular. If \(p \cdot \mathbb{R} \rightarrow {S}^{1}\) is the standard covering map, for instance, the covering transformations are the homeomorphisms \(x \rightarrow x + n\). The group of such transformations is isomorphic to \(\mathbb{Z}\).
+	Because the fundamental group of the circle is abelian, every covering of \({S}^{1}\) is regular. If \(p : \mathbb{R} \rightarrow {S}^{1}\) is the standard covering map, for instance, the covering transformations are the homeomorphisms \(x \rightarrow x + n\). The group of such transformations is isomorphic to \(\mathbb{Z}\).
 \end{example}
 \end{centeredblock}
 
@@ -390,14 +398,14 @@ In general, if \(h : E \rightarrow E\) is a covering transformation, then any lo
 \end{example}
 \end{centeredblock}
 
-There is a method for constructing covering spaces that automatically leads to a covering that is regular; and in fact every can be constructed by this method. It involves the action of a group \(G\) on a space \(X\).
+There is a method for constructing covering spaces that automatically leads to a covering that is regular; and in fact every regular covering space can be constructed by this method. It involves the action of a group \(G\) on a space \(X\).
 
 \begin{definition}
 	Let \(X\) be a space, and let \(G\) be a subgroup of the group of homeomorphisms of \(X\) with itself. The space \(X/G\) is defined to be the quotient space obtained from \(X\) by means of the equivalence relation \(x \sim g(x)\) for all \(x \in X\) and all \(g \in G\). The equivalence class of \(x\) is called the orbit of \(x\).
 \end{definition}
 
 \begin{definition}
-	If \(G\) is a group of homeomorphisms of \(X\), the action of \(G\) on \(X\) is said to be if for every \(x \in X\) there is a neighborhood \(U\) of \(x\) such that \(g( U)\) is disjoint from \(U\) whenever \(g \neq e\). (Here \(e\) is the identity element of \(G\).) It follows that \({g}_{0}( U)\) and \({g}_{1}( U)\) are disjoint whenever \({g}_{0} \neq {g}_{1}\), for otherwise \(U\) and \({g}_{0}^{-1}{g}_{1}( U)\) would not be disjoint.
+	If \(G\) is a group of homeomorphisms of \(X\), the action of \(G\) on \(X\) is said to be properly discontinuous if for every \(x \in X\) there is a neighborhood \(U\) of \(x\) such that \(g( U)\) is disjoint from \(U\) whenever \(g \neq e\). (Here \(e\) is the identity element of \(G\).) It follows that \({g}_{0}( U)\) and \({g}_{1}( U)\) are disjoint whenever \({g}_{0} \neq {g}_{1}\), for otherwise \(U\) and \({g}_{0}^{-1}{g}_{1}( U)\) would not be disjoint.
 \end{definition}
 
 \begin{theorem}
@@ -436,12 +444,12 @@ It follows that \(\pi\) is regular. Indeed, for any two points \({x}_{1}\) and \
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Find a group \(G\) of homeomorphisms of the torus \(T\) having order 2 such that \(T/G\) is homeomorphic to the torus.
 
- \item Find a group \(G\) of homeomorphisms of \(T\) having order 2 that \(T/G\) is homeomorphic to the Klein bottle.
+ \item Find a group \(G\) of homeomorphisms of \(T\) having order 2 such that \(T/G\) is homeomorphic to the Klein bottle.
  \end{enumerate}
 \item Let \(X = A \vee B\) be the wedge of two circles.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Let \(E\) be the space pictured in Figure 81.4; let \(p : E \rightarrow X\) wrap each arc \({A}_{1}\) and \({A}_{2}\) around \(A\) and map \({B}_{1}\) and \({B}_{2}\) homeomorphically onto \(B\). Show \(p\) is a regular covering map.
- \item Determine the group of covering transformations of the covering of \(X\) indicated in Figure 81.5 Is this covering regular? \munkresfig[1.0]{81.4}[Figure 81.4] \munkresfig[0.7]{81.5}[Figure 81.5]
+ \item Determine the group of covering transformations of the covering of \(X\) indicated in Figure 81.5. Is this covering regular? \munkresfig[1.0]{81.4}[Figure 81.4] \munkresfig[0.7]{81.5}[Figure 81.5]
  \item Repeat (b) for the covering pictured in Figure 81.6.
  \item Repeat (b) for the covering pictured in Figure 81.7. \munkresfig[1.0]{81.6}[Figure 81.7]
  \end{enumerate}
@@ -453,7 +461,7 @@ It follows that \(\pi\) is regular. Indeed, for any two points \({x}_{1}\) and \
 \item Let \(G\) be a group of homeomorphisms of \(X\). The action of \(G\) on \(X\) is said to be fixed-point free if no element of \(G\) other than the identity \(e\) has a fixed point. Show that if \(X\) is Hausdorff, and if \(G\) is a finite group of homeomorphisms of \(X\) whose action is fixed-point free, then the action of \(G\) is properly discontinuous.
 \item Consider \({S}^{3}\) as the space of all pairs of complex numbers \(( {{z}_{1},{z}_{2}})\) satisfying the equation \({| {z}_{1}| }^{2} + {| {z}_{2}| }^{2} = 1\). Given relatively prime positive integers \(n\) and \(k\), define \(h : {S}^{3} \rightarrow {S}^{3}\) by the equation \[ h( {{z}_{1},{z}_{2}}) = ( {{z}_{1}{e}^{{2\pi i}/n},{z}_{2}{e}^{{2\pi ik}/n}}). \]
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
- \item Show that \(h\) generates a subgroup \(G\) of the homeomorphism group of \({S}^{3}\) that is cyclic of order \(n\), and that only the identity element of \(G\) has a fixed point. The orbit space \({S}^{3}/G\) is called the \(L( {n,k})\).
+ \item Show that \(h\) generates a subgroup \(G\) of the homeomorphism group of \({S}^{3}\) that is cyclic of order \(n\), and that only the identity element of \(G\) has a fixed point. The orbit space \({S}^{3}/G\) is called the lens space \(L( {n,k})\).
  \item Show that if \(L( {n,k})\) and \(L( {{n}^{\prime },{k}^{\prime }})\) are homeomorphic, then \(n = {n}^{\prime }\). [It is a theorem that \(L( {n,k})\) and \(L( {{n}^{\prime },{k}^{\prime }})\) are homeomorphic if and only if \(n = {n}^{\prime }\) and either \(k \equiv {k}^{\prime }( {\;\operatorname{mod}\;n})\) or \(k{k}^{\prime } \equiv 1( {\;\operatorname{mod}\;n})\). The proof is decidedly nontrivial.]
  \item Show that \(L( {n,k})\) is a compact 3-manifold.
  \end{enumerate}
@@ -469,10 +477,10 @@ It follows that \(\pi\) is regular. Indeed, for any two points \({x}_{1}\) and \
 
 We have shown that corresponding to each covering map \(p : E \rightarrow B\) is a conjugacy class of subgroups of \({\pi }_{1}( {B,{b}_{0}})\), and that two such covering maps are equivalent if and only if they correspond to the same such class. Thus, we have an injective correspondence from equivalence classes of coverings of \(B\) to conjugacy classes of subgroups of \({\pi }_{1}( {B,{b}_{0}})\). Now we ask the question whether this correspondence is surjective, that is, whether for every conjugacy class of subgroups of \({\pi }_{1}( {B,{b}_{0}})\), there exists a covering of \(B\) that corresponds to this class.
 
-The answer to this question is ``no,'' in general. In \S 80, we gave an example of a path-connected, Iocally path-connected space \(B\) that had no simply connected covering space, that is, that had no covering space corresponding to the class of the trivial subgroup. This example relied on Lemma 80.4, which gave a condition that any space having a simply connected covering space must satisfy. We now introduce this condition formally.
+The answer to this question is ``no,'' in general. In \S 80, we gave an example of a path-connected, locally path-connected space \(B\) that had no simply connected covering space, that is, that had no covering space corresponding to the class of the trivial subgroup. This example relied on Lemma 80.4, which gave a condition that any space having a simply connected covering space must satisfy. We now introduce this condition formally.
 
 \begin{definition}
-	A space \(B\) is said to be if for each \(b \in B\), there is a neighborhood \(U\) of \(b\) such that the homomorphism
+	A space \(B\) is said to be semilocally simply connected if for each \(b \in B\), there is a neighborhood \(U\) of \(b\) such that the homomorphism
 
 \[
 {i}_{ * } : {\pi }_{1}( {U,b}) \rightarrow {\pi }_{1}( {B,b})
@@ -481,7 +489,7 @@ The answer to this question is ``no,'' in general. In \S 80, we gave an example 
 induced by inclusion is trivial.
 \end{definition}
 
-Note that if \(U\) satisfies this condition, then so does any smaller neighborhood of \(b\), so that \(b\) has ``arbitrarily small'' neighborhoods satisfying this condition. Note also that this condition is weaker than true , which would require that within each neighborhood of \(b\) there should exist a neighborhood \(U\) of \(b\) that is itself simply connected.
+Note that if \(U\) satisfies this condition, then so does any smaller neighborhood of \(b\), so that \(b\) has ``arbitrarily small'' neighborhoods satisfying this condition. Note also that this condition is weaker than true local simple connectedness, which would require that within each neighborhood of \(b\) there should exist a neighborhood \(U\) of \(b\) that is itself simply connected.
 
 Semilocal simple connectedness of \(B\) is both necessary and sufficient for there to exist, for every conjugacy class of subgroups of \({\pi }_{1}( {B,{b}_{0}})\), a corresponding covering space of \(B\). Necessity was proved in Lemma 80.4; sufficiency is proved in this section.
 
@@ -579,15 +587,15 @@ where \({\delta }_{1}\) and \({\delta }_{2}\) are paths in \(U\). Then \({\delta
 
 It follows that \(p : E \rightarrow B\) is a covering map in the sense used in earlier chapters. To show it is a covering map in the sense used in this chapter, we must show \(E\) is path connected. This we shall do shortly.
 
-Step 5. Lufting a path in \(B\). Let \({e}_{0}\) denote the equivalence class of the constant path at \({b}_{0}\) ; then \(p( {e}_{0}) = {b}_{0}\) by definition. Given a path \(\alpha\) in \(B\) beginning at \({b}_{0}\), we calculate its lift to a path \({mE}\) beginning at \({e}_{0}\) and show that this lift ends at \({\alpha }^{\# }\).
+Step 5. Lifting a path in \(B\). Let \({e}_{0}\) denote the equivalence class of the constant path at \({b}_{0}\) ; then \(p( {e}_{0}) = {b}_{0}\) by definition. Given a path \(\alpha\) in \(B\) beginning at \({b}_{0}\), we calculate its lift to a path in \(E\) beginning at \({e}_{0}\) and show that this lift ends at \({\alpha }^{\# }\).
 
-To begin, given \(c \in [ {0,1}]\), let \({\alpha }_{c} : 1 \rightarrow B\) denote the path defined by the equation
+To begin, given \(c \in [ {0,1}]\), let \({\alpha }_{c} : I \rightarrow B\) denote the path defined by the equation
 
 \[
 {\alpha }_{c}( t) = \alpha ( {tc}) \;\text{ for }\;0 \leq t \leq 1.
 \]
 
-Then \({\alpha }_{c}\) is the ``portion'' of \(\alpha\) that runs from \(\alpha ( 0)\) to \(\alpha ( c)\). In particular, \({\alpha }_{0}\) is the constant path at \({b}_{0}\), and \({\alpha }_{1}\) is the path \(\alpha\) itself. We define \(\widetilde{\alpha } : 1 \rightarrow E\) by the equation
+Then \({\alpha }_{c}\) is the ``portion'' of \(\alpha\) that runs from \(\alpha ( 0)\) to \(\alpha ( c)\). In particular, \({\alpha }_{0}\) is the constant path at \({b}_{0}\), and \({\alpha }_{1}\) is the path \(\alpha\) itself. We define \(\widetilde{\alpha } : I \rightarrow E\) by the equation
 
 \[
 \bar{\alpha }( c) = {( {\alpha }_{c}) }^{\# }
@@ -610,7 +618,7 @@ Since \(\delta\) lies in \(U\), we have \(\widetilde{\alpha }( d) \in B( {U,{\al
 
 Step 6. The map \(p : E \rightarrow B\) is a covering map. We need only verify that \(E\) is path connected, and this is easy. For if \({\alpha }^{\# }\) is any point of \(E\), then the lift \(\bar{\alpha }\) of the path \(\alpha\) is a path in \(E\) from \({e}_{0}\) to \({\alpha }^{\# }\).
 
-Step 7. Finally, \(H = {p}_{ * }( {{\pi }_{1}( {E,{e}_{0}}) }.\). Let \(\alpha\) be a loop in \(B\) at \({b}_{0}\). Let \(\bar{\alpha }\) be its lift to \(E\) beginning at \({e}_{0}\). Theorem 54.6 tells us that \([ \alpha ] \in {p}_{ * }( {{\pi }_{1}( {E,{e}_{0}}) })\) if and only if \(\bar{\alpha }\) is a loop in \(E\). Now the final point of \(\widetilde{\alpha }\) is the point \({\alpha }^{\# }\), and \({\alpha }^{\# } = {e}_{0}\) if and only if \(\alpha\) is equivalent to the constant path at \({b}_{0}\), i.e., if and only if \([ {\alpha * {\bar{e}}_{{b}_{0}}}] \in H\) This occurs precisely when \([ \alpha ] \in H\).
+Step 7. Finally, \(H = {p}_{ * }( {{\pi }_{1}( {E,{e}_{0}}) })\). Let \(\alpha\) be a loop in \(B\) at \({b}_{0}\). Let \(\bar{\alpha }\) be its lift to \(E\) beginning at \({e}_{0}\). Theorem 54.6 tells us that \([ \alpha ] \in {p}_{ * }( {{\pi }_{1}( {E,{e}_{0}}) })\) if and only if \(\bar{\alpha }\) is a loop in \(E\). Now the final point of \(\widetilde{\alpha }\) is the point \({\alpha }^{\# }\), and \({\alpha }^{\# } = {e}_{0}\) if and only if \(\alpha\) is equivalent to the constant path at \({b}_{0}\), i.e., if and only if \([ {\alpha * {\bar{e}}_{{b}_{0}}}] \in H\). This occurs precisely when \([ \alpha ] \in H\).
 \end{proof}
 \begin{corollary}
 	The space \(B\) has a universal covering space if and only if \(B\) is path connected, locally path connected, and semilocally simply connected.
@@ -618,8 +626,8 @@ Step 7. Finally, \(H = {p}_{ * }( {{\pi }_{1}( {E,{e}_{0}}) }.\). Let \(\alpha\)
 
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
-\item Show that a simply connected space is semulocally simply connected.
-\item Let \(X\) be the infinite earring in \({\mathbb{R}}^{2}\). (See Example 1 of \( \S {80}\).) Let \(C( X)\) be the subspace of \({\mathbb{R}}^{3}\) that is the union of all line segments joining points of \(X \times 0\) to the point \(p = ( {0,0,1})\). It is called the cone on \(X\). Show that \(C( X)\) is simply connected, but is not locally simply connected at the origin.
+\item Show that a simply connected space is semilocally simply connected.
+\item Let \(X\) be the infinite earring in \({\mathbb{R}}^{2}\). (See Example 1 of \S 80.) Let \(C( X)\) be the subspace of \({\mathbb{R}}^{3}\) that is the union of all line segments joining points of \(X \times 0\) to the point \(p = ( {0,0,1})\). It is called the cone on \(X\). Show that \(C( X)\) is simply connected, but is not locally simply connected at the origin.
 \end{enumerate}
 \section*{* Supplementary Exercises: Topological Properties and \({\pi }_{1}\)}
 
@@ -627,7 +635,7 @@ The results of the preceding section tell us that the appropriate hypotheses for
 
 1. Let \(X\) be a space; let \(\mathcal{A}\) be an open covering of \(X\). Under what conditions does there exist an open covering \(\mathcal{B}\) of \(X\) refining \(\mathcal{A}\) such that for each pair \(B,{B}^{\prime }\) of elements of \(\mathcal{B}\) that have nonempty intersection, the union \(B \cup {B}^{\prime }\) lies in an element of \(\mathcal{A}\) ?
 
-(a) Show that such a covering \(\mathcal{B}\) exists if \(X\) is metrzable. [Hint: Choose \(\epsilon (x)\) so \(B( {x,{3\epsilon }(x) })\) lies in an element of \(\mathcal{A}\). Let \(\mathcal{B}\) consist of the open sets \(B( {x,\epsilon (x) })\).]
+(a) Show that such a covering \(\mathcal{B}\) exists if \(X\) is metrizable. [Hint: Choose \(\epsilon (x)\) so \(B( {x,{3\epsilon }(x) })\) lies in an element of \(\mathcal{A}\). Let \(\mathcal{B}\) consist of the open sets \(B( {x,\epsilon (x) })\).]
 
 (b) Show that such a covering exists if \(X\) is compact Hausdorff. [Hint: Let \({A}_{1},\ldots ,{A}_{n}\) be a finite subcollection of \(\mathcal{A}\) that covers \(X\). Choose an open covering \({C}_{1},\ldots ,{C}_{n}\) of \(X\) such that \({\bar{C}}_{i} \subset {A}_{i}\) for each \(i\). For each nonempty subset \(J\) of \(\{ 1,\ldots, n\}\), consider the set
 
@@ -655,12 +663,12 @@ of \([ {0,1}]\) such that \(f\) maps \([ {{t}_{n - 1},{t}_{n}}]\) into \({B}_{0}
 (b) Let \({f}_{i}\) be the positive linear map of \([ {0,1}]\) onto \([ {{t}_{i - 1},{t}_{i}}]\) followed by \(f\). Let \({g}_{i} = g( {{B}_{i - 1},{B}_{i}})\). Choose a path \({\alpha }_{i}\) in \({B}_{i}\) from \(f( {t}_{i})\) to \(p( {B}_{i})\) ; if \(\mathrm{i} = 0\) or \(n\), let \({\alpha }_{i}\) be the constant path at \({x}_{0}\). Show that
 
 \[
-[ {f}_{i}] * [ {\alpha }_{i}] = [ {\alpha }_{i - 1}] * [ {g}_{\iota }] .
+[ {f}_{i}] * [ {\alpha }_{i}] = [ {\alpha }_{i - 1}] * [ {g}_{i}] .
 \]
 
 (c) Show that \([ f] = [ {g}_{1}] * \cdots * [ {g}_{n}]\).
 
-3. Let \(p : E \rightarrow X\) be a covering map such that \({\pi }_{1}( {X,{x}_{0}})\) is countable. Show that if \(X\) is regular with a countable basis, so is \(E\). [Hint: Let \(\mathcal{B}\) be a countable basis for \(X\) consisting of path-connected sets Let \(\mathcal{C}\) be the collection of path components of \({p}^{-1}( B)\), for \(B \in \mathcal{B}\). Compare Exercise 6 of \S 53.]
+3. Let \(p : E \rightarrow X\) be a covering map such that \({\pi }_{1}( {X,{x}_{0}})\) is countable. Show that if \(X\) is regular with a countable basis, so is \(E\). [Hint: Let \(\mathcal{B}\) be a countable basis for \(X\) consisting of path-connected sets. Let \(\mathcal{C}\) be the collection of path components of \({p}^{-1}( B)\), for \(B \in \mathcal{B}\). Compare Exercise 6 of \S 53.]
 
 4. Prove the following:
 
@@ -685,4 +693,4 @@ where \(x = p( B)\) and \(y = p( {B}^{\prime })\). Show that
 [ f] = [ {L( {g}_{1}) }] * \cdots * [ {L( {g}_{n}) }] .
 \]
 
-5. Let \(X\) be the infinite earnng (see Example 1 of \S 80). Show that \(X\) is a compact Hausdorff space with a countable basis whose fundamental group is uncountable. [Hint: Let \({r}_{n} : X \rightarrow {C}_{n}\) be a retraction. Given a sequence \({a}_{1},{a}_{2},\ldots\) of zeros and ones, show there exists a loop \(f\) in \(X\) such that, for each \(n\), the element \({( {r}_{n}) }_{ * }[ f]\) is trivial if and only if \({a}_{n} = 0\).]
+5. Let \(X\) be the infinite earring (see Example 1 of \S 80). Show that \(X\) is a compact Hausdorff space with a countable basis whose fundamental group is uncountable. [Hint: Let \({r}_{n} : X \rightarrow {C}_{n}\) be a retraction. Given a sequence \({a}_{1},{a}_{2},\ldots\) of zeros and ones, show there exists a loop \(f\) in \(X\) such that, for each \(n\), the element \({( {r}_{n}) }_{ * }[ f]\) is trivial if and only if \({a}_{n} = 0\).]
