@@ -1227,7 +1227,7 @@ property if and only if it has the greatest lower bound property.
   \item \(({{x}_{0},{y}_{0}}) < ({{x}_{1},{y}_{1}})\) if either \({x}_{0} + {y}_{0} < {x}_{1} + {y}_{1}\), or \({x}_{0} + {y}_{0} = {x}_{1} + {y}_{1}\) and \({y}_{0} < {y}_{1}\).
   \end{enumerate}
  In these order relations, which elements have immediate predecessors? Does the set have a smallest element? Show that all three order types are different.
-\item Prove the following: \\ \textsl{Theorem}. If an ordered set \(A\) has the least upper bound property, then it has the greatest lower bound property.
+\item Prove the following: \\ \textsl{Theorem.} If an ordered set \(A\) has the least upper bound property, then it has the greatest lower bound property.
 \item If \(C\) is a relation on a set \(A\), define a new relation \(D\) on \(A\) by letting \(({b,a}) \in D\) if \(({a,b}) \in C\).
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that \(C\) is symmetric if and only if \(C = D\).
@@ -2056,7 +2056,7 @@ In this statement, the barber appears twice, once in the phrase ``the barber of 
 
 Some recursive formulas do make sense, however. Specifically, one has the following principle:
 
-\noindent\textbf{Principle of recursive definition}. \textsl{Let \(A\) be a set. Given a formula that defines \(h(1)\) as a unique element of \(A\), and for \(i > 1\) defines \(h(i)\) uniquely as an element of \(A\) in terms of the values of \(h\) for positive integers less than \(i\), this formula determines a unique function \(h : {\mathbb{Z}}_{+} \rightarrow A\).}
+\noindent\textbf{Principle of recursive definition.} \textsl{Let \(A\) be a set. Given a formula that defines \(h(1)\) as a unique element of \(A\), and for \(i > 1\) defines \(h(i)\) uniquely as an element of \(A\) in terms of the values of \(h\) for positive integers less than \(i\), this formula determines a unique function \(h : {\mathbb{Z}}_{+} \rightarrow A\).}
 
 This principle is the one we actually used in the proof of Lemma 7.2. You can simply accept it on faith if you like. It may however be proved rigorously, using the principle of induction. We shall formulate it more precisely in the next section and indicate how it is proved. Mathematicians seldom refer to this principle specifically. They are much more likely to write a proof like our proof of Lemma 7.2 above, a proof in which they invoke the ``induction principle'' to define a function when what they are really using is the principle of recursive definition. We shall avoid undue pedantry in this book by following their example.
 
@@ -2811,7 +2811,7 @@ we shall denote the well-ordered set \(A = {S}_{\Omega } \cup \{ \Omega \}\)
 by the symbol \({\widetilde{S}}_{\Omega }\) (for reasons to be seen later).
 
 The most useful property of the set \({S}_{\Omega }\) for our purposes 
-is expressed in the following theorem.
+is expressed in the following theorem:
 
 \begin{theorem}
  If \(A\) is a countable subset of \({S}_{\Omega }\), then \(A\) has an upper bound in \({S}_{\Omega }\).
@@ -2866,7 +2866,7 @@ is expressed in the following theorem.
 \end{enumerate}
 
 \section*{*§ 11 The Maximum Principle \protect\sectionDagger}
-
+\customfootnote{${}^{\dagger}$ This section will be assumed in Chapters 5 and 14.}
 We have already indicated that the axiom of choice leads to the deep theorem that 
 every set can be well-ordered. The axiom of choice has other consequences 
 that are even more important in mathematics. Collectively referred to as 
@@ -2885,7 +2885,6 @@ a strict partial order on \(A\) if it has the following two properties:
 
 \item (Transitivity) If \(a \prec b\) and \(b \prec c\), then \(a \prec c\).
 \end{enumerate}
-\customfootnote{${}^{\dagger}$ This section will be assumed in Chapters 5 and 14.}
 These are just the second and third of the properties of a simple order (see §3); 
 the comparability property is the one that is omitted. In other words, 
 a strict partial order behaves just like a simple order except that it need not be true 
@@ -2987,7 +2986,7 @@ we need some terminology.
  Let \(A\) be a set and let \(\prec\) be a strict partial order on \(A\). If \(B\) is a subset of \(A\), an upper bound on \(B\) is an element \(c\) of \(A\) such that for every \(b\) in \(B\), either \(b = c\) or \(b \prec c\). A maximal element of \(A\) is an element \(m\) of \(A\) such that for no element \(a\) of \(A\) does the relation \(m \prec a\) hold.
 \end{definition}
 
-\noindent\textbf{Zorn's Lemma}. \textsl{
+\noindent\textbf{Zorn's Lemma.} \textsl{
  Let \(A\) be a set that is strictly partially ordered. 
  If every simply ordered subset of \(A\) has an upper bound in \(A\), then \(A\) has a maximal element.
 }
@@ -3019,6 +3018,7 @@ Which formulation is used is simply a matter of taste and convenience.
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item If \(a\) and \(b\) are real numbers, define \(a \prec b\) if \(b - a\) is positive and rational. Show this is a strict partial order on \(\mathbb{R}\). What are the maximal simply ordered subsets?
+\item
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Let \(\prec\) be a strict partial order on the set \(A\). Define a relation on \(A\) by letting \(a \preccurlyeq b\) if either \(a \prec b\) or \(a = b\). Show that this relation has the following properties, which are called the partial order axioms:
     \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\roman*), align=left]
@@ -3048,7 +3048,9 @@ the well-ordering theorem, and the maximum principle. We comment that of these e
 only Exercise 7 uses the choice axiom.
 
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
-\item \textsl{Theorem (General principle of recursive definition).} Let \(J\) be a well-ordered set; let \(C\) be a set. Let \(\mathcal{F}\) be the set of all functions mapping sections of \(J\) into \(C\). Given a function \(\rho : \mathcal{F} \rightarrow C\), there exists a unique function \(h : J \rightarrow C\) such that \(h(\alpha) = \rho ({h \mid {S}_{\alpha }})\) for each \(\alpha \in J\). [Hint: Follow the pattern outlined in Exercise 10 of \(§{10}\).]
+\item \textsl{Theorem (General principle of recursive definition).} Let \(J\) be a well-ordered set; let \(C\) be a set. Let \(\mathcal{F}\) be the set of all functions mapping sections of \(J\) into \(C\). Given a function \(\rho : \mathcal{F} \rightarrow C\), there exists a unique function \(h : J \rightarrow C\) such that \(h(\alpha) = \rho ({h \mid {S}_{\alpha }})\) for each \(\alpha \in J\).
+
+  [Hint: Follow the pattern outlined in Exercise 10 of \(§{10}\).]
 \item
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Let \(J\) and \(E\) be well-ordered sets, let \(h : J \rightarrow E\). Show the following two statements are equivalent:
