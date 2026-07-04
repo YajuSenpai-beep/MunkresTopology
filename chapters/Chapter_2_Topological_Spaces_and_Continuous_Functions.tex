@@ -706,7 +706,14 @@ Now when dealing with subspaces, one needs to be careful in using the term ``clo
 
 A set \(A\) that is closed in the subspace \(Y\) may or may not be closed in the larger space \(X\). As was the case with open sets, there is a criterion for \(A\) to be closed in \(X\) ; we leave the proof to you.
 
-\munkresfig[1.0]{17.1} 
+ \begin{center}
+  \begin{tabular}{c@{\hspace{3em}}c}
+   \includegraphics[width=0.45\linewidth]{images/17.1.png} &
+   \includegraphics[width=0.45\linewidth]{images/17.2.png} \\[1em]
+   \textbf{\textsl{Figure 17.1}} &
+   \textbf{\textsl{Figure 17.2}}
+  \end{tabular}
+ \end{center}
 \end{proof}
 
 \begin{theorem}
@@ -2270,15 +2277,11 @@ Now let \({U}_{\beta }\) be the open interval(-1,1)in \(\mathbb{R}\), and let \(
   \end{enumerate}
 \end{enumerate}
 \section*{*§ 22 The Quotient Topology \protect\sectionDagger}
+\customfootnote{${}^{\dagger}$ This section will be used throughout Part II of the book. It also is referred to in a number of exercises of Part I.}
 
 Unlike the topologies we have already considered in this chapter, the quotient topology is not a natural generalization of something you have already studied in analysis. Nevertheless, it is easy enough to motivate. One motivation comes from geometry, where one often has occasion to use ``cut-and-paste'' techniques to construct such geometric objects as surfaces. The torus (surface of a doughnut), for example, can be constructed by taking a rectangle and ``pasting'' its edges together appropriately, as in Figure 22.1. And the sphere (surface of a ball) can be constructed by taking a disc and collapsing its entire boundary to a single point; see Figure 22.2. Formalizing these constructions involves the concept of quotient topology.
 
 \munkresfig[1.0]{22.1}[Figure 22.1]
-\customfootnote{
-
-${}^{\dagger}$ This section will be used throughout Part II of the book. It also is referred to in a number of exercises of Part I.
-
-}
 
 \munkresfig[0.7]{22.2}[Figure 22.2]
 \begin{definition}
@@ -2507,7 +2510,7 @@ Define a map \(g : X \rightarrow Z\) by the equation \(g( {x \times n}) = x \tim
 
 To verify this fact, it suffices to show that \(g\) is not a quotient map. Consider the sequence of points \({x}_{n} = ( {1/n}) \times n\) of \(X\). The set \(A = \{ {x}_{n}\}\) is a closed subset of \(X\) because it has no limit points. Also, it is saturated with respect to \(g\) On the other hand, the set \(g( A)\) is not closed in \(Z\), for it consists of the points \({z}_{n} = ( {1/n}) \times ( {1/{n}^{2}})\) ; this set has the origin as a limit point.
 
-\munkresfig[0.9]{22.9}[Figure 22.7]
+\munkresfig[0.9]{22.7}[Figure 22.7]
 \end{example}
 \end{centeredblock}
 
@@ -2537,7 +2540,7 @@ Because \(U\) contains, in particular, the set \({\mathbb{Z}}_{ + } \times 0\), 
 
 Choose \(n\) large enough that \({c}_{n} < \delta\). Then since \({p}^{-1}( W)\) is open in \(X\) and contains \({\mathbb{Z}}_{ + }\), we can choose \(\epsilon < 1/4\) so that the interval \(( {n - \epsilon,n + \epsilon })\) is contained in \({p}^{-1}( W)\). Then \(U\) contains the subset \(V = ( {n - \epsilon,n + \epsilon }) \times {I}_{\delta }\) of \(X \times \mathbb{Q}\). But the figure makes clear that there are many points \(x \times y\) of \(V\) that do not lie in \(U\) ! (One such is the point \(x \times y\), where \(x = n + \frac{1}{2}\epsilon\) and \(y\) is a rational number with \(| {y - {c}_{n}}| < \frac{1}{2}\epsilon\) )
 
-\munkresfig[1.0]{22.10}[Figure 22.8]
+\munkresfig[1.0]{22.8}[Figure 22.8]
 \end{example}
 \end{centeredblock}
 
