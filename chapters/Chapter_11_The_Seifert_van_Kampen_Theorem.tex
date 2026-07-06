@@ -35,7 +35,7 @@ A useful characterization of direct sums is given in the following lemma, we cal
 \begin{lemma}
 Let \(G\) be an abelian group; let \(\{ {G}_{\alpha }\}\) be a family of subgroups of \(G\). If \(G\) is the direct sum of the groups \({G}_{\alpha }\), then \(G\) satisfies the following condition:
 
-Given any abelian group \(H\) and any family of homomorphisms *) \(\;{h}_{\alpha } : {G}_{\alpha } \rightarrow H\), there exists a homomorphism \(h : G \rightarrow H\) whose restriction to \({G}_{\alpha }\) equals \({h}_{\alpha }\), for each \(\alpha\).
+Given any abelian group \(H\) and any family of homomorphisms \((*)\) \({h}_{\alpha } : {G}_{\alpha } \rightarrow H\), there exists a homomorphism \(h : G \rightarrow H\) whose restriction to \({G}_{\alpha }\) equals \({h}_{\alpha }\), for each \(\alpha\).
 
 Furthermore, \(h\) is unique. Conversely, if the groups \({G}_{\alpha }\) generate \(G\) and the extension condition (*) holds, then \(G\) is the direct sum of the groups \({G}_{\alpha }\).
 \end{lemma}
@@ -88,18 +88,16 @@ Consider first the cartesian product
 \mathop{\prod }\limits_{{\alpha \in J}}{G}_{\alpha }
 \]
 
-it is an abelian group if we add two \(J\) -tuples by adding them coordinate-wise. Let \(G\) denote the subgroup of the cartesian product consisting of those tuples \({( {x}_{\alpha }) }_{\alpha \in J}\) such that \({x}_{\alpha } = {0}_{\alpha }\), the identity element of \({G}_{\alpha }\), for all but finitely many values of \(\alpha\). Given an index \(\beta\), define \({i}_{\beta } : {G}_{\beta } \rightarrow G\) by letting \({i}_{\beta }(x)\) be the tuple that has \(x\) as its \(\beta\) th coordinate and \({0}_{\alpha }\) as its \(\alpha\) th coordinate for all \(\alpha \neq \beta\). It is immediate that \({i}_{\beta }\) is a monomorphism. It is also immediate that since each element \(\mathbf{x}\) of \(G\) has only finitely many nonzero coordinates, \(\mathbf{x}\) can be written uniquely as a finite sum of elements from the groups \({\mathrm{i}}_{\beta }( {G}_{\beta })\).
+it is an abelian group if we add two \(J\) -tuples by adding them coordinate-wise. Let \(G\) denote the subgroup of the cartesian product consisting of those tuples \({( {x}_{\alpha }) }_{\alpha \in J}\) such that \({x}_{\alpha } = {0}_{\alpha }\), the identity element of \({G}_{\alpha }\), for all but finitely many values of \(\alpha\). Given an index \(\beta\), define \({i}_{\beta } : {G}_{\beta } \rightarrow G\) by letting \({i}_{\beta }(x)\) be the tuple that has \(x\) as its \(\beta\) th coordinate and \({0}_{\alpha }\) as its \(\alpha\) th coordinate for all \(\alpha \neq \beta\). It is immediate that \({i}_{\beta }\) is a monomorphism. It is also immediate that since each element \(\mathbf{x}\) of \(G\) has only finitely many nonzero coordinates, \(\mathbf{x}\) can be written uniquely as a finite sum of elements from the groups \({i}_{\beta }( {G}_{\beta })\).
 
 The extension condition that characterizes ordinary direct sums translates immediately into an extension condition for external direct sums:
 \end{proof}
 \begin{lemma}
-Let \({\{ {G}_{\alpha }\} }_{\alpha \in J}\) be an indexed family of abelian groups; let \(G\) be an abelian group; let \({\mathrm{i}}_{\alpha } : {G}_{\alpha } \rightarrow G\) be a family of homomorphisms. If each \({\mathrm{i}}_{\alpha }\) is a monomorphism and \(G\) is the direct sum of the groups \({\mathrm{i}}_{\alpha }( {G}_{\alpha })\), then \(G\) satisfies the following extension condition:
+Let \({\{ {G}_{\alpha }\} }_{\alpha \in J}\) be an indexed family of abelian groups; let \(G\) be an abelian group; let \({i}_{\alpha } : {G}_{\alpha } \rightarrow G\) be a family of homomorphisms. If each \({i}_{\alpha }\) is a monomorphism and \(G\) is the direct sum of the groups \({i}_{\alpha }( {G}_{\alpha })\), then \(G\) satisfies the following extension condition:
 
-\({G}_{1}\) Given any abelian group \(H\) and any family of homomorphisms \({h}_{\alpha }\) :
+\((*)\) Given any abelian group \(H\) and any family of homomorphisms \({h}_{\alpha } : {G}_{\alpha } \rightarrow H\), there exists a homomorphism \(h : G \rightarrow H\) such that \(h \circ {i}_{\alpha } = {h}_{\alpha }\) for each \(\alpha\).
 
-(*) \(\;{G}_{\alpha } \rightarrow H\), there exists a homomorphism \(h : G \rightarrow H\) such that \(h \circ {\mathrm{i}}_{\alpha } = {h}_{\alpha }\) for each \(\alpha\).
-
-Furthermore, \(h\) is unique. Conversely, suppose the groups \({\mathrm{i}}_{\alpha }( {G}_{\alpha })\) generate \(G\) and the extension condition (*) holds. Then each \({i}_{\alpha }\) is a monomorphism, and \(G\) is the direct sum of the groups \({i}_{\alpha }( {G}_{\alpha })\).
+Furthermore, \(h\) is unique. Conversely, suppose the groups \({i}_{\alpha }( {G}_{\alpha })\) generate \(G\) and the extension condition (*) holds. Then each \({i}_{\alpha }\) is a monomorphism, and \(G\) is the direct sum of the groups \({i}_{\alpha }( {G}_{\alpha })\).
 \end{lemma}
 
 \begin{proof}
@@ -107,7 +105,7 @@ The only part that requires proof is the statement that if the extension conditi
 An immediate consequence is a uniqueness theorem for direct sums:
 \end{proof}
 \begin{theorem}[Uniqueness of direct sums]
-Let \({\{ {G}_{\alpha }\} }_{\alpha \in J}\) be a family of abelian groups. Suppose \(G\) and \({G}^{\prime }\) are abelian groups and \({i}_{\alpha } : {G}_{\alpha } \rightarrow G\) and \({\mathrm{i}}_{\alpha }^{\prime } : {G}_{\alpha } \rightarrow {G}^{\prime }\) are families of monomorphisms, such that \(G\) is the direct sum of the groups \({i}_{\alpha }( {G}_{\alpha })\) and \({G}^{\prime }\) is the direct sum of the groups \({\mathrm{i}}_{\alpha }^{\prime }( {G}_{\alpha })\). Then there is a unique isomorphism \(\phi : G \rightarrow {G}^{\prime }\) such that \(\phi \circ {i}_{\alpha } = {i}_{\alpha }^{\prime }\) for each \(\alpha\).
+Let \({\{ {G}_{\alpha }\} }_{\alpha \in J}\) be a family of abelian groups. Suppose \(G\) and \({G}^{\prime }\) are abelian groups and \({i}_{\alpha } : {G}_{\alpha } \rightarrow G\) and \({i}_{\alpha }^{\prime } : {G}_{\alpha } \rightarrow {G}^{\prime }\) are families of monomorphisms, such that \(G\) is the direct sum of the groups \({i}_{\alpha }( {G}_{\alpha })\) and \({G}^{\prime }\) is the direct sum of the groups \({i}_{\alpha }^{\prime }( {G}_{\alpha })\). Then there is a unique isomorphism \(\phi : G \rightarrow {G}^{\prime }\) such that \(\phi \circ {i}_{\alpha } = {i}_{\alpha }^{\prime }\) for each \(\alpha\).
 \end{theorem}
 
 \begin{proof}
@@ -217,7 +215,7 @@ The argument continues similarly. One concludes finally that \(m = n\) and \({x}
 
 \begin{centeredblock}
 \begin{example}
-Consider the group \(P\) of bijections of the set \(\{ 0,1,2\}\) with itself. For \(i = 1,2\), define an element \({\pi }_{i}\) of \(P\) by setting \({\pi }_{i}(i) = i - 1\) and \({\pi }_{i}( {i - 1}) = i\) and \({\pi }_{i}( j) = j\) otherwise. Then \({\pi }_{i}\) generates a subgroup \({G}_{t}\) of \(P\) of order 2 . The groups \({G}_{1}\) and \({G}_{2}\) generate \(P\), as you can check. But \(P\) is not their free product. The reduced words \(( {{\pi }_{1},{\pi }_{2},{\pi }_{1}})\) and \(( {{\pi }_{2},{\pi }_{1},{\pi }_{2}})\), for instance, represent the same element of \(P\).
+Consider the group \(P\) of bijections of the set \(\{ 0,1,2\}\) with itself. For \(i = 1,2\), define an element \({\pi }_{i}\) of \(P\) by setting \({\pi }_{i}(i) = i - 1\) and \({\pi }_{i}( {i - 1}) = i\) and \({\pi }_{i}( j) = j\) otherwise. Then \({\pi }_{i}\) generates a subgroup \({G}_{i}\) of \(P\) of order 2 . The groups \({G}_{1}\) and \({G}_{2}\) generate \(P\), as you can check. But \(P\) is not their free product. The reduced words \(( {{\pi }_{1},{\pi }_{2},{\pi }_{1}})\) and \(( {{\pi }_{2},{\pi }_{1},{\pi }_{2}})\), for instance, represent the same element of \(P\).
 \end{example}
 \end{centeredblock}
 
@@ -419,7 +417,7 @@ An immediate question arises: Why didn't we use this notion as our definition of
 The extension condition for ordinary free products translates immediately into an extension condition for external free products:
 \end{proof}
 \begin{lemma}
-Let \(\{ {G}_{\alpha }\}\) be a family of groups; let \(G\) be a group; let \({\mathrm{i}}_{\alpha } : {G}_{\alpha } \rightarrow G\) be a family of homomorphisms. If each \({i}_{\alpha }\) is a monomorphism and \(G\) is the free product of the groups \({\mathrm{i}}_{\alpha }( {G}_{\alpha })\), then \(G\) satisfies the following condition:
+Let \(\{ {G}_{\alpha }\}\) be a family of groups; let \(G\) be a group; let \({i}_{\alpha } : {G}_{\alpha } \rightarrow G\) be a family of homomorphisms. If each \({i}_{\alpha }\) is a monomorphism and \(G\) is the free product of the groups \({i}_{\alpha }( {G}_{\alpha })\), then \(G\) satisfies the following condition:
 
 Given a group \(H\) and a family of homomorphisms \({h}_{\alpha } : {G}_{\alpha } \rightarrow H\),
 
@@ -431,7 +429,7 @@ Furthermore, \(h\) is unique.
 An immediate consequence is a uniqueness theorem for free products; the proof is very similar to the corresponding proof for direct sums and is left to the reader.
 
 \begin{theorem}[Uniqueness of free products]
-Let \({\{ {G}_{\alpha }\} }_{\alpha \in J}\) be a family of groups. Suppose \(G\) and \({G}^{\prime }\) are groups and \({\mathrm{i}}_{\alpha } : {G}_{\alpha } \rightarrow G\) and \({i}_{\alpha }^{\prime } : {G}_{\alpha } \rightarrow {G}^{\prime }\) are families of monomorphisms, such that the families \(\{ {{i}_{\alpha }( {G}_{\alpha }) }\}\) and \(\{ {{i}_{\alpha }^{\prime }( {G}_{\alpha }) }\}\) generate \(G\) and \({G}^{\prime }\), respectively. If both \(G\) and \({G}^{\prime }\) have the extension property stated in the preceding lemma, then there is a unique isomorphism \(\phi : G \rightarrow {G}^{\prime }\) such that \(\phi \circ {i}_{\alpha } = {i}_{\alpha }^{\prime }\) for all \(\alpha\).
+Let \({\{ {G}_{\alpha }\} }_{\alpha \in J}\) be a family of groups. Suppose \(G\) and \({G}^{\prime }\) are groups and \({i}_{\alpha } : {G}_{\alpha } \rightarrow G\) and \({i}_{\alpha }^{\prime } : {G}_{\alpha } \rightarrow {G}^{\prime }\) are families of monomorphisms, such that the families \(\{ {{i}_{\alpha }( {G}_{\alpha }) }\}\) and \(\{ {{i}_{\alpha }^{\prime }( {G}_{\alpha }) }\}\) generate \(G\) and \({G}^{\prime }\), respectively. If both \(G\) and \({G}^{\prime }\) have the extension property stated in the preceding lemma, then there is a unique isomorphism \(\phi : G \rightarrow {G}^{\prime }\) such that \(\phi \circ {i}_{\alpha } = {i}_{\alpha }^{\prime }\) for all \(\alpha\).
 \end{theorem}
 
 Now, finally, we can prove that the extension condition characterizes free products, proving the converses of Lemmas 68.1 and 68.3.
@@ -442,7 +440,7 @@ Let \({\{ {G}_{\alpha }\} }_{\alpha \in J}\) be a family of groups; let \(G\) be
 
 \begin{proof}
 We first show that each \({i}_{\alpha }\) is a monomorphism. Given an index \(\beta\), let us set \(H = {G}_{\beta }\). Let \({h}_{\alpha } : {G}_{\alpha } \rightarrow H\) be the identity if \(\alpha = \beta\), and the trivial homomorphism if \(\alpha \neq \beta\). Let \(h : G \rightarrow H\) be the homomorphism given by the extension condition. Then \(h \circ {i}_{\beta } = {h}_{\beta }\), so that \({i}_{\beta }\) is injective.
-By Theorem 68.2, there exists a group \({G}^{\prime }\) and a family \({i}_{\alpha }^{\prime } : {G}_{\alpha } \rightarrow {G}^{\prime }\) of monomor-phisms such that \({G}^{\prime }\) is the free product of the groups \({i}_{\alpha }^{\prime }( {G}_{\alpha })\). Both \(G\) and \({G}^{\prime }\) have the extension property of Lemma 68.3. The preceding theorem then implies that there is an isomorphism \(\phi : G \rightarrow {G}^{\prime }\) such that \(\phi \circ {i}_{\alpha } = {i}_{\alpha }^{\prime }\). It follows at once that \(G\) is the free product of the groups \({i}_{\alpha }( {G}_{\alpha })\).
+By Theorem 68.2, there exists a group \({G}^{\prime }\) and a family \({i}_{\alpha }^{\prime } : {G}_{\alpha } \rightarrow {G}^{\prime }\) of monomorphisms such that \({G}^{\prime }\) is the free product of the groups \({i}_{\alpha }^{\prime }( {G}_{\alpha })\). Both \(G\) and \({G}^{\prime }\) have the extension property of Lemma 68.3. The preceding theorem then implies that there is an isomorphism \(\phi : G \rightarrow {G}^{\prime }\) such that \(\phi \circ {i}_{\alpha } = {i}_{\alpha }^{\prime }\). It follows at once that \(G\) is the free product of the groups \({i}_{\alpha }( {G}_{\alpha })\).
 
 We now prove two results analogous to Corollaries 67.2 and 67.3.
 \end{proof}
@@ -549,7 +547,7 @@ where \({\alpha }_{i} \neq {\alpha }_{i + 1}\) and \({n}_{i} \neq 0\) for each \
 Free groups are characterized by the following extension property:
 
 \begin{lemma}
-Let \(G\) be a group; let \({\{ {a}_{\alpha }\} }_{\alpha \in J}\) be a family of elements of \(G\). If \(G\) is a free group with system of free generators \(\{ {a}_{\alpha }\}\), then \(G\) satisfies the following condition:(*)Given any group \(H\) and any family \(\{ {y}_{\alpha }\}\) of elements of \(H\), there is a homomorphism \(h : G \rightarrow H\) such that \(h( {a}_{\alpha }) = {y}_{\alpha }\) for each \(\alpha\).
+Let \(G\) be a group; let \({\{ {a}_{\alpha }\} }_{\alpha \in J}\) be a family of elements of \(G\). If \(G\) is a free group with system of free generators \(\{ {a}_{\alpha }\}\), then \(G\) satisfies the following condition: (*) Given any group \(H\) and any family \(\{ {y}_{\alpha }\}\) of elements of \(H\), there is a homomorphism \(h : G \rightarrow H\) such that \(h( {a}_{\alpha }) = {y}_{\alpha }\) for each \(\alpha\).
 
 Furthermore, \(h\) is unique. Conversely, if the extension condition (*) holds, then \(G\) is a free group with system of free generators \(\{ {a}_{\alpha }\}\).
 \end{lemma}
@@ -701,7 +699,7 @@ Unsatisfactory as it is, this is the best we can do!
 
 We now return to the problem of determining the fundamental group of a space \(X\) that is written as the union of two open subsets \(U\) and \(V\) having path-connected intersection. We showed in \S 59 that, if \({x}_{0} \in U \cap V\), the images of the two groups \({\pi }_{1}( {U,{x}_{0}})\) and \({\pi }_{1}( {V,{x}_{0}})\) in \({\pi }_{1}( {X,{x}_{0}})\), under the homomorphisms induced by inclusion, generate the latter group. In this section, we show that \({\pi }_{1}( {X,{x}_{0}})\) is, in fact, completely determined by these two groups, the group \({\pi }_{1}( {U \cap V,{x}_{0}})\), and the various homomorphisms of these groups induced by inclusion. This is a basic result about fundamental groups. It will enable us to compute the fundamental groups of a number of spaces, including the compact 2-manifolds.
 
-\begin{theorem}[]
+\begin{theorem}
 Let \(X = U \cup V\), where \(U\) and \(V\) are open in \(X\) ; assume \(U,V\), and \(U \cap V\) are path connected; let \({x}_{0} \in U \cap V\). Let \(H\) be a group, and let
 
 \[
@@ -859,7 +857,7 @@ Now we prove condition (1) in the general case. Given \(f\) and \(g\) and a path
 
 Step 5. Now we prove condition (2) for the set map \(\tau\). Given a path \(f * g\) in \(X\), let us choose a subdivision \({s}_{0} < \cdots < {s}_{n}\) of \([ {0,1}]\) containing the point \(1/2\) as a subdivision point, such that \(f * g\) carries each subinterval into either \(U\) or \(V\). Let \(k\) be the index such that \({s}_{k} = 1/2\).
 
-For \(i = 1,\ldots, k\), the positive linear map of \([ {0,1}]\) to \([ {{s}_{i - 1},{s}_{i}}]\), followed by \(f * g\), is the same as the positive linear map of \([ {0,1}]\) to \([ {2{s}_{i - 1},2{s}_{i}}]\) followed by \(f\) ; call this map \({f}_{i}\). Similarly, for \(\mathrm{i} = k + 1,\ldots, n\), the positive linear map of \([ {0,1}]\) to \([ {{s}_{i - 1},{s}_{i}}]\), followed by \(f * g\), is the same as the positive linear map of \([ {0,1}]\) to \([ {2{s}_{i - 1} - 1,2{s}_{i} - 1}]\) followed by \(g\) ; call this map \({g}_{i - k}\). Using the subdivision \({s}_{0},\ldots ,{s}_{n}\) for the domain of the path \(f * g\), we have
+For \(i = 1,\ldots, k\), the positive linear map of \([ {0,1}]\) to \([ {{s}_{i - 1},{s}_{i}}]\), followed by \(f * g\), is the same as the positive linear map of \([ {0,1}]\) to \([ {2{s}_{i - 1},2{s}_{i}}]\) followed by \(f\) ; call this map \({f}_{i}\). Similarly, for \(i = k + 1,\ldots, n\), the positive linear map of \([ {0,1}]\) to \([ {{s}_{i - 1},{s}_{i}}]\), followed by \(f * g\), is the same as the positive linear map of \([ {0,1}]\) to \([ {2{s}_{i - 1} - 1,2{s}_{i} - 1}]\) followed by \(g\) ; call this map \({g}_{i - k}\). Using the subdivision \({s}_{0},\ldots ,{s}_{n}\) for the domain of the path \(f * g\), we have
 
 \[
 \tau ( {f * g}) = \sigma ( {f}_{1}) \cdots \sigma ( {f}_{k}) \cdot \sigma ( {g}_{1}) \cdots \sigma ( {g}_{n - k}).
@@ -1135,12 +1133,12 @@ the latter set is closed in \({S}^{1} \times \alpha\) because \({\pi }_{\alpha }
 
 We have computed the fundamental group of the torus \(T = {S}^{1} \times {S}^{1}\) in two ways. One involved considerng the standard covering map \(p \times p : \mathbb{R} \times \mathbb{R} \rightarrow {S}^{1} \times {S}^{1}\) and using the lifting correspondence. Another involved a basic theorem about the fundamental group of a product space. Now we compute the fundamental group of the torus in yet another way.
 
-If one restricts the covering map \(p \times p\) to the unit square, one obtains a quotient map \(\pi : {I}^{2} \rightarrow T\). It maps \(\mathrm{{Bd}}{I}^{2}\) onto the subspace \(A = ( {{S}^{1} \times {b}_{0}}) \cup ( {{b}_{0} \times {S}^{1}})\), which is the wedge of two circles, and it maps the rest of \({I}^{2}\) bijectively onto \(T - A\). Thus, \(T\) can be thought of as the space obtained by pasting the edges of the square \({I}^{2}\) onto the space \(A\).
+If one restricts the covering map \(p \times p\) to the unit square, one obtains a quotient map \(\pi : {I}^{2} \rightarrow T\). It maps \(\operatorname{Bd}{I}^{2}\) onto the subspace \(A = ( {{S}^{1} \times {b}_{0}}) \cup ( {{b}_{0} \times {S}^{1}})\), which is the wedge of two circles, and it maps the rest of \({I}^{2}\) bijectively onto \(T - A\). Thus, \(T\) can be thought of as the space obtained by pasting the edges of the square \({I}^{2}\) onto the space \(A\).
 
 The process of constructing a space by pasting the edges of a polygonal region in the plane onto another space is quite useful. We show here how to compute the fundamental group of such a space. The applications will be many and fruitful.
 
 \begin{theorem}
-Let \(X\) be a Hausdorff space; let \(A\) be a closed path-connected subspace of \(X\). Suppose that there is a continuous map \(h : {B}^{2} \rightarrow X\) that maps Int \({B}^{2}\) bijectively onto \(X - A\) and maps \({S}^{1} = \mathrm{{Bd}}{B}^{2}\) into \(A\). Let \(p \in {S}^{1}\) and let \(a = h( p)\) ; let \(k : ( {{S}^{1},p}) \rightarrow ( {A,a})\) be the map obtained by restricting \(h\). Then the homomorphism
+Let \(X\) be a Hausdorff space; let \(A\) be a closed path-connected subspace of \(X\). Suppose that there is a continuous map \(h : {B}^{2} \rightarrow X\) that maps Int \({B}^{2}\) bijectively onto \(X - A\) and maps \({S}^{1} = \operatorname{Bd}{B}^{2}\) into \(A\). Let \(p \in {S}^{1}\) and let \(a = h( p)\) ; let \(k : ( {{S}^{1},p}) \rightarrow ( {A,a})\) be the map obtained by restricting \(h\). Then the homomorphism
 
 \[
 {i}_{ * } : {\pi }_{1}( {A,a}) \rightarrow {\pi }_{1}( {X,a})
@@ -1287,7 +1285,7 @@ Now the class of the loop
 f = \gamma * ( {( {r \circ \gamma }) * ( {( {{r}^{2} \circ \gamma }) * \cdots * ( {{r}^{n - 1} \circ \gamma }) }) })
 \]
 
-generates \({\pi }_{1}( {{S}^{1},p})\). Since \(h( {{r}^{m}(x) }) = h(x)\) for all \(x\) and \(m\), the loop \(h \circ f\) equals the \(n\) -fold product \(\alpha * ( {\alpha * ( {\cdot - * \alpha }) })\). The theorem follows.
+generates \({\pi }_{1}( {{S}^{1},p})\). Since \(h( {{r}^{m}(x) }) = h(x)\) for all \(x\) and \(m\), the loop \(h \circ f\) equals the \(n\) -fold product \(\alpha * ( {\alpha * ( {\cdots * \alpha }) })\). The theorem follows.
 
 \munkresfig[0.6]{73.3}[Figure 73.3]
 \end{proof}

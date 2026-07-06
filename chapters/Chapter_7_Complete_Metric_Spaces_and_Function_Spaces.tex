@@ -56,7 +56,7 @@ for all \(n,m \geq N\) [using the fact that \(({x}_{n})\) is a Cauchy sequence].
 d({{x}_{{n}_{i}},x}) < \epsilon /2
 \]
 
-[using the fact that \({n}_{1} < {n}_{2} <\) is an increasing sequence of integers and \({x}_{{n}_{i}}\) converges to \(x\) ]. Putting these facts together, we have the desired result that for \(n \geq N\),
+[using the fact that \({n}_{1} < {n}_{2} < \cdots\) is an increasing sequence of integers and \({x}_{{n}_{i}}\) converges to \(x\) ]. Putting these facts together, we have the desired result that for \(n \geq N\),
 
 \[
 d({{x}_{n},x}) \leq d({{x}_{n},{x}_{{n}_{i}}}) + d({{x}_{{n}_{i}},x}) < \epsilon .
@@ -108,6 +108,7 @@ Then \(D\) induces the product topology on \({\mathbb{R}}^{\omega }\) ; we verif
 \]
 
 we see that for fixed \(i\) the sequence \({\pi }_{i}({\mathbf{x}}_{n})\) is a Cauchy sequence in \(\mathbb{R}\), so it converges, say to \({a}_{i}\). Then the sequence \({\mathbf{x}}_{n}\) converges to the point \(\mathbf{a} = ({{a}_{1},{a}_{2},\ldots })\) of \({\mathbb{R}}^{\omega }\).
+\end{proof}
 
 \begin{centeredblock}
 \begin{example}
@@ -136,7 +137,7 @@ is a Cauchy sequence that does not converge. This example shows that completenes
 Although both the product spaces \({\mathbb{R}}^{n}\) and \({\mathbb{R}}^{\omega }\) have metrics relative to which they are complete, one cannot hope to prove the same result for the product space \({\mathbb{R}}^{J}\) in general, because \({\mathbb{R}}^{J}\) is not even metrizable if \(J\) is uncountable (see §21 ). There is, however, another topology on the set \({\mathbb{R}}^{J}\), the one given by the uniform metric. Relative to this metric, \({\mathbb{R}}^{J}\) is complete, as we shall see.
 
 We define the uniform metric in general as follows:
-\end{proof}
+
 \begin{definition}
 Let \((Y, d)\) be a metric space; let \(\bar{d}({a,b}) = \min \{ d({a,b}),1\}\) be the standard bounded metric on \(Y\) derived from \(d\). If \(\mathbf{x} = {({x}_{\alpha }) }_{\alpha \in J}\) and \(\mathbf{y} = {({y}_{\alpha }) }_{\alpha \in J}\) are points of the cartesian product \({Y}^{J}\), let
 
@@ -233,7 +234,9 @@ If \(X\) is a compact space, then every continuous function \(f : X \rightarrow 
 
 We now prove a classical theorem, to the effect that every metric space can be imbedded isometrically in a complete metric space. (A different proof, somewhat more direct, is outlined in Exercise 9.) Although we shall not need this theorem, it is useful in other parts of mathematics.
 
-Theorem 43.7. Let \((X, d)\) be a metric space. There is an isometric imbedding of \(X\) into a complete metric space.
+\begin{theorem}
+Let \((X, d)\) be a metric space. There is an isometric imbedding of \(X\) into a complete metric space.
+\end{theorem}
 
 \begin{proof}
 Let \(\mathcal{B}({X,\mathbb{R}})\) be the set of all bounded functions mapping \(X\) into \(\mathbb{R}\). Let \({x}_{0}\) be a fixed point of \(X\). Given \(a \in X\), define \({\phi }_{a} : X \rightarrow \mathbb{R}\) by the equation
@@ -544,6 +547,7 @@ The first and third inequalities hold because \(x \in {U}_{i}\), and the second 
 
 Thus \(f\) belongs to \({B}_{\rho }({{f}_{\alpha },\epsilon })\), as asserted.
 \end{proof}
+
 \begin{definition}
 If \((Y, d)\) is a metric space, a subset \(\mathcal{F}\) of \(\mathcal{C}({X,Y})\) is said to be pointwise bounded under \(d\) if for each \(a \in X\), the subset \({\mathcal{F}}_{a} = \{ f( a) \mid f \in \mathcal{F}\}\) of \(Y\) is bounded under \(d\).
 \end{definition}
@@ -571,11 +575,12 @@ Step 4. We prove the ``if'' part of the theorem. Assume that \(\mathcal{F}\) is 
 Completeness is easy, for \(\mathcal{G}\) is a closed subspace of the complete metric space \(({\mathcal{C}({X,{\mathbb{R}}^{n}}),\rho })\).
 
 We verify total boundedness. First, Step 2 implies that \(\mathcal{G}\) is equicontinuous and pointwise bounded under \(d\) ; then Step 3 tells us that there is a compact subspace \(Y\) of \({\mathbb{R}}^{n}\) such that \(\mathcal{G} \subset \mathcal{C}({X,Y})\). Equicontinuity of \(\mathcal{G}\) now implies, by Lemma 45.3, that \(\mathcal{G}\) is totally bounded under \(\rho\), as desired.
+\end{proof}
 
 *Corollary 45.5. Let \(X\) be compact; let \(d\) denote either the square metric or the euclidean metric on \({\mathbb{R}}^{n}\) ; give \(\mathcal{C}({X,{\mathbb{R}}^{n}})\) the corresponding uniform topology. A subspace \(\mathcal{F}\) of \(\mathcal{C}({X,{\mathbb{R}}^{n}})\) is compact if and only if it is closed, bounded under the sup metric \(\rho\), and equicontinuous under \(d\).
 
 Proof. If \(\mathcal{F}\) is compact, it must be closed and bounded; the preceding theorem implies that it is also equicontinuous. Conversely, if \(\mathcal{F}\) is closed, it equals its closure \(\mathcal{G}\) ; if it is bounded under \(\rho\), it is pointwise bounded under \(d\) ; and if it is also equicontinuous, the preceding theorem implies that it is compact.
-\end{proof}
+
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item If \({X}_{n}\) is metrizable with metric \({d}_{n}\), then \[ D({\mathbf{x},\mathbf{y}}) = \sup \{ {{\bar{d}}_{i}({{x}_{i},{y}_{i}}) /i}\} \] is a metric for the product space \(X = \prod {X}_{n}\). Show that \(X\) is totally bounded under \(D\) if each \({X}_{n}\) is totally bounded under \({d}_{n}\). Conclude without using the Tychonoff theorem that a countable product of compact metrizable spaces is compact.
@@ -592,19 +597,21 @@ Proof. If \(\mathcal{F}\) is compact, it must be closed and bounded; the precedi
 
  \item Repeat (a) for the functions \({f}_{n}\) of Exercise 9 of §21.
  \end{enumerate}
-\item Let \(X\) be a space. A subset \(\mathcal{F}\) of \(\mathcal{C}({X,\mathbb{R}})\) is said to vanish uniformly at infinity if given \(\epsilon > 0\), there is a compact subspace \(C\) of \(X\) such that \(| {f(x) }| < \epsilon\) for \(x \in X - C\) and \(f \in \mathcal{F}\) If \(\mathcal{F}\) consists of a single function \(f\), we say simply that \(f\) vanishes at infinity. Let \({\mathcal{C}}_{0}({X,\mathbb{R}})\) denote the set of continuous functions \(f : X \rightarrow \mathbb{R}\) that vanish at infinity. \textsl{Theorem.} Let \(X\) be locally compact Hausdorff; give \({\mathcal{C}}_{0}({X,\mathbb{R}})\) the uniform topology. A subset \(\mathcal{F}\) of \({\mathcal{C}}_{0}({X,\mathbb{R}})\) has compact closure if and only if it is pointwise bounded, equicontinuous, and vanishes uniformly at infinity. [Hint: Let \(Y\) denote the one-point compactification of \(X\). Show that \({\mathcal{C}}_{0}({X,\mathbb{R}})\) is isometric with a closed subspace of \(\mathcal{C}({Y,\mathbb{R}})\) if both are given the sup metric.]
+\item Let \(X\) be a space. A subset \(\mathcal{F}\) of \(\mathcal{C}({X,\mathbb{R}})\) is said to vanish uniformly at infinity if given \(\epsilon > 0\), there is a compact subspace \(C\) of \(X\) such that \(| {f(x) }| < \epsilon\) for \(x \in X - C\) and \(f \in \mathcal{F}\). If \(\mathcal{F}\) consists of a single function \(f\), we say simply that \(f\) vanishes at infinity. Let \({\mathcal{C}}_{0}({X,\mathbb{R}})\) denote the set of continuous functions \(f : X \rightarrow \mathbb{R}\) that vanish at infinity. \textsl{Theorem.} Let \(X\) be locally compact Hausdorff; give \({\mathcal{C}}_{0}({X,\mathbb{R}})\) the uniform topology. A subset \(\mathcal{F}\) of \({\mathcal{C}}_{0}({X,\mathbb{R}})\) has compact closure if and only if it is pointwise bounded, equicontinuous, and vanishes uniformly at infinity. [Hint: Let \(Y\) denote the one-point compactification of \(X\). Show that \({\mathcal{C}}_{0}({X,\mathbb{R}})\) is isometric with a closed subspace of \(\mathcal{C}({Y,\mathbb{R}})\) if both are given the sup metric.]
 \item Show that our proof of Ascoli's theorem goes through if \({\mathbb{R}}^{n}\) is replaced by any metric space in which all closed bounded subspaces are compact.
 \item[*7.] Let \((X, d)\) be a metric space. If \(A \subset X\) and \(\epsilon > 0\), let \(U({A,\epsilon })\) be the \(\epsilon\) - neighborhood of \(A\). Let \(\mathcal{H}\) be the collection of all (nonempty) closed, bounded subsets of \(X\). If \(A,B \in \mathcal{H}\), define \[ D({A,B}) = \inf \{ \epsilon \mid A \subset U({B,\epsilon }) \text{ and }B \subset U({A,\epsilon }) \}. \]
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show that \(D\) is a metric on \(\mathcal{H}\) ; it is called the Hausdorff metric.
  \item Show that if \((X, d)\) is complete, so is \((H, D)\). [Hint: Let \({A}_{n}\) be a Cauchy sequence in \(\mathcal{H}\) ; by passing to a subsequence, assume \(D({{A}_{n},{A}_{n + 1}}) < 1/{2}^{n}\). Define \(A\) to be the set of all points \(x\) that are the limits of sequences \({x}_{1},{x}_{2}\), ... such that \({x}_{i} \in {A}_{i}\) for each \(i\) and \(d({{x}_{i},{x}_{i + 1}}) < 1/{2}^{i}\). Show \({A}_{n} \rightarrow \bar{A}\).]
- \item Show that if \((X, d)\) is totally bounded, so is \((H, D)\). [Hint: Given \(\epsilon\), choose \(\delta < \epsilon\) and let \(S\) be a finite subset of \(X\) such that the collection \(\{ {{B}_{d}({x,\delta }) \mid }.\) \(x \in S\}\) covers \(X\). Let \(\mathcal{A}\) be the collection of all nonempty subsets of \(S\) ; show that \(\{ {{B}_{D}({A,\epsilon }) \mid A \in \mathcal{A}}\}\) covers \(\mathcal{H}\).]
+ \item Show that if \((X, d)\) is totally bounded, so is \((H, D)\). [Hint: Given \(\epsilon\), choose \(\delta < \epsilon\) and let \(S\) be a finite subset of \(X\) such that the collection \(\{ {B}_{d}({x,\delta }) \mid x \in S\}\) covers \(X\). Let \(\mathcal{A}\) be the collection of all nonempty subsets of \(S\) ; show that \(\{ {{B}_{D}({A,\epsilon }) \mid A \in \mathcal{A}}\}\) covers \(\mathcal{H}\).]
  \item Theorem. If \(X\) is compact in the metric \(d\), then the space \(\mathcal{H}\) is compact in the Hausdorff metric \(D\).
 \item[*8.] Let \(({X,{d}_{X}})\) and \(({Y,{d}_{Y}})\) be metric spaces; give \(X \times Y\) the corresponding square metric; let \(\mathcal{H}\) denote the collection of all nonempty closed, bounded subsets of \(X \times Y\) in the resulting Hausdorff metric. Consider the space \(\mathcal{C}({X,Y})\) in the uniform metric; let \(\operatorname{gr} : \mathcal{C}({X,Y}) \rightarrow \mathcal{H}\) be the function that assigns, to each continuous function \(f : X \rightarrow Y\), its graph \[ {G}_{f} = \{ x \times f(x) \mid x \in X\}. \]
- \item Show that the map gr is injective and uniformly continuous.
- \item Let \({\mathcal{H}}_{0}\) denote the image set of the map gr; let \(g : \mathcal{C}({X,Y}) \rightarrow {\mathcal{H}}_{0}\) be the surjective map obtained from gr. Show that if \(f : X \rightarrow Y\) is uniformly continuous, then the map \({g}^{-1}\) is continuous at the point \({G}_{f}\).
- \item Give an example where \({g}^{-1}\) is not continuous at the point \({G}_{f}\).
- \item Theorem. If \(X\) is compact, then \(\operatorname{gr} : \mathcal{C}({X,Y}) \rightarrow \mathcal{H}\) is an imbedding.
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show that the map gr is injective and uniformly continuous.
+  \item Let \({\mathcal{H}}_{0}\) denote the image set of the map gr; let \(g : \mathcal{C}({X,Y}) \rightarrow {\mathcal{H}}_{0}\) be the surjective map obtained from gr. Show that if \(f : X \rightarrow Y\) is uniformly continuous, then the map \({g}^{-1}\) is continuous at the point \({G}_{f}\).
+  \item Give an example where \({g}^{-1}\) is not continuous at the point \({G}_{f}\).
+  \item Theorem. If \(X\) is compact, then \(\operatorname{gr} : \mathcal{C}({X,Y}) \rightarrow \mathcal{H}\) is an imbedding.
+  \end{enumerate}
  \end{enumerate}
 \end{enumerate}
 \section*{§ 46 Pointwise and Compact Convergence}
@@ -856,14 +863,14 @@ We shall return to a more detailed study of homotopy in Part II of the book.
 \item Show that in the compact-open topology, \(\mathcal{C}({X,Y})\) is Hausdorff if \(Y\) is Hausdorff, and regular if \(Y\) is regular. [Hint: If \(\bar{U} \subset V\), then \(\overline{S({C,U}) } \subset S({C,V})\).
 \item Show that if \(Y\) is locally compact Hausdorff, then composition of maps \[ \mathcal{C}({X,Y}) \times \mathcal{C}({Y,Z}) \rightarrow \mathcal{C}({X,Z}) \] is continuous, provided the compact-open topology is used throughout. [Hint: If \(g \circ f \in S({C,U})\), find \(V\) such that \(f( C) \subset V\) and \(g( \bar{V}) \subset U\).]
 \item Let \({\mathcal{C}}^{\prime }({X,Y})\) denote the set \(\mathcal{C}({X,Y})\) in some topology \(\mathcal{T}\). Show that if the evaluation map \[ e : X \times {\mathcal{C}}^{\prime }({X,Y}) \rightarrow Y \] is continuous, then \(\mathcal{T}\) contains the compact-open topology. [Hint: The induced map \(E : {\mathcal{C}}^{\prime }({X,Y}) \rightarrow \mathcal{C}({X,Y})\) is continuous. ]
-\item Here is an (unexpected) application of Theorem 46.11 to quotient maps. (Compare Exercise 11 of §29.) \textsl{Theorem.} If \(p : A \rightarrow B\) is a quotient map and \(X\) is locally compact Hausdorff, then \({i}_{X} \times p \cdot X \times A \rightarrow X \times B\) is a quotient map. Proof.
+\item Here is an (unexpected) application of Theorem 46.11 to quotient maps. (Compare Exercise 11 of §29.) \textsl{Theorem.} If \(p : A \rightarrow B\) is a quotient map and \(X\) is locally compact Hausdorff, then \({i}_{X} \times p : X \times A \rightarrow X \times B\) is a quotient map. Proof.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Let \(Y\) be the quotient space induced by \({i}_{X} \times p\) ; let \(q : X \times A \rightarrow Y\) be the quotient map. Show there is a bijective continuous map \(f : Y \rightarrow X \times B\) such that \(f \circ q = {i}_{X} \times p\).
  \item Let \(g = {f}^{-1}\). Let \(G : B \rightarrow \mathcal{C}({X,Y})\) and \(Q : A \rightarrow \mathcal{C}({X,Y})\) be the maps induced by \(g\) and \(q\), respectively. Show that \(Q = G \circ p\).
  \item Show that \(Q\) is continuous; conclude that \(G\) is continuous, so that \(g\) is continuous.
 \item[*10.] A space is locally compact if it can be covered by open sets each of which is contained in a compact subspace of \(X\). It is said to be \(\sigma\)-compact if it can be covered by countably many such open sets.
  \item Show that if \(X\) is locally compact and second-countable, it is \(\sigma\) -compact.
- \item Let \((Y, d)\) be a metric space. Show that if \(X\) is \(\sigma\) -compact, there is a metric for the topology of compact convergence on \({Y}^{X}\) such that if \((Y, d)\) is complete, \({Y}^{X}\) is complete in this metric. [Hint: Let \({A}_{1},{A}_{2},.\) be a countable collection of compact subspaces of \(X\) whose interiors cover \(X\). Let \({Y}_{t}\) denote the set of all functions from \({A}_{i}\) to \(Y\), in the uniform topology. Define a homeomorphism of \({Y}^{X}\) with a closed subspace of the product space \({Y}_{1} \times {Y}_{2} \times \cdots \}\)
+ \item Let \((Y, d)\) be a metric space. Show that if \(X\) is \(\sigma\) -compact, there is a metric for the topology of compact convergence on \({Y}^{X}\) such that if \((Y, d)\) is complete, \({Y}^{X}\) is complete in this metric. [Hint: Let \({A}_{1},{A}_{2},\ldots\) be a countable collection of compact subspaces of \(X\) whose interiors cover \(X\). Let \({Y}_{t}\) denote the set of all functions from \({A}_{i}\) to \(Y\), in the uniform topology. Define a homeomorphism of \({Y}^{X}\) with a closed subspace of the product space \({Y}_{1} \times {Y}_{2} \times \cdots\)
  \end{enumerate}
 \item Let \((Y, d)\) be a metric space; let \(X\) be a space. Define a topology on \(\mathcal{C}({X,Y})\) as follows: Given \(f \in \mathcal{C}({X,Y})\), and given a positive continuous function \(\delta : X \rightarrow\) \({\mathbb{R}}_{ + }\) on \(X\), let \[ B({f,\delta }) = \{ g \mid d({f(x),g(x) }) < \delta (x) \text{ for all }x \in X\}. \]
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
@@ -941,7 +948,7 @@ d({g(x),g({x}_{i}) }) < \epsilon /3
 for \(x \in {U}_{i}\) and \(g \in \mathcal{G}\). Then we define \(B\) to be the basis element for \({Y}^{X}\) defined by the equation
 
 \[
-B = \{ {h \mid h \in {Y}^{X}}. \text{ and }d({h({x}_{i}),g({x}_{i}) }) < \epsilon /3\text{ for }. {i = 1,\ldots, n}\} \text{.}
+B = \{ {h \mid h \in {Y}^{X} \text{ and } d({h({x}_{i}),g({x}_{i}) }) < \epsilon /3 \text{ for } i = 1,\ldots, n}\} \text{.}
 \]
 
 We show that if \(h\) is an element of \(B \cap \mathcal{G}\), then \(h\) belongs to \({B}_{C}({g,\epsilon })\). That is, we show that \(d({h(x),g(x) }) < \epsilon\) for \(x \in C\). Given \(x \in C\), choose \(i\) so that \(x \in {U}_{i}\). Then
@@ -1013,6 +1020,6 @@ Ascoli's theorem has many applications in analysis, but these lie outside the sc
  \end{enumerate}
 \item Prove the following \textsl{Theorem.} If \(X\) is a locally compact Hausdorff space, then a subspace \(\mathcal{F}\) of \(\mathcal{C}({X,{\mathbb{R}}^{n}})\) in the topology of compact convergence has compact closure if and only if \(\mathcal{F}\) is pointwise bounded and equicontinuous under either of the standard metrics on \({\mathbb{R}}^{n}\). 
 \item Show that the general version of Ascoli's theorem implies the classical version (Theorem 45.4) when \(X\) is Hausdorff.
-\item Prove the following: \textsl{Theorem. (Arzela's theorem, general version).} Let \(X\) be a Hausdorff space that is \(\sigma\) -compact; let \({f}_{n}\) be a sequence of functions \({f}_{n} : X \rightarrow {\mathbb{R}}^{k}\). If the collection \(\{ {f}_{n}\}\) is pointwise bounded and equicontinuous, then the sequence \({f}_{n}\) has a subsequence that converges, in the topology of compact convergence, to a continuous function. \{Hint: Show \(\mathcal{C}({X,{\mathbb{R}}^{k}})\) is first-countable.\}
+\item Prove the following: \textsl{Theorem. (Arzela's theorem, general version).} Let \(X\) be a Hausdorff space that is \(\sigma\) -compact; let \({f}_{n}\) be a sequence of functions \({f}_{n} : X \rightarrow {\mathbb{R}}^{k}\). If the collection \(\{ {f}_{n}\}\) is pointwise bounded and equicontinuous, then the sequence \({f}_{n}\) has a subsequence that converges, in the topology of compact convergence, to a continuous function. [Hint: Show \(\mathcal{C}({X,{\mathbb{R}}^{k}})\) is first-countable.]
 \item Let \((Y, d)\) be a metric space; let \({f}_{n} : X \rightarrow Y\) be a sequence of continuous functions; let \(f : X \rightarrow Y\) be a function (not necessarily continuous). Suppose \({f}_{n}\) converges to \(f\) in the topology of pointwise convergence. Show that if \(\{ {f}_{n}\}\) is equicontinuous, then \(f\) is continuous and \({f}_{n}\) converges to \(f\) in the topology of compact convergence.
 \end{enumerate}
