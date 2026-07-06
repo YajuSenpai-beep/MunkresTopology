@@ -590,6 +590,7 @@ To avoid ambiguity, let us agree that whenever \(X\) is an ordered set in the or
 \item Show that the dictionary order topology on the set \(\mathbb{R} \times \mathbb{R}\) is the same as the product topology \({\mathbb{R}}_{d} \times \mathbb{R}\), where \({\mathbb{R}}_{d}\) denotes \(\mathbb{R}\) in the discrete topology. Compare this topology with the standard topology on \({\mathbb{R}}^{2}\).
 \item Let \(I = [ {0,1}]\). Compare the product topology on \(I \times I\), the dictionary order topology on \(I \times I\), and the topology \(I \times I\) inherits as a subspace of \(\mathbb{R} \times \mathbb{R}\) in the dictionary order topology.
 \end{enumerate}
+
 \section*{§ 17 Closed Sets and Limit Points}
 
 Now that we have a few examples at hand, we can introduce some of the basic concepts associated with topological spaces. In this section, we treat the notions of closed set, closure of a set, and limit point. These lead naturally to consideration of a certain axiom for topological spaces called the Hausdorff axiom.
@@ -747,12 +748,11 @@ First let us introduce some convenient terminology. We shall say that a set \(A\
 \begin{theorem}
  Let \(A\) be a subset of the topological space \(X\).
 
-\begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-\item Then \(x \in \bar{A}\) if and only if every open set \(U\) containing \(x\) intersects \(A\).
+ \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+ \item Then \(x \in \bar{A}\) if and only if every open set \(U\) containing \(x\) intersects \(A\).
 
-\item Supposing the topology of \(X\) is given by a basis, then \(x \in \bar{A}\) if and only if every basis element \(B\) containing \(x\) intersects \(A\).
-\end{enumerate}
-
+ \item Supposing the topology of \(X\) is given by a basis, then \(x \in \bar{A}\) if and only if every basis element \(B\) containing \(x\) intersects \(A\).
+ \end{enumerate}
 \end{theorem}
 
 \begin{proof}
@@ -801,11 +801,11 @@ If \(A\) is a subset of the topological space \(X\) and if \(x\) is a point of \
 \begin{example}
  Consider the real line \(\mathbb{R}\). If \(A = (0,1\rbrack\), then the point 0 is a limit point of \(A\) and so is the point \(\frac{1}{2}\). In fact, every point of the interval \([ {0,1}]\) is a limit point of \(A\), but no other point of \(\mathbb{R}\) is a limit point of \(A\)
 
-If \(B = \{ {1/n \mid n \in {\mathbb{Z}}_{ + }}\}\), then 0 is the only limit point of \(B\). Every other point \(x\) of \(\mathbb{R}\) has a neighborhood that either does not intersect \(B\) at all, or it intersects \(B\) only in the point \(x\) itself. If \(C = \{ 0\} \cup ( {1,2})\), then the limit points of \(C\) are the points of the interval \([ {1,2}]\). If \(\mathbb{Q}\) is the set of rational numbers, every point of \(\mathbb{R}\) is a limit point of \(\mathbb{Q}\). If \({\mathbb{Z}}_{ + }\) is the set of positive integers, no point of \(\mathbb{R}\) is a limit point of \({\mathbb{Z}}_{ + }\). If \({\mathbb{R}}_{ + }\) is the set of positive reals, then every point of \(\{ 0\} \cup {\mathbb{R}}_{ + }\) is a limit point of \({\mathbb{R}}_{ + }\)
+ If \(B = \{ {1/n \mid n \in {\mathbb{Z}}_{ + }}\}\), then 0 is the only limit point of \(B\). Every other point \(x\) of \(\mathbb{R}\) has a neighborhood that either does not intersect \(B\) at all, or it intersects \(B\) only in the point \(x\) itself. If \(C = \{ 0\} \cup ( {1,2})\), then the limit points of \(C\) are the points of the interval \([ {1,2}]\). If \(\mathbb{Q}\) is the set of rational numbers, every point of \(\mathbb{R}\) is a limit point of \(\mathbb{Q}\). If \({\mathbb{Z}}_{ + }\) is the set of positive integers, no point of \(\mathbb{R}\) is a limit point of \({\mathbb{Z}}_{ + }\). If \({\mathbb{R}}_{ + }\) is the set of positive reals, then every point of \(\{ 0\} \cup {\mathbb{R}}_{ + }\) is a limit point of \({\mathbb{R}}_{ + }\)
 \end{example}
 \end{centeredblock}
 
- Comparison of Examples 6 and 8 suggests a relationship between the closure of a set and the limit points of a set. That relationship is given in the following theorem:
+Comparison of Examples 6 and 8 suggests a relationship between the closure of a set and the limit points of a set. That relationship is given in the following theorem:
 
 \begin{theorem}
  Let \(A\) be a subset of the topological space \(X\), let \({A}^{\prime }\) be the set of all limit points of \(A\). Then
@@ -813,13 +813,12 @@ If \(B = \{ {1/n \mid n \in {\mathbb{Z}}_{ + }}\}\), then 0 is the only limit po
  \[
  \bar{A} = A \cup {A}^{\prime }.
  \]
-
 \end{theorem}
 
 \begin{proof}
  If \(x\) is in \({A}^{\prime }\), every neighborhood of \(x\) intersects \(A\) (in a point different from \(x\) ). Therefore, by Theorem 17.5, \(x\) belongs to \(\bar{A}\) Hence \({A}^{\prime } \subset \bar{A}\). Since by definition \(A \subset \bar{A}\), it follows that \(A \cup {A}^{\prime } \subset \bar{A}\).
 
-To demonstrate the reverse inclusion, we let \(x\) be a point of \(\bar{A}\) and show that \(x \in A \cup {A}^{\prime }\). If \(x\) happens to lie in \(A\), it is trivial that \(x \in A \cup {A}^{\prime }\) ; suppose that \(x\) does not lie in \(A\). Since \(x \in \bar{A}\), we know that every neighborhood \(U\) of \(x\) intersects \(A\) ; because \(x \notin A\), the set \(U\) must intersect \(A\) in a point different from \(x\). Then \(x \in {A}^{\prime }\), so that \(x \in A \cup {A}^{\prime }\), as desired.
+ To demonstrate the reverse inclusion, we let \(x\) be a point of \(\bar{A}\) and show that \(x \in A \cup {A}^{\prime }\). If \(x\) happens to lie in \(A\), it is trivial that \(x \in A \cup {A}^{\prime }\) ; suppose that \(x\) does not lie in \(A\). Since \(x \in \bar{A}\), we know that every neighborhood \(U\) of \(x\) intersects \(A\) ; because \(x \notin A\), the set \(U\) must intersect \(A\) in a point different from \(x\). Then \(x \in {A}^{\prime }\), so that \(x \in A \cup {A}^{\prime }\), as desired.
 \end{proof}
 
 \begin{corollary}
@@ -873,8 +872,8 @@ One reason for our lack of interest in the \({T}_{1}\) axiom is the fact that ma
 
 \begin{theorem}
  If \(X\) is a Hausdorff space, then a sequence of points of \(X\) converges to at most one point of \(X\)
-
 \end{theorem}
+
 \begin{proof}
  Suppose that \({x}_{n}\) is a sequence of points of \(X\) that converges to \(x\) If \(y \neq x\), let \(U\) and \(V\) be disjoint neighborhoods of \(x\) and \(y\), respectively. Since \(U\) contains \({x}_{n}\) for all but finitely many values of \(n\), the set \(V\) cannot Therefore, \({x}_{n}\) cannot converge to y.
 \end{proof}
@@ -1005,20 +1004,19 @@ that the inverse image of every basis element is open.
 \begin{example}
  In calculus one considers the property of continuity for many kinds of functions. For example, one studies functions of the following types:
 
-\begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=3em, label={}]
-\item \(f : \mathbb{R} \rightarrow {\mathbb{R}}^{2}\) (curves in the plane)
+ \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=3em, label={}]
+ \item \(f : \mathbb{R} \rightarrow {\mathbb{R}}^{2}\) (curves in the plane)
 
-\item \(f : \mathbb{R} \rightarrow {\mathbb{R}}^{3}\) (curves in space)
+ \item \(f : \mathbb{R} \rightarrow {\mathbb{R}}^{3}\) (curves in space)
 
-\item \(f : {\mathbb{R}}^{2} \rightarrow \mathbb{R}\) (functions \(f( {x,y})\) of two real variables)
+ \item \(f : {\mathbb{R}}^{2} \rightarrow \mathbb{R}\) (functions \(f( {x,y})\) of two real variables)
 
-\item \(f : {\mathbb{R}}^{3} \rightarrow \mathbb{R}\) (functions \(f( {x,y,z})\) of three real variables)
+ \item \(f : {\mathbb{R}}^{3} \rightarrow \mathbb{R}\) (functions \(f( {x,y,z})\) of three real variables)
 
-\item \(f : {\mathbb{R}}^{2} \rightarrow {\mathbb{R}}^{2}\) (vector fields \(\mathbf{v}( {x,y})\) in the plane).
-\end{enumerate}
-
+ \item \(f : {\mathbb{R}}^{2} \rightarrow {\mathbb{R}}^{2}\) (vector fields \(\mathbf{v}( {x,y})\) in the plane).
+ \end{enumerate}
  Each of them has a notion of continuity defined for it. Our general definition of continuity includes all these as special cases, this fact will be a consequence of general theorems we shall prove concerning continuous functions on product spaces and on metric spaces.
-\end{example}
+ \end{example}
 \end{centeredblock*}
 
 \begin{centeredblock*}
@@ -1057,26 +1055,26 @@ If the condition in (4) holds for the point \(x\) of \(X\), we say that \(f\) is
 \begin{proof}
  We show that \((1) \Rightarrow (2) \Rightarrow ( 3) \Rightarrow (1)\) and that \((1) \Rightarrow ( 4) \Rightarrow (1)\).
 
-(1) \(\Rightarrow\) (2). Assume that \(f\) is continuous. Let \(A\) be a subset of \(X\). We show that if \(x \in \bar{A}\), then \(f(x) \in \overline{f( A) }\). Let \(V\) be a neighborhood of \(f(x)\). Then \({f}^{-1}( V)\) is an open set of \(X\) containing \(x\) ; it must intersect \(A\) in some point \(y\). Then \(V\) intersects \(f( A)\) in the point \(f( y)\), so that \(f(x) \in \overline{f( A) }\), as desired.
+ (1) \(\Rightarrow\) (2). Assume that \(f\) is continuous. Let \(A\) be a subset of \(X\). We show that if \(x \in \bar{A}\), then \(f(x) \in \overline{f( A) }\). Let \(V\) be a neighborhood of \(f(x)\). Then \({f}^{-1}( V)\) is an open set of \(X\) containing \(x\) ; it must intersect \(A\) in some point \(y\). Then \(V\) intersects \(f( A)\) in the point \(f( y)\), so that \(f(x) \in \overline{f( A) }\), as desired.
 
-\((2) \Rightarrow ( 3)\). Let \(B\) be closed in \(Y\) and let \(A = {f}^{-1}( B)\). We wish to prove that \(A\) is closed in \(X\) ; we show that \(\bar{A} = A\). By elementary set theory, we have \(f( A) =\) \(f( {{f}^{-1}( B) }) \subset B\). Therefore, if \(x \in \bar{A}\),
+ (2) \(\Rightarrow\) (3). Let \(B\) be closed in \(Y\) and let \(A = {f}^{-1}( B)\). We wish to prove that \(A\) is closed in \(X\) ; we show that \(\bar{A} = A\). By elementary set theory, we have \(f( A) =\) \(f( {{f}^{-1}( B) }) \subset B\). Therefore, if \(x \in \bar{A}\),
 
-\[
-f(x) \in f( \bar{A}) \subset \overline{f( A) } \subset \bar{B} = B,
-\]
+ \[
+ f(x) \in f( \bar{A}) \subset \overline{f( A) } \subset \bar{B} = B,
+ \]
 
-so that \(x \in {f}^{-1}( B) = A\). Thus \(\bar{A} \subset A\), so that \(\bar{A} = A\), as desired.
+ so that \(x \in {f}^{-1}( B) = A\). Thus \(\bar{A} \subset A\), so that \(\bar{A} = A\), as desired.
 
-\(( 3) \Rightarrow (1)\). Let \(V\) be an open set of \(Y\). Set \(B = Y - V\). Then
+ \(( 3) \Rightarrow (1)\). Let \(V\) be an open set of \(Y\). Set \(B = Y - V\). Then
 
-\[
-{f}^{-1}( B) = {f}^{-1}( Y) - {f}^{-1}( V) = X - {f}^{-1}( V).
-\]
-Now \(B\) is a closed set of \(Y\). Then \({f}^{-1}( B)\) is closed in \(X\) by hypothesis, so that \({f}^{-1}( V)\) is open in \(X\), as desired.
+ \[
+ {f}^{-1}( B) = {f}^{-1}( Y) - {f}^{-1}( V) = X - {f}^{-1}( V).
+ \]
+ Now \(B\) is a closed set of \(Y\). Then \({f}^{-1}( B)\) is closed in \(X\) by hypothesis, so that \({f}^{-1}( V)\) is open in \(X\), as desired.
 
-(1) \(\Rightarrow\) (4). Let \(x \in X\) and let \(V\) be a neighborhood of \(f(x)\). Then the set \(U = {f}^{-1}( V)\) is a neighborhood of \(x\) such that \(f( U) \subset V\).
+ (1) \(\Rightarrow\) (4). Let \(x \in X\) and let \(V\) be a neighborhood of \(f(x)\). Then the set \(U = {f}^{-1}( V)\) is a neighborhood of \(x\) such that \(f( U) \subset V\).
 
-\((4) \Rightarrow (1)\). Let \(V\) be an open set of \(Y\) ; let \(x\) be a point of \({f}^{-1}( V)\) Then \(f(x) \in V\), so that by hypothesis there is a neighborhood \({U}_{x}\) of \(x\) such that \(f( {U}_{x}) \subset V\). Then \({U}_{x} \subset {f}^{-1}( V)\). It follows that \({f}^{-1}( V)\) can be written as the union of the open sets \({U}_{x}\), so that it is open.
+ (4) \(\Rightarrow\) (1). Let \(V\) be an open set of \(Y\) ; let \(x\) be a point of \({f}^{-1}( V)\) Then \(f(x) \in V\), so that by hypothesis there is a neighborhood \({U}_{x}\) of \(x\) such that \(f( {U}_{x}) \subset V\). Then \({U}_{x} \subset {f}^{-1}( V)\). It follows that \({f}^{-1}( V)\) can be written as the union of the open sets \({U}_{x}\), so that it is open.
 \end{proof}
 
 \section*{Homeomorphisms}
@@ -1154,7 +1152,7 @@ Now suppose that \(f : X \rightarrow Y\) is an injective continuous map, where \
 
  be the map defined by \(f( t) = ( {\cos {2\pi t},\sin {2\pi t}})\). The fact that \(f\) is bijective and continuous follows from familiar properties of the trigonometric functions. But the function \({f}^{-1}\) is not continuous The image under \(f\) of the open set \(U = [ {0,\frac{1}{4}})\) of the domain, for instance, is not open in \({S}^{1}\), for the point \(p = f( 0)\) lies in no open set \(V\) of \({\mathbb{R}}^{2}\) such that \(V \cap {S}^{1} \subset f( U)\). See Figure 18.4.
 
-\munkresfig[0.9]{18.4}[Figure 18.4]
+ \munkresfig[0.9]{18.4}[Figure 18.4]
 \end{example}
 \end{centeredblock*}
 
@@ -1366,6 +1364,7 @@ Yet another method for constructing continuous functions that is familiar from a
   \end{enumerate}
 \item Let \(A \subset X\) ; let \(f : A \rightarrow Y\) be continuous; let \(Y\) be Hausdorff. Show that if \(f\) may be extended to a continuous function \(g : \bar{A} \rightarrow Y\), then \(g\) is uniquely determined by \(f\).
 \end{enumerate}
+
 \section*{§ 19 The Product Topology}
 
 We now return, for the remainder of the chapter, to the consideration of various methods for imposing topologies on sets
@@ -1581,19 +1580,19 @@ Why does this theorem fail if we use the box topology? Probably the most convinc
  f( t) = ( {t,t,t,\ldots }),
  \]
 
-the \(n\) th coordinate function of \(f\) is the function \({f}_{n}( t) = t\) Each of the coordinate functions \({f}_{n} :\mathbb{R} \rightarrow \mathbb{R}\) is continuous; therefore, the function \(f\) is continuous if \({\mathbb{R}}^{\omega }\) is given the product topology. But \(f\) is not continuous if \({\mathbb{R}}^{\omega }\) is given the box topology Consider, for example, the basis element
+ the \(n\) th coordinate function of \(f\) is the function \({f}_{n}( t) = t\) Each of the coordinate functions \({f}_{n} :\mathbb{R} \rightarrow \mathbb{R}\) is continuous; therefore, the function \(f\) is continuous if \({\mathbb{R}}^{\omega }\) is given the product topology. But \(f\) is not continuous if \({\mathbb{R}}^{\omega }\) is given the box topology Consider, for example, the basis element
 
-\[
-B = ( {-1,1}) \times ( {-\frac{1}{2},\frac{1}{2}}) \times ( {-\frac{1}{3},\frac{1}{3}}) \times \cdots
-\]
+ \[
+ B = ( {-1,1}) \times ( {-\frac{1}{2},\frac{1}{2}}) \times ( {-\frac{1}{3},\frac{1}{3}}) \times \cdots
+ \]
 
-for the box topology. We assert that \({f}^{-1}( B)\) is not open in \(\mathbb{R}\). If \({f}^{-1}( B)\) were open in \(\mathbb{R}\), it would contain some interval \(( {-\delta,\delta })\) about the point 0 . This would mean that \(f( ( {-\delta,\delta }) ) \subset B\), so that, applying \({\pi }_{n}\) to both sides of the inclusion,
+ for the box topology. We assert that \({f}^{-1}( B)\) is not open in \(\mathbb{R}\). If \({f}^{-1}( B)\) were open in \(\mathbb{R}\), it would contain some interval \(( {-\delta,\delta })\) about the point 0 . This would mean that \(f( ( {-\delta,\delta }) ) \subset B\), so that, applying \({\pi }_{n}\) to both sides of the inclusion,
 
-\[
-{f}_{n}( ( {-\delta,\delta }) ) = ( {-\delta,\delta }) \subset ( {-1/n,1/n})
-\]
+ \[
+ {f}_{n}( ( {-\delta,\delta }) ) = ( {-\delta,\delta }) \subset ( {-1/n,1/n})
+ \]
 
-for all \(n\), a contradiction
+ for all \(n\), a contradiction
 \end{example}
 \end{centeredblock*}
 
@@ -1659,7 +1658,7 @@ Using what we have just proved, we can rephrase the definition of the metric top
 
 \munkresfig[0.3]{20.1}[Figure 20.1]
 \begin{centeredblock}
-A set \(U\) is open in the metric topology induced by \(d\) if and only if for each \(y \in U\), there is a \(\delta > 0\) such that \({B}_{d}( {y,\delta }) \subset U\).
+ A set \(U\) is open in the metric topology induced by \(d\) if and only if for each \(y \in U\), there is a \(\delta > 0\) such that \({B}_{d}( {y,\delta }) \subset U\).
 \end{centeredblock}
 Clearly this condition implies that \(U\) is open. Conversely, if \(U\) is open, it contains a basis element \(B = {B}_{d}( {x,\epsilon })\) containing \(y\), and \(B\) in turn contains a basis element \({B}_{d}( {y,\delta })\) centered at \(y\)
 
