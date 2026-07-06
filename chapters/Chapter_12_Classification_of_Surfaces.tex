@@ -14,11 +14,11 @@ To treat this pasting process formally requires some care. First, let us define 
 P = {H}_{1} \cap \cdots \cap {H}_{n}
 \]
 
-is called the polygonal region determined by the points \({p}_{i}\). The points \({p}_{i}\) are called the vertices of \(P\) ; the line segment joining \({p}_{i - 1}\) and \({p}_{i}\) is called an edge of \(P\) ; the union of the edges of \(P\) is denoted Bd \(P\) ; and \(P -\) Bd \(P\) is denoted Int \(P\). It is not hard to show that if \(p\) is any point of Int \(P\), then \(P\) is the union of all line segments joining \(p\) and points of \(\mathrm{{Bd}}P\), and that two such line segments intersect only in the point \(p\).
+is called the polygonal region determined by the points \({p}_{i}\). The points \({p}_{i}\) are called the vertices of \(P\) ; the line segment joining \({p}_{i - 1}\) and \({p}_{i}\) is called an edge of \(P\) ; the union of the edges of \(P\) is denoted Bd \(P\) ; and \(P -\) Bd \(P\) is denoted Int \(P\). It is not hard to show that if \(p\) is any point of Int \(P\), then \(P\) is the union of all line segments joining \(p\) and points of \(\operatorname{Bd}P\), and that two such line segments intersect only in the point \(p\).
 
 Given a line segment \(L\) in \({\mathbb{R}}^{2}\), an orientation of \(L\) is simply an ordering of its end points; the first, say \(a\), is called the initial point, and the second, say \(b\), is called the final point, of the oriented line segment. We often say that \(L\) is oriented from a to \(b\) ; and we picture the orientation by drawing an arrow on \(L\) that points from a towards \(b\). If \({L}^{\prime }\) is another line segment, oriented from \(c\) to \(d\), then the positive linear map of \(L\) onto \({L}^{\prime }\) is the homeomorphism \(h\) that carries the point \(x = ( {1 - s}) a + {sb}\) of \(L\) to the point \(h(x) = ( {1 - s}) c + {sd}\) of \({L}^{\prime }\).
 
-If two polygonal regions \(P\) and \(Q\) have the same number of vertices, \({p}_{0},\ldots ,{p}_{n}\) and \({q}_{0},\ldots ,{q}_{n}\), respectively, with \({p}_{0} = {p}_{n}\) and \({q}_{0} = {q}_{n}\), then there is an obvious homeomorphism \(h\) of \(\mathrm{{Bd}}P\) with \(\mathrm{{Bd}}Q\) that carries the line segment from \({p}_{i - 1}\) to \({p}_{i}\) by a positive linear map onto the line segment from \({q}_{i - 1}\) to \({q}_{i}\). If \(p\) and \(q\) are fixed points of Int \(P\) and Int \(Q\), respectively, then this homeomorphism may be extended to a homeomorphism of \(P\) with \(Q\) by letting it map the line segment from \(p\) to the point \(x\) of Bd \(P\) linearly onto the line segment from \(q\) to \(h(x)\). See Figure 74.1.
+If two polygonal regions \(P\) and \(Q\) have the same number of vertices, \({p}_{0},\ldots ,{p}_{n}\) and \({q}_{0},\ldots ,{q}_{n}\), respectively, with \({p}_{0} = {p}_{n}\) and \({q}_{0} = {q}_{n}\), then there is an obvious homeomorphism \(h\) of \(\operatorname{Bd}P\) with \(\operatorname{Bd}Q\) that carries the line segment from \({p}_{i - 1}\) to \({p}_{i}\) by a positive linear map onto the line segment from \({q}_{i - 1}\) to \({q}_{i}\). If \(p\) and \(q\) are fixed points of Int \(P\) and Int \(Q\), respectively, then this homeomorphism may be extended to a homeomorphism of \(P\) with \(Q\) by letting it map the line segment from \(p\) to the point \(x\) of Bd \(P\) linearly onto the line segment from \(q\) to \(h(x)\). See Figure 74.1.
 
 \munkresfig[0.9]{74.1}[Figure 74.1]
 \begin{definition}
@@ -120,7 +120,7 @@ be a labelling scheme for the edges of \(P\). Let \(X\) be the resulting quotien
 \end{theorem}
 
 \begin{proof}
-	The proof is similar to the proof we gave for the torus in \S 73. Because \(\pi\) maps all vertices of \(P\) to a single point of \(X\), the space \(A = \pi ( {\operatorname{Bd}P})\) is a wedge of \(k\) circles. For each \(i\), choose an edge of \(P\) that is labelled \({a}_{i}\) ; let \({f}_{i}\) be the positive linear map of \(I\) onto this edge oriented counterclockwise; and let \({g}_{i} = \pi \circ {f}_{i}\). Then the loops \({g}_{1},\ldots ,{g}_{k}\) represent a set of free generators for \({\pi }_{1}( {A,{x}_{0}})\). The loop \(f\) running around \(\mathrm{{Bd}}P\) once in the counterclockwise direction generates the fundamental group of \(\mathrm{{Bd}}P\), and the loop \(\pi \circ f\) equals the loop
+	The proof is similar to the proof we gave for the torus in \S 73. Because \(\pi\) maps all vertices of \(P\) to a single point of \(X\), the space \(A = \pi ( {\operatorname{Bd}P})\) is a wedge of \(k\) circles. For each \(i\), choose an edge of \(P\) that is labelled \({a}_{i}\) ; let \({f}_{i}\) be the positive linear map of \(I\) onto this edge oriented counterclockwise; and let \({g}_{i} = \pi \circ {f}_{i}\). Then the loops \({g}_{1},\ldots ,{g}_{k}\) represent a set of free generators for \({\pi }_{1}( {A,{x}_{0}})\). The loop \(f\) running around \(\operatorname{Bd}P\) once in the counterclockwise direction generates the fundamental group of \(\operatorname{Bd}P\), and the loop \(\pi \circ f\) equals the loop
 \[
 {( {g}_{{i}_{1}}) }^{{\epsilon }_{1}} * \cdots * {( {g}_{{i}_{n}}) }^{{\epsilon }_{n}}
 \]
@@ -186,7 +186,7 @@ There exist many other ways to form compact surfaces. One can for instance delet
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item Find a presentation for the fundamental group of \({P}^{2}\# T\).
-\item Consider the space \(X\) obtained from a seven-sided polygonal region by means of the labelling scheme abaaab \({}^{-1}{a}^{-1}\). Show that the fundamental group of \(X\) is the free product of two cyclic groups. [Hint: See Theorem 68.7.]
+\item Consider the space \(X\) obtained from a seven-sided polygonal region by means of the labelling scheme abaaab\(^{-1}\)a\(^{-1}\). Show that the fundamental group of \(X\) is the free product of two cyclic groups. [Hint: See Theorem 68.7.]
 \item The Klein bottle \(K\) is the space obtained from a square by means of the labelling scheme \({ab}{a}^{-1}b\). Figure 74.11 indicates how \(K\) can be pictured as an immersed surface in \({\mathbb{R}}^{3}\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Find a presentation for the fundamental group of \(K\).
@@ -266,7 +266,7 @@ The homomorphism \(\phi\) can be described as follows: Given an element \(y\) of
 \end{theorem}
 
 \begin{proof}
-	In view of the preceding corollary, Theorem 74.3 implies that \({H}_{1}( X)\) is isomorphic to the quotient of the free abelian group \({F}^{\prime }\) on the set \({\alpha }_{1},{\beta }_{1},\ldots ,{\alpha }_{n},{\beta }_{n}\) by the subgroup generated by the element \([ {{\alpha }_{1},{\beta }_{1}}] \; \cdot [ {{\alpha }_{n},{\beta }_{n}}]\), where \([ {\alpha ,\beta }] = {\alpha \beta }{\alpha }^{-1}{\beta }^{-1}\) as usual. Because the group \({F}^{\prime }\) is abelian, this element equals the identity element.
+	In view of the preceding corollary, Theorem 74.3 implies that \({H}_{1}( X)\) is isomorphic to the quotient of the free abelian group \({F}^{\prime }\) on the set \({\alpha }_{1},{\beta }_{1},\ldots ,{\alpha }_{n},{\beta }_{n}\) by the subgroup generated by the element \([ {{\alpha }_{1},{\beta }_{1}}] \cdots [ {{\alpha }_{n},{\beta }_{n}}]\), where \([ {\alpha ,\beta }] = {\alpha \beta }{\alpha }^{-1}{\beta }^{-1}\) as usual. Because the group \({F}^{\prime }\) is abelian, this element equals the identity element.
 \end{proof}
 \begin{theorem}
 	If \(X\) is the \(m\) -fold connected sum of projective planes, then the torsion subgroup \(T( X)\) of \({H}_{1}( X)\) has order 2, and \({H}_{1}( X) /T( X)\) is a free abelian group of rank \(m - 1\).
@@ -283,7 +283,7 @@ The homomorphism \(\phi\) can be described as follows: Given an element \(y\) of
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item Calculate \({H}_{1}( {{P}^{2}\# T})\). Assuming that the list of compact surfaces given in Theorem 75.5 is a complete list, to which of these surfaces is \({P}^{2}\# T\) homeomorphic?
 \item If \(K\) is the Klein bottle, calculate \({H}_{1}( K)\) directly.
-\item Let \(X\) be the quotient space obtained from an 8-sided polygonal region \(P\) by pasting its edges together according to the labelling scheme \(acadb\mathrm{c}{b}^{-1}d\).
+\item Let \(X\) be the quotient space obtained from an 8-sided polygonal region \(P\) by pasting its edges together according to the labelling scheme \(acadbc{b}^{-1}d\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Check that all vertices of \(P\) are mapped to the same point of the quotient space \(X\) by the pasting map.
  \item Calculate \({H}_{1}( X)\).
@@ -536,7 +536,7 @@ Applying the preceding lemma again, we conclude that \({w}^{\prime }\) is equiva
 where \({w}^{\prime \prime }\) has the same length as \(w\). If \({w}_{2}\) is of torus type, we are finished; otherwise, we continue the argument similarly.
 \end{proof}
 
-It follows from the preceding corollary that if \(w\) is a proper labelling scheme for a polygonal region, then either (I) \(w\) is of torus type, or (2) \(w\) is equivalent to a scheme of the form \(( {{a}_{1}{a}_{1}}) \ldots ( {{a}_{k}{a}_{k}}) {w}_{1}\), where \({w}_{1}\) is of torus type, or (3) \(w\) is equivalent to a scheme of the form \(( {{a}_{1}{a}_{1}}) \ldots ( {{a}_{k}{a}_{k}})\). In case (3), we are finished, for such a scheme represents a connected sum of projective planes. So let us consider cases (1) and (2).
+It follows from the preceding corollary that if \(w\) is a proper labelling scheme for a polygonal region, then either (1) \(w\) is of torus type, or (2) \(w\) is equivalent to a scheme of the form \(( {{a}_{1}{a}_{1}}) \ldots ( {{a}_{k}{a}_{k}}) {w}_{1}\), where \({w}_{1}\) is of torus type, or (3) \(w\) is equivalent to a scheme of the form \(( {{a}_{1}{a}_{1}}) \ldots ( {{a}_{k}{a}_{k}})\). In case (3), we are finished, for such a scheme represents a connected sum of projective planes. So let us consider cases (1) and (2).
 
 At this point, we note that if \(w\) is a scheme of length greater than four of the form indicated in case (1) or case (2), and if \(w\) contains two adjacent terms having the same label but opposite exponents, then the cancelling operation may be applied to reduce \(w\) to a shorter scheme that is also of the form indicated in cases (1), (2), or (3). Therefore, we can reduce \(w\) either to a scheme of length four, or to a scheme that does not contain two such adjacent terms.
 
@@ -713,10 +713,7 @@ by \(( *)\) read backwards
 \[
 \sim {bb}[ {a{c}^{-1}{ac}{w}_{1}{w}_{0}}]
 \]
- by
-\[
-( *)
-\]
+by \((*)\)
 
 \[
 = [ {bb}] a{[ c] }^{-1}a[ {c{w}_{1}{w}_{0}}]
@@ -725,10 +722,7 @@ by \(( *)\) read backwards
 \[
 \sim {aa}[ {{bbcc}{w}_{1}{w}_{0}}]
 \]
- by
-\[
-( *)
-\]
+by \((*)\)
 
 \[
 \sim {w}_{0}{aabbcc}{w}_{1}
@@ -857,7 +851,7 @@ Given \(v\), let us define two triangles \({A}_{i}\) and \({A}_{j}\) having \(v\
 \munkresfig[0.6]{78.2}[Figure 78.2]
 On the other hand, if \(X\) is a surface, then \(v\) has a neighborhood homeomorphic to an open 2-ball. In this case, \(v\) has arbitrarily small neighborhoods \(W\) such that \(W - v\) is connected.
 
-Step 2 Now we tackle the first question. This is a bit more work. First, we show that, given an edge \(e\) of the triangle \({A}_{i}\), there is at least one additional triangle \({A}_{j}\) having \(e\) as an edge. This is a consequence of the following result:
+Step 2. Now we tackle the first question. This is a bit more work. First, we show that, given an edge \(e\) of the triangle \({A}_{i}\), there is at least one additional triangle \({A}_{j}\) having \(e\) as an edge. This is a consequence of the following result:
 
 If \(X\) is a triangular region in the plane and if \(x\) is a point interior to one of the edges of \(X\), then \(x\) does not have a neighborhood in \(X\) homeomorphic to an open 2-ball.
 

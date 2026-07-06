@@ -16,7 +16,7 @@ Throughout the chapter, we assume familiarity with complete metric spaces (§43)
 
 The defining condition for a Baire space is probably as ``unnatural looking'' as any condition we have yet introduced in this book. But bear with us awhile.
 
-In this section, we shall define Baire spaces and shall show that two important classes of spaces-the complete metric spaces and the compact Hausdorff spaces-are contained in the class of Baire spaces. Then we shall give some applications, which, even if they do not make the Baire condition seem any more natural, will at least show what a useful tool it can be. In fact, it turns out to be a very useful and fairly sophisticated tool in both analysis and topology.
+In this section, we shall define Baire spaces and shall show that two important classes of spaces---the complete metric spaces and the compact Hausdorff spaces---are contained in the class of Baire spaces. Then we shall give some applications, which, even if they do not make the Baire condition seem any more natural, will at least show what a useful tool it can be. In fact, it turns out to be a very useful and fairly sophisticated tool in both analysis and topology.
 
 \begin{definition}
 Recall that if \(A\) is a subset of a space \(X\), the interior of \(A\) is defined as the union of all open sets of \(X\) that are contained in \(A\). To say that \(A\) has empty interior is to say then that \(A\) contains no open set of \(X\) other than the empty set. Equivalently, \(A\) has empty interior if every point of \(A\) is a limit point of the complement of \(A\), that is, if the complement of \(A\) is dense in \(X\).
@@ -51,7 +51,7 @@ We shall not use the terms ``first category'' and ``second category'' in this bo
 The preceding definition is the ``closed set definition'' of a Baire space. There is also a formulation involving open sets that is frequently useful. It is given in the following lemma.
 
 \begin{lemma}
-\(X\) is a Baire space if and only if given any countable collection \(\{ {U}_{n}\}\) of open sets in \(X\), each of which is dense in \(X\), their intersection \(\cap {U}_{n}\) is also dense in \(X\).
+\(X\) is a Baire space if and only if given any countable collection \(\{ {U}_{n}\}\) of open sets in \(X\), each of which is dense in \(X\), their intersection \(\bigcap {U}_{n}\) is also dense in \(X\).
 \end{lemma}
 
 \begin{proof}
@@ -94,18 +94,19 @@ In general, given the nonempty open set \({U}_{n - 1}\), we choose a point of \(
 \text{ diam }{U}_{n} < 1/n\text{ in the metric case. }
 \]
 
-We assert that the intersection \(\cap {\bar{U}}_{n}\) is nonempty. From this fact, our theorem will follow. For if \(x\) is a point of \(\bigcap {\bar{U}}_{n}\), then \(x\) is in \({U}_{0}\) because \({\bar{U}}_{1} \subset {U}_{0}\). And for each \(n\), the point \(x\) is not in \({A}_{n}\) because \({\bar{U}}_{n}\) is disjoint from \({A}_{n}\).
+We assert that the intersection \(\bigcap {\bar{U}}_{n}\) is nonempty. From this fact, our theorem will follow. For if \(x\) is a point of \(\bigcap {\bar{U}}_{n}\), then \(x\) is in \({U}_{0}\) because \({\bar{U}}_{1} \subset {U}_{0}\). And for each \(n\), the point \(x\) is not in \({A}_{n}\) because \({\bar{U}}_{n}\) is disjoint from \({A}_{n}\).
 
-The proof that \(\bigcap {\bar{U}}_{n}\) is nonempty splits into two parts, depending on whether \(X\) is compact Hausdorff or complete metric. If \(X\) is compact Hausdorff, we consider the nested sequence \({\bar{U}}_{1} \supset {\bar{U}}_{2} \supset \cdots\) of nonempty subsets of \(X\). The collection \(\{ {\bar{U}}_{n}\}\) has the finite intersection property; since \(X\) is compact, the intersection \(\cap {U}_{n}\) must be nonempty.
+The proof that \(\bigcap {\bar{U}}_{n}\) is nonempty splits into two parts, depending on whether \(X\) is compact Hausdorff or complete metric. If \(X\) is compact Hausdorff, we consider the nested sequence \({\bar{U}}_{1} \supset {\bar{U}}_{2} \supset \cdots\) of nonempty subsets of \(X\). The collection \(\{ {\bar{U}}_{n}\}\) has the finite intersection property; since \(X\) is compact, the intersection \(\bigcap {\bar{U}}_{n}\) must be nonempty.
 
 If \(X\) is complete metric, we apply the following lemma.
 \end{proof}
 \begin{lemma}
-Let \({C}_{1} \supset {C}_{2} \supset \cdots\) be a nested sequence of nonempty closed sets in the complete metric space \(X\). If \(\operatorname{diam}{C}_{n} \rightarrow 0\), then \(\cap {C}_{n} \neq \varnothing\).
+Let \({C}_{1} \supset {C}_{2} \supset \cdots\) be a nested sequence of nonempty closed sets in the complete metric space \(X\). If \(\operatorname{diam}{C}_{n} \rightarrow 0\), then \(\bigcap {C}_{n} \neq \varnothing\).
 \end{lemma}
 
 \begin{proof}
 We gave this as an exercise in §43. Here is a proof: Choose \({x}_{n} \in {C}_{n}\) for each \(n\). Because \({x}_{n},{x}_{m} \in {C}_{N}\) for \(n,m \geq N\), and because \(\operatorname{diam}{C}_{N}\) can be made less than any given \(\epsilon\) by choosing \(N\) large enough, the sequence \(({x}_{n})\) is a Cauchy sequence. Suppose that it converges to \(x\). Then for given \(k\), the subsequence \({x}_{k},{x}_{k + 1},\ldots\) also converges to \(x\). Thus \(x\) necessarily belongs to \({\bar{C}}_{k} = {C}_{k}\). Then \(x \in \bigcap {C}_{k}\), as desired.
+\end{proof}
 Here is one application of the theory of Baire spaces; we shall give further applications in the sections that follow. This application is perhaps more amusing than profound. It concerns a question that a student might ask concerning convergent sequences of continuous functions.
 
 Let \({f}_{n} : [ {0,1}] \rightarrow \mathbb{R}\) be a sequence of continuous functions such that \({f}_{n}(x) \rightarrow\) \(f(x)\) for each \(x \in [ {0,1}]\). There are examples that show the limit function \(f\) need not be continuous. But one might wonder just how discontinuous \(f\) can be. Could it be discontinuous everywhere, for instance? The answer is ``no.'' We shall show that \(f\) must be continuous at infinitely many points of \([ {0,1}]\). In fact, the set of points at which \(f\) is continuous is dense in \([ {0,1}]\) !
@@ -118,11 +119,12 @@ Proof. Let \({A}_{n}\) be a countable collection of closed sets of \(Y\) that ha
 
 Let \({\bar{A}}_{n}\) be the closure of \({A}_{n}\) in \(X\) ; then \({\bar{A}}_{n} \cap Y = {A}_{n}\). The set \({\bar{A}}_{n}\) has empty interior in \(X\). For if \(U\) is a nonempty open set of \(X\) contained in \({\bar{A}}_{n}\), then \(U\) must intersect \({A}_{n}\). Then \(U \cap Y\) is a nonempty open set of \(Y\) contained in \({A}_{n}\), contrary to hypothesis.
 
-If the union of the sets \({A}_{n}\) contains the nonempty open set \(W\) of \(Y\), then the union of the sets \({A}_{n}\) also contains the set \(W\), which is open in \(X\) because \(Y\) is open in \(X\). But each set \({\bar{A}}_{n}\) has empty interior in \(X\), contradicting the fact that \(X\) is a Baire space.
+If the union of the sets \({A}_{n}\) contains the nonempty open set \(W\) of \(Y\), then the union of the sets \({\bar{A}}_{n}\) also contains the set \(W\), which is open in \(X\) because \(Y\) is open in \(X\). But each set \({\bar{A}}_{n}\) has empty interior in \(X\), contradicting the fact that \(X\) is a Baire space.
 
 *Theorem 48.5. Let \(X\) be a space; let \((Y, d)\) be a metric space. Let \({f}_{n} : X \rightarrow Y\) be a sequence of continuous functions such that \({f}_{n}(x) \rightarrow f(x)\) for all \(x \in X\), where \(f : X \rightarrow Y\). If \(X\) is a Baire space, the set of points at which \(f\) is continuous is dense in \(X\).
 
-Proof. Given a positive integer \(N\) and given \(\epsilon > 0\), define
+\begin{proof}
+Given a positive integer \(N\) and given \(\epsilon > 0\), define
 
 \[
 {A}_{N}( \epsilon ) = \{ x \mid d({{f}_{n}(x),{f}_{m}(x) }) \leq \epsilon \text{ for all } n,m \geq N \}.
@@ -199,8 +201,8 @@ Applying the triangle inequality to \(( *),({* * })\), and \(({* * * })\) gives 
 \item Show that the irrationals are a Baire space.
 \item Prove the following: \textsl{Theorem.} If \(D\) is a countable dense subset of \(\mathbb{R}\), there is no function \(f : \mathbb{R} \rightarrow \mathbb{R}\) that is continuous precisely at the points of \(D\). Proof.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
- \item Show that if \(f : \mathbb{R} \rightarrow \mathbb{R}\), then the set \(C\) of points at which \(f\) is continuous is a \({G}_{\delta }\) set in \(\mathbb{R}\). [Hint: Let \({U}_{n}\) be the union of all open sets \(U\) of \(\mathbb{R}\) such that \(\operatorname{diam}f( U) < 1/n\). Show that \(C = \bigcap {U}_{n}\).\}
- \item Show that \(D\) is not a \({G}_{\delta }\) set in \(\mathbb{R}\). [Hint: Suppose \(D = \bigcap {W}_{n}\), where \({W}_{n}\) is open in \(\mathbb{R}\). For \(d \in D\), set \({V}_{d} = \mathbb{R} - \{ d\}\). Show \({W}_{n}\) and \({V}_{d}\) are dense in \(\mathbb{R}\).
+ \item Show that if \(f : \mathbb{R} \rightarrow \mathbb{R}\), then the set \(C\) of points at which \(f\) is continuous is a \({G}_{\delta }\) set in \(\mathbb{R}\). [Hint: Let \({U}_{n}\) be the union of all open sets \(U\) of \(\mathbb{R}\) such that \(\operatorname{diam}f( U) < 1/n\). Show that \(C = \bigcap {U}_{n}\).]
+ \item Show that \(D\) is not a \({G}_{\delta }\) set in \(\mathbb{R}\). [Hint: Suppose \(D = \bigcap {W}_{n}\), where \({W}_{n}\) is open in \(\mathbb{R}\). For \(d \in D\), set \({V}_{d} = \mathbb{R} - \{ d\}\). Show \({W}_{n}\) and \({V}_{d}\) are dense in \(\mathbb{R}\).]
  \end{enumerate}
 \item If \({f}_{n}\) is a sequence of continuous functions \({f}_{n} : \mathbb{R} \rightarrow \mathbb{R}\) such that \({f}_{n}(x) \rightarrow f(x)\) for each \(x \in \mathbb{R}\), show that \(f\) is continuous at uncountably many points of \(\mathbb{R}\).
 \item Let \(g : {\mathbb{Z}}_{ + } \rightarrow \mathbb{Q}\) be a bijective function; let \({x}_{n} = g(n)\). Define \(f : \mathbb{R} \rightarrow \mathbb{R}\) as follows: \[ f({x}_{n}) = 1/n\;\text{ for }{x}_{n} \in \mathbb{Q}, \] \[ f(x) = 0\;\text{ for }x \notin \mathbb{Q} \] Show that \(f\) is continuous at each irrational and discontinuous at each rational. Can you find a sequence of continuous functions \({f}_{n}\) converging to \(f\) ?
@@ -255,7 +257,7 @@ Then for \(n \geq 2\), we define \({U}_{n}\) by declaring that a function \(f\) 
 
 \begin{centeredblock}
 \begin{example}
-Let \(\alpha > 0\) be given. The function \(f : [ {0,1}] \rightarrow \mathbb{R}\) given by the equation \(f(x) = {4\alpha x}({1 - x})\), whose graph is a parabola, satisfies the condition \({\Delta f}({x,h}) \geq \alpha\) for \(h = 1/4\) and all \(x\), as you can check. Geometrically speaking, what this says is that for each \(x\), at least one of the indicated secant lines of the parabola in Figure 49.1 has slope of absolute value at least \(\alpha\). Hence if \(\alpha > 4\), the function \(f\) belongs to \({U}_{4}\). The function \(g\) pictured in Figure 49.1 satisfies the condition \({\Delta g}({x,h}) \geq \alpha\) for any \(h \leq 1/4\) ; hence \(g\) belongs to \({U}_{n}\) provided \(\alpha > n\). The function \(k\) satisfies the condition \(k({x,h}) \geq \alpha\) for any \(h \leq 1/8\) ; hence \(k\) belongs to \({U}_{n}\) if \(\alpha > n\).
+Let \(\alpha > 0\) be given. The function \(f : [ {0,1}] \rightarrow \mathbb{R}\) given by the equation \(f(x) = {4\alpha x}({1 - x})\), whose graph is a parabola, satisfies the condition \({\Delta f}({x,h}) \geq \alpha\) for \(h = 1/4\) and all \(x\), as you can check. Geometrically speaking, what this says is that for each \(x\), at least one of the indicated secant lines of the parabola in Figure 49.1 has slope of absolute value at least \(\alpha\). Hence if \(\alpha > 4\), the function \(f\) belongs to \({U}_{4}\). The function \(g\) pictured in Figure 49.1 satisfies the condition \({\Delta g}({x,h}) \geq \alpha\) for any \(h \leq 1/4\) ; hence \(g\) belongs to \({U}_{n}\) provided \(\alpha > n\). The function \(k\) satisfies the condition \({\Delta k}({x,h}) \geq \alpha\) for any \(h \leq 1/8\) ; hence \(k\) belongs to \({U}_{n}\) if \(\alpha > n\).
 
 \munkresfig[1.0]{49.1}[Figure 49.1]
 \end{example}
@@ -408,9 +410,9 @@ Note that the elements of \({\mathcal{A}}_{2}\) are disjoint. Then, we define a 
 e = \{ n\} \times ({m,m + 1}) \;\text{ or }\;e = ({n,n + 1}) \times \{ m\},
 \]
 
-and expanding it slightly to an open set \({U}_{e}\) of \({\mathbb{R}}^{2}\), being careful to ensure that if \(e \neq {e}^{\prime }\), the sets \({U}_{e}\) and \({U}_{{e}^{\prime }}\) are disjoint. We also choose each \({U}_{e}\) so that its diameter is at most 2 . Finally, we define \({\mathcal{A}}_{0}\) to be the collection consisting of all open balls of radius \(\frac{1}{2}\) about the points \(n \times m\). See Figure 50.1
+and expanding it slightly to an open set \({U}_{e}\) of \({\mathbb{R}}^{2}\), being careful to ensure that if \(e \neq {e}^{\prime }\), the sets \({U}_{e}\) and \({U}_{{e}^{\prime }}\) are disjoint. We also choose each \({U}_{e}\) so that its diameter is at most 2 . Finally, we define \({\mathcal{A}}_{0}\) to be the collection consisting of all open balls of radius \(\frac{1}{2}\) about the points \(n \times m\). See Figure 50.1.
 
-The collection of open sets \(\mathcal{A} = {\mathcal{A}}_{2} \cup {\mathcal{A}}_{1} \cup {\mathcal{A}}_{0}\) covers \({\mathbb{R}}^{2}\). Each of its elements has diameter at most 2 . And it has order 3, since no point of \({\mathbb{R}}^{2}\) can lie in more than one set from each \({\mathcal{A}}_{1}\).
+The collection of open sets \(\mathcal{A} = {\mathcal{A}}_{2} \cup {\mathcal{A}}_{1} \cup {\mathcal{A}}_{0}\) covers \({\mathbb{R}}^{2}\). Each of its elements has diameter at most 2 . And it has order 3, since no point of \({\mathbb{R}}^{2}\) can lie in more than one set from each \({\mathcal{A}}_{i}\).
 
 \munkresfig[1.0]{50.1}[Figure 50.1]
 Now let \(X\) be a compact subspace of \({\mathbb{R}}^{2}\). Given an open covering of \(X\), it has a positive Lebesgue number \(\delta\). Consider the homeomorphism \(f : {\mathbb{R}}^{2} \rightarrow {\mathbb{R}}^{2}\) defined by the equation \(f(x) = ({\delta /3}) x\). The images under \(f\) of the open sets of the collection \(\mathcal{A}\) form an open covering of \({\mathbb{R}}^{2}\) by sets of diameter less than \(\delta\); their intersections with \(X\) form the required open covering of \(X\).
@@ -491,7 +493,7 @@ An obvious question occurs at this point: Does a compact 2-manifold have topolog
 
 \begin{centeredblock}
 \begin{example}
-An arc is a space homeomorphic to the closed unit interval; the end points of \(A\) are the points \(p\) and \(q\) such that \(A - \{ p\}\) and \(A - \{ q\}\) are connected. A (finite) linear graph \(G\) is a Hausdorff space that is written as the union of finitely many arcs, each pair of which intersect in at most a common end point. The arcs in the collection are called the edges of \(G\), and the end points of the arcs are called the vertices of \(G\). Each edge of \(G\), being compact, is closed in \(G\) ; the preceding corollary tells us that \(G\) has topological dimension 1.
+An arc \(A\) is a space homeomorphic to the closed unit interval; the end points of \(A\) are the points \(p\) and \(q\) such that \(A - \{ p\}\) and \(A - \{ q\}\) are connected. A (finite) linear graph \(G\) is a Hausdorff space that is written as the union of finitely many arcs, each pair of which intersect in at most a common end point. The arcs in the collection are called the edges of \(G\), and the end points of the arcs are called the vertices of \(G\). Each edge of \(G\), being compact, is closed in \(G\) ; the preceding corollary tells us that \(G\) has topological dimension 1.
 \end{example}
 \end{centeredblock}
 
@@ -506,9 +508,13 @@ Every finite linear graph can be imbedded in \({\mathbb{R}}^{3}\). The proof inv
 S = \{ {({t,{t}^{2},{t}^{3}}) \mid t \in \mathbb{R}}\}
 \]
 
+are in general position, because if four of them were coplanar, the equation
+\[
+{At} + B{t}^{2} + C{t}^{3} = D
+\]
 would have four distinct real roots \({}^{1}\) And if three of these points belonged to a single line, we could take an additional point of \(S\) and obtain four points that lie on a plane.
 
-Now, given a finite linear graph \(G\), with vertices \({v}_{1},\ldots ,{v}_{n}\), let us choose a set \(\{ {{\mathbf{z}}_{1},\ldots ,{\mathbf{z}}_{n}}\}\) of points of \({\mathbb{R}}^{3}\) that is in general position. Define a map \(f : G \rightarrow {\mathbb{R}}^{3}\) by letting \(f\) map the vertex \({v}_{i}\) to the point \({\mathbf{z}}_{i}\), and map the edge joining \({v}_{i}\) and \({v}_{j}\) homeo-morphically onto the line segment joining \({\mathbf{z}}_{i}\) and \({\mathbf{z}}_{j}\). Now each edge of \(G\) is closed in \(G\). It follows that \(f\) is continuous, by the pasting lemma. We show that \(f\) is injective, from which it follows that \(f\) is an imbedding. Let \(e = {v}_{i}{v}_{j}\) and \({e}^{\prime } = {v}_{k}{v}_{m}\) be two edges of \(G\). If they have no vertex in common, then the line segments \(f( e)\) and \(f({e}^{\prime })\) are disjoint, for otherwise the points \({\mathbf{z}}_{i},{\mathbf{z}}_{j},{\mathbf{z}}_{k},{\mathbf{z}}_{m}\) would be coplanar. And if \(e\) and \({e}^{\prime }\) have a vertex in common, so that \(i = k\), say, then the line segments \(f( e)\) and \(f({e}^{\prime })\) intersect only in the point \({\mathbf{z}}_{i} = {\mathbf{z}}_{k}\), for otherwise \({\mathbf{z}}_{i},{\mathbf{z}}_{j}\), and \({\mathbf{z}}_{m}\) would be collinear.
+Now, given a finite linear graph \(G\), with vertices \({v}_{1},\ldots ,{v}_{n}\), let us choose a set \(\{ {{\mathbf{z}}_{1},\ldots ,{\mathbf{z}}_{n}}\}\) of points of \({\mathbb{R}}^{3}\) that is in general position. Define a map \(f : G \rightarrow {\mathbb{R}}^{3}\) by letting \(f\) map the vertex \({v}_{i}\) to the point \({\mathbf{z}}_{i}\), and map the edge joining \({v}_{i}\) and \({v}_{j}\) homeomorphically onto the line segment joining \({\mathbf{z}}_{i}\) and \({\mathbf{z}}_{j}\). Now each edge of \(G\) is closed in \(G\). It follows that \(f\) is continuous, by the pasting lemma. We show that \(f\) is injective, from which it follows that \(f\) is an imbedding. Let \(e = {v}_{i}{v}_{j}\) and \({e}^{\prime } = {v}_{k}{v}_{m}\) be two edges of \(G\). If they have no vertex in common, then the line segments \(f( e)\) and \(f({e}^{\prime })\) are disjoint, for otherwise the points \({\mathbf{z}}_{i},{\mathbf{z}}_{j},{\mathbf{z}}_{k},{\mathbf{z}}_{m}\) would be coplanar. And if \(e\) and \({e}^{\prime }\) have a vertex in common, so that \(i = k\), say, then the line segments \(f( e)\) and \(f({e}^{\prime })\) intersect only in the point \({\mathbf{z}}_{i} = {\mathbf{z}}_{k}\), for otherwise \({\mathbf{z}}_{i},{\mathbf{z}}_{j}\), and \({\mathbf{z}}_{m}\) would be collinear.
 \end{example}
 \end{centeredblock}
 
@@ -611,7 +617,7 @@ Then we can use \(\rho\) to denote the corresponding sup metric on the space \(\
 \rho ({f,g}) = \sup \{ | {f(x) - g(x) }|, x \in X\}.
 \]
 
-The space \(\mathcal{C}({X,{\mathbb{R}}^{N}})\) is complete in the metric \(\rho\), since \({\mathbb{R}}^{N}\) is complete in the square metric
+The space \(\mathcal{C}({X,{\mathbb{R}}^{N}})\) is complete in the metric \(\rho\), since \({\mathbb{R}}^{N}\) is complete in the square metric.
 
 Choose a metric \(d\) for the space \(X\) ; because \(X\) is compact, \(d\) is bounded. Given a continuous map \(f : X \rightarrow {\mathbb{R}}^{N}\), let us define
 
@@ -631,7 +637,7 @@ is dense in \(\mathcal{C}({X,{\mathbb{R}}^{N}})\) and is in particular nonempty.
 
 If \(f\) is an element of this intersection, then \(\Delta ( f) < 1/n\) for every \(n\). Therefore, \(\Delta ( f) = 0\) and \(f\) is injective. Because \(X\) is compact, \(f\) is an imbedding. Thus, the imbedding theorem is proved.
 
-(1) \({U}_{\epsilon }\) is open in \(\mathcal{C}({X,{\mathbb{R}}^{N}})\). Given an element \(f\) of \({U}_{\epsilon }\), we wish to find some ball \({B}_{\rho }({f,\delta })\) about \(f\) that is contained in \({U}_{\epsilon }\). First choose a number \(b\) such that \(\Delta ( f) < b < \epsilon\). Note that if \(f(x) = f( y) = z\), then \(x\) and \(y\) belong to the set \({f}^{-1}({\{ z\} })\), so that \(d({x,y})\) must be less than \(b\) It follows that if we let \(A\) be the following subset of \(X \times X\),
+(1) \({U}_{\epsilon }\) is open in \(\mathcal{C}({X,{\mathbb{R}}^{N}})\). Given an element \(f\) of \({U}_{\epsilon }\), we wish to find some ball \({B}_{\rho }({f,\delta })\) about \(f\) that is contained in \({U}_{\epsilon }\). First choose a number \(b\) such that \(\Delta ( f) < b < \epsilon\). Note that if \(f(x) = f( y) = z\), then \(x\) and \(y\) belong to the set \({f}^{-1}({\{ z\} })\), so that \(d({x,y})\) must be less than \(b\). It follows that if we let \(A\) be the following subset of \(X \times X\),
 
 \[
 A = \{ x \times y \mid d({x,y}) \geq b\}
@@ -657,7 +663,7 @@ Let us cover \(X\) by finitely many open sets \(\{ {{U}_{1},\ldots ,{U}_{n}}\}\)
 
 (3) \(\{ {{U}_{1},\ldots ,{U}_{n}}\}\) has order \(\leq m + 1\).
 
-Let \(\{ {\phi }_{i}\}\) be a partition of unity dominated by \(\{ {U}_{i}\}\) (see §36) ). For each \(i\), choose a point \({x}_{i} \in {U}_{i}\). Then choose, for each \(i\), a point \({\mathbf{z}}_{i} \in {\mathbb{R}}^{N}\) such that \({\mathbf{z}}_{i}\) is within \(\delta /2\) of the point \(f({x}_{i})\), and such that the set \(\{ {{\mathbf{z}}_{1},\ldots ,{\mathbf{z}}_{n}}\}\) is in general position in \({\mathbb{R}}^{N}\). Finally, define \(g : X \rightarrow {\mathbb{R}}^{N}\) by the equation
+Let \(\{ {\phi }_{i}\}\) be a partition of unity dominated by \(\{ {U}_{i}\}\) (see §36). For each \(i\), choose a point \({x}_{i} \in {U}_{i}\). Then choose, for each \(i\), a point \({\mathbf{z}}_{i} \in {\mathbb{R}}^{N}\) such that \({\mathbf{z}}_{i}\) is within \(\delta /2\) of the point \(f({x}_{i})\), and such that the set \(\{ {{\mathbf{z}}_{1},\ldots ,{\mathbf{z}}_{n}}\}\) is in general position in \({\mathbb{R}}^{N}\). Finally, define \(g : X \rightarrow {\mathbb{R}}^{N}\) by the equation
 
 \[
 g(x) = \mathop{\sum }\limits_{{i = 1}}^{n}{\phi }_{i}(x) {\mathbf{z}}_{i}.
@@ -671,7 +677,7 @@ First, we show that \(\rho ({f,g}) < \delta\). Note that
 g(x) - f(x) = \mathop{\sum }\limits_{{i = 1}}^{n}{\phi }_{i}(x) {\mathbf{z}}_{i} - \mathop{\sum }\limits_{{i = 1}}^{n}{\phi }_{i}(x) f(x) ;
 \]
 
-here we use the fact that \(\sum {\phi }_{i}(x) = 1\) Then
+here we use the fact that \(\sum {\phi }_{i}(x) = 1\). Then
 
 \[
 g(x) - f(x) = \sum {\phi }_{i}(x) ({{\mathbf{z}}_{i} - f({x}_{i}) }) + \sum {\phi }_{i}(x) ({f({x}_{i}) - f(x) }).
@@ -709,7 +715,8 @@ To give some content to the imbedding theorem, we need some more examples of spa
 Every compact subspace of \({\mathbb{R}}^{N}\) has topological dimension at most \(N\).
 \end{theorem}
 
-Proof The proof is a generalization of the proof given in Example 3 for \({\mathbb{R}}^{2}\). Let \(\rho\) be the square metric on \({\mathbb{R}}^{N}\).
+\begin{proof}
+The proof is a generalization of the proof given in Example 3 for \({\mathbb{R}}^{2}\). Let \(\rho\) be the square metric on \({\mathbb{R}}^{N}\).
 
 Step 1. We begin by breaking \({\mathbb{R}}^{N}\) up into ``unit cubes.'' Define \(\mathcal{J}\) to be the following collection of open intervals in \(\mathbb{R}\) :
 
@@ -726,19 +733,19 @@ and define \(\mathcal{K}\) to be the following collection of one-point sets in \
 If \(M\) is an integer such that \(0 \leq M \leq N\), let \({\mathcal{C}}_{M}\) denote the set of all products
 
 \[
-C = {A}_{1} \times {A}_{2} \times \cdot \times {A}_{N},
+C = {A}_{1} \times {A}_{2} \times \cdots \times {A}_{N},
 \]
 
-where exactly \(M\) of the sets \({A}_{i}\) belong to \(\mathcal{J}\), and the remainder belong to \(\mathcal{K}\). If \(M > 0\), then \(C\) is homeomorphic to the product \({( 0,1) }^{M}\) and will be called an \(M\)-cube. If \(M = 0\), then \(C\) consists of a single point and will be called a 0 -cube
+where exactly \(M\) of the sets \({A}_{i}\) belong to \(\mathcal{J}\), and the remainder belong to \(\mathcal{K}\). If \(M > 0\), then \(C\) is homeomorphic to the product \({( 0,1) }^{M}\) and will be called an \(M\)-cube. If \(M = 0\), then \(C\) consists of a single point and will be called a 0-cube.
 
-Let \(\mathcal{C} = {\mathcal{C}}_{0} \cup {\mathcal{C}}_{1} \cup \cdot \cup {\mathcal{C}}_{N}\). Note that each point \(\mathbf{x}\) of \({\mathbb{R}}^{N}\) lies in precisely one element of \(\mathcal{C}\) because each real number \({x}_{i}\) lies in precisely one element of \(\mathcal{J} \cup \mathcal{K}\). We shall expand each element \(C\) of \(\mathcal{C}\) slightly to an open set \(U( C)\) of \({\mathbb{R}}^{N}\) of diameter at most \(3/2\), in such a way that if \(C\) and \(D\) are two different \(M\) -cubes, then \(U( C)\) and \(U( D)\) are disjoint.
+Let \(\mathcal{C} = {\mathcal{C}}_{0} \cup {\mathcal{C}}_{1} \cup \cdots \cup {\mathcal{C}}_{N}\). Note that each point \(\mathbf{x}\) of \({\mathbb{R}}^{N}\) lies in precisely one element of \(\mathcal{C}\) because each real number \({x}_{i}\) lies in precisely one element of \(\mathcal{J} \cup \mathcal{K}\). We shall expand each element \(C\) of \(\mathcal{C}\) slightly to an open set \(U( C)\) of \({\mathbb{R}}^{N}\) of diameter at most \(3/2\), in such a way that if \(C\) and \(D\) are two different \(M\) -cubes, then \(U( C)\) and \(U( D)\) are disjoint.
 
 Let \(\mathbf{x} = ({{x}_{1},\ldots ,{x}_{N}})\) be a point of the \(M\) -cube \(C\). We show that there is a number \(\epsilon ( \mathbf{x}) > 0\) such that the \(\epsilon ( \mathbf{x})\) -neighborhood of \(\mathbf{x}\) intersects no \(M\) -cube other than \(C\). If \(C\) is a 0 -cube, we set \(\epsilon ( \mathbf{x}) = 1/2\) and we are finished. Otherwise, \(M > 0\), and exactly \(M\) of the numbers \({x}_{i}\) are not integers. Choose \(\epsilon \leq 1/2\) so that for each \({x}_{i}\) that is not an integer, the interval \(({{x}_{i} - \epsilon ,{x}_{i} + \epsilon })\) contains no integer. If \(\mathbf{y} = ({{y}_{1},\ldots ,{y}_{N}})\) is a point lying in the \(\epsilon\) -neighborhood of \(\mathbf{x}\), then \({y}_{i}\) is nonintegral whenever \({x}_{i}\) is nonintegral. This means that \(y\) either belongs to the same \(M\) -cube as \(x\) does, or \(y\) belongs to some \(L\) -cube for \(L > M\). In either case, the \(\epsilon\) -neighborhood of \(\mathbf{x}\) intersects no \(M\) -cube other than \(C\).
 
 Given an \(M\) -cube \(C\), we define the neighborhood \(U( C)\) of \(C\) to be the union of the \(\epsilon ( \mathbf{x}) /2\) -neighborhoods of \(\mathbf{x}\) for all \(\mathbf{x} \in C\). It is then immediate that if \(C\) and \(D\) are different \(M\) -cubes, \(U( C)\) and \(U( D)\) are disjoint. Furthermore, if \(\mathbf{z}\) is a point of \(U( C)\), then \(d({\mathbf{z},\mathbf{x}}) < \epsilon ( \mathbf{x}) /2 < 1/4\) for some point \(\mathbf{x}\) of \(C\). Since \(C\) has diameter 1, the set \(U( C)\) has diameter at most \(3/2\).
 
 Step 2. Given \(M\) with \(0 \leq M \leq N\), define \({\mathcal{A}}_{M}\) to be the collection of all sets \(U( C)\), where \(C \in {\mathcal{C}}_{M}\). The elements of \({\mathcal{A}}_{M}\) are disjoint, and each has diameter at most \(3/2\). The remainder of the proof is a copy of the proof given in Example 3 for \({\mathbb{R}}^{2}\).
-
+\end{proof}
 \begin{corollary}
 Every compact \(m\) -manifold has topological dimension at most \(m\).
 \end{corollary}
@@ -764,7 +771,7 @@ For further results in dimension theory, the reader is referred to the classical
 \item Show that any discrete space has dimension 0.
 \item Show that any connected \({T}_{1}\) space having more than one point has dimension at least 1.
 \item Show that the topologist's sine curve has dimension 1.
-\item Show that the points \(0,{\epsilon }_{1},{\epsilon }_{2},{\epsilon }_{3}\), and (1,1,1) are in general position in \({\mathbb{R}}^{3}\). Sketch the corresponding imbedding into \({\mathbb{R}}^{3}\) of the complete graph on five vertices.
+\item Show that the points \(0,{\epsilon }_{1},{\epsilon }_{2},{\epsilon }_{3}\), and \((1,1,1)\) are in general position in \({\mathbb{R}}^{3}\). Sketch the corresponding imbedding into \({\mathbb{R}}^{3}\) of the complete graph on five vertices.
 \item Examine the proof of the imbedding theorem in the case \(m = 1\) and show that the map \(g\) of part (2) actually maps \(X\) onto a linear graph in \({\mathbb{R}}^{3}\).
 \item Prove the following: \textsl{Theorem.} Let \(X\) be a locally compact Hausdorff space with a countable basis, such that every compact subspace of \(X\) has topological dimension at most \(m\). Then \(X\) is homeomorphic to a closed subspace of \({\mathbb{R}}^{{2m} + 1}\). \textsl{Proof.} If \(f : X \rightarrow {\mathbb{R}}^{N}\) is a continuous map, we say \(f(x) \rightarrow \infty\) as \(x \rightarrow \infty\) if given \(n\), there is a compact subspace \(C\) of \(X\) such that \(f(x) > n\) for \(x \in X - C\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]

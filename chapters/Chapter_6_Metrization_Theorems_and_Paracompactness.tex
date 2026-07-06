@@ -26,7 +26,7 @@ There is another concept in topology that involves the notion of local finitenes
 
 Some of the sections of this chapter are independent of one another. The dependence among them is expressed in the following diagram.
 
-\munkresfig[0.8]{38.1} 
+\munkresfig[0.8]{38.1}[Figure 38.1]
 
 \section*{§ 39 Local Finiteness}
 
@@ -63,7 +63,7 @@ is locally finite in (0,1) but not in \(\mathbb{R}\), as is the collection
 
 (a) Any subcollection of \(\mathcal{A}\) is locally finite.
 
-(b) The collection \(\mathcal{B} = \{ \bar{A}{\} }_{A \in \mathcal{A}}\) of the closures of the elements of \(\mathcal{A}\) is locally finite.
+(b) The collection \(\mathcal{B} = \{ \bar{A} \}_{A \in \mathcal{A}}\) of the closures of the elements of \(\mathcal{A}\) is locally finite.
 
 (c) \(\overline{\mathop{\bigcup }\limits_{{A \in \mathcal{A}}}A} = \mathop{\bigcup }\limits_{{A \in \mathcal{A}}}\overline{A}\).
 \end{lemma}
@@ -212,7 +212,7 @@ We assert that equality holds. Given \(x \in W\), there is by regularity a basis
 Step 2. We show that every closed set \(C\) in \(X\) is a \({G}_{\delta }\) set in \(X\). Given \(C\), let \(W = X - C\). By Step 1, there are sets \({U}_{n}\) in \(X\) such that \(W = \bigcup {U}_{n}\). Then
 
 \[
-C = \bigcap ({X - {\bar{U}}_{n}})
+C = \mathop{\bigcap }\limits_{n}({X - {\bar{U}}_{n}})
 \]
 
 so that \(C\) equals a countable intersection of open sets of \(X\).
@@ -328,7 +328,7 @@ To see how paracompactness generalizes compactness, we recall the definition of 
 
 A space \(X\) is compact if every open covering \(\mathcal{A}\) of \(X\) has a finite open refinement \(\mathcal{B}\) that covers \(X\).
 
-This definition is equivalent to the usual one, given such a refinement \(\mathcal{B}\), one can choose for each element of \(\mathcal{B}\) an element of \(\mathcal{A}\) containing it; in this way one obtains a finite subcollection of \(\mathcal{A}\) that covers \(X\).
+This definition is equivalent to the usual one; given such a refinement \(\mathcal{B}\), one can choose for each element of \(\mathcal{B}\) an element of \(\mathcal{A}\) containing it; in this way one obtains a finite subcollection of \(\mathcal{A}\) that covers \(X\).
 
 This new formulation of compactness is an awkward one, but it suggests a way to generalize.
 
@@ -340,7 +340,7 @@ Many authors, following the lead of Bourbaki, include as part of the definition 
 
 \begin{centeredblock}
 \begin{example}
- The space \({\mathbb{R}}^{n}\) is paracompact. Let \(X = {\mathbb{R}}^{n}\). Let \(\mathcal{A}\) be an open covering of \(X\). Let \({B}_{0} = \varnothing\), and for each positive integer \(m\), let \({B}_{m}\) denote the open ball of radius \(m\) centered at the origin. Given \(m\), choose finitely many elements of \(\mathcal{A}\) that cover \({\bar{B}}_{m}\) and intersect each one with the open set \(X - {\bar{B}}_{m - 1}\), let this finite collection of open sets be denoted \({\mathcal{C}}_{m}\). Then the collection \(\mathcal{C} = \bigcup {\mathcal{C}}_{m}\) is a refinement of \(\mathcal{A}\). It is clearly locally finite, for the open set \({B}_{m}\) intersects only finitely many elements of \(\mathcal{C}\), namely those elements belonging to the collection \({\mathcal{C}}_{1} \cup \cdots \cup {\mathcal{C}}_{m}\). Finally, \(\mathcal{C}\) covers \(X\). For, given \(x\), let \(m\) be the smallest integer such that \(x \in {\bar{B}}_{m}\). Then \(x\) belongs to an element of \({\mathcal{C}}_{m}\), by definition.
+ The space \({\mathbb{R}}^{n}\) is paracompact. Let \(X = {\mathbb{R}}^{n}\). Let \(\mathcal{A}\) be an open covering of \(X\). Let \({B}_{0} = \varnothing\), and for each positive integer \(m\), let \({B}_{m}\) denote the open ball of radius \(m\) centered at the origin. Given \(m\), choose finitely many elements of \(\mathcal{A}\) that cover \({\bar{B}}_{m}\) and intersect each one with the open set \(X - {\bar{B}}_{m - 1}\); let this finite collection of open sets be denoted \({\mathcal{C}}_{m}\). Then the collection \(\mathcal{C} = \bigcup {\mathcal{C}}_{m}\) is a refinement of \(\mathcal{A}\). It is clearly locally finite, for the open set \({B}_{m}\) intersects only finitely many elements of \(\mathcal{C}\), namely those elements belonging to the collection \({\mathcal{C}}_{1} \cup \cdots \cup {\mathcal{C}}_{m}\). Finally, \(\mathcal{C}\) covers \(X\). For, given \(x\), let \(m\) be the smallest integer such that \(x \in {\bar{B}}_{m}\). Then \(x\) belongs to an element of \({\mathcal{C}}_{m}\), by definition.
 \end{example}
 \end{centeredblock}
 
@@ -567,7 +567,7 @@ Then for each \(\alpha \in J\), we define \({V}_{\alpha }\) to be the union of t
 
 (Note that \({V}_{\alpha }\) is empty if there exists no index \(\beta\) such that \(f(\beta) = \alpha\).) For each element \({B}_{\beta }\) of the collection \({\mathcal{B}}_{\alpha }\) we have \({\bar{B}}_{\beta } \subset {U}_{\alpha }\) by definition. Because the collection \({\mathcal{B}}_{\alpha }\) is locally finite, \({\bar{V}}_{\alpha }\) equals the union of the closures of the elements of \({\mathcal{B}}_{\alpha }\), so that \({\bar{V}}_{\alpha } \subset {U}_{\alpha }\).
 
-Finally, we check local finiteness. Given \(x \in X\), choose a neighborhood \(W\) of \(x\) such that \(W\) intersects \({B}_{\beta }\) for only finitely many values of \(\beta\), say \(\beta = {\beta }_{1},\ldots ,{\beta }_{K}\). Then \(W\) can intersect \({V}_{\alpha }\) only if \(\alpha\) is one of the indices \(f({\beta }_{1}),\ldots, f({\beta }_{K})\).
+Finally, we check local finiteness. Given \(x \in X\), choose a neighborhood \(W\) of \(x\) such that \(W\) intersects \({B}_{\beta }\) for only finitely many values of \(\beta\), say \(\beta = {\beta }_{1},\ldots ,{\beta }_{k}\). Then \(W\) can intersect \({V}_{\alpha }\) only if \(\alpha\) is one of the indices \(f({\beta }_{1}),\ldots, f({\beta }_{K})\).
 \end{proof}
 
 \begin{theorem}
@@ -605,7 +605,7 @@ Let \(X\) be a paracompact Hausdorff space; let \(\mathcal{C}\) be a collection 
 \end{theorem}
 
 \begin{proof}
-Cover \(X\) by open sets each of which intersects at most finitely many elements of \(\mathcal{C}\) ; index this collection of open sets so that it becomes an indexed family \({\{ {U}_{\alpha }\} }_{\alpha \in J}\). Choose a partition of unity \(\{ {\phi }_{\alpha }\}\) on \(X\) dominated by \(\{ {U}_{\alpha }\}\). Given \(\alpha\), let \({\delta }_{\alpha }\) be the minimum of the numbers \({\epsilon }_{C}\), as \(C\) ranges over all those elements of \(\mathcal{C}\) that intersect the support of \({\phi }_{\alpha }\), if there are no such elements of \(C\), set \({\delta }_{\alpha } = 1\). Then define
+Cover \(X\) by open sets each of which intersects at most finitely many elements of \(\mathcal{C}\) ; index this collection of open sets so that it becomes an indexed family \({\{ {U}_{\alpha }\} }_{\alpha \in J}\). Choose a partition of unity \(\{ {\phi }_{\alpha }\}\) on \(X\) dominated by \(\{ {U}_{\alpha }\}\). Given \(\alpha\), let \({\delta }_{\alpha }\) be the minimum of the numbers \({\epsilon }_{C}\), as \(C\) ranges over all those elements of \(\mathcal{C}\) that intersect the support of \({\phi }_{\alpha }\), if there are no such elements of \(\mathcal{C}\), set \({\delta }_{\alpha } = 1\). Then define
 
 \[
 f(x) = \sum {\delta }_{\alpha }{\phi }_{\alpha }(x).
@@ -643,7 +643,7 @@ then the desired inequality follows by summing, as \(\sum {\phi }_{\alpha }(x) =
 
  \item Show \({\mathbb{R}}^{\infty }\) is paracompact as a subspace of \({\mathbb{R}}^{\omega }\) in the box topology.
  \end{enumerate}
-\item \textit{*7.} Let \(X\) be a regular space.
+\item[*7.] Let \(X\) be a regular space.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item If \(X\) is a finite union of closed paracompact subspaces of \(X\), then \(X\) is paracompact.
  \item If \(X\) is a countable union of closed paracompact subspaces of \(X\) whose interiors cover \(X\), show \(X\) is paracompact.
@@ -685,7 +685,7 @@ Let \({\mathcal{D}}_{m}\) be a locally finite open refinement of \({\mathcal{A}}
 Let \(x\) be a point of \(X\) and let \(U\) be a neighborhood of \(x\). We seek to find an element \(D\) of \(\mathcal{D}\) such that \(x \in D \subset U\). Now \(x\) belongs to only finitely many elements of \(\mathcal{C}\), say to \({C}_{1},\ldots ,{C}_{k}\). Then \(U \cap {C}_{i}\) is a neighborhood of \(x\) in the set \({C}_{i}\), so there is an \({\epsilon }_{i} > 0\) such that
 
 \[
-{B}_{{C}_{i}}({x,\epsilon }) \subset ({U \cap {C}_{i}}).
+{B}_{{C}_{i}}({x,{\epsilon }_{i}}) \subset ({U \cap {C}_{i}}).
 \]
 
 Choose \(m\) so that \(2/m < \min \{ {{\epsilon }_{1},\ldots ,{\epsilon }_{k}}\}\). Because the collection \({\mathcal{D}}_{m}\) covers \(X\), there must be an element \(D\) of \({\mathcal{D}}_{m}\) containing \(x\). Because \({\mathcal{D}}_{m}\) refines \({\mathcal{A}}_{m}\), there must be an element \({B}_{C}({y,1/m})\) of \({\mathcal{A}}_{m}\), for some \(C \in \mathcal{C}\) and some \(y \in C\), that contains \(D\). Because

@@ -120,15 +120,15 @@ The remainder of the proof is a copy of the proof of the preceding theorem.
 
 One of the theorems of topology that is truly fundamental, because it expresses an intrinsic property of euclidean space, is the theorem on ``invariance of domain,'' proved by L. E. J. Brouwer in 1912. It states that for any open set \(U\) of \({\mathbb{R}}^{n}\) and any continuous injective mapping \(f : U \rightarrow {\mathbb{R}}^{n}\), the image set \(f( U)\) is open in \({\mathbb{R}}^{n}\) and the inverse function is continuous. (The Inverse Function Theorem of analysis derives this result under the additional hypothesis that the map \(f\) is continuously differentiable with nonsingular Jacobian matrix.) We shall prove this theorem in the case \(n = 2\).
 
-\begin{lemma}[]
+\begin{lemma}
 Let \(X\) be a space such that \(X \times I\) is normal. Let \(A\) be a closed subspace of \(X\), and let \(f : A \rightarrow Y\) be a continuous map, where \(Y\) is an open subspace of \({\mathbb{R}}^{n}\). If \(f\) is nulhomotopic, then \(f\) may be extended to a continuous map \(g : X \rightarrow Y\) that is also nulhomotopic.
 \end{lemma}
 
 \begin{proof}
-Let \(F : A \times I \rightarrow Y\) be a homotopy between \(f\) and a constant map. Then \(F( {a,0}) = f( a)\) and \(F( {a,1}) = {y}_{0}\) for all \(a\). Extend \(F\) to the space \(X \times 1\) by setting \(F( {x,1}) = {y}_{0}\) for \(x \in X\) Then \(F\) is a continuous map of the closed subspace \((A \times\) \(I) \cup ( {X \times 1})\) of \(X \times I\) into \({\mathbb{R}}^{n}\) ; by the Tietze extension theorem, it may be extended to a continuous map \(G : X \times I \rightarrow {\mathbb{R}}^{n}\).
+Let \(F : A \times I \rightarrow Y\) be a homotopy between \(f\) and a constant map. Then \(F( {a,0}) = f( a)\) and \(F( {a,1}) = {y}_{0}\) for all \(a\). Extend \(F\) to the space \(X \times 1\) by setting \(F( {x,1}) = {y}_{0}\) for \(x \in X\). Then \(F\) is a continuous map of the closed subspace \((A \times I) \cup ( {X \times 1})\) of \(X \times I\) into \({\mathbb{R}}^{n}\) ; by the Tietze extension theorem, it may be extended to a continuous map \(G : X \times I \rightarrow {\mathbb{R}}^{n}\).
 \customfootnote{${}^{\dagger}$ In this section, we use the Tietze extension theorem ( \S 35).}
 
-Now the map \(x \rightarrow G( {x,0})\) is an extension of \(f\), but it maps \(X\) into \({\mathbb{R}}^{n}\) rather than into the subspace \(Y\) To obtain our desired map, we proceed as follows: Let \(U\) be the open subset \(U = {G}^{-1}( Y)\) of \(X \times I\). Then \(U\) contains \(( {A \times I}) \cup ( {X \times 1})\). See Figure 62.1. Since \(I\) is compact, the tube lemma implies that there is an open set \(W\) of \(X\) containing \(A\) such that \(W \times I \subset U\). Now the space \(X\) is itself normal, being homeomorphic to the closed subspace \(X \times 0\) of \(X \times I\). Therefore, we may choose a continuous function \(\phi : X \rightarrow [ {0,1}]\) such that \(\phi (x) = 0\) for \(x \in A\) and \(\phi (x) = 1\) for \(x \in X - W\). The map \(x \rightarrow x \times \phi (x)\) carries \(X\) into the subspace \(( {W \times I}) \cup ( {X \times 1})\) of \(X \times I\), which lies in \(U\). Then the continuous map \(g(x) = G( {x,\phi (x) })\) carries \(X\) into \(Y\). And for \(x \in A\), we have \(\phi (x) = 0\), so that \(g(x) = G( {x,0}) = f(x)\). Thus \(g\) is the desired extension of \(f\). The map \(H : X \times I \rightarrow Y\) given by
+Now the map \(x \rightarrow G( {x,0})\) is an extension of \(f\), but it maps \(X\) into \({\mathbb{R}}^{n}\) rather than into the subspace \(Y\). To obtain our desired map, we proceed as follows: Let \(U\) be the open subset \(U = {G}^{-1}( Y)\) of \(X \times I\). Then \(U\) contains \(( {A \times I}) \cup ( {X \times 1})\). See Figure 62.1. Since \(I\) is compact, the tube lemma implies that there is an open set \(W\) of \(X\) containing \(A\) such that \(W \times I \subset U\). Now the space \(X\) is itself normal, being homeomorphic to the closed subspace \(X \times 0\) of \(X \times I\). Therefore, we may choose a continuous function \(\phi : X \rightarrow [ {0,1}]\) such that \(\phi (x) = 0\) for \(x \in A\) and \(\phi (x) = 1\) for \(x \in X - W\). The map \(x \rightarrow x \times \phi (x)\) carries \(X\) into the subspace \(( {W \times I}) \cup ( {X \times 1})\) of \(X \times I\), which lies in \(U\). Then the continuous map \(g(x) = G( {x,\phi (x) })\) carries \(X\) into \(Y\). And for \(x \in A\), we have \(\phi (x) = 0\), so that \(g(x) = G( {x,0}) = f(x)\). Thus \(g\) is the desired extension of \(f\). The map \(H : X \times I \rightarrow Y\) given by
 
 \[
 H( {x,t}) = G( {x,( {1 - t}) \phi (x) + t})
@@ -139,7 +139,7 @@ is a homotopy between \(g\) and a constant map.
 \munkresfig[1.0]{62.1}[Figure 62.1]
 The following lemma is a partial converse to the nulhomotopy lemma of the preceding section.
 \end{proof}
-\begin{lemma}[]
+\begin{lemma}
 Let \(a\) and \(b\) be points of \({S}^{2}\). Let \(A\) be a compact space, and let \(f : A \rightarrow {S}^{2} - a - b\) be a continuous injective map. If \(f\) is nulhomotopic, then \(a\) and \(b\) lie in the same component of \({S}^{2} - f( A)\).
 \end{lemma}
 
@@ -252,21 +252,21 @@ and is thus a homeomorphism. Therefore, \(p \mid \pi ( {U \times {2n}})\) maps t
 
 Step 2. Now we define a family of liftings of the loop \(f = \alpha * \beta\).
 
-For each integer \(n\), let \({e}_{n}\) be the point \(\pi ( {a \times {2n}})\) of \(E\). Then the points \({e}_{n}\) are distinct, and they constitute the set \({p}^{-1}( a)\). We define a lifting \({\widetilde{f}}_{n}\) of \(f\) that begins at \({e}_{n}\) and ends at \({e}_{n + 1}\).
+For each integer \(n\), let \({e}_{n}\) be the point \(\pi ( {a \times {2n}})\) of \(E\). Then the points \({e}_{n}\) are distinct, and they constitute the set \({p}^{-1}( a)\). We define a lifting \({\bar{f}}_{n}\) of \(f\) that begins at \({e}_{n}\) and ends at \({e}_{n + 1}\).
 
 Since \(\alpha\) and \(\beta\) are paths in \(U\) and \(V\), respectively, we can define
 
 \[
-\begin{aligned} & {\bar{\alpha }}_{n}( s) = \pi ( {\alpha ( s) \times {2n}}), \\ & {\widetilde{\beta }}_{n}( s) = \pi ( {\beta ( s) \times ( {{2n} + 1}) }) ; \end{aligned}
+\begin{aligned} & {\bar{\alpha }}_{n}( s) = \pi ( {\alpha ( s) \times {2n}}), \\ & {\bar{\beta }}_{n}( s) = \pi ( {\beta ( s) \times ( {{2n} + 1}) }) ; \end{aligned}
 \]
 
-then \({\widetilde{\alpha }}_{n}\) and \({\widetilde{\beta }}_{n}\) are liftings of \(\alpha\) and \(\beta\), respectively. (The case \(n = 0\) is illustrated in Figure 63.1 ) The product \({\widetilde{\alpha }}_{n} * {\widetilde{\beta }}_{n}\) is defined, since \({\widetilde{\alpha }}_{n}\) ends at \(\pi ( {b \times {2n}})\) and \({\widetilde{\beta }}_{n}\) begins at \(\pi ( {b \times ( {{2n} + 1}) })\). We set \({\widetilde{f}}_{n} = {\widetilde{\alpha }}_{n} * {\widetilde{\beta }}_{n}\), and note that \({\widetilde{f}}_{n}\) begins at \({\widetilde{\alpha }}_{n}( 0) = \pi ( {a \times {2n}}) = {e}_{n}\) and ends at \({\widetilde{\beta }}_{n}(1) = \pi ( {a \times ( {{2n} + 1}) }) = \pi ( {a \times ( {{2n} + 2}) }) = {e}_{n + 1}\).
+then \({\bar{\alpha }}_{n}\) and \({\bar{\beta }}_{n}\) are liftings of \(\alpha\) and \(\beta\), respectively. (The case \(n = 0\) is illustrated in Figure 63.1 ) The product \({\bar{\alpha }}_{n} * {\bar{\beta }}_{n}\) is defined, since \({\bar{\alpha }}_{n}\) ends at \(\pi ( {b \times {2n}})\) and \({\bar{\beta }}_{n}\) begins at \(\pi ( {b \times ( {{2n} + 1}) })\). We set \({\bar{f}}_{n} = {\bar{\alpha }}_{n} * {\bar{\beta }}_{n}\), and note that \({\bar{f}}_{n}\) begins at \({\bar{\alpha }}_{n}( 0) = \pi ( {a \times {2n}}) = {e}_{n}\) and ends at \({\bar{\beta }}_{n}(1) = \pi ( {a \times ( {{2n} + 1}) }) = \pi ( {a \times ( {{2n} + 2}) }) = {e}_{n + 1}\).
 
 \munkresfig[1.0]{63.1}[Figure 63.1]
 Step 3. We show that \([ f]\) generates an infinite cyclic subgroup of \({\pi }_{1}( {X,a})\). It suffices to show that if \(m\) is a positive integer, then \({[ f] }^{m}\) is not the identity element. But this is easy. For the product
 
 \[
-\widetilde{h} = {\widetilde{f}}_{0} * ( {{\widetilde{f}}_{1} * ( {\cdots * {\widetilde{f}}_{m - 1}}) })
+\bar{h} = {\bar{f}}_{0} * ( {{\bar{f}}_{1} * ( {\cdots * {\bar{f}}_{m - 1}}) })
 \]
 
 is defined and is a lifting of the \(m\) -fold product
@@ -275,7 +275,7 @@ is defined and is a lifting of the \(m\) -fold product
 h = f * ( {f * ( {\cdots * f}) }).
 \]
 
-Because \(\widetilde{h}\) begins at \({e}_{0}\) and ends at \({e}_{m}\), the class \([ h] = {[ f] }^{m}\) cannot be trivial.
+Because \(\bar{h}\) begins at \({e}_{0}\) and ends at \({e}_{m}\), the class \([ h] = {[ f] }^{m}\) cannot be trivial.
 
 *Step 4. Now we show that if \({\pi }_{1}( {X,a})\) is infinite cyclic, it is generated by \([ f]\). Consider the lifting correspondence \(\phi : {\pi }_{1}( {X,a}) \rightarrow {p}^{-1}( a)\). We showed in Step 3 that for each positive integer \(m\), the correspondence \(\phi\) carries \({[ f] }^{m}\) to the point \({e}_{m}\) of \({p}^{-1}( a)\). A similar argument shows that it carries \({[ f] }^{-m}\) to \({e}_{-m}\). Thus \(\phi\) is surjective. Now by Theorem 54.6, \(\phi\) induces an injective map
 
@@ -291,16 +291,16 @@ Step 5. Now we prove (c). The picture in Figure 63.1 may mislead you into thinki
 Given \(g = \gamma * \delta\), we define a lifting of \(g\) to \(E\) as follows: Since \(\gamma\) is a path in \(U\), we can define
 
 \[
-\widetilde{\gamma }( s) = \pi ( {\gamma ( s) \times 0}) ;
+\bar{\gamma }( s) = \pi ( {\gamma ( s) \times 0}) ;
 \]
 
 since \(\delta\) is a path in \(V\), we can define
 
 \[
-\widetilde{\delta }( s) = \pi ( {\delta ( s) \times ( {-1}) }).
+\bar{\delta }( s) = \pi ( {\delta ( s) \times ( {-1}) }).
 \]
 
-Then \(\widetilde{\gamma }\) and \(\widetilde{\delta }\) are liftings of \(\gamma\) and \(\delta\). The product \(\bar{g} = \widetilde{\gamma } * \widetilde{\delta }\) is defined, since \(\widetilde{\gamma }\) ends at \(\pi ( {{a}^{\prime } \times 0})\) and \(\widetilde{\delta }\) begins at \(\pi ( {{a}^{\prime } \times ( {-1}) })\) ; and it is a lifting of \(g\). Note that \(\bar{g}\) is a loop in \(E\), for it begins and ends at \(\pi ( {a \times 0}) = \pi ( {a \times ( {-1}) }) = {e}_{0}\).
+Then \(\bar{\gamma }\) and \(\bar{\delta }\) are liftings of \(\gamma\) and \(\delta\). The product \(\bar{g} = \bar{\gamma } * \bar{\delta }\) is defined, since \(\bar{\gamma }\) ends at \(\pi ( {{a}^{\prime } \times 0})\) and \(\bar{\delta }\) begins at \(\pi ( {{a}^{\prime } \times ( {-1}) })\) ; and it is a lifting of \(g\). Note that \(\bar{g}\) is a loop in \(E\), for it begins and ends at \(\pi ( {a \times 0}) = \pi ( {a \times ( {-1}) }) = {e}_{0}\).
 
 It follows that the subgroups generated by \([ f]\) and \([ g]\) have only the identity element in common. For the \(m\) -fold product of \(f\) with itself lifts to a path that begins at \({e}_{0}\) and ends at \({e}_{m}\), while every product of \(g\) with itself lifts to a path beginning and ending at \({e}_{0}\). Hence \({[ f] }^{m} \neq {[ g] }^{k}\) for every nonzero \(m\) and \(k\).
 \end{proof}
@@ -346,7 +346,7 @@ Let \({D}_{1}\) and \({D}_{2}\) be closed subsets of \({S}^{2}\) such that \({S}
 Now we prove the Jordan curve theorem.
 
 \begin{theorem}[The Jordan curve theorem]
-Let \(C\) be a simple closed curve in \({S}^{2}\). Then \(C\) separates \({S}^{2}\) into precisely two components \({W}_{1}\) and \({W}_{2}\). Each of the sets \({W}_{1}\) and \({W}_{2}\) has \(C\) as its boundary; that is, \(C = {\bar{W}}_{i} - {W}_{i}\) for \(\mathrm{i} = 1,2\).
+Let \(C\) be a simple closed curve in \({S}^{2}\). Then \(C\) separates \({S}^{2}\) into precisely two components \({W}_{1}\) and \({W}_{2}\). Each of the sets \({W}_{1}\) and \({W}_{2}\) has \(C\) as its boundary; that is, \(C = {\bar{W}}_{i} - {W}_{i}\) for \(i = 1, 2\).
 \end{theorem}
 
 \begin{proof}
@@ -359,7 +359,7 @@ Then \(X = U \cup V\), and \(U \cap V = {S}^{2} - C\). The space \(U \cap V\) ha
 
 We suppose that \(U \cap V\) has more than two components and derive a contradiction. Let \({A}_{1}\) and \({A}_{2}\) be two of the components of \(U \cap V\), and let \(B\) be the union of the others. Because \({S}^{2} - C\) is locally connected, each of these sets is open. Let \(a \in {A}_{1}\) and \({a}^{\prime } \in {A}_{2}\) and \(b \in B\). Because the arcs \({C}_{1}\) and \({C}_{2}\) do not separate \({S}^{2}\), there are paths \(\alpha\) and \(\gamma\) in \(U\) from \(a\) to \(b\) and from \(a\) to \({a}^{\prime }\), respectively, and there are paths \(\beta\) and \(\delta\) in \(V\) from \(b\) to \(a\) and from \({a}^{\prime }\) to \(a\), respectively. Consider the loops \(f = \alpha * \beta\) and \(g = \gamma * \delta\). Writing \(U \cap V\) as the union of the open sets \({A}_{1} \cup {A}_{2}\) and \(B\), we see that Theorem 63.1 implies that \([ f]\) is a nontrivial element of \({\pi }_{1}( {X,a})\). Writing \(U \cap V\) as the union of the disjoint open sets \({A}_{1}\) and \({A}_{2} \cup B\), we see that \([ g]\) is also a nontrivial element of \({\pi }_{1}( {X,a})\). Since \({\pi }_{1}( {X,a})\) is infinite cyclic, we must have \({[ f] }^{m} = {[ g] }^{k}\) for some nonzero integers \(m\) and \(k\). This result contradicts (c) of Theorem 63.1.
 
-Step 2. Now we show that \(C\) is the common boundary of \({W}_{1}\) and \({W}_{2}\)
+Step 2. Now we show that \(C\) is the common boundary of \({W}_{1}\) and \({W}_{2}\).
 
 Because \({S}^{2}\) is locally connected, each of the components \({W}_{1}\) and \({W}_{2}\) of \({S}^{2} - C\) is open in \({S}^{2}\). In particular, neither contains a limit point of the other, so that both the sets \({\bar{W}}_{1} - {W}_{1}\) and \({\bar{W}}_{2} - {W}_{2}\) must be contained in \(C\).
 
@@ -407,8 +407,12 @@ The separation theorems can be generalized even further than this. The definitiv
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item If \(A\) is an arc in \({S}^{2}\) whose intersection with \(D\) consists of one of its end points, show that \(D \cup A\) separates \({S}^{2}\) into \(n\) components.
  \item If \(A\) is an arc in \({S}^{2}\) whose intersection with \(D\) consists of its end points, show that \(D \cup A\) separates \({S}^{2}\) into \(n + 1\) components.
- \item If \(C\) is a simple closed curve in \({S}^{2}\) that intersects \(D\) in a single point, show \(D \cup C\) separates \({S}^{2}\) into \(n + 1\) components. *3. (a) Let \(D\) be a subspace of \({S}^{2}\) homeomorphic to the topologist's sine curve \(\bar{S}\). (See \S 24.) Show that \(D\) does not separate \({S}^{2}\). [Hint: Let \(h : \bar{S} \rightarrow D\) be the homeomorphism. Given \(0 < c < 1\), let \({\bar{S}}_{c}\) equal the intersection of \(\bar{S}\) with the set \(\{ ( {x,y}) \mid x \leq c\}\). Show that given \(a,b \in {S}^{2} - D\), there is, for some value of \(c\), a path in \({S}^{2} - h( {\bar{S}}_{c})\) from \(a\) to \(b\). Conclude that there is a path in \({S}^{2} - D\) from \(a\) to \(b\).]
+ \item If \(C\) is a simple closed curve in \({S}^{2}\) that intersects \(D\) in a single point, show \(D \cup C\) separates \({S}^{2}\) into \(n + 1\) components.
+\item[*3.]
+ \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+ \item Let \(D\) be a subspace of \({S}^{2}\) homeomorphic to the topologist's sine curve \(\bar{S}\). (See \S 24.) Show that \(D\) does not separate \({S}^{2}\). [Hint: Let \(h : \bar{S} \rightarrow D\) be the homeomorphism. Given \(0 < c < 1\), let \({\bar{S}}_{c}\) equal the intersection of \(\bar{S}\) with the set \(\{ ( {x,y}) \mid x \leq c\}\). Show that given \(a,b \in {S}^{2} - D\), there is, for some value of \(c\), a path in \({S}^{2} - h( {\bar{S}}_{c})\) from \(a\) to \(b\). Conclude that there is a path in \({S}^{2} - D\) from \(a\) to \(b\).]
  \item Let \(C\) be a subspace of \({S}^{2}\) homeomorphic to the closed topologist's sine curve. Show that \(C\) separates \({S}^{2}\) into precisely two components, of which \(C\) is the common boundary. [Hint: Let \(h\) be the homeomorphism of the closed topologist's sine curve with \(C\). Let \({C}_{0} = h( {0\times \lbrack - 1,1\rbrack })\). Show first, using the argument of Theorem 63.4, that each point of \(C - {C}_{0}\) lies in the boundary of each component of \({S}^{2} - C\).]
+ \end{enumerate}
  \end{enumerate}
 \end{enumerate}
 \section*{§ 64 Imbedding Graphs in the Plane}
@@ -447,7 +451,7 @@ Let \(X\) be a theta space that is a subspace of \({S}^{2}\) ; let \(A,B\), and 
 \begin{proof}
 Let \(a\) and \(b\) be the end points of the arcs \(A,B\), and \(C\). Consider the simple closed curve \(A \cup B\) ; it separates \({S}^{2}\) into two components \(U\) and \({U}^{\prime }\), each of which is open in \({S}^{2}\) and has boundary \(A \cup B\). See Figure 64.3.
 \munkresfig[0.4]{64.3}[Figure 64.3]
-The space \(C - a - b\) is connected, so it is contained in one of these components, say in \({U}^{\prime }\). Then consider the two spaces \(\widetilde{U} = U \cup A \cup B\) and \(C\) ; each is connected. Neither separates \({S}^{2}\), for \(C\) is an arc, and the complement of \(\widetilde{U}\) is the connected set \({U}^{\prime }\). Since the intersection of these two sets consists of the two points \(a\) and \(b\), their union separates \({S}^{2}\) into two components \(V\) and \(W\), by Theorem 63.5. It follows that \({S}^{2} -\) \(( {A \cup B \cup C})\) is the union of the three disjoint connected sets \(U,V\), and \(W\) ; because they are open in \({S}^{2}\), they are the components of \({S}^{2} - ( {A \cup B \cup C})\). The component \(U\) has \(A \cup B\) as its boundary. Symmetry implies that the other two have \(B \cup C\) and
+The space \(C - a - b\) is connected, so it is contained in one of these components, say in \({U}^{\prime }\). Then consider the two spaces \(\bar{U} = U \cup A \cup B\) and \(C\) ; each is connected. Neither separates \({S}^{2}\), for \(C\) is an arc, and the complement of \(\bar{U}\) is the connected set \({U}^{\prime }\). Since the intersection of these two sets consists of the two points \(a\) and \(b\), their union separates \({S}^{2}\) into two components \(V\) and \(W\), by Theorem 63.5. It follows that \({S}^{2} - ( {A \cup B \cup C})\) is the union of the three disjoint connected sets \(U,V\), and \(W\) ; because they are open in \({S}^{2}\), they are the components of \({S}^{2} - ( {A \cup B \cup C})\). The component \(U\) has \(A \cup B\) as its boundary. Symmetry implies that the other two have \(B \cup C\) and
 
 \(A \cup C\) as their boundaries.
 \end{proof}
@@ -550,7 +554,7 @@ Let \({D}_{1}\) and \({D}_{2}\) be the arcs
 {D}_{1} = p{a}_{3}{a}_{2}q\;\text{ and }\;{D}_{2} = q{a}_{4}{a}_{1}p,
 \]
 
-and let \(U = {S}^{2} - {D}_{1}\) and \(V = {S}^{2} - {D}_{2}\). See Figure 65.4. Then \(X = U \cup V\), and \(U \cap V\) equals \({S}^{2} - D\), where \(D\) is the simple closed curve \(D = {D}_{1} \cup {D}_{2}\). Hence, \(U \cap V\) has two components, by the Jordan curve theorem. Furthermore, since \(D\) equals the simple closed curve \({a}_{1}{a}_{3}{a}_{2}{a}_{4}{a}_{1}\), the result of (a) implies that the points \(x\) and \(y\), which lie interior to the other two edges of the graph \(G\), lie in different components of \({S}^{2} - D\)
+and let \(U = {S}^{2} - {D}_{1}\) and \(V = {S}^{2} - {D}_{2}\). See Figure 65.4. Then \(X = U \cup V\), and \(U \cap V\) equals \({S}^{2} - D\), where \(D\) is the simple closed curve \(D = {D}_{1} \cup {D}_{2}\). Hence, \(U \cap V\) has two components, by the Jordan curve theorem. Furthermore, since \(D\) equals the simple closed curve \({a}_{1}{a}_{3}{a}_{2}{a}_{4}{a}_{1}\), the result of (a) implies that the points \(x\) and \(y\), which lie interior to the other two edges of the graph \(G\), lie in different components of \({S}^{2} - D\).
 
 \munkresfig[1.0]{65.4}[Figure 65.4]
 The hypotheses of Theorem 63.1 are thus satisfied. The path \(\alpha\) is a path in \(U\) from \(x\) to \(y\), while \(\beta\) is a path in \(V\) from \(y\) to \(x\). Because the fundamental group of \(X\) is infinite cyclic, the loop \(\alpha * \beta\) represents a generator of this group.
@@ -608,10 +612,10 @@ Let \(f\) be a loop in \({\mathbb{R}}^{2}\), and let \(a\) be a point not in the
 g( s) = [ {f( s) - a}] /\parallel f( s) - a\parallel
 \]
 
-then \(g\) is a loop in \({S}^{1}\). Let \(p : \mathbb{R} \rightarrow {S}^{1}\) be the standard covering map, and let \(\widetilde{g}\) be a lifting of \(g\) to \(\mathbb{R}\). Because \(g\) is a loop, the difference \(\widetilde{g}(1) - \widetilde{g}( 0)\) is an integer. This integer is called the winding number of \(f\) with respect to \(a\), and is denoted \( n( {f,a})\).
+then \(g\) is a loop in \({S}^{1}\). Let \(p : \mathbb{R} \rightarrow {S}^{1}\) be the standard covering map, and let \(\bar{g}\) be a lifting of \(g\) to \(\mathbb{R}\). Because \(g\) is a loop, the difference \(\bar{g}(1) - \bar{g}( 0)\) is an integer. This integer is called the winding number of \(f\) with respect to \(a\), and is denoted \( n( {f,a})\).
 \end{definition}
 
-Note that \(n( {f,a})\) is independent of the choice of the lifting of \(g\). For if \(\widetilde{g}\) is one lifting of \(g\), then uniqueness of liftings implies that any other lifting of \(g\) has the form \(\widetilde{g}( s) + m\) for some integer \(m\).
+Note that \(n( {f,a})\) is independent of the choice of the lifting of \(g\). For if \(\bar{g}\) is one lifting of \(g\), then uniqueness of liftings implies that any other lifting of \(g\) has the form \(\bar{g}( s) + m\) for some integer \(m\).
 
 \begin{definition}
 Let \(F : I \times I \rightarrow X\) be a continuous map such that \(F( {0,t}) = F( {1,t})\) for all \(t\). Then for each \(t\), the map \({f}_{t}( s) = F( {s,t})\) is a loop in \(X\). The map \(F\) is called a free homotopy between the loops \({f}_{0}\) and \({f}_{1}\). It is a homotopy of loops in which the base point of the loop is allowed to move during the homotopy.
@@ -628,14 +632,14 @@ Let \(f\) be a loop in \({\mathbb{R}}^{2} - a\).
 \end{lemma}
 
 \begin{proof}
-(a) To compute \(n( {\bar{f},a})\), one replaces \(s\) by \(1 - s\) throughout the definition. This has the effect of changing \(\widetilde{g}(1) - \widetilde{g}( 0)\) by a sign.
+(a) To compute \(n( {\bar{f},a})\), one replaces \(s\) by \(1 - s\) throughout the definition. This has the effect of changing \(\bar{g}(1) - \bar{g}( 0)\) by a sign.
 (b) Let \(F\) be a free homotopy between \(f\) and \({f}^{\prime }\). Define \(G : I \times I \rightarrow {S}^{1}\) by the equation
 
 \[
 G( {s,t}) = [ {F( {s,t}) - a}] /\parallel F( {s,t}) - a\parallel .
 \]
 
-Let \(\bar{G}\) be a lifting of \(G\) to \(\mathbb{R}\). Then \(\widetilde{G}( {1,t}) - \widetilde{G}( {0,t})\) is an integer for each \(t\) ; being continuous, it is constant.
+Let \(\bar{G}\) be a lifting of \(G\) to \(\mathbb{R}\). Then \(\bar{G}( {1,t}) - \bar{G}( {0,t})\) is an integer for each \(t\) ; being continuous, it is constant.
 
 (c) Let \(\alpha\) be a path in \({\mathbb{R}}^{2} - f( I)\) from \(a\) to \(b\). Note that by definition, \(n( {f,a}) =\) \(n( {f - a,0})\). Since \(f( s) - \alpha ( t)\) is a free homotopy in \({\mathbb{R}}^{2} - 0\) between \(f - a\) and \(f - b\), our result follows.
 \end{proof}
@@ -653,7 +657,7 @@ So let \(f\) be a simple loop in \(X = {\mathbb{R}}^{2} - 0\) based at a point \
 
 The map \(f\) induces, \({via}\) the standard quotient map \(p : I \rightarrow {S}^{1}\), a homeomorphism \(h : {S}^{1} \rightarrow C\). The element \([ p]\) generates the fundamental group of \({S}^{1}\), so \({h}_{ * }[ p]\) generates the fundamental group of \(C\). If 0 lies in the bounded component of \({\mathbb{R}}^{2} - C\), Theorem 65.2 tells us that \({j}_{ * }{h}_{ * }[ p] = [ f]\) generates the fundamental group of \({\mathbb{R}}^{2} - \mathbf{0}\), where \(j : C \rightarrow {\mathbb{R}}^{2} - 0\) is the inclusion. On the other hand, if 0 lies in the unbounded component of \({\mathbb{R}}^{2} - C\), then \(j \circ h\) is nulhomotopic by Lemma 61.2, so that \([ f]\) is trivial.
 
-Now we show that if \([ f]\) generates \({\pi }_{1}( {X,{x}_{0}})\), then \(n( {f,\mathbf{0}}) = \pm 1\), while if \([ f]\) is trivial, \(n( {f,\mathbf{0}}) = 0\). Since the retraction \(x \rightarrow x/\parallel x\parallel\) of \({\mathbb{R}}^{2} - \mathbf{0}\) onto \({S}^{1}\) induces an isomorphism of fundamental groups, the loop \(g( s) = f( s) /\parallel f( s) \parallel\) represents a generator of \({\pi }_{1}( {{S}^{1},{b}_{0}})\) in the first case, and the identity element in the second case. If we examine the isomorphism \(\phi : {\pi }_{1}( {{S}^{1},{b}_{0}}) \rightarrow \mathbb{Z}\) constructed in the proof of Theorem 54.5, we see this means that when we lift \(g\) to a path \(\bar{g}\) in \(\mathbb{R}\) beginning at 0, the path \(\widetilde{g}\) ends at \(\pm 1\) in the first case, and at 0 in the second.
+Now we show that if \([ f]\) generates \({\pi }_{1}( {X,{x}_{0}})\), then \(n( {f,\mathbf{0}}) = \pm 1\), while if \([ f]\) is trivial, \(n( {f,\mathbf{0}}) = 0\). Since the retraction \(x \rightarrow x/\parallel x\parallel\) of \({\mathbb{R}}^{2} - \mathbf{0}\) onto \({S}^{1}\) induces an isomorphism of fundamental groups, the loop \(g( s) = f( s) /\parallel f( s) \parallel\) represents a generator of \({\pi }_{1}( {{S}^{1},{b}_{0}})\) in the first case, and the identity element in the second case. If we examine the isomorphism \(\phi : {\pi }_{1}( {{S}^{1},{b}_{0}}) \rightarrow \mathbb{Z}\) constructed in the proof of Theorem 54.5, we see this means that when we lift \(g\) to a path \(\bar{g}\) in \(\mathbb{R}\) beginning at 0, the path \(\bar{g}\) ends at \(\pm 1\) in the first case, and at 0 in the second.
 \end{proof}
 \begin{definition}
 Let \(f\) be a simple loop in \({\mathbb{R}}^{2}\). We say \(f\) is a counterclockwise loop if \(n( {f,a}) = + 1\) for some \(a\) (and hence for every \(a\) ) in the bounded component of \({\mathbb{R}}^{2} - f( I)\). We say it is a clockwise loop if \(n( {f,a}) = - 1\). The standard loop \(p( s) =\) \(( {\cos {2\pi s},\sin {2\pi s}})\) is thus a counterclockwise loop.
@@ -674,7 +678,7 @@ This equation is often used as the definition of the winding number of \(f\).
 \end{lemma}
 
 \begin{proof}
-The proof is a simple exercise in computation. Let \(p : \mathbb{R} \rightarrow {S}^{1}\) be the standard covering map. Let \(r( s) = \parallel f( s) - a\parallel\) and \(g( s) = [ {f( s) - a}] /r( s)\). Let \(\widetilde{g}\) be a lifting of \(g\) to \(\mathbb{R}\). Set \(\theta ( s) = {2\pi }\widetilde{g}( s)\). Then \(f( s) - a = r( s) \exp ( {{i\theta }( s) })\), so that
+The proof is a simple exercise in computation. Let \(p : \mathbb{R} \rightarrow {S}^{1}\) be the standard covering map. Let \(r( s) = \parallel f( s) - a\parallel\) and \(g( s) = [ {f( s) - a}] /r( s)\). Let \(\bar{g}\) be a lifting of \(g\) to \(\mathbb{R}\). Set \(\theta ( s) = {2\pi }\bar{g}( s)\). Then \(f( s) - a = r( s) \exp ( {{i\theta }( s) })\), so that
 \[
 {\int }_{f}\frac{dz}{z - a} = {\int }_{0}^{1}[ {( {{r}^{\prime }{e}^{i\theta } + {ir}{\theta }^{\prime }{e}^{i\theta }}) /r{e}^{i\theta }}] {ds}
 \]
@@ -688,7 +692,7 @@ The proof is a simple exercise in computation. Let \(p : \mathbb{R} \rightarrow 
 \]
 
 \[
-= {2\pi i}[ {\widetilde{g}(1) - \widetilde{g}( 0) }] .
+= {2\pi i}[ {\bar{g}(1) - \bar{g}( 0) }] .
 \]
 \end{proof}
 \begin{theorem}[Cauchy integral formula-classical version]
@@ -715,7 +719,7 @@ Note that one cannot even state the classical version of the Cauchy integral the
 \end{proof}
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
-\item Let \(f\) be a loop in \({\mathbb{R}}^{2} - a\) ; let \(g( s) = [ {f( s) - a}] /\parallel f( s) - a\parallel\) The map \(g\) induces, via the standard quotient map \(p : I \rightarrow {S}^{1}\), a continuous map \(h : {S}^{1} \rightarrow {S}^{1}\). Show that \(n( {f,a})\) equals the degree of \(h\), as defined in Exercise 9 of \S 58.
+\item Let \(f\) be a loop in \({\mathbb{R}}^{2} - a\) ; let \(g( s) = [ {f( s) - a}] /\parallel f( s) - a\parallel\). The map \(g\) induces, via the standard quotient map \(p : I \rightarrow {S}^{1}\), a continuous map \(h : {S}^{1} \rightarrow {S}^{1}\). Show that \(n( {f,a})\) equals the degree of \(h\), as defined in Exercise 9 of \S 58.
 \item This exercise assumes some familiarity with analysis on manifolds. \textsl{Theorem.} Let \(C\) be a simple closed curve in \({\mathbb{R}}^{2}\) that is a smooth submanifold of \({\mathbb{R}}^{2}\) ; let \(f : I \rightarrow C\) be a simple loop smoothly parameterizing \(C\). If 0 is a point of the bounded component of \({\mathbb{R}}^{2} - C\), then \(n( {f,\mathbf{0}}) = \pm 1\). \textsl{Proof.} Let \(U\) be the bounded component of \({\mathbb{R}}^{2} - C\). Let \(B\) be a closed \(\epsilon\) -ball centered at 0 that lies in \(U\) ; let \(S = \operatorname{Bd}B\). Let \(M\) equal the closure of \(U - B\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show \(M\) is a smooth 2-manifold with boundary \(C \cup S\).

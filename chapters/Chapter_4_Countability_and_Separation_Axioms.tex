@@ -4,7 +4,7 @@
 
 The concepts we are going to introduce now, unlike compactness and connectedness, do not arise naturally from the study of calculus and analysis. They arise instead from a deeper study of topology itself. Such problems as imbedding a given space in a metric space or in a compact Hausdorff space are basically problems of topology rather than analysis. These particular problems have solutions that involve the countability and separation axioms.
 
-We have already introduced the first countability axiom; it arose in connection with our study of convergent sequences in \(\$ {21}\). We have also studied one of the separation axioms-the Hausdorff axiom, and mentioned another-the \({T}_{1}\) axiom. In this chapter we shall introduce other, and stronger, axioms like these and explore some of their consequences. Our basic goal is to prove the Urysohn metrization theorem. It says that if a topological space \(X\) satisfies a certain countability axiom (the second) and a certain separation axiom (the regularity axiom), then \(X\) can be imbedded in a metric space and is thus metrizable.
+We have already introduced the first countability axiom; it arose in connection with our study of convergent sequences in \S 21. We have also studied one of the separation axioms-the Hausdorff axiom, and mentioned another-the \({T}_{1}\) axiom. In this chapter we shall introduce other, and stronger, axioms like these and explore some of their consequences. Our basic goal is to prove the Urysohn metrization theorem. It says that if a topological space \(X\) satisfies a certain countability axiom (the second) and a certain separation axiom (the regularity axiom), then \(X\) can be imbedded in a metric space and is thus metrizable.
 
 Another imbedding theorem, important to geometers, appears in the last section of the chapter. Given a space that is a compact manifold (the higher-dimensional analogue of a surface), we show that it can be imbedded in some finite-dimensional euclidean space.
 
@@ -27,11 +27,12 @@ The most useful fact concerning spaces that satisfy this axiom is the fact that 
 
 (b) Let \(f : X \rightarrow Y\). If \(f\) is continuous, then for every convergent sequence \({x}_{n} \rightarrow x\) in \(X\), the sequence \(f( {x}_{n})\) converges to \(f(x)\). The converse holds if \(X\) is first-countable.
 
-The proof is a direct generalization of the proof given in §21 under the hypothesis of metrizability, so it will not be repeated here.
+\end{theorem}
+
+The proof is a direct generalization of the proof given in \S 21 under the hypothesis of metrizability, so it will not be repeated here.
 
 Of much greater importance than the first countability axiom is the following:
 
-\end{theorem}
 \begin{definition}
  If a space \(X\) has a countable basis for its topology, then \(X\) is said to satisfy the second countability axiom, or to be second-countable.
 \end{definition}
@@ -64,9 +65,9 @@ Both countability axioms are well behaved with respect to the operations of taki
 Consider the second countability axiom. If \(\mathcal{B}\) is a countable basis for \(X\), then \(\{ B \cap A \mid B \in \mathcal{B}\}\) is a countable basis for the subspace \(A\) of \(X\). If \({\mathcal{B}}_{i}\) is a countable basis for the space \({X}_{i}\), then the collection of all products \(\prod {U}_{i}\), where \({U}_{i} \in {\mathcal{B}}_{i}\) for finitely many values of \(i\) and \({U}_{i} = {X}_{i}\) for all other values of \(i\), is a countable basis for \(\prod {X}_{i}\).
 
 The proof for the first countability axiom is similar.
+\end{proof}
 
 Two consequences of the second countability axiom that will be useful to us later are given in the following theorem. First, a definition:
-\end{proof}
 
 \begin{definition}
  A subset \(A\) of a space \(X\) is said to be dense in \(X\) if \(\bar{A} = X\).
@@ -136,15 +137,15 @@ is a countable subcollection of \(\mathcal{A}\) that covers the set \(C\), and \
 
 \begin{centeredblock*}
 \begin{example}
- The product of two Lindelöf spaces need not be Lindelöf. Although the space \({\mathbb{R}}_{\ell }\) is Lindelöf, we shall show that the product space \({\mathbb{R}}_{\ell } \times {\mathbb{R}}_{\ell } = {\mathbb{R}}_{\ell }^{2}\) is not. The space \({\mathbb{R}}_{\ell }^{2}\) is an extremely useful example in topology called the Sorgenfrey plane
+ The product of two Lindelöf spaces need not be Lindelöf. Although the space \({\mathbb{R}}_{\ell }\) is Lindelöf, we shall show that the product space \({\mathbb{R}}_{\ell } \times {\mathbb{R}}_{\ell } = {\mathbb{R}}_{\ell }^{2}\) is not. The space \({\mathbb{R}}_{\ell }^{2}\) is an extremely useful example in topology called the Sorgenfrey plane.
 
-The space \({\mathbb{R}}_{\ell }^{2}\) has as basis all sets of the form \(\lbrack a,b) \times \lbrack c,d)\) To show it is not Lindelof, consider the subspace
+The space \({\mathbb{R}}_{\ell }^{2}\) has as basis all sets of the form \(\lbrack a,b) \times \lbrack c,d)\). To show it is not Lindelof, consider the subspace
 
 \[
 L = \{ {x \times ( {-x}) \mid x \in {\mathbb{R}}_{\ell }}\}
 \]
 
-It is easy to check that \(L\) is closed in \({\mathbb{R}}_{\ell }^{2}\) Let us cover \({\mathbb{R}}_{\ell }^{2}\) by the open set \({\mathbb{R}}_{\ell }^{2} - L\) and by all basis elements of the form
+It is easy to check that \(L\) is closed in \({\mathbb{R}}_{\ell }^{2}\). Let us cover \({\mathbb{R}}_{\ell }^{2}\) by the open set \({\mathbb{R}}_{\ell }^{2} - L\) and by all basis elements of the form
 
 \[
 \lbrack a,b) \times \lbrack - a,d).
@@ -206,7 +207,7 @@ The terminology here comes from the German. The `` \(G\) '' stands for ``Gebiet,
 
 *17. Give \({\mathbb{R}}^{\omega }\) the box topology. Let \( {\mathbb{Q}}^{\infty }\) denote the subspace consisting of sequences of rationals that end in an infinite string of 0 's. Which of our four countability axioms does this space satisfy?
 
-*18. Let \(G\) be a first-countable topological group. Show that if \(G\) has a countable dense subset, or is Lindelóf, then \(G\) has a countable basis. [Hint: Let \(\{ {B}_{n}\}\) be a countable basis at \(e\) If \(D\) is a countable dense subset of \(G\), show the sets \(d{B}_{n}\), for \(d \in D\), form a basis for \(G\) If \(G\) is Lindelöf, choose for each \(n\) a countable set \({C}_{n}\) such that the sets \(c{B}_{n}\), for \(c \in {C}_{n}\), cover \(G\). Show that as \(n\) ranges over \({\mathbb{Z}}_{ + }\), these sets form a basis for \(G\).]
+*18. Let \(G\) be a first-countable topological group. Show that if \(G\) has a countable dense subset, or is Lindelóf, then \(G\) has a countable basis. [Hint: Let \(\{ {B}_{n}\}\) be a countable basis at \(e\). If \(D\) is a countable dense subset of \(G\), show the sets \(d{B}_{n}\), for \(d \in D\), form a basis for \(G\). If \(G\) is Lindelöf, choose for each \(n\) a countable set \({C}_{n}\) such that the sets \(c{B}_{n}\), for \(c \in {C}_{n}\), cover \(G\). Show that as \(n\) ranges over \({\mathbb{Z}}_{ + }\), these sets form a basis for \(G\).]
 
 \section*{§ 31 The Separation Axioms}
 
@@ -218,7 +219,7 @@ Recall that a space \(X\) is said to be Hausdorff if for each pair \(x,y\) of di
  Suppose that one-point sets are closed in \(X\). Then \(X\) is said to be regular if for each pair consisting of a point \(x\) and a closed set \(B\) disjoint from \(x\), there exist disjoint open sets containing \(x\) and \(B\), respectively. The space \(X\) is said to be normal if for each pair \(A,B\) of disjoint closed sets of \(X\), there exist disjoint open sets containing \(A\) and \(B\), respectively.
 \end{definition}
 
-It is clear that a regular space is Hausdorff, and that a normal space is regular. (We need to include the condition that one-point sets be closed as part of the definition of regularity and in order for this to be the case. A two-point space in the indiscrete topology satisfies the other part of the definitions of regularity and normality, even though it is not Hausdorff.) For examples showing the regularity axiom stronger than the Hausdorff axiom, and normality stronger than regularity, see Examples 1 and 3.
+It is clear that a regular space is Hausdorff, and that a normal space is regular. (We need to include the condition that one-point sets be closed as part of the definition of regularity and normality, in order for this to be the case. A two-point space in the indiscrete topology satisfies the other part of the definitions of regularity and normality, even though it is not Hausdorff.) For examples showing the regularity axiom stronger than the Hausdorff axiom, and normality stronger than regularity, see Examples 1 and 3.
 
 These axioms are called separation axioms for the reason that they involve ``separating'' certain kinds of sets from one another by disjoint open sets. We have used the word ``separation'' before, of course, when we studied connected spaces. But in that case, we were trying to find disjoint open sets whose union was the entire space.
 
@@ -289,9 +290,9 @@ are disjoint open sets about \(A\) and \(B\), respectively.
 \begin{example}
  The Sorgenfrey plane \({\mathbb{R}}_{\ell }^{2}\) is not normal.
 
-The space \({\mathbb{R}}_{\ell }\) is regular (in fact, normal), so the product space \({\mathbb{R}}_{\ell }^{2}\) is also regular. Thus this example serves two purposes. It shows that a regular space need not be normal, and it shows that the product of two normal spaces need not be normal
+The space \({\mathbb{R}}_{\ell }\) is regular (in fact, normal), so the product space \({\mathbb{R}}_{\ell }^{2}\) is also regular. Thus this example serves two purposes. It shows that a regular space need not be normal, and it shows that the product of two normal spaces need not be normal.
 
-We suppose \({\mathbb{R}}_{\ell }^{2}\) is normal and derive a contradiction Let \(L\) be the subspace of \({\mathbb{R}}_{\ell }^{2}\) consisting of all points of the form \(x \times ( {-x})\) Then \(L\) is closed in \({\mathbb{R}}_{\ell }^{2}\), and \(L\) has the discrete topology. Hence every subset \(A\) of \(L\), being closed in \(L\), is closed in \({\mathbb{R}}_{\ell }^{2}\). Because \(L - A\) is also closed in \({\mathbb{R}}_{\ell }^{2}\), this means that for every nonempty proper subset \(A\) of \(L\), one can find disjoint open sets \({U}_{A}\) and \({V}_{A}\) containing \(A\) and \(L - A\), respectively
+We suppose \({\mathbb{R}}_{\ell }^{2}\) is normal and derive a contradiction. Let \(L\) be the subspace of \({\mathbb{R}}_{\ell }^{2}\) consisting of all points of the form \(x \times ( {-x})\). Then \(L\) is closed in \({\mathbb{R}}_{\ell }^{2}\), and \(L\) has the discrete topology. Hence every subset \(A\) of \(L\), being closed in \(L\), is closed in \({\mathbb{R}}_{\ell }^{2}\). Because \(L - A\) is also closed in \({\mathbb{R}}_{\ell }^{2}\), this means that for every nonempty proper subset \(A\) of \(L\), one can find disjoint open sets \({U}_{A}\) and \({V}_{A}\) containing \(A\) and \(L - A\), respectively.
 
 Let \(D\) denote the set of points of \({\mathbb{R}}_{\ell }^{2}\) having rational coordinates; it is dense in \({\mathbb{R}}_{\ell }^{2}\). We define a map \(\theta\) that assigns, to each subset of the line \(L\), a subset of the set \(D\), by setting
 
@@ -311,7 +312,7 @@ We show that \(\theta : \mathcal{P}( L) \rightarrow \mathcal{P}( D)\) is injecti
 
 Let \(A\) be a proper nonempty subset of \(L\). Then \(\theta ( A) = D \cap {U}_{A}\) is neither empty (since \({U}_{A}\) is open and \(D\) is dense in \({\mathbb{R}}_{\ell }^{2}\) ) nor all of \(D\) (since \(D \cap {V}_{A}\) is nonempty). It remains to show that if \(B\) is another proper nonempty subset of \(L\), then \(\theta ( A) \neq \theta ( B)\).
 
-One of the sets \(A,B\) contains a point not in the other; suppose that \(x \in A\) and \(x \notin B\). Then \(x \in L - B\), so that \(x \in {U}_{A} \cap {V}_{B}\) ; since the latter set is open and nonempty, it must contain points of \(D\) These points belong to \({U}_{A}\) and not to \({U}_{B}\), therefore, \(D \cap {U}_{A} \neq D \cap {U}_{B}\), as desired. Thus \(\theta\) is injective
+One of the sets \(A,B\) contains a point not in the other; suppose that \(x \in A\) and \(x \notin B\). Then \(x \in L - B\), so that \(x \in {U}_{A} \cap {V}_{B}\) ; since the latter set is open and nonempty, it must contain points of \(D\). These points belong to \({U}_{A}\) and not to \({U}_{B}\), therefore, \(D \cap {U}_{A} \neq D \cap {U}_{B}\), as desired. Thus \(\theta\) is injective.
 
 Now we show there exists an injective map \(\phi : \mathcal{P}( D) \rightarrow L\). Because \(D\) is countably infinite and \(L\) has the cardinality of \(\mathbb{R}\), it suffices to define an injective map \(\psi\) of \(\mathcal{P}( {\mathbb{Z}}_{ + })\) into \(\mathbb{R}\). For that, we let \(\psi\) assign to the subset \(S\) of \({\mathbb{Z}}_{ + }\) the infinite decimal \({a}_{1}{a}_{2}\ldots\), where \({a}_{i} = 0\) if \(i \in S\) and \({a}_{i} = 1\) if \(i \notin S\). That is,
 
@@ -325,7 +326,7 @@ Now the composite
 \mathcal{P}( L) \overset{\theta }{ \rightarrow }\mathcal{P}( D) \overset{\psi }{ \rightarrow }L
 \]
 
-is an injective map of \(\mathcal{P}( L)\) into \(L\). But Theorem 7.8 tells us such a map does not exist! Thus we have reached a contradiction
+is an injective map of \(\mathcal{P}( L)\) into \(L\). But Theorem 7.8 tells us such a map does not exist! Thus we have reached a contradiction.
 
 This proof that \({\mathbb{R}}_{\ell }^{2}\) is not normal is in some ways not very satisfying. We showed only that there must exist some proper nonempty subset \(A\) of \(L\) such that the sets \(A\) and \(B = L - A\) are not contained in disjoint open sets of \({\mathbb{R}}_{\ell }^{2}\). But we did not actually find such a set \(A\). In fact, the set \(A\) of points of \(L\) having rational coordinates is such a set, but the proof is not easy. It is left to the exercises.
 \end{example}
@@ -405,7 +406,7 @@ Then \(U\) and \(V\) are open sets containing \(A\) and \(B\), respectively; we 
 z \in B( {a,{\epsilon }_{a}/2}) \cap B( {b,{\epsilon }_{b}/2})
 \]
 
-for some \(a \in A\) and some \(b \in B\) The triangle inequality applies to show that \(d( {a,b}) < ( {{\epsilon }_{a} + {\epsilon }_{b}}) /2\). If \({\epsilon }_{a} \leq {\epsilon }_{b}\), then \(d( {a,b}) < {\epsilon }_{b}\), so that the ball \(B( {b,{\epsilon }_{b}})\) contains the point \(a\). If \({\epsilon }_{b} \leq {\epsilon }_{a}\), then \(d( {a,b}) < {\epsilon }_{a}\), so that the ball \(B( {a,{\epsilon }_{a}})\) contains the point \(b\). Neither situation is possible.
+for some \(a \in A\) and some \(b \in B\). The triangle inequality applies to show that \(d( {a,b}) < ( {{\epsilon }_{a} + {\epsilon }_{b}}) /2\). If \({\epsilon }_{a} \leq {\epsilon }_{b}\), then \(d( {a,b}) < {\epsilon }_{b}\), so that the ball \(B( {b,{\epsilon }_{b}})\) contains the point \(a\). If \({\epsilon }_{b} \leq {\epsilon }_{a}\), then \(d( {a,b}) < {\epsilon }_{a}\), so that the ball \(B( {a,{\epsilon }_{a}})\) contains the point \(b\). Neither situation is possible.
 \end{proof}
 
 \begin{theorem}
@@ -444,14 +445,14 @@ U = \mathop{\bigcup }\limits_{{a \in A}}( {{x}_{a},a}] \;\text{ and }\;V = \math
 
 are open sets containing \(A\) and \(B\), respectively; we assert they are disjoint. For suppose that \(z \in U \cap V\). Then \(z \in ( {{x}_{a},a}] \cap ( {{y}_{b},b}]\) for some \(a \in A\) and some \(b \in B\). Assume that \(a < b\). Then if \(a \leq {y}_{b}\), the two intervals are disjoint, while if \(a > {y}_{b}\), we have \(a \in ( {{y}_{b},b}]\), contrary to the fact that \(( {{y}_{b},b}]\) is disjoint from \(A\). A similar contradiction occurs if \(b < a\).
 
-Finally, assume that \(A\) and \(B\) are disjoint closed sets in \(X\), and \(A\) contains the smallest element \({a}_{0}\) of \(X\). The set \(\{ {a}_{0}\}\) is both open and closed in \(X\). By the result of the preceding paragraph, there exist disjoint open sets \(U\) and \(V\) containing the closed sets \(A - \{ {a}_{0}\}\) and \(B\), respectively. Then \(U \cup \{ {a}_{0}\}\) and \(V\) are disjoint open sets containing \(A\) and \(B\), respectively
+Finally, assume that \(A\) and \(B\) are disjoint closed sets in \(X\), and \(A\) contains the smallest element \({a}_{0}\) of \(X\). The set \(\{ {a}_{0}\}\) is both open and closed in \(X\). By the result of the preceding paragraph, there exist disjoint open sets \(U\) and \(V\) containing the closed sets \(A - \{ {a}_{0}\}\) and \(B\), respectively. Then \(U \cup \{ {a}_{0}\}\) and \(V\) are disjoint open sets containing \(A\) and \(B\), respectively.
 \end{proof}
 
 \begin{centeredblock}
 \begin{example}
  If \(J\) is uncountable, the product space \({\mathbb{R}}^{J}\) is not normal. The proof is fairly difficult; we leave it as a challenging exercise (see Exercise 9).
 
-This example serves three purposes. It shows that a regular space \({\mathbb{R}}^{J}\) need not be normal. It shows that a subspace of a normal space need not be normal, for \({\mathbb{R}}^{J}\) is homeomorphic to the subspace \({( 0,1) }^{J}\) of \({[ 0,1] }^{J}\), which (assuming the Tychonoff theorem) is compact Hausdorff and therefore normal And it shows that an uncountable product of normal spaces need not be normal. It leaves unsettled the question as to whether a finite or a countable product of normal spaces might be normal.
+This example serves three purposes. It shows that a regular space \({\mathbb{R}}^{J}\) need not be normal. It shows that a subspace of a normal space need not be normal, for \({\mathbb{R}}^{J}\) is homeomorphic to the subspace \({( 0,1) }^{J}\) of \({[ 0,1] }^{J}\), which (assuming the Tychonoff theorem) is compact Hausdorff and therefore normal. And it shows that an uncountable product of normal spaces need not be normal. It leaves unsettled the question as to whether a finite or a countable product of normal spaces might be normal.
 \end{example}
 \end{centeredblock}
 
@@ -461,7 +462,7 @@ This example serves three purposes. It shows that a regular space \({\mathbb{R}}
 
 Consider the well-ordered set \({\bar{S}}_{\Omega }\), in the order topology, and consider the subset \({S}_{\Omega }\), in the subspace topology (which is the same as the order topology). Both spaces are normal, by Theorem 32.4. We shall show that the product space \({S}_{\Omega } \times {\bar{S}}_{\Omega }\) is not normal.
 
-This example serves three purposes. First, it shows that a regular space need not be normal, for \({S}_{\Omega } \times {\bar{S}}_{\Omega }\) is a product of regular spaces and therefore regular. Second, it shows that a subspace of a normal space need not be normal, for \({S}_{\Omega } \times {\bar{S}}_{\Omega }\) is a subspace of \({\bar{S}}_{\Omega } \times {\bar{S}}_{\Omega }\), which is a compact Hausdorff space and therefore normal Third, it shows that the product of two normal spaces need not be normal.
+This example serves three purposes. First, it shows that a regular space need not be normal, for \({S}_{\Omega } \times {\bar{S}}_{\Omega }\) is a product of regular spaces and therefore regular. Second, it shows that a subspace of a normal space need not be normal, for \({S}_{\Omega } \times {\bar{S}}_{\Omega }\) is a subspace of \({\bar{S}}_{\Omega } \times {\bar{S}}_{\Omega }\), which is a compact Hausdorff space and therefore normal. Third, it shows that the product of two normal spaces need not be normal.
 \end{example}
 \end{centeredblock}
 
@@ -488,15 +489,15 @@ B = {S}_{\Omega } \times \{ \Omega \}
 
 is closed in \({S}_{\Omega } \times {\bar{S}}_{\Omega }\), being a ``slice'' of this product space. The sets \(A\) and \(B\) are disjoint. We shall assume there exist disjoint open sets \(U\) and \(V\) of \({S}_{\Omega } \times {\bar{S}}_{\Omega }\) containing \(A\) and \(B\), respectively, and derive a contradiction. See Figure 32.2.
 
-Given \(x \in {S}_{\Omega }\), consider the vertical slice \(x \times {\bar{S}}_{\Omega }\). We assert that there is some point \(\beta\) with \(x < \beta < \Omega\) such that \(x \times \beta\) lies outside \(U\) For if \(U\) contained all points \(x \times \beta\) for \(x < \beta < \Omega\), then the top point \(x \times \Omega\) of the slice would be a limit point of \(U\), which it is not because \(V\) is an open set disjoint from \(U\) containing this top point
+Given \(x \in {S}_{\Omega }\), consider the vertical slice \(x \times {\bar{S}}_{\Omega }\). We assert that there is some point \(\beta\) with \(x < \beta < \Omega\) such that \(x \times \beta\) lies outside \(U\). For if \(U\) contained all points \(x \times \beta\) for \(x < \beta < \Omega\), then the top point \(x \times \Omega\) of the slice would be a limit point of \(U\), which it is not because \(V\) is an open set disjoint from \(U\) containing this top point.
 
-Choose \(\beta (x)\) to be such a point; just to be definite, let \(\beta (x)\) be the smallest element of \({S}_{\Omega }\) such that \(x < \beta (x) < \Omega\) and \(x \times \beta (x)\) lies outside \(U\). Define a sequence of points of \({S}_{\Omega }\) as follows: Let \({x}_{1}\) be any point of \({S}_{\Omega }\) Let \({x}_{2} = \beta ( {x}_{1})\), and in general, \({x}_{n + 1} = \beta ( {x}_{n})\) We have
+Choose \(\beta (x)\) to be such a point; just to be definite, let \(\beta (x)\) be the smallest element of \({S}_{\Omega }\) such that \(x < \beta (x) < \Omega\) and \(x \times \beta (x)\) lies outside \(U\). Define a sequence of points of \({S}_{\Omega }\) as follows: Let \({x}_{1}\) be any point of \({S}_{\Omega }\). Let \({x}_{2} = \beta ( {x}_{1})\), and in general, \({x}_{n + 1} = \beta ( {x}_{n})\). We have
 
 \[
 {x}_{1} < {x}_{2} < \ldots
 \]
 
-because \(\beta (x) > x\) for all \(x\). The set \(\{ {x}_{n}\}\) is countable and therefore has an upper bound in \({S}_{\Omega }\) ; let \(b \in {S}_{\Omega }\) be its least upper bound. Because the sequence is increasing, it must converge to its least upper bound; thus \({x}_{n} \rightarrow b\) But \(\beta ( {x}_{n}) = {x}_{n + 1}\), so that \(\beta ( {x}_{n}) \rightarrow b\) also. Then
+because \(\beta (x) > x\) for all \(x\). The set \(\{ {x}_{n}\}\) is countable and therefore has an upper bound in \({S}_{\Omega }\) ; let \(b \in {S}_{\Omega }\) be its least upper bound. Because the sequence is increasing, it must converge to its least upper bound; thus \({x}_{n} \rightarrow b\). But \(\beta ( {x}_{n}) = {x}_{n + 1}\), so that \(\beta ( {x}_{n}) \rightarrow b\) also. Then
 
 \[
 {x}_{n} \times \beta ( {x}_{n}) \rightarrow b \times b
@@ -511,7 +512,7 @@ in the product space. See Figure 32.3. Now we have a contradiction, for the poin
 \item Show that if \(\prod {X}_{\alpha }\) is Hausdorff, or regular, or normal, then so is \({X}_{\alpha }\). (Assume that each \({X}_{\alpha }\) is nonempty.)
 \item Show that every locally compact Hausdorff space is regular.
 \item Show that every regular Lindelöf space is normal.
-\item Is \({\mathbb{R}}^{\omega }\) normal in the product topology? In the uniform topology? It is not known whether \({\mathbb{R}}^{\omega }\) is normal in the box topology. Mary-Ellen Rudin has shown that the answer is affirmative if one assumes the continuum hypothesis \cite{Rudin1972}. In fact, she shows it satisfies a stronger condition called paracompact-ness.
+\item Is \({\mathbb{R}}^{\omega }\) normal in the product topology? In the uniform topology? It is not known whether \({\mathbb{R}}^{\omega }\) is normal in the box topology. Mary-Ellen Rudin has shown that the answer is affirmative if one assumes the continuum hypothesis \cite{Rudin1972}. In fact, she shows it satisfies a stronger condition called paracompactness.
 \item A space \(X\) is said to be completely normal if every subspace of \(X\) is normal. Show that \(X\) is completely normal if and only if for every pair \(A,B\) of separated sets in \(X\) (that is, sets such that \(\bar{A} \cap B = \varnothing\) and \(A \cap \bar{B} = \varnothing\) ), there exist disjoint open sets containing them. [Hint: If \(X\) is completely normal, consider \(X - ( {\bar{A} \cap \bar{B}})\).]
 \item Which of the following spaces are completely normal? Justify your answers.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
@@ -523,9 +524,11 @@ in the product space. See Figure 32.3. Now we have a contradiction, for the poin
  \item A regular space with a countable basis.
  \item The space \({\mathbb{R}}_{\ell }\).
 \item[*8.] Prove the following: \textsl{Theorem.} Every linear continuum \(X\) is normal.
- \item Let \(C\) be a nonempty closed subset of \(X\). If \(U\) is a component of \(X - C\), show that \(U\) is a set of the form \(( {c,{c}^{\prime }})\) or \(( {c,\infty })\) or \(( {-\infty, c})\), where \(c,{c}^{\prime } \in C\).
- \item Let \(A\) and \(B\) be closed disjoint subsets of \(X\). For each component \(W\) of \(X - A \cup B\) that is an open interval with one end point in \(A\) and the other in \(B\), choose a point \({c}_{W}\) of \(W\). Show that the set \(C\) of the points \({c}_{W}\) is closed.
- \item Show that if \(V\) is a component of \(X - C\), then \(V\) does not intersect both \(A\) and \(B\).
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Let \(C\) be a nonempty closed subset of \(X\). If \(U\) is a component of \(X - C\), show that \(U\) is a set of the form \(( {c,{c}^{\prime }})\) or \(( {c,\infty })\) or \(( {-\infty, c})\), where \(c,{c}^{\prime } \in C\).
+  \item Let \(A\) and \(B\) be closed disjoint subsets of \(X\). For each component \(W\) of \(X - A \cup B\) that is an open interval with one end point in \(A\) and the other in \(B\), choose a point \({c}_{W}\) of \(W\). Show that the set \(C\) of the points \({c}_{W}\) is closed.
+  \item Show that if \(V\) is a component of \(X - C\), then \(V\) does not intersect both \(A\) and \(B\).
+  \end{enumerate}
 
 \item[*9.] Prove the following: \textsl{Theorem.} If \(J\) is uncountable, then \({\mathbb{R}}^{J}\) is not normal. \textsl{Proof.} (This proof is due to A. H. Stone, as adapted in \cite{SteenSeebach1970}.) Let \(X = {( {\mathbb{Z}}_{ + }) }^{J}\) ; it will suffice to show that \(X\) is not normal, since \(X\) is a closed subspace of \({\mathbb{R}}^{J}\). We use functional notation for the elements of \(X\), so that the typical element of \(X\) is a function \(\mathbf{x} : J \rightarrow {\mathbb{Z}}_{ + }\)
  \item If \(\mathbf{x} \in X\) and if \(B\) is a finite subset of \(J\), let \(U( {\mathbf{x},B})\) denote the set consisting of all those elements \(\mathbf{y}\) of \(X\) such that \(\mathbf{y}( \alpha ) = \mathbf{x}( \alpha )\) for \(\alpha \in B\). Show the sets \(U( {\mathbf{x},B})\) are a basis for \(X\).
@@ -579,7 +582,7 @@ p < q \Rightarrow {\bar{U}}_{p} \subset {U}_{q}
 
 Let \(r\) denote the next rational number in the sequence; we wish to define \({U}_{r}\)
 
-Consider the set \({P}_{n + 1} = {P}_{n} \cup \{ r\}\). It is a finite subset of the interval \([ {0,1}]\), and, as such, it has a simple ordering derived from the usual order relation \(<\) on the real line. In a finite simply ordered set, every element (other than the smallest and the largest) has an immediate predecessor and an immediate successor. (See Theorem 10.1 ) The number 0 is the smallest element, and 1 is the largest element, of the simply ordered set \({P}_{n + 1}\), and \(r\) is neither 0 nor 1 So \(r\) has an immediate predecessor \(p\) in \({P}_{n + 1}\) and an immediate successor \(q\) in \({P}_{n + 1}\) The sets \({U}_{p}\) and \({U}_{q}\) are already defined, and \({\bar{U}}_{p} \subset {U}_{q}\) by the induction hypothesis. Using normality of \(X\), we can find an open set \({U}_{r}\) of \(X\) such that
+Consider the set \({P}_{n + 1} = {P}_{n} \cup \{ r\}\). It is a finite subset of the interval \([ {0,1}]\), and, as such, it has a simple ordering derived from the usual order relation \(<\) on the real line. In a finite simply ordered set, every element (other than the smallest and the largest) has an immediate predecessor and an immediate successor. (See Theorem 10.1 ) The number 0 is the smallest element, and 1 is the largest element, of the simply ordered set \({P}_{n + 1}\), and \(r\) is neither 0 nor 1. So \(r\) has an immediate predecessor \(p\) in \({P}_{n + 1}\) and an immediate successor \(q\) in \({P}_{n + 1}\). The sets \({U}_{p}\) and \({U}_{q}\) are already defined, and \({\bar{U}}_{p} \subset {U}_{q}\) by the induction hypothesis. Using normality of \(X\), we can find an open set \({U}_{r}\) of \(X\) such that
 
 \[
 {\bar{U}}_{p} \subset {U}_{r}\;\text{ and }\;{\bar{U}}_{r} \subset {U}_{q}.
@@ -613,7 +616,7 @@ To illustrate, let us suppose we started with the standard way of arranging the 
 P = \{ 1,0,\frac{1}{2},\frac{1}{3},\frac{2}{3},\frac{1}{4},\frac{3}{4},\frac{1}{5},\frac{2}{5},\frac{3}{5},\;\}
 \]
 
-After defining \({U}_{0}\) and \({U}_{1}\), we would define \({U}_{1/2}\) so that \({\bar{U}}_{0} \subset {U}_{1/2}\) and \({\bar{U}}_{1/2} \subset {U}_{1}\) Then we would fit in \({U}_{1/3}\) between \({U}_{0}\) and \({U}_{1/2}\), and \({U}_{2/3}\) between \({U}_{1/2}\) and \({U}_{1}\). And so on. At the eighth step of the proof we would have the situation pictured in Figure 33.1 And the ninth step would consist of choosing an open set \({U}_{2/5}\) to fit in between \({U}_{1/3}\) and \({U}_{1/2}\) And so on
+After defining \({U}_{0}\) and \({U}_{1}\), we would define \({U}_{1/2}\) so that \({\bar{U}}_{0} \subset {U}_{1/2}\) and \({\bar{U}}_{1/2} \subset {U}_{1}\). Then we would fit in \({U}_{1/3}\) between \({U}_{0}\) and \({U}_{1/2}\), and \({U}_{2/3}\) between \({U}_{1/2}\) and \({U}_{1}\). And so on. At the eighth step of the proof we would have the situation pictured in Figure 33.1. And the ninth step would consist of choosing an open set \({U}_{2/5}\) to fit in between \({U}_{1/3}\) and \({U}_{1/2}\). And so on.
 
 \munkresfig[1.0]{33.1}[Figure 33.1]
 Step 2. Now we have defined \({U}_{p}\) for all rational numbers \(p\) in the interval \([ {0,1}]\). We extend this definition to all rational numbers \(p\) in \(\mathbb{R}\) by defining
@@ -632,7 +635,7 @@ It is still true (as you can check) that for any pair of rational numbers \(p\) 
 p < q \Rightarrow {\bar{U}}_{p} \subset {U}_{q}
 \]
 
-Step 3. Given a point \(x\) of \(X\), let us define \(\mathbb{Q}(x)\) to be the set of those rational numbers \(p\) such that the corresponding open sets \({U}_{p}\) contain \(x\)
+Step 3. Given a point \(x\) of \(X\), let us define \(\mathbb{Q}(x)\) to be the set of those rational numbers \(p\) such that the corresponding open sets \({U}_{p}\) contain \(x\).
 
 \[
 \mathbb{Q}(x) = \{ {p \mid x \in {U}_{p}}\}.
@@ -644,7 +647,7 @@ This set contains no number less than 0, since no \(x\) is in \({U}_{p}\) for \(
 f(x) = \inf \mathbb{Q}(x) = \inf \{ {p \mid x \in {U}_{p}}\}.
 \]
 
-Step 4 We show that \(f\) is the desired function. If \(x \in A\), then \(x \in {U}_{p}\) for every \(p \geq 0\), so that \(\mathbb{Q}(x)\) equals the set of all nonnegative rationals, and \(f(x) = \inf \mathbb{Q}(x) =\) 0 . Similarly, if \(x \in B\), then \(x \in {U}_{p}\) for no \(p \leq 1\), so that \(\mathbb{Q}(x)\) consists of all rational numbers greater than1, and \(f(x) = 1\).
+Step 4. We show that \(f\) is the desired function. If \(x \in A\), then \(x \in {U}_{p}\) for every \(p \geq 0\), so that \(\mathbb{Q}(x)\) equals the set of all nonnegative rationals, and \(f(x) = \inf \mathbb{Q}(x) =\) 0 . Similarly, if \(x \in B\), then \(x \in {U}_{p}\) for no \(p \leq 1\), so that \(\mathbb{Q}(x)\) consists of all rational numbers greater than 1, and \(f(x) = 1\).
 
 All this is easy. The only hard part is to show that \(f\) is continuous. For this purpose, we first prove the following elementary facts:
 
@@ -680,7 +683,7 @@ U = {U}_{q} - {\bar{U}}_{p}
 is the desired neighborhood of \({x}_{0}\). See Figure 33.2.
 
 \munkresfig[1.0]{33.2}[Figure 33.2]
-First, we note that \({x}_{0} \in U\) For the fact that \(f( {x}_{0}) < q\) implies by condition (2) that \({x}_{0} \in {U}_{q}\), while the fact that \(f( {x}_{0}) > p\) implies by (1) that \({x}_{0} \notin {\bar{U}}_{p}\).
+First, we note that \({x}_{0} \in U\). For the fact that \(f( {x}_{0}) < q\) implies by condition (2) that \({x}_{0} \in {U}_{q}\), while the fact that \(f( {x}_{0}) > p\) implies by (1) that \({x}_{0} \notin {\bar{U}}_{p}\).
 
 Second, we show that \(f( U) \subset ( {c,d})\). Let \(x \in U\). Then \(x \in {U}_{q} \subset {\bar{U}}_{q}\), so that \(f(x) \leq q\), by (1). And \(x \notin {\bar{U}}_{p}\), so that \(x \notin {U}_{p}\) and \(f(x) \geq p\), by (2). Thus, \(f(x) \in [ {p,q}] \subset ( {c,d})\), as desired.
 \end{proof}
@@ -689,7 +692,7 @@ Second, we show that \(f( U) \subset ( {c,d})\). Let \(x \in U\). Then \(x \in {
  If \(A\) and \(B\) are two subsets of the topological space \(X\), and if there is a continuous function \(f : X \rightarrow [ {0,1}]\) such that \(f( A) = \{ 0\}\) and \(f( B) = \{ 1\}\), we say that \(A\) and \(B\) can be separated by a continuous function.
 \end{definition}
 
-The Urysohn lemma says that if every pair of disjoint closed sets in \(X\) can be separated by disjoint open sets, then each such pair can be separated by a continuous function. The converse is trivial, for if \(f : X \rightarrow [ {0,1}]\) is the function, then \({f}^{-1}( [ 0,\frac{1}{2}) )\) and \({f}^{-1}( ( {\frac{1}{2},1}] )\) are disjoint open sets containing \(A\) and \(B\), respectively
+The Urysohn lemma says that if every pair of disjoint closed sets in \(X\) can be separated by disjoint open sets, then each such pair can be separated by a continuous function. The converse is trivial, for if \(f : X \rightarrow [ {0,1}]\) is the function, then \({f}^{-1}( [ 0,\frac{1}{2}) )\) and \({f}^{-1}( ( {\frac{1}{2},1}] )\) are disjoint open sets containing \(A\) and \(B\), respectively.
 
 This fact leads to a question that may already have occurred to you. Why cannot the proof of the Urysohn lemma be generalized to show that in a regular space, where you can separate points from closed sets by disjoint open sets, you can also separate points from closed sets by continuous functions?
 
@@ -701,7 +704,7 @@ Requiring that one be able to separate a point from a closed set by a continuous
  A space \(X\) is completely regular if one-point sets are closed in \(X\) and if for each point \({x}_{0}\) and each closed set \(A\) not containing \({x}_{0}\), there is a continuous function \(f : X \rightarrow [ {0,1}]\) such that \(f( {x}_{0}) = 1\) and \(f( A) = \{ 0\}\).
 \end{definition}
 
-A normal space is completely regular, by the Urysohn lemma, and a completely regular space is regular, since given \(f\), the sets \({f}^{-1}( [ {0,\frac{1}{2}}) )\) and \({f}^{-1}( [ {\frac{1}{2},1}] )\) are disjoint open sets about \(A\) and \({x}_{0}\), respectively As a result, this new axiom fits in between regularity and normality in the list of separation axioms. Note that in the definition one could just as well require the function to map \({x}_{0}\) to 0, and \(A\) to \(\{ 1\}\), for \(g(x) = 1 - f(x)\) satisfies this condition. But our definition is at times a bit more convenient.
+A normal space is completely regular, by the Urysohn lemma, and a completely regular space is regular, since given \(f\), the sets \({f}^{-1}( [ {0,\frac{1}{2}}) )\) and \({f}^{-1}( [ {\frac{1}{2},1}] )\) are disjoint open sets about \(A\) and \({x}_{0}\), respectively. As a result, this new axiom fits in between regularity and normality in the list of separation axioms. Note that in the definition one could just as well require the function to map \({x}_{0}\) to 0, and \(A\) to \(\{ 1\}\), for \(g(x) = 1 - f(x)\) satisfies this condition. But our definition is at times a bit more convenient.
 
 In the early years of topology, the separation axioms, listed in order of increasing strength, were labelled \({T}_{1},{T}_{2}\) (Hausdorff), \({T}_{3}\) (regular), \({T}_{4}\) (normal), and \({T}_{5}\) (completely normal), respectively. The letter ``T'' comes from the German ``Trennungsax-iom,'' which means ``separation axiom.'' Later, when the notion of complete regularity was introduced, someone suggested facetiously that it should be called the `` \(T - 3\frac{1}{2}\) axiom,'' since it lies between regularity and normality. This terminology is in fact sometimes used in the literature \({}^{1}\)
 
@@ -726,16 +729,15 @@ f( \mathbf{x}) = {\phi }_{1}( \mathbf{x}) \;{\phi }_{2}( \mathbf{x}) \cdot \cdot
 \]
 
 is the desired continuous function on \(X\), for it equals 1 at \(\mathbf{b}\) and vanishes outside \(\prod {U}_{\alpha }\).
+\end{proof}
 
 \begin{centeredblock}
 \begin{example}
- The spaces \({\mathbb{R}}_{\ell }^{2}\) and \({S}_{\Omega } \times {\bar{S}}_{\Omega }\) are completely regular but not normal For they are products of spaces that are completely regular (in fact, normal).
+ The spaces \({\mathbb{R}}_{\ell }^{2}\) and \({S}_{\Omega } \times {\bar{S}}_{\Omega }\) are completely regular but not normal. For they are products of spaces that are completely regular (in fact, normal).
 \end{example}
 \end{centeredblock}
 
 A space that is regular but not completely regular is much harder to find. Most of the examples that have been constructed for this purpose are difficult, and require considerable familiarity with cardinal numbers. Fairly recently, however, John Thomas \cite{Thomas1969} has constructed a much more elementary example, which we outline in Exercise 11.
-
-\end{proof}
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item Examine the proof of the Urysohn lemma, and show that for given \(r\), \[ {f}^{-1}( r) = \mathop{\bigcap }\limits_{{p > r}}{U}_{p} - \mathop{\bigcup }\limits_{{q < r}}{U}_{q} \] \(p,q\) rational.
@@ -785,9 +787,9 @@ There are two versions of the proof, and since each has useful generalizations t
 
 \end{theorem}
 \begin{proof}
- We shall prove that \(X\) is metrizable by imbedding \(X\) in a metrizable space \(Y\), that is, by showing \(X\) homeomorphic with a subspace of \(Y\). The two versions of the proof differ in the choice of the metrizable space \(Y\). In the first version, \(Y\) is the space \({\mathbb{R}}^{\omega }\) in the product topology, a space that we have previously proved to be metrizable (Theorem 20.5) In the second version, the space \(Y\) is also \({\mathbb{R}}^{\omega }\), but this time in the topology given by the uniform metric \(\bar{\rho }\) (see \(\$ {20}\) ). In each case, it turns out that our construction actually imbeds \(X\) in the subspace \({[ 0,1] }^{\omega }\) of \({\mathbb{R}}^{\omega }\)
+ We shall prove that \(X\) is metrizable by imbedding \(X\) in a metrizable space \(Y\), that is, by showing \(X\) homeomorphic with a subspace of \(Y\). The two versions of the proof differ in the choice of the metrizable space \(Y\). In the first version, \(Y\) is the space \({\mathbb{R}}^{\omega }\) in the product topology, a space that we have previously proved to be metrizable (Theorem 20.5). In the second version, the space \(Y\) is also \({\mathbb{R}}^{\omega }\), but this time in the topology given by the uniform metric \(\bar{\rho }\) (see \S 20). In each case, it turns out that our construction actually imbeds \(X\) in the subspace \({[ 0,1] }^{\omega }\) of \({\mathbb{R}}^{\omega }\).
 
-Step 1 We prove the following: There exists a countable collection of continuous functions \({f}_{n} : X \rightarrow [ {0,1}]\) having the property that given any point \({x}_{0}\) of \(X\) and any neighborhood \(U\) of \({x}_{0}\), there exists an index \(n\) such that \({f}_{n}\) is positive at \({x}_{0}\) and vanishes outside \(U\).
+Step 1. We prove the following: There exists a countable collection of continuous functions \({f}_{n} : X \rightarrow [ {0,1}]\) having the property that given any point \({x}_{0}\) of \(X\) and any neighborhood \(U\) of \({x}_{0}\), there exists an index \(n\) such that \({f}_{n}\) is positive at \({x}_{0}\) and vanishes outside \(U\).
 
 It is a consequence of the Urysohn lemma that, given \({x}_{0}\) and \(U\), there exists such a function. However, if we choose one such function for each pair \(( {{x}_{0},U})\), the resulting collection will not in general be countable. Our task is to cut the collection down to size. Here is one way to proceed:
 
@@ -801,7 +803,7 @@ F(x) = ( {{f}_{1}(x),{f}_{2}(x),\ldots }).
 
 We assert that \(F\) is an imbedding.
 
-First, \(F\) is continuous because \({\mathbb{R}}^{\omega }\) has the product topology and each \({f}_{n}\) is continuous. Second, \(F\) is injective because given \(x \neq y\), we know there is an index \(n\) such that \({f}_{n}(x) > 0\) and \({f}_{n}( y) = 0\) ; therefore, \(F(x) \neq F( y)\)
+First, \(F\) is continuous because \({\mathbb{R}}^{\omega }\) has the product topology and each \({f}_{n}\) is continuous. Second, \(F\) is injective because given \(x \neq y\), we know there is an index \(n\) such that \({f}_{n}(x) > 0\) and \({f}_{n}( y) = 0\) ; therefore, \(F(x) \neq F( y)\).
 
 Finally, we must prove that \(F\) is a homeomorphism of \(X\) onto its image, the subspace \(Z = F( X)\) of \({\mathbb{R}}^{\omega }\). We know that \(F\) defines a continuous bijection of \(X\) with \(Z\), so we need only show that for each open set \(U\) in \(X\), the set \(F( U)\) is open in \(Z\). Let \({z}_{0}\) be a point of \(F( U)\). We shall find an open set \(W\) of \(Z\) such that
 
@@ -832,7 +834,7 @@ Step 3 (Second version of the proof). In this version, we imbed \(X\) in the met
 \rho ( {\mathbf{x},\mathbf{y}}) = \sup \{ | {{x}_{i} - {y}_{i}}| \}.
 \]
 
-We use the countable collection of functions \({f}_{n} : X \rightarrow [ {0,1}]\) constructed in Step 1. But now we impose the additional condition that \({f}_{n}(x) \leq 1/n\) for all \(x\) (This condition is easy to satisfy; we can just divide each function \({f}_{n}\) by \(n\).)
+We use the countable collection of functions \({f}_{n} : X \rightarrow [ {0,1}]\) constructed in Step 1. But now we impose the additional condition that \({f}_{n}(x) \leq 1/n\) for all \(x\). (This condition is easy to satisfy; we can just divide each function \({f}_{n}\) by \(n\).)
 
 Define \(F : X \rightarrow {[ 0,1] }^{\omega }\) by the equation
 
@@ -840,7 +842,7 @@ Define \(F : X \rightarrow {[ 0,1] }^{\omega }\) by the equation
 F(x) = ( {{f}_{1}(x),{f}_{2}(x),\ldots })
 \]
 
-as before. We assert that \(F\) is now an imbedding relative to the metric \(\rho\) on \({[ 0,1] }^{\omega }\). We know from Step 2 that \(F\) is injective. Furthermore, we know that if we use the product topology on \({[ 0,1] }^{\omega }\), the map \(F\) carries open sets of \(X\) onto open sets of the subspace \(Z = F( X)\). This statement remains true if one passes to the finer (larger) topology on \({[ 0,1] }^{\omega }\) induced by the metric \(\rho\)
+as before. We assert that \(F\) is now an imbedding relative to the metric \(\rho\) on \({[ 0,1] }^{\omega }\). We know from Step 2 that \(F\) is injective. Furthermore, we know that if we use the product topology on \({[ 0,1] }^{\omega }\), the map \(F\) carries open sets of \(X\) onto open sets of the subspace \(Z = F( X)\). This statement remains true if one passes to the finer (larger) topology on \({[ 0,1] }^{\omega }\) induced by the metric \(\rho\).
 
 The one thing left to do is to prove that \(F\) is continuous. This does not follow from the fact that each component function is continuous, for we are not using the product topology on \({\mathbb{R}}^{\omega }\) now. Here is where the assumption \({f}_{n}(x) \leq 1/n\) comes in.
 
@@ -875,6 +877,7 @@ because \({f}_{n}\) maps \(X\) into \([ {0,1/n}]\). Therefore for all \(x \in U\
 \]
 
 as desired.
+\end{proof}
 
 In Step 2 of the preceding proof, we actually proved something stronger than the result stated there. For later use, we state it here.
 
@@ -896,7 +899,6 @@ A family of continuous functions that satisfies the hypotheses of this theorem i
  A space \(X\) is completely regular if and only if it is homeomorphic to a subspace of \({[ 0,1] }^{J}\) for some \(J\).
 
 \end{theorem}
-\end{proof}
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item Give an example showing that a Hausdorff space with a countable basis need not be metrizable.
@@ -907,7 +909,7 @@ A family of continuous functions that satisfies the hypotheses of this theorem i
 \item Check the details of the proof of Theorem 34.2.
 \item A space \(X\) is locally metrizable if each point \(x\) of \(X\) has a neighborhood that is metrizable in the subspace topology. Show that a compact Hausdorff space \(X\) is metrizable if it is locally metrizable. [Hint. Show that \(X\) is a finite union of open subspaces, each of which has a countable basis.]
 \item Show that a regular Lindelöf space is metrizable if it is locally metrizable. [Hint: A closed subspace of a Lindelöf space is Lindelöf.] Regularity is essential; where do you use it in the proof?
-\item Let \(X\) be a compact Hausdorff space that is the union of the closed subspaces \({X}_{1}\) and \({X}_{2}\). If \({X}_{1}\) and \({X}_{2}\) are metrizable, show that \(X\) is metrizable. [Hint Construct a countable collection \(\mathcal{A}\) of open sets of \(X\) whose intersections with \({X}_{i}\) form a basis for \({X}_{i}\), for \(i = 1,2\). Assume \({X}_{1} - {X}_{2}\) and \({X}_{2} - {X}_{1}\) belong to \(\mathcal{A}\). Let \(\mathcal{B}\) consist of finite intersections of elements of \(\mathcal{A}\) ]
+\item Let \(X\) be a compact Hausdorff space that is the union of the closed subspaces \({X}_{1}\) and \({X}_{2}\). If \({X}_{1}\) and \({X}_{2}\) are metrizable, show that \(X\) is metrizable. [Hint: Construct a countable collection \(\mathcal{A}\) of open sets of \(X\) whose intersections with \({X}_{i}\) form a basis for \({X}_{i}\), for \(i = 1,2\). Assume \({X}_{1} - {X}_{2}\) and \({X}_{2} - {X}_{1}\) belong to \(\mathcal{A}\). Let \(\mathcal{B}\) consist of finite intersections of elements of \(\mathcal{A}\) ]
 \end{enumerate}
 \section*{*§ 35 The Tietze Extension Theorem \protect\sectionDagger}
 \customfootnote{${}^{\dagger}$ This section will be assumed in \S 62. It is also used in a number of exercises.}
@@ -925,7 +927,7 @@ One immediate consequence of the Urysohn lemma is the useful theorem called the 
 \begin{proof}
  The idea of the proof is to construct a sequence of continuous functions \({s}_{n}\) defined on the entire space \(X\), such that the sequence \({s}_{n}\) converges uniformly, and such that the restriction of \({s}_{n}\) to \(A\) approximates \(f\) more and more closely as \(n\) becomes large. Then the limit function will be continuous, and its restriction to \(A\) will equal \(f\).
 
-Step 1. The first step is to construct a particular function \(g\) defined on all of \(X\) such that \(g\) is not too large, and such that \(g\) approximates \(f\) on the set \(A\) to a fair degree of accuracy To be more precise, let us take the case \(f : A \rightarrow [ {-r,r}]\). We assert that there exists a continuous function \(g : X \rightarrow \mathbb{R}\) such that
+Step 1. The first step is to construct a particular function \(g\) defined on all of \(X\) such that \(g\) is not too large, and such that \(g\) approximates \(f\) on the set \(A\) to a fair degree of accuracy. To be more precise, let us take the case \(f : A \rightarrow [ {-r,r}]\). We assert that there exists a continuous function \(g : X \rightarrow \mathbb{R}\) such that
 
 \[
 | {g(x) }| \leq \frac{1}{3}r\;\text{ for all }x \in X,
@@ -1015,7 +1017,7 @@ We now define
 g(x) = \mathop{\sum }\limits_{{n = 1}}^{\infty }{g}_{n}(x)
 \]
 
-for all \(x\) in \(X\). Of course, we have to know that this infinite series converges. But that follows from the comparison theorem of calculus, it converges by comparison with the geometric series
+for all \(x\) in \(X\). Of course, we have to know that this infinite series converges. But that follows from the comparison theorem of calculus; it converges by comparison with the geometric series
 
 \[
 \frac{1}{3}\mathop{\sum }\limits_{{n = 1}}^{\infty }{( \frac{2}{3}) }^{n - 1}
@@ -1041,9 +1043,9 @@ Holding \(n\) fixed and letting \(k \rightarrow \infty\), we see that
 | {g(x) - {s}_{n}(x) }| \leq {( \frac{2}{3}) }^{n}
 \]
 
-for all \(x \in X\). Therefore, \({s}_{n}\) converges to \(g\) uniformly
+for all \(x \in X\). Therefore, \({s}_{n}\) converges to \(g\) uniformly.
 
-We show that \(g( a) = f( a)\) for \(a \in A\) Let \({s}_{n}(x) = \mathop{\sum }\limits_{{i = 1}}^{n}{g}_{i}(x)\), the \(n\) th partial sum of the series. Then \(g(x)\) is by definition the limit of the infinite sequence \({s}_{n}(x)\) of partial sums. Since
+We show that \(g( a) = f( a)\) for \(a \in A\). Let \({s}_{n}(x) = \mathop{\sum }\limits_{{i = 1}}^{n}{g}_{i}(x)\), the \(n\) th partial sum of the series. Then \(g(x)\) is by definition the limit of the infinite sequence \({s}_{n}(x)\) of partial sums. Since
 
 \[
 | {f( a) - \mathop{\sum }\limits_{{i = 1}}^{n}{g}_{i}( a) }| = | {f( a) - {s}_{n}( a) }| \leq {( \frac{2}{3}) }^{n}
@@ -1063,9 +1065,9 @@ r( y) = y/| y| \;\text{ if }| y| \geq 1,
 
 would be an extension of \(f\) mapping \(X\) into \([ {-1,1}]\).
 
-Step 3 We now prove part (b) of the theorem, in which \(f\) maps \(A\) into \(\mathbb{R}\). We can replace \(\mathbb{R}\) by the open interval \((-1,1)\), since this interval is homeomorphic to \(\mathbb{R}\).
+Step 3. We now prove part (b) of the theorem, in which \(f\) maps \(A\) into \(\mathbb{R}\). We can replace \(\mathbb{R}\) by the open interval \((-1,1)\), since this interval is homeomorphic to \(\mathbb{R}\).
 
-So let \(f\) be a continuous map from \(A\) into(-1,1). The half of the Tietze theorem already proved shows that we can extend \(f\) to a continuous map \(g : X \rightarrow [ {-1,1}]\) mapping \(X\) into the closed interval. How can we find a map \(h\) carrying \(X\) into the open interval?
+So let \(f\) be a continuous map from \(A\) into \((-1,1)\). The half of the Tietze theorem already proved shows that we can extend \(f\) to a continuous map \(g : X \rightarrow [ {-1,1}]\) mapping \(X\) into the closed interval. How can we find a map \(h\) carrying \(X\) into the open interval?
 
 Given \(g\), let us define a subset \(D\) of \(X\) by the equation
 
@@ -1094,7 +1096,7 @@ Finally, \(h\) maps all of \(X\) into the open interval \((-1,1)\). For if \(x \
 \item In the proof of the Tietze theorem, how essential was the clever decision in Step 1 to divide the interval \([ {-r,r}]\) into three equal pieces? Suppose instead that one divides this interval into the three intervals \[ {I}_{1} = [ {-r, - {ar}}] ,\;{I}_{2} = [ {-{ar},{ar}}] ,\;{I}_{3} = [ {{ar},r}] , \] for some \(a\) with \(0 < a < 1\). For what values of \(a\) other than \(a = 1/3\) (if any) does the proof go through?
 \item Let \(X\) be metrizable. Show that the following are equivalent:
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
- \item \(X\) is bounded under every metric that gives the topology of \(X\). (ii) Every continuous function \(\phi : X \rightarrow \mathbb{R}\) is bounded. (iii) \(X\) is limit point compact. [Hint: If \(\phi : X \rightarrow \mathbb{R}\) is a continuous function, then \(F(x) = x \times \phi (x)\) is an imbedding of \(X\) in \(X \times \mathbb{R}\) If \(A\) is an infinite subset of \(X\) having no limit point, let \(\phi\) be a surjection of \(A\) onto \({\mathbb{Z}}_{ + }\) ]
+ \item (i) \(X\) is bounded under every metric that gives the topology of \(X\). (ii) Every continuous function \(\phi : X \rightarrow \mathbb{R}\) is bounded. (iii) \(X\) is limit point compact. [Hint: If \(\phi : X \rightarrow \mathbb{R}\) is a continuous function, then \(F(x) = x \times \phi (x)\) is an imbedding of \(X\) in \(X \times \mathbb{R}\). If \(A\) is an infinite subset of \(X\) having no limit point, let \(\phi\) be a surjection of \(A\) onto \({\mathbb{Z}}_{ + }\) ]
  \end{enumerate}
 \item Let \(Z\) be a topological space. If \(Y\) is a subspace of \(Z\), we say that \(Y\) is a retract of \(Z\) if there is a continuous map \(r : Z \rightarrow Y\) such that \(r( y) = y\) for each \(y \in Y\)
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
@@ -1107,7 +1109,7 @@ Finally, \(h\) maps all of \(X\) into the open interval \((-1,1)\). For if \(x \
  \item Show that \({\mathbb{R}}^{J}\) has the universal extension property.
  \item Show that if \(Y\) is homeomorphic to a retract of \({\mathbb{R}}^{J}\), then \(Y\) has the universal extension property
  \end{enumerate}
-\item Let \(Y\) be a normal space Then \(Y\) is said to be an absolute retract if for every pair of spaces \(( {{Y}_{0},Z})\) such that \(Z\) is normal and \({Y}_{0}\) is a closed subspace of \(Z\) homeomorphic to \(Y\), the space \({Y}_{0}\) is a retract of \(Z\).
+\item Let \(Y\) be a normal space. Then \(Y\) is said to be an absolute retract if for every pair of spaces \(( {{Y}_{0},Z})\) such that \(Z\) is normal and \({Y}_{0}\) is a closed subspace of \(Z\) homeomorphic to \(Y\), the space \({Y}_{0}\) is a retract of \(Z\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show that if \(Y\) has the universal extension property, then \(Y\) is an absolute retract.
  \item Show that if \(Y\) is an absolute retract and \(Y\) is compact, then \(Y\) has the universal extension property. [Hint. Assume the Tychonoff theorem, so you know \({[ 0,1] }^{J}\) is normal. Imbed \(Y\) in \({[ 0,1] }^{J}\).]
@@ -1128,7 +1130,7 @@ Finally, \(h\) maps all of \(X\) into the open interval \((-1,1)\). For if \(x \
 \end{enumerate}
 \section*{*§ 36 Imbeddings of Manifolds \protect\sectionDagger}
 
-We have shown that every regular space with a countable basis can be imbedded in the ``infinite-dimensional'' euclidean space \({\mathbb{R}}^{\omega }\) It is natural to ask under what conditions a space \(X\) can be imbedded in some finite-dimensional euclidean space \({\mathbb{R}}^{N}\). One answer to this question is given in this section. A more general answer will be obtained in Chapter 8, when we study dimension theory.
+We have shown that every regular space with a countable basis can be imbedded in the ``infinite-dimensional'' euclidean space \({\mathbb{R}}^{\omega }\). It is natural to ask under what conditions a space \(X\) can be imbedded in some finite-dimensional euclidean space \({\mathbb{R}}^{N}\). One answer to this question is given in this section. A more general answer will be obtained in Chapter 8, when we study dimension theory.
 
 \begin{definition}
  An \(m\) -manifold is a Hausdorff space \(X\) with a countable basis such that each point \(x\) of \(X\) has a neighborhood that is homeomorphic with an open subset of \({\mathbb{R}}^{m}\).
@@ -1140,13 +1142,13 @@ ${}^{\dagger}$ This section will be assumed when we study paracompactness in \S 
 
 }
 
-A 1-manifold is often called a curve, and a 2-manifold is called a surface. Manifolds form a very important class of spaces; they are much studied in differential geometry\cite{GuilleminPollack1974} and algebraic topology.
+A 1-manifold is often called a curve, and a 2-manifold is called a surface. Manifolds form a very important class of spaces; they are much studied in differential geometry \cite{GuilleminPollack1974} and algebraic topology.
 
 We shall prove that if \(X\) is a compact manifold, then \(X\) can be imbedded in a finite-dimensional euclidean space. The theorem holds without the assumption of compactness, but the proof is a good deal harder.
 
 First, we need some terminology.
 
-If \(\phi : X \rightarrow \mathbb{R}\), then the support of \(\phi\) is defined to be the closure of the set \({\phi }^{-1}( {\mathbb{R}-\{ 0\} })\). Thus if \(x\) lies outside the support of \(\phi\), there is some neighborhood of \(x\) on which \(\phi\) vanishes
+If \(\phi : X \rightarrow \mathbb{R}\), then the support of \(\phi\) is defined to be the closure of the set \({\phi }^{-1}( {\mathbb{R}-\{ 0\} })\). Thus if \(x\) lies outside the support of \(\phi\), there is some neighborhood of \(x\) on which \(\phi\) vanishes.
 
 \begin{definition}
  Let \(\{ {{U}_{1},\ldots ,{U}_{n}}\}\) be a finite indexed open covering of the space \(X\). An indexed family of continuous functions
@@ -1164,7 +1166,7 @@ is said to be a partition of unity dominated by \(\{ {U}_{i}\}\) if
 \end{definition}
 
 \begin{theorem}[Existence of finite partitions of unity]
- Let \(\{ {{U}_{1},\ldots ,{U}_{n}}\}\) be a finite open covering of the normal space \(X\). Then there exists a partition of unity dominated by \(\{ {U}_{i}\}\)
+ Let \(\{ {{U}_{1},\ldots ,{U}_{n}}\}\) be a finite open covering of the normal space \(X\). Then there exists a partition of unity dominated by \(\{ {U}_{i}\}\).
 
 \end{theorem}
 \begin{proof}
@@ -1176,7 +1178,7 @@ We proceed by induction. First, note that the set
 A = X - ( {{U}_{2} \cup \cdots \cup {U}_{n}})
 \]
 
-is a closed subset of \(X\). Because \(\{ {{U}_{1},\ldots ,{U}_{n}}\}\) covers \(X\), the set \(A\) is contained in the open set \({U}_{1}\). Using normality, choose an open set \({V}_{1}\) containing \(A\) such that \({\bar{V}}_{1} \subset {U}_{1}\). Then the collection \(\{ {{V}_{1},{U}_{2},\ldots ,{U}_{n}}\}\) covers \(X\)
+is a closed subset of \(X\). Because \(\{ {{U}_{1},\ldots ,{U}_{n}}\}\) covers \(X\), the set \(A\) is contained in the open set \({U}_{1}\). Using normality, choose an open set \({V}_{1}\) containing \(A\) such that \({\bar{V}}_{1} \subset {U}_{1}\). Then the collection \(\{ {{V}_{1},{U}_{2},\ldots ,{U}_{n}}\}\) covers \(X\).
 
 In general, given open sets \({V}_{1},\ldots ,{V}_{k - 1}\) such that the collection
 
@@ -1192,13 +1194,13 @@ A = X - ( {{V}_{1} \cup \cdots \cup {V}_{k - 1}}) - ( {{U}_{k + 1} \cup \cdots \
 
 Then \(A\) is a closed subset of \(X\) which is contained in the open set \({U}_{k}\). Choose \({V}_{k}\) to be an open set containing \(A\) such that \({\bar{V}}_{k} \subset {U}_{k}\). Then \(\{ {{V}_{1},\ldots ,{V}_{k - 1},{V}_{k},{U}_{k + 1},\ldots ,{U}_{n}}\}\) covers \(X\). At the \(n\) th step of the induction, our result is proved.
 
-Step 2 Now we prove the theorem. Given the open covering \(\{ {{U}_{1},\ldots ,{U}_{n}}\}\) of \(X\), choose an open covering \(\{ {{V}_{1},\ldots ,{V}_{n}}\}\) of \(X\) such that \({\bar{V}}_{i} \subset {U}_{i}\) for each \(i\). Then choose an open covering \(\{ {{W}_{1},\ldots ,{W}_{n}}\}\) of \(X\) such that \({\bar{W}}_{i} \subset {V}_{i}\) for each \(i\) Using the Urysohn lemma, choose for each \(i\) a continuous function
+Step 2. Now we prove the theorem. Given the open covering \(\{ {{U}_{1},\ldots ,{U}_{n}}\}\) of \(X\), choose an open covering \(\{ {{V}_{1},\ldots ,{V}_{n}}\}\) of \(X\) such that \({\bar{V}}_{i} \subset {U}_{i}\) for each \(i\). Then choose an open covering \(\{ {{W}_{1},\ldots ,{W}_{n}}\}\) of \(X\) such that \({\bar{W}}_{i} \subset {V}_{i}\) for each \(i\). Using the Urysohn lemma, choose for each \(i\) a continuous function
 
 \[
 {\psi }_{i} : X \rightarrow [ {0,1}]
 \]
 
-such that \({\psi }_{i}( {\bar{W}}_{i}) = \{ 1\}\) and \({\psi }_{i}( {X - {V}_{i}}) = \{ 0\}\). Since \({\psi }_{i}^{-1}( {R-\{ 0\} })\) is contained in \({V}_{i}\), we have
+such that \({\psi }_{i}( {\bar{W}}_{i}) = \{ 1\}\) and \({\psi }_{i}( {X - {V}_{i}}) = \{ 0\}\). Since \({\psi }_{i}^{-1}( {\mathbb{R} - \{ 0\} })\) is contained in \({V}_{i}\), we have
 
 \[
 ( {\text{ support }{\psi }_{i}}) \subset {\bar{V}}_{i} \subset {U}_{i}\text{.}
@@ -1226,7 +1228,7 @@ There is a comparable notion of partition of unity when the open covering and th
 {h}_{i}(x) = \left\{ \begin{array}{ll} {\phi }_{i}(x) {g}_{i}(x) & \text{ for }x \in {U}_{i}, \\ \mathbf{0} = ( {0,\ldots, 0}) & \text{ for }x \in X - {A}_{i}. \end{array}\right.
 \]
 
-[Here \({\phi }_{i}(x)\) is a real number \(c\) and \({g}_{i}(x)\) is a point \(\mathbf{y} = ( {{y}_{1},\ldots ,{y}_{m}})\) of \({\mathbb{R}}^{m}\) ; the product \(c\) y denotes of course the point \(( {c{y}_{1},\ldots, c{y}_{m}})\) of \({\mathbb{R}}^{m}\).] The function \({h}_{i}\) is well defined because the two definitions of \({h}_{i}\) agree on the intersection of their domains, and \({h}_{i}\) is continuous because its restrictions to the open sets \({U}_{i}\) and \(X - {A}_{i}\) are continuous.
+[Here \({\phi }_{i}(x)\) is a real number \(c\) and \({g}_{i}(x)\) is a point \(\mathbf{y} = ( {{y}_{1},\ldots ,{y}_{m}})\) of \({\mathbb{R}}^{m}\) ; the product \(c\mathbf{y}\) denotes, of course, the point \(( {c{y}_{1},\ldots, c{y}_{m}})\) of \({\mathbb{R}}^{m}\).] The function \({h}_{i}\) is well defined because the two definitions of \({h}_{i}\) agree on the intersection of their domains, and \({h}_{i}\) is continuous because its restrictions to the open sets \({U}_{i}\) and \(X - {A}_{i}\) are continuous.
 
 Now define
 
@@ -1240,7 +1242,7 @@ by the rule
 F(x) = ( {{\phi }_{1}(x),\ldots ,{\phi }_{n}(x),{h}_{1}(x),\ldots ,{h}_{n}(x) })
 \]
 
-Clearly, \(F\) is continuous. To prove that \(F\) is an imbedding we need only to show that \(F\) is injective (because \(X\) is compact). Suppose that \(F(x) = F( y)\). Then \({\phi }_{i}(x) =\) \({\phi }_{i}( y)\) and \({h}_{i}(x) = {h}_{i}( y)\) for all \(i\). Now \({\phi }_{i}(x) > 0\) for some \(i[ {\text{ since }\sum {\phi }_{i}(x) = 1}]\) Therefore, \({\phi }_{i}( y) > 0\) also, so that \(x,y \in {U}_{i}\). Then
+Clearly, \(F\) is continuous. To prove that \(F\) is an imbedding we need only to show that \(F\) is injective (because \(X\) is compact). Suppose that \(F(x) = F( y)\). Then \({\phi }_{i}(x) =\) \({\phi }_{i}( y)\) and \({h}_{i}(x) = {h}_{i}( y)\) for all \(i\). Now \({\phi }_{i}(x) > 0\) for some \(i[ {\text{ since }\sum {\phi }_{i}(x) = 1}]\). Therefore, \({\phi }_{i}( y) > 0\) also, so that \(x,y \in {U}_{i}\). Then
 
 \[
 {\phi }_{i}(x) \cdot {g}_{i}(x) = {h}_{i}(x) = {h}_{i}( y) = {\phi }_{i}( y) \cdot {g}_{i}( y)
@@ -1259,7 +1261,7 @@ In many applications of partitions of unity, such as the one just given, all one
 \item An indexed family \(\{ {A}_{\alpha }\}\) of subsets of \(X\) is said to be a point-finite indexed family if each \(x \in X\) belongs to \({A}_{\alpha }\) for only finitely many values of \(\alpha\). \textsl{Lemma (The shrinking lemma).} Let \(X\) be a normal space, let \(\{ {{U}_{1},{U}_{2}\ldots }\}\) be a point-finite indexed open covering of \(X\). Then there exists an indexed open covering \(\{ {{V}_{1},{V}_{2},\ldots }\}\) of \(X\) such that \({\bar{V}}_{n} \subset {U}_{n}\) for each \(n\). 
 \item The Hausdorff condition is an essential part of the definition of a manifold; it is not implied by the other parts of the definition. Consider the following space: Let \(X\) be the union of the set \(\mathbb{R} - \{ 0\}\) and the two-point set \(\{ p,q\}\). Topologize \(X\) by taking as basis the collection of all open intervals in \(\mathbb{R}\) that do not contain 0, along with all sets of the form \(( {-a,0}) \cup \{ p\} \cup ( {0,a})\) and all sets of the form \(( {-a,0}) \cup \{ q\} \cup ( {0,a})\), for \(a > 0\). The space \(X\) is called the line with two origins.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
- \item Check that this is a basis for a topology
+ \item Check that this is a basis for a topology.
  \item Show that each of the spaces \(X - \{ p\}\) and \(X - \{ q\}\) is homeomorphic to \(\mathbb{R}\).
  \item Show that \(X\) satisfies the \({T}_{1}\) axiom, but is not Hausdorff.
  \item Show that \(X\) satisfies all the conditions for a 1-manifold except for the Hausdorff condition.
