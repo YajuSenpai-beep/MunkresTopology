@@ -1,6 +1,6 @@
 # Munkres Topology 复刻项目
 
-James R. Munkres *Topology* (2nd Edition) 的 LaTeX 复刻，编译后 **607 页**，含全书 14 章正文、前言、版权页及索引。
+James R. Munkres *Topology* (2nd Edition) 的 LaTeX 复刻，编译后 **607 页**，含全书 14 章正文、前言、版权页及索引，共 220 张插图。
 
 ## 编译
 
@@ -17,22 +17,12 @@ make clean    # 清理中间文件
 
 ```
 ├── chapters/                   # 14 章正文 + 前言/版权
-├── images/                     # 插图（214 张 PNG）
-├── ocr/                        # OCR 提取源文件（校对参考）
+├── images/                     # 插图（220 张 PNG）
 ├── fonts/                      # 字体文件（XeTeX）
 ├── TopologyBook.sty            # 样式文件
 ├── Topology_by_Munkres.tex     # 主文件
 ├── Topology_by_Munkres.ist     # makeindex 样式
 ├── Biblography.bib             # 参考文献
 └── Makefile                    # 编译脚本
-```
-
-## 插图
-
-使用统一命令 `\munkresfig`（定义于 `TopologyBook.sty`）：
-
-```latex
-\munkresfig[width]{filename}[Figure label]
-% 宽度默认 0.8\textwidth，标签可省略
 ```
 
