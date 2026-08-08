@@ -17,7 +17,7 @@ make clean    # 清理中间文件
 
 ```
 ├── chapters/                   # 14 章正文 + 前言/版权
-├── images/                     # 插图（220 张 PNG）
+├── images/                     # 插图（207 张 PNG）
 ├── fonts/                      # 字体文件（XeTeX）
 ├── TopologyBook.sty            # 样式文件
 ├── Topology_by_Munkres.tex     # 主文件
