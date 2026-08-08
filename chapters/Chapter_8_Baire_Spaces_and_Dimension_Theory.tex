@@ -255,7 +255,7 @@ Then for \(n \geq 2\), we define \({U}_{n}\) by declaring that a function \(f\) 
 
 \begin{centeredblock}
 \begin{example}
-Let \(\alpha > 0\) be given. The function \(f : [ {0,1}] \rightarrow \mathbb{R}\) given by the equation \(f(x) = {4\alpha x}({1 - x})\), whose graph is a parabola, satisfies the condition \({\Delta f}({x,h}) \geq \alpha\) for \(h = 1/4\) and all \(x\), as you can check. Geometrically speaking, what this says is that for each \(x\), at least one of the indicated secant lines of the parabola in Figure 49.1 has slope of absolute value at least \(\alpha\). Hence if \(\alpha > 4\), the function \(f\) belongs to \({U}_{4}\). The function \(g\) pictured in Figure 49.1 satisfies the condition \({\Delta g}({x,h}) \geq \alpha\) for any \(h \leq 1/4\) ; hence \(g\) belongs to \({U}_{n}\) provided \(\alpha > n\). The function \(k\) satisfies the condition \({\Delta k}({x,h}) \geq \alpha\) for any \(h \leq 1/8\) ; hence \(k\) belongs to \({U}_{n}\) if \(\alpha > n\).
+Let \(\alpha > 0\) be given. The function \(f : [ {0,1}] \rightarrow \mathbb{R}\) given by the equation \(f(x) = {4\alpha x}({1 - x})\), whose graph is a parabola, satisfies the condition \({\Delta f}({x,h}) \geq \alpha\) for \(h = 1/4\) and all \(x\), as you can check. Geometrically speaking, what this says is that for each \(x\), at least one of the indicated secant lines of the parabola in \hyperref[fig:49.1]{Figure 49.1} has slope of absolute value at least \(\alpha\). Hence if \(\alpha > 4\), the function \(f\) belongs to \({U}_{4}\). The function \(g\) pictured in \hyperref[fig:49.1]{Figure 49.1} satisfies the condition \({\Delta g}({x,h}) \geq \alpha\) for any \(h \leq 1/4\) ; hence \(g\) belongs to \({U}_{n}\) provided \(\alpha > n\). The function \(k\) satisfies the condition \({\Delta k}({x,h}) \geq \alpha\) for any \(h \leq 1/8\) ; hence \(k\) belongs to \({U}_{n}\) if \(\alpha > n\).
 
 \munkresfig[1.0]{49.1}[Figure 49.1]
 \end{example}
@@ -337,7 +337,7 @@ having the property that \(f\) varies by at most \(\epsilon /4\) on each subinte
 {g}_{1}(x) = \{ \begin{array}{ll} f({t}_{i - 1}) & \text{ for }x \in [ {{t}_{i - 1},{a}_{i}}] , \\ f({t}_{i - 1}) + {m}_{i}({x - {a}_{i}}) & \text{ for }x \in [ {{a}_{i},{t}_{i}}] , \end{array}.
 \]
 
-where \({m}_{i} = ({f({t}_{i}) - f({t}_{i - 1}) }) /({{t}_{i} - {a}_{i}})\). The graphs of \(f\) and \({g}_{1}\) are pictured in Figure 49.2.
+where \({m}_{i} = ({f({t}_{i}) - f({t}_{i - 1}) }) /({{t}_{i} - {a}_{i}})\). The graphs of \(f\) and \({g}_{1}\) are pictured in \hyperref[fig:49.2]{Figure 49.2}.
 
 \munkresfig[0.9]{49.2}[Figure 49.2]
 We have some freedom of choice in choosing the point \({a}_{i}\). If \(f({t}_{i}) \neq f({t}_{i - 1})\), we require \({a}_{i}\) to be close enough to \({t}_{i}\) that
@@ -351,7 +351,7 @@ Then the graph of \({g}_{1}\) will consist entirely of line segments of slope ze
 Furthermore, we assert that \(\rho ({{g}_{1},f}) \leq \epsilon /2\). On the interval \({I}_{i}\), both \({g}_{1}(x)\) and \(f(x)\) vary by at most \(\epsilon /4\) from \(f({t}_{i - 1})\) ; therefore, they are within \(\epsilon /2\) of each other. Then \(\rho ({{g}_{1},f}) = \max \{ | {{g}_{1}(x) - f(x) }| \} \leq \epsilon /2\).
 
 \munkresfig[0.9]{49.3}[Figure 49.3]
-The function \({g}_{1}\) is not yet the function we want. We now define a function \(g\) by replacing each horizontal line segment in the graph of \({g}_{1}\) by a ``sawtooth'' graph that lies within \(\epsilon /2\) of the graph of \({g}_{1}\) and has the property that each edge of the sawtooth has slope at least \(\alpha\) in absolute value. We leave this part of the construction to you. The result is the desired piecewise-linear function \(g\). See Figure 49.3.
+The function \({g}_{1}\) is not yet the function we want. We now define a function \(g\) by replacing each horizontal line segment in the graph of \({g}_{1}\) by a ``sawtooth'' graph that lies within \(\epsilon /2\) of the graph of \({g}_{1}\) and has the property that each edge of the sawtooth has slope at least \(\alpha\) in absolute value. We leave this part of the construction to you. The result is the desired piecewise-linear function \(g\). See \hyperref[fig:49.3]{Figure 49.3}.
 
 You may find this proof frustrating, in that it seems so abstract and nonconstructive. Implicit in the proof, however, is a procedure for constructing a specific sequence \({f}_{n}\) of piecewise-linear functions that converges uniformly to the nowhere-differentiable function \(f\). And defining the function \(f\) in this way is just as constructive as the usual definition of the sine function, for instance, as the limit of an infinite series.
 \end{proof}
@@ -408,7 +408,7 @@ Note that the elements of \({\mathcal{A}}_{2}\) are disjoint. Then, we define a 
 e = \{ n\} \times ({m,m + 1}) \;\text{ or }\;e = ({n,n + 1}) \times \{ m\},
 \]
 
-and expanding it slightly to an open set \({U}_{e}\) of \({\mathbb{R}}^{2}\), being careful to ensure that if \(e \neq {e}^{\prime }\), the sets \({U}_{e}\) and \({U}_{{e}^{\prime }}\) are disjoint. We also choose each \({U}_{e}\) so that its diameter is at most 2 . Finally, we define \({\mathcal{A}}_{0}\) to be the collection consisting of all open balls of radius \(\frac{1}{2}\) about the points \(n \times m\). See Figure 50.1.
+and expanding it slightly to an open set \({U}_{e}\) of \({\mathbb{R}}^{2}\), being careful to ensure that if \(e \neq {e}^{\prime }\), the sets \({U}_{e}\) and \({U}_{{e}^{\prime }}\) are disjoint. We also choose each \({U}_{e}\) so that its diameter is at most 2 . Finally, we define \({\mathcal{A}}_{0}\) to be the collection consisting of all open balls of radius \(\frac{1}{2}\) about the points \(n \times m\). See \hyperref[fig:50.1]{Figure 50.1}.
 
 The collection of open sets \(\mathcal{A} = {\mathcal{A}}_{2} \cup {\mathcal{A}}_{1} \cup {\mathcal{A}}_{0}\) covers \({\mathbb{R}}^{2}\). Each of its elements has diameter at most 2 . And it has order 3, since no point of \({\mathbb{R}}^{2}\) can lie in more than one set from each \({\mathcal{A}}_{i}\).
 
@@ -495,7 +495,7 @@ An arc \(A\) is a space homeomorphic to the closed unit interval; the end points
 \end{example}
 \end{centeredblock}
 
-Two particular linear graphs are sketched in Figure 50.2. The first is a diagram of the familiar ``gas-water-electricity problem''; the second is called the ``complete graph on five vertices.'' Neither of them can be imbedded in \({\mathbb{R}}^{2}\). Although this fact is ``intuitively obvious,'' it is highly nontrivial to prove. We shall give a proof in §64.
+Two particular linear graphs are sketched in \hyperref[fig:50.2]{Figure 50.2}. The first is a diagram of the familiar ``gas-water-electricity problem''; the second is called the ``complete graph on five vertices.'' Neither of them can be imbedded in \({\mathbb{R}}^{2}\). Although this fact is ``intuitively obvious,'' it is highly nontrivial to prove. We shall give a proof in §64.
 
 \munkresfig[1.0]{50.2}[Figure 50.2]
 \begin{centeredblock}
