@@ -72,53 +72,56 @@ independent of one another; the dependence among them is expressed in the follow
 diagram:
 
 \begin{center}
-\begin{tikzpicture}[
-    >=Stealth,
+ \begin{tikzpicture}[
+    >={Stealth[scale=1.3]},
     every node/.style={
         font=\normalfont,
         anchor=west,
-    }
-]
+    },
+    thick,
+ ]
 
-\def\rowsep{1.4cm}
-\def\indent{2.4cm}
-% 纵向箭头调整
-\def\vbaseone{-0.24cm}
-\def\vbasetwo{0.36cm}
-\def\vbasethree{0.36cm}
-\def\vbasefour{0.48cm}
-\def\vbasefive{-0.12cm}
-\def\vtop{0.48cm}
-% 第9章箭头起点3个端点
-\def\hoffsetAone{-2.16cm}
-\def\hoffsetAtwo{-2.4cm}
-\def\hoffsetAthree{-2.64cm}
-% 第9章箭头结尾3个端点
-\def\hoffsetBone{-5.0cm}
-\def\hoffsetBtwo{-5.0cm}
-\def\hoffsetBthree{-4.8cm}
-% 第11章到第14章2个箭头末尾
-\def\hoffsetCone{-4.0cm}
-\def\hoffsetCtwo{-3.4cm}
-% 第13章到第14章箭头
-\def\hoffsetDone{-4.8cm}
-\def\hoffsetDtwo{-3.0cm}
+ \def\rowsep{1.4cm}
+ \def\indent{2.4cm}
+ % 纵向箭头调整
+ \def\vbaseone{-0.24cm}
+ \def\vbasetwo{0.36cm}
+ \def\vbasethree{0.36cm}
+ \def\vbasefour{0.48cm}
+ \def\vbasefive{-0.12cm}
+ \def\vtop{0.48cm}
+ % 第9章箭头起点3个端点
+ \def\hoffsetAone{-2.16cm}
+ \def\hoffsetAtwo{-2.4cm}
+ \def\hoffsetAthree{-2.64cm}
+ % 第9章箭头结尾3个端点
+ \def\hoffsetBone{-5.0cm}
+ \def\hoffsetBtwo{-5.0cm}
+ \def\hoffsetBthree{-4.8cm}
+ % 第11章到第14章2个箭头末尾
+ \def\hoffsetCone{-4.0cm}
+ \def\hoffsetCtwo{-3.4cm}
+ % 第13章到第14章箭头
+ \def\hoffsetDone{-4.8cm}
+ \def\hoffsetDtwo{-3.0cm}
+ % 章节号与标题之间的间距（可调: \quad, \qquad, \hspace{<dim>} 等）
+ \def\chaptersep{\qquad}
 
-\node (c9)  at (0,0)                {Chapter 9 The Fundamental Group};
-\node (c10) at (\indent, -\rowsep)   {Chapter 10 Separation Theorems in the Plane};
-\node (c11) at (\indent, -2*\rowsep) {Chapter 11 The Seifert-van Kampen Theorem};
-\node (c12) at (\indent, -3*\rowsep) {Chapter 12 Classification of Surfaces};
-\node (c13) at (\indent, -4*\rowsep) {Chapter 13 Classification of Covering Spaces};
-\node (c14) at (0, -5*\rowsep)       {Chapter 14 Applications to Group Theory};
+ \node (c9)  at (0,0)                {Chapter 9\quad The Fundamental Group};
+ \node (c10) at (\indent, -\rowsep)   {Chapter 10\quad Separation Theorems in the Plane};
+ \node (c11) at (\indent, -2*\rowsep) {Chapter 11\quad The Seifert-van Kampen Theorem};
+ \node (c12) at (\indent, -3*\rowsep) {Chapter 12\quad Classification of Surfaces};
+ \node (c13) at (\indent, -4*\rowsep) {Chapter 13\quad Classification of Covering Spaces};
+ \node (c14) at (0, -5*\rowsep)       {Chapter 14\quad Applications to Group Theory};
 
-\draw[->] ($(c9.base) + (\hoffsetAone, \vbaseone)$) -- ($(c10.base) + (\hoffsetBone, \vbasetwo)$);
-\draw[->] ($(c9.base) + (\hoffsetAtwo, \vbaseone)$) -- ($(c11.base) + (\hoffsetBtwo, \vbasethree)$);
-\draw[->] ($(c9.base) + (\hoffsetAthree, \vbaseone)$) -- ($(c13.base) + (\hoffsetBthree, \vbasefour)$);
-\draw[->] ($(c11.base) + (\hoffsetBtwo+0.2cm, \vbasefive)$) -- ($(c12.base) + (\hoffsetCone+0.23cm, \vtop)$);
-\draw[->] ($(c11.base) + (\hoffsetBone, \vbasefive)$) -- ($(c14.base) + (\hoffsetCtwo, \vtop)$);
-\draw[->] ($(c13.base) + (\hoffsetDone, \vbasefive)$) -- ($(c14.base) + (\hoffsetDtwo, \vtop)$);
+ \draw[->] ($(c9.base) + (\hoffsetAone, \vbaseone)$) -- ($(c10.base) + (\hoffsetBone, \vbasetwo)$);
+ \draw[->] ($(c9.base) + (\hoffsetAtwo, \vbaseone)$) -- ($(c11.base) + (\hoffsetBtwo, \vbasethree)$);
+ \draw[->] ($(c9.base) + (\hoffsetAthree, \vbaseone)$) -- ($(c13.base) + (\hoffsetBthree, \vbasefour)$);
+ \draw[->] ($(c11.base) + (\hoffsetBtwo+0.2cm, \vbasefive)$) -- ($(c12.base) + (\hoffsetCone+0.23cm, \vtop)$);
+ \draw[->] ($(c11.base) + (\hoffsetBone, \vbasefive)$) -- ($(c14.base) + (\hoffsetCtwo, \vtop)$);
+ \draw[->] ($(c13.base) + (\hoffsetDone, \vbasefive)$) -- ($(c14.base) + (\hoffsetDtwo, \vtop)$);
 
-\end{tikzpicture}
+ \end{tikzpicture}
 \end{center}
 
 Certain sections of the book are marked with an asterisk; these sections may be 
