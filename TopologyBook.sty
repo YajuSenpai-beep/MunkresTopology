@@ -131,6 +131,12 @@
 }
 
 % ---------- 自定义命令 ----------
+% 统一章节开头: \chapteropening[short]{full} 或 \chapteropening{title}
+\NewDocumentCommand{\chapteropening}{om}{%
+  \IfNoValueTF{#1}
+    {\chapter{#2}\vspace{6.5cm}\chaptermark{#2}}
+    {\chapter[#1]{#2}\vspace{6.5cm}\chaptermark{#1}}%
+}
 \newcommand{\HRule}{\begin{center}\rule{0.9\linewidth}{0.2mm}\end{center}}
 \newcommand{\customfootnote}[1]{%
   \let\thefootnote\relax\footnotetext{#1}%
