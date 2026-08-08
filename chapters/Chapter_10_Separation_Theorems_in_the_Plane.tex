@@ -2,7 +2,7 @@
 
 There are several difficult questions concerning the topology of the plane that arise quite naturally in the study of analysis. The answers to these questions seem geometrically quite obvious but turn out to be surprisingly hard to prove. They include the Jordan curve theorem, the Brouwer theorem on invariance of domain, and the classical theorem that the winding number of a simple closed curve is zero or \(\pm 1\). We prove them in this chapter as consequences of our study of covering spaces and the fundamental group.
 
-\section*{§ 61 The Jordan Separation Theorem}
+\booksection{61}{The Jordan Separation Theorem}
 
 We consider first one of the classical theorems of mathematics, the Jordan curve theorem. It states a fact that is geometrically quite believable, the fact that a simple closed curve in the plane always separates the plane into two pieces, its ``inside'' and its ``outside.'' It was originally conjectured in 1892 by Camille Jordan, and several incorrect proofs were published, including one by Jordan himself. Eventually, a correct proof was provided by Oswald Veblen, in 1905. The early proofs were complicated, but over the years, simpler proofs have been found. If one uses the tools of modern algebraic topology, singular homology theory in particular, the proof is quite straightforward. The proof we give here is the simplest one we know that uses only results from the theory of covering spaces and the fundamental group.
 
@@ -114,7 +114,7 @@ The remainder of the proof is a copy of the proof of the preceding theorem.
 \item Give examples to show that a simple closed curve in the torus may or may not separate the torus.
 \item Let \(A\) be the subset of \({\mathbb{R}}^{2}\) consisting of the union of the topologist's sine curve and the broken-line path from \(( {0, - 1})\) to \(( {0, - 2})\) to \(( {1, - 2})\) to \(( {1,\sin 1})\). See Figure 61.4. We call \(A\) the closed topologist's sine curve. Show that if \(C\) is a subspace of \({S}^{2}\) homeomorphic to the closed topologist's sine curve, then \(C\) separates \({S}^{2}\). \munkresfig[0.5]{61.4}[Figure 61.4]
 \end{enumerate}
-\section*{*§ 62 Invariance of Domain \protect\sectionDagger}
+\booksection*{62}{Invariance of Domain}[\protect\sectionDagger]
 
 One of the theorems of topology that is truly fundamental, because it expresses an intrinsic property of euclidean space, is the theorem on ``invariance of domain,'' proved by L. E. J. Brouwer in 1912. It states that for any open set \(U\) of \({\mathbb{R}}^{n}\) and any continuous injective mapping \(f : U \rightarrow {\mathbb{R}}^{n}\), the image set \(f( U)\) is open in \({\mathbb{R}}^{n}\) and the inverse function is continuous. (The Inverse Function Theorem of analysis derives this result under the additional hypothesis that the map \(f\) is continuously differentiable with nonsingular Jacobian matrix.) We shall prove this theorem in the case \(n = 2\).
 
@@ -188,7 +188,7 @@ Step 3. We prove the theorem. Since, for any ball \(B\) contained in \(U\), the 
  \item Suppose you are given also that any subspace of \({S}^{n}\) homeomorphic to \({S}^{n - 1}\) separates \({S}^{n}\). Prove the invariance of domain theorem in dimension \(n\).
  \end{enumerate}
 \end{enumerate}
-\section*{§ 63 The Jordan Curve Theorem}
+\booksection{63}{The Jordan Curve Theorem}
 
 The special case of the Seifert-van Kampen theorem that we used in proving the Jordan separation theorem tells us something about the fundamental group of the space \(X =\) \(U \cup V\) in the case where the intersection \(U \cap V\) is path connected. In the next theorem, we examine what happens when \(U \cap V\) is not path connected. This result will enable us to complete the proof of the Jordan curve theorem.
 
@@ -413,7 +413,7 @@ The separation theorems can be generalized even further than this. The definitiv
  \end{enumerate}
  \end{enumerate}
 \end{enumerate}
-\section*{§ 64 Imbedding Graphs in the Plane}
+\booksection{64}{Imbedding Graphs in the Plane}
 
 A (finite) linear graph \(G\) is a Hausdorff space that is written as the union of finitely many arcs, each pair of which intersect in at most a common end point. The arcs are called the edges of the graph, and the end points of the arcs are called the vertices of the graph.
 
@@ -513,7 +513,7 @@ It follows from these theorems that if a graph \(G\) contains a subgraph that is
 
 (b) Give an example to show that \(X\) need not be Hausdorff. [Hint: See Exercise 5 of \S 36.]
 
-\section*{§ 65 The Winding Number of a Simple Closed Curve}
+\booksection{65}{The Winding Number of a Simple Closed Curve}
 
 If \(h : {S}^{1} \rightarrow {\mathbb{R}}^{2} - 0\) is a continuous map, then the induced homomorphism \({h}_{ * }\) carries a generator of the fundamental group of \({S}^{1}\) to some integral power of a generator of the fundamental group of \({\mathbb{R}}^{2} - \mathbf{0}\). This integral power \(n\) is called the winding number of \(h\) with respect to 0. It measures how many times \(h\) ``wraps \({S}^{1}\) around the origin;'' its sign depends of course on the choice of generators. See Figure 65.1. We will introduce it more formally in the next section.
 
@@ -595,7 +595,7 @@ induces an isomorphism of fundamental groups. Let \(\alpha\) be a path in \({\ma
 
 This theorem is a special case of a rather deep theorem of algebraic topology, concerning the ``linking number'' of two disjoint subspaces of \({S}^{m + n + 1}\), one homeomorphic to an \(m\) -sphere and the other homeomorphic to an \(n\) -sphere; it is related to the Alexander duality theorem. (See \cite{Munkres1993}, p. 433.) The special case of our theorem is that of a 0-sphere (i.e., a two-point space) and a 1-sphere (i.e., a simple closed curve) in \({S}^{2}\).
 \end{proof}
-\section*{§ 66 The Cauchy Integral Formula}
+\booksection{66}{The Cauchy Integral Formula}
 
 One of the central theorems in the study of functions of a complex variable is the one concerning the Cauchy integral formula for analytic functions. For the classical version of this theorem, one needs to assume not only the Jordan curve theorem, but also the winding-number theorem of the last section. There is, however, a reformulation of the Cauchy integral theorem that avoids using these results; this version of the theorem, although it is rather less natural, is the one now commonly found in texts on the subject.
 

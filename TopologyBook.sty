@@ -61,44 +61,29 @@
   {0pt}
   {}
 \titlespacing*{name=\section,numberless}{0pt}{2em}{1em}
-\makeatletter
-\let\orig@star@section\section
-\def\section{\@ifstar{\@star@section}{\orig@star@section}}
-\def\@star@section#1{%
-  \in@{§}{#1}%
-  \ifin@
-    \stepcounter{section}%
-    \noexpandarg\StrBehind{#1}{ }[\sectiontmp]%
-    \expandarg
-    \StrBefore{\sectiontmp}{ }[\secnum]%
-    \StrBehind{\sectiontmp}{ }[\sectionname]%
-    \noexpandarg
-    \in@{*}{#1}%
-    \ifin@
-      \noexpandarg\StrDel{#1}{*}[\cleanarg]%
-      \orig@star@section*{\raisebox{0.15ex}{\small *}\cleanarg}%
-      \phantomsection
-      \addcontentsline{toc}{section}{\llap{\raisebox{0.15ex}{\small *}}\secnum\quad\sectionname}%
-    \else
-      \orig@star@section*{#1}%
-      \phantomsection
-      \addcontentsline{toc}{section}{\secnum\quad\sectionname}%
-    \fi
-    \markright{\sectionname}%
-  \else
-    \in@{*}{#1}%
-    \ifin@
-      \noexpandarg\StrBehind{#1}{ }[\sectiontitle]%
-      \orig@star@section*{\raisebox{0.15ex}{\small *}\ \sectiontitle}%
-      \phantomsection
-      \addcontentsline{toc}{section}{\llap{\raisebox{0.15ex}{\small *}}\sectiontitle}%
-      \markright{\sectiontitle}%
-    \else
-      \orig@star@section*{#1}%
-    \fi
-  \fi
+% 统一章节节命令: \booksection{num}{title} 或 \booksection*{num}{title}[suffix]
+%   *   = optional section (asterisk in body + TOC)
+%   num = section number
+%   title = section title
+%   suffix = optional dagger, e.g. [\protect\sectionDagger]
+\NewDocumentCommand{\booksection}{s m m o}{%
+  \stepcounter{section}%
+  \IfBooleanTF{#1}
+    {\section*{\raisebox{0.15ex}{\small *}§ #2\ #3\IfValueT{#4}{ #4}}}
+    {\section*{§ #2\ #3\IfValueT{#4}{ #4}}}%
+  \phantomsection
+  \IfBooleanTF{#1}
+    {\addcontentsline{toc}{section}{\llap{\raisebox{0.15ex}{\small *}}#2\quad#3}}
+    {\addcontentsline{toc}{section}{#2\quad#3}}%
+  \markright{#3}%
 }
-\makeatother
+% Supplementary exercises: *-prefixed, no section number
+\NewDocumentCommand{\suppsection}{m}{%
+  \section*{\raisebox{0.15ex}{\small *}\ #1}%
+  \phantomsection
+  \addcontentsline{toc}{section}{\llap{\raisebox{0.15ex}{\small *}}#1}%
+  \markright{#1}%
+}
 \titleformat{\subsection}
   {\normalfont\normalsize\bfseries}
   {}
