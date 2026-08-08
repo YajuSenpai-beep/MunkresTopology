@@ -49,7 +49,7 @@ F( {s,0}) = f( s) \;\text{ and }\;F( {s,1}) = {f}^{\prime }( s),
 F( {0,t}) = {x}_{0}\;\text{ and }\;F( {1,t}) = {x}_{1},
 \]
 
-for each \(s \in I\) and each \(t \in I\). We call \(F\) a path homotopy between \(f\) and \({f}^{\prime }\). See Figure 51.1. If \(f\) is path homotopic to \({f}^{\prime }\), we write \(f{ \simeq }_{p}{f}^{\prime }\).
+for each \(s \in I\) and each \(t \in I\). We call \(F\) a path homotopy between \(f\) and \({f}^{\prime }\). See \hyperref[fig:51.1]{Figure 51.1}. If \(f\) is path homotopic to \({f}^{\prime }\), we write \(f{ \simeq }_{p}{f}^{\prime }\).
 \end{definition}
 
 \munkresfig[1.0]{51.1}[Figure 51.1]
@@ -75,7 +75,7 @@ G( {x,t}) = \{ \begin{array}{ll} F( {x,{2t}}) & \text{ for }t \in [ {0,\frac{1}{
 
 The map \(G\) is well defined, since if \(t = \frac{1}{2}\), we have \(F( {x,{2t}}) = {f}^{\prime }(x) = {F}^{\prime }( {x,{2t} - 1})\). Because \(G\) is continuous on the two closed subsets \(X \times [ {0,\frac{1}{2}}]\) and \(X \times [ {\frac{1}{2},1}]\) of \(X \times I\), it is continuous on all of \(X \times I\), by the pasting lemma. Thus \(G\) is the required homotopy between \(f\) and \({f}^{\prime \prime }\).
 
-You can check that if \(F\) and \({F}^{\prime }\) are path homotopies, so is \(G\). See Figure 51.2.
+You can check that if \(F\) and \({F}^{\prime }\) are path homotopies, so is \(G\). See \hyperref[fig:51.2]{Figure 51.2}.
 \end{proof}
 
 \begin{centeredblock}
@@ -88,7 +88,7 @@ F( {x,t}) = ( {1 - t}) f(x) + {tg}(x)
 
 is a homotopy between them. It is called a straight-line homotopy because it moves the point \(f(x)\) to the point \(g(x)\) along the straight-line segment joining them.
 
-If \(f\) and \(g\) are paths from \({x}_{0}\) to \({x}_{1}\), then \(F\) will be a path homotopy, as you can check. This situation is pictured in Figure 51.3.
+If \(f\) and \(g\) are paths from \({x}_{0}\) to \({x}_{1}\), then \(F\) will be a path homotopy, as you can check. This situation is pictured in \hyperref[fig:51.3]{Figure 51.3}.
 \end{example}
 \end{centeredblock}
 
@@ -114,7 +114,7 @@ are path homotopic, the straight-line homotopy between them is an acceptable pat
 h( s) = ( {\cos {\pi s}, - \sin {\pi s}})
 \]
 
-is not acceptable, for its image does not lie in the space \(X = {\mathbb{R}}^{2} - 0\). See Figure 51.4.
+is not acceptable, for its image does not lie in the space \(X = {\mathbb{R}}^{2} - 0\). See \hyperref[fig:51.4]{Figure 51.4}.
 
 Indeed, there exists no path homotopy in \(X\) between paths \(f\) and \(h\). This result is hardly surprising; it is intuitively clear that one cannot ``deform \(f\) past the hole at 0 '' without introducing a discontinuity. But it takes some work to prove. We shall return to this example later.
 
@@ -146,7 +146,7 @@ To verify this fact, let \(F\) be a path homotopy between \(f\) and \({f}^{\prim
 H( {s,t}) = \{ \begin{array}{ll} F( {{2s},t}) & \text{ for }s \in [ {0,\frac{1}{2}}] , \\ G( {{2s} - 1,t}) & \text{ for }s \in [ {\frac{1}{2},1}] . \end{array}.
 \]
 
-Because \(F( {1,t}) = {x}_{1} = G( {0,t})\) for all \(t\), the map \(H\) is well-defined; it is continuous by the pasting lemma. You can check that \(H\) is the required path homotopy between \(f * g\) and \({f}^{\prime } * {g}^{\prime }\). It is pictured in Figure 51.5.
+Because \(F( {1,t}) = {x}_{1} = G( {0,t})\) for all \(t\), the map \(H\) is well-defined; it is continuous by the pasting lemma. You can check that \(H\) is the required path homotopy between \(f * g\) and \({f}^{\prime } * {g}^{\prime }\). It is pictured in \hyperref[fig:51.5]{Figure 51.5}.
 
 \munkresfig[1.0]{51.5}[Figure 51.5]
 The operation \(*\) on path-homotopy classes turns out to satisfy properties that look very much like the axioms for a group. They are called the groupoid properties of \(*\). One difference from the properties of a group is that \([ f] * [ g]\) is not defined for every pair of classes, but only for those pairs \([ f] ,[ g]\) for which \(f(1) = g( 0)\).
@@ -172,7 +172,7 @@ The operation \(*\) has the following properties:
 \end{theorem}
 
 \begin{proof}
-We shall make use of two elementary facts. The first is the fact that if \(k\) : \(X \rightarrow Y\) is a continuous map, and if \(F\) is a path homotopy in \(X\) between the paths \(f\) and \({f}^{\prime }\), then \(k \circ F\) is a path homotopy in \(Y\) between the paths \(k \circ f\) and \(k \circ {f}^{\prime }\). See Figure 51.6.
+We shall make use of two elementary facts. The first is the fact that if \(k\) : \(X \rightarrow Y\) is a continuous map, and if \(F\) is a path homotopy in \(X\) between the paths \(f\) and \({f}^{\prime }\), then \(k \circ F\) is a path homotopy in \(Y\) between the paths \(k \circ f\) and \(k \circ {f}^{\prime }\). See \hyperref[fig:51.6]{Figure 51.6}.
 \munkresfig[1.0]{51.6}[Figure 51.6]
 The second is the fact that if \(k : X \rightarrow Y\) is a continuous map and if \(f\) and \(g\) are paths in \(X\) with \(f(1) = g( 0)\), then
 
@@ -182,7 +182,7 @@ k \circ ( {f * g}) = ( {k \circ f}) * ( {k \circ g}).
 
 This equation follows at once from the definition of the product operation \(*\).
 
-Step 1. We verify properties (2) and (3). To verify (2), we let \({e}_{0}\) denote the constant path in \(I\) at 0, and we let \(i : I \rightarrow I\) denote the identity map, which is a path in \(I\) from 0 to 1 . Then \({e}_{0} * i\) is also a path in \(I\) from 0 to 1 . (The graphs of these two paths are pictured in Figure 51.7.)
+Step 1. We verify properties (2) and (3). To verify (2), we let \({e}_{0}\) denote the constant path in \(I\) at 0, and we let \(i : I \rightarrow I\) denote the identity map, which is a path in \(I\) from 0 to 1 . Then \({e}_{0} * i\) is also a path in \(I\) from 0 to 1 . (The graphs of these two paths are pictured in \hyperref[fig:51.7]{Figure 51.7}.)
 
 \munkresfig[1.0]{51.7}[Figure 51.7]
 Because \(I\) is convex, there is a path homotopy \(G\) in \(I\) between \(i\) and \({e}_{0} * i\). Then \(f \circ G\) is a path homotopy in \(X\) between the paths \(f \circ i = f\) and
@@ -193,7 +193,7 @@ f \circ ( {{e}_{0} * i}) = ( {f \circ {e}_{0}}) * ( {f \circ i}) = {e}_{{x}_{0}}
 
 An entirely similar argument, using the fact that if \({e}_{1}\) denotes the constant path at 1, then \(i * {e}_{1}\) is path homotopic in \(I\) to the path \(i\), shows that \([ f] * [ {e}_{{x}_{1}}] = [ f]\).
 
-To verify (3), note that the reverse of \(i\) is \(\bar{i}( s) = 1 - s\). Then \(i * \bar{i}\) is a path in \(I\) beginning and ending at 0, and so is the constant path \({e}_{0}\). (Their graphs are pictured in Figure 51.8.) Because \(I\) is convex, there is a path homotopy \(H\) in \(I\) between \({e}_{0}\) and \(i * \bar{i}\). Then \(f \circ H\) is a path homotopy between \(f \circ {e}_{0} = {e}_{{x}_{0}}\) and
+To verify (3), note that the reverse of \(i\) is \(\bar{i}( s) = 1 - s\). Then \(i * \bar{i}\) is a path in \(I\) beginning and ending at 0, and so is the constant path \({e}_{0}\). (Their graphs are pictured in \hyperref[fig:51.8]{Figure 51.8}.) Because \(I\) is convex, there is a path homotopy \(H\) in \(I\) between \({e}_{0}\) and \(i * \bar{i}\). Then \(f \circ H\) is a path homotopy between \(f \circ {e}_{0} = {e}_{{x}_{0}}\) and
 
 \[
 ( {f \circ i}) * ( {f \circ \bar{i}}) = f * \bar{f}.
@@ -210,7 +210,7 @@ With this terminology, the product \(f * g\) can be described as follows: \(\ope
 
 Now we verify (1). Given paths \(f,g\), and \(h\) in \(X\), the products \(f * ( {g * h})\) and \(( {f * g}) * h\) are defined precisely when \(f(1) = g( 0)\) and \(g(1) = h( 0)\). Assuming these two conditions, we define also a ``triple product'' of the paths \(f,g\), and \(h\) as follows: Choose points \(a\) and \(b\) of \(I\) so that \(0 < a < b < 1\). Define a path \({k}_{a,b}\) in \(X\) as follows: On \([ {0,a}]\) it equals the positive linear map of \([ {0,a}]\) to \(I\) followed by \(f\) ; on \([ {a,b}]\) it equals the positive linear map of \([ {a,b}]\) to \(I\) followed by \(g\) ; and on \([ {b,1}]\) it equals the positive linear map of \([ {b,1}]\) to \(I\) followed by \(h\). The path \({k}_{a,b}\) depends of course on the choice of the points \(a\) and \(b\). But its path-homotopy class does not! We show that if \(c\) and \(d\) are another pair of points of \(I\) with \(0 < c < d < 1\), then \({k}_{c,d}\) is path homotopic to \({k}_{a,b}\).
 
-Let \(p : I \rightarrow I\) be the map whose graph is pictured in Figure 51.9. When restricted to \([ {0,a}] ,[ {a,b}]\), and \([ {b,1}]\), respectively, it equals the positive linear maps of these intervals onto \([ {0,c}] ,[ {c,d}]\), and \([ {d,1}]\), respectively. It follows at once that \({k}_{c,d} \circ p\) equals \({k}_{a,b}\). But \(p\) is a path in \(I\) from 0 to 1 ; and so is the identity map \(i : I \rightarrow I\). Hence, there is a path homotopy \(P\) in \(I\) between \(p\) and \(i\). Then \({k}_{c,d} \circ P\) is a path homotopy in \(X\) between \({k}_{a,b}\) and \({k}_{c,d}\).
+Let \(p : I \rightarrow I\) be the map whose graph is pictured in \hyperref[fig:51.9]{Figure 51.9}. When restricted to \([ {0,a}] ,[ {a,b}]\), and \([ {b,1}]\), respectively, it equals the positive linear maps of these intervals onto \([ {0,c}] ,[ {c,d}]\), and \([ {d,1}]\), respectively. It follows at once that \({k}_{c,d} \circ p\) equals \({k}_{a,b}\). But \(p\) is a path in \(I\) from 0 to 1 ; and so is the identity map \(i : I \rightarrow I\). Hence, there is a path homotopy \(P\) in \(I\) between \(p\) and \(i\). Then \({k}_{c,d} \circ P\) is a path homotopy in \(X\) between \({k}_{a,b}\) and \({k}_{c,d}\).
 
 \munkresfig[0.5]{51.9}[Figure 51.9]
 What has this to do with associativity? A great deal. For the product \(f * ( {g * h})\) is exactly the triple product \({k}_{a,b}\) in the case where \(a = 1/2\) and \(b = 3/4\), as you can check, while the product \(( {f * g}) * h\) equals \({k}_{c,d}\) in the case where \(c = 1/4\) and \(d = 1/2\). Therefore these two products are path homotopic.
@@ -296,7 +296,7 @@ by the equation
 \widehat{\alpha }( [ f] ) = [ \bar{\alpha }] * [ f] * [ \alpha ] .
 \]
 
-The map \(\widehat{\alpha }\), which we call `` \(\alpha\) -hat,'' is well-defined because the operation \(*\) is well-defined. If \(f\) is a loop based at \({x}_{0}\), then \(\bar{\alpha } * ( {f * \alpha })\) is a loop based at \({x}_{1}\). Hence \(\widehat{\alpha }\) maps \({\pi }_{1}( {X,{x}_{0}})\) into \({\pi }_{1}( {X,{x}_{1}})\), as desired; note that it depends only on the path-homotopy class of \(\alpha\). It is pictured in Figure 52.1.
+The map \(\widehat{\alpha }\), which we call `` \(\alpha\) -hat,'' is well-defined because the operation \(*\) is well-defined. If \(f\) is a loop based at \({x}_{0}\), then \(\bar{\alpha } * ( {f * \alpha })\) is a loop based at \({x}_{1}\). Hence \(\widehat{\alpha }\) maps \({\pi }_{1}( {X,{x}_{0}})\) into \({\pi }_{1}( {X,{x}_{1}})\), as desired; note that it depends only on the path-homotopy class of \(\alpha\). It is pictured in \hyperref[fig:52.1]{Figure 52.1}.
 \end{definition}
 
 \munkresfig[0.7]{52.1}[Figure 52.1]
@@ -446,7 +446,7 @@ Let \(k : ( {Y,{y}_{0}}) \rightarrow ( {X,{x}_{0}})\) be the inverse of \(h\). T
 
  We have shown that any convex subspace of \({\mathbb{R}}^{n}\) has a trivial fundamental group; we turn now to the task of computing some fundamental groups that are not trivial. One of the most useful tools for this purpose is the notion of covering space, which we introduce in this section. Covering spaces are also important in the study of Riemann surfaces and complex manifolds. (See \cite{AhlforsSario1960}.) We shall study them in more detail in Chapter 13. Definition. Let \(p : E \rightarrow B\) be a continuous surjective map. The open set \(U\) of \(B\) is said to be evenly covered by \(p\) if the inverse image \({p}^{-1}( U)\) can be written as the union of disjoint open sets \({V}_{\alpha }\) in \(E\) such that for each \(\alpha\), the restriction of \(p\) to \({V}_{\alpha }\) is a homeomorphism of \({V}_{\alpha }\) onto \(U\). The collection \(\{ {V}_{\alpha }\}\) will be called a partition of \({p}^{-1}( U)\) into slices.
 
-If \(U\) is an open set that is evenly covered by \(p\), we often picture the set \({p}^{-1}( U)\) as a ``stack of pancakes,'' each having the same size and shape as \(U\), floating in the air above \(U\) ; the map \(p\) squashes them all down onto \(U\). See Figure 53.1. Note that if \(U\) is evenly covered by \(p\) and \(W\) is an open set contained in \(U\), then \(W\) is also evenly covered by \(p\).
+If \(U\) is an open set that is evenly covered by \(p\), we often picture the set \({p}^{-1}( U)\) as a ``stack of pancakes,'' each having the same size and shape as \(U\), floating in the air above \(U\) ; the map \(p\) squashes them all down onto \(U\). See \hyperref[fig:53.1]{Figure 53.1}. Note that if \(U\) is evenly covered by \(p\) and \(W\) is an open set contained in \(U\), then \(W\) is also evenly covered by \(p\).
 
 \munkresfig[0.5]{53.1}[Figure 53.1]
 \begin{definition}
@@ -483,7 +483,7 @@ The fact that \(p\) is a covering map comes from elementary properties of the si
 {V}_{n} = ( {n - \frac{1}{4},n + \frac{1}{4}})
 \]
 
-for all \(n \in \mathbb{Z}\). See Figure 53.2. Now, restricted to any closed interval \({\bar{V}}_{n}\), the map \(p\) is injective because \(\sin {2\pi x}\) is strictly monotonic on such an interval. Furthermore, \(p\) carries \({\bar{V}}_{n}\) surjectively onto \(U\), and \({V}_{n}\) to \(U\), by the intermediate value theorem. Since \({\bar{V}}_{n}\) is compact, \(p \mid {\bar{V}}_{n}\) is a homeomorphism of \({\bar{V}}_{n}\) with \(\bar{U}\). In particular, \(p \mid {V}_{n}\) is a homeomorphism of \({V}_{n}\) with \(U\).
+for all \(n \in \mathbb{Z}\). See \hyperref[fig:53.2]{Figure 53.2}. Now, restricted to any closed interval \({\bar{V}}_{n}\), the map \(p\) is injective because \(\sin {2\pi x}\) is strictly monotonic on such an interval. Furthermore, \(p\) carries \({\bar{V}}_{n}\) surjectively onto \(U\), and \({V}_{n}\) to \(U\), by the intermediate value theorem. Since \({\bar{V}}_{n}\) is compact, \(p \mid {\bar{V}}_{n}\) is a homeomorphism of \({\bar{V}}_{n}\) with \(\bar{U}\). In particular, \(p \mid {V}_{n}\) is a homeomorphism of \({V}_{n}\) with \(U\).
 
 \munkresfig[0.8]{53.2}[Figure 53.2]
 Similar arguments can be applied to the intersections of \({S}^{1}\) with the upper and lower open half-planes, and with the open left-hand half-plane. These open sets cover \({S}^{1}\), and each of them is evenly covered by \(p\). Hence \(p : \mathbb{R} \rightarrow {S}^{1}\) is a covering map.
@@ -499,7 +499,7 @@ The map \(p : {\mathbb{R}}_{ + } \rightarrow {S}^{1}\) given by the equation
 p(x) = ( {\cos {2\pi x},\sin {2\pi x}})
 \]
 
-is surjective, and it is a local homeomorphism. See Figure 53.3. But it is not a covering map, for the point \({b}_{0} = ( {1,0})\) has no neighborhood \(U\) that is evenly covered by \(p\). The typical neighborhood \(U\) of \({b}_{0}\) has an inverse image consisting of small neighborhoods \({V}_{n}\) of each integer \(n\) for \(n > 0\), along with a small interval \({V}_{0}\) of the form \(( {0,\epsilon })\). Each of the intervals \({V}_{n}\) for \(n > 0\) is mapped homeomorphically onto \(U\) by the map \(p\), but the interval \({V}_{0}\) is only imbedded in \(U\) by \(p\).
+is surjective, and it is a local homeomorphism. See \hyperref[fig:53.3]{Figure 53.3}. But it is not a covering map, for the point \({b}_{0} = ( {1,0})\) has no neighborhood \(U\) that is evenly covered by \(p\). The typical neighborhood \(U\) of \({b}_{0}\) has an inverse image consisting of small neighborhoods \({V}_{n}\) of each integer \(n\) for \(n > 0\), along with a small interval \({V}_{0}\) of the form \(( {0,\epsilon })\). Each of the intervals \({V}_{n}\) for \(n > 0\) is mapped homeomorphically onto \(U\) by the map \(p\), but the interval \({V}_{0}\) is only imbedded in \(U\) by \(p\).
 
 \munkresfig[0.4]{53.3}[Figure 53.3]
 \end{example}
@@ -548,10 +548,10 @@ Consider the space \(T = {S}^{1} \times {S}^{1}\); it is called the torus. The p
 p \times p : \mathbb{R} \times \mathbb{R} \rightarrow {S}^{1} \times {S}^{1}
 \]
 
-is a covering of the torus by the plane \({\mathbb{R}}^{2}\), where \(p\) denotes the covering map of Theorem 53.1. Each of the unit squares \([ {n,n + 1}] \times [ {m,m + 1}]\) gets wrapped by \(p \times p\) entirely around the torus. See Figure 53.4.
+is a covering of the torus by the plane \({\mathbb{R}}^{2}\), where \(p\) denotes the covering map of Theorem 53.1. Each of the unit squares \([ {n,n + 1}] \times [ {m,m + 1}]\) gets wrapped by \(p \times p\) entirely around the torus. See \hyperref[fig:53.4]{Figure 53.4}.
 
 \munkresfig[0.9]{53.4}[Figure 53.4]
-In this figure, we have pictured the torus not as the product \({S}^{1} \times {S}^{1}\), which is a subspace of \({\mathbb{R}}^{4}\) and thus difficult to visualize, but as the familiar doughnut-shaped surface \(D\) in \({\mathbb{R}}^{3}\) obtained by rotating the circle \({C}_{1}\) in the \({xz}\) -plane of radius \(\frac{1}{3}\) centered at \((1,0,0)\) about the \(z\) -axis. It is not hard to see that \({S}^{1} \times {S}^{1}\) is homeomorphic with the surface \(D\). Let \({C}_{2}\) be the circle of radius 1 in the \({xy}\) -plane centered at the origin. Then let us map \({C}_{1} \times {C}_{2}\) into \(D\) by defining \(f( {a \times b})\) to be that point into which \(a\) is carried when one rotates the circle \({C}_{1}\) about the \(z\) -axis until its center hits the point \(b\). See Figure 53.5. The map \(f\) will be a homeomorphism of \({C}_{1} \times {C}_{2}\) with \(D\), as you can check mentally. If you wish, you can write equations for \(f\) and check continuity, injectivity, and surjectivity directly. (Continuity of \({f}^{-1}\) will follow from compactness of \({C}_{1} \times {C}_{2}\).)
+In this figure, we have pictured the torus not as the product \({S}^{1} \times {S}^{1}\), which is a subspace of \({\mathbb{R}}^{4}\) and thus difficult to visualize, but as the familiar doughnut-shaped surface \(D\) in \({\mathbb{R}}^{3}\) obtained by rotating the circle \({C}_{1}\) in the \({xz}\) -plane of radius \(\frac{1}{3}\) centered at \((1,0,0)\) about the \(z\) -axis. It is not hard to see that \({S}^{1} \times {S}^{1}\) is homeomorphic with the surface \(D\). Let \({C}_{2}\) be the circle of radius 1 in the \({xy}\) -plane centered at the origin. Then let us map \({C}_{1} \times {C}_{2}\) into \(D\) by defining \(f( {a \times b})\) to be that point into which \(a\) is carried when one rotates the circle \({C}_{1}\) about the \(z\) -axis until its center hits the point \(b\). See \hyperref[fig:53.5]{Figure 53.5}. The map \(f\) will be a homeomorphism of \({C}_{1} \times {C}_{2}\) with \(D\), as you can check mentally. If you wish, you can write equations for \(f\) and check continuity, injectivity, and surjectivity directly. (Continuity of \({f}^{-1}\) will follow from compactness of \({C}_{1} \times {C}_{2}\).)
 
 \munkresfig[0.7]{53.5}[Figure 53.5]
 \end{example}
@@ -571,7 +571,7 @@ of \({S}^{1} \times {S}^{1}\). Then \({B}_{0}\) is the union of two circles that
 {E}_{0} = ( {\mathbb{R} \times \mathbb{Z}}) \cup ( {\mathbb{Z} \times \mathbb{R}})
 \]
 
-pictured in Figure 53.4. The map \({p}_{0} : {E}_{0} \rightarrow {B}_{0}\) obtained by restricting \(p \times p\) is thus a covering map.
+pictured in \hyperref[fig:53.4]{Figure 53.4}. The map \({p}_{0} : {E}_{0} \rightarrow {B}_{0}\) obtained by restricting \(p \times p\) is thus a covering map.
 
 The infinite grid is but one covering space of the figure eight; we shall see others later on.
 
@@ -592,7 +592,7 @@ where \(i\) is the identity map of \({\mathbb{R}}_{ + }\) and \(p\) is the map o
 \mathbb{R} \times {\mathbb{R}}_{ + } \rightarrow {\mathbb{R}}^{2} - 0
 \]
 
-of the punctured plane by the open upper half-plane. It is pictured in Figure 53.6. This covering map appears in the study of complex variables as the Riemann surface corresponding to the complex logarithm function.
+of the punctured plane by the open upper half-plane. It is pictured in \hyperref[fig:53.6]{Figure 53.6}. This covering map appears in the study of complex variables as the Riemann surface corresponding to the complex logarithm function.
 
 \munkresfig[1.0]{53.6}[Figure 53.6]
 \end{example}
@@ -625,7 +625,7 @@ The existence of liftings when \(p\) is a covering map is an important tool in s
 
 \begin{centeredblock}
 \begin{example}
-Consider the covering \(p : \mathbb{R} \rightarrow {S}^{1}\) of Theorem 53.1. The path \(f : [ {0,1}] \rightarrow {S}^{1}\) beginning at \({b}_{0} = ( {1,0})\) given by \(f( s) = ( {\cos {\pi s},\sin {\pi s}})\) lifts to the path \(\bar{f}( s) = s/2\) beginning at 0 and ending at \(\frac{1}{2}\). The path \(g( s) = ( {\cos {\pi s}, - \sin {\pi s}})\) lifts to the path \(\bar{g}( s) = - s/2\) beginning at 0 and ending at \(- \frac{1}{2}\). The path \(h( s) = ( {\cos {4\pi s},\sin {4\pi s}})\) lifts to the path \(\bar{h}( s) = {2s}\) beginning at 0 and ending at 2. Intuitively, \(h\) wraps the interval \([ {0,1}]\) around the circle twice; this is reflected in the fact that the lifted path \(\bar{h}\) begins at zero and ends at the number 2. These paths are pictured in Figure 54.1.
+Consider the covering \(p : \mathbb{R} \rightarrow {S}^{1}\) of Theorem 53.1. The path \(f : [ {0,1}] \rightarrow {S}^{1}\) beginning at \({b}_{0} = ( {1,0})\) given by \(f( s) = ( {\cos {\pi s},\sin {\pi s}})\) lifts to the path \(\bar{f}( s) = s/2\) beginning at 0 and ending at \(\frac{1}{2}\). The path \(g( s) = ( {\cos {\pi s}, - \sin {\pi s}})\) lifts to the path \(\bar{g}( s) = - s/2\) beginning at 0 and ending at \(- \frac{1}{2}\). The path \(h( s) = ( {\cos {4\pi s},\sin {4\pi s}})\) lifts to the path \(\bar{h}( s) = {2s}\) beginning at 0 and ending at 2. Intuitively, \(h\) wraps the interval \([ {0,1}]\) around the circle twice; this is reflected in the fact that the lifted path \(\bar{h}\) begins at zero and ends at the number 2. These paths are pictured in \hyperref[fig:54.1]{Figure 54.1}.
 
 \munkresfig[1.0]{54.1}[Figure 54.1]
 \end{example}
@@ -679,7 +679,7 @@ of \(I\) fine enough that each rectangle
 
 is mapped by \(F\) into an open set of \(B\) that is evenly covered by \(p\). (Use the Lebesgue number lemma.) We define the lifting \(\bar{F}\) step by step, beginning with the rectangle \({I}_{1} \times {J}_{1}\), continuing with the other rectangles \({I}_{i} \times {J}_{1}\) in the ``bottom row,'' then with the rectangles \({I}_{i} \times {J}_{2}\) in the next row, and so on.
 
-In general, given \({i}_{0}\) and \({j}_{0}\), assume that \(\bar{F}\) is defined on the set \(A\) which is the union of \(0 \times I\) and \(I \times 0\) and all the rectangles ``previous'' to \({I}_{{i}_{0}} \times {J}_{{j}_{0}}\) (those rectangles \({I}_{i} \times {J}_{j}\) for which \(j < {j}_{0}\) and those for which \(j = {j}_{0}\) and \(i < {i}_{0}\) ). Assume also that \(\bar{F}\) is a continuous lifting of \(F \mid A\). We define \(\bar{F}\) on \({I}_{{i}_{0}} \times {J}_{{j}_{0}}\). Choose an open set \(U\) of \(B\) that is evenly covered by \(p\) and contains the set \(F( {{I}_{{i}_{0}} \times {J}_{{j}_{0}}})\). Let \(\{ {V}_{\alpha }\}\) be a partition of \({p}^{-1}( U)\) into slices; each set \({V}_{\alpha }\) is mapped homeomorphically onto \(U\) by \(p\). Now \(\bar{F}\) is already defined on the set \(C = A \cap ( {{I}_{{i}_{0}} \times {J}_{{j}_{0}}})\). This set is the union of the left and bottom edges of the rectangle \({I}_{{i}_{0}} \times {J}_{{j}_{0}}\), so it is connected. Therefore, \(\bar{F}( C)\) is connected and must lie entirely within one of the sets \({V}_{\alpha }\). Suppose it lies in \({V}_{0}\). Then, the situation is as pictured in Figure 54.2.
+In general, given \({i}_{0}\) and \({j}_{0}\), assume that \(\bar{F}\) is defined on the set \(A\) which is the union of \(0 \times I\) and \(I \times 0\) and all the rectangles ``previous'' to \({I}_{{i}_{0}} \times {J}_{{j}_{0}}\) (those rectangles \({I}_{i} \times {J}_{j}\) for which \(j < {j}_{0}\) and those for which \(j = {j}_{0}\) and \(i < {i}_{0}\) ). Assume also that \(\bar{F}\) is a continuous lifting of \(F \mid A\). We define \(\bar{F}\) on \({I}_{{i}_{0}} \times {J}_{{j}_{0}}\). Choose an open set \(U\) of \(B\) that is evenly covered by \(p\) and contains the set \(F( {{I}_{{i}_{0}} \times {J}_{{j}_{0}}})\). Let \(\{ {V}_{\alpha }\}\) be a partition of \({p}^{-1}( U)\) into slices; each set \({V}_{\alpha }\) is mapped homeomorphically onto \(U\) by \(p\). Now \(\bar{F}\) is already defined on the set \(C = A \cap ( {{I}_{{i}_{0}} \times {J}_{{j}_{0}}})\). This set is the union of the left and bottom edges of the rectangle \({I}_{{i}_{0}} \times {J}_{{j}_{0}}\), so it is connected. Therefore, \(\bar{F}( C)\) is connected and must lie entirely within one of the sets \({V}_{\alpha }\). Suppose it lies in \({V}_{0}\). Then, the situation is as pictured in \hyperref[fig:54.2]{Figure 54.2}.
 
 \munkresfig[0.9]{54.2}[Figure 54.2]
 Let \({p}_{0} : {V}_{0} \rightarrow U\) denote the restriction of \(p\) to \({V}_{0}\). Since \(\bar{F}\) is a lifting of \(F \mid A\), we know that for \(x \in C\),
@@ -790,7 +790,7 @@ of the collection of right cosets of \(H\) into \({p}^{-1}( {b}_{0})\), which is
 (a) Suppose \(\bar{h}\) is a loop in \(E\) at \({e}_{0}\), and \({p}_{ * }( [ \bar{h}] )\) is the identity element. Let \(F\) be a path homotopy between \(p \circ \bar{h}\) and the constant loop. If \(\bar{F}\) is the lifting of \(F\) to \(E\) such that \(\bar{F}( {0,0}) = {e}_{0}\), then \(\bar{F}\) is a path homotopy between \(\bar{h}\) and the constant loop at \({e}_{0}\).
 (b) Given loops \(f\) and \(g\) in \(B\), let \(\bar{f}\) and \(\bar{g}\) be liftings of them to \(E\) that begin at \({e}_{0}\). Then \(\phi ( [ f] ) = \bar{f}(1)\) and \(\phi ( [ g] ) = \bar{g}(1)\). We show that \(\phi ( [ f] ) = \phi ( [ g] )\) if and only if \([ f] \in H * [ g]\).
 
-First, suppose that \([ f] \in H * [ g]\). Then \([ f] = [ {h * g}]\), where \(h = p \circ \bar{h}\) for some loop \(\bar{h}\) in \(E\) based at \({e}_{0}\). Now the product \(\bar{h} * \bar{g}\) is defined, and it is a lifting of \(h * g\). Because \([ f] = [ {h * g}]\), the liftings \(\bar{f}\) and \(\bar{h} * \bar{g}\), which begin at \({e}_{0}\), must end at the same point of \(E\). Then \(\bar{f}\) and \(\bar{g}\) end at the same point of \(E\), so that \(\phi ( [ f] ) = \phi ( [ g] )\). See Figure 54.3.
+First, suppose that \([ f] \in H * [ g]\). Then \([ f] = [ {h * g}]\), where \(h = p \circ \bar{h}\) for some loop \(\bar{h}\) in \(E\) based at \({e}_{0}\). Now the product \(\bar{h} * \bar{g}\) is defined, and it is a lifting of \(h * g\). Because \([ f] = [ {h * g}]\), the liftings \(\bar{f}\) and \(\bar{h} * \bar{g}\), which begin at \({e}_{0}\), must end at the same point of \(E\). Then \(\bar{f}\) and \(\bar{g}\) end at the same point of \(E\), so that \(\phi ( [ f] ) = \phi ( [ g] )\). See \hyperref[fig:54.3]{Figure 54.3}.
 
 \munkresfig[0.9]{54.3}[Figure 54.3]
 Now suppose that \(\phi ( [ f] ) = \phi ( [ g] )\). Then \(\bar{f}\) and \(\bar{g}\) end at the same point of \(E\). The product of \(\bar{f}\) and the reverse of \(\bar{g}\) is defined, and it is a loop \(\bar{h}\) in \(E\) based at \({e}_{0}\). By direct computation, \([ {\bar{h} * \bar{g}}] = [ \bar{f}]\). If \(\bar{F}\) is a path homotopy in \(E\) between the loops \(\bar{h} * \bar{g}\) and \(\bar{f}\), then \(p \circ \bar{F}\) is a path homotopy in \(B\) between \(h * g\) and \(f\), where \(h = p \circ \bar{h}\). Thus \([ f] \in H * [ g]\), as desired.
@@ -850,7 +850,7 @@ Let \(h : {S}^{1} \rightarrow X\) be a continuous map. Then the following condit
 \pi ( {x,t}) = ( {1 - t}) x.
 \]
 
-Then \(\pi\) is continuous, closed and surjective, so it is a quotient map; it collapses \({S}^{1} \times 1\) to the point 0 and is otherwise injective. Because \(H\) is constant on \({S}^{1} \times 1\), it induces, via the quotient map \(\pi\), a continuous map \(k : {B}^{2} \rightarrow X\) that is an extension of \(h\). See Figure 55.1.
+Then \(\pi\) is continuous, closed and surjective, so it is a quotient map; it collapses \({S}^{1} \times 1\) to the point 0 and is otherwise injective. Because \(H\) is constant on \({S}^{1} \times 1\), it induces, via the quotient map \(\pi\), a continuous map \(k : {B}^{2} \rightarrow X\) that is an extension of \(h\). See \hyperref[fig:55.1]{Figure 55.1}.
 
 \munkresfig[0.9]{55.1}[Figure 55.1]
 \((2) \Rightarrow ( 3)\). If \(j : {S}^{1} \rightarrow {B}^{2}\) is the inclusion map, then \(h\) equals the composite \(k \circ j\). Hence \({h}_{ * } = {k}_{ * } \circ {j}_{ * }\). But
@@ -863,7 +863,7 @@ is trivial because the fundamental group of \({B}^{2}\) is trivial. Therefore \(
 
 \(( 3) \Rightarrow (1)\). Let \(p : \mathbb{R} \rightarrow {S}^{1}\) be the standard covering map, and let \({p}_{0} : I \rightarrow {S}^{1}\) be its restriction to the unit interval. Then \([ {p}_{0}]\) generates \({\pi }_{1}( {{S}^{1},{b}_{0}})\) because \({p}_{0}\) is a loop in \({S}^{1}\) whose lift to \(\mathbb{R}\) begins at 0 and ends at 1 .
 
-Let \({x}_{0} = h( {b}_{0})\). Because \({h}_{ * }\) is trivial, the loop \(f = h \circ {p}_{0}\) represents the identity element of \({\pi }_{1}( {X,{x}_{0}})\). Therefore, there is a path homotopy \(F\) in \(X\) between \(f\) and the constant path at \({x}_{0}\). The map \({p}_{0} \times \mathrm{id} : I \times I \rightarrow {S}^{1} \times I\) is a quotient map, being continuous, closed, and surjective; it maps \(0 \times t\) and \(1 \times t\) to \({b}_{0} \times t\) for each \(t\), but is otherwise injective. The path homotopy \(F\) maps \(0 \times I\) and \(1 \times I\) and \(I \times 1\) to the point \({x}_{0}\) of \(X\), so it induces a continuous map \(H : {S}^{1} \times I \rightarrow X\) that is a homotopy between \(h\) and a constant map. See Figure 55.2.
+Let \({x}_{0} = h( {b}_{0})\). Because \({h}_{ * }\) is trivial, the loop \(f = h \circ {p}_{0}\) represents the identity element of \({\pi }_{1}( {X,{x}_{0}})\). Therefore, there is a path homotopy \(F\) in \(X\) between \(f\) and the constant path at \({x}_{0}\). The map \({p}_{0} \times \mathrm{id} : I \times I \rightarrow {S}^{1} \times I\) is a quotient map, being continuous, closed, and surjective; it maps \(0 \times t\) and \(1 \times t\) to \({b}_{0} \times t\) for each \(t\), but is otherwise injective. The path homotopy \(F\) maps \(0 \times I\) and \(1 \times I\) and \(I \times 1\) to the point \({x}_{0}\) of \(X\), so it induces a continuous map \(H : {S}^{1} \times I \rightarrow X\) that is a homotopy between \(h\) and a constant map. See \hyperref[fig:55.2]{Figure 55.2}.
 
 \munkresfig[1.0]{55.2}[Figure 55.2]
 \end{proof}
@@ -888,7 +888,7 @@ for the function \(v\), where \(i\) and \(j\) are the standard unit basis vector
 
 We suppose first that \(v(x)\) does not point directly inward at any point \(x\) of \({S}^{1}\) and derive a contradiction. Consider the map \(v : {B}^{2} \rightarrow {\mathbb{R}}^{2} - \mathbf{0}\) ; let \(w\) be its restriction to \({S}^{1}\). Because the map \(w\) extends to a map of \({B}^{2}\) into \({\mathbb{R}}^{2} - \mathbf{0}\), it is nulhomotopic.
 
-On the other hand, \(w\) is homotopic to the inclusion map \(j : {S}^{1} \rightarrow {\mathbb{R}}^{2} - \mathbf{0}\). Figure 55.3 illustrates the homotopy; one defines it formally by the equation
+On the other hand, \(w\) is homotopic to the inclusion map \(j : {S}^{1} \rightarrow {\mathbb{R}}^{2} - \mathbf{0}\). \hyperref[fig:55.3]{Figure 55.3} illustrates the homotopy; one defines it formally by the equation
 
 \[
 F( {x,t}) = {tx} + ( {1 - t}) w(x),
@@ -1049,7 +1049,7 @@ On the other hand, we shall define a homotopy \(F\) between \(h\) and the map \(
 F( {z,t}) = {z}^{n} + t( {{a}_{n - 1}{z}^{n - 1} + \cdots + {a}_{0}}).
 \]
 
-See Figure 56.1; \(F( {z,t})\) never equals 0 because
+See \hyperref[fig:56.1]{Figure 56.1}; \(F( {z,t})\) never equals 0 because
 
 \[
 | {F( {z,t}) }| \geq | {z}^{n}| - | {t( {{a}_{n - 1}{z}^{n - 1} + \cdots + {a}_{0}}) }|
@@ -1132,7 +1132,7 @@ There is no continuous antipode-preserving map \(g : {S}^{2} \rightarrow {S}^{1}
 \end{theorem}
 
 \begin{proof}
-Suppose \(g : {S}^{2} \rightarrow {S}^{1}\) is continuous and antipode preserving. Let us take \({S}^{1}\) to be the equator of \({S}^{2}\). Then the restriction of \(g\) to \({S}^{1}\) is a continuous antipode-preserving map \(h\) of \({S}^{1}\) to itself. By the preceding theorem, \(h\) is not nulhomotopic. But the upper hemisphere \(E\) of \({S}^{2}\) is homeomorphic to the ball \({B}^{2}\), and \(g\) is a continuous extension of \(h\) to \(E\) ! See Figure 57.1.
+Suppose \(g : {S}^{2} \rightarrow {S}^{1}\) is continuous and antipode preserving. Let us take \({S}^{1}\) to be the equator of \({S}^{2}\). Then the restriction of \(g\) to \({S}^{1}\) is a continuous antipode-preserving map \(h\) of \({S}^{1}\) to itself. By the preceding theorem, \(h\) is not nulhomotopic. But the upper hemisphere \(E\) of \({S}^{2}\) is homeomorphic to the ball \({B}^{2}\), and \(g\) is a continuous extension of \(h\) to \(E\) ! See \hyperref[fig:57.1]{Figure 57.1}.
 \end{proof}
 \begin{theorem}[Borsuk-Ulam theorem for \({S}^{2}\)]
 Given a continuous map \(f : {S}^{2} \rightarrow\) \({\mathbb{R}}^{2}\), there is a point \(x\) of \({S}^{2}\) such that \(f(x) = f( {-x})\).
@@ -1154,7 +1154,7 @@ Given two bounded polygonal regions in \({\mathbb{R}}^{2}\), there exists a line
 We take two bounded polygonal regions \({A}_{1}\) and \({A}_{2}\) in the plane \({\mathbb{R}}^{2} \times 1\) in \({\mathbb{R}}^{3}\), and show there is a line \(L\) in this plane that bisects each of them.
 Given a point \(u\) of \({S}^{2}\), let us consider the plane \(P\) in \({\mathbb{R}}^{3}\) passing through the origin that has \(u\) as its unit normal vector. This plane divides \({\mathbb{R}}^{3}\) into two half-spaces; let \({f}_{i}( u)\) equal the area of that portion of \({A}_{i}\) that lies on the same side of \(P\) as does the vector \(u\).
 
-If \(u\) is the unit vector \(\mathbf{k}\), then \({f}_{i}( u) = \operatorname{area}{A}_{i}\) ; and if \(u = - \mathbf{k}\), then \({f}_{i}( u) = 0\). Otherwise, the plane \(P\) intersects the plane \({\mathbb{R}}^{2} \times 1\) in a line \(L\) that splits \({\mathbb{R}}^{2} \times 1\) into two half-planes, and \({f}_{i}( u)\) is the area of that part of \({A}_{i}\) that lies on one side of this line. See Figure 57.2.
+If \(u\) is the unit vector \(\mathbf{k}\), then \({f}_{i}( u) = \operatorname{area}{A}_{i}\) ; and if \(u = - \mathbf{k}\), then \({f}_{i}( u) = 0\). Otherwise, the plane \(P\) intersects the plane \({\mathbb{R}}^{2} \times 1\) in a line \(L\) that splits \({\mathbb{R}}^{2} \times 1\) into two half-planes, and \({f}_{i}( u)\) is the area of that part of \({A}_{i}\) that lies on one side of this line. See \hyperref[fig:57.2]{Figure 57.2}.
 
 \munkresfig[0.6]{57.2}[Figure 57.2]
 Replacing \(u\) by \(- u\) gives us the same plane \(P\), but the other half-space, so that \({f}_{i}( {-u})\) is the area of that part of \({A}_{i}\) that lies on the other side of \(P\) from \(u\). It follows that
@@ -1224,14 +1224,14 @@ is a homotopy between the identity map of \(X\) and the map \(j \circ r\). For \
 
 What made the preceding proof work? Roughly speaking, it worked because we had a natural way of deforming the identity map of \({\mathbb{R}}^{n + 1} - 0\) to a map that collapsed all of \({\mathbb{R}}^{n + 1} - \mathbf{0}\) onto \({S}^{n}\). The deformation \(H\) gradually collapsed each radial line emanating from the origin to the point where it intersected \({S}^{n}\) ; each point of \({S}^{n}\) remained fixed during this deformation.
 
-Figure 58.1 illustrates, in the case \(n = 1\), how the deformation \(H\) gives rise to a path homotopy \(H( {f( s),t})\) between the loop \(f\) in \({\mathbb{R}}^{2} - \mathbf{0}\) and the loop \(g = f/\parallel f\parallel\) in \({S}^{1}\).
+\hyperref[fig:58.1]{Figure 58.1} illustrates, in the case \(n = 1\), how the deformation \(H\) gives rise to a path homotopy \(H( {f( s),t})\) between the loop \(f\) in \({\mathbb{R}}^{2} - \mathbf{0}\) and the loop \(g = f/\parallel f\parallel\) in \({S}^{1}\).
 
 % \begin{center}
 % \includegraphics[width=0.6\textwidth]{images/58.1.jpg}
 % \end{center}
 \hspace*{3em} 
 
-Figure 58.1
+\hyperref[fig:58.1]{Figure 58.1}
 
 These comments lead us to formulate a more general situation in which the same procedure applies.
 \end{proof}
@@ -1266,7 +1266,7 @@ is a deformation retraction; it gradually collapses each line parallel to the \(
 
 \begin{centeredblock}
 \begin{example}
-Consider \({\mathbb{R}}^{2} - p - q\), the punctured plane. We assert it has the ``figure eight'' space as a deformation retract. Rather than writing equations, we merely sketch the deformation retraction; it is the three-stage deformation indicated in Figure 58.2.
+Consider \({\mathbb{R}}^{2} - p - q\), the punctured plane. We assert it has the ``figure eight'' space as a deformation retract. Rather than writing equations, we merely sketch the deformation retraction; it is the three-stage deformation indicated in \hyperref[fig:58.2]{Figure 58.2}.
 
 \munkresfig[1.0]{58.2}[Figure 58.2]
 \end{example}
@@ -1331,7 +1331,7 @@ c( t) = ( {{x}_{0},t}) \text{.}
 \]
 
 \munkresfig[1.0]{58.3}[Figure 58.3]
-Then \(H \circ {f}_{0} = h \circ f\) and \(H \circ {f}_{1} = k \circ f\), while \(H \circ c\) equals the path \(\alpha\). See Figure 58.3.
+Then \(H \circ {f}_{0} = h \circ f\) and \(H \circ {f}_{1} = k \circ f\), while \(H \circ c\) equals the path \(\alpha\). See \hyperref[fig:58.3]{Figure 58.3}.
 
 Let \(F : I \times I \rightarrow X \times I\) be the map \(F( {s,t}) = ( {f( s),t})\). Consider the following paths in \(I \times I\), which run along the four edges of \(I \times I\) :
 
@@ -1491,7 +1491,7 @@ Step 2. We prove the theorem. Given \(f\), let \({a}_{0},\ldots ,{a}_{n}\) be th
 [ f] = [ {f}_{1}] * [ {f}_{2}] * \cdots * [ {f}_{n}] .
 \]
 
-For each \(i\), choose a path \({\alpha }_{i}\) in \(U \cap V\) from \({x}_{0}\) to \(f( {a}_{i})\). (Here we use the fact that \(U \cap V\) is path connected.) Since \(f( {a}_{0}) = f( {a}_{n}) = {x}_{0}\), we can choose \({\alpha }_{0}\) and \({\alpha }_{n}\) to be the constant path at \({x}_{0}\). See Figure 59.1.
+For each \(i\), choose a path \({\alpha }_{i}\) in \(U \cap V\) from \({x}_{0}\) to \(f( {a}_{i})\). (Here we use the fact that \(U \cap V\) is path connected.) Since \(f( {a}_{0}) = f( {a}_{n}) = {x}_{0}\), we can choose \({\alpha }_{0}\) and \({\alpha }_{n}\) to be the constant path at \({x}_{0}\). See \hyperref[fig:59.1]{Figure 59.1}.
 
 Now we set
 
@@ -1696,7 +1696,7 @@ The projection map \(p : E \rightarrow X\) wraps the \(x\) -axis around the circ
 
 We could write this description down in equations if we wished, but the informal description seems to us easier to follow.
 
-Now let \(\bar{f} : I \rightarrow E\) be the path \(\bar{f}( s) = s \times 0\), going along the \(x\) -axis from the origin to the point \(1 \times 0\). Let \(\bar{g} : I \rightarrow E\) be the path \(\bar{g}( s) = 0 \times s\), going along the \(y\) -axis from the origin to the point \(0 \times 1\). Let \(f = p \circ \bar{f}\) and \(g = p \circ \bar{g}\) ; then \(f\) and \(g\) are loops in the figure eight based at \({x}_{0}\), going around the circles \(A\) and \(B\), respectively. See Figure 60.1.
+Now let \(\bar{f} : I \rightarrow E\) be the path \(\bar{f}( s) = s \times 0\), going along the \(x\) -axis from the origin to the point \(1 \times 0\). Let \(\bar{g} : I \rightarrow E\) be the path \(\bar{g}( s) = 0 \times s\), going along the \(y\) -axis from the origin to the point \(0 \times 1\). Let \(f = p \circ \bar{f}\) and \(g = p \circ \bar{g}\) ; then \(f\) and \(g\) are loops in the figure eight based at \({x}_{0}\), going around the circles \(A\) and \(B\), respectively. See \hyperref[fig:60.1]{Figure 60.1}.
 
 We assert that \(f * g\) and \(g * f\) are not path homotopic, so that the fundamental group of the figure eight is not abelian.
 
@@ -1711,7 +1711,7 @@ The fundamental group of the double torus is not abelian.
 
 \begin{proof}
 The double torus \(T\# T\) is the surface obtained by taking two copies of the torus, deleting a small open disc from each of them, and pasting the remaining pieces together along their edges. We assert that the figure eight \(X\) is a retract of \(T\# T\). This fact implies that inclusion \(j : X \rightarrow T\# T\) induces a monomorphism \({j}_{ * }\), so that \({\pi }_{1}( {T\# T,{x}_{0}})\) is not abelian.
-One can write equations for the retraction \(r : T\# T \rightarrow X\), but it is simpler to indicate it in pictures, as we have done in Figure 60.2. Let \(Y\) be the union of two tori having a point in common. First one maps \(T\# T\) onto \(Y\) by a map that collapses the dotted circle to a point but is otherwise one-to-one; it defines a homeomorphism \(h\) of the figure eight in \(T\# T\) with the figure eight in \(Y\). Then one retracts \(Y\) onto its figure eight by mapping each cross-sectional circle to the point where it intersects the figure eight. Then one maps the figure eight in \(Y\) back onto the figure eight in \(T\# T\) by the map \({h}^{-1}\).
+One can write equations for the retraction \(r : T\# T \rightarrow X\), but it is simpler to indicate it in pictures, as we have done in \hyperref[fig:60.2]{Figure 60.2}. Let \(Y\) be the union of two tori having a point in common. First one maps \(T\# T\) onto \(Y\) by a map that collapses the dotted circle to a point but is otherwise one-to-one; it defines a homeomorphism \(h\) of the figure eight in \(T\# T\) with the figure eight in \(Y\). Then one retracts \(Y\) onto its figure eight by mapping each cross-sectional circle to the point where it intersects the figure eight. Then one maps the figure eight in \(Y\) back onto the figure eight in \(T\# T\) by the map \({h}^{-1}\).
 
 \munkresfig[1.0]{60.2}[Figure 60.2]
 \end{proof}
@@ -1725,5 +1725,5 @@ The 2-sphere, torus, projective plane, and double torus are topologically distin
 \item Let \(X\) be the quotient space obtained from \({B}^{2}\) by identifying each point \(x\) of \({S}^{1}\) with its antipode \(- x\). Show that \(X\) is homeomorphic to the projective plane \({P}^{2}\).
 \item Let \(p : E \rightarrow X\) be the map constructed in the proof of Lemma 60.5. Let \({E}^{\prime }\) be the subspace of \(E\) that is the union of the \(x\) -axis and the \(y\) -axis. Show that \(p \mid {E}^{\prime }\) is not a covering map.
 \item The space \({P}^{1}\) and the covering map \(p : {S}^{1} \rightarrow {P}^{1}\) are familiar ones. What are they?
-\item Consider the covering map indicated in Figure 60.3. Here, \(p\) wraps \({A}_{1}\) around \(A\) twice and wraps \({B}_{1}\) around \(B\) twice; \(p\) maps \({A}_{0}\) and \({B}_{0}\) homeomorphically onto \(A\) and \(B\), respectively. Use this covering space to show that the fundamental group of the figure eight is not abelian. \munkresfig[0.5]{60.3}[Figure 60.3]
+\item Consider the covering map indicated in \hyperref[fig:60.3]{Figure 60.3}. Here, \(p\) wraps \({A}_{1}\) around \(A\) twice and wraps \({B}_{1}\) around \(B\) twice; \(p\) maps \({A}_{0}\) and \({B}_{0}\) homeomorphically onto \(A\) and \(B\), respectively. Use this covering space to show that the fundamental group of the figure eight is not abelian. \munkresfig[0.5]{60.3}[Figure 60.3]
 \end{enumerate}
