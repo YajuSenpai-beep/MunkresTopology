@@ -2,10 +2,6 @@
 \definecolor{covercolor}{HTML}{315758}
 \definecolor{linecolor}{HTML}{D6E19A}
 
-% 书脊宽度
-\newlength{\spinewidth}
-\setlength{\spinewidth}{1.8cm}
-
 % 定义统一宽度
 \newlength{\patternwidth}
 \setlength{\patternwidth}{14.4cm}
@@ -62,29 +58,6 @@
 
 \cleardoublepage
 \thispagestyle{empty}
-
-% 扩宽当前页以容纳书脊
-\newdimen\savepagewidth
-\savepagewidth=\pdfpagewidth
-\pdfpagewidth=\dimexpr\savepagewidth+\spinewidth\relax
-
-% 书脊（TikZ overlay，和封面在同一页）
-\begin{tikzpicture}[remember picture,overlay]
-    \draw[linecolor,line width=0.8pt]
-        ([xshift=\spinewidth]current page.north west) --
-        ([xshift=\spinewidth]current page.south west);
-    \node[
-        rotate=-90,
-        anchor=center,
-        text=linecolor,
-        font=\RebarBold\fontsize{18}{22}\selectfont
-    ] at ([xshift=0.5\spinewidth]current page.west)
-        {ZY6412 \hspace{1.2em} Topology \hspace{1.2em} 2nd};
-\end{tikzpicture}
-
-% 封面内容右移书脊宽度
-\hspace*{\spinewidth}%
-\begin{minipage}{\dimexpr\textwidth-\spinewidth\relax}
 \begingroup
     \centering
 
@@ -126,8 +99,6 @@
     % 添加图案
     \reversedpattern
 
-    \vspace{2em}
-
     % 使用弹性垂直空间将作者名推到底部
     \vfill
 
@@ -140,10 +111,7 @@
     \vspace{0.1cm}
 
 \endgroup
-\end{minipage}
-
 \clearpage
 
-% 封面结束后立即重置页面颜色和宽度
-\pdfpagewidth=\savepagewidth
+% 封面结束后立即重置页面颜色
 \nopagecolor
