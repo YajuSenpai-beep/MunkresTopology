@@ -110,7 +110,7 @@
 %         \munkresfig[1.0]{1.1}[Figure 1.1][\upshape]   → 正常字体（覆盖默认）
 \NewDocumentCommand{\munkresfig}{O{0.8} m o o}{%
   \begin{center}%
-    \includegraphics[width=#1\linewidth]{images/#2.png}%
+    \includegraphics[width=#1\linewidth]{images/#2}%
     \IfValueT{#3}{\par\vskip 0.5em \IfValueTF{#4}{#4{#3}}{\textbf{\textsl{#3}}}\par}%
     \label{fig:#2}%
   \end{center}%
