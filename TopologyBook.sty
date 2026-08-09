@@ -69,8 +69,8 @@
 \NewDocumentCommand{\booksection}{s m m o}{%
   \stepcounter{section}%
   \IfBooleanTF{#1}
-    {\section*{\raisebox{0.15ex}{\small *}§ #2\ #3\IfValueT{#4}{ #4}}}
-    {\section*{§ #2\ #3\IfValueT{#4}{ #4}}}%
+    {\section*{\raisebox{0.15ex}{\small *}\S\ #2\ #3\IfValueT{#4}{ #4}}}
+    {\section*{\S\ #2\ #3\IfValueT{#4}{ #4}}}%
   \phantomsection
   \IfBooleanTF{#1}
     {\addcontentsline{toc}{section}{\llap{\raisebox{0.15ex}{\small *}}#2\quad#3}}
