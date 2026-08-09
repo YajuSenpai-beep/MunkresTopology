@@ -19,6 +19,7 @@ We have already noted that every metrizable space satisfies this axiom; see §21
 The most useful fact concerning spaces that satisfy this axiom is the fact that in such a space, convergent sequences are adequate to detect limit points of sets and to check continuity of functions. We have noted this before; now we state it formally as a theorem:
 
 \begin{theorem}
+\label{thm:\thetheorem}
  Let \(X\) be a topological space.
 
 (a) Let \(A\) be a subset of \(X\). If there is a sequence of points of \(A\) converging to \(x\), then \(x \in \bar{A}\) ; the converse holds if \(X\) is first-countable.
@@ -41,12 +42,14 @@ Why then is this second axiom interesting? Well, for one thing, many familiar sp
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
  The real line \(\mathbb{R}\) has a countable basis-the collection of all open intervals \((a, b)\) with rational end points. Likewise, \({\mathbb{R}}^{n}\) has a countable basis—the collection of all products of intervals having rational end points. Even \({\mathbb{R}}^{\omega }\) has a countable basis-the collection of all products \(\mathop{\prod }\limits_{{n \in {\mathbb{Z}}_{ + }}}{U}_{n}\), where \({U}_{n}\) is an open interval with rational end points for finitely many values of \(n\), and \({U}_{n} = \mathbb{R}\) for all other values of \(n\).
 \end{example}
 \end{centeredblock}
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
  In the uniform topology, \({\mathbb{R}}^{\omega }\) satisfies the first countability axiom (being metrizable). However, it does not satisfy the second. To verify this fact, we first show that if \(X\) is a space having a countable basis \(\mathcal{B}\), then any discrete subspace \(A\) of \(X\) must be countable. Choose, for each \(a \in A\), a basis element \({B}_{a}\) that intersects \(A\) in the point \(a\) alone. If \(a\) and \(b\) are distinct points of \(A\), the sets \({B}_{a}\) and \({B}_{b}\) are different, since the first contains \(a\) and the second does not. It follows that the map \(a \rightarrow {B}_{a}\) is an injection of \(A\) into \(\mathcal{B}\), so \(A\) must be countable.
 
 Now we note that the subspace \(A\) of \({\mathbb{R}}^{\omega }\) consisting of all sequences of 0's and 1's is uncountable; and it has the discrete topology because \(\bar{\rho }( {a,b}) = 1\) for any two distinct points \(a\) and \(b\) of \(A\). Therefore, in the uniform topology \({\mathbb{R}}^{\omega }\) does not have a countable basis.
@@ -56,6 +59,7 @@ Now we note that the subspace \(A\) of \({\mathbb{R}}^{\omega }\) consisting of 
 Both countability axioms are well behaved with respect to the operations of taking subspaces or countable products:
 
 \begin{theorem}
+\label{thm:\thetheorem}
  A subspace of a first-countable space is first-countable, and a countable product of first-countable spaces is first-countable. A subspace of a second-countable space is second-countable, and a countable product of second-countable spaces is second-countable.
 
 \end{theorem}
@@ -72,6 +76,7 @@ Two consequences of the second countability axiom that will be useful to us late
 \end{definition}
 
 \begin{theorem}
+\label{thm:\thetheorem}
  Suppose that \(X\) has a countable basis. Then:
 
 (a) Every open covering of \(X\) contains a countable subcollection covering \(X\).
@@ -86,13 +91,14 @@ Let \(\{ {B}_{n}\}\) be a countable basis for \(X\).
 
 (b) From each nonempty basis element \({B}_{n}\), choose a point \({x}_{n}\). Let \(D\) be the set consisting of the points \({x}_{n}\). Then \(D\) is dense in \(X\) : Given any point \(x\) of \(X\), every basis element containing \(x\) intersects \(D\), so \(x\) belongs to \(\bar{D}\).
 
-The two properties listed in Theorem 30.3 are sometimes taken as alternative countability axioms. A space for which every open covering contains a countable subcovering is called a Lindelöf space. A space having a countable dense subset is often said to be separable (an unfortunate choice of terminology). ${}^{\dagger}$ Weaker in general than the second countability axiom, each of these properties is equivalent to the second countability axiom when the space is metrizable (see Exercise 5). They are less important than the second countability axiom, but you should be aware of their existence, for they are sometimes useful. It is often easier, for instance, to show that a space \(X\) has a countable dense subset than it is to show that \(X\) has a countable basis. If the space is metrizable (as it usually is in analysis), it follows that \(X\) is second-countable as well.
+The two properties listed in \hyperref[thm:30.3]{Theorem 30.3} are sometimes taken as alternative countability axioms. A space for which every open covering contains a countable subcovering is called a Lindelöf space. A space having a countable dense subset is often said to be separable (an unfortunate choice of terminology). ${}^{\dagger}$ Weaker in general than the second countability axiom, each of these properties is equivalent to the second countability axiom when the space is metrizable (see Exercise 5). They are less important than the second countability axiom, but you should be aware of their existence, for they are sometimes useful. It is often easier, for instance, to show that a space \(X\) has a countable dense subset than it is to show that \(X\) has a countable basis. If the space is metrizable (as it usually is in analysis), it follows that \(X\) is second-countable as well.
 
 We shall not use these properties to prove any theorems, but one of them-the Lindelöf condition-will be useful in dealing with some examples. They are not as well behaved as one might wish under the operations of taking subspaces and cartesian products, as we shall see in the examples and exercises that follow.
 \end{proof}
 
 \begin{centeredblock*}
 \begin{example}
+\label{ex:\thesection.\theexample}
  The space \({\mathbb{R}}_{\ell }\) satisfies all the countability axioms but the second.
 
 Given \(x \in {\mathbb{R}}_{\ell }\), the set of all basis elements of the form \(\lbrack x,x + 1/n)\) is a countable basis at \(x\). And it is easy to see that the rational numbers are dense in \({\mathbb{R}}_{\ell }\).
@@ -135,6 +141,7 @@ is a countable subcollection of \(\mathcal{A}\) that covers the set \(C\), and \
 
 \begin{centeredblock*}
 \begin{example}
+\label{ex:\thesection.\theexample}
  The product of two Lindelöf spaces need not be Lindelöf. Although the space \({\mathbb{R}}_{\ell }\) is Lindelöf, we shall show that the product space \({\mathbb{R}}_{\ell } \times {\mathbb{R}}_{\ell } = {\mathbb{R}}_{\ell }^{2}\) is not. The space \({\mathbb{R}}_{\ell }^{2}\) is an extremely useful example in topology called the Sorgenfrey plane.
 
 The space \({\mathbb{R}}_{\ell }^{2}\) has as basis all sets of the form \(\lbrack a,b) \times \lbrack c,d)\). To show it is not Lindelof, consider the subspace
@@ -157,6 +164,7 @@ Each of these open sets intersects \(L\) in at most one point. Since \(L\) is un
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
  A subspace of a Lindelöf space need not be Lindelöf. The ordered square \({I}_{o}^{2}\) is compact; therefore it is Lindelöf, trivially. However, the subspace \(A = I \times ( {0,1})\) is not Lindelöf. For \(A\) is the union of the disjoint sets \({U}_{x} = \{ x\} \times ( {0,1})\), each of which is open in \(A\). This collection of sets is uncountable, and no proper subcollection covers \(A\).
 \end{example}
 \end{centeredblock}
@@ -229,6 +237,7 @@ The three separation axioms are illustrated in \hyperref[fig:31.1]{Figure 31.1}.
 There are other ways to formulate the separation axioms. One formulation that is sometimes useful is given in the following lemma:
 
 \begin{lemma}
+\label{lem:\thetheorem}
  Let \(X\) be a topological space. Let one-point sets in \(X\) be closed.
 
 (a) \(X\) is regular if and only if given a point \(x\) of \(X\) and a neighborhood \(U\) of \(x\), there is a neighborhood \(V\) of \(x\) such that \(\bar{V} \subset U\).
@@ -247,6 +256,7 @@ To prove the converse, suppose the point \(x\) and the closed set \(B\) not cont
 Now we relate the separation axioms with the concepts previously introduced.
 
 \begin{theorem}
+\label{thm:\thetheorem}
  (a) A subspace of a Hausdorff space is Hausdorff; a product of Hausdorff spaces is Hausdorff.
 
 (b) A subspace of a regular space is regular; a product of regular spaces is regular.
@@ -258,13 +268,14 @@ Let \(\{ {X}_{\alpha }\}\) be a family of Hausdorff spaces. Let \(\mathbf{x} = (
 
 (b) Let \(Y\) be a subspace of the regular space \(X\). Then one-point sets are closed in \(Y\). Let \(x\) be a point of \(Y\) and let \(B\) be a closed subset of \(Y\) disjoint from \(x\). Now \(\bar{B} \cap Y = B\), where \(\bar{B}\) denotes the closure of \(B\) in \(X\). Therefore, \(x \notin \bar{B}\), so, using regularity of \(X\), we can choose disjoint open sets \(U\) and \(V\) of \(X\) containing \(x\) and \(\bar{B}\), respectively. Then \(U \cap Y\) and \(V \cap Y\) are disjoint open sets in \(Y\) containing \(x\) and \(B\), respectively.
 
-Let \(\{ {X}_{\alpha }\}\) be a family of regular spaces; let \(X = \prod {X}_{\alpha }\). By (a), \(X\) is Hausdorff, so that one-point sets are closed in \(X\). We use the preceding lemma to prove regularity of \(X\). Let \(\mathbf{x} = ( {x}_{\alpha })\) be a point of \(X\) and let \(U\) be a neighborhood of \(\mathbf{x}\) in \(X\). Choose a basis element \(\prod {U}_{\alpha }\) about \(\mathbf{x}\) contained in \(U\). Choose, for each \(\alpha\), a neighborhood \({V}_{\alpha }\) of \({x}_{\alpha }\) in \({X}_{\alpha }\) such that \({\bar{V}}_{\alpha } \subset {U}_{\alpha }\) ; if it happens that \({U}_{\alpha } = {X}_{\alpha }\), choose \({V}_{\alpha } = {X}_{\alpha }\). Then \(V = \prod {V}_{\alpha }\) is a neighborhood of \(x\) in \(X\). Since \(\bar{V} = \prod {\bar{V}}_{\alpha }\) by Theorem 19.5, it follows at once that \(\bar{V} \subset \prod {U}_{\alpha } \subset U\), so that \(X\) is regular.
+Let \(\{ {X}_{\alpha }\}\) be a family of regular spaces; let \(X = \prod {X}_{\alpha }\). By (a), \(X\) is Hausdorff, so that one-point sets are closed in \(X\). We use the preceding lemma to prove regularity of \(X\). Let \(\mathbf{x} = ( {x}_{\alpha })\) be a point of \(X\) and let \(U\) be a neighborhood of \(\mathbf{x}\) in \(X\). Choose a basis element \(\prod {U}_{\alpha }\) about \(\mathbf{x}\) contained in \(U\). Choose, for each \(\alpha\), a neighborhood \({V}_{\alpha }\) of \({x}_{\alpha }\) in \({X}_{\alpha }\) such that \({\bar{V}}_{\alpha } \subset {U}_{\alpha }\) ; if it happens that \({U}_{\alpha } = {X}_{\alpha }\), choose \({V}_{\alpha } = {X}_{\alpha }\). Then \(V = \prod {V}_{\alpha }\) is a neighborhood of \(x\) in \(X\). Since \(\bar{V} = \prod {\bar{V}}_{\alpha }\) by \hyperref[thm:19.5]{Theorem 19.5}, it follows at once that \(\bar{V} \subset \prod {U}_{\alpha } \subset U\), so that \(X\) is regular.
 
 There is no analogous theorem for normal spaces, as we shall see shortly, in this section and the next.
 \end{proof}
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
  The space \({\mathbb{R}}_{K}\) is Hausdorff but not regular. Recall that \({\mathbb{R}}_{K}\) denotes the reals in the topology having as basis all open intervals \((a, b)\) and all sets of the form \(( {a,b}) - K\), where \(K = \{ {1/n \mid n \in {\mathbb{Z}}_{ + }}\}\). This space is Hausdorff, because any two distinct points have disjoint open intervals containing them.
 
 But it is not regular. The set \(K\) is closed in \({\mathbb{R}}_{K}\), and it does not contain the point 0 . Suppose that there exist disjoint open sets \(U\) and \(V\) containing 0 and \(K\), respectively. Choose a basis element containing 0 and lying in \(U\). It must be a basis element of the form \(( {a,b}) - K\), since each basis element of the form \((a, b)\) containing 0 intersects \(K\). Choose \(n\) large enough that \(1/n \in ( {a,b})\). Then choose a basis element about \(1/n\) contained in \(V\) ; it must be a basis element of the form \((c, d)\). Finally, choose \(z\) so that \(z < 1/n\) and \(z > \max \{ c,1/( {n + 1}) \}\). Then \(z\) belongs to both \(U\) and \(V\), so they are not disjoint. See \hyperref[fig:31.2]{Figure 31.2}.
@@ -273,6 +284,7 @@ But it is not regular. The set \(K\) is closed in \({\mathbb{R}}_{K}\), and it d
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
  The space \({\mathbb{R}}_{\ell }\) is normal. It is immediate that one-point sets are closed in \({\mathbb{R}}_{\ell }\), since the topology of \({\mathbb{R}}_{\ell }\) is finer than that of \(\mathbb{R}\). To check normality, suppose that \(A\) and \(B\) are disjoint closed sets in \({\mathbb{R}}_{\ell }\). For each point \(a\) of \(A\) choose a basis element \([ {a,{x}_{a}})\) not intersecting \(B\), and for each point \(b\) of \(B\) choose a basis element \([ {b,{x}_{b}})\) not intersecting \(A\). The open sets
 
 \[
@@ -286,6 +298,7 @@ are disjoint open sets about \(A\) and \(B\), respectively.
 
 \begin{centeredblock*}
 \begin{example}
+\label{ex:\thesection.\theexample}
  The Sorgenfrey plane \({\mathbb{R}}_{\ell }^{2}\) is not normal.
 
 The space \({\mathbb{R}}_{\ell }\) is regular (in fact, normal), so the product space \({\mathbb{R}}_{\ell }^{2}\) is also regular. Thus this example serves two purposes. It shows that a regular space need not be normal, and it shows that the product of two normal spaces need not be normal.
@@ -324,7 +337,7 @@ Now the composite
 \mathcal{P}( L) \overset{\theta }{ \rightarrow }\mathcal{P}( D) \overset{\psi }{ \rightarrow }L
 \]
 
-is an injective map of \(\mathcal{P}( L)\) into \(L\). But Theorem 7.8 tells us such a map does not exist! Thus we have reached a contradiction.
+is an injective map of \(\mathcal{P}( L)\) into \(L\). But \hyperref[thm:7.8]{Theorem 7.8} tells us such a map does not exist! Thus we have reached a contradiction.
 
 This proof that \({\mathbb{R}}_{\ell }^{2}\) is not normal is in some ways not very satisfying. We showed only that there must exist some proper nonempty subset \(A\) of \(L\) such that the sets \(A\) and \(B = L - A\) are not contained in disjoint open sets of \({\mathbb{R}}_{\ell }^{2}\). But we did not actually find such a set \(A\). In fact, the set \(A\) of points of \(L\) having rational coordinates is such a set, but the proof is not easy. It is left to the exercises.
 \end{example}
@@ -361,6 +374,7 @@ Now we turn to a more thorough study of spaces satisfying the normality axiom. I
 We begin by proving three theorems that give three important sets of hypotheses under which normality of a space is assured.
 
 \begin{theorem}
+\label{thm:\thetheorem}
  Every regular space with a countable basis is normal.
 
 \end{theorem}
@@ -387,6 +401,7 @@ are disjoint. For if \(x \in {U}^{\prime } \cap {V}^{\prime }\), then \(x \in {U
 \end{proof}
 
 \begin{theorem}
+\label{thm:\thetheorem}
  Every metrizable space is normal.
 
 \end{theorem}
@@ -408,12 +423,13 @@ for some \(a \in A\) and some \(b \in B\). The triangle inequality applies to sh
 \end{proof}
 
 \begin{theorem}
+\label{thm:\thetheorem}
  Every compact Hausdorff space is normal.
 
 \end{theorem}
 
 \begin{proof}
-Let \(X\) be a compact Hausdorff space. We have already essentially proved that \(X\) is regular. For if \(x\) is a point of \(X\) and \(B\) is a closed set in \(X\) not containing \(x\), then \(B\) is compact, so that Lemma 26.4 applies to show there exist disjoint open sets about \(x\) and \(B\), respectively.
+Let \(X\) be a compact Hausdorff space. We have already essentially proved that \(X\) is regular. For if \(x\) is a point of \(X\) and \(B\) is a closed set in \(X\) not containing \(x\), then \(B\) is compact, so that \hyperref[lem:26.4]{Lemma 26.4} applies to show there exist disjoint open sets about \(x\) and \(B\), respectively.
 
 Essentially the same argument as given in that lemma can be used to show that \(X\) is normal: Given disjoint closed sets \(A\) and \(B\) in \(X\), choose, for each point \(a\) of \(A\), disjoint open sets \({U}_{a}\) and \({V}_{a}\) containing \(a\) and \(B\), respectively. (Here we use regularity of \(X\).) The collection \(\{ {U}_{a}\}\) covers \(A\) ; because \(A\) is compact, \(A\) may be covered by finitely many sets \({U}_{{a}_{1}},\ldots ,{U}_{{a}_{m}}\). Then
 
@@ -427,6 +443,7 @@ are disjoint open sets containing \(A\) and \(B\), respectively.
 Here is a further result about normality that we shall find useful in dealing with some examples.
 
 \begin{theorem}
+\label{thm:\thetheorem}
  Every well-ordered set \(X\) is normal in the order topology.
 
 It is, in fact, true that every order topology is normal (see Example 39 of \cite{SteenSeebach1970}); but we shall not have occasion to use this stronger result.
@@ -448,6 +465,7 @@ Finally, assume that \(A\) and \(B\) are disjoint closed sets in \(X\), and \(A\
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
  If \(J\) is uncountable, the product space \({\mathbb{R}}^{J}\) is not normal. The proof is fairly difficult; we leave it as a challenging exercise (see Exercise 9).
 
 This example serves three purposes. It shows that a regular space \({\mathbb{R}}^{J}\) need not be normal. It shows that a subspace of a normal space need not be normal, for \({\mathbb{R}}^{J}\) is homeomorphic to the subspace \({( 0,1) }^{J}\) of \({[ 0,1] }^{J}\), which (assuming the Tychonoff theorem) is compact Hausdorff and therefore normal. And it shows that an uncountable product of normal spaces need not be normal. It leaves unsettled the question as to whether a finite or a countable product of normal spaces might be normal.
@@ -456,9 +474,10 @@ This example serves three purposes. It shows that a regular space \({\mathbb{R}}
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
  The product space \( {S}_{\Omega } \times {\bar{S}}_{\Omega }\) is not normal. ${}^{\dagger}$
 
-Consider the well-ordered set \({\bar{S}}_{\Omega }\), in the order topology, and consider the subset \({S}_{\Omega }\), in the subspace topology (which is the same as the order topology). Both spaces are normal, by Theorem 32.4. We shall show that the product space \({S}_{\Omega } \times {\bar{S}}_{\Omega }\) is not normal.
+Consider the well-ordered set \({\bar{S}}_{\Omega }\), in the order topology, and consider the subset \({S}_{\Omega }\), in the subspace topology (which is the same as the order topology). Both spaces are normal, by \hyperref[thm:32.4]{Theorem 32.4}. We shall show that the product space \({S}_{\Omega } \times {\bar{S}}_{\Omega }\) is not normal.
 
 This example serves three purposes. First, it shows that a regular space need not be normal, for \({S}_{\Omega } \times {\bar{S}}_{\Omega }\) is a product of regular spaces and therefore regular. Second, it shows that a subspace of a normal space need not be normal, for \({S}_{\Omega } \times {\bar{S}}_{\Omega }\) is a subspace of \({\bar{S}}_{\Omega } \times {\bar{S}}_{\Omega }\), which is a compact Hausdorff space and therefore normal. Third, it shows that the product of two normal spaces need not be normal.
 \end{example}
@@ -542,7 +561,8 @@ Now we come to the first deep theorem of the book, a theorem that is commonly ca
 
 Why do we call the Urysohn lemma a ``deep'' theorem? Because its proof involves a really original idea, which the previous proofs did not. Perhaps we can explain what we mean this way: By and large, one would expect that if one went through this book and deleted all the proofs we have given up to now and then handed the book to a bright student who had not studied topology, that student ought to be able to go through the book and work out the proofs independently. (It would take a good deal of time and effort, of course; and one would not expect the student to handle the trickier examples.) But the Urysohn lemma is on a different level. It would take considerably more originality than most of us possess to prove this lemma unless we were given copious hints \({}^{1}\)
 
-\begin{theorem}[Urysohn lemma]
+\begin{theorem}
+\label{thm:\thetheorem}[Urysohn lemma]
  Let \(X\) be a normal space, let \(A\) and \(B\) be disjoint closed subsets of \(X\). Let \([ {a,b}]\) be a closed interval in the real line. Then there exists a continuous map
 
 \[
@@ -580,7 +600,7 @@ p < q \Rightarrow {\bar{U}}_{p} \subset {U}_{q}
 
 Let \(r\) denote the next rational number in the sequence; we wish to define \({U}_{r}\)
 
-Consider the set \({P}_{n + 1} = {P}_{n} \cup \{ r\}\). It is a finite subset of the interval \([ {0,1}]\), and, as such, it has a simple ordering derived from the usual order relation \(<\) on the real line. In a finite simply ordered set, every element (other than the smallest and the largest) has an immediate predecessor and an immediate successor. (See Theorem 10.1 ) The number 0 is the smallest element, and 1 is the largest element, of the simply ordered set \({P}_{n + 1}\), and \(r\) is neither 0 nor 1. So \(r\) has an immediate predecessor \(p\) in \({P}_{n + 1}\) and an immediate successor \(q\) in \({P}_{n + 1}\). The sets \({U}_{p}\) and \({U}_{q}\) are already defined, and \({\bar{U}}_{p} \subset {U}_{q}\) by the induction hypothesis. Using normality of \(X\), we can find an open set \({U}_{r}\) of \(X\) such that
+Consider the set \({P}_{n + 1} = {P}_{n} \cup \{ r\}\). It is a finite subset of the interval \([ {0,1}]\), and, as such, it has a simple ordering derived from the usual order relation \(<\) on the real line. In a finite simply ordered set, every element (other than the smallest and the largest) has an immediate predecessor and an immediate successor. (See \hyperref[thm:10.1]{Theorem 10.1} ) The number 0 is the smallest element, and 1 is the largest element, of the simply ordered set \({P}_{n + 1}\), and \(r\) is neither 0 nor 1. So \(r\) has an immediate predecessor \(p\) in \({P}_{n + 1}\) and an immediate successor \(q\) in \({P}_{n + 1}\). The sets \({U}_{p}\) and \({U}_{q}\) are already defined, and \({\bar{U}}_{p} \subset {U}_{q}\) by the induction hypothesis. Using normality of \(X\), we can find an open set \({U}_{r}\) of \(X\) such that
 
 \[
 {\bar{U}}_{p} \subset {U}_{r}\;\text{ and }\;{\bar{U}}_{r} \subset {U}_{q}.
@@ -709,6 +729,7 @@ In the early years of topology, the separation axioms, listed in order of increa
 Unlike normality, this new separation axiom is nicely behaved with regard to subspaces and products:
 
 \begin{theorem}
+\label{thm:\thetheorem}
  A subspace of a completely regular space is completely regular. A product of completely regular spaces is completely regular.
 \end{theorem}
 \begin{proof}
@@ -731,6 +752,7 @@ is the desired continuous function on \(X\), for it equals 1 at \(\mathbf{b}\) a
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
  The spaces \({\mathbb{R}}_{\ell }^{2}\) and \({S}_{\Omega } \times {\bar{S}}_{\Omega }\) are completely regular but not normal. For they are products of spaces that are completely regular (in fact, normal).
 \end{example}
 \end{centeredblock}
@@ -780,12 +802,13 @@ Now we come to the major goal of this chapter, a theorem that gives us condition
 
 There are two versions of the proof, and since each has useful generalizations that will appear subsequently, we present both of them here. The first version generalizes to give an imbedding theorem for completely regular spaces. The second version will be generalized in Chapter 6 when we prove the Nagata-Smirnov metrization theorem.
 
-\begin{theorem}[Urysohn metrization theorem]
+\begin{theorem}
+\label{thm:\thetheorem}[Urysohn metrization theorem]
  Every regular space \(X\) with a countable basis is metrizable.
 
 \end{theorem}
 \begin{proof}
- We shall prove that \(X\) is metrizable by imbedding \(X\) in a metrizable space \(Y\), that is, by showing \(X\) homeomorphic with a subspace of \(Y\). The two versions of the proof differ in the choice of the metrizable space \(Y\). In the first version, \(Y\) is the space \({\mathbb{R}}^{\omega }\) in the product topology, a space that we have previously proved to be metrizable (Theorem 20.5). In the second version, the space \(Y\) is also \({\mathbb{R}}^{\omega }\), but this time in the topology given by the uniform metric \(\bar{\rho }\) (see \S 20). In each case, it turns out that our construction actually imbeds \(X\) in the subspace \({[ 0,1] }^{\omega }\) of \({\mathbb{R}}^{\omega }\).
+ We shall prove that \(X\) is metrizable by imbedding \(X\) in a metrizable space \(Y\), that is, by showing \(X\) homeomorphic with a subspace of \(Y\). The two versions of the proof differ in the choice of the metrizable space \(Y\). In the first version, \(Y\) is the space \({\mathbb{R}}^{\omega }\) in the product topology, a space that we have previously proved to be metrizable (\hyperref[thm:20.5]{Theorem 20.5}). In the second version, the space \(Y\) is also \({\mathbb{R}}^{\omega }\), but this time in the topology given by the uniform metric \(\bar{\rho }\) (see \S 20). In each case, it turns out that our construction actually imbeds \(X\) in the subspace \({[ 0,1] }^{\omega }\) of \({\mathbb{R}}^{\omega }\).
 
 Step 1. We prove the following: There exists a countable collection of continuous functions \({f}_{n} : X \rightarrow [ {0,1}]\) having the property that given any point \({x}_{0}\) of \(X\) and any neighborhood \(U\) of \({x}_{0}\), there exists an index \(n\) such that \({f}_{n}\) is positive at \({x}_{0}\) and vanishes outside \(U\).
 
@@ -879,7 +902,8 @@ as desired.
 
 In Step 2 of the preceding proof, we actually proved something stronger than the result stated there. For later use, we state it here.
 
-\begin{theorem}[Imbedding theorem]
+\begin{theorem}
+\label{thm:\thetheorem}[Imbedding theorem]
  Let \(X\) be a space in which one-point sets are closed. Suppose that \({\{ {f}_{\alpha }\} }_{\alpha \in J}\) is an indexed family of continuous functions \({f}_{\alpha } : X \rightarrow\) \(\mathbb{R}\) satisfying the requirement that for each point \({x}_{0}\) of \(X\) and each neighborhood \(U\) of \({x}_{0}\), there is an index \(\alpha\) such that \({f}_{\alpha }\) is positive at \({x}_{0}\) and vanishes outside \(U\). Then the function \(F : X \rightarrow {\mathbb{R}}^{J}\) defined by
 
 \[
@@ -894,6 +918,7 @@ A family of continuous functions that satisfies the hypotheses of this theorem i
 
 \end{theorem}
 \begin{theorem}
+\label{thm:\thetheorem}
  A space \(X\) is completely regular if and only if it is homeomorphic to a subspace of \({[ 0,1] }^{J}\) for some \(J\).
 
 \end{theorem}
@@ -904,7 +929,7 @@ A family of continuous functions that satisfies the hypotheses of this theorem i
 \item Let \(X\) be a compact Hausdorff space. Show that \(X\) is metrizable if and only if \(X\) has a countable basis.
 \item Let \(X\) be a locally compact Hausdorff space. Is it true that if \(X\) has a countable basis, then \(X\) is metrizable? Is it true that if \(X\) is metrizable, then \(X\) has a countable basis?
 \item Let \(X\) be a locally compact Hausdorff space. Let \(Y\) be the one-point compactification of \(X\). Is it true that if \(X\) has a countable basis, then \(Y\) is metrizable? Is it true that if \(Y\) is metrizable, then \(X\) has a countable basis?
-\item Check the details of the proof of Theorem 34.2.
+\item Check the details of the proof of \hyperref[thm:34.2]{Theorem 34.2}.
 \item A space \(X\) is locally metrizable if each point \(x\) of \(X\) has a neighborhood that is metrizable in the subspace topology. Show that a compact Hausdorff space \(X\) is metrizable if it is locally metrizable. [Hint. Show that \(X\) is a finite union of open subspaces, each of which has a countable basis.]
 \item Show that a regular Lindelöf space is metrizable if it is locally metrizable. [Hint: A closed subspace of a Lindelöf space is Lindelöf.] Regularity is essential; where do you use it in the proof?
 \item Let \(X\) be a compact Hausdorff space that is the union of the closed subspaces \({X}_{1}\) and \({X}_{2}\). If \({X}_{1}\) and \({X}_{2}\) are metrizable, show that \(X\) is metrizable. [Hint: Construct a countable collection \(\mathcal{A}\) of open sets of \(X\) whose intersections with \({X}_{i}\) form a basis for \({X}_{i}\), for \(i = 1,2\). Assume \({X}_{1} - {X}_{2}\) and \({X}_{2} - {X}_{1}\) belong to \(\mathcal{A}\). Let \(\mathcal{B}\) consist of finite intersections of elements of \(\mathcal{A}\) ]
@@ -914,7 +939,8 @@ A family of continuous functions that satisfies the hypotheses of this theorem i
 
 One immediate consequence of the Urysohn lemma is the useful theorem called the Tietze extension theorem. It deals with the problem of extending a continuous real-valued function that is defined on a subspace of a space \(X\) to a continuous function defined on all of \(X\). This theorem is important in many of the applications of topology.
 
-\begin{theorem}[Tietze extension theorem]
+\begin{theorem}
+\label{thm:\thetheorem}[Tietze extension theorem]
  Let \(X\) be a normal space; let \(A\) be a closed subspace of \(X\).
 
 (a) Any continuous map of \(A\) into the closed interval \([ {a,b}]\) of \(\mathbb{R}\) may be extended to a continuous map of all of \(X\) into \([ {a,b}]\).
@@ -1163,7 +1189,8 @@ is said to be a partition of unity dominated by \(\{ {U}_{i}\}\) if
 \end{enumerate}
 \end{definition}
 
-\begin{theorem}[Existence of finite partitions of unity]
+\begin{theorem}
+\label{thm:\thetheorem}[Existence of finite partitions of unity]
  Let \(\{ {{U}_{1},\ldots ,{U}_{n}}\}\) be a finite open covering of the normal space \(X\). Then there exists a partition of unity dominated by \(\{ {U}_{i}\}\).
 
 \end{theorem}
@@ -1216,6 +1243,7 @@ There is a comparable notion of partition of unity when the open covering and th
 \end{proof}
 
 \begin{theorem}
+\label{thm:\thetheorem}
  If \(X\) is a compact \(m\) -manifold, then \(X\) can be imbedded in \({\mathbb{R}}^{N}\) for some positive integer \(N\).
 
 \end{theorem}

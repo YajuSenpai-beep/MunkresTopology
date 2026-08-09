@@ -56,6 +56,7 @@ for each \(s \in I\) and each \(t \in I\). We call \(F\) a path homotopy between
 The first condition says simply that \(F\) is a homotopy between \(f\) and \({f}^{\prime }\), and the second says that for each \(t\), the path \({f}_{t}\) defined by the equation \({f}_{t}( s) = F( {s,t})\) is a path from \({x}_{0}\) to \({x}_{1}\). Said differently, the first condition says that \(F\) represents a continuous way of deforming the path \(f\) to the path \({f}^{\prime }\), and the second condition says that the end points of the path remain fixed during the deformation.
 
 \begin{lemma}
+\label{lem:\thetheorem}
 The relations \(\simeq\) and \({ \simeq }_{p}\) are equivalence relations.
 \end{lemma}
 
@@ -75,11 +76,12 @@ G( {x,t}) = \{ \begin{array}{ll} F( {x,{2t}}) & \text{ for }t \in [ {0,\frac{1}{
 
 The map \(G\) is well defined, since if \(t = \frac{1}{2}\), we have \(F( {x,{2t}}) = {f}^{\prime }(x) = {F}^{\prime }( {x,{2t} - 1})\). Because \(G\) is continuous on the two closed subsets \(X \times [ {0,\frac{1}{2}}]\) and \(X \times [ {\frac{1}{2},1}]\) of \(X \times I\), it is continuous on all of \(X \times I\), by the pasting lemma. Thus \(G\) is the required homotopy between \(f\) and \({f}^{\prime \prime }\).
 
-You can check that if \(F\) and \({F}^{\prime }\) are path homotopies, so is \(G\). See \hyperref[fig:51.2]{Figure 51.2}.
+You can check that if \(F\) and \({F}^{\prime }\) are path homotopies, so is \(G\). See Figure 51.2.
 \end{proof}
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 Let \(f\) and \(g\) be any two maps of a space \(X\) into \({\mathbb{R}}^{2}\). It is easy to see that \(f\) and \(g\) are homotopic; the map
 
 \[
@@ -98,6 +100,7 @@ More generally, let \(A\) be any convex subspace of \({\mathbb{R}}^{n}\). (This 
 \munkresfig[0.4]{51.4}[Figure 51.4]
 \begin{centeredblock*}
 \begin{example}
+\label{ex:\thesection.\theexample}
 Let \(X\) denote the punctured plane, \({\mathbb{R}}^{2} - \{ 0\}\), which we shall denote by \( {\mathbb{R}}^{2} - 0\) for short. The following paths in \(X\),
 
 \[
@@ -152,6 +155,7 @@ Because \(F( {1,t}) = {x}_{1} = G( {0,t})\) for all \(t\), the map \(H\) is well
 The operation \(*\) on path-homotopy classes turns out to satisfy properties that look very much like the axioms for a group. They are called the groupoid properties of \(*\). One difference from the properties of a group is that \([ f] * [ g]\) is not defined for every pair of classes, but only for those pairs \([ f] ,[ g]\) for which \(f(1) = g( 0)\).
 
 \begin{theorem}
+\label{thm:\thetheorem}
 The operation \(*\) has the following properties:
 
 \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\arabic*), align=left]
@@ -218,6 +222,7 @@ What has this to do with associativity? A great deal. For the product \(f * ( {g
 The argument just used to prove associativity goes through for any finite product of paths. Roughly speaking, it says that as far as the path-homotopy class of the result is concerned, it doesn't matter how you chop up the interval when you form the product of paths! This result will be useful to us later, so we state it formally as a theorem here:
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 Let \(f\) be a path in \(X\), and let \({a}_{0},\ldots ,{a}_{n}\) be numbers such that \(0 = {a}_{0} < {a}_{1} < \cdots < {a}_{n} = 1\). Let \({f}_{i} : I \rightarrow X\) be the path that equals the positive linear map of \(I\) onto \([ {{a}_{i - 1},{a}_{i}}]\) followed by \(f\). Then
 
 \[
@@ -265,12 +270,13 @@ Now we define the fundamental group.
 Let \(X\) be a space; let \({x}_{0}\) be a point of \(X\). A path in \(X\) that begins and ends at \({x}_{0}\) is called a loop based at \({x}_{0}\). The set of path homotopy classes of loops based at \({x}_{0}\), with the operation \(*\), is called the fundamental group of \(X\) relative to the base point \({x}_{0}\). It is denoted by \( {\pi }_{1}( {X,{x}_{0}})\).
 \end{definition}
 
-It follows from Theorem 51.2 that the operation \(*\), when restricted to this set, satisfies the axioms for a group. Given two loops \(f\) and \(g\) based at \({x}_{0}\), the product \(f * g\) is always defined and is a loop based at \({x}_{0}\). Associativity, the existence of an identity element \([ {e}_{{x}_{0}}]\), and the existence of an inverse \([ \bar{f}]\) for \([ f]\) are immediate.
+It follows from \hyperref[thm:51.2]{Theorem 51.2} that the operation \(*\), when restricted to this set, satisfies the axioms for a group. Given two loops \(f\) and \(g\) based at \({x}_{0}\), the product \(f * g\) is always defined and is a loop based at \({x}_{0}\). Associativity, the existence of an identity element \([ {e}_{{x}_{0}}]\), and the existence of an inverse \([ \bar{f}]\) for \([ f]\) are immediate.
 
 Sometimes this group is called the first homotopy group of \(X\), which term implies that there is a second homotopy group. There are indeed groups \({\pi }_{n}( {X,{x}_{0}})\) for all \(n \in {\mathbb{Z}}_{ + }\), but we shall not study them in this book. They are part of the general subject called homotopy theory.
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 Let \({\mathbb{R}}^{n}\) denote euclidean \(n\) -space. Then \({\pi }_{1}( {{\mathbb{R}}^{n},{x}_{0}})\) is the trivial group (the group consisting of the identity alone). For if \(f\) is a loop in \({\mathbb{R}}^{n}\) based at \({x}_{0}\), the straight-line homotopy is a path homotopy between \(f\) and the constant path at \({x}_{0}\). More generally, if \(X\) is any convex subset of \({\mathbb{R}}^{n}\), then \({\pi }_{1}( {X,{x}_{0}})\) is the trivial group. In particular, the unit ball \({B}^{n}\) in \({\mathbb{R}}^{n}\),
 
 \[
@@ -301,6 +307,7 @@ The map \(\widehat{\alpha }\), which we call `` \(\alpha\) -hat,'' is well-defin
 
 \munkresfig[0.7]{52.1}[Figure 52.1]
 \begin{theorem}
+\label{thm:\thetheorem}
 The map \(\widehat{\alpha }\) is a group isomorphism.
 \end{theorem}
 
@@ -331,6 +338,7 @@ To show that \(\widehat{\alpha }\) is an isomorphism, we show that if \(\beta\) 
 A similar computation shows that \(\widehat{\beta }( {\widehat{\alpha }( [ f] ) }) = [ f]\) for each \([ f] \in {\pi }_{1}( {X,{x}_{0}})\).
 \end{proof}
 \begin{corollary}
+\label{cor:\thetheorem}
 If \(X\) is path connected and \({x}_{0}\) and \({x}_{1}\) are two points of \(X\), then \({\pi }_{1}( {X,{x}_{0}})\) is isomorphic to \({\pi }_{1}( {X,{x}_{1}})\).
 \end{corollary}
 
@@ -345,6 +353,7 @@ A space \(X\) is said to be simply connected if it is a path-connected space and
 \end{definition}
 
 \begin{lemma}
+\label{lem:\thetheorem}
 In a simply connected space \(X\), any two paths having the same initial and final points are path homotopic.
 \end{lemma}
 
@@ -400,6 +409,7 @@ for the first homomorphism and \({( {h}_{{x}_{1}}) }_{ * }\) for the second. If 
 The induced homomorphism has two properties that are crucial in the applications. They are called its ``functorial properties'' and are given in the following theorem:
 
 \begin{theorem}
+\label{thm:\thetheorem}
 If \(h : ( {X,{x}_{0}}) \rightarrow ( {Y,{y}_{0}})\) and \(k : ( {Y,{y}_{0}}) \rightarrow ( {Z,{z}_{0}})\) are continuous, then \({( k \circ h) }_{ * } = {k}_{ * } \circ {h}_{ * }\). If \(i : ( {X,{x}_{0}}) \rightarrow ( {X,{x}_{0}})\) is the identity map, then \({i}_{ * }\) is the identity homomorphism.
 \end{theorem}
 
@@ -416,6 +426,7 @@ The proof is a triviality. By definition,
 Similarly, \({i}_{ * }( [ f] ) = [ {i \circ f}] = [ f]\).
 \end{proof}
 \begin{corollary}
+\label{cor:\thetheorem}
 If \(h : ( {X,{x}_{0}}) \rightarrow ( {Y,{y}_{0}})\) is a homeomorphism of \(X\) with \(Y\), then \({h}_{ * }\) is an isomorphism of \({\pi }_{1}( {X,{x}_{0}})\) with \({\pi }_{1}( {Y,{y}_{0}})\).
 \end{corollary}
 
@@ -459,6 +470,7 @@ Note also that if \(p : E \rightarrow B\) is a covering map, then \(p\) is an op
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 Let \(X\) be any space; let \(i : X \rightarrow X\) be the identity map. Then \(i\) is a covering map (of the most trivial sort). More generally, let \(E\) be the space \(X \times \{ 1,\ldots, n\}\) consisting of \(n\) disjoint copies of \(X\). The map \(p : E \rightarrow X\) given by \(p( {x,i}) = x\) for all \(i\) is again a (rather trivial) covering map. In this case, we can picture the entire space \(E\) as a stack of pancakes over \(X\).
 \end{example}
 \end{centeredblock}
@@ -466,6 +478,7 @@ Let \(X\) be any space; let \(i : X \rightarrow X\) be the identity map. Then \(
 In practice, one often restricts oneself to covering spaces that are path connected, to eliminate trivial coverings of the pancake-stack variety. An example of such a nontrivial covering space is the following.
 
 \begin{theorem}
+\label{thm:\thetheorem}
 The map \(p : \mathbb{R} \rightarrow {S}^{1}\) given by the equation
 
 \[
@@ -493,6 +506,7 @@ If \(p : E \rightarrow B\) is a covering map, then \(p\) is a local homeomorphis
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 The map \(p : {\mathbb{R}}_{ + } \rightarrow {S}^{1}\) given by the equation
 
 \[
@@ -507,6 +521,7 @@ is surjective, and it is a local homeomorphism. See \hyperref[fig:53.3]{Figure 5
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 The preceding example might lead you to think that the real line \(\mathbb{R}\) is the only connected covering space of the circle \({S}^{1}\). This is not so. Consider, for example, the map \(p : {S}^{1} \rightarrow {S}^{1}\) given in equations by
 
 \[
@@ -517,9 +532,10 @@ p( z) = {z}^{2}.
 \end{example}
 \end{centeredblock}
 
-Example 2 shows that the map obtained by restricting a covering map may not be a covering map. Here is one situation where it will be a covering map:
+\exref{2} shows that the map obtained by restricting a covering map may not be a covering map. Here is one situation where it will be a covering map:
 
 \begin{theorem}
+\label{thm:\thetheorem}
 Let \(p : E \rightarrow B\) be a covering map. If \({B}_{0}\) is a subspace of \(B\), and if \({E}_{0} = {p}^{-1}( {B}_{0})\), then the map \({p}_{0} : {E}_{0} \rightarrow {B}_{0}\) obtained by restricting \(p\) is a covering map.
 \end{theorem}
 
@@ -527,6 +543,7 @@ Let \(p : E \rightarrow B\) be a covering map. If \({B}_{0}\) is a subspace of \
 Given \({b}_{0} \in {B}_{0}\), let \(U\) be an open set in \(B\) containing \({b}_{0}\) that is evenly covered by \(p\) ; let \(\{ {V}_{\alpha }\}\) be a partition of \({p}^{-1}( U)\) into slices. Then \(U \cap {B}_{0}\) is a neighborhood of \({b}_{0}\) in \({B}_{0}\), and the sets \({V}_{\alpha } \cap {E}_{0}\) are disjoint open sets in \({E}_{0}\) whose union is \({p}^{-1}( {U \cap {B}_{0}})\), and each is mapped homeomorphically onto \(U \cap {B}_{0}\) by \(p\).
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 If \(p : E \rightarrow B\) and \({p}^{\prime } : {E}^{\prime } \rightarrow {B}^{\prime }\) are covering maps, then
 
 \[
@@ -542,13 +559,14 @@ Given \(b \in B\) and \({b}^{\prime } \in {B}^{\prime }\), let \(U\) and \({U}^{
 
 \begin{centeredblock*}
 \begin{example}
+\label{ex:\thesection.\theexample}
 Consider the space \(T = {S}^{1} \times {S}^{1}\); it is called the torus. The product map
 
 \[
 p \times p : \mathbb{R} \times \mathbb{R} \rightarrow {S}^{1} \times {S}^{1}
 \]
 
-is a covering of the torus by the plane \({\mathbb{R}}^{2}\), where \(p\) denotes the covering map of Theorem 53.1. Each of the unit squares \([ {n,n + 1}] \times [ {m,m + 1}]\) gets wrapped by \(p \times p\) entirely around the torus. See \hyperref[fig:53.4]{Figure 53.4}.
+is a covering of the torus by the plane \({\mathbb{R}}^{2}\), where \(p\) denotes the covering map of \hyperref[thm:53.1]{Theorem 53.1}. Each of the unit squares \([ {n,n + 1}] \times [ {m,m + 1}]\) gets wrapped by \(p \times p\) entirely around the torus. See \hyperref[fig:53.4]{Figure 53.4}.
 
 \munkresfig[0.9]{53.4}[Figure 53.4]
 In this figure, we have pictured the torus not as the product \({S}^{1} \times {S}^{1}\), which is a subspace of \({\mathbb{R}}^{4}\) and thus difficult to visualize, but as the familiar doughnut-shaped surface \(D\) in \({\mathbb{R}}^{3}\) obtained by rotating the circle \({C}_{1}\) in the \({xz}\) -plane of radius \(\frac{1}{3}\) centered at \((1,0,0)\) about the \(z\) -axis. It is not hard to see that \({S}^{1} \times {S}^{1}\) is homeomorphic with the surface \(D\). Let \({C}_{2}\) be the circle of radius 1 in the \({xy}\) -plane centered at the origin. Then let us map \({C}_{1} \times {C}_{2}\) into \(D\) by defining \(f( {a \times b})\) to be that point into which \(a\) is carried when one rotates the circle \({C}_{1}\) about the \(z\) -axis until its center hits the point \(b\). See \hyperref[fig:53.5]{Figure 53.5}. The map \(f\) will be a homeomorphism of \({C}_{1} \times {C}_{2}\) with \(D\), as you can check mentally. If you wish, you can write equations for \(f\) and check continuity, injectivity, and surjectivity directly. (Continuity of \({f}^{-1}\) will follow from compactness of \({C}_{1} \times {C}_{2}\).)
@@ -559,6 +577,7 @@ In this figure, we have pictured the torus not as the product \({S}^{1} \times {
 
 \begin{centeredblock*}
 \begin{example}
+\label{ex:\thesection.\theexample}
 Consider the covering map \(p \times p\) of the preceding example. Let \({b}_{0}\) denote the point \(p( 0)\) of \({S}^{1}\) ; and let \({B}_{0}\) denote the subspace
 
 \[
@@ -580,13 +599,14 @@ The infinite grid is but one covering space of the figure eight; we shall see ot
 
 \begin{centeredblock*}
 \begin{example}
+\label{ex:\thesection.\theexample}
 Consider the covering map
 
 \[
 p \times i : \mathbb{R} \times {\mathbb{R}}_{ + } \rightarrow {S}^{1} \times {\mathbb{R}}_{ + }
 \]
 
-where \(i\) is the identity map of \({\mathbb{R}}_{ + }\) and \(p\) is the map of Theorem 53.1. If we take the standard homeomorphism of \({S}^{1} \times {\mathbb{R}}_{ + }\) with \({\mathbb{R}}^{2} - \mathbf{0}\), sending \(x \times t\) to \({tx}\), the composite gives us a covering
+where \(i\) is the identity map of \({\mathbb{R}}_{ + }\) and \(p\) is the map of \hyperref[thm:53.1]{Theorem 53.1}. If we take the standard homeomorphism of \({S}^{1} \times {\mathbb{R}}_{ + }\) with \({\mathbb{R}}^{2} - \mathbf{0}\), sending \(x \times t\) to \({tx}\), the composite gives us a covering
 
 \[
 \mathbb{R} \times {\mathbb{R}}_{ + } \rightarrow {\mathbb{R}}^{2} - 0
@@ -604,7 +624,7 @@ of the punctured plane by the open upper half-plane. It is pictured in \hyperref
 \item Let \(p : E \rightarrow B\) be continuous and surjective. Suppose that \(U\) is an open set of \(B\) that is evenly covered by \(p\). Show that if \(U\) is connected, then the partition of \({p}^{-1}( U)\) into slices is unique.
 \item Let \(p : E \rightarrow B\) be a covering map; let \(B\) be connected. Show that if \({p}^{-1}( {b}_{0})\) has \(k\) elements for some \({b}_{0} \in B\), then \({p}^{-1}( b)\) has \(k\) elements for every \(b \in B\). In such a case, \(E\) is called a \(k\) -fold covering of \(B\).
 \item Let \(q : X \rightarrow Y\) and \(r : Y \rightarrow Z\) be covering maps; let \(p = r \circ q\). Show that if \({r}^{-1}( z)\) is finite for each \(z \in Z\), then \(p\) is a covering map.
-\item Show that the map of Example 3 is a covering map. Generalize to the map \(p( z) = {z}^{n}.\)
+\item Show that the map of \exref{3} is a covering map. Generalize to the map \(p( z) = {z}^{n}.\)
 \item Let \(p : E \rightarrow B\) be a covering map.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item If \(B\) is Hausdorff, regular, completely regular, or locally compact Hausdorff, then so is \(E\). [Hint: If \(\{ {V}_{\alpha }\}\) is a partition of \({p}^{-1}( U)\) into slices, and \(C\) is a closed set of \(B\) such that \(C \subset U\), then \({p}^{-1}( C) \cap {V}_{\alpha }\) is a closed set of \(E\).]
@@ -625,13 +645,15 @@ The existence of liftings when \(p\) is a covering map is an important tool in s
 
 \begin{centeredblock}
 \begin{example}
-Consider the covering \(p : \mathbb{R} \rightarrow {S}^{1}\) of Theorem 53.1. The path \(f : [ {0,1}] \rightarrow {S}^{1}\) beginning at \({b}_{0} = ( {1,0})\) given by \(f( s) = ( {\cos {\pi s},\sin {\pi s}})\) lifts to the path \(\bar{f}( s) = s/2\) beginning at 0 and ending at \(\frac{1}{2}\). The path \(g( s) = ( {\cos {\pi s}, - \sin {\pi s}})\) lifts to the path \(\bar{g}( s) = - s/2\) beginning at 0 and ending at \(- \frac{1}{2}\). The path \(h( s) = ( {\cos {4\pi s},\sin {4\pi s}})\) lifts to the path \(\bar{h}( s) = {2s}\) beginning at 0 and ending at 2. Intuitively, \(h\) wraps the interval \([ {0,1}]\) around the circle twice; this is reflected in the fact that the lifted path \(\bar{h}\) begins at zero and ends at the number 2. These paths are pictured in \hyperref[fig:54.1]{Figure 54.1}.
+\label{ex:\thesection.\theexample}
+Consider the covering \(p : \mathbb{R} \rightarrow {S}^{1}\) of \hyperref[thm:53.1]{Theorem 53.1}. The path \(f : [ {0,1}] \rightarrow {S}^{1}\) beginning at \({b}_{0} = ( {1,0})\) given by \(f( s) = ( {\cos {\pi s},\sin {\pi s}})\) lifts to the path \(\bar{f}( s) = s/2\) beginning at 0 and ending at \(\frac{1}{2}\). The path \(g( s) = ( {\cos {\pi s}, - \sin {\pi s}})\) lifts to the path \(\bar{g}( s) = - s/2\) beginning at 0 and ending at \(- \frac{1}{2}\). The path \(h( s) = ( {\cos {4\pi s},\sin {4\pi s}})\) lifts to the path \(\bar{h}( s) = {2s}\) beginning at 0 and ending at 2. Intuitively, \(h\) wraps the interval \([ {0,1}]\) around the circle twice; this is reflected in the fact that the lifted path \(\bar{h}\) begins at zero and ends at the number 2. These paths are pictured in \hyperref[fig:54.1]{Figure 54.1}.
 
 \munkresfig[1.0]{54.1}[Figure 54.1]
 \end{example}
 \end{centeredblock}
 
 \begin{lemma}
+\label{lem:\thetheorem}
 Let \(p : E \rightarrow B\) be a covering map, let \(p( {e}_{0}) = {b}_{0}\). Any path \(f : [ {0,1}] \rightarrow B\) beginning at \({b}_{0}\) has a unique lifting to a path \(\bar{f}\) in \(E\) beginning at \({e}_{0}\).
 \end{lemma}
 
@@ -650,6 +672,7 @@ Continuing in this way, we define \(\bar{f}\) on all of \([ {0,1}]\). Continuity
 The uniqueness of \(\bar{f}\) is also proved step by step. Suppose that \(\bar{\bar{f}}\) is another lifting of \(f\) beginning at \({e}_{0}\). Then \(\bar{\bar{f}}( 0) = {e}_{0} = \bar{f}( 0)\). Suppose that \(\overline{\bar{f}}( s) = \bar{f}( s)\) for all \(s\) such that \(0 \leq s \leq {s}_{i}\). Let \({V}_{0}\) be as in the preceding paragraph; then for \(s \in [ {{s}_{i},{s}_{i + 1}}]\), \(\bar{f}( s)\) is defined as \({( p \mid {V}_{0}) }^{-1}( {f( s) })\). What can \(\overline{\bar{f}}( s)\) equal? Since \(\overline{\bar{f}}\) is a lifting of \(f\), it must carry the interval \([ {{s}_{i},{s}_{i + 1}}]\) into the set \({p}^{-1}( U) = \bigcup {V}_{\alpha }\). The slices \({V}_{\alpha }\) are open and disjoint; because the set \(\bar{\bar{f}}( [ {{s}_{i},{s}_{i + 1}}] )\) is connected, it must lie entirely in one of the sets \({V}_{\alpha }\). Because \(\bar{\bar{f}}( {s}_{i}) = \bar{f}( {s}_{i})\), which is in \({V}_{0},\bar{\bar{f}}\) must carry all of \([ {{s}_{i},{s}_{i + 1}}]\) into the set \({V}_{0}\). Thus, for \(s\) in \([ {{s}_{i},{s}_{i + 1}}] ,\bar{\bar{f}}( s)\) must equal some point \(y\) of \({V}_{0}\) lying in \({p}^{-1}( {f( s) })\). But there is only one such point \(y\), namely, \({( p \mid {V}_{0}) }^{-1}( {f( s) })\). Hence \(\bar{\bar{f}}( s) = \bar{f}( s)\) for \(s \in [ {{s}_{i},{s}_{i + 1}}]\).
 \end{proof}
 \begin{lemma}
+\label{lem:\thetheorem}
 Let \(p : E \rightarrow B\) be a covering map; let \(p( {e}_{0}) = {b}_{0}\). Let the map \(F : I \times I \rightarrow B\) be continuous, with \(F( {0,0}) = {b}_{0}\). There is a unique lifting of \(F\) to a continuous map
 
 \[
@@ -703,6 +726,7 @@ To check uniqueness, note that at each step of the construction of \(\bar{F}\), 
 Now suppose that \(F\) is a path homotopy. We wish to show that \(\bar{F}\) is a path homotopy. The map \(F\) carries the entire left edge \(0 \times I\) of \({I}^{2}\) into a single point \({b}_{0}\) of \(B\). Because \(\bar{F}\) is a lifting of \(F\), it carries this edge into the set \({p}^{-1}( {b}_{0})\). But this set has the discrete topology as a subspace of \(E\). Since \(0 \times I\) is connected and \(\bar{F}\) is continuous, \(\bar{F}( {0 \times I})\) is connected and thus must equal a one-point set. Similarly, \(\bar{F}( {1 \times I})\) must be a one-point set. Thus \(\bar{F}\) is a path homotopy.
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 Let \(p : E \rightarrow B\) be a covering map; let \(p( {e}_{0}) = {b}_{0}\). Let \(f\) and \(g\) be two paths in \(B\) from \({b}_{0}\) to \({b}_{1}\), let \(\bar{f}\) and \(\bar{g}\) be their respective liftings to paths in \(E\) beginning at \({e}_{0}\). If \(f\) and \(g\) are path homotopic, then \(\bar{f}\) and \(\bar{g}\) end at the same point of \(E\) and are path homotopic.
 \end{theorem}
 \begin{proof}
@@ -722,6 +746,7 @@ We call \(\phi\) the lifting correspondence derived from the covering map \(p\).
 \end{definition}
 
 \begin{theorem}
+\label{thm:\thetheorem}
 Let \(p : E \rightarrow B\) be a covering map; let \(p( {e}_{0}) = {b}_{0}\). If \(E\) is path connected, then the lifting correspondence
 
 \[
@@ -737,11 +762,12 @@ If \(E\) is path connected, then, given \({e}_{1} \in {p}^{-1}( {b}_{0})\), ther
 Suppose \(E\) is simply connected. Let \([ f]\) and \([ g]\) be two elements of \({\pi }_{1}( {B,{b}_{0}})\) such that \(\phi ( [ f] ) = \phi ( [ g] )\). Let \(\bar{f}\) and \(\bar{g}\) be the liftings of \(f\) and \(g\), respectively, to paths in \(E\) that begin at \({e}_{0}\), then \(\bar{f}(1) = \bar{g}(1)\). Since \(E\) is simply connected, there is a path homotopy \(\bar{F}\) in \(E\) between \(\bar{f}\) and \(\bar{g}\). Then \(p \circ \bar{F}\) is a path homotopy in \(B\) between \(f\) and \(g\)
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 The fundamental group of \({S}^{1}\) is isomorphic to the additive group of integers.
 \end{theorem}
 
 \begin{proof}
-Let \(p : \mathbb{R} \rightarrow {S}^{1}\) be the covering map of Theorem 53.1, let \({e}_{0} = 0\), and let \({b}_{0} = p( {e}_{0})\). Then \({p}^{-1}( {b}_{0})\) is the set \(\mathbb{Z}\) of integers. Since \(\mathbb{R}\) is simply connected, the lifting correspondence
+Let \(p : \mathbb{R} \rightarrow {S}^{1}\) be the covering map of \hyperref[thm:53.1]{Theorem 53.1}, let \({e}_{0} = 0\), and let \({b}_{0} = p( {e}_{0})\). Then \({p}^{-1}( {b}_{0})\) is the set \(\mathbb{Z}\) of integers. Since \(\mathbb{R}\) is simply connected, the lifting correspondence
 \[
 \phi : {\pi }_{1}( {{S}^{1},{b}_{0}}) \rightarrow \mathbb{Z}
 \]
@@ -768,9 +794,10 @@ The cardinality of a group is also called the order of the group. A group is cyc
 
 Note that if \(x\) is a generator of the infinite cyclic group \(G\), and if \(y\) is an element of the arbitrary group \(H\), then there is a unique homomorphism \(h\) of \(G\) into \(H\) such that \(h(x) = y\) ; it is defined by setting \(h( {x}^{n}) = {y}^{n}\) for all \(n\).
 
-For later use, in §65 and in Chapters 13 and 14, we prove here a strengthened version of Theorem 54.4.
+For later use, in §65 and in Chapters 13 and 14, we prove here a strengthened version of \hyperref[thm:54.4]{Theorem 54.4}.
 
 \begin{theorem}
+\label{thm:\thetheorem}
 Let \(p : E \rightarrow B\) be a covering map; let \(p( {e}_{0}) = {b}_{0}\).
 
 (a) The homomorphism \({p}_{ * } : {\pi }_{1}( {E,{e}_{0}}) \rightarrow {\pi }_{1}( {B,{b}_{0}})\) is a monomorphism.
@@ -801,13 +828,13 @@ If \(E\) is path connected, then \(\phi\) is surjective, so that \(\Phi\) is sur
 \end{proof}
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
-\item What goes wrong with the ``path-lifting lemma'' (Lemma 54.1) for the local homeomorphism of Example 2 of §53?
-\item In defining the map \(\bar{F}\) in the proof of Lemma 54.2, why were we so careful about the order in which we considered the small rectangles?
+\item What goes wrong with the ``path-lifting lemma'' (\hyperref[lem:54.1]{Lemma 54.1}) for the local homeomorphism of \exrefs{53}{2}?
+\item In defining the map \(\bar{F}\) in the proof of \hyperref[lem:54.2]{Lemma 54.2}, why were we so careful about the order in which we considered the small rectangles?
 \item Let \(p : E \rightarrow B\) be a covering map. Let \(\alpha\) and \(\beta\) be paths in \(B\) with \(\alpha (1) = \beta ( 0)\) ; let \(\bar{\alpha }\) and \(\bar{\beta }\) be liftings of them such that \(\bar{\alpha }(1) = \bar{\beta }( 0)\). Show that \(\bar{\alpha } * \bar{\beta }\) is a lifting of \(\alpha * \beta\).
-\item Consider the covering map \(p : \mathbb{R} \times {\mathbb{R}}_{ + } \rightarrow {\mathbb{R}}^{2} - 0\) of Example 6 of \(§{53}\). Find liftings of the paths \[ f( t) = ( {2 - t,0}), \] \[ g( t) = ( {( {1 + t}) \cos {2\pi t},( {1 + t}) \sin {2\pi t}}) \] \[ h( t) = f * g. \] Sketch these paths and their liftings.
-\item Consider the covering map \(p \times p : \mathbb{R} \times \mathbb{R} \rightarrow {S}^{1} \times {S}^{1}\) of Example 4 of \(§{53}\). Consider the path \[ f( t) = ( {\cos {2\pi t},\sin {2\pi t}}) \times ( {\cos {4\pi t},\sin {4\pi t}}) \] in \({S}^{1} \times {S}^{1}\). Sketch what \(f\) looks like when \({S}^{1} \times {S}^{1}\) is identified with the doughnut surface \(D\). Find a lifting \(\bar{f}\) of \(f\) to \(\mathbb{R} \times \mathbb{R}\), and sketch it.
+\item Consider the covering map \(p : \mathbb{R} \times {\mathbb{R}}_{ + } \rightarrow {\mathbb{R}}^{2} - 0\) of \exrefs{53}{6}. Find liftings of the paths \[ f( t) = ( {2 - t,0}), \] \[ g( t) = ( {( {1 + t}) \cos {2\pi t},( {1 + t}) \sin {2\pi t}}) \] \[ h( t) = f * g. \] Sketch these paths and their liftings.
+\item Consider the covering map \(p \times p : \mathbb{R} \times \mathbb{R} \rightarrow {S}^{1} \times {S}^{1}\) of \exrefs{53}{4}. Consider the path \[ f( t) = ( {\cos {2\pi t},\sin {2\pi t}}) \times ( {\cos {4\pi t},\sin {4\pi t}}) \] in \({S}^{1} \times {S}^{1}\). Sketch what \(f\) looks like when \({S}^{1} \times {S}^{1}\) is identified with the doughnut surface \(D\). Find a lifting \(\bar{f}\) of \(f\) to \(\mathbb{R} \times \mathbb{R}\), and sketch it.
 \item Consider the maps \(g,h : {S}^{1} \rightarrow {S}^{1}\) given \(g( z) = {z}^{n}\) and \(h( z) = 1/{z}^{n}\). (Here we represent \({S}^{1}\) as the set of complex numbers \(z\) of absolute value 1 .) Compute the induced homomorphisms \({g}_{ * },{h}_{ * }\) of the infinite cyclic group \({\pi }_{1}( {{S}^{1},{b}_{0}})\) into itself. [Hint: Recall the equation \({( \cos \theta + i\sin \theta ) }^{n} = \cos {n\theta } + i\sin {n\theta }\).]
-\item Generalize the proof of Theorem 54.5 to show that the fundamental group of the torus is isomorphic to the group \(\mathbb{Z} \times \mathbb{Z}\).
+\item Generalize the proof of \hyperref[thm:54.5]{Theorem 54.5} to show that the fundamental group of the torus is isomorphic to the group \(\mathbb{Z} \times \mathbb{Z}\).
 \item Let \(p : E \rightarrow B\) be a covering map, with \(E\) path connected. Show that if \(B\) is simply connected, then \(p\) is a homeomorphism.
 \end{enumerate}
 \booksection{55}{Retractions and Fixed Points}
@@ -819,6 +846,7 @@ If \(A \subset X\), a retraction of \(X\) onto \(A\) is a continuous map \(r : X
 \end{definition}
 
 \begin{lemma}
+\label{lem:\thetheorem}
 If \(A\) is a retract of \(X\), then the homomorphism of fundamental groups induced by inclusion \(j : A \rightarrow X\) is injective.
 \end{lemma}
 
@@ -826,6 +854,7 @@ If \(A\) is a retract of \(X\), then the homomorphism of fundamental groups indu
 If \(r : X \rightarrow A\) is a retraction, then the composite map \(r \circ j\) equals the identity map of \(A\). It follows that \({r}_{ * } \circ {j}_{ * }\) is the identity map of \({\pi }_{1}( {A,a})\), so that \({j}_{ * }\) must be injective.
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 There is no retraction of \({B}^{2}\) onto \({S}^{1}\).
 \end{theorem}
 
@@ -833,6 +862,7 @@ There is no retraction of \({B}^{2}\) onto \({S}^{1}\).
 If \({S}^{1}\) were a retract of \({B}^{2}\), then the homomorphism induced by inclusion \(j : {S}^{1} \rightarrow {B}^{2}\) would be injective. But the fundamental group of \({S}^{1}\) is nontrivial and the fundamental group of \({B}^{2}\) is trivial.
 \end{proof}
 \begin{lemma}
+\label{lem:\thetheorem}
 Let \(h : {S}^{1} \rightarrow X\) be a continuous map. Then the following conditions are equivalent:
 
 \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\arabic*), align=left]
@@ -868,6 +898,7 @@ Let \({x}_{0} = h( {b}_{0})\). Because \({h}_{ * }\) is trivial, the loop \(f = 
 \munkresfig[1.0]{55.2}[Figure 55.2]
 \end{proof}
 \begin{corollary}
+\label{cor:\thetheorem}
 The inclusion map \(j : {S}^{1} \rightarrow {\mathbb{R}}^{2} - 0\) is not nulhomotopic. The identity map \(i : {S}^{1} \rightarrow {S}^{1}\) is not nulhomotopic.
 \end{corollary}
 
@@ -875,6 +906,7 @@ The inclusion map \(j : {S}^{1} \rightarrow {\mathbb{R}}^{2} - 0\) is not nulhom
 There is a retraction of \({\mathbb{R}}^{2} - 0\) onto \({S}^{1}\) given by the equation \(r(x) = x/\parallel x\parallel\). Therefore, \({j}_{ * }\) is injective, and hence nontrivial. Similarly, \({i}_{ * }\) is the identity homomorphism, and hence nontrivial.
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 Given a nonvanishing vector field on \({B}^{2}\), there exists a point of \({S}^{1}\) where the vector field points directly inward and a point of \({S}^{1}\) where it points directly outward.
 \end{theorem}
 
@@ -903,7 +935,8 @@ To show that \(v\) points directly outward at some point of \({S}^{1}\), we appl
 \munkresfig[0.7]{55.3}[Figure 55.3]
 \end{proof}
 We have already seen that every continuous map \(f : [ {0,1}] \rightarrow [ {0,1}]\) has a fixed point (see Exercise 3 of §24 ). The same is true for the ball \({B}^{2}\), although the proof is deeper:
-\begin{theorem}[Brouwer fixed-point theorem for the disc]
+\begin{theorem}
+\label{thm:\thetheorem}[Brouwer fixed-point theorem for the disc]
 If \(f : {B}^{2} \rightarrow {B}^{2}\) is continuous, then there exists a point \(x \in {B}^{2}\) such that \(f(x) = x\).
 \end{theorem}
 
@@ -918,7 +951,7 @@ for some positive real number \(a\), so that \(f(x) = ( {1 + a}) x\) would lie o
 
 One might well wonder why fixed-point theorems are of interest in mathematics. It turns out that many problems, such as problems concerning existence of solutions for systems of equations, for instance, can be formulated as fixed-point problems. Here is one example, a classical theorem of Frobenius. We assume some knowledge of linear algebra at this point.
 
-*Corollary 55.7. Let \(A\) be a 3 by 3 matrix of positive real numbers. Then \(A\) has a positive real eigenvalue (characteristic value).
+**Corollary 55.7. Let \(A\) be a 3 by 3 matrix of positive real numbers. Then \(A\) has a positive real eigenvalue (characteristic value).
 
 Proof. Let \(T : {\mathbb{R}}^{3} \rightarrow {\mathbb{R}}^{3}\) be the linear transformation whose matrix (relative to the standard basis for \({\mathbb{R}}^{3}\) ) is \(A\). Let \(B\) be the intersection of the 2 -sphere \({S}^{2}\) with the first octant
 
@@ -944,7 +977,7 @@ T = \{ ( {x,y}) \mid x \geq 0\text{ and }y \geq 0\text{ and }x + y \leq 1\}
 
 in \({\mathbb{R}}^{2}\) has topological dimension at least 2. (See §50.)
 
-Theorem 55.8. There is an \(\epsilon > 0\) such that for every open covering \(\mathcal{A}\) of \(T\) by sets of diameter less than \(\epsilon\), some point of \(T\) belongs to at least three elements of \(\mathcal{A}\).
+*Theorem 55.8. There is an \(\epsilon > 0\) such that for every open covering \(\mathcal{A}\) of \(T\) by sets of diameter less than \(\epsilon\), some point of \(T\) belongs to at least three elements of \(\mathcal{A}\).
 
 Proof. We use the fact that \(T\) is homeomorphic to \({B}^{2}\), so that we can apply the results proved in this section to the space \(T\).
 
@@ -991,7 +1024,8 @@ of degree \(n\) with real or complex coefficients has \(n\) roots (if the roots 
 
 The proof is, in fact, rather hard; the most difficult part is to prove that every polynomial equation of positive degree has at least one root. There are various ways of doing this. One can use only techniques of algebra; this proof is long and arduous. Or one can develop the theory of analytic functions of a complex variable to the point where it becomes a trivial corollary of Liouville's theorem. Or one can prove it as a relatively easy corollary of our computation of the fundamental group of the circle; this we do now.
 
-\begin{theorem}[The fundamental theorem of algebra]
+\begin{theorem}
+\label{thm:\thetheorem}[The fundamental theorem of algebra]
 A polynomial equation
 
 \[
@@ -1108,6 +1142,7 @@ If \(x\) is a point of \({S}^{n}\), then its antipode is the point \(- x\). A ma
 \end{definition}
 
 \begin{theorem}
+\label{thm:\thetheorem}
 If \(h : {S}^{1} \rightarrow {S}^{1}\) is continuous and antipode-preserving, then \(h\) is not nulhomotopic.
 \end{theorem}
 
@@ -1128,13 +1163,15 @@ The homomorphism \({k}_{ * }\) is injective, being a nontrivial homomorphism of 
 \munkresfig[0.5]{57.1}[Figure 57.1]
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 There is no continuous antipode-preserving map \(g : {S}^{2} \rightarrow {S}^{1}\).
 \end{theorem}
 
 \begin{proof}
 Suppose \(g : {S}^{2} \rightarrow {S}^{1}\) is continuous and antipode preserving. Let us take \({S}^{1}\) to be the equator of \({S}^{2}\). Then the restriction of \(g\) to \({S}^{1}\) is a continuous antipode-preserving map \(h\) of \({S}^{1}\) to itself. By the preceding theorem, \(h\) is not nulhomotopic. But the upper hemisphere \(E\) of \({S}^{2}\) is homeomorphic to the ball \({B}^{2}\), and \(g\) is a continuous extension of \(h\) to \(E\) ! See \hyperref[fig:57.1]{Figure 57.1}.
 \end{proof}
-\begin{theorem}[Borsuk-Ulam theorem for \({S}^{2}\)]
+\begin{theorem}
+\label{thm:\thetheorem}[Borsuk-Ulam theorem for \({S}^{2}\)]
 Given a continuous map \(f : {S}^{2} \rightarrow\) \({\mathbb{R}}^{2}\), there is a point \(x\) of \({S}^{2}\) such that \(f(x) = f( {-x})\).
 \end{theorem}
 
@@ -1146,7 +1183,8 @@ g(x) = [ {f(x) - f( {-x}) }] /\parallel f(x) - f( {-x}) \parallel
 
 is a continuous map \(g : {S}^{2} \rightarrow {S}^{1}\) such that \(g( {-x}) = - g(x)\) for all \(x\).
 \end{proof}
-\begin{theorem}[The bisection theorem]
+\begin{theorem}
+\label{thm:\thetheorem}[The bisection theorem]
 Given two bounded polygonal regions in \({\mathbb{R}}^{2}\), there exists a line in \({\mathbb{R}}^{2}\) that bisects each of them.
 \end{theorem}
 
@@ -1173,7 +1211,7 @@ These theorems generalize to higher dimensions, but the proofs are considerably 
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item Prove the following ``theorem of meteorology'': At any given moment in time, there exists a pair of antipodal points on the surface of the earth at which both the temperature and the barometric pressure are equal.
 \item Show that if \(g : {S}^{2} \rightarrow {S}^{2}\) is continuous and \(g(x) \neq g( {-x})\) for all \(x\), then \(g\) is surjective. [Hint: If \(p \in {S}^{2}\), then \({S}^{2} - \{ p\}\) is homeomorphic to \({\mathbb{R}}^{2}\).]
-\item Let \(h : {S}^{1} \rightarrow {S}^{1}\) be continuous and antipode-preserving with \(h( {b}_{0}) = {b}_{0}\). Show that \({h}_{ * }\) carries a generator of \({\pi }_{1}( {{S}^{1},{b}_{0}})\) to an odd power of itself. [Hint: If \(k\) is the map constructed in the proof of Theorem 57.1, show that \({k}_{ * }\) does the same.]
+\item Let \(h : {S}^{1} \rightarrow {S}^{1}\) be continuous and antipode-preserving with \(h( {b}_{0}) = {b}_{0}\). Show that \({h}_{ * }\) carries a generator of \({\pi }_{1}( {{S}^{1},{b}_{0}})\) to an odd power of itself. [Hint: If \(k\) is the map constructed in the proof of \hyperref[thm:57.1]{Theorem 57.1}, show that \({k}_{ * }\) does the same.]
 \item Suppose you are given the fact that for each \(n\), no continuous antipode-preserving map \(h : {S}^{n} \rightarrow {S}^{n}\) is nulhomotopic. (This result can be proved using more advanced techniques of algebraic topology.) Prove the following:
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item There is no retraction \(r : {B}^{n + 1} \rightarrow {S}^{n}\).
@@ -1189,6 +1227,7 @@ These theorems generalize to higher dimensions, but the proofs are considerably 
 We begin with a lemma.
 
 \begin{lemma}
+\label{lem:\thetheorem}
 Let \(h,k : ( {X,{x}_{0}}) \rightarrow ( {Y,{y}_{0}})\) be continuous maps. If \(h\) and \(k\) are homotopic, and if the image of the base point \({x}_{0}\) of \(X\) remains fixed at \({y}_{0}\) during the homotopy, then the homomorphisms \({h}_{ * }\) and \({k}_{ * }\) are equal.
 \end{lemma}
 
@@ -1203,6 +1242,7 @@ is a homotopy between \(h \circ f\) and \(k \circ f\) ; it is a path homotopy be
 Using this lemma, we generalize a result about the space \({\mathbb{R}}^{2} - \mathbf{0}\) proved earlier, proving that the homomorphism induced by inclusion \(j : {S}^{1} \rightarrow {\mathbb{R}}^{2} - \mathbf{0}\) is not only injective but surjective as well. More generally, we prove the following:
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 The inclusion map \(j : {S}^{n} \rightarrow {\mathbb{R}}^{n + 1} - \mathbf{0}\) induces an isomorphism of fundamental groups.
 \end{theorem}
 
@@ -1224,14 +1264,14 @@ is a homotopy between the identity map of \(X\) and the map \(j \circ r\). For \
 
 What made the preceding proof work? Roughly speaking, it worked because we had a natural way of deforming the identity map of \({\mathbb{R}}^{n + 1} - 0\) to a map that collapsed all of \({\mathbb{R}}^{n + 1} - \mathbf{0}\) onto \({S}^{n}\). The deformation \(H\) gradually collapsed each radial line emanating from the origin to the point where it intersected \({S}^{n}\) ; each point of \({S}^{n}\) remained fixed during this deformation.
 
-\hyperref[fig:58.1]{Figure 58.1} illustrates, in the case \(n = 1\), how the deformation \(H\) gives rise to a path homotopy \(H( {f( s),t})\) between the loop \(f\) in \({\mathbb{R}}^{2} - \mathbf{0}\) and the loop \(g = f/\parallel f\parallel\) in \({S}^{1}\).
+Figure 58.1 illustrates, in the case \(n = 1\), how the deformation \(H\) gives rise to a path homotopy \(H( {f( s),t})\) between the loop \(f\) in \({\mathbb{R}}^{2} - \mathbf{0}\) and the loop \(g = f/\parallel f\parallel\) in \({S}^{1}\).
 
 % \begin{center}
 % \includegraphics[width=0.6\textwidth]{images/58.1.jpg}
 % \end{center}
 \hspace*{3em} 
 
-\hyperref[fig:58.1]{Figure 58.1}
+Figure 58.1
 
 These comments lead us to formulate a more general situation in which the same procedure applies.
 \end{proof}
@@ -1242,6 +1282,7 @@ Let \(A\) be a subspace of \(X\). We say that \(A\) is a deformation retract of 
 The proof of the preceding theorem generalizes immediately to prove the following:
 
 \begin{theorem}
+\label{thm:\thetheorem}
 Let \(A\) be a deformation retract of \(X\) ; let \({x}_{0} \in A\). Then the inclusion map
 
 \[
@@ -1253,6 +1294,7 @@ induces an isomorphism of fundamental groups.
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 Let \(B\) denote the \(z\) -axis in \({\mathbb{R}}^{3}\). Consider the space \({\mathbb{R}}^{3} - B\). It has the punctured \({xy}\) -plane \(( {{\mathbb{R}}^{2} - 0}) \times 0\) as a deformation retract. The map \(H\) defined by the equation
 
 \[
@@ -1266,6 +1308,7 @@ is a deformation retraction; it gradually collapses each line parallel to the \(
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 Consider \({\mathbb{R}}^{2} - p - q\), the punctured plane. We assert it has the ``figure eight'' space as a deformation retract. Rather than writing equations, we merely sketch the deformation retraction; it is the three-stage deformation indicated in \hyperref[fig:58.2]{Figure 58.2}.
 
 \munkresfig[1.0]{58.2}[Figure 58.2]
@@ -1274,6 +1317,7 @@ Consider \({\mathbb{R}}^{2} - p - q\), the punctured plane. We assert it has the
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 Another deformation retract of \({\mathbb{R}}^{2} - p - q\) is the ``theta space''
 
 \[
@@ -1299,6 +1343,7 @@ Note that if \(A\) is a deformation retract of \(X\), then \(A\) has the same ho
 We now show that two spaces having the same homotopy type have isomorphic fundamental groups. For this purpose, we need to study what happens when we have a homotopy between two continuous maps of \(X\) into \(Y\) such that the base point of \(X\) does not remain fixed during the homotopy.
 
 \begin{lemma}
+\label{lem:\thetheorem}
 Let \(h,k : X \rightarrow Y\) be continuous maps; let \(h( {x}_{0}) = {y}_{0}\) and \(k( {x}_{0}) = {y}_{1}\). If \(h\) and \(k\) are homotopic, there is a path \(\alpha\) in \(Y\) from \({y}_{0}\) to \({y}_{1}\) such that \({k}_{ * } = \widehat{\alpha } \circ {h}_{ * }\). Indeed, if \(H : X \times I \rightarrow Y\) is the homotopy between \(h\) and \(k\), then \(\alpha\) is the path \(\alpha ( t) = H( {{x}_{0},t})\).
 \end{lemma}
 
@@ -1358,10 +1403,12 @@ The broken-line paths \({\beta }_{0} * {\gamma }_{1}\) and \({\gamma }_{0} * {\b
 as desired.
 \end{proof}
 \begin{corollary}
+\label{cor:\thetheorem}
 Let \(h,k : X \rightarrow Y\) be homotopic continuous maps; let \(h( {x}_{0}) = {y}_{0}\) and \(k( {x}_{0}) = {y}_{1}\). If \({h}_{ * }\) is injective, or surjective, or trivial, so is \({k}_{ * }\).
 \end{corollary}
 
 \begin{corollary}
+\label{cor:\thetheorem}
 Let \(h : X \rightarrow Y\). If \(h\) is nulhomotopic, then \({h}_{ * }\) is the trivial homomorphism.
 \end{corollary}
 
@@ -1369,6 +1416,7 @@ Let \(h : X \rightarrow Y\). If \(h\) is nulhomotopic, then \({h}_{ * }\) is the
 The constant map induces the trivial homomorphism.
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 Let \(f : X \rightarrow Y\) be continuous; let \(f( {x}_{0}) = {y}_{0}\). If \(f\) is a homotopy equivalence, then
 
 \[
@@ -1468,6 +1516,7 @@ It is a striking fact that the situation that occurs for these two spaces is the
 Now we turn to a problem mentioned at the beginning of the chapter, the problem of showing that the sphere, torus, and double torus are surfaces that are topologically distinct. We begin with the sphere; we show that \({S}^{n}\) is simply connected for \(n \geq 2\). The crucial result we need is stated in the following theorem.
 
 \begin{theorem}
+\label{thm:\thetheorem}
 Suppose \(X = U \cup V\), where \(U\) and \(V\) are open sets of \(X\). Suppose that \(U \cap V\) is path connected, and that \({x}_{0} \in U \cap V\). Let \(i\) and \(j\) be the inclusion mappings of \(U\) and \(V\), respectively, into \(X\). Then the images of the induced homomorphisms
 
 \[
@@ -1485,7 +1534,7 @@ To begin, choose a subdivision \({b}_{0},\ldots ,{b}_{m}\) of \([ {0,1}]\) such 
 
 A finite number of repetitions of this process leads to the desired subdivision.
 
-Step 2. We prove the theorem. Given \(f\), let \({a}_{0},\ldots ,{a}_{n}\) be the subdivision constructed in Step 1. Define \({f}_{i}\) to be the path in \(X\) that equals the positive linear map of \([ {0,1}]\) onto \([ {{a}_{i - 1},{a}_{i}}]\) followed by \(f\). Then \({f}_{i}\) is a path that lies either in \(U\) or in \(V\), and by Theorem 51.3,
+Step 2. We prove the theorem. Given \(f\), let \({a}_{0},\ldots ,{a}_{n}\) be the subdivision constructed in Step 1. Define \({f}_{i}\) to be the path in \(X\) that equals the positive linear map of \([ {0,1}]\) onto \([ {{a}_{i - 1},{a}_{i}}]\) followed by \(f\). Then \({f}_{i}\) is a path that lies either in \(U\) or in \(V\), and by \hyperref[thm:51.3]{Theorem 51.3},
 
 \[
 [ f] = [ {f}_{1}] * [ {f}_{2}] * \cdots * [ {f}_{n}] .
@@ -1509,10 +1558,12 @@ for each \(i\). Then \({g}_{i}\) is a loop in \(X\) based at \({x}_{0}\) whose i
 The preceding theorem is a special case of a famous theorem of topology called the Seifert-van Kampen theorem, which expresses the fundamental group of the space \(X = U \cup V\) quite generally, when \(U \cap V\) is path connected, in terms of the fundamental groups of \(U\) and \(V\). We shall study this theorem in Chapter 11.
 \end{proof}
 \begin{corollary}
+\label{cor:\thetheorem}
 Suppose \(X = U \cup V\), where \(U\) and \(V\) are open sets of \(X\) ; suppose \(U \cap V\) is nonempty and path connected. If \(U\) and \(V\) are simply connected, then \(X\) is simply connected.
 \end{corollary}
 
 \begin{theorem}
+\label{thm:\thetheorem}
 If \(n \geq 2\), the \(n\) -sphere \({S}^{n}\) is simply connected.
 \end{theorem}
 
@@ -1552,7 +1603,7 @@ Now we show that for \(n \geq 2\), the sphere \({S}^{n}\) is simply connected. T
 
  \item Show that \({\mathbb{R}}^{2}\) and \({\mathbb{R}}^{n}\) are not homeomorphic if \(n > 2\). It is, in fact, true that \({\mathbb{R}}^{m}\) and \({\mathbb{R}}^{n}\) are not homeomorphic if \(n \neq m\), but the proof requires more advanced tools of algebraic topology.
  \end{enumerate}
-\item Assume the hypotheses of Theorem 59.1.
+\item Assume the hypotheses of \hyperref[thm:59.1]{Theorem 59.1}.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item What can you say about the fundamental group of \(X\) if \({j}_{ * }\) is the trivial homomorphism? If both \({i}_{ * }\) and \({j}_{ * }\) are trivial?
  \item Give an example where \({i}_{ * }\) and \({j}_{ * }\) are trivial but neither \(U\) nor \(V\) have trivial fundamental groups.
@@ -1573,6 +1624,7 @@ Recall that if \(A\) and \(B\) are groups with operation \(\cdot\), then the car
 Recall also that if \(h : C \rightarrow A\) and \(k : C \rightarrow B\) are group homomorphisms, then the map \(\Phi : C \rightarrow A \times B\) defined by \(\Phi ( c) = h( c) \times k( c)\) is a group homomorphism.
 
 \begin{theorem}
+\label{thm:\thetheorem}
 \({\pi }_{1}( {X \times Y,{x}_{0} \times {y}_{0}})\) is isomorphic with \({\pi }_{1}( {X,{x}_{0}}) \times {\pi }_{1}( {Y,{y}_{0}})\).
 \end{theorem}
 
@@ -1623,6 +1675,7 @@ F( {s,t}) = G( {s,t}) \times H( {s,t})
 is a path homotopy between \(f\) and the constant loop based at \({x}_{0} \times {y}_{0}\).
 \end{proof}
 \begin{corollary}
+\label{cor:\thetheorem}
 The fundamental group of the torus \(T = {S}^{1} \times {S}^{1}\) is isomorphic to the group \(\mathbb{Z} \times \mathbb{Z}\).
 \end{corollary}
 
@@ -1635,6 +1688,7 @@ The projective plane \( {P}^{2}\) is the quotient space obtained from \({S}^{2}\
 The projective plane may not be a space that is familiar to you; it cannot be imbedded in \({\mathbb{R}}^{3}\) and is thus difficult to visualize. It is, however, the fundamental object of study in projective geometry, just as the euclidean plane \({\mathbb{R}}^{2}\) is in ordinary euclidean geometry. Topologists are primarily interested in it as an example of a surface.
 
 \begin{theorem}
+\label{thm:\thetheorem}
 The projective plane \({P}^{2}\) is a compact surface, and the quotient map \(p : {S}^{2} \rightarrow {P}^{2}\) is a covering map.
 \end{theorem}
 
@@ -1673,18 +1727,20 @@ are disjoint. It follows that \(p( {U}_{1})\) and \(p( {U}_{2})\) are disjoint n
 Since \({S}^{2}\) is a surface and every point of \({P}^{2}\) has a neighborhood homeomorphic with an open subset of \({S}^{2}\), the space \({P}^{2}\) is also a surface.
 \end{proof}
 \begin{corollary}
+\label{cor:\thetheorem}
 \({\pi }_{1}( {{P}^{2},y})\) is a group of order 2 .
 \end{corollary}
 
 \begin{proof}
-The projection \(p : {S}^{2} \rightarrow {P}^{2}\) is a covering map. Since \({S}^{2}\) is simply connected, we can apply Theorem 54.4, which tells us there is a bijective correspondence between \({\pi }_{1}( {{P}^{2},y})\) and the set \({p}^{-1}( y)\). Since this set is a two-element set, \({\pi }_{1}( {{P}^{2},y})\) is a group of order 2.
+The projection \(p : {S}^{2} \rightarrow {P}^{2}\) is a covering map. Since \({S}^{2}\) is simply connected, we can apply \hyperref[thm:54.4]{Theorem 54.4}, which tells us there is a bijective correspondence between \({\pi }_{1}( {{P}^{2},y})\) and the set \({p}^{-1}( y)\). Since this set is a two-element set, \({\pi }_{1}( {{P}^{2},y})\) is a group of order 2.
 Any group of order 2 is isomorphic to \(\mathbb{Z}/2\), the integers mod 2, of course.
 
-One can proceed similarly to define \({P}^{n}\), for any \(n \in {\mathbb{Z}}_{ + }\), as the space obtained from \({S}^{n}\) by identifying each point \(x\) with its antipode \(- x\) ; it is called projective \(n\) - space. The proof of Theorem 60.3 goes through without change to prove that the projection \(p : {S}^{n} \rightarrow {P}^{n}\) is a covering map. Then because \({S}^{n}\) is simply connected for \(n \geq 2\), it follows that \({\pi }_{1}( {{P}^{n},y})\) is a two-element group for \(n \geq 2\). We leave it to you to figure out what happens when \(n = 1\).
+One can proceed similarly to define \({P}^{n}\), for any \(n \in {\mathbb{Z}}_{ + }\), as the space obtained from \({S}^{n}\) by identifying each point \(x\) with its antipode \(- x\) ; it is called projective \(n\) - space. The proof of \hyperref[thm:60.3]{Theorem 60.3} goes through without change to prove that the projection \(p : {S}^{n} \rightarrow {P}^{n}\) is a covering map. Then because \({S}^{n}\) is simply connected for \(n \geq 2\), it follows that \({\pi }_{1}( {{P}^{n},y})\) is a two-element group for \(n \geq 2\). We leave it to you to figure out what happens when \(n = 1\).
 
 Now we study the double torus. We begin with a lemma about the figure eight.
 \end{proof}
 \begin{lemma}
+\label{lem:\thetheorem}
 The fundamental group of the figure eight is not abelian.
 \end{lemma}
 
@@ -1706,6 +1762,7 @@ To prove this assertion, let us lift each of these to a path in \(E\) beginning 
 We shall prove later that the fundamental group of the figure eight is, in fact, the group that algebraists call the ``free group on two generators.''
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 The fundamental group of the double torus is not abelian.
 \end{theorem}
 
@@ -1716,6 +1773,7 @@ One can write equations for the retraction \(r : T\# T \rightarrow X\), but it i
 \munkresfig[1.0]{60.2}[Figure 60.2]
 \end{proof}
 \begin{corollary}
+\label{cor:\thetheorem}
 The 2-sphere, torus, projective plane, and double torus are topologically distinct.
 \end{corollary}
 
@@ -1723,7 +1781,7 @@ The 2-sphere, torus, projective plane, and double torus are topologically distin
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item Compute the fundamental groups of the ``solid torus'' \({S}^{1} \times {B}^{2}\) and the product space \({S}^{1} \times {S}^{2}\).
 \item Let \(X\) be the quotient space obtained from \({B}^{2}\) by identifying each point \(x\) of \({S}^{1}\) with its antipode \(- x\). Show that \(X\) is homeomorphic to the projective plane \({P}^{2}\).
-\item Let \(p : E \rightarrow X\) be the map constructed in the proof of Lemma 60.5. Let \({E}^{\prime }\) be the subspace of \(E\) that is the union of the \(x\) -axis and the \(y\) -axis. Show that \(p \mid {E}^{\prime }\) is not a covering map.
+\item Let \(p : E \rightarrow X\) be the map constructed in the proof of \hyperref[lem:60.5]{Lemma 60.5}. Let \({E}^{\prime }\) be the subspace of \(E\) that is the union of the \(x\) -axis and the \(y\) -axis. Show that \(p \mid {E}^{\prime }\) is not a covering map.
 \item The space \({P}^{1}\) and the covering map \(p : {S}^{1} \rightarrow {P}^{1}\) are familiar ones. What are they?
 \item Consider the covering map indicated in \hyperref[fig:60.3]{Figure 60.3}. Here, \(p\) wraps \({A}_{1}\) around \(A\) twice and wraps \({B}_{1}\) around \(B\) twice; \(p\) maps \({A}_{0}\) and \({B}_{0}\) homeomorphically onto \(A\) and \(B\), respectively. Use this covering space to show that the fundamental group of the figure eight is not abelian. \munkresfig[0.5]{60.3}[Figure 60.3]
 \end{enumerate}

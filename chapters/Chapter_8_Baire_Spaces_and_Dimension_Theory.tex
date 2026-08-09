@@ -22,6 +22,7 @@ Recall that if \(A\) is a subset of a space \(X\), the interior of \(A\) is defi
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 The set \(\mathbb{Q}\) of rationals has empty interior as a subset of \(\mathbb{R}\), but the interval \([ {0,1}]\) has nonempty interior. The interval \([ {0,1}] \times 0\) has empty interior as a subset of the plane \({\mathbb{R}}^{2}\), and so does the subset \(\mathbb{Q} \times \mathbb{R}\).
 \end{example}
 \end{centeredblock}
@@ -32,6 +33,7 @@ A space \(X\) is said to be a Baire space if the following condition holds: Give
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 The space \(\mathbb{Q}\) of rationals is not a Baire space. For each one-point set in \(\mathbb{Q}\) is closed and has empty interior in \(\mathbb{Q}\), and \(\mathbb{Q}\) is the countable union of its one-point subsets.
 \end{example}
 \end{centeredblock}
@@ -49,6 +51,7 @@ We shall not use the terms ``first category'' and ``second category'' in this bo
 The preceding definition is the ``closed set definition'' of a Baire space. There is also a formulation involving open sets that is frequently useful. It is given in the following lemma.
 
 \begin{lemma}
+\label{lem:\thetheorem}
 \(X\) is a Baire space if and only if given any countable collection \(\{ {U}_{n}\}\) of open sets in \(X\), each of which is dense in \(X\), their intersection \(\bigcap {U}_{n}\) is also dense in \(X\).
 \end{lemma}
 
@@ -60,7 +63,8 @@ Recall that a set \(C\) is dense in \(X\) if \(\bar{C} = X\). The theorem now fo
 
 There are a number of theorems giving conditions under which a space is a Baire space. The most important is the following:
 \end{proof}
-\begin{theorem}[Baire category theorem]
+\begin{theorem}
+\label{thm:\thetheorem}[Baire category theorem]
 If \(X\) is a compact Hausdorff space or a complete metric space, then \(X\) is a Baire space.
 \end{theorem}
 
@@ -99,6 +103,7 @@ The proof that \(\bigcap {\bar{U}}_{n}\) is nonempty splits into two parts, depe
 If \(X\) is complete metric, we apply the following lemma.
 \end{proof}
 \begin{lemma}
+\label{lem:\thetheorem}
 Let \({C}_{1} \supset {C}_{2} \supset \cdots\) be a nested sequence of nonempty closed sets in the complete metric space \(X\). If \(\operatorname{diam}{C}_{n} \rightarrow 0\), then \(\bigcap {C}_{n} \neq \varnothing\).
 \end{lemma}
 
@@ -111,7 +116,7 @@ Let \({f}_{n} : [ {0,1}] \rightarrow \mathbb{R}\) be a sequence of continuous fu
 
 To prove this result, we need the following lemma:
 
-*Lemma 48.4. Any open subspace \(Y\) of a Baire space \(X\) is itself a Baire space.
+**Lemma 48.4. Any open subspace \(Y\) of a Baire space \(X\) is itself a Baire space.
 
 Proof. Let \({A}_{n}\) be a countable collection of closed sets of \(Y\) that have empty interiors in \(Y\). We show that \(\bigcup {A}_{n}\) has empty interior in \(Y\).
 
@@ -119,7 +124,7 @@ Let \({\bar{A}}_{n}\) be the closure of \({A}_{n}\) in \(X\) ; then \({\bar{A}}_
 
 If the union of the sets \({A}_{n}\) contains the nonempty open set \(W\) of \(Y\), then the union of the sets \({\bar{A}}_{n}\) also contains the set \(W\), which is open in \(X\) because \(Y\) is open in \(X\). But each set \({\bar{A}}_{n}\) has empty interior in \(X\), contradicting the fact that \(X\) is a Baire space.
 
-*Theorem 48.5. Let \(X\) be a space; let \((Y, d)\) be a metric space. Let \({f}_{n} : X \rightarrow Y\) be a sequence of continuous functions such that \({f}_{n}(x) \rightarrow f(x)\) for all \(x \in X\), where \(f : X \rightarrow Y\). If \(X\) is a Baire space, the set of points at which \(f\) is continuous is dense in \(X\).
+**Theorem 48.5. Let \(X\) be a space; let \((Y, d)\) be a metric space. Let \({f}_{n} : X \rightarrow Y\) be a sequence of continuous functions such that \({f}_{n}(x) \rightarrow f(x)\) for all \(x \in X\), where \(f : X \rightarrow Y\). If \(X\) is a Baire space, the set of points at which \(f\) is continuous is dense in \(X\).
 
 \begin{proof}
 Given a positive integer \(N\) and given \(\epsilon > 0\), define
@@ -214,6 +219,7 @@ Applying the triangle inequality to \(( *),({* * })\), and \(({* * * })\) gives 
 We prove the following result from analysis:
 
 \begin{theorem}
+\label{thm:\thetheorem}
 Let \(h : [ {0,1}] \rightarrow \mathbb{R}\) be a continuous function. Given \(\epsilon > 0\), there is a function \(g : [ {0,1}] \rightarrow \mathbb{R}\) with \(| {h(x) - g(x) }| < \epsilon\) for all \(x\), such that \(g\) is continuous and nowhere differentiable.
 \end{theorem}
 
@@ -229,7 +235,7 @@ This space is a complete metric space and, therefore, is a Baire space. We shall
 \mathop{\bigcap }\limits_{{n \in {\mathbb{Z}}_{ + }}}{U}_{n}
 \]
 
-are nowhere differentiable. Because \(\mathcal{C}\) is a Baire space, this intersection is dense in \(\mathcal{C}\), by Lemma 48.1. Therefore, given \(h\) and \(\epsilon\), this intersection must contain a function \(g\) such that \(\rho ({h,g}) < \epsilon\). The theorem follows.
+are nowhere differentiable. Because \(\mathcal{C}\) is a Baire space, this intersection is dense in \(\mathcal{C}\), by \hyperref[lem:48.1]{Lemma 48.1}. Therefore, given \(h\) and \(\epsilon\), this intersection must contain a function \(g\) such that \(\rho ({h,g}) < \epsilon\). The theorem follows.
 
 The tricky part is to define the set \({U}_{n}\) properly. We first take a function \(f\) and consider its difference quotients. Given \(x \in I\) and given \(0 < h \leq \frac{1}{2}\), consider the expressions
 
@@ -255,6 +261,7 @@ Then for \(n \geq 2\), we define \({U}_{n}\) by declaring that a function \(f\) 
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 Let \(\alpha > 0\) be given. The function \(f : [ {0,1}] \rightarrow \mathbb{R}\) given by the equation \(f(x) = {4\alpha x}({1 - x})\), whose graph is a parabola, satisfies the condition \({\Delta f}({x,h}) \geq \alpha\) for \(h = 1/4\) and all \(x\), as you can check. Geometrically speaking, what this says is that for each \(x\), at least one of the indicated secant lines of the parabola in \hyperref[fig:49.1]{Figure 49.1} has slope of absolute value at least \(\alpha\). Hence if \(\alpha > 4\), the function \(f\) belongs to \({U}_{4}\). The function \(g\) pictured in \hyperref[fig:49.1]{Figure 49.1} satisfies the condition \({\Delta g}({x,h}) \geq \alpha\) for any \(h \leq 1/4\) ; hence \(g\) belongs to \({U}_{n}\) provided \(\alpha > n\). The function \(k\) satisfies the condition \({\Delta k}({x,h}) \geq \alpha\) for any \(h \leq 1/8\) ; hence \(k\) belongs to \({U}_{n}\) if \(\alpha > n\).
 
 \munkresfig[1.0]{49.1}[Figure 49.1]
@@ -357,7 +364,7 @@ You may find this proof frustrating, in that it seems so abstract and nonconstru
 \end{proof}
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
-\item Check the stated properties of the functions \(f,g\), and \(k\) of Example 1.
+\item Check the stated properties of the functions \(f,g\), and \(k\) of \exref{1}.
 \item Given \(n\) and \(\epsilon\), define a continuous function \(f : I \rightarrow \mathbb{R}\) such that \(f \in {U}_{n}\) and \(| {f(x) }| \leq \epsilon\) for all \(x\).
 \end{enumerate}
 \booksection{50}{Introduction to Dimension Theory}
@@ -382,6 +389,7 @@ A space \(X\) is said to be finite-dimensional if there is some integer \(m\) su
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 Any compact subspace \(X\) of \(\mathbb{R}\) has topological dimension at most 1. We begin by defining an open covering of \(\mathbb{R}\) of order 2. Let \({\mathcal{A}}_{1}\) denote the collection of all open intervals of the form \(({n,n + 1})\) in \(\mathbb{R}\), where \(n\) is an integer. Let \({\mathcal{A}}_{0}\) denote the collection of all open intervals of the form \(({n - 1/2,n + 1/2})\), for \(n\) an integer. Then \(\mathcal{A} = {\mathcal{A}}_{0} \cup {\mathcal{A}}_{1}\) is an open covering of \(\mathbb{R}\) by sets of diameter one. Because no two elements of \({\mathcal{A}}_{0}\) intersect, and no two elements of \({\mathcal{A}}_{1}\) intersect, \(\mathcal{A}\) has order 2 .
 
 Now let \(X\) be a compact subspace of \(\mathbb{R}\). Given a covering \(\mathcal{C}\) of \(X\) by sets open in \(X\), this covering has a positive Lebesgue number \(\delta\). This means that any collection of subsets of \(X\) that have diameter less than \(\delta\) is automatically a refinement of \(\mathcal{C}\). Consider the homeomorphism \(f : \mathbb{R} \rightarrow \mathbb{R}\) defined by \(f(x) = ({\frac{1}{2}\delta }) x\). The images under \(f\) of the elements of the collection \(\mathcal{A}\) form an open covering of \(\mathbb{R}\) of order 2 whose elements have diameter \(\frac{1}{2}\delta\) ; their intersections with \(X\) form the required open covering of \(X\).
@@ -390,12 +398,14 @@ Now let \(X\) be a compact subspace of \(\mathbb{R}\). Given a covering \(\mathc
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 The interval \(X = [ {0,1}]\) has topological dimension 1. We know that \(\dim X \leq 1\). To show equality holds, let \(\mathcal{A}\) be the covering of \(X\) by the sets \([ {0,1})\) and \((0,1]\). We show that if \(\mathcal{B}\) is any open covering of \(X\) that refines \(\mathcal{A}\), then \(\mathcal{B}\) has order at least 2 . Since \(\mathcal{B}\) refines \(\mathcal{A}\), it must contain more than one element. Let \(U\) be one of the elements of \(\mathcal{B}\) and let \(V\) be the union of the others. If \(\mathcal{B}\) had order 1, then the sets \(U\) and \(V\) would be disjoint and would thus form a separation of \(X\). We conclude that \(\mathcal{B}\) has order at least 2 .
 \end{example}
 \end{centeredblock}
 
 \begin{centeredblock*}
 \begin{example}
+\label{ex:\thesection.\theexample}
 Any compact subspace \(X\) of \({\mathbb{R}}^{2}\) has topological dimension at most 2. To prove this fact, we construct a certain open covering \(\mathcal{A}\) of \({\mathbb{R}}^{2}\) that has order 3. We begin by defining \({\mathcal{A}}_{2}\) to be the collection of all open unit squares in \({\mathbb{R}}^{2}\) of the following form:
 
 \[
@@ -422,6 +432,7 @@ We shall generalize this result to compact subsets of \({\mathbb{R}}^{n}\) short
 Some basic facts about topological dimension are given in the following theorems:
 
 \begin{theorem}
+\label{thm:\thetheorem}
 Let \(X\) be a space having finite dimension. If \(Y\) is a closed subspace of \(X\), then \(Y\) has finite dimension and \(\dim Y \leq \dim X\).
 \end{theorem}
 
@@ -434,6 +445,7 @@ Let \(\dim X = m\). Let \(\mathcal{A}\) be a covering of \(Y\) by sets open in \
 is a covering of \(Y\) by sets open in \(Y\); it has order at most \(m + 1\), and it refines \(\mathcal{A}\).
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 Let \(X = Y \cup Z\), where \(Y\) and \(Z\) are closed subspaces of \(X\) having finite topological dimension. Then
 
 \[
@@ -468,6 +480,7 @@ x \in [ {{C}_{1} \cap \cdots \cap {C}_{k}}] \subset [ {D({B}_{1}) \cap \cdots \c
 If \(x\) happens to lie in \(Y\), then \(k \leq m + 1\) because \(\mathcal{B}\) has order at most \(m + 1\) at points of \(Y\) ; and if \(x\) is in \(Z\), then \(k \leq m + 1\) because \(\mathcal{C}\) has order at most \(m + 1\) at points of \(Z\).
 \end{proof}
 \begin{corollary}
+\label{cor:\thetheorem}
 Let \(X = {Y}_{1} \cup \cdots \cup {Y}_{k}\), where each \({Y}_{i}\) is a closed subspace of \(X\) and is finite dimensional. Then
 
 \[
@@ -477,12 +490,14 @@ Let \(X = {Y}_{1} \cup \cdots \cup {Y}_{k}\), where each \({Y}_{i}\) is a closed
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 Every compact 1-manifold \(X\) has topological dimension 1. The space \(X\) can be written as a finite union of spaces that are homeomorphic to the unit interval \([0,1]\) ; then the preceding corollary applies.
 \end{example}
 \end{centeredblock}
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 Every compact 2-manifold \(X\) has topological dimension at most 2. The space \(X\) can be written as a finite union of spaces that are homeomorphic to the closed unit ball in \({\mathbb{R}}^{2}\), then the preceding corollary applies.
 \end{example}
 \end{centeredblock}
@@ -491,6 +506,7 @@ An obvious question occurs at this point: Does a compact 2-manifold have topolog
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 An arc \(A\) is a space homeomorphic to the closed unit interval; the end points of \(A\) are the points \(p\) and \(q\) such that \(A - \{ p\}\) and \(A - \{ q\}\) are connected. A (finite) linear graph \(G\) is a Hausdorff space that is written as the union of finitely many arcs, each pair of which intersect in at most a common end point. The arcs in the collection are called the edges of \(G\), and the end points of the arcs are called the vertices of \(G\). Each edge of \(G\), being compact, is closed in \(G\) ; the preceding corollary tells us that \(G\) has topological dimension 1.
 \end{example}
 \end{centeredblock}
@@ -500,6 +516,7 @@ Two particular linear graphs are sketched in \hyperref[fig:50.2]{Figure 50.2}. T
 \munkresfig[1.0]{50.2}[Figure 50.2]
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 Every finite linear graph can be imbedded in \({\mathbb{R}}^{3}\). The proof involves the notion of ``general position.'' A set \(S\) of points of \({\mathbb{R}}^{3}\) is said to be in general position if no three of the points of \(S\) are collinear and no four of them are coplanar. It is easy to find such a set of points. For example, the points of the curve
 
 \[
@@ -588,6 +605,7 @@ A set \(A\) of points of \({\mathbb{R}}^{N}\) is said to be in general position 
 In the case of \({\mathbb{R}}^{3}\), this is the same as the definition given earlier, as you can check.
 
 \begin{lemma}
+\label{lem:\thetheorem}
 Given a finite set \(\{ {{\mathbf{x}}_{1},\ldots ,{\mathbf{x}}_{n}}\}\) of points of \({\mathbb{R}}^{N}\) and given \(\delta > 0\), there exists a set \(\{ {{\mathbf{y}}_{1},\ldots ,{\mathbf{y}}_{n}}\}\) of points of \({\mathbb{R}}^{N}\) in general position in \({\mathbb{R}}^{N}\), such that \(| {{\mathbf{x}}_{i} - {\mathbf{y}}_{i}}| < \delta\) for all \(i\).
 \end{lemma}
 
@@ -599,7 +617,8 @@ C = \{ {{\mathbf{y}}_{1},\ldots ,{\mathbf{y}}_{p},{\mathbf{y}}_{p + 1}}\}
 
 is in general position in \({\mathbb{R}}^{N}\). For let \(D\) be any subset of \(C\) containing \(N + 1\) or fewer elements. If \(D\) does not contain \({\mathbf{y}}_{p + 1}\), then \(D\) is geometrically independent by the induction hypothesis. If \(D\) does contain \({\mathbf{y}}_{p + 1}\), then \(D - \{ {\mathbf{y}}_{p + 1}\}\) contains \(N\) or fewer points and \({\mathbf{y}}_{p + 1}\) is not in the plane determined by these points, by construction. Then as noted above, \(D\) is geometrically independent.
 \end{proof}
-\begin{theorem}[The imbedding theorem]
+\begin{theorem}
+\label{thm:\thetheorem}[The imbedding theorem]
 Every compact metrizable space \(X\) of topological dimension \(m\) can be imbedded in \({\mathbb{R}}^{{2m} + 1}\).
 \end{theorem}
 
@@ -710,11 +729,12 @@ Now \({\phi }_{i}(x) > 0\) for some \(i\), so that \(x \in {U}_{i}\). Since \({\
 To give some content to the imbedding theorem, we need some more examples of spaces that are finite dimensional. We prove the following theorem.
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 Every compact subspace of \({\mathbb{R}}^{N}\) has topological dimension at most \(N\).
 \end{theorem}
 
 \begin{proof}
-The proof is a generalization of the proof given in Example 3 for \({\mathbb{R}}^{2}\). Let \(\rho\) be the square metric on \({\mathbb{R}}^{N}\).
+The proof is a generalization of the proof given in \exref{3} for \({\mathbb{R}}^{2}\). Let \(\rho\) be the square metric on \({\mathbb{R}}^{N}\).
 
 Step 1. We begin by breaking \({\mathbb{R}}^{N}\) up into ``unit cubes.'' Define \(\mathcal{J}\) to be the following collection of open intervals in \(\mathbb{R}\) :
 
@@ -742,17 +762,20 @@ Let \(\mathbf{x} = ({{x}_{1},\ldots ,{x}_{N}})\) be a point of the \(M\) -cube \
 
 Given an \(M\) -cube \(C\), we define the neighborhood \(U( C)\) of \(C\) to be the union of the \(\epsilon ( \mathbf{x}) /2\) -neighborhoods of \(\mathbf{x}\) for all \(\mathbf{x} \in C\). It is then immediate that if \(C\) and \(D\) are different \(M\) -cubes, \(U( C)\) and \(U( D)\) are disjoint. Furthermore, if \(\mathbf{z}\) is a point of \(U( C)\), then \(d({\mathbf{z},\mathbf{x}}) < \epsilon ( \mathbf{x}) /2 < 1/4\) for some point \(\mathbf{x}\) of \(C\). Since \(C\) has diameter 1, the set \(U( C)\) has diameter at most \(3/2\).
 
-Step 2. Given \(M\) with \(0 \leq M \leq N\), define \({\mathcal{A}}_{M}\) to be the collection of all sets \(U( C)\), where \(C \in {\mathcal{C}}_{M}\). The elements of \({\mathcal{A}}_{M}\) are disjoint, and each has diameter at most \(3/2\). The remainder of the proof is a copy of the proof given in Example 3 for \({\mathbb{R}}^{2}\).
+Step 2. Given \(M\) with \(0 \leq M \leq N\), define \({\mathcal{A}}_{M}\) to be the collection of all sets \(U( C)\), where \(C \in {\mathcal{C}}_{M}\). The elements of \({\mathcal{A}}_{M}\) are disjoint, and each has diameter at most \(3/2\). The remainder of the proof is a copy of the proof given in \exref{3} for \({\mathbb{R}}^{2}\).
 \end{proof}
 \begin{corollary}
+\label{cor:\thetheorem}
 Every compact \(m\) -manifold has topological dimension at most \(m\).
 \end{corollary}
 
 \begin{corollary}
+\label{cor:\thetheorem}
 Every compact \(m\) -manifold can be imbedded in \({\mathbb{R}}^{{2m} + 1}\).
 \end{corollary}
 
 \begin{corollary}
+\label{cor:\thetheorem}
 Let \(X\) be a compact metrizable space. Then \(X\) can be imbedded in some euclidean space \({\mathbb{R}}^{N}\) if and only if \(X\) has finite topological dimension.
 \end{corollary}
 
@@ -872,7 +895,7 @@ defines a homeomorphism of \({\mathbb{R}}^{2}\) with the subspace \(A \cup {B}_{
 L = \{ ({0,0,c}) \mid c \in \mathbb{R}\}
 \]
 
-of \(X\) is closed and discrete. Compare Example 3 of §31.]
+of \(X\) is closed and discrete. Compare \exrefs{31}{3}.]
 
 7. Show that \(X\) is Hausdorff if and only if \(X\) is completely regular.
 

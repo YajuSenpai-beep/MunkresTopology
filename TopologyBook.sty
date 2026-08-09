@@ -123,6 +123,10 @@
     {\chapter{#2}\vspace{6.5cm}\chaptermark{#2}}
     {\chapter[#1]{#2}\vspace{6.5cm}\chaptermark{#1}}%
 }
+% 节内引用: \exref{1} -> \hyperref[ex:\thesection.1]{Example 1}
+\newcommand{\exref}[1]{\hyperref[ex:\thesection.#1]{Example #1}}
+% 跨节引用: \exrefs{12}{1} -> \hyperref[ex:12.1]{Example 1 of §12}
+\newcommand{\exrefs}[2]{\hyperref[ex:#1.#2]{Example #2 of \S#1}}
 \newcommand{\HRule}{\begin{center}\rule{0.9\linewidth}{0.2mm}\end{center}}
 \newcommand{\customfootnote}[1]{%
   \let\thefootnote\relax\footnotetext{#1}%

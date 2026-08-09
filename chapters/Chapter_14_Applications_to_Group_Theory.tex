@@ -24,6 +24,7 @@ If \(X\) is a linear graph, and if \(C\) is a subset of \(X\) that equals a unio
 In the case of a finite graph, considered earlier, we used the Hausdorff condition in our definition in place of condition (2); it followed, in that case, that the topology of \(X\) was coherent with the subspaces \({A}_{\alpha }\). In the case of an infinite graph, this would no longer be true, so we must assume the coherence condition as part of the definition. We would assume the Hausdorff condition as well, but it is no longer necessary, for it follows from the coherence condition:
 
 \begin{lemma}
+\label{lem:\thetheorem}
 Every linear graph \(X\) is Hausdorff; in fact, it is normal.
 \end{lemma}
 
@@ -35,12 +36,14 @@ Now we show \(U\) and \(V\) are open in \(X\). To show \(U\) is open, we show th
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 	If \(X\) is the wedge of the circles \({S}_{\alpha }\), with common point \(p\), then \(X\) can be expressed as a linear graph. We need merely write each \({S}_{\alpha }\) as a graph having three edges, with \(p\) as one of its vertices; then \(X\) is a union of arcs. To show that the topology of the wedge \(X\) is coherent with the resulting collection of arcs, we note that if \(D \cap {A}_{\alpha }\) is closed in \({A}_{\alpha }\) for each arc \({A}_{\alpha }\), then \(D \cap {S}_{\beta }\) is the union of three sets of the form \(D \cap {A}_{\alpha }\) and so is closed in \({S}_{\beta }\) ; then \(D\) is closed in \(X\) by definition. See \hyperref[fig:83.1]{Figure 83.1}.
 \end{example}
 \end{centeredblock}
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 	Let \(J\) be a discrete space, and let \(E = [ {0,1}] \times J\). Then the quotient space \(X\) obtained from \(E\) by collapsing the set \(\{ 0\} \times J\) to a point \(p\) is a linear graph.
 
 The quotient map \(\pi : E \rightarrow X\) is a closed map. For if \(C\) is closed in \(E\), then \({\pi }^{-1}\pi ( C)\) equals \(C \cup ( {\{ 0\} \times J})\) if \(C\) contains a point of \(\{ 0\} \times J\), and \({\pi }^{-1}\pi ( C)\) equals \(C\) otherwise. In either case, \({\pi }^{-1}\pi ( C)\) is closed in \(E\), so that \(\pi ( C)\) is closed in \(X\). It follows that \(\pi\) maps each space \([ {0,1}] \times \alpha\) homeomorphically onto its image \({A}_{\alpha }\), so that \({A}_{\alpha }\) is an arc. The topology of \(X\) is coherent with the subspaces \({A}_{\alpha }\) because \(\pi\) is a quotient map. See \hyperref[fig:83.2]{Figure 83.2}.
@@ -57,6 +60,7 @@ The quotient map \(\pi : E \rightarrow X\) is a closed map. For if \(C\) is clos
 To show that \(Y\) is a linear graph, we need to show that the subspace topology on \(Y\) is coherent with the set of edges of \(Y\). If the subset \(D\) of \(Y\) is closed in the subspace topology, then \(D\) is closed in \(X\), so that \(D \cap {A}_{\alpha }\) is closed in \({A}_{\alpha }\) for each edge of \(X\), and in particular for each edge of \(Y\). Conversely, suppose \(D \cap {A}_{\beta }\) is closed in \({A}_{\beta }\) for each edge \({A}_{\beta }\) of \(Y\). We must show that \(D \cap {A}_{\alpha }\) is closed in \({A}_{\alpha }\) for each edge \({A}_{\alpha }\) of \(X\) that is not contained in \(Y\). But in this case, \(D \cap {A}_{\alpha }\) is either empty or a one-point set! We conclude that \(Y\) has the topology coherent with its set of edges.
 
 \begin{lemma}
+\label{lem:\thetheorem}
 	Let \(X\) be a linear graph. If \(C\) is a compact subspace of \(X\), there exists a finite subgraph \(Y\) of \(X\) that contains \(C\). If \(C\) is connected, \(Y\) can be chosen to be connected.
 \end{lemma}
 
@@ -65,6 +69,7 @@ To show that \(Y\) is a linear graph, we need to show that the subspace topology
 Form \(Y\) by choosing, for each vertex \(x\) of \(X\) belonging to \(C\), an edge of \(X\) having \(x\) as a vertex, and adjoining to these edges all edges \({A}_{\alpha }\) whose interiors contain points of \(C\). Then \(Y\) is a finite subgraph containing \(C\). Note that if \(C\) is connected, then \(Y\) is the union of a collection of arcs each of which intersects \(C\), so that \(Y\) is connected.
 \end{proof}
 \begin{lemma}
+\label{lem:\thetheorem}
 	If \(X\) is a linear graph, then \(X\) is locally path connected and semilocally simply connected.
 \end{lemma}
 
@@ -87,11 +92,12 @@ is continuous if its restriction to each subspace \({A}_{\alpha } \times I\) is 
 
 Now we discuss covering spaces of linear graphs. Note that the convention that every covering space is assumed to be path connected and locally path connected, which we assumed in the last chapter, no longer applies.
 \begin{theorem}
+\label{thm:\thetheorem}
 	Let \(p : E \rightarrow X\) be a covering map, where \(X\) is a linear graph. If \({A}_{\alpha }\) is an edge of \(X\) and \(B\) is a path component of \({p}^{-1}( {A}_{\alpha })\), then \(p\) maps \(B\) homeomorphically onto \({A}_{\alpha }\). Furthermore, the space \(E\) is a linear graph, with the path components of the spaces \({p}^{-1}( {A}_{\alpha })\) as its edges.
 \end{theorem}
 
 \begin{proof}
-	Step 1. We show that \(p\) maps \(B\) homeomorphically onto \({A}_{\alpha }\). Because the arc \({A}_{\alpha }\) is path connected and locally path connected, Theorem 53.2 and Lemma 80.1 tell us that the map \({p}_{0} : B \rightarrow {A}_{\alpha }\) obtained by restricting \(p\) is a covering map. Because \(B\) is path connected, the lifting correspondence \(\phi : {\pi }_{1}( {{A}_{\alpha },a}) \rightarrow {p}_{0}^{-1}( a)\) is surjective; because \({A}_{\alpha }\) is simply connected, \({p}_{0}^{-1}( a)\) consists of a single point. (See Theorem 54.4.) Hence \({p}_{0}\) is a homeomorphism.
+	Step 1. We show that \(p\) maps \(B\) homeomorphically onto \({A}_{\alpha }\). Because the arc \({A}_{\alpha }\) is path connected and locally path connected, \hyperref[thm:53.2]{Theorem 53.2} and \hyperref[lem:80.1]{Lemma 80.1} tell us that the map \({p}_{0} : B \rightarrow {A}_{\alpha }\) obtained by restricting \(p\) is a covering map. Because \(B\) is path connected, the lifting correspondence \(\phi : {\pi }_{1}( {{A}_{\alpha },a}) \rightarrow {p}_{0}^{-1}( a)\) is surjective; because \({A}_{\alpha }\) is simply connected, \({p}_{0}^{-1}( a)\) consists of a single point. (See \hyperref[thm:54.4]{Theorem 54.4}.) Hence \({p}_{0}\) is a homeomorphism.
 Step 2. Because \(X\) is the union of the arcs \({A}_{\alpha }\), the space \(E\) is the union of the arcs \(B\) that are the path components of the spaces \({p}^{-1}( {A}_{\alpha })\). Let \(B\) and \({B}^{\prime }\) be path components of \({p}^{-1}( {A}_{\alpha })\) and \({p}^{-1}( {A}_{\beta })\), respectively, with \(B \neq {B}^{\prime }\). We show \(B\) and \({B}^{\prime }\) intersect in at most a common end point. If \({A}_{\alpha }\) and \({A}_{\beta }\) are equal, then \(B\) and \({B}^{\prime }\) are disjoint, and if \({A}_{\alpha }\) and \({A}_{\beta }\) are disjoint, so are \(B\) and \({B}^{\prime }\). Therefore, if \(B\) and \({B}^{\prime }\) intersect, \({A}_{\alpha }\) and \({A}_{\beta }\) must intersect in an end point \(x\) of each; then \(B \cap {B}^{\prime }\) consists of a single point, which must be an end point of each.
 
 Step 3. We show that \(E\) has the topology coherent with the arcs \(B\). This is the hardest part of the proof. Let \(W\) be a subset of \(E\) such that \(W \cap B\) is open in \(B\), for each arc \(B\) of \(E\). We show that \(W\) is open in \(E\).
@@ -124,6 +130,7 @@ f = {f}_{1} * ( {{f}_{2} * ( {\cdots * {f}_{n}}) })
 from \({x}_{0}\) to \({x}_{n}\), where \({f}_{i} = {f}_{{e}_{i}}\) ; it is uniquely determined by the edge path \({e}_{1},\ldots ,{e}_{n}\). We call it the path corresponding to the edge path \({e}_{1},\ldots ,{e}_{n}\). If the edge path is closed, then the corresponding path \(f\) is a loop.
 
 \begin{lemma}
+\label{lem:\thetheorem}
 	A graph \(X\) is connected if and only if every pair of vertices of \(X\) can be joined by an edge path in \(X\).
 \end{lemma}
 
@@ -154,6 +161,7 @@ A linear graph consisting of a single edge is a tree. The graph in \hyperref[fig
  \end{center}
 
 \begin{lemma}
+\label{lem:\thetheorem}
 	If \(T\) is a tree in \(X\), and if \(A\) is an edge of \(X\) that intersects \(T\) in a single vertex, then \(T \cup A\) is a tree in \(X\). Conversely, if \(T\) is a finite tree in \(X\) that consists of more than one edge, then there is a tree \({T}_{0}\) in \(X\) and an edge \(A\) of \(X\) that intersects \({T}_{0}\) in a single vertex, such that \(T = {T}_{0} \cup A\).
 \end{lemma}
 
@@ -166,6 +174,7 @@ Let \(b\) be a vertex of \(T\) belonging to only one edge \(A\) of \(T\), and le
 \munkresfig[0.7]{84.4}[Figure 84.4]
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 	Any tree \(T\) is simply connected.
 \end{theorem}
 
@@ -178,6 +187,7 @@ To prove the general case, let \(f\) be a loop in \(T\). The image set of \(f\) 
 \end{definition}
 
 \begin{theorem}
+\label{thm:\thetheorem}
 	Let \(X\) be a connected graph. A tree \(T\) in \(X\) is maximal if and only if it contains all the vertices of \(X\).
 \end{theorem}
 
@@ -186,6 +196,7 @@ To prove the general case, let \(f\) be a loop in \(T\). The image set of \(f\) 
 Now let \(T\) be a tree in \(X\) that does not contain all the vertices of \(X\). We show \(T\) is not maximal. Let \({x}_{0}\) be a vertex of \(X\) not in \(T\). Since \(X\) is connected, we may choose an edge path in \(X\) from \({x}_{0}\) to a vertex of \(T\), specified by the sequence of vertices \({x}_{0}\), \(\ldots ,{x}_{n}\). Let \(i\) be the smallest index such that \({x}_{i} \in T\). Let \(A\) be the edge of \(X\) with vertices \({x}_{i - 1}\) and \({x}_{i}\). Then \(T \cup A\) is a tree in \(X\), by the preceding lemma, and \(T \cup A\) properly contains \(T\).
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 	If \(X\) is a linear graph, every tree \({T}_{0}\) in \(X\) is contained in a maximal tree in \(X\).
 \end{theorem}
 
@@ -200,11 +211,12 @@ Finally, we suppose that \({e}_{1},\ldots ,{e}_{n}\) is a closed reduced edge pa
 Now we compute the fundamental group of a graph. We need the following result.
 \end{proof}
 \begin{lemma}
+\label{lem:\thetheorem}
 	Suppose \(X = U \cup V\), where \(U\) and \(V\) are open sets of \(X\). Suppose that \(U \cap V\) is the union of two disjoint open path-connected sets \(A\) and \(B\), that \(\alpha\) is a path in \(U\) from the point \(a\) of \(A\) to the point \(b\) of \(B\), and that \(\beta\) is a path in \(V\) from \(b\) to \(a\). If \(U\) and \(V\) are simply connected, then the class \([ {\alpha * \beta }]\) generates \({\pi }_{1}( {X,a})\).
 \end{lemma}
 
 \begin{proof}
-	The situation is similar to that of Theorem 59.1, except that \(U \cap V\) has two path components instead of one. The proof is also similar.
+	The situation is similar to that of \hyperref[thm:59.1]{Theorem 59.1}, except that \(U \cap V\) has two path components instead of one. The proof is also similar.
 Let \(f\) be a loop in \(X\) based at \(a\). Choose a subdivision \(0 = {a}_{0} < {a}_{1} < \cdots < {a}_{n} =\) 1 of \([ {0,1}]\) such that for each \(i,f( {a}_{i}) \in U \cap V\) and \(f\) maps \([ {{a}_{i - 1},{a}_{i}}]\) into either \(U\) or \(V\). Let \({f}_{i}\) be the positive linear map of \([ {0,1}]\) onto \([ {{a}_{i - 1},{a}_{i}}]\) followed by \(f\) ; then \([ f] = [ {f}_{1}] * \cdots * [ {f}_{n}]\). For \(i = 1,\ldots, n - 1\), choose a path \({\alpha }_{i}\) in either \(A\) or \(B\) from \(a\) or \(b\) to \(f( {a}_{i})\) ; choose \({\alpha }_{0}\) and \({\alpha }_{n}\) to be the constant paths at \(a\). Then set
 
 \[
@@ -216,6 +228,7 @@ By direct computation, \([ f] = [ {g}_{1}] * \cdots * [ {g}_{n}]\). Because \({g
 \munkresfig[1.0]{84.5}[Figure 84.5]
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 	Let \(X\) be a connected graph that is not a tree. Then the fundamental group of \(X\) is a nontrivial free group. Indeed, if \(T\) is a maximal tree in \(X\), then the fundamental group of \(X\) has a system of free generators that is in bijective correspondence with the collection of edges of \(X\) that are not in \(T\).
 \end{theorem}
 
@@ -235,9 +248,9 @@ Let \({A}_{1},\ldots ,{A}_{n}\) be the edges of \(X\) not in \(T\), where \(n > 
 U = X - {p}_{2} - \cdots - {p}_{n}\;\text{ and }\;V = X - {p}_{1}.
 \]
 
-Then \(U\) and \(V\) are open in \(X\), and the space \(U \cap V = X - {p}_{1} - \cdots - {p}_{n}\) is simply connected, since it has \(T\) as a deformation retract. Therefore, \({\pi }_{1}( {X,{x}_{0}})\) is the free product of the groups \({\pi }_{1}( {U,{x}_{0}})\) and \({\pi }_{1}( {V,{x}_{0}})\), by Corollary 70.3.
+Then \(U\) and \(V\) are open in \(X\), and the space \(U \cap V = X - {p}_{1} - \cdots - {p}_{n}\) is simply connected, since it has \(T\) as a deformation retract. Therefore, \({\pi }_{1}( {X,{x}_{0}})\) is the free product of the groups \({\pi }_{1}( {U,{x}_{0}})\) and \({\pi }_{1}( {V,{x}_{0}})\), by \hyperref[cor:70.3]{Corollary 70.3}.
 
-The space \(U\) has \(T \cup {A}_{1}\) as a deformation retract, so \({\pi }_{1}( {U,{x}_{0}})\) is free on the generator \([ {g}_{1}]\), as we shall prove in Step 2. The space \(V\) has \(T \cup {A}_{2} \cup \cdots \cup {A}_{n}\) as a deformation retract, so it is free on the generators \([ {g}_{2}] ,\ldots ,[ {g}_{n}]\), by the induction hypothesis. It follows from Theorem 69.2 that \({\pi }_{1}( {X,{x}_{0}})\) is free on the generators \([ {g}_{1}]\), \(\ldots ,[ {g}_{n}]\). See \hyperref[fig:84.6]{Figure 84.6}.
+The space \(U\) has \(T \cup {A}_{1}\) as a deformation retract, so \({\pi }_{1}( {U,{x}_{0}})\) is free on the generator \([ {g}_{1}]\), as we shall prove in Step 2. The space \(V\) has \(T \cup {A}_{2} \cup \cdots \cup {A}_{n}\) as a deformation retract, so it is free on the generators \([ {g}_{2}] ,\ldots ,[ {g}_{n}]\), by the induction hypothesis. It follows from \hyperref[thm:69.2]{Theorem 69.2} that \({\pi }_{1}( {X,{x}_{0}})\) is free on the generators \([ {g}_{1}]\), \(\ldots ,[ {g}_{n}]\). See \hyperref[fig:84.6]{Figure 84.6}.
 
 \munkresfig[0.7]{84.6}[Figure 84.6]
 Step 2. We now consider the case where there is only one edge \(D\) of \(X\) that is not in \(T\). This step is more difficult. Orient \(D\). We show \({\pi }_{1}( {X,{x}_{0}})\) is infinite cyclic with generator \([ {g}_{D}]\).
@@ -271,7 +284,7 @@ It follows that \({\pi }_{1}( {X,{x}_{0}})\) is generated by \(\widehat{\delta }
 
 Therefore, \([ {g}_{D}]\) generates \({\pi }_{1}( {X,{x}_{0}})\).
 
-It remains to show that the element \([ {g}_{D}]\) has infinite order, so that \({\pi }_{1}( {X,{x}_{0}})\) is infinite cyclic. One can apply Theorem 63.1 (which we used in proving the Jordan curve theorem), which states that \([ {\alpha * \beta }]\) has infinite order in \({\pi }_{1}( {X,a})\). Alternatively (and more easily), one can consider the map \(\pi : X \rightarrow {S}^{1}\) that collapses the tree \(T\) to a single point \(p\) and maps the open arc Int \(D\) homeomorphically onto \({S}^{1} - p\). Then \(\pi \circ {\gamma }_{0}\) and \(\pi \circ {\bar{\gamma }}_{1}\) are constant paths, so that
+It remains to show that the element \([ {g}_{D}]\) has infinite order, so that \({\pi }_{1}( {X,{x}_{0}})\) is infinite cyclic. One can apply \hyperref[thm:63.1]{Theorem 63.1} (which we used in proving the Jordan curve theorem), which states that \([ {\alpha * \beta }]\) has infinite order in \({\pi }_{1}( {X,a})\). Alternatively (and more easily), one can consider the map \(\pi : X \rightarrow {S}^{1}\) that collapses the tree \(T\) to a single point \(p\) and maps the open arc Int \(D\) homeomorphically onto \({S}^{1} - p\). Then \(\pi \circ {\gamma }_{0}\) and \(\pi \circ {\bar{\gamma }}_{1}\) are constant paths, so that
 
 \[
 {\pi }_{ * }( [ {g}_{D}] ) = [ {\pi \circ {f}_{D}}] .
@@ -279,7 +292,7 @@ It remains to show that the element \([ {g}_{D}]\) has infinite order, so that \
 
 This class generates \({\pi }_{1}( {{S}^{1},p})\). It follows that \([ {g}_{D}]\) has infinite order in \({\pi }_{1}( {X,{x}_{0}})\).
 
-Step 3. Now we consider the situation where the collection of edges of \(X\) not in \(T\) is infinite. The proof in this case is so similar to the corresponding proof for an infinite wedge of circles that we omit the details. (See Theorem 71.3.) The crucial facts are these: Any loop in \(X\) based at \({x}_{0}\) lies in the space
+Step 3. Now we consider the situation where the collection of edges of \(X\) not in \(T\) is infinite. The proof in this case is so similar to the corresponding proof for an infinite wedge of circles that we omit the details. (See \hyperref[thm:71.3]{Theorem 71.3}.) The crucial facts are these: Any loop in \(X\) based at \({x}_{0}\) lies in the space
 
 \[
 X( {{\alpha }_{1},\ldots ,{\alpha }_{n}}) = T \cup {A}_{{\alpha }_{1}} \cup \cdots \cup {A}_{{\alpha }_{n}}
@@ -289,7 +302,7 @@ for some finite set of indices \({\alpha }_{i}\), and any path homotopy between 
 \end{proof}
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
-\item Give an example to show that the second part of Lemma 84.2 need not hold if \(T\) is infinite.
+\item Give an example to show that the second part of \hyperref[lem:84.2]{Lemma 84.2} need not hold if \(T\) is infinite.
 \item What is the cardinality of a system of free generators for the fundamental group of the complete graph on \(n\) vertices? of the utilities graph? (See \S 64.)
 \item Let \(X\) be the wedge of two circles; let \(p : E \rightarrow X\) be a covering map. The fundamental group of \(E\) maps isomorphically under \({p}_{ * }\) onto a subgroup \(H\) of the fundamental group of \(X\) ; the latter is free on two generators \(\alpha\) and \(\beta\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
@@ -302,12 +315,13 @@ for some finite set of indices \({\alpha }_{i}\), and any path homotopy between 
 We now prove our main theorem, to the effect that a subgroup \(H\) of a free group \(F\) is free. The method of proof, remarkably enough, will give us some information about the cardinality of a system of free generators for \(H\), when the cardinality of a system of free generators for \(F\) is known.
 
 \begin{theorem}
+\label{thm:\thetheorem}
 	If \(H\) is a subgroup of a free group \(F\), then \(H\) is free.
 \end{theorem}
 
 \begin{proof}
 	Let \(\{ \alpha \mid \alpha \in J\}\) be a system of free generators for \(F\). Let \(X\) be a wedge of circles \({S}_{\alpha }\), one for each \(\alpha \in J\) ; let \({x}_{0}\) be their common point. We can give \(X\) the structure of a linear graph by breaking each circle \({S}_{\alpha }\) into three arcs, two of which have \({x}_{0}\) as an end point. The function that assigns to each \(\alpha\), a loop generating \({\pi }_{1}( {{S}_{\alpha },{x}_{0}})\), induces an isomorphism of \(F\) with \({\pi }_{1}( {X,{x}_{0}})\). Therefore we may as well assume that \(F\) equals the group \({\pi }_{1}( {X,{x}_{0}})\).
-The space \(X\) is path connected, locally path connected, and semilocally simply connected. Therefore Theorem 82.1 applies to show that there exists a path-connected covering space \(p : E \rightarrow X\) of \(X\) such that, for some point \({e}_{0}\) of \({p}^{-1}( {x}_{0})\),
+The space \(X\) is path connected, locally path connected, and semilocally simply connected. Therefore \hyperref[thm:82.1]{Theorem 82.1} applies to show that there exists a path-connected covering space \(p : E \rightarrow X\) of \(X\) such that, for some point \({e}_{0}\) of \({p}^{-1}( {x}_{0})\),
 
 \[
 {p}_{ * }( {{\pi }_{1}( {E,{e}_{0}}) }) = H
@@ -315,13 +329,14 @@ The space \(X\) is path connected, locally path connected, and semilocally simpl
 
 Since \({p}_{ * }\) is a monomorphism, \({\pi }_{1}( {E,{e}_{0}})\) is isomorphic to \(H\).
 
-The space \(E\) is a linear graph, by Theorem 83.4. Then Theorem 84.7 implies that its fundamental group is a free group.
+The space \(E\) is a linear graph, by \hyperref[thm:83.4]{Theorem 83.4}. Then \hyperref[thm:84.7]{Theorem 84.7} implies that its fundamental group is a free group.
 \end{proof}
 \begin{definition}
 	If \(X\) is a finite linear graph, we define the Euler number of \(X\) to be the number of vertices of \(X\) minus the number of edges. It is commonly denoted by the Greek letter chi, as \(\chi ( X)\).
 \end{definition}
 
 \begin{lemma}
+\label{lem:\thetheorem}
 	If \(X\) is a finite, connected linear graph, then the cardinality of a system of free generators for the fundamental group of \(X\) is \(1 - \chi ( X)\).
 \end{lemma}
 
@@ -340,11 +355,12 @@ so that \(n = 1 - \chi ( X)\).
 \end{definition}
 
 \begin{theorem}
+\label{thm:\thetheorem}
 	Let \(F\) be a free group with \(n + 1\) free generators; let \(H\) be a subgroup of \(F\). If \(H\) has index \(k\) in \(F\), then \(H\) has \({kn} + 1\) free generators.
 \end{theorem}
 
 \begin{proof}
-	We apply the construction given in the proof of Theorem 85.1. We can assume that \(F = {\pi }_{1}( {X,{x}_{0}})\), where \(X\) is a linear graph whose underlying space is a wedge of \(n + 1\) circles. Given \(H\), we choose a path-connected covering space \(p : E \rightarrow X\) such that \({p}_{ * }( {{\pi }_{1}( {E,{e}_{0}}) }) = H\). Now the lifting correspondence
+	We apply the construction given in the proof of \hyperref[thm:85.1]{Theorem 85.1}. We can assume that \(F = {\pi }_{1}( {X,{x}_{0}})\), where \(X\) is a linear graph whose underlying space is a wedge of \(n + 1\) circles. Given \(H\), we choose a path-connected covering space \(p : E \rightarrow X\) such that \({p}_{ * }( {{\pi }_{1}( {E,{e}_{0}}) }) = H\). Now the lifting correspondence
 \[
 \Phi : {\pi }_{1}( {X,{x}_{0}}) /H \rightarrow {p}^{-1}( {x}_{0})
 \]
@@ -357,7 +373,7 @@ The space \(E\) is also a linear graph. Given an edge \(A\) of \(X\), the path c
 1 - \chi ( E) = 1 - {k\chi }( X) = 1 + {kn}.
 \]
 
-Note that if \(F\) is a free group with a finite system of free generators and \(H\) is a subgroup of \(F\) such that \(F/H\) is infinite, then nothing can be said about the cardinality of a system of free generators for \(H\). It might be finite (for instance, if \(H\) is the trivial subgroup) or infinite (for instance, if \(H\) is the fundamental group of the covering space pictured in Example 2 of \S 81).
+Note that if \(F\) is a free group with a finite system of free generators and \(H\) is a subgroup of \(F\) such that \(F/H\) is infinite, then nothing can be said about the cardinality of a system of free generators for \(H\). It might be finite (for instance, if \(H\) is the trivial subgroup) or infinite (for instance, if \(H\) is the fundamental group of the covering space pictured in \exrefs{81}{2}).
 \end{proof}
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]

@@ -25,6 +25,7 @@ If two polygonal regions \(P\) and \(Q\) have the same number of vertices, \({p}
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 	Consider the orientations and labelling of the edges of the triangular region pictured in \hyperref[fig:74.2]{Figure 74.2}. The figure indicates how one can show that the resulting quotient space is homeomorphic to the unit ball.
 
 \munkresfig[1.0]{74.2}[Figure 74.2]
@@ -33,6 +34,7 @@ If two polygonal regions \(P\) and \(Q\) have the same number of vertices, \({p}
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 	The orientations and labelling of the edges of the square pictured in \hyperref[fig:74.3]{Figure 74.3} give rise to a space that is homeomorphic to the sphere \({S}^{2}\).
 
 \munkresfig[1.0]{74.3}[Figure 74.3]
@@ -51,14 +53,15 @@ w = {( {a}_{{i}_{1}}) }^{{\epsilon }_{1}}{( {a}_{{i}_{2}}) }^{{\epsilon }_{2}}\c
 We call this symbol a labelling scheme of length \(n\) for the edges of \(P\) ; it is simply a sequence of labels with exponents \(+ 1\) or -1.
 \end{definition}
 
-We normally omit the exponents that equal +1 when giving a labelling scheme. Then the orientations and labelling of Example 1 can be specified by the labelling scheme \({a}^{-1}{ba}\), if we take \({p}_{0}\) to be the top vertex of the triangle. If we take one of the other vertices to be \({p}_{0}\), then we obtain one of the labelling schemes \({ba}{a}^{-1}\) or \(a{a}^{-1}b\).
+We normally omit the exponents that equal +1 when giving a labelling scheme. Then the orientations and labelling of \exref{1} can be specified by the labelling scheme \({a}^{-1}{ba}\), if we take \({p}_{0}\) to be the top vertex of the triangle. If we take one of the other vertices to be \({p}_{0}\), then we obtain one of the labelling schemes \({ba}{a}^{-1}\) or \(a{a}^{-1}b\).
 
-Similarly, the orientations and labelling indicated in Example 2 can be specified (if we begin at the lower left corner of the square) by the symbol \(a{a}^{-1}b{b}^{-1}\).
+Similarly, the orientations and labelling indicated in \exref{2} can be specified (if we begin at the lower left corner of the square) by the symbol \(a{a}^{-1}b{b}^{-1}\).
 
 It is clear that a cyclic permutation of the terms in a labelling scheme will change the space \(X\) formed by using the scheme only up to homeomorphism. Later we will consider other modifications one can make to a labelling scheme that will leave the space \(X\) unchanged up to homeomorphism.
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 	We have already shown how the torus can be expressed as a quotient space of the unit square by means of the quotient map \(p \times p : I \times I \rightarrow {S}^{1} \times {S}^{1}\). This same quotient space can be specified by the orientations and labelling of the edges of the square indicated in \hyperref[fig:74.4]{Figure 74.4}. It can be specified also by the scheme \({ab}{a}^{-1}{b}^{-1}\).
 
 \munkresfig[1.0]{74.4}[Figure 74.4]
@@ -67,6 +70,7 @@ It is clear that a cyclic permutation of the terms in a labelling scheme will ch
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 	The projective plane \({P}^{2}\) is homeomorphic to the quotient space of the unit ball \({B}^{2}\) obtained by identifying \(x\) with \(- x\) for each \(x \in {S}^{1}\). Because the unit square is homeomorphic to the unit ball, this space can also be specified by the orientations and labelling of the edges of the unit square indicated in \hyperref[fig:74.5]{Figure 74.5}. It can be specified by the scheme abab.
 
 \munkresfig[0.9]{74.5}[Figure 74.5]
@@ -77,6 +81,7 @@ Now there is no reason to restrict oneself to a single polygonal region when for
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 	\hyperref[fig:74.6]{Figure 74.6} indicates a labelling of the edges of two squares for which the resulting quotient space is connected; it is the space called the Möbius band. Of course, this space could also be obtained from a single square by using the labelling scheme abac, as you can check.
 
 \munkresfig[1.0]{74.6}[Figure 74.6]
@@ -85,6 +90,7 @@ Now there is no reason to restrict oneself to a single polygonal region when for
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 	\hyperref[fig:74.7]{Figure 74.7} indicates a labelling scheme for the edges of two squares for which the resulting quotient space is not connected.
 
 \munkresfig[1.0]{74.7}[Figure 74.7]
@@ -92,18 +98,20 @@ Now there is no reason to restrict oneself to a single polygonal region when for
 \end{centeredblock}
 
 \begin{theorem}
+\label{thm:\thetheorem}
 	Let \(X\) be the space obtained from a finite collection of polygonal regions by pasting edges together according to some labelling scheme. Then \(X\) is a compact Hausdorff space.
 \end{theorem}
 
 \begin{proof}
 	For simplicity, we treat the case where \(X\) is formed from a single polygonal region. The general case is similar.
-It is immediate that \(X\) is compact, since the quotient map is continuous. To show \(X\) is Hausdorff, it suffices to show that the quotient map \(\pi\) is a closed map. (See Lemma 73.3.) For this purpose, we must show that for each closed set \(C\) of \(P\), the set \({\pi }^{-1}\pi ( C)\) is closed in \(P\). Now \({\pi }^{-1}\pi ( C)\) consists of the points of \(C\) and all points of \(P\) that are pasted to points of \(C\) by the map \(\pi\). These points are easy to determine. For each edge \(e\) of \(P\), let \({C}_{e}\) denote the compact subspace \(C \cap e\) of \(P\). If \({e}_{i}\) is an edge of \(P\) that is pasted to \(e\), and if \({h}_{i} : {e}_{i} \rightarrow e\) is the pasting homeomorphism, then the set \({D}_{e} = {\pi }^{-1}\pi ( C) \cap e\) contains the space \({h}_{i}( {C}_{{e}_{i}})\). Indeed, \({D}_{e}\) equals the union of \({C}_{e}\) and the spaces \({h}_{i}( {C}_{{e}_{i}})\), as \({e}_{i}\) ranges over all edges of \(P\) that are pasted to \(e\). This union is compact; therefore, it is closed in \(e\) and in \(P\).
+It is immediate that \(X\) is compact, since the quotient map is continuous. To show \(X\) is Hausdorff, it suffices to show that the quotient map \(\pi\) is a closed map. (See \hyperref[lem:73.3]{Lemma 73.3}.) For this purpose, we must show that for each closed set \(C\) of \(P\), the set \({\pi }^{-1}\pi ( C)\) is closed in \(P\). Now \({\pi }^{-1}\pi ( C)\) consists of the points of \(C\) and all points of \(P\) that are pasted to points of \(C\) by the map \(\pi\). These points are easy to determine. For each edge \(e\) of \(P\), let \({C}_{e}\) denote the compact subspace \(C \cap e\) of \(P\). If \({e}_{i}\) is an edge of \(P\) that is pasted to \(e\), and if \({h}_{i} : {e}_{i} \rightarrow e\) is the pasting homeomorphism, then the set \({D}_{e} = {\pi }^{-1}\pi ( C) \cap e\) contains the space \({h}_{i}( {C}_{{e}_{i}})\). Indeed, \({D}_{e}\) equals the union of \({C}_{e}\) and the spaces \({h}_{i}( {C}_{{e}_{i}})\), as \({e}_{i}\) ranges over all edges of \(P\) that are pasted to \(e\). This union is compact; therefore, it is closed in \(e\) and in \(P\).
 
 Since \({\pi }^{-1}\pi ( C)\) is the union of the set \(C\) and the sets \({D}_{e}\), as \(e\) ranges over all edges of \(P\), it is closed in \(P\), as desired.
 \end{proof}
 
-Now we note that if \(X\) is obtained by pasting the edges of a polygonal region together, the quotient map \(\pi\) may map all the vertices of the polygonal region to a single point of \(X\), or it may not. In the case of the torus of Example 3, the quotient map does satisfy this condition, while in the case of the ball and sphere of Examples 1 and 2, it does not. We are especially happy when \(\pi\) satisfies this condition, for in this case one can readily compute the fundamental group of \(X\) :
+Now we note that if \(X\) is obtained by pasting the edges of a polygonal region together, the quotient map \(\pi\) may map all the vertices of the polygonal region to a single point of \(X\), or it may not. In the case of the torus of \exref{3}, the quotient map does satisfy this condition, while in the case of the ball and sphere of Examples 1 and 2, it does not. We are especially happy when \(\pi\) satisfies this condition, for in this case one can readily compute the fundamental group of \(X\) :
 \begin{theorem}
+\label{thm:\thetheorem}
 	Let \(P\) be a polygonal region; let
 
 \[
@@ -123,7 +131,7 @@ be a labelling scheme for the edges of \(P\). Let \(X\) be the resulting quotien
 {( {g}_{{i}_{1}}) }^{{\epsilon }_{1}} * \cdots * {( {g}_{{i}_{n}}) }^{{\epsilon }_{n}}
 \]
 
-The theorem now follows from Theorem 72.1.
+The theorem now follows from \hyperref[thm:72.1]{Theorem 72.1}.
 \end{proof}
 \begin{definition}
 	Consider the space obtained from a \({4n}\) -sided polygonal region \(P\) by means of the labelling scheme
@@ -143,6 +151,7 @@ A similar argument shows that the 3-fold torus \(T\# T\# T\) can be pictured as 
 
 \munkresfig[1.0]{74.9}[Figure 74.9]
 \begin{theorem}
+\label{thm:\thetheorem}
 	Let \(X\) denote the \(n\) -fold torus. Then \({\pi }_{1}( {X,{x}_{0}})\) is isomorphic to the quotient of the free group on the \({2n}\) generators \({\alpha }_{1},{\beta }_{1},\ldots ,{\alpha }_{n},{\beta }_{n}\) by the least normal subgroup containing the element
 
 \[
@@ -153,7 +162,7 @@ where \([ {\alpha ,\beta }] = {\alpha \beta }{\alpha }^{-1}{\beta }^{-1}\), as u
 \end{theorem}
 
 \begin{proof}
-	In order to apply Theorem 74.2, one must show that under the labelling scheme for \(X\), all the vertices of the polygonal region belong to the same equivalence class. We leave this to you to check.
+	In order to apply \hyperref[thm:74.2]{Theorem 74.2}, one must show that under the labelling scheme for \(X\), all the vertices of the polygonal region belong to the same equivalence class. We leave this to you to check.
 \end{proof}
 \begin{definition}
 	Let \(m > 1\). Consider the space obtained from a \({2m}\) -sided polygonal region \(P\) in the plane by means of the labelling scheme
@@ -169,6 +178,7 @@ The 2-fold projective plane \({P}^{2}\# {P}^{2}\) is pictured in \hyperref[fig:7
 
 \munkresfig[1.0]{74.10}[Figure 74.10]
 \begin{theorem}
+\label{thm:\thetheorem}
 	Let \(X\) denote the \(m\) -fold projective plane. Then \({\pi }_{1}( {X,{x}_{0}})\) is isomorphic to the quotient of the free group on \(m\) generators \({\alpha }_{1},\ldots ,{\alpha }_{m}\) by the least normal subgroup containing the element
 
 \[
@@ -229,6 +239,7 @@ If you study algebraic topology further, you will see an entirely different defi
 To compute \({H}_{1}( X)\) for the surfaces considered earlier, we need the following result:
 
 \begin{theorem}
+\label{thm:\thetheorem}
 	Let \(F\) be a group; let \(N\) be a normal subgroup of \(F\) ; let \(q : F \rightarrow F/N\) be the projection. The projection homomorphism
 
 \[
@@ -253,6 +264,7 @@ Because \(r \circ p\) maps \(N\) to 1, it induces a homomorphism \(u : q( F) \ri
 The homomorphism \(\phi\) can be described as follows: Given an element \(y\) of the group \(q( F) /[ {q( F),q( F) }]\), choose an element \(x\) of \(F\) such that \(s( {q(x) }) = y\) ; then \(\phi ( y) = r( {p(x) })\). The homomorphism \(\psi\) can be described similarly. It follows that \(\phi\) and \(\psi\) are inverse to each other.
 \end{proof}
 \begin{corollary}
+\label{cor:\thetheorem}
 	Let \(F\) be a free group with free generators \({\alpha }_{1},\ldots ,{\alpha }_{n}\) ; let \(N\) be the least normal subgroup of \(F\) containing the element \(x\) of \(F\) ; let \(G = F/N\). Let \(p : F \rightarrow F/[ {F,F}]\) be projection. Then \(G/[ {G,G}]\) is isomorphic to the quotient of \(F/[ {F,F}]\), which is free abelian with basis \(p( {\alpha }_{1}),\ldots, p( {\alpha }_{n})\), by the subgroup generated by \(p(x)\).
 \end{corollary}
 
@@ -260,39 +272,42 @@ The homomorphism \(\phi\) can be described as follows: Given an element \(y\) of
 	Note that because \(N\) is generated by \(x\) and all its conjugates, the group \(p( N)\) is generated by \(p(x)\). The corollary then follows from the preceding theorem.
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 	If \(X\) is the \(n\) -fold connected sum of tori, then \({H}_{1}( X)\) is a free abelian group of rank \({2n}\).
 \end{theorem}
 
 \begin{proof}
-	In view of the preceding corollary, Theorem 74.3 implies that \({H}_{1}( X)\) is isomorphic to the quotient of the free abelian group \({F}^{\prime }\) on the set \({\alpha }_{1},{\beta }_{1},\ldots ,{\alpha }_{n},{\beta }_{n}\) by the subgroup generated by the element \([ {{\alpha }_{1},{\beta }_{1}}] \cdots [ {{\alpha }_{n},{\beta }_{n}}]\), where \([ {\alpha ,\beta }] = {\alpha \beta }{\alpha }^{-1}{\beta }^{-1}\) as usual. Because the group \({F}^{\prime }\) is abelian, this element equals the identity element.
+	In view of the preceding corollary, \hyperref[thm:74.3]{Theorem 74.3} implies that \({H}_{1}( X)\) is isomorphic to the quotient of the free abelian group \({F}^{\prime }\) on the set \({\alpha }_{1},{\beta }_{1},\ldots ,{\alpha }_{n},{\beta }_{n}\) by the subgroup generated by the element \([ {{\alpha }_{1},{\beta }_{1}}] \cdots [ {{\alpha }_{n},{\beta }_{n}}]\), where \([ {\alpha ,\beta }] = {\alpha \beta }{\alpha }^{-1}{\beta }^{-1}\) as usual. Because the group \({F}^{\prime }\) is abelian, this element equals the identity element.
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 	If \(X\) is the \(m\) -fold connected sum of projective planes, then the torsion subgroup \(T( X)\) of \({H}_{1}( X)\) has order 2, and \({H}_{1}( X) /T( X)\) is a free abelian group of rank \(m - 1\).
 \end{theorem}
 
 \begin{proof}
-	In view of the preceding corollary, Theorem 74.4 implies that \({H}_{1}( X)\) is isomorphic to the quotient of the free abelian group \({F}^{\prime }\) on the set \({\alpha }_{1},\ldots ,{\alpha }_{m}\) by the subgroup generated by \({( {\alpha }_{1}) }^{2}\cdots {( {\alpha }_{m}) }^{2}\). If we switch to additive notation (which is usual when dealing with abelian groups), this is the subgroup generated by the element \(2( {{\alpha }_{1} + \cdots + {\alpha }_{m}})\). Let us change bases in the group \({F}^{\prime }\). If we let \(\beta = {\alpha }_{1} + \cdots + {\alpha }_{m}\), then the elements \({\alpha }_{1},\ldots ,{\alpha }_{m - 1},\beta\) form a basis for \({F}^{\prime }\), any element of \({F}^{\prime }\) can be written uniquely in terms of these elements. The group \({H}_{1}( X)\) is isomorphic to the quotient of the free abelian group on \({\alpha }_{1},\ldots ,{\alpha }_{m - 1},\beta\) by the subgroup generated by \({2\beta }\). Said differently, \({H}_{1}( X)\) is isomorphic to the quotient of the \(m\) -fold cartesian product \(\mathbb{Z} \times \cdots \times \mathbb{Z}\) by the subgroup \(0 \times \cdots \times 0 \times 2\mathbb{Z}\). The theorem follows.
+	In view of the preceding corollary, \hyperref[thm:74.4]{Theorem 74.4} implies that \({H}_{1}( X)\) is isomorphic to the quotient of the free abelian group \({F}^{\prime }\) on the set \({\alpha }_{1},\ldots ,{\alpha }_{m}\) by the subgroup generated by \({( {\alpha }_{1}) }^{2}\cdots {( {\alpha }_{m}) }^{2}\). If we switch to additive notation (which is usual when dealing with abelian groups), this is the subgroup generated by the element \(2( {{\alpha }_{1} + \cdots + {\alpha }_{m}})\). Let us change bases in the group \({F}^{\prime }\). If we let \(\beta = {\alpha }_{1} + \cdots + {\alpha }_{m}\), then the elements \({\alpha }_{1},\ldots ,{\alpha }_{m - 1},\beta\) form a basis for \({F}^{\prime }\), any element of \({F}^{\prime }\) can be written uniquely in terms of these elements. The group \({H}_{1}( X)\) is isomorphic to the quotient of the free abelian group on \({\alpha }_{1},\ldots ,{\alpha }_{m - 1},\beta\) by the subgroup generated by \({2\beta }\). Said differently, \({H}_{1}( X)\) is isomorphic to the quotient of the \(m\) -fold cartesian product \(\mathbb{Z} \times \cdots \times \mathbb{Z}\) by the subgroup \(0 \times \cdots \times 0 \times 2\mathbb{Z}\). The theorem follows.
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 	Let \({T}_{n}\) and \({P}_{m}\) denote the \(n\) -fold connected sum of tori and the \(m\) - fold connected sum of projective planes, respectively. Then the surfaces \({S}^{2};{T}_{1},{T}_{2}\), \(\ldots ;{P}_{1},{P}_{2},\ldots\) are topologically distinct.
 \end{theorem}
 
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
-\item Calculate \({H}_{1}( {{P}^{2}\# T})\). Assuming that the list of compact surfaces given in Theorem 75.5 is a complete list, to which of these surfaces is \({P}^{2}\# T\) homeomorphic?
+\item Calculate \({H}_{1}( {{P}^{2}\# T})\). Assuming that the list of compact surfaces given in \hyperref[thm:75.5]{Theorem 75.5} is a complete list, to which of these surfaces is \({P}^{2}\# T\) homeomorphic?
 \item If \(K\) is the Klein bottle, calculate \({H}_{1}( K)\) directly.
 \item Let \(X\) be the quotient space obtained from an 8-sided polygonal region \(P\) by pasting its edges together according to the labelling scheme \(acadbc{b}^{-1}d\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Check that all vertices of \(P\) are mapped to the same point of the quotient space \(X\) by the pasting map.
  \item Calculate \({H}_{1}( X)\).
- \item Assuming \(X\) is homeomorphic to one of the surfaces given in Theorem 75.5 (which it is), which surface is it?
+ \item Assuming \(X\) is homeomorphic to one of the surfaces given in \hyperref[thm:75.5]{Theorem 75.5} (which it is), which surface is it?
  \end{enumerate}
 \item[*4.] Let \(X\) be the quotient space obtained from an 8-sided polygonal region \(P\) by means of the labelling scheme \({abcda}{d}^{-1}c{b}^{-1}\). Let \(\pi : P \rightarrow X\) be the quotient map.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show that \(\pi\) does not map all the vertices of \(P\) to the same point of \(X\).
  \item Determine the space \(A = \pi ( {\text{ Bd }P})\) and calculate its fundamental group.
  \item Calculate \({\pi }_{1}( {X,{x}_{0}})\) and \({H}_{1}( X)\).
- \item Assuming \(X\) is homeomorphic to one of the surfaces given in Theorem 75.5, which surface is it?
+ \item Assuming \(X\) is homeomorphic to one of the surfaces given in \hyperref[thm:75.5]{Theorem 75.5}, which surface is it?
  \end{enumerate}
 \end{enumerate}
 \booksection{76}{Cutting and Pasting}
@@ -320,6 +335,7 @@ One can of course apply this procedure in reverse. If \(X\) is represented by a 
 We state this fact formally as a theorem:
 
 \begin{theorem}
+\label{thm:\thetheorem}
 	Suppose \(X\) is the space obtained by pasting the edges of \(m\) polygonal regions together according to the labelling scheme
 
 (*)
@@ -378,6 +394,7 @@ This last result follows from the three-step argument indicated in \hyperref[fig
 
 \begin{centeredblock*}
 \begin{example}
+\label{ex:\thesection.\theexample}
 	The Klein bottle \(K\) is the space obtained from the labelling scheme \({ab}{a}^{-1}b\). In the exercises of \S 74, you were asked to show that \(K\) is homeomorphic to the 2-fold projective plane \({P}^{2}\# {P}^{2}\). The geometric argument suggested there in fact consists of the following elementary operations
 
 \[
@@ -451,6 +468,7 @@ w = [ {y}_{0}] a[ {y}_{1}] a[ {y}_{2}] .
 We have the following result:
 
 \begin{lemma}
+\label{lem:\thetheorem}
 	Let \(w\) be a proper scheme of the form
 
 \[
@@ -504,6 +522,7 @@ by permuting and relabelling.
 \munkresfig[1.0]{77.2}[Figure 77.2]
 \end{proof}
 \begin{corollary}
+\label{cor:\thetheorem}
 	If \(w\) is a scheme of projective type, then \(w\) is equivalent to a scheme of the same length having the form
 
 \[
@@ -546,6 +565,7 @@ Schemes of length four are easy to deal with, as we shall see later, so let us a
 
 where \({w}^{\prime \prime }\) is of torus type or is empty. This is the substance of the following lemma:
 \begin{lemma}
+\label{lem:\thetheorem}
 	Let \(w\) be a proper scheme of the form \(w = {w}_{0}{w}_{1}\), where \({w}_{1}\) is a scheme of torus type that does not contain two adjacent terms having the same label. Then \(w\) is equivalent to a scheme of the form \({w}_{0}{w}_{2}\), where \({w}_{2}\) has the same length as \({w}_{1}\) and has the form
 
 \[
@@ -666,6 +686,7 @@ by relabelling, as desired.
 \munkresfig[1.0]{77.5}[Figure 77.5]
 The final step of our classification procedure involves showing that a connected sum of projective planes and tori is equivalent to a connected sum of projective planes alone.
 \begin{lemma}
+\label{lem:\thetheorem}
 	Let \(w\) be a proper scheme of the form
 
 \[
@@ -680,7 +701,7 @@ Then \(w\) is equivalent to the scheme
 \end{lemma}
 
 \begin{proof}
-	Recall Lemma 77.1, which states that for proper schemes we have
+	Recall \hyperref[lem:77.1]{Lemma 77.1}, which states that for proper schemes we have
 (*)
 \[
 [ {y}_{0}] a[ {y}_{1}] a[ {y}_{2}] \sim {aa}[ {{y}_{0}{y}_{1}^{-1}{y}_{2}}] .
@@ -729,7 +750,8 @@ by \((*)\)
 by permuting.
 \end{proof}
 
-\begin{theorem}[The classification theorem]
+\begin{theorem}
+\label{thm:\thetheorem}[The classification theorem]
 	Let \(X\) be the quotient space obtained from a polygonal region in the plane by pasting its edges together in pairs. Then \(X\) is homeomorphic either to \({S}^{2}\), to the \(n\) -fold torus \({T}_{n}\), or to the \(m\) -fold projective plane \({P}_{m}\).
 \end{theorem}
 
@@ -754,7 +776,7 @@ a{a}^{-1}b{b}^{-1}\;\text{ or }\;{ab}{a}^{-1}{b}^{-1}.
 
 The first is of type (1) and the second of type (4).
 
-We proceed by induction on the length of \(w\). Assume \(w\) has length greater than four. If \(w\) is equivalent to a shorter scheme of torus type, then the induction hypothesis applies. Otherwise, we know that \(w\) contains no pair of adjacent terms having the same label. We apply Lemma 77.3 (with \({w}_{0}\) empty) to conclude that \(w\) is equivalent to a scheme having the same length as \(w\), of the form
+We proceed by induction on the length of \(w\). Assume \(w\) has length greater than four. If \(w\) is equivalent to a shorter scheme of torus type, then the induction hypothesis applies. Otherwise, we know that \(w\) contains no pair of adjacent terms having the same label. We apply \hyperref[lem:77.3]{Lemma 77.3} (with \({w}_{0}\) empty) to conclude that \(w\) is equivalent to a scheme having the same length as \(w\), of the form
 
 \[
 {ab}{a}^{-1}{b}^{-1}{w}_{3},
@@ -770,21 +792,21 @@ where \({w}_{4}\) is empty or of torus type. If \({w}_{4}\) is empty, we are fin
 
 Step 2. Now let \(w\) be a proper scheme of projective type. We show that \(w\) is equivalent either to scheme (2) or to a scheme of type (3).
 
-If \(w\) has length four, Corollary 77.2 implies that \(w\) is equivalent to one of the schemes \({aabb}\) or \({aa}{b}^{-1}b\). The first is of type (3). The second can be written in the form \({aa}{y}_{1}^{-1}{y}_{2}\), with \({y}_{1} = {y}_{2} = b\) ; then Lemma 77.1 implies that it is equivalent to the scheme \(a{y}_{1}a{y}_{2} = {abab}\), which is of type (2).
+If \(w\) has length four, \hyperref[cor:77.2]{Corollary 77.2} implies that \(w\) is equivalent to one of the schemes \({aabb}\) or \({aa}{b}^{-1}b\). The first is of type (3). The second can be written in the form \({aa}{y}_{1}^{-1}{y}_{2}\), with \({y}_{1} = {y}_{2} = b\) ; then \hyperref[lem:77.1]{Lemma 77.1} implies that it is equivalent to the scheme \(a{y}_{1}a{y}_{2} = {abab}\), which is of type (2).
 
-We proceed by induction on the length of \(w\). Assume \(w\) has length greater than four. Corollary 77.2 tells us that \(w\) is equivalent to a scheme of the form
+We proceed by induction on the length of \(w\). Assume \(w\) has length greater than four. \hyperref[cor:77.2]{Corollary 77.2} tells us that \(w\) is equivalent to a scheme of the form
 
 \[
 {w}^{\prime } = ( {{a}_{1}{a}_{1}}) \cdots ( {{a}_{k}{a}_{k}}) {w}_{1},
 \]
 
-where \(k \geq 1\) and \({w}_{1}\) is of torus type or empty. If \({w}_{1}\) is empty, we are finished. If \({w}_{1}\) has two adjacent terms having the same label, then \({w}^{\prime }\) is equivalent to a shorter scheme of projective type and the induction hypothesis applies. Otherwise, Lemma 77.3 tells us that \({w}^{\prime }\) is equivalent to a scheme of the form
+where \(k \geq 1\) and \({w}_{1}\) is of torus type or empty. If \({w}_{1}\) is empty, we are finished. If \({w}_{1}\) has two adjacent terms having the same label, then \({w}^{\prime }\) is equivalent to a shorter scheme of projective type and the induction hypothesis applies. Otherwise, \hyperref[lem:77.3]{Lemma 77.3} tells us that \({w}^{\prime }\) is equivalent to a scheme of the form
 
 \[
 {w}^{\prime \prime } = ( {{a}_{1}{a}_{1}}) \cdots ( {{a}_{k}{a}_{k}}) {ab}{a}^{-1}{b}^{-1}{w}_{2},
 \]
 
-where \({w}_{2}\) is either empty or of torus type. Then we apply Lemma 77.4 to conclude that \({w}^{\prime \prime }\) is equivalent to the scheme
+where \({w}_{2}\) is either empty or of torus type. Then we apply \hyperref[lem:77.4]{Lemma 77.4} to conclude that \({w}^{\prime \prime }\) is equivalent to the scheme
 
 \[
 ( {{a}_{1}{a}_{1}}) \cdots ( {{a}_{k}{a}_{k}}) {aabb}{w}_{2}.
@@ -817,7 +839,7 @@ We continue similarly. Eventually we reach a scheme of type (3).
  \item \({abcdabdc}\).
  \item \({abcdabcd}\).
  \end{enumerate}
-\item Let \(w\) be a proper labelling scheme for a 10-sided polygonal region. If \(w\) is of projective type, which of the list of spaces in Theorem 77.5 can it represent? What if \(w\) is of torus type?
+\item Let \(w\) be a proper labelling scheme for a 10-sided polygonal region. If \(w\) is of projective type, which of the list of spaces in \hyperref[thm:77.5]{Theorem 77.5} can it represent? What if \(w\) is of torus type?
 \end{enumerate}
 \booksection{78}{Constructing Compact Surfaces}
 
@@ -830,6 +852,7 @@ To complete our classification of the compact surfaces, we must show that every 
 It is a basic theorem that every compact surface is triangulable. The proof is long but not exceedingly difficult. (See 		\cite{AhlforsSario1960} or 		\cite{DoyleMoran1968}.)
 
 \begin{theorem}
+\label{thm:\thetheorem}
 	If \(X\) is a compact triangulable surface, then \(X\) is homeomorphic to the quotient space obtained from a collection of disjoint triangular regions in the plane by pasting their edges together in pairs.
 \end{theorem}
 
@@ -871,7 +894,7 @@ Let \(X\) be the union of \(k\) triangles in \({\mathbb{R}}^{3}\), each pair of 
 
 We show that there is no neighborhood \(W\) of \(x\) in \(X\) such that \(W - x\) has abelian fundamental group. It follows that no neighborhood of \(x\) is homeomorphic to an open 2-ball.
 
-To begin, we show that if \(A\) is the union of all the edges of the triangles of \(X\) that are different from \(e\), then the fundamental group of \(A\) is not abelian. The space \(A\) is the union of a collection of \(k\) arcs, each pair of which intersect in their end points. If \(B\) is the union of three of the arcs that make up \(A\), then there is a retraction \(r\) of \(A\) onto \(B\), obtained by mapping each of the arcs not in \(B\) homeomorphically onto one of the arcs in \(B\), keeping the end points fixed. Then \({r}_{ * }\) is an epimorphism. Since the fundamental group of \(B\) is not abelian (by Example 1 of \S 70 or Example 3 of \S 58), neither is the fundamental group of \(A\).
+To begin, we show that if \(A\) is the union of all the edges of the triangles of \(X\) that are different from \(e\), then the fundamental group of \(A\) is not abelian. The space \(A\) is the union of a collection of \(k\) arcs, each pair of which intersect in their end points. If \(B\) is the union of three of the arcs that make up \(A\), then there is a retraction \(r\) of \(A\) onto \(B\), obtained by mapping each of the arcs not in \(B\) homeomorphically onto one of the arcs in \(B\), keeping the end points fixed. Then \({r}_{ * }\) is an epimorphism. Since the fundamental group of \(B\) is not abelian (by \exrefs{70}{1} or \exrefs{58}{3}), neither is the fundamental group of \(A\).
 
 It follows that the fundamental group of \(X - x\) is not abelian, for it is easy to see that \(A\) is a deformation retract of \(X - x\). See \hyperref[fig:78.5]{Figure 78.5}.
 
@@ -883,6 +906,7 @@ Now we prove our result. For convenience, assume \(x\) is the origin in \({\math
 The inclusion \(i\) is homotopic to the homeomorphism \(h(x) = x/\epsilon\), so it induces an isomorphism of fundamental groups. It follows that \({k}_{ * }\) is surjective, so the fundamental group of \(W - 0\) cannot be abelian.
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 	If \(X\) is a compact connected triangulable surface, then \(X\) is homeomorphic to a space obtained from a polygonal region in the plane by pasting the edges together in pairs.
 \end{theorem}
 
