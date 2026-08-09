@@ -2,9 +2,9 @@
 \definecolor{covercolor}{HTML}{315758}
 \definecolor{linecolor}{HTML}{D6E19A}
 
-% 书脊宽度
+% 书脊宽度（603页 × 0.05mm/页 ≈ 3cm）
 \newlength{\spinewidth}
-\setlength{\spinewidth}{1.8cm}
+\setlength{\spinewidth}{3cm}
 
 % 定义统一宽度
 \newlength{\patternwidth}
@@ -56,42 +56,46 @@
     \end{tikzpicture}
 }
 
-% 封面部分 - 使用简单的方法限制颜色范围
+% 封面部分
 \pagecolor{covercolor}
 \thispagestyle{empty}
 
 \cleardoublepage
 \thispagestyle{empty}
 
-% 扩宽当前页以容纳书脊
+% 保存旧宽度，扩展：后封(21cm) + 书脊(3cm) + 前封(21cm) = 45cm
 \newdimen\savepagewidth
 \savepagewidth=\pdfpagewidth
-\pdfpagewidth=\dimexpr\savepagewidth+\spinewidth\relax
+\pdfpagewidth=\dimexpr 2\savepagewidth + \spinewidth\relax
 
-% 书脊（TikZ overlay，和封面在同一页）
+% 偏移量 = 后封 + 书脊，minipage 推到这里才开始
+\newdimen\coverx
+\coverx=\dimexpr\savepagewidth + \spinewidth\relax
+
+% 书脊
 \begin{tikzpicture}[remember picture,overlay]
     \draw[linecolor,line width=0.8pt]
-        ([xshift=\spinewidth]current page.north west) --
-        ([xshift=\spinewidth]current page.south west);
+        ([xshift=\savepagewidth]current page.north west) --
+        ([xshift=\savepagewidth]current page.south west);
+    \draw[linecolor,line width=0.8pt]
+        ([xshift=\coverx]current page.north west) --
+        ([xshift=\coverx]current page.south west);
     \node[
         rotate=-90,
         anchor=center,
         text=linecolor,
         font=\RebarBold\fontsize{18}{22}\selectfont
-    ] at ([xshift=0.5\spinewidth]current page.west)
+    ] at ([xshift=\dimexpr\savepagewidth+0.5\spinewidth\relax]current page.west)
         {ZY6412 \hspace{1.2em} Topology \hspace{1.2em} 2nd};
 \end{tikzpicture}
 
-% 封面内容右移书脊宽度
-\hspace*{\spinewidth}%
-\begin{minipage}{\dimexpr\textwidth-\spinewidth\relax}
+% 封面内容：用 \hspace* 推到前封区域
+\hspace*{\coverx}%
+\begin{minipage}{\textwidth}
 \begingroup
     \centering
 
-    % 设置文字颜色为白色
     \color{white}
-
-    % 增加TOPOLOGY上方的间距
     \vspace*{0.2cm}
 
     % TOPOLOGY标题
@@ -123,12 +127,9 @@
     \end{minipage}
     \vspace{1.7cm}
 
-    % 添加图案
     \reversedpattern
 
     \vspace{2em}
-
-    % 使用弹性垂直空间将作者名推到底部
     \vfill
 
     % JAMES R. MUNKRES
@@ -143,7 +144,5 @@
 \end{minipage}
 
 \clearpage
-
-% 封面结束后立即重置页面颜色和宽度
 \pdfpagewidth=\savepagewidth
 \nopagecolor
