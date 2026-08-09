@@ -56,30 +56,37 @@
     \end{tikzpicture}
 }
 
-% 封面部分
+% ═══════════════════════════════════════════
+% 封面布局（左→右）：后封21cm | 脊3cm | 前封21cm
+% 前封内容用 \rlap 推到右边，原样居中不受影响
+% ═══════════════════════════════════════════
+
 \pagecolor{covercolor}
 \thispagestyle{empty}
 
 \cleardoublepage
 \thispagestyle{empty}
 
-% 保存旧宽度，扩展：后封(21cm) + 书脊(3cm) + 前封(21cm) = 45cm
+% 扩展页面
 \newdimen\savepagewidth
 \savepagewidth=\pdfpagewidth
 \pdfpagewidth=\dimexpr 2\savepagewidth + \spinewidth\relax
 
-% 偏移量 = 后封 + 书脊，minipage 推到这里才开始
-\newdimen\coverx
-\coverx=\dimexpr\savepagewidth + \spinewidth\relax
+% 前封距左边缘的偏移量 = 后封 + 书脊
+\newdimen\frontshift
+\frontshift=\dimexpr \savepagewidth + \spinewidth\relax
 
-% 书脊
+% 书脊（TikZ overlay）
 \begin{tikzpicture}[remember picture,overlay]
+    % 后封/脊 分界线
     \draw[linecolor,line width=0.8pt]
         ([xshift=\savepagewidth]current page.north west) --
         ([xshift=\savepagewidth]current page.south west);
+    % 脊/前封 分界线
     \draw[linecolor,line width=0.8pt]
-        ([xshift=\coverx]current page.north west) --
-        ([xshift=\coverx]current page.south west);
+        ([xshift=\frontshift]current page.north west) --
+        ([xshift=\frontshift]current page.south west);
+    % 书脊文字
     \node[
         rotate=-90,
         anchor=center,
@@ -89,59 +96,61 @@
         {ZY6412 \hspace{1.2em} Topology \hspace{1.2em} 2nd};
 \end{tikzpicture}
 
-% 封面内容：用 \hspace* 推到前封区域
-\hspace*{\coverx}%
-\begin{minipage}{\textwidth}
-\begingroup
-    \centering
-
-    \color{white}
-    \vspace*{0.2cm}
-
-    % TOPOLOGY标题
-    {\centering
-    \SenatorTall
-    \fontsize{60}{0}\selectfont
-    \noindent\makebox[\textwidth][s]{%
-    \raisebox{1em}{\scalebox{3}[2.9]{T}}\hfill%
-    \raisebox{1em}{\scalebox{3}[2.9]{O}}\hfill%
-    \raisebox{1em}{\scalebox{3}[2.9]{P}}\hfill%
-    \raisebox{1em}{\scalebox{3}[2.9]{O}}\hfill%
-    \raisebox{1em}{\scalebox{3}[2.9]{L}}\hfill%
-    \raisebox{1em}{\scalebox{3}[2.9]{O}}\hfill%
-    \raisebox{1em}{\scalebox{3}[2.9]{G}}\hfill%
-    \raisebox{1em}{\scalebox{3}[2.9]{Y}}%
-    }
-    \par}
-    \vspace{-1cm}
-
-    % SECOND EDITION
-    \noindent
-    \begin{minipage}{\patternwidth}
+% 前封内容：\rlap 推到右侧，内部居中不受影响
+\noindent\rlap{%
+    \hspace{\frontshift}%
+    \begin{minipage}{\textwidth}
+    \begingroup
         \centering
-        \RebarBold
-        \color{linecolor}\fontsize{20}{0}\selectfont
-        S\hspace{0.95em}E\hspace{0.95em}C\hspace{0.95em}O\hspace{0.95em}N\hspace{0.95em}D%
-        \hfill%
-        E\hspace{0.95em}D\hspace{0.95em}I\hspace{0.95em}T\hspace{0.95em}I\hspace{0.95em}O\hspace{0.95em}N%
-    \end{minipage}
-    \vspace{1.7cm}
 
-    \reversedpattern
+        \color{white}
+        \vspace*{0.2cm}
 
-    \vspace{2em}
-    \vfill
+        % TOPOLOGY标题
+        {\centering
+        \SenatorTall
+        \fontsize{60}{0}\selectfont
+        \noindent\makebox[\textwidth][s]{%
+        \raisebox{1em}{\scalebox{3}[2.9]{T}}\hfill%
+        \raisebox{1em}{\scalebox{3}[2.9]{O}}\hfill%
+        \raisebox{1em}{\scalebox{3}[2.9]{P}}\hfill%
+        \raisebox{1em}{\scalebox{3}[2.9]{O}}\hfill%
+        \raisebox{1em}{\scalebox{3}[2.9]{L}}\hfill%
+        \raisebox{1em}{\scalebox{3}[2.9]{O}}\hfill%
+        \raisebox{1em}{\scalebox{3}[2.9]{G}}\hfill%
+        \raisebox{1em}{\scalebox{3}[2.9]{Y}}%
+        }
+        \par}
+        \vspace{-1cm}
 
-    % JAMES R. MUNKRES
-    {\centering
-    \Trajan
-    \color{linecolor}\fontsize{38}{0}\selectfont
-    \makebox[\patternwidth][s]{JAMES\hspace{0.3em} R.\hspace{0.3em} MUNKRES}
-    \par}
-    \vspace{0.1cm}
+        % SECOND EDITION
+        \noindent
+        \begin{minipage}{\patternwidth}
+            \centering
+            \RebarBold
+            \color{linecolor}\fontsize{20}{0}\selectfont
+            S\hspace{0.95em}E\hspace{0.95em}C\hspace{0.95em}O\hspace{0.95em}N\hspace{0.95em}D%
+            \hfill%
+            E\hspace{0.95em}D\hspace{0.95em}I\hspace{0.95em}T\hspace{0.95em}I\hspace{0.95em}O\hspace{0.95em}N%
+        \end{minipage}
+        \vspace{1.7cm}
 
-\endgroup
-\end{minipage}
+        \reversedpattern
+
+        \vspace{2em}
+        \vfill
+
+        % JAMES R. MUNKRES
+        {\centering
+        \Trajan
+        \color{linecolor}\fontsize{38}{0}\selectfont
+        \makebox[\patternwidth][s]{JAMES\hspace{0.3em} R.\hspace{0.3em} MUNKRES}
+        \par}
+        \vspace{0.1cm}
+
+    \endgroup
+    \end{minipage}%
+}
 
 \clearpage
 \pdfpagewidth=\savepagewidth
