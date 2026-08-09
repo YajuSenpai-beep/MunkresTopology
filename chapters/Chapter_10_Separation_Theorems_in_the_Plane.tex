@@ -13,6 +13,7 @@ In dealing with separation theorems, it will often be convenient to formulate th
 Recall that if \(b\) is any point of \({S}^{2}\), there is a homeomorphism \(h\) of \({S}^{2} - b\) with \({\mathbb{R}}^{2}\) ; one simply takes a rotation of \({S}^{2}\) that carries \(b\) to the north pole, and follows it by stereographic projection.
 
 \begin{lemma}
+\label{lem:\thetheorem}
 Let \(C\) be a compact subspace of \({S}^{2}\) ; let \(b\) be a point of \({S}^{2} - C\) ; and let \(h\) be a homeomorphism of \({S}^{2} - b\) with \({\mathbb{R}}^{2}\). Suppose \(U\) is a component of \({S}^{2} - C\). If \(U\) does not contain \(b\), then \(h( U)\) is a bounded component of \({\mathbb{R}}^{2} - h( C)\). If \(U\) contains \(b\), then \(h( {U - b})\) is the unbounded component of \({\mathbb{R}}^{2} - h( C)\).
 \end{lemma}
 
@@ -24,7 +25,8 @@ Let \(\{ {U}_{\alpha }\}\) be the set of components of \({S}^{2} - C\) ; let \({
 
 Now the homeomorphism \(h\) of \({S}^{2} - b\) with \({\mathbb{R}}^{2}\) can be extended to a homeomorphism \(H\) of \({S}^{2}\) with the one-point compactification \({\mathbb{R}}^{2} \cup \{ \infty \}\) of \({\mathbb{R}}^{2}\), merely by setting \(H( b) = \infty\). If \({U}_{\beta }\) is the component of \({S}^{2} - C\) containing \(b\), then \(H( {U}_{\beta })\) is a neighborhood of \(\infty\) in \({\mathbb{R}}^{2} \cup \{ \infty \}\). Therefore \({V}_{\beta }\) is unbounded; since its complement \({\mathbb{R}}^{2} - {V}_{\beta }\) is compact, all the other components of \({\mathbb{R}}^{2} - h( C)\) are bounded. See \hyperref[fig:61.1]{Figure 61.1}.
 \end{proof}
-\begin{lemma}[Nulhomotopy lemma]
+\begin{lemma}
+\label{lem:\thetheorem}[Nulhomotopy lemma]
 Let \(a\) and \(b\) be points of \({S}^{2}\). Let \(A\) be a compact space, and let
 
 \[
@@ -66,7 +68,8 @@ An arc \(A\) is a space homeomorphic to the unit interval \([ {0,1}]\). The end 
 
 A simple closed curve is a space homeomorphic to the unit circle \({S}^{1}\).
 
-\begin{theorem}[The Jordan separation theorem]
+\begin{theorem}
+\label{thm:\thetheorem}[The Jordan separation theorem]
 Let \(C\) be a simple closed curve in \({S}^{2}\). Then \(C\) separates \({S}^{2}\).
 \end{theorem}
 
@@ -78,7 +81,7 @@ Let us write \(C\) as the union of two arcs \({A}_{1}\) and \({A}_{2}\) that int
 U \cap V = {S}^{2} - ( {{A}_{1} \cup {A}_{2}}) = {S}^{2} - C,
 \]
 
-which by hypothesis is path connected. Thus the hypotheses of Theorem 59.1 are satisfied.
+which by hypothesis is path connected. Thus the hypotheses of \hyperref[thm:59.1]{Theorem 59.1} are satisfied.
 
 Let \({x}_{0}\) be a point of \(U \cap V\). We will show that the inclusions
 
@@ -86,11 +89,11 @@ Let \({x}_{0}\) be a point of \(U \cap V\). We will show that the inclusions
 i : ( {U,{x}_{0}}) \rightarrow ( {X,{x}_{0}}) \;\text{ and }\;j : ( {V,{x}_{0}}) \rightarrow ( {X,{x}_{0}})
 \]
 
-induce trivial homomorphisms of the fundamental groups involved. It then follows from Theorem 59.1 that the group \({\pi }_{1}( {X,{x}_{0}})\) is trivial. But \(X = {S}^{2} - a - b\), which is homeomorphic to the punctured plane \({\mathbb{R}}^{2} - \mathbf{0}\), so its fundamental group is not trivial.
+induce trivial homomorphisms of the fundamental groups involved. It then follows from \hyperref[thm:59.1]{Theorem 59.1} that the group \({\pi }_{1}( {X,{x}_{0}})\) is trivial. But \(X = {S}^{2} - a - b\), which is homeomorphic to the punctured plane \({\mathbb{R}}^{2} - \mathbf{0}\), so its fundamental group is not trivial.
 
 Let us prove that \({i}_{ * }\) is the trivial homomorphism; given a loop \(f : I \rightarrow U\) based at \({x}_{0}\), we show that \({i}_{ * }( [ f] )\) is trivial. For this purpose, let \(p : I \rightarrow {S}^{1}\) be the standard loop generating \({\pi }_{1}( {{S}^{1},{b}_{0}})\). The map \(f : I \rightarrow U\) induces a continuous map \(h : {S}^{1} \rightarrow\) \(U\) such that \(h \circ p = f\). See \hyperref[fig:61.3]{Figure 61.3}.
 
-Consider the map \(i \circ h : {S}^{1} \rightarrow {S}^{2} - a - b\). By hypothesis, the set \(i( {h( {S}^{1}) }) = h( {S}^{1})\) does not intersect the connected set \({A}_{1}\) containing \(a\) and \(b\). Therefore, \(a\) and \(b\) lie in the same component of \({S}^{2} - i( {h( {S}^{1}) })\). By the preceding lemma, the map \(i \circ h\) is nulhomotopic. It follows from Lemma 55.3 that \({( i \circ h) }_{ * }\) is the trivial homomorphism of fundamental groups. But
+Consider the map \(i \circ h : {S}^{1} \rightarrow {S}^{2} - a - b\). By hypothesis, the set \(i( {h( {S}^{1}) }) = h( {S}^{1})\) does not intersect the connected set \({A}_{1}\) containing \(a\) and \(b\). Therefore, \(a\) and \(b\) lie in the same component of \({S}^{2} - i( {h( {S}^{1}) })\). By the preceding lemma, the map \(i \circ h\) is nulhomotopic. It follows from \hyperref[lem:55.3]{Lemma 55.3} that \({( i \circ h) }_{ * }\) is the trivial homomorphism of fundamental groups. But
 
 \[
 {( i \circ h) }_{ * }( [ p] ) = [ {i \circ h \circ p}] = [ {i \circ f}] = {i}_{ * }( [ f] ).
@@ -101,7 +104,8 @@ Therefore, \({i}_{ * }( [ f] )\) is trivial, as desired.
 \munkresfig[1.0]{61.3}[Figure 61.3]
 Let us examine the preceding proof. What facts did we use about the simple closed curve \(C\) ? All we actually needed was the fact that \(C\) could be written as the union of the two closed connected sets \({A}_{1}\) and \({A}_{2}\), whose intersection consisted of the two points \(a\) and \(b\). This remark leads to the following generalized version of the separation theorem, which will be useful later.
 \end{proof}
-\begin{theorem}[A general separation theorem]
+\begin{theorem}
+\label{thm:\thetheorem}[A general separation theorem]
 Let \({A}_{1}\) and \({A}_{2}\) be closed connected subsets of \({S}^{2}\) whose intersection consists of precisely two points \(a\) and \(b\). Then the set \(C = {A}_{1} \cup {A}_{2}\) separates \({S}^{2}\).
 \end{theorem}
 
@@ -119,6 +123,7 @@ The remainder of the proof is a copy of the proof of the preceding theorem.
 One of the theorems of topology that is truly fundamental, because it expresses an intrinsic property of euclidean space, is the theorem on ``invariance of domain,'' proved by L. E. J. Brouwer in 1912. It states that for any open set \(U\) of \({\mathbb{R}}^{n}\) and any continuous injective mapping \(f : U \rightarrow {\mathbb{R}}^{n}\), the image set \(f( U)\) is open in \({\mathbb{R}}^{n}\) and the inverse function is continuous. (The Inverse Function Theorem of analysis derives this result under the additional hypothesis that the map \(f\) is continuously differentiable with nonsingular Jacobian matrix.) We shall prove this theorem in the case \(n = 2\).
 
 \begin{lemma}
+\label{lem:\thetheorem}
 Let \(X\) be a space such that \(X \times I\) is normal. Let \(A\) be a closed subspace of \(X\), and let \(f : A \rightarrow Y\) be a continuous map, where \(Y\) is an open subspace of \({\mathbb{R}}^{n}\). If \(f\) is nulhomotopic, then \(f\) may be extended to a continuous map \(g : X \rightarrow Y\) that is also nulhomotopic.
 \end{lemma}
 
@@ -138,6 +143,7 @@ is a homotopy between \(g\) and a constant map.
 The following lemma is a partial converse to the nulhomotopy lemma of the preceding section.
 \end{proof}
 \begin{lemma}
+\label{lem:\thetheorem}
 Let \(a\) and \(b\) be points of \({S}^{2}\). Let \(A\) be a compact space, and let \(f : A \rightarrow {S}^{2} - a - b\) be a continuous injective map. If \(f\) is nulhomotopic, then \(a\) and \(b\) lie in the same component of \({S}^{2} - f( A)\).
 \end{lemma}
 
@@ -155,7 +161,8 @@ Now we derive a contradiction. Let \(B\) be the closed ball in \({\mathbb{R}}^{2
 
 \munkresfig[0.5]{62.2}[Figure 62.2]
 \end{proof}
-\begin{theorem}[Invariance of domain]
+\begin{theorem}
+\label{thm:\thetheorem}[Invariance of domain]
 If \(U\) is an open subset of \({\mathbb{R}}^{2}\) and \(f : U \rightarrow\) \({\mathbb{R}}^{2}\) is continuous and injective, then \(f( U)\) is open in \({\mathbb{R}}^{2}\) and the inverse function \({f}^{-1} : f( U) \rightarrow U\) is continuous.
 \end{theorem}
 
@@ -193,6 +200,7 @@ Step 3. We prove the theorem. Since, for any ball \(B\) contained in \(U\), the 
 The special case of the Seifert-van Kampen theorem that we used in proving the Jordan separation theorem tells us something about the fundamental group of the space \(X =\) \(U \cup V\) in the case where the intersection \(U \cap V\) is path connected. In the next theorem, we examine what happens when \(U \cap V\) is not path connected. This result will enable us to complete the proof of the Jordan curve theorem.
 
 \begin{theorem}
+\label{thm:\thetheorem}
 Let \(X\) be the union of two open sets \(U\) and \(V\), such that \(U \cap V\) can be written as the union of two disjoint open sets \(A\) and \(B\). Assume that there is a path \(\alpha\) in \(U\) from a point \(a\) of \(A\) to a point \(b\) of \(B\), and that there is a path \(\beta\) in \(V\) from \(b\) to \(a\). Let \(f\) be the loop \(f = \alpha * \beta\).
 
 (a) The path-homotopy class \([ f]\) generates an infinite cyclic subgroup of \({\pi }_{1}( {X,a})\).
@@ -216,7 +224,7 @@ for all \(n \in \mathbb{Z}\), where \(\mathbb{Z}\) denotes the integers. Let \(Y
 x \times ( {2n}) \;\text{ and }\;x \times ( {{2n} - 1}) \;\text{ for }x \in A
 \]
 
-\customfootnote{${}^{\dagger}$ This result uses Theorem 54.6, and will be used only when we deal with winding numbers in \S 65.}
+\customfootnote{${}^{\dagger}$ This result uses \hyperref[thm:54.6]{Theorem 54.6}, and will be used only when we deal with winding numbers in \S 65.}
 
 and by identifying the points
 
@@ -275,7 +283,7 @@ h = f * ( {f * ( {\cdots * f}) }).
 
 Because \(\bar{h}\) begins at \({e}_{0}\) and ends at \({e}_{m}\), the class \([ h] = {[ f] }^{m}\) cannot be trivial.
 
-*Step 4. Now we show that if \({\pi }_{1}( {X,a})\) is infinite cyclic, it is generated by \([ f]\). Consider the lifting correspondence \(\phi : {\pi }_{1}( {X,a}) \rightarrow {p}^{-1}( a)\). We showed in Step 3 that for each positive integer \(m\), the correspondence \(\phi\) carries \({[ f] }^{m}\) to the point \({e}_{m}\) of \({p}^{-1}( a)\). A similar argument shows that it carries \({[ f] }^{-m}\) to \({e}_{-m}\). Thus \(\phi\) is surjective. Now by Theorem 54.6, \(\phi\) induces an injective map
+*Step 4. Now we show that if \({\pi }_{1}( {X,a})\) is infinite cyclic, it is generated by \([ f]\). Consider the lifting correspondence \(\phi : {\pi }_{1}( {X,a}) \rightarrow {p}^{-1}( a)\). We showed in Step 3 that for each positive integer \(m\), the correspondence \(\phi\) carries \({[ f] }^{m}\) to the point \({e}_{m}\) of \({p}^{-1}( a)\). A similar argument shows that it carries \({[ f] }^{-m}\) to \({e}_{-m}\). Thus \(\phi\) is surjective. Now by \hyperref[thm:54.6]{Theorem 54.6}, \(\phi\) induces an injective map
 
 \[
 \Phi : {\pi }_{1}( {X,a}) /H \rightarrow {p}^{-1}( a)
@@ -302,7 +310,8 @@ Then \(\bar{\gamma }\) and \(\bar{\delta }\) are liftings of \(\gamma\) and \(\d
 
 It follows that the subgroups generated by \([ f]\) and \([ g]\) have only the identity element in common. For the \(m\) -fold product of \(f\) with itself lifts to a path that begins at \({e}_{0}\) and ends at \({e}_{m}\), while every product of \(g\) with itself lifts to a path beginning and ending at \({e}_{0}\). Hence \({[ f] }^{m} \neq {[ g] }^{k}\) for every nonzero \(m\) and \(k\).
 \end{proof}
-\begin{theorem}[A nonseparation theorem]
+\begin{theorem}
+\label{thm:\thetheorem}[A nonseparation theorem]
 Let \(D\) be an arc in \({S}^{2}\). Then \(D\) does not separate \({S}^{2}\).
 \end{theorem}
 
@@ -313,13 +322,13 @@ First proof. Because \(D\) is contractible, the identity map \(i : D \rightarrow
 Second Proof. Let us write \(D\) as the union of two arcs \({D}_{1}\) and \({D}_{2}\) that intersect in a single point \(d\). Let \(a\) and \(b\) be points not in \(D\). We show that if \(a\) and \(b\) can be joined by paths in \({S}^{2} - {D}_{1}\) and in \({S}^{2} - {D}_{2}\), then they can be joined by a path in \({S}^{2} - D\). \hyperref[fig:63.3]{Figure 63.3} illustrates the fact that this assertion is not entirely trivial.
 
 \munkresfig[0.6]{63.3}[Figure 63.3]
-We suppose that \(a\) and \(b\) cannot be joined by a path in \({S}^{2} - D\) and derive a contradiction. We apply Theorem 63.1. Let \(X\) be the space \({S}^{2} - d\). Let \(U\) and \(V\) be the open sets
+We suppose that \(a\) and \(b\) cannot be joined by a path in \({S}^{2} - D\) and derive a contradiction. We apply \hyperref[thm:63.1]{Theorem 63.1}. Let \(X\) be the space \({S}^{2} - d\). Let \(U\) and \(V\) be the open sets
 
 \[
 U = {S}^{2} - {D}_{1}\;\text{ and }\;V = {S}^{2} - {D}_{2}.
 \]
 
-Then \(X = U \cup V\), and \(U \cap V = {S}^{2} - D\). By hypothesis, \(a\) and \(b\) are points of \({S}^{2} - D\) that cannot be joined by a path in \({S}^{2} - D\). Therefore, \(U \cap V\) is not path connected. Let \(A\) be the path component of \(U \cap V\) containing \(a\) ; let \(B\) be the union of the other path components of \(U \cap V\). Since \(U \cap V\) is locally path connected (being open in \({S}^{2}\) ), the path components of \(U \cap V\) are open; hence \(A\) and \(B\) are open in \(X\). We are given that \(a\) and \(b\) can be joined by paths in \(U = {S}^{2} - {D}_{1}\) and \(V = {S}^{2} - {D}_{2}\). We conclude from Theorem 63.1 that \({\pi }_{1}( {X,a})\) is not trivial. But \(X = {S}^{2} - d\), so its fundamental group is trivial.
+Then \(X = U \cup V\), and \(U \cap V = {S}^{2} - D\). By hypothesis, \(a\) and \(b\) are points of \({S}^{2} - D\) that cannot be joined by a path in \({S}^{2} - D\). Therefore, \(U \cap V\) is not path connected. Let \(A\) be the path component of \(U \cap V\) containing \(a\) ; let \(B\) be the union of the other path components of \(U \cap V\). Since \(U \cap V\) is locally path connected (being open in \({S}^{2}\) ), the path components of \(U \cap V\) are open; hence \(A\) and \(B\) are open in \(X\). We are given that \(a\) and \(b\) can be joined by paths in \(U = {S}^{2} - {D}_{1}\) and \(V = {S}^{2} - {D}_{2}\). We conclude from \hyperref[thm:63.1]{Theorem 63.1} that \({\pi }_{1}( {X,a})\) is not trivial. But \(X = {S}^{2} - d\), so its fundamental group is trivial.
 
 Now we prove the theorem. Given the arc \(D\) and the points \(a\) and \(b\) of \({S}^{2} - D\), we suppose that \(a\) and \(b\) cannot be joined by a path in \({S}^{2} - D\) and derive a contradiction. Choose a homeomorphism \(h : [ {0,1}] \rightarrow D\) ; let \({D}_{1} = h( [ {0,1/2}] )\) and \({D}_{2} = h( [ {1/2,1}] )\). The result of the preceding paragraph shows that since \(a\) and \(b\) cannot be joined by a path in \({S}^{2} - D\), they cannot be joined by paths in both \({S}^{2} - {D}_{1}\) and \({S}^{2} - {D}_{2}\). To be definite, suppose that \(a\) and \(b\) cannot be joined by a path in \({S}^{2} - {D}_{1}\).
 
@@ -337,13 +346,15 @@ Consider the space \({S}^{2} - h(x)\). Since this space is homeomorphic to \({\m
 
 Both proofs of this theorem are interesting. As we noted in \S 62, the first generalizes to show that no compact contractible subspace of \({S}^{2}\) separates \({S}^{2}\). The second generalizes in another direction. Let us examine this second proof, and ask ourselves what properties of the sets \({D}_{1}\) and \({D}_{2}\) made it work? One readily sees that all that was needed was the fact that \({D}_{1}\) and \({D}_{2}\) were closed subsets of \({S}^{2}\) and that \({S}^{2} - ( {{D}_{1} \cap {D}_{2}})\) was simply connected. Hence we have the following result, which we shall use later:
 \end{proof}
-\begin{theorem}[A general nonseparation theorem]
+\begin{theorem}
+\label{thm:\thetheorem}[A general nonseparation theorem]
 Let \({D}_{1}\) and \({D}_{2}\) be closed subsets of \({S}^{2}\) such that \({S}^{2} - {D}_{1} \cap {D}_{2}\) is simply connected. If neither \({D}_{1}\) nor \({D}_{2}\) separates \({S}^{2}\), then \({D}_{1} \cup {D}_{2}\) does not separate \({S}^{2}\).
 \end{theorem}
 
 Now we prove the Jordan curve theorem.
 
-\begin{theorem}[The Jordan curve theorem]
+\begin{theorem}
+\label{thm:\thetheorem}[The Jordan curve theorem]
 Let \(C\) be a simple closed curve in \({S}^{2}\). Then \(C\) separates \({S}^{2}\) into precisely two components \({W}_{1}\) and \({W}_{2}\). Each of the sets \({W}_{1}\) and \({W}_{2}\) has \(C\) as its boundary; that is, \(C = {\bar{W}}_{i} - {W}_{i}\) for \(i = 1, 2\).
 \end{theorem}
 
@@ -355,7 +366,7 @@ U = {S}^{2} - {C}_{1}\;\text{ and }\;V = {S}^{2} - {C}_{2}.
 
 Then \(X = U \cup V\), and \(U \cap V = {S}^{2} - C\). The space \(U \cap V\) has at least two components, by the Jordan separation theorem.
 
-We suppose that \(U \cap V\) has more than two components and derive a contradiction. Let \({A}_{1}\) and \({A}_{2}\) be two of the components of \(U \cap V\), and let \(B\) be the union of the others. Because \({S}^{2} - C\) is locally connected, each of these sets is open. Let \(a \in {A}_{1}\) and \({a}^{\prime } \in {A}_{2}\) and \(b \in B\). Because the arcs \({C}_{1}\) and \({C}_{2}\) do not separate \({S}^{2}\), there are paths \(\alpha\) and \(\gamma\) in \(U\) from \(a\) to \(b\) and from \(a\) to \({a}^{\prime }\), respectively, and there are paths \(\beta\) and \(\delta\) in \(V\) from \(b\) to \(a\) and from \({a}^{\prime }\) to \(a\), respectively. Consider the loops \(f = \alpha * \beta\) and \(g = \gamma * \delta\). Writing \(U \cap V\) as the union of the open sets \({A}_{1} \cup {A}_{2}\) and \(B\), we see that Theorem 63.1 implies that \([ f]\) is a nontrivial element of \({\pi }_{1}( {X,a})\). Writing \(U \cap V\) as the union of the disjoint open sets \({A}_{1}\) and \({A}_{2} \cup B\), we see that \([ g]\) is also a nontrivial element of \({\pi }_{1}( {X,a})\). Since \({\pi }_{1}( {X,a})\) is infinite cyclic, we must have \({[ f] }^{m} = {[ g] }^{k}\) for some nonzero integers \(m\) and \(k\). This result contradicts (c) of Theorem 63.1.
+We suppose that \(U \cap V\) has more than two components and derive a contradiction. Let \({A}_{1}\) and \({A}_{2}\) be two of the components of \(U \cap V\), and let \(B\) be the union of the others. Because \({S}^{2} - C\) is locally connected, each of these sets is open. Let \(a \in {A}_{1}\) and \({a}^{\prime } \in {A}_{2}\) and \(b \in B\). Because the arcs \({C}_{1}\) and \({C}_{2}\) do not separate \({S}^{2}\), there are paths \(\alpha\) and \(\gamma\) in \(U\) from \(a\) to \(b\) and from \(a\) to \({a}^{\prime }\), respectively, and there are paths \(\beta\) and \(\delta\) in \(V\) from \(b\) to \(a\) and from \({a}^{\prime }\) to \(a\), respectively. Consider the loops \(f = \alpha * \beta\) and \(g = \gamma * \delta\). Writing \(U \cap V\) as the union of the open sets \({A}_{1} \cup {A}_{2}\) and \(B\), we see that \hyperref[thm:63.1]{Theorem 63.1} implies that \([ f]\) is a nontrivial element of \({\pi }_{1}( {X,a})\). Writing \(U \cap V\) as the union of the disjoint open sets \({A}_{1}\) and \({A}_{2} \cup B\), we see that \([ g]\) is also a nontrivial element of \({\pi }_{1}( {X,a})\). Since \({\pi }_{1}( {X,a})\) is infinite cyclic, we must have \({[ f] }^{m} = {[ g] }^{k}\) for some nonzero integers \(m\) and \(k\). This result contradicts (c) of \hyperref[thm:63.1]{Theorem 63.1}.
 
 Step 2. Now we show that \(C\) is the common boundary of \({W}_{1}\) and \({W}_{2}\).
 
@@ -371,12 +382,13 @@ Let \(a\) and \(b\) be points of \({W}_{1}\) and \({W}_{2}\), respectively. Beca
 Just as with the earlier theorems, we now ask ourselves what made the proof of this theorem work. Examining Step 1 of the proof, we see that all we used were the facts that \({C}_{1}\) and \({C}_{2}\) were closed connected sets, that \({C}_{1} \cap {C}_{2}\) consisted of two points, and that neither \({C}_{1}\) nor \({C}_{2}\) separated \({S}^{2}\). The first two facts implied that \({C}_{1} \cup {C}_{2}\) separated \({S}^{2}\) into at least two components; the third implied that there were only two components. Hence one has, with no further effort, the following result:
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 Let \({C}_{1}\) and \({C}_{2}\) be closed connected subsets of \({S}^{2}\) whose intersection consists of two points. If neither \({C}_{1}\) nor \({C}_{2}\) separates \({S}^{2}\), then \({C}_{1} \cup {C}_{2}\) separates \({S}^{2}\) into precisely two components.
 \end{theorem}
 
 Example 1. The second half of the Jordan curve theorem, to the effect that \(C\) is the common boundary of \({W}_{1}\) and \({W}_{2}\), may seem so obvious as hardly to require comment. But it depends crucially on the fact that \(C\) is homeomorphic to \({S}^{1}\).
 
-For instance, consider the space indicated in \hyperref[fig:63.5]{Figure 63.5}. It is the union of two arcs whose intersection consists of two points, so it separates \({S}^{2}\) into two components \({W}_{1}\) and \({W}_{2}\) just as the circle does, by Theorem 63.5. But \(C\) does not equal the common boundary of \({W}_{1}\) and \({W}_{2}\) in this case.
+For instance, consider the space indicated in \hyperref[fig:63.5]{Figure 63.5}. It is the union of two arcs whose intersection consists of two points, so it separates \({S}^{2}\) into two components \({W}_{1}\) and \({W}_{2}\) just as the circle does, by \hyperref[thm:63.5]{Theorem 63.5}. But \(C\) does not equal the common boundary of \({W}_{1}\) and \({W}_{2}\) in this case.
 
 \munkresfig[0.6]{63.5}[Figure 63.5]
 There is a fourth theorem that is often considered along with these three separation theorems. It is called the Schoenflies theorem, and it states that if \(C\) is a simple closed curve in \({S}^{2}\) and \(U\) and \(V\) are the components of \({S}^{2} - C\), then \(\bar{U}\) and \(\bar{V}\) are each homeomorphic to the closed unit ball \({B}^{2}\). A proof may be found in \cite{HallSpencer1955}.
@@ -409,7 +421,7 @@ The separation theorems can be generalized even further than this. The definitiv
 \item[*3.]
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Let \(D\) be a subspace of \({S}^{2}\) homeomorphic to the topologist's sine curve \(\bar{S}\). (See \S 24.) Show that \(D\) does not separate \({S}^{2}\). [Hint: Let \(h : \bar{S} \rightarrow D\) be the homeomorphism. Given \(0 < c < 1\), let \({\bar{S}}_{c}\) equal the intersection of \(\bar{S}\) with the set \(\{ ( {x,y}) \mid x \leq c\}\). Show that given \(a,b \in {S}^{2} - D\), there is, for some value of \(c\), a path in \({S}^{2} - h( {\bar{S}}_{c})\) from \(a\) to \(b\). Conclude that there is a path in \({S}^{2} - D\) from \(a\) to \(b\).]
- \item Let \(C\) be a subspace of \({S}^{2}\) homeomorphic to the closed topologist's sine curve. Show that \(C\) separates \({S}^{2}\) into precisely two components, of which \(C\) is the common boundary. [Hint: Let \(h\) be the homeomorphism of the closed topologist's sine curve with \(C\). Let \({C}_{0} = h( {0\times \lbrack - 1,1\rbrack })\). Show first, using the argument of Theorem 63.4, that each point of \(C - {C}_{0}\) lies in the boundary of each component of \({S}^{2} - C\).]
+ \item Let \(C\) be a subspace of \({S}^{2}\) homeomorphic to the closed topologist's sine curve. Show that \(C\) separates \({S}^{2}\) into precisely two components, of which \(C\) is the common boundary. [Hint: Let \(h\) be the homeomorphism of the closed topologist's sine curve with \(C\). Let \({C}_{0} = h( {0\times \lbrack - 1,1\rbrack })\). Show first, using the argument of \hyperref[thm:63.4]{Theorem 63.4}, that each point of \(C - {C}_{0}\) lies in the boundary of each component of \({S}^{2} - C\).]
  \end{enumerate}
  \end{enumerate}
 \end{enumerate}
@@ -423,6 +435,7 @@ Note that any graph is determined completely (up to homeomorphism) by listing it
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 If \(G\) contains exactly \(n\) vertices, and if for every pair of distinct vertices of \(G\) there is an edge of \(G\) joining them, then \(G\) is called the complete graph on \(n\) vertices and is denoted \({G}_{n}\). Several such graphs are pictured in \hyperref[fig:64.1]{Figure 64.1}. Note that the first three of these graphs are pictured as subspaces of \({\mathbb{R}}^{2}\), but the fourth is pictured instead as a subspace of \({\mathbb{R}}^{3}\). A little experimentation will convince you that this graph cannot in fact be imbedded in \({\mathbb{R}}^{2}\). We shall prove this result shortly.
 
 \munkresfig[1.0]{64.1}[Figure 64.1]
@@ -431,6 +444,7 @@ If \(G\) contains exactly \(n\) vertices, and if for every pair of distinct vert
 
 \begin{centeredblock}
 \begin{example}
+\label{ex:\thesection.\theexample}
 Another interesting graph arises in considering the classical puzzle: ``Given three houses, \({h}_{1},{h}_{2}\), and \({h}_{3}\), and three utilities, \(g\) (for gas), \(w\) (for water), and \(e\) (for electricity), can you connect each utility to each house without letting any of the connecting lines cross?'' Formulated mathematically, this is just the question whether the graph pictured in \hyperref[fig:64.2]{Figure 64.2}, which is called the utilities graph, can be imbedded in \({\mathbb{R}}^{2}\). Again, a little experimentation will convince you that it cannot, a fact that we shall prove shortly.
 \end{example}
 \end{centeredblock}
@@ -443,23 +457,25 @@ A theta space \(X\) is a Hausdorff space that is written as the union of three a
 Note that as it stands, a theta space \(X\) is not a linear graph, for the arcs in question intersect in more than a common end point. One can write it as a graph, however, by breaking each of the arcs \(A,B\), and \(C\) up into two arcs with an end point in common.
 
 \begin{lemma}
+\label{lem:\thetheorem}
 Let \(X\) be a theta space that is a subspace of \({S}^{2}\) ; let \(A,B\), and \(C\) be the arcs whose union is \(X\). Then \(X\) separates \({S}^{2}\) into three components, whose boundaries are \(A \cup B,B \cup C\), and \(A \cup C\), respectively. The component having \(A \cup B\) as its boundary equals one of the components of \({S}^{2} - A \cup B\).
 \end{lemma}
 
 \begin{proof}
 Let \(a\) and \(b\) be the end points of the arcs \(A,B\), and \(C\). Consider the simple closed curve \(A \cup B\) ; it separates \({S}^{2}\) into two components \(U\) and \({U}^{\prime }\), each of which is open in \({S}^{2}\) and has boundary \(A \cup B\). See \hyperref[fig:64.3]{Figure 64.3}.
 \munkresfig[0.4]{64.3}[Figure 64.3]
-The space \(C - a - b\) is connected, so it is contained in one of these components, say in \({U}^{\prime }\). Then consider the two spaces \(\bar{U} = U \cup A \cup B\) and \(C\) ; each is connected. Neither separates \({S}^{2}\), for \(C\) is an arc, and the complement of \(\bar{U}\) is the connected set \({U}^{\prime }\). Since the intersection of these two sets consists of the two points \(a\) and \(b\), their union separates \({S}^{2}\) into two components \(V\) and \(W\), by Theorem 63.5. It follows that \({S}^{2} - ( {A \cup B \cup C})\) is the union of the three disjoint connected sets \(U,V\), and \(W\) ; because they are open in \({S}^{2}\), they are the components of \({S}^{2} - ( {A \cup B \cup C})\). The component \(U\) has \(A \cup B\) as its boundary. Symmetry implies that the other two have \(B \cup C\) and
+The space \(C - a - b\) is connected, so it is contained in one of these components, say in \({U}^{\prime }\). Then consider the two spaces \(\bar{U} = U \cup A \cup B\) and \(C\) ; each is connected. Neither separates \({S}^{2}\), for \(C\) is an arc, and the complement of \(\bar{U}\) is the connected set \({U}^{\prime }\). Since the intersection of these two sets consists of the two points \(a\) and \(b\), their union separates \({S}^{2}\) into two components \(V\) and \(W\), by \hyperref[thm:63.5]{Theorem 63.5}. It follows that \({S}^{2} - ( {A \cup B \cup C})\) is the union of the three disjoint connected sets \(U,V\), and \(W\) ; because they are open in \({S}^{2}\), they are the components of \({S}^{2} - ( {A \cup B \cup C})\). The component \(U\) has \(A \cup B\) as its boundary. Symmetry implies that the other two have \(B \cup C\) and
 
 \(A \cup C\) as their boundaries.
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 Let \(X\) be the utilities graph. Then \(X\) cannot be imbedded in the plane.
 \end{theorem}
 
 \begin{proof}
 If \(X\) can be imbedded in the plane, then it can be imbedded in \({S}^{2}\). So suppose \(X\) is a subspace of \({S}^{2}\). We derive a contradiction.
-We use the notation of Example 2, where \(g,w,e,{h}_{1},{h}_{2}\), and \({h}_{3}\) are the vertices of \(X\). Let \(A,B\), and \(C\) be the following arcs contained in \(X\) :
+We use the notation of \exref{2}, where \(g,w,e,{h}_{1},{h}_{2}\), and \({h}_{3}\) are the vertices of \(X\). Let \(A,B\), and \(C\) be the following arcs contained in \(X\) :
 
 \[
 \begin{aligned} & A = g{h}_{1}w, \\ & B = g{h}_{2}w \\ & C = g{h}_{3}w. \end{aligned}
@@ -472,6 +488,7 @@ Now the vertex \(e\) of \(X\) lies in one of these three components, so that the
 \munkresfig[0.4]{64.4}[Figure 64.4]
 \end{proof}
 \begin{lemma}
+\label{lem:\thetheorem}
 Let \(X\) be a subspace of \({S}^{2}\) that is a complete graph on four vertices \({a}_{1}\), \({a}_{2},{a}_{3}\), and \({a}_{4}\). Then \(X\) separates \({S}^{2}\) into four components. The boundaries of these components are the sets \({X}_{1},{X}_{2},{X}_{3}\), and \({X}_{4}\), where \({X}_{i}\) is the union of those edges of \(X\) that do not have \({a}_{i}\) as a vertex.
 \end{lemma}
 
@@ -487,11 +504,12 @@ See \hyperref[fig:64.5]{Figure 64.5}. The arcs \(A,B\), and \(C\) intersect in t
 
 The space \(Y\) separates \({S}^{2}\) into three components \(U,V\), and \(W\), whose boundaries are \(A \cup B,B \cup C\), and \(A \cup C\), respectively. The space \({a}_{2}{a}_{4} - {a}_{2} - {a}_{4}\), being connected, must lie in one of them. It cannot lie in \(U\), because \(A \cup B\) does not contain \({a}_{4}\). And it cannot lie in \(V\) because \(B \cup C\) does not contain \({a}_{2}\). Hence it must lie in \(W\).
 
-Now \(\bar{U} \cup \bar{V}\) is connected because \(\bar{U}\) and \(\bar{V}\) are connected and have nonempty intersection \(B\). Furthermore, the set \(\bar{U} \cup \bar{V}\) does not separate \({S}^{2}\), because its complement is \(W\). Similarly, the arc \({a}_{2}{a}_{4}\) is connected and does not separate \({S}^{2}\). And the sets \({a}_{2}{a}_{4}\) and \(\bar{U} \cup \bar{V}\) intersect in the points \({a}_{2}\) and \({a}_{4}\) alone. It follows from Theorem 63.5 that \({a}_{2}{a}_{4} \cup \bar{U} \cup \bar{V}\) separates \({S}^{2}\) into two components \({W}_{1}\) and \({W}_{2}\). Then \({S}^{2} - Y\) is the union of the four disjoint connected sets \(U,V,{W}_{1}\), and \({W}_{2}\). Since these sets are open, they are the components of \({S}^{2} - Y\).
+Now \(\bar{U} \cup \bar{V}\) is connected because \(\bar{U}\) and \(\bar{V}\) are connected and have nonempty intersection \(B\). Furthermore, the set \(\bar{U} \cup \bar{V}\) does not separate \({S}^{2}\), because its complement is \(W\). Similarly, the arc \({a}_{2}{a}_{4}\) is connected and does not separate \({S}^{2}\). And the sets \({a}_{2}{a}_{4}\) and \(\bar{U} \cup \bar{V}\) intersect in the points \({a}_{2}\) and \({a}_{4}\) alone. It follows from \hyperref[thm:63.5]{Theorem 63.5} that \({a}_{2}{a}_{4} \cup \bar{U} \cup \bar{V}\) separates \({S}^{2}\) into two components \({W}_{1}\) and \({W}_{2}\). Then \({S}^{2} - Y\) is the union of the four disjoint connected sets \(U,V,{W}_{1}\), and \({W}_{2}\). Since these sets are open, they are the components of \({S}^{2} - Y\).
 
 Now one of these components, namely \(U\), has the graph \(A \cup B = {X}_{4}\) as its boundary. Symmetry implies that the other three have \({X}_{1},{X}_{2}\), and \({X}_{3}\) as their respective boundaries.
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 The complete graph on five vertices cannot be imbedded in the plane.
 \end{theorem}
 
@@ -521,13 +539,14 @@ If \(h : {S}^{1} \rightarrow {\mathbb{R}}^{2} - 0\) is a continuous map, then th
 For the present, we merely ask the question: What can one say about the winding number of \(h\) if \(h\) is injective, that is, if \(h\) is a homeomorphism of \({S}^{1}\) with a simple closed curve \(C\) in \({\mathbb{R}}^{2} - 0\) ? The illustrations in \hyperref[fig:65.2]{Figure 65.2} suggest the obvious conjecture: If 0 belongs to the unbounded component of \({\mathbb{R}}^{2} - C\), then \(n = 0\), while if 0 belongs to the bounded component, then \(n = \pm 1\).
 
 \munkresfig[1.0]{65.2}[Figure 65.2]
-The first conjecture is easy to prove, for Lemma 61.2 tells us that \(h\) is nulhomotopic if 0 belongs to the unbounded component of \({\mathbb{R}}^{2} - C\). On the other hand, the second conjecture is surprisingly difficult; it is in fact a rather deep result. We prove it in this section.
+The first conjecture is easy to prove, for \hyperref[lem:61.2]{Lemma 61.2} tells us that \(h\) is nulhomotopic if 0 belongs to the unbounded component of \({\mathbb{R}}^{2} - C\). On the other hand, the second conjecture is surprisingly difficult; it is in fact a rather deep result. We prove it in this section.
 
 As usual, we shall replace \({\mathbb{R}}^{2} \cup \{ \infty \}\) by \({S}^{2}\), letting \(p\) be the point corresponding to 0 and \(q\) be the point corresponding to \(\infty\). Then our conjecture can be reformulated as follows: If \(C\) is a simple closed curve in \({S}^{2}\), and if \(p\) and \(q\) belong to different components of \({S}^{2} - C\), then the inclusion mapping \(j : C \rightarrow {S}^{2} - p - q\) induces an isomorphism of fundamental groups. This is what we shall prove.
 
 First, we prove our result in the case where the simple closed curve \(C\) is contained in a complete graph on four vertices. Then we prove the general case.
 
 \begin{lemma}
+\label{lem:\thetheorem}
 Let \(G\) be a subspace of \({S}^{2}\) that is a complete graph on four vertices \({a}_{1},\ldots ,{a}_{4}\). Let \(C\) be the subgraph \({a}_{1}{a}_{2}{a}_{3}{a}_{4}{a}_{1}\), which is a simple closed curve. Let \(p\) and \(q\) be interior points of the edges \({a}_{1}{a}_{3}\) and \({a}_{2}{a}_{4}\), respectively. Then:
 
 (a) The points \(p\) and \(q\) lie in different components of \({S}^{2} - C\).
@@ -536,7 +555,7 @@ Let \(G\) be a subspace of \({S}^{2}\) that is a complete graph on four vertices
 \end{lemma}
 
 \begin{proof}
-(a) As in the proof of Lemma 64.3, the theta space \(C \cup {a}_{1}{a}_{3}\) separates \({S}^{2}\) into three components \(U,V\), and \(W\). One of these, say \(W\), has \(C\) as its boundary; it is the only component whose boundary contains both \({a}_{2}\) and \({a}_{4}\). Therefore, \({a}_{2}{a}_{4} - {a}_{2} - {a}_{4}\) must lie in \(W\), so that in particular, \(q\) belongs to \(W\). Of course, \(p\) is not in \(W\) because \(p\) belongs to the theta space \(C \cup {a}_{1}{a}_{3}\). Now Lemma 64.1 tells us that \(W\) is one of the components of \({S}^{2} - C\) ; therefore, \(p\) and \(q\) belong to different components of \({S}^{2} - C\).
+(a) As in the proof of \hyperref[lem:64.3]{Lemma 64.3}, the theta space \(C \cup {a}_{1}{a}_{3}\) separates \({S}^{2}\) into three components \(U,V\), and \(W\). One of these, say \(W\), has \(C\) as its boundary; it is the only component whose boundary contains both \({a}_{2}\) and \({a}_{4}\). Therefore, \({a}_{2}{a}_{4} - {a}_{2} - {a}_{4}\) must lie in \(W\), so that in particular, \(q\) belongs to \(W\). Of course, \(p\) is not in \(W\) because \(p\) belongs to the theta space \(C \cup {a}_{1}{a}_{3}\). Now \hyperref[lem:64.1]{Lemma 64.1} tells us that \(W\) is one of the components of \({S}^{2} - C\) ; therefore, \(p\) and \(q\) belong to different components of \({S}^{2} - C\).
 (b) Let \(X = {S}^{2} - p - q\). The idea of the proof is the following: We choose a point \(x\) interior to the arc \({a}_{1}{a}_{2}\), and a point \(y\) interior to the arc \({a}_{3}{a}_{4}\). And we let \(\alpha\) and \(\beta\) be the broken-line paths
 
 \[
@@ -555,11 +574,12 @@ Let \({D}_{1}\) and \({D}_{2}\) be the arcs
 and let \(U = {S}^{2} - {D}_{1}\) and \(V = {S}^{2} - {D}_{2}\). See \hyperref[fig:65.4]{Figure 65.4}. Then \(X = U \cup V\), and \(U \cap V\) equals \({S}^{2} - D\), where \(D\) is the simple closed curve \(D = {D}_{1} \cup {D}_{2}\). Hence, \(U \cap V\) has two components, by the Jordan curve theorem. Furthermore, since \(D\) equals the simple closed curve \({a}_{1}{a}_{3}{a}_{2}{a}_{4}{a}_{1}\), the result of (a) implies that the points \(x\) and \(y\), which lie interior to the other two edges of the graph \(G\), lie in different components of \({S}^{2} - D\).
 
 \munkresfig[1.0]{65.4}[Figure 65.4]
-The hypotheses of Theorem 63.1 are thus satisfied. The path \(\alpha\) is a path in \(U\) from \(x\) to \(y\), while \(\beta\) is a path in \(V\) from \(y\) to \(x\). Because the fundamental group of \(X\) is infinite cyclic, the loop \(\alpha * \beta\) represents a generator of this group.
+The hypotheses of \hyperref[thm:63.1]{Theorem 63.1} are thus satisfied. The path \(\alpha\) is a path in \(U\) from \(x\) to \(y\), while \(\beta\) is a path in \(V\) from \(y\) to \(x\). Because the fundamental group of \(X\) is infinite cyclic, the loop \(\alpha * \beta\) represents a generator of this group.
 
 Now we prove our main theorem.
 \end{proof}
 \begin{theorem}
+\label{thm:\thetheorem}
 Let \(C\) be a simple closed curve in \({S}^{2}\) ; let \(p\) and \(q\) lie in different components of \({S}^{2} - C\). Then the inclusion mapping \(j : C \rightarrow {S}^{2} - p - q\) induces an isomorphism of fundamental groups.
 \end{theorem}
 
@@ -591,7 +611,7 @@ Let \(f : {\mathbb{R}}^{2} - p \rightarrow {\mathbb{R}}^{2} - 0\) be the homeomo
 D\overset{k}{ \rightarrow }{\mathbb{R}}^{2} - p\overset{f}{ \rightarrow }{\mathbb{R}}^{2} - 0
 \]
 
-induces an isomorphism of fundamental groups. Let \(\alpha\) be a path in \({\mathbb{R}}^{2} - D\) from 0 to \(p\), and let \(F : D \times I \rightarrow {\mathbb{R}}^{2} - 0\) be the map \(F( {x,t}) = x - \alpha ( t)\). Then \(F\) is a homotopy between \(j\) and \(f \circ k\) ; since \(j\) induces an isomorphism, so does \(f \circ k\). (See Corollary 58.5).
+induces an isomorphism of fundamental groups. Let \(\alpha\) be a path in \({\mathbb{R}}^{2} - D\) from 0 to \(p\), and let \(F : D \times I \rightarrow {\mathbb{R}}^{2} - 0\) be the map \(F( {x,t}) = x - \alpha ( t)\). Then \(F\) is a homotopy between \(j\) and \(f \circ k\) ; since \(j\) induces an isomorphism, so does \(f \circ k\). (See \hyperref[cor:58.5]{Corollary 58.5}).
 
 This theorem is a special case of a rather deep theorem of algebraic topology, concerning the ``linking number'' of two disjoint subspaces of \({S}^{m + n + 1}\), one homeomorphic to an \(m\) -sphere and the other homeomorphic to an \(n\) -sphere; it is related to the Alexander duality theorem. (See \cite{Munkres1993}, p. 433.) The special case of our theorem is that of a 0-sphere (i.e., a two-point space) and a 1-sphere (i.e., a simple closed curve) in \({S}^{2}\).
 \end{proof}
@@ -620,6 +640,7 @@ Let \(F : I \times I \rightarrow X\) be a continuous map such that \(F( {0,t}) =
 \end{definition}
 
 \begin{lemma}
+\label{lem:\thetheorem}
 Let \(f\) be a loop in \({\mathbb{R}}^{2} - a\).
 
 (a) If \(\bar{f}\) is the reverse of \(f\), then \(n( {\bar{f},a}) = - n( {f,a})\).
@@ -646,6 +667,7 @@ Let \(f\) be a loop in \(X\). We call \(f\) a simple loop provided \(f( s) = f( 
 \end{definition}
 
 \begin{theorem}
+\label{thm:\thetheorem}
 Let \(f\) be a simple loop in \({\mathbb{R}}^{2}\). If \(a\) lies in the unbounded component of \({\mathbb{R}}^{2} - f( I)\), then \(n( {f,a}) = 0\) ; while if \(a\) lies in the bounded component, \(n( {f,a}) = \pm 1\).
 \end{theorem}
 
@@ -653,9 +675,9 @@ Let \(f\) be a simple loop in \({\mathbb{R}}^{2}\). If \(a\) lies in the unbound
 Since \(n( {f,a}) = n( {f - a,0})\), we may restrict ourselves to the case \(a = 0\). Furthermore, we may assume that the base point of \(f\) lies on the positive \(x\) -axis. For one can gradually rotate \({\mathbb{R}}^{2} - 0\) until the base point of \(f\) is such a point; this modifies \(f\) by a free homotopy, so it does not affect the conclusion of the theorem.
 So let \(f\) be a simple loop in \(X = {\mathbb{R}}^{2} - 0\) based at a point \({x}_{0}\) of the positive \(x\) - axis. Let \(C\) be the simple closed curve \(f( I)\). We show that if 0 lies in the bounded component of \({\mathbb{R}}^{2} - C\), then \([ f]\) generates \({\pi }_{1}( {X,{x}_{0}})\), while if 0 lies in the unbounded component, \([ f]\) is trivial.
 
-The map \(f\) induces, \({via}\) the standard quotient map \(p : I \rightarrow {S}^{1}\), a homeomorphism \(h : {S}^{1} \rightarrow C\). The element \([ p]\) generates the fundamental group of \({S}^{1}\), so \({h}_{ * }[ p]\) generates the fundamental group of \(C\). If 0 lies in the bounded component of \({\mathbb{R}}^{2} - C\), Theorem 65.2 tells us that \({j}_{ * }{h}_{ * }[ p] = [ f]\) generates the fundamental group of \({\mathbb{R}}^{2} - \mathbf{0}\), where \(j : C \rightarrow {\mathbb{R}}^{2} - 0\) is the inclusion. On the other hand, if 0 lies in the unbounded component of \({\mathbb{R}}^{2} - C\), then \(j \circ h\) is nulhomotopic by Lemma 61.2, so that \([ f]\) is trivial.
+The map \(f\) induces, \({via}\) the standard quotient map \(p : I \rightarrow {S}^{1}\), a homeomorphism \(h : {S}^{1} \rightarrow C\). The element \([ p]\) generates the fundamental group of \({S}^{1}\), so \({h}_{ * }[ p]\) generates the fundamental group of \(C\). If 0 lies in the bounded component of \({\mathbb{R}}^{2} - C\), \hyperref[thm:65.2]{Theorem 65.2} tells us that \({j}_{ * }{h}_{ * }[ p] = [ f]\) generates the fundamental group of \({\mathbb{R}}^{2} - \mathbf{0}\), where \(j : C \rightarrow {\mathbb{R}}^{2} - 0\) is the inclusion. On the other hand, if 0 lies in the unbounded component of \({\mathbb{R}}^{2} - C\), then \(j \circ h\) is nulhomotopic by \hyperref[lem:61.2]{Lemma 61.2}, so that \([ f]\) is trivial.
 
-Now we show that if \([ f]\) generates \({\pi }_{1}( {X,{x}_{0}})\), then \(n( {f,\mathbf{0}}) = \pm 1\), while if \([ f]\) is trivial, \(n( {f,\mathbf{0}}) = 0\). Since the retraction \(x \rightarrow x/\parallel x\parallel\) of \({\mathbb{R}}^{2} - \mathbf{0}\) onto \({S}^{1}\) induces an isomorphism of fundamental groups, the loop \(g( s) = f( s) /\parallel f( s) \parallel\) represents a generator of \({\pi }_{1}( {{S}^{1},{b}_{0}})\) in the first case, and the identity element in the second case. If we examine the isomorphism \(\phi : {\pi }_{1}( {{S}^{1},{b}_{0}}) \rightarrow \mathbb{Z}\) constructed in the proof of Theorem 54.5, we see this means that when we lift \(g\) to a path \(\bar{g}\) in \(\mathbb{R}\) beginning at 0, the path \(\bar{g}\) ends at \(\pm 1\) in the first case, and at 0 in the second.
+Now we show that if \([ f]\) generates \({\pi }_{1}( {X,{x}_{0}})\), then \(n( {f,\mathbf{0}}) = \pm 1\), while if \([ f]\) is trivial, \(n( {f,\mathbf{0}}) = 0\). Since the retraction \(x \rightarrow x/\parallel x\parallel\) of \({\mathbb{R}}^{2} - \mathbf{0}\) onto \({S}^{1}\) induces an isomorphism of fundamental groups, the loop \(g( s) = f( s) /\parallel f( s) \parallel\) represents a generator of \({\pi }_{1}( {{S}^{1},{b}_{0}})\) in the first case, and the identity element in the second case. If we examine the isomorphism \(\phi : {\pi }_{1}( {{S}^{1},{b}_{0}}) \rightarrow \mathbb{Z}\) constructed in the proof of \hyperref[thm:54.5]{Theorem 54.5}, we see this means that when we lift \(g\) to a path \(\bar{g}\) in \(\mathbb{R}\) beginning at 0, the path \(\bar{g}\) ends at \(\pm 1\) in the first case, and at 0 in the second.
 \end{proof}
 \begin{definition}
 Let \(f\) be a simple loop in \({\mathbb{R}}^{2}\). We say \(f\) is a counterclockwise loop if \(n( {f,a}) = + 1\) for some \(a\) (and hence for every \(a\) ) in the bounded component of \({\mathbb{R}}^{2} - f( I)\). We say it is a clockwise loop if \(n( {f,a}) = - 1\). The standard loop \(p( s) =\) \(( {\cos {2\pi s},\sin {2\pi s}})\) is thus a counterclockwise loop.
@@ -666,6 +688,7 @@ Let \(f\) be a simple loop in \({\mathbb{R}}^{2}\). We say \(f\) is a counterclo
 We now relate winding numbers to complex line integrals.
 
 \begin{lemma}
+\label{lem:\thetheorem}
 Let \(f\) be a piecewise-differentiable loop in the complex plane; let a be a point not in the image of \(f\). Then
 
 \[
@@ -693,7 +716,8 @@ The proof is a simple exercise in computation. Let \(p : \mathbb{R} \rightarrow 
 = {2\pi i}[ {\bar{g}(1) - \bar{g}( 0) }] .
 \]
 \end{proof}
-\begin{theorem}[Cauchy integral formula-classical version]
+\begin{theorem}
+\label{thm:\thetheorem}[Cauchy integral formula-classical version]
 Let \(C\) be a simple closed piecewise-differentiable curve in the complex plane. Let \(B\) be the bounded component of \({\mathbb{R}}^{2} - C\). If \(F( z)\) is analytic in an open set \(\Omega\) that contains \(B\) and \(C\), then for each point \(a\) of \(B\),
 
 \[
@@ -711,7 +735,7 @@ Let \(F\) be analytic in a region \(\Omega\). Let \(f\) be a piecewise-different
 n( {f,a}) \cdot F( a) = \frac{1}{2\pi i}{\int }_{f}\frac{F( z) }{z - a}{dz}.
 \]
 
-We apply this result to a piecewise-differentiable parametrization \(f\) of our simple closed curve \(C\). The condition \(n( {f,b}) = 0\) holds for each \(b\) not in \(\Omega\), since any such \(b\) lies in the unbounded component of \({\mathbb{R}}^{2} - C\). Furthermore, \(n( {f,a}) = \pm 1\) whenever \(a\) is in \(B\), the sign depending on the orientation of \(C\), by Theorem 66.2. The theorem follows.
+We apply this result to a piecewise-differentiable parametrization \(f\) of our simple closed curve \(C\). The condition \(n( {f,b}) = 0\) holds for each \(b\) not in \(\Omega\), since any such \(b\) lies in the unbounded component of \({\mathbb{R}}^{2} - C\). Furthermore, \(n( {f,a}) = \pm 1\) whenever \(a\) is in \(B\), the sign depending on the orientation of \(C\), by \hyperref[thm:66.2]{Theorem 66.2}. The theorem follows.
 
 Note that one cannot even state the classical version of the Cauchy integral theorem without knowing the Jordan curve theorem. To prove it requires even more, namely, knowledge of the winding number of a simple closed curve. It is of interest to note that this latter result can be proved (at least in the differentiable case) by an entirely different method, using the general version of Green's Theorem, proved in analysis. This proof is outlined in Exercise 2.
 \end{proof}
