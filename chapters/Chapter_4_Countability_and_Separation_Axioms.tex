@@ -2,19 +2,19 @@
 
 The concepts we are going to introduce now, unlike compactness and connectedness, do not arise naturally from the study of calculus and analysis. They arise instead from a deeper study of topology itself. Such problems as imbedding a given space in a metric space or in a compact Hausdorff space are basically problems of topology rather than analysis. These particular problems have solutions that involve the countability and separation axioms.
 
-We have already introduced the first countability axiom; it arose in connection with our study of convergent sequences in \S 21. We have also studied one of the separation axioms-the Hausdorff axiom, and mentioned another-the \({T}_{1}\) axiom. In this chapter we shall introduce other, and stronger, axioms like these and explore some of their consequences. Our basic goal is to prove the Urysohn metrization theorem. It says that if a topological space \(X\) satisfies a certain countability axiom (the second) and a certain separation axiom (the regularity axiom), then \(X\) can be imbedded in a metric space and is thus metrizable.
+We have already introduced the first countability axiom; it arose in connection with our study of convergent sequences in \S\ 21. We have also studied one of the separation axioms-the Hausdorff axiom, and mentioned another-the \({T}_{1}\) axiom. In this chapter we shall introduce other, and stronger, axioms like these and explore some of their consequences. Our basic goal is to prove the Urysohn metrization theorem. It says that if a topological space \(X\) satisfies a certain countability axiom (the second) and a certain separation axiom (the regularity axiom), then \(X\) can be imbedded in a metric space and is thus metrizable.
 
 Another imbedding theorem, important to geometers, appears in the last section of the chapter. Given a space that is a compact manifold (the higher-dimensional analogue of a surface), we show that it can be imbedded in some finite-dimensional euclidean space.
 
 \booksection{30}{The Countability Axioms}
 
-Recall the definition we gave in \S 21.
+Recall the definition we gave in \S\ 21.
 
 \begin{definition}
  A space \(X\) is said to have a countable basis at \(x\) if there is a countable collection \(\mathcal{B}\) of neighborhoods of \(x\) such that each neighborhood of \(x\) contains at least one of the elements of \(\mathcal{B}\). A space that has a countable basis at each of its points is said to satisfy the first countability axiom, or to be first-countable.
 \end{definition}
 
-We have already noted that every metrizable space satisfies this axiom; see §21.
+We have already noted that every metrizable space satisfies this axiom; see \S\ 21.
 
 The most useful fact concerning spaces that satisfy this axiom is the fact that in such a space, convergent sequences are adequate to detect limit points of sets and to check continuity of functions. We have noted this before; now we state it formally as a theorem:
 
@@ -28,7 +28,7 @@ The most useful fact concerning spaces that satisfy this axiom is the fact that 
 
 \end{theorem}
 
-The proof is a direct generalization of the proof given in \S 21 under the hypothesis of metrizability, so it will not be repeated here.
+The proof is a direct generalization of the proof given in \S\ 21 under the hypothesis of metrizability, so it will not be repeated here.
 
 Of much greater importance than the first countability axiom is the following:
 
@@ -262,7 +262,7 @@ Now we relate the separation axioms with the concepts previously introduced.
 (b) A subspace of a regular space is regular; a product of regular spaces is regular.
 \end{theorem}
 \begin{proof}
- (a) This result was an exercise in \S 17. We provide a proof here. Let \(X\) be Hausdorff. Let \(x\) and \(y\) be two points of the subspace \(Y\) of \(X\). If \(U\) and \(V\) are disjoint neighborhoods in \(X\) of \(x\) and \(y\), respectively, then \(U \cap Y\) and \(V \cap Y\) are disjoint neighborhoods of \(x\) and \(y\) in \(Y\).
+ (a) This result was an exercise in \S\ 17. We provide a proof here. Let \(X\) be Hausdorff. Let \(x\) and \(y\) be two points of the subspace \(Y\) of \(X\). If \(U\) and \(V\) are disjoint neighborhoods in \(X\) of \(x\) and \(y\), respectively, then \(U \cap Y\) and \(V \cap Y\) are disjoint neighborhoods of \(x\) and \(y\) in \(Y\).
 
 Let \(\{ {X}_{\alpha }\}\) be a family of Hausdorff spaces. Let \(\mathbf{x} = ( {x}_{\alpha })\) and \(\mathbf{y} = ( {y}_{\alpha })\) be distinct points of the product space \(\prod {X}_{\alpha }\). Because \(\mathbf{x} \neq \mathbf{y}\), there is some index \(\beta\) such that \({x}_{\beta } \neq {y}_{\beta }\). Choose disjoint open sets \(U\) and \(V\) in \({X}_{\beta }\) containing \({x}_{\beta }\) and \({y}_{\beta }\), respectively. Then the sets \({\pi }_{\beta }^{-1}( U)\) and \({\pi }_{\beta }^{-1}( V)\) are disjoint open sets in \(\prod {X}_{\alpha }\) containing \(\mathbf{x}\) and \(\mathbf{y}\), respectively.
 
@@ -358,11 +358,11 @@ This proof that \({\mathbb{R}}_{\ell }^{2}\) is not normal is in some ways not v
  \item Show that if \(X\) is locally compact, then so is \(Y\).
  \item Show that if \(X\) is second-countable, then so is \(Y\). [Hint: Let \(\mathcal{B}\) be a countable basis for \(X\). For each finite subset \(J\) of \(\mathcal{B}\), let \({U}_{J}\) be the union of all sets of the form \({p}^{-1}( W)\), for \(W\) open in \(Y\), that are contained in the union of the elements of \(J\).]
  \end{enumerate}
-\item Let \(X\) be a space; let \(G\) be a topological group. An action of \(G\) on \(X\) is a continuous map \(\alpha : G \times X \rightarrow X\) such that, denoting \(\alpha ( {g \times x})\) by \(g \cdot x\), one has: (i) \(e \cdot x = x\) for all \(x \in X\). (ii) \({g}_{1} \cdot ( {{g}_{2} \cdot x}) = ( {{g}_{1} \cdot {g}_{2}}) \cdot x\) for all \(x \in X\) and \({g}_{1},{g}_{2} \in G\). Define \(x \sim g \cdot x\) for all \(x\) and \(g\) ; the resulting quotient space is denoted \(X/G\) and called the orbit space of the action \(\alpha\). \textsl{Theorem.} Let \(G\) be a compact topological group; let \(X\) be a topological space; let \(\alpha\) be an action of \(G\) on \(X\). If \(X\) is Hausdorff, or regular, or normal, or locally compact, or second-countable, so is \(X/G\). [Hint: See Exercise 13 of §26.]
+\item Let \(X\) be a space; let \(G\) be a topological group. An action of \(G\) on \(X\) is a continuous map \(\alpha : G \times X \rightarrow X\) such that, denoting \(\alpha ( {g \times x})\) by \(g \cdot x\), one has: (i) \(e \cdot x = x\) for all \(x \in X\). (ii) \({g}_{1} \cdot ( {{g}_{2} \cdot x}) = ( {{g}_{1} \cdot {g}_{2}}) \cdot x\) for all \(x \in X\) and \({g}_{1},{g}_{2} \in G\). Define \(x \sim g \cdot x\) for all \(x\) and \(g\) ; the resulting quotient space is denoted \(X/G\) and called the orbit space of the action \(\alpha\). \textsl{Theorem.} Let \(G\) be a compact topological group; let \(X\) be a topological space; let \(\alpha\) be an action of \(G\) on \(X\). If \(X\) is Hausdorff, or regular, or normal, or locally compact, or second-countable, so is \(X/G\). [Hint: See Exercise 13 of \S\ 26.]
 \item[*9.] Let \(A\) be the set of all points of \({\mathbb{R}}_{\ell }^{2}\) of the form \(x \times ( {-x})\), for \(x\) rational; let \(B\) be the set of all points of this form for \(x\) irrational. If \(V\) is an open set of \({\mathbb{R}}_{\ell }^{2}\) containing \(B\), show there exists no open set \(U\) containing \(A\) that is disjoint from \(V\), as follows:
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Let \({K}_{n}\) consist of all irrational numbers \(x\) in \([ {0,1}]\) such that \(\lbrack x,x + 1/n) \times\) \(\lbrack - x, - x + 1/n)\) is contained in \(V\). Show \([ {0,1}]\) is the union of the sets \({K}_{n}\) and countably many one-point sets.
- \item Use Exercise 5 of \S 27 to show that some set \({\bar{K}}_{n}\) contains an open interval \((a, b)\) of \(\mathbb{R}\).
+ \item Use Exercise 5 of \S\ 27 to show that some set \({\bar{K}}_{n}\) contains an open interval \((a, b)\) of \(\mathbb{R}\).
  \item Show that \(V\) contains the open parallelogram consisting of all points of the form \(x \times ( {-x + \epsilon })\) for which \(a < x < b\) and \(0 < \epsilon < 1/n\).
  \item Conclude that if \(q\) is a rational number with \(a < q < b\), then the point \(q \times ( {-q})\) of \({\mathbb{R}}_{\ell }^{2}\) is a limit point of \(V\). 
  \end{enumerate}
@@ -808,7 +808,7 @@ There are two versions of the proof, and since each has useful generalizations t
 
 \end{theorem}
 \begin{proof}
- We shall prove that \(X\) is metrizable by imbedding \(X\) in a metrizable space \(Y\), that is, by showing \(X\) homeomorphic with a subspace of \(Y\). The two versions of the proof differ in the choice of the metrizable space \(Y\). In the first version, \(Y\) is the space \({\mathbb{R}}^{\omega }\) in the product topology, a space that we have previously proved to be metrizable (\hyperref[thm:20.5]{Theorem 20.5}). In the second version, the space \(Y\) is also \({\mathbb{R}}^{\omega }\), but this time in the topology given by the uniform metric \(\bar{\rho }\) (see \S 20). In each case, it turns out that our construction actually imbeds \(X\) in the subspace \({[ 0,1] }^{\omega }\) of \({\mathbb{R}}^{\omega }\).
+ We shall prove that \(X\) is metrizable by imbedding \(X\) in a metrizable space \(Y\), that is, by showing \(X\) homeomorphic with a subspace of \(Y\). The two versions of the proof differ in the choice of the metrizable space \(Y\). In the first version, \(Y\) is the space \({\mathbb{R}}^{\omega }\) in the product topology, a space that we have previously proved to be metrizable (\hyperref[thm:20.5]{Theorem 20.5}). In the second version, the space \(Y\) is also \({\mathbb{R}}^{\omega }\), but this time in the topology given by the uniform metric \(\bar{\rho }\) (see \S\ 20). In each case, it turns out that our construction actually imbeds \(X\) in the subspace \({[ 0,1] }^{\omega }\) of \({\mathbb{R}}^{\omega }\).
 
 Step 1. We prove the following: There exists a countable collection of continuous functions \({f}_{n} : X \rightarrow [ {0,1}]\) having the property that given any point \({x}_{0}\) of \(X\) and any neighborhood \(U\) of \({x}_{0}\), there exists an index \(n\) such that \({f}_{n}\) is positive at \({x}_{0}\) and vanishes outside \(U\).
 
@@ -935,7 +935,7 @@ A family of continuous functions that satisfies the hypotheses of this theorem i
 \item Let \(X\) be a compact Hausdorff space that is the union of the closed subspaces \({X}_{1}\) and \({X}_{2}\). If \({X}_{1}\) and \({X}_{2}\) are metrizable, show that \(X\) is metrizable. [Hint: Construct a countable collection \(\mathcal{A}\) of open sets of \(X\) whose intersections with \({X}_{i}\) form a basis for \({X}_{i}\), for \(i = 1,2\). Assume \({X}_{1} - {X}_{2}\) and \({X}_{2} - {X}_{1}\) belong to \(\mathcal{A}\). Let \(\mathcal{B}\) consist of finite intersections of elements of \(\mathcal{A}\) ]
 \end{enumerate}
 \booksection*{35}{The Tietze Extension Theorem}[\protect\sectionDagger]
-\customfootnote{${}^{\dagger}$ This section will be assumed in \S 62. It is also used in a number of exercises.}
+\customfootnote{${}^{\dagger}$ This section will be assumed in \S\ 62. It is also used in a number of exercises.}
 
 One immediate consequence of the Urysohn lemma is the useful theorem called the Tietze extension theorem. It deals with the problem of extending a continuous real-valued function that is defined on a subspace of a space \(X\) to a continuous function defined on all of \(X\). This theorem is important in many of the applications of topology.
 
@@ -1162,7 +1162,7 @@ We have shown that every regular space with a countable basis can be imbedded in
 
 \customfootnote{
 
-${}^{\dagger}$ This section will be assumed when we study paracompactness in \S 41 and when we study dimension theory in \S 50.
+${}^{\dagger}$ This section will be assumed when we study paracompactness in \S\ 41 and when we study dimension theory in \S\ 50.
 
 }
 
@@ -1276,7 +1276,7 @@ Clearly, \(F\) is continuous. To prove that \(F\) is an imbedding we need only t
 
 Because \({\phi }_{i}(x) = {\phi }_{i}( y) > 0\), we conclude that \({g}_{i}(x) = {g}_{i}( y)\). But \({g}_{i} : {U}_{i} \rightarrow {\mathbb{R}}^{m}\) is injective, so that \(x = y\), as desired.
 
-In many applications of partitions of unity, such as the one just given, all one needs to know is that the sum \(\sum {\phi }_{i}(x)\) is positive for each \(x\). In others, however, one needs the stronger condition that \(\sum {\phi }_{i}(x) = 1\). See \S 50.
+In many applications of partitions of unity, such as the one just given, all one needs to know is that the sum \(\sum {\phi }_{i}(x)\) is positive for each \(x\). In others, however, one needs the stronger condition that \(\sum {\phi }_{i}(x) = 1\). See \S\ 50.
 \end{proof}
 
 \section*{Exercises}
@@ -1357,4 +1357,4 @@ Consider the following properties a space may satisfy:
 
 (19) topologically complete
 
-You should be able to answer all but one of the 340 questions involved in Exercises 1-6, and all but one of the 40 questions involved in Exercise 7. These two are unsolved; see the remark in Exercise 5 of §32.
+You should be able to answer all but one of the 340 questions involved in Exercises 1-6, and all but one of the 40 questions involved in Exercise 7. These two are unsolved; see the remark in Exercise 5 of \S\ 32.
