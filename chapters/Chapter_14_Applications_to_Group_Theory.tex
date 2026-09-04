@@ -74,7 +74,7 @@ Form \(Y\) by choosing, for each vertex \(x\) of \(X\) belonging to \(C\), an ed
 \end{lemma}
 
 \begin{proof}
-	Step 1. We show \(X\) is locally path connected. If \(x \in X\) and \(x\) lies interior to some edge of \(X\), then within every neighborhood of \(x\) is a neighborhood of \(x\) homeomorphic to an open interval of \(\mathbb{R}\), which is path connected. On the other hand, if \(x\) is a vertex of \(X\) and \(U\) is a neighborhood of \(x\), then we can choose, for each edge \({A}_{\alpha }\) having \(x\) as an end point, a neighborhood \({V}_{\alpha }\) of \(x\) in \({A}_{\alpha }\) lying in \(U\) that is homeomorphic to the \idx[half-open interval]{Half-open interval} \([ {0,1}]\). Then \(\bigcup {V}_{\alpha }\) is a neighborhood of \(x\) in \(X\) lying in \(U\), and it is a union of path-connected spaces having the point \(x\) in common.
+	Step 1. We show \(X\) is locally path connected. If \(x \in X\) and \(x\) lies interior to some edge of \(X\), then within every neighborhood of \(x\) is a neighborhood of \(x\) homeomorphic to an open interval of \(\mathbb{R}\), which is path connected. On the other hand, if \(x\) is a vertex of \(X\) and \(U\) is a neighborhood of \(x\), then we can choose, for each edge \({A}_{\alpha }\) having \(x\) as an end point, a neighborhood \({V}_{\alpha }\) of \(x\) in \({A}_{\alpha }\) lying in \(U\) that is homeomorphic to the half-open interval \([ {0,1}]\). Then \(\bigcup {V}_{\alpha }\) is a neighborhood of \(x\) in \(X\) lying in \(U\), and it is a union of path-connected spaces having the point \(x\) in common.
 Step 2. We show \(X\) is semilocally simply connected. Indeed, we show that if \(x \in X\), then \(x\) has a neighborhood \(U\) such that \({\pi }_{1}( {U,x})\) is trivial.
 
 If \(x\) lies interior to some edge of \(X\), then the interior of this edge is such a neighborhood. So suppose \(x\) is a vertex of \(X\). Let \(\overline{\operatorname{St}}x\) denote the union of those edges of \(X\) that have \(x\) as an end point, and let \(\operatorname{St}x\) denote the subspace of \(\overline{\operatorname{St}}x\) obtained by deleting all vertices other than \(x\). (St \(x\) is called the star of \(x\) in \(X\).) The set \(\operatorname{St}x\) is open in \(X\), since its complement is a union of arcs and vertices. We show that \({\pi }_{1}( {\operatorname{St}x, x})\) is trivial.
@@ -111,14 +111,14 @@ Finally, we prove our result in general. Choose a covering \(\mathcal{A}\) of \(
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item In the proof of normality of a linear graph \(X\), why did we assume that every vertex of \(X\) belongs either to \(B\) or to \(C\) ?
-\item The \idx[Euler number]{Euler number} of a finite linear graph \(X\) equals the number of vertices of \(X\) minus the number of edges of \(X\). It is in fact a topological invariant of \(X\), as we shall see. What is the Euler number of an arc? a circle? a wedge of \(n\) circles? the complete graph on \(n\) vertices? If \(E\) is an \(n\) -fold covering space of \(X\), how are the Euler numbers of \(E\) and \(X\) related?
+\item The Euler number of a finite linear graph \(X\) equals the number of vertices of \(X\) minus the number of edges of \(X\). It is in fact a topological invariant of \(X\), as we shall see. What is the Euler number of an arc? a circle? a wedge of \(n\) circles? the complete graph on \(n\) vertices? If \(E\) is an \(n\) -fold covering space of \(X\), how are the Euler numbers of \(E\) and \(X\) related?
 \end{enumerate}
 \booksection{84}{The Fundamental Group of a Graph}
 
 Now we prove the basic theorem that the fundamental group of any linear graph is a free group. Henceforth we shall refer to a linear graph simply as a graph.
 
 \begin{definition}
-	An oriented edge \(e\) of a graph \(X\) is an edge of \(X\) together with an ordering of its vertices; the first is called the initial vertex, and the second, the final vertex, of e. An \idx[edge path]{Edge path} in \(X\) is a sequence \({e}_{1},\ldots ,{e}_{n}\) of oriented edges of \(X\) such that the final vertex of \({e}_{i}\) equals the initial vertex of \({e}_{i + 1}\), for \(i = 1,\ldots, n - 1\). Such an edge path is entirely specified by the sequence of vertices \({x}_{0},\ldots ,{x}_{n}\), where \({x}_{0}\) is the initial vertex of \({e}_{1}\) and \({x}_{i}\) is the final vertex of \({e}_{i}\) for \(i = 1,\ldots, n\). It is said to be an edge path from \({x}_{0}\) to \({x}_{n}\). It is called a \idx[closed edge path]{Closed edge path} if \({x}_{0} = {x}_{n}\).
+	An oriented edge \(e\) of a graph \(X\) is an edge of \(X\) together with an ordering of its vertices; the first is called the initial vertex, and the second, the final vertex, of e. An edge path in \(X\) is a sequence \({e}_{1},\ldots ,{e}_{n}\) of oriented edges of \(X\) such that the final vertex of \({e}_{i}\) equals the initial vertex of \({e}_{i + 1}\), for \(i = 1,\ldots, n - 1\). Such an edge path is entirely specified by the sequence of vertices \({x}_{0},\ldots ,{x}_{n}\), where \({x}_{0}\) is the initial vertex of \({e}_{1}\) and \({x}_{i}\) is the final vertex of \({e}_{i}\) for \(i = 1,\ldots, n\). It is said to be an edge path from \({x}_{0}\) to \({x}_{n}\). It is called a \idx[closed edge path]{Closed edge path} if \({x}_{0} = {x}_{n}\).
 \end{definition}
 
 Given an oriented edge \(e\) of \(X\), let \({f}_{e}\) be the positive linear map of \([ {0,1}]\) onto \(e\) ; it is a path from the initial point of \(e\) to the final point of \(e\). Then, corresponding to the edge path \({e}_{1},\ldots ,{e}_{n}\) from \({x}_{0}\) to \({x}_{n}\), one has the actual path
@@ -139,14 +139,14 @@ from \({x}_{0}\) to \({x}_{n}\), where \({f}_{i} = {f}_{{e}_{i}}\) ; it is uniqu
 Conversely, suppose every pair of vertices of \(X\) can be joined by an edge path. Then they can be joined by an actual path in \(X\). Hence all the vertices of \(X\) belong to the same component of \(X\). Since each edge is connected, it also belongs to this component. Thus \(X\) is connected.
 \end{proof}
 \begin{definition}
-	Let \({e}_{1},\ldots ,{e}_{n}\) be an edge path in the linear graph \(X\). It can happen that for some \(i\), the oriented edges \({e}_{i}\) and \({e}_{i + 1}\) consist of the same edge of \(X\), but with opposite orientations. If this situation does not occur, then the edge path is said to be a \idx[reduced edge path]{Reduced edge path}.
+	Let \({e}_{1},\ldots ,{e}_{n}\) be an edge path in the linear graph \(X\). It can happen that for some \(i\), the oriented edges \({e}_{i}\) and \({e}_{i + 1}\) consist of the same edge of \(X\), but with opposite orientations. If this situation does not occur, then the edge path is said to be a reduced edge path.
 \end{definition}
 
 Note that if this situation does occur, then one can delete \({e}_{i}\) and \({e}_{i + 1}\) from the sequence of oriented edges and still have an edge path remaining (provided the original sequence consists of at least three edges). This deletion process is called reducing the edge path. It enables one to show that in any connected graph, every pair of distinct vertices can be joined by a reduced edge path. See \hyperref[fig:84.1]{Figure 84.1}.
 
 \munkresfig[0.7]{84.1}[Figure 84.1]
 \begin{definition}
-	A subgraph \(T\) of \(X\) is said to be a \idx[tree]{Tree} in \(X\) if \(T\) is connected and \(T\) contains no closed reduced edge paths.
+	A subgraph \(T\) of \(X\) is said to be a tree in \(X\) if \(T\) is connected and \(T\) contains no closed reduced edge paths.
 \end{definition}
 
 A linear graph consisting of a single edge is a tree. The graph in \hyperref[fig:84.2]{Figure 84.2} is not a tree, but deletion of the edge \(e\) would make it a tree. The graph in \hyperref[fig:84.3]{Figure 84.3} is a tree; deletion of the edge \(A\) would leave a tree remaining.
@@ -292,7 +292,7 @@ It remains to show that the element \([ {g}_{D}]\) has infinite order, so that \
 
 This class generates \({\pi }_{1}( {{S}^{1},p})\). It follows that \([ {g}_{D}]\) has infinite order in \({\pi }_{1}( {X,{x}_{0}})\).
 
-Step 3. Now we consider the situation where the collection of edges of \(X\) not in \(T\) is infinite. The proof in this case is so similar to the corresponding proof for an infinite \idx[wedge of circles]{Wedge of circles} that we omit the details. (See \hyperref[thm:71.3]{Theorem 71.3}.) The crucial facts are these: Any loop in \(X\) based at \({x}_{0}\) lies in the space
+Step 3. Now we consider the situation where the collection of edges of \(X\) not in \(T\) is infinite. The proof in this case is so similar to the corresponding proof for an infinite wedge of circles that we omit the details. (See \hyperref[thm:71.3]{Theorem 71.3}.) The crucial facts are these: Any loop in \(X\) based at \({x}_{0}\) lies in the space
 
 \[
 X( {{\alpha }_{1},\ldots ,{\alpha }_{n}}) = T \cup {A}_{{\alpha }_{1}} \cup \cdots \cup {A}_{{\alpha }_{n}}

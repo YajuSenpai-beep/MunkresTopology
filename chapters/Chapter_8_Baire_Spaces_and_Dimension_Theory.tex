@@ -1,12 +1,12 @@
 \chapteropening[Baire Spaces and Dimension Theory]{Baire Spaces \\and Dimension Theory}
 
-In this chapter, we introduce a class of topological spaces called the Baire spaces. The defining condition for a \idx[Baire space]{Baire space} is a bit complicated to state, but it is often useful in the applications, in both analysis and topology. Most of the spaces we have been studying are Baire spaces. For instance, a Hausdorff space is a Baire space if it is compact, or even locally compact. And a metrizable space \(X\) is a Baire space if it is topologically complete, that is, if there is a metric for \(X\) relative to which \(X\) is complete.
+In this chapter, we introduce a class of topological spaces called the Baire spaces. The defining condition for a Baire space is a bit complicated to state, but it is often useful in the applications, in both analysis and topology. Most of the spaces we have been studying are Baire spaces. For instance, a Hausdorff space is a Baire space if it is compact, or even locally compact. And a metrizable space \(X\) is a Baire space if it is topologically complete, that is, if there is a metric for \(X\) relative to which \(X\) is complete.
 
 It follows that, since the space \(\mathcal{C}({X,{\mathbb{R}}^{n}})\) of all continuous functions from a space \(X\) to \({\mathbb{R}}^{n}\) is complete in the uniform metric, it is a Baire space in the uniform topology. This fact has a number of interesting applications.
 
 One application is the proof we give in \S\ 49 of the existence of a continuous nowhere-differentiable real-valued function.
 
-Another application arises in that branch of topology called dimension theory. In \S\ 50, we define a topological notion of dimension, due to Lebesgue. And we prove the classical theorem that every compact metrizable space of \idx[topological dimension]{Topological dimension} \(m\) can be imbedded in euclidean space \({\mathbb{R}}^{N}\) of dimension \(N = {2m} + 1\). It follows that every compact \(m\) -manifold can be imbedded in \({\mathbb{R}}^{{2m} + 1}\). This generalizes the imbedding theorem proved in \S\ 36.
+Another application arises in that branch of topology called dimension theory. In \S\ 50, we define a topological notion of dimension, due to Lebesgue. And we prove the classical theorem that every compact metrizable space of topological dimension \(m\) can be imbedded in euclidean space \({\mathbb{R}}^{N}\) of dimension \(N = {2m} + 1\). It follows that every compact \(m\) -manifold can be imbedded in \({\mathbb{R}}^{{2m} + 1}\). This generalizes the imbedding theorem proved in \S\ 36.
 
 Throughout the chapter, we assume familiarity with complete metric spaces (\S\ 43). When we study dimension theory, we shall make use of \S\ 36, Imbeddings of Manifolds, as well as a bit of linear algebra.
 
@@ -371,7 +371,7 @@ You may find this proof frustrating, in that it seems so abstract and nonconstru
 
 We showed in \S\ 36 that if \(X\) is a compact manifold, then \(X\) can be imbedded in \({\mathbb{R}}^{N}\) for some positive integer \(N\). In this section, we generalize this theorem to arbitrary compact metrizable spaces.
 
-We shall define, for an arbitrary topological space \(X\), a notion of topological dimension. It is the ``\idx[covering dimension]{Covering dimension}'' originally defined by Lebesgue. We shall prove that each compact subset of \({\mathbb{R}}^{m}\) has topological dimension at most \(m\). We shall also prove that the topological dimension of any compact \(m\) -manifold is at most \(m\). (It is, in fact, precisely \(m\), but this we shall not prove.)
+We shall define, for an arbitrary topological space \(X\), a notion of topological dimension. It is the ``covering dimension'' originally defined by Lebesgue. We shall prove that each compact subset of \({\mathbb{R}}^{m}\) has topological dimension at most \(m\). We shall also prove that the topological dimension of any compact \(m\) -manifold is at most \(m\). (It is, in fact, precisely \(m\), but this we shall not prove.)
 
 The major theorem of this section is the theorem, due to K. Menger and G. Nöbeling, that any compact metrizable space of topological dimension \(m\) can be imbedded in \({\mathbb{R}}^{N}\) for \(N = {2m} + 1\). The proof is an application of the Baire theorem. It follows that every compact \(m\) -manifold can be imbedded in \({\mathbb{R}}^{{2m} + 1}\). It follows also that a compact metrizable space can be imbedded in \({\mathbb{R}}^{N}\) for some \(N\) if and only if it has finite topological dimension.
 
@@ -454,7 +454,7 @@ Let \(X = Y \cup Z\), where \(Y\) and \(Z\) are closed subspaces of \(X\) having
 \end{theorem}
 
 \begin{proof}
-Let \(m = \max \{ \dim Y,\dim Z\}\). We shall show that \(X\) is \idx[finite dimensional]{Finite dimensional} and has topological dimension at most \(m\). It then follows from the preceding theorem that \(X\) has topological dimension precisely \(m\).
+Let \(m = \max \{ \dim Y,\dim Z\}\). We shall show that \(X\) is finite dimensional and has topological dimension at most \(m\). It then follows from the preceding theorem that \(X\) has topological dimension precisely \(m\).
 Step 1. If \(\mathcal{A}\) is an open covering of \(X\), we say that \(\mathcal{A}\) has order at most \(m + 1\) at points of \(Y\) provided no point of \(Y\) lies in more than \(m + 1\) elements of \(\mathcal{A}\).
 
 We show that if \(\mathcal{A}\) is an open covering of \(X\), then there is an open covering of \(X\) that refines \(\mathcal{A}\) and has order at most \(m + 1\) at points of \(Y\).
@@ -507,17 +507,17 @@ An obvious question occurs at this point: Does a compact 2-manifold have topolog
 \begin{centeredblock}
 \begin{example}
 \label{ex:\thesection.\theexample}
-An \idx[arc]{Arc} \(A\) is a space homeomorphic to the closed unit interval; the end points of \(A\) are the points \(p\) and \(q\) such that \(A - \{ p\}\) and \(A - \{ q\}\) are connected. A (finite) \idx[linear graph]{Linear graph} \(G\) is a Hausdorff space that is written as the union of finitely many arcs, each pair of which intersect in at most a common end point. The arcs in the collection are called the edges of \(G\), and the end points of the arcs are called the vertices of \(G\). Each edge of \(G\), being compact, is closed in \(G\) ; the preceding corollary tells us that \(G\) has topological dimension 1.
+An arc \(A\) is a space homeomorphic to the closed unit interval; the end points of \(A\) are the points \(p\) and \(q\) such that \(A - \{ p\}\) and \(A - \{ q\}\) are connected. A (finite) linear graph \(G\) is a Hausdorff space that is written as the union of finitely many arcs, each pair of which intersect in at most a common end point. The arcs in the collection are called the edges of \(G\), and the end points of the arcs are called the vertices of \(G\). Each edge of \(G\), being compact, is closed in \(G\) ; the preceding corollary tells us that \(G\) has topological dimension 1.
 \end{example}
 \end{centeredblock}
 
-Two particular linear graphs are sketched in \hyperref[fig:50.2]{Figure 50.2}. The first is a diagram of the familiar ``gas-water-electricity problem''; the second is called the ``\idx[complete graph]{Complete graph} on five vertices.'' Neither of them can be imbedded in \({\mathbb{R}}^{2}\). Although this fact is ``intuitively obvious,'' it is highly nontrivial to prove. We shall give a proof in \S\ 64.
+Two particular linear graphs are sketched in \hyperref[fig:50.2]{Figure 50.2}. The first is a diagram of the familiar ``gas-water-electricity problem''; the second is called the ``complete graph on five vertices.'' Neither of them can be imbedded in \({\mathbb{R}}^{2}\). Although this fact is ``intuitively obvious,'' it is highly nontrivial to prove. We shall give a proof in \S\ 64.
 
 \munkresfig[1.0]{50.2}[Figure 50.2]
 \begin{centeredblock}
 \begin{example}
 \label{ex:\thesection.\theexample}
-Every finite linear graph can be imbedded in \({\mathbb{R}}^{3}\). The proof involves the notion of ``\idx[general position]{General position}.'' A set \(S\) of points of \({\mathbb{R}}^{3}\) is said to be in general position if no three of the points of \(S\) are collinear and no four of them are coplanar. It is easy to find such a set of points. For example, the points of the curve
+Every finite linear graph can be imbedded in \({\mathbb{R}}^{3}\). The proof involves the notion of ``general position.'' A set \(S\) of points of \({\mathbb{R}}^{3}\) is said to be in general position if no three of the points of \(S\) are collinear and no four of them are coplanar. It is easy to find such a set of points. For example, the points of the curve
 
 \[
 S = \{ {({t,{t}^{2},{t}^{3}}) \mid t \in \mathbb{R}}\}
@@ -538,7 +538,7 @@ Now we prove our general imbedding theorem, to the effect that every compact met
 To prove the imbedding theorem, we shall need to generalize the notion of general position to \({\mathbb{R}}^{N}\). This involves a bit of the analytic geometry of \({\mathbb{R}}^{N}\), which is nothing more than the usual linear algebra of \({\mathbb{R}}^{N}\) translated into somewhat different language.
 
 \begin{definition}
-A set \(\{ {{\mathbf{x}}_{0},\ldots ,{\mathbf{x}}_{k}}\}\) of points of \({\mathbb{R}}^{N}\) is said to be \idx[geometrically independent]{Geometrically independent}, or to be in general position, if the equations
+A set \(\{ {{\mathbf{x}}_{0},\ldots ,{\mathbf{x}}_{k}}\}\) of points of \({\mathbb{R}}^{N}\) is said to be geometrically independent, or to be in general position, if the equations
 
 \[
 \mathop{\sum }\limits_{{i = 0}}^{k}{a}_{i}{\mathbf{x}}_{i} = \mathbf{0}\;\text{ and }\;\mathop{\sum }\limits_{{i = 0}}^{k}{a}_{i} = 0
@@ -871,7 +871,7 @@ Let \(X\) be the set that is the union of \(A\) and all the spaces \({B}_{c}\), 
 \]
 \end{enumerate}
 
-The space \(X\) is called the ``\idx[Prüfer manifold]{Prüfer manifold}.''
+The space \(X\) is called the ``Prüfer manifold.''
 
 (a) Sketch the sets \({A}_{c}({I,\epsilon })\) and \({B}_{c}({I,\epsilon })\).
 
