@@ -1,6 +1,6 @@
 \chapteropening[Topological Spaces and Continuous Functions]{Topological Spaces \\and Continuous Functions}
 
-The concept of topological space grew out of the study of the real line and euclidean space and the study of continuous functions on these spaces. In this chapter, we define what a topological space is, and we study a number of ways of constructing a topology on a set so as to make it into a topological space. We also consider some of the elementary concepts associated with topological spaces. Open and closed sets, limit points, and continuous functions are introduced as natural generalizations of the corresponding ideas for the real line and euclidean space.
+The concept of \idx[topological space]{Topological space} grew out of the study of the real line and euclidean space and the study of continuous functions on these spaces. In this chapter, we define what a topological space is, and we study a number of ways of constructing a \idx[topology]{Topology} on a set so as to make it into a topological space. We also consider some of the elementary concepts associated with topological spaces. Open and closed sets, limit points, and continuous functions are introduced as natural generalizations of the corresponding ideas for the real line and euclidean space.
 
 \booksection{12}{Topological Spaces}
 
@@ -19,7 +19,7 @@ The definition of a topological space that is now standard was a long time in be
  Properly speaking, a topological space is an ordered pair \((X, \mathcal{T})\) consisting of a set \(X\) and a topology \(\mathcal{T}\) on \(X\), but we often omit specific mention of \(\mathcal{T}\) if no confusion will arise.
 \end{definition}
 
-If \(X\) is a topological space with topology \(\mathcal{T}\), we say that a subset \(U\) of \(X\) is an open set of \(X\) if \(U\) belongs to the collection \(\mathcal{T}\). Using this terminology, one can say that a topological space is a set \(X\) together with a collection of subsets of \(X\), called open sets, such that \(\varnothing\) and \(X\) are both open, and such that arbitrary unions and finite intersections of open sets are open.
+If \(X\) is a topological space with topology \(\mathcal{T}\), we say that a subset \(U\) of \(X\) is an \idx[open set]{Open set} of \(X\) if \(U\) belongs to the collection \(\mathcal{T}\). Using this terminology, one can say that a topological space is a set \(X\) together with a collection of subsets of \(X\), called open sets, such that \(\varnothing\) and \(X\) are both open, and such that arbitrary unions and finite intersections of open sets are open.
 
 \begin{centeredblock*}
  \begin{example}
@@ -34,14 +34,14 @@ If \(X\) is a topological space with topology \(\mathcal{T}\), we say that a sub
 \begin{centeredblock}
  \begin{example}
 \label{ex:\thesection.\theexample}
-  If \(X\) is any set, the collection of all subsets of \(X\) is a topology on \(X\); it is called the discrete topology. The collection consisting of \(X\) and \(\varnothing\) only is also a topology on \(X\) ; we shall call it the indiscrete topology, or the trivial topology.
+  If \(X\) is any set, the collection of all subsets of \(X\) is a topology on \(X\); it is called the \idx[discrete topology]{Discrete topology}. The collection consisting of \(X\) and \(\varnothing\) only is also a topology on \(X\) ; we shall call it the \idx[indiscrete topology]{Indiscrete topology}, or the \idx[trivial topology]{Trivial topology}.
  \end{example}
 \end{centeredblock}
 
 \begin{centeredblock*}
  \begin{example}
 \label{ex:\thesection.\theexample}
-  Let \(X\) be a set, let \({\mathcal{T}}_{f}\) be the collection of all subsets \(U\) of \(X\) such that \(X - U\) either is finite or is all of \(X\). Then \({\mathcal{T}}_{f}\) is a topology on \(X\), called the finite complement topology. Both \(X\) and \(\varnothing\) are in \({\mathcal{T}}_{f}\), since \(X - X\) is finite and \(X - \varnothing\) is all of \(X\). If \(\{ {U}_{\alpha }\}\) is an indexed family of nonempty elements of \({\mathcal{T}}_{f}\), to show that \(\bigcup {U}_{\alpha }\) is in \({\mathcal{T}}_{f}\), we compute
+  Let \(X\) be a set, let \({\mathcal{T}}_{f}\) be the collection of all subsets \(U\) of \(X\) such that \(X - U\) either is finite or is all of \(X\). Then \({\mathcal{T}}_{f}\) is a topology on \(X\), called the \idx[finite complement topology]{Finite complement topology}. Both \(X\) and \(\varnothing\) are in \({\mathcal{T}}_{f}\), since \(X - X\) is finite and \(X - \varnothing\) is all of \(X\). If \(\{ {U}_{\alpha }\}\) is an indexed family of nonempty elements of \({\mathcal{T}}_{f}\), to show that \(\bigcup {U}_{\alpha }\) is in \({\mathcal{T}}_{f}\), we compute
 
   \[
   X - \bigcup {U}_{\alpha } = \bigcap ( {X - {U}_{\alpha }})
@@ -192,7 +192,7 @@ Some students find this condition hard to remember. ``Which way does the inclusi
 \begin{centeredblock}
  \begin{example}
 \label{ex:\thesection.\theexample}
-  One can now see that the collection \(\mathcal{B}\) of all circular regions in the plane generates the same topology as the collection \({\mathcal{B}}^{\prime }\) of all rectangular regions, \hyperref[fig:13.4]{Figure 13.4} illustrates the proof. We shall treat this example more formally when we study metric spaces.
+  One can now see that the collection \(\mathcal{B}\) of all circular regions in the plane generates the same topology as the collection \({\mathcal{B}}^{\prime }\) of all rectangular regions, \hyperref[fig:13.4]{Figure 13.4} illustrates the proof. We shall treat this example more formally when we study \idx[metric]{Metric} spaces.
 
   \munkresfig[0.7]{13.4}[Figure 13.4]
   We now define three topologies on the real line \(\mathbb{R}\), all of which are of interest.
@@ -229,7 +229,7 @@ It is easy to see that all three of these collections are bases; in each case, t
  We leave it to you to show that the topologies of \({\mathbb{R}}_{\ell }\) and \({\mathbb{R}}_{K}\) are not comparable.
 \end{proof}
 
-A question may occur to you at this point. Since the topology generated by a basis \(\mathcal{B}\) may be described as the collection of arbitrary unions of elements of \(\mathcal{B}\), what happens if you start with a given collection of sets and take finite intersections of them as well as arbitrary unions? This question leads to the notion of a subbasis for a topology
+A question may occur to you at this point. Since the topology generated by a basis \(\mathcal{B}\) may be described as the collection of arbitrary unions of elements of \(\mathcal{B}\), what happens if you start with a given collection of sets and take finite intersections of them as well as arbitrary unions? This question leads to the notion of a \idx[subbasis]{Subbasis} for a topology
 
 \begin{definition}
  A subbasis \(\mathcal{S}\) for a topology on \(X\) is a collection of subsets of \(X\) whose union equals \(X\). The topology generated by the subbasis \(S\) is defined to be the collection \(\mathcal{T}\) of all unions of finite intersections of elements of \(\mathcal{S}\).
@@ -278,7 +278,7 @@ is also a finite intersection of elements of \(\mathcal{S}\), so it belongs to \
   \end{enumerate}
 \end{enumerate}
 
-\booksection{14}{The Order Topology}
+\booksection{14}{The \idx[Order Topology]{Order topology}}
 
 If \(X\) is a simply ordered set, there is a standard topology for \(X\), defined using the order relation. It is called the order topology; in this section, we consider it and study some of its properties.
 
@@ -295,7 +295,7 @@ Suppose that \(X\) is a set having a simple order relation \(<\). Given elements
 \[
 [ {a,b}] = \{ x \mid a \leq x \leq b\}.
 \]
-The notation used here is familiar to you already in the case where \(X\) is the real line, but these are intervals in an arbitrary ordered set. A set of the first type is called an open interval in \(X\), a set of the last type is called a closed interval in \(X\), and sets of the second and third types are called half-open intervals. The use of the term ``open'' in this connection suggests that open intervals in \(X\) should turn out to be open sets when we put a topology on \(X\). And so they will.
+The notation used here is familiar to you already in the case where \(X\) is the real line, but these are intervals in an arbitrary ordered set. A set of the first type is called an open interval in \(X\), a set of the last type is called a \idx[closed interval]{Closed interval} in \(X\), and sets of the second and third types are called half-open intervals. The use of the term ``open'' in this connection suggests that open intervals in \(X\) should turn out to be open sets when we put a topology on \(X\). And so they will.
 
 \begin{definition}
  Let \(X\) be a set with a simple order relation; assume \(X\) has more than one element. Let \(\mathcal{B}\) be the collection of all sets of the following types:
@@ -369,7 +369,7 @@ The use of the term ``open'' suggests that open rays in \(X\) are open sets in t
 
 The open rays, in fact, form a subbasis for the order topology on \(X\), as we now show. Because the open rays are open in the order topology, the topology they generate is contained in the order topology. On the other hand, every basis element for the order topology equals a finite intersection of open rays; the interval \((a, b)\) equals the intersection of \(( {-\infty,b})\) and \(( {a, + \infty })\), while \([ {{a}_{0},b})\) and \(( {a,{b}_{0}}]\), if they exist, are themselves open rays. Hence the topology generated by the open rays contains the order topology.
 
-\booksection{15}{The Product Topology on \(X \times Y\)}
+\booksection{15}{The \idx[Product Topology]{Product topology} on \(X \times Y\)}
 
 If \(X\) and \(Y\) are topological spaces, there is a standard way of defining a topology on the cartesian product \(X \times Y\). We consider this topology now and study some of its properties.
 
@@ -455,7 +455,7 @@ which is also open in \(X \times Y\). The intersection of these two sets is the 
  Therefore, \(U \times V\) belongs to \({\mathcal{T}}^{\prime }\), so that \(\mathcal{T} \subset {\mathcal{T}}^{\prime }\) as well.
 \end{proof}
 
-\booksection{16}{The Subspace Topology}
+\booksection{16}{The \idx[Subspace Topology]{Subspace topology}}
 
 \begin{definition}
  Let \(X\) be a topological space with topology \(\mathcal{T}\). If \(Y\) is a subset of \(X\), the collection
@@ -561,7 +561,7 @@ Now let \(X\) be an ordered set in the order topology, and let \(Y\) be a subset
 \label{ex:\thesection.\theexample}
  Let \(I = [ {0,1}]\) The dictionary order on \(I \times I\) is just the restriction to \(I \times I\) of the dictionary order on the plane \(\mathbb{R} \times \mathbb{R}\). However, the dictionary order topology on \(I \times I\) is not the same as the subspace topology on \(I \times I\) obtained from the dictionary order topology on \(\mathbb{R} \times {\mathbb{R}}^{1}\) For example, the set \(\{ 1/2\} \times (1/2,1\rbrack\) is open in \(I \times I\) in the subspace topology, but not in the order topology, as you can check. See \hyperref[fig:16.1]{Figure 16.1}.
 
- The set \(I \times I\) in the dictionary order topology will be called the ordered square, and denoted by \( {I}_{o}^{2}\).
+ The set \(I \times I\) in the dictionary order topology will be called the \idx[ordered square]{Ordered square}, and denoted by \( {I}_{o}^{2}\).
 \end{example}
 \end{centeredblock}
 
@@ -581,7 +581,7 @@ Given an ordered set \(X\), let us say that a subset \(Y\) of \(X\) is convex in
  \[
  ( {a, + \infty }) \cap Y = \{ x \mid x \in Y\text{ and }x > a\} ;
  \]
- this is an open ray of the ordered set \(Y\). If \(a \notin Y\), then \(a\) is either a lower bound on \(Y\) or an upper bound on \(Y\), since \(Y\) is convex. In the former case, the set \(( {a, + \infty }) \cap Y\) equals all of \(Y\) ; in the latter case, it is empty.
+ this is an \idx[open ray]{Open ray} of the ordered set \(Y\). If \(a \notin Y\), then \(a\) is either a lower bound on \(Y\) or an upper bound on \(Y\), since \(Y\) is convex. In the former case, the set \(( {a, + \infty }) \cap Y\) equals all of \(Y\) ; in the latter case, it is empty.
 
  A similar remark shows that the intersection of the ray \(( {-\infty,a})\) with \(Y\) is either an open ray of \(Y\), or \(Y\) itself, or empty. Since the sets \(( {a, + \infty }) \cap Y\) and \(( {-\infty,a}) \cap Y\) form a subbasis for the subspace topology on \(Y\), and since each is open in the order topology, the order topology contains the subspace topology.
 
@@ -602,7 +602,7 @@ To avoid ambiguity, let us agree that whenever \(X\) is an ordered set in the or
   \item \(D = \{ x \mid \frac{1}{2} \leq | x | \leq 1 \}\)
   \item \(E = \{ x \mid 0 < | x | < 1 \text{ and } 1/x \notin {\mathbb{Z}}_{+} \}\)
   \end{enumerate}
-\item A map \(f : X \rightarrow Y\) is said to be an open map if for every open set \(U\) of \(X\), the set \(f( U)\) is open in \(Y\). Show that \({\pi }_{1} : X \times Y \rightarrow X\) and \({\pi }_{2} : X \times Y \rightarrow Y\) are open maps.
+\item A map \(f : X \rightarrow Y\) is said to be an \idx[open map]{Open map} if for every open set \(U\) of \(X\), the set \(f( U)\) is open in \(Y\). Show that \({\pi }_{1} : X \times Y \rightarrow X\) and \({\pi }_{2} : X \times Y \rightarrow Y\) are open maps.
 \item Let \(X\) and \({X}^{\prime }\) denote a single set in the topologies \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\), respectively; let \(Y\) and \({Y}^{\prime }\) denote a single set in the topologies \(\mathcal{U}\) and \({\mathcal{U}}^{\prime }\), respectively. Assume these sets are nonempty.
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that if \({\mathcal{T}}^{\prime } \supset \mathcal{T}\) and \({\mathcal{U}}^{\prime } \supset \mathcal{U}\), then the product topology on \({X}^{\prime } \times {Y}^{\prime }\) is finer than the product topology on \(X \times Y\).
@@ -617,7 +617,7 @@ To avoid ambiguity, let us agree that whenever \(X\) is an ordered set in the or
 
 \booksection{17}{Closed Sets and Limit Points}
 
-Now that we have a few examples at hand, we can introduce some of the basic concepts associated with topological spaces. In this section, we treat the notions of closed set, closure of a set, and limit point. These lead naturally to consideration of a certain axiom for topological spaces called the Hausdorff axiom.
+Now that we have a few examples at hand, we can introduce some of the basic concepts associated with topological spaces. In this section, we treat the notions of \idx[closed set]{Closed set}, \idx[closure]{Closure} of a set, and \idx[limit point]{Limit point}. These lead naturally to consideration of a certain axiom for topological spaces called the Hausdorff axiom.
 
 \section*{Closed Sets}
 
@@ -632,7 +632,7 @@ A subset \(A\) of a topological space \(X\) is said to be closed if the set \(X 
  \mathbb{R} - [ {a,b}] = ( {-\infty,a}) \cup ( {b, + \infty }),
  \]
 
- is open. Similarly, \(\lbrack a, + \infty )\) is closed, because its complement \(( {-\infty,a})\) is open. These facts justify our use of the terms ``closed interval'' and ``closed ray.'' The subset \(\lbrack a,b)\) of \(\mathbb{R}\) is neither open nor closed.
+ is open. Similarly, \(\lbrack a, + \infty )\) is closed, because its complement \(( {-\infty,a})\) is open. These facts justify our use of the terms ``closed interval'' and ``\idx[closed ray]{Closed ray}.'' The subset \(\lbrack a,b)\) of \(\mathbb{R}\) is neither open nor closed.
 \end{example}
 \end{centeredblock}
 
@@ -802,7 +802,7 @@ First let us introduce some convenient terminology. We shall say that a set \(A\
 Mathematicians often use some special terminology here. They shorten the statement `` \(U\) is an open set containing \(x\) '' to the phrase
 
 \[
-\text{"}U\text{ is a neighborhood of }x\text{."}
+\text{"}U\text{ is a \idx[neighborhood]{Neighborhood} of }x\text{."}
 \]
 Using this terminology, one can write the first half of the preceding theorem as follows:
 \begin{centeredblock}
@@ -2340,10 +2340,10 @@ Unlike the topologies we have already considered in this chapter, the quotient t
 \munkresfig[1.0]{22.1}[Figure 22.1]
 \munkresfig[0.7]{22.2}[Figure 22.2]
 \begin{definition}
- Let \(X\) and \(Y\) be topological spaces; let \(p : X \rightarrow Y\) be a surjective map. The map \(p\) is said to be a quotient map provided a subset \(U\) of \(Y\) is open in \(Y\) if and only if \({p}^{-1}( U)\) is open in \(X\).
+ Let \(X\) and \(Y\) be topological spaces; let \(p : X \rightarrow Y\) be a surjective map. The map \(p\) is said to be a \idx[quotient map]{Quotient map} provided a subset \(U\) of \(Y\) is open in \(Y\) if and only if \({p}^{-1}( U)\) is open in \(X\).
 \end{definition}
 
-This condition is stronger than continuity; some mathematicians call it ``strong continuity.'' An equivalent condition is to require that a subset \(A\) of \(Y\) be closed in \(Y\) if and only if \({p}^{-1}( A)\) is closed in \(X\). Equivalence of the two conditions follows from equation
+This condition is stronger than continuity; some mathematicians call it ``\idx[strong continuity]{Strong continuity}.'' An equivalent condition is to require that a subset \(A\) of \(Y\) be closed in \(Y\) if and only if \({p}^{-1}( A)\) is closed in \(X\). Equivalence of the two conditions follows from equation
 
 \[
 {f}^{-1}( {Y - B}) = X - {f}^{-1}( B).
@@ -2351,7 +2351,7 @@ This condition is stronger than continuity; some mathematicians call it ``strong
 
 Another way of describing a quotient map is as follows: We say that a subset \(C\) of \(X\) is saturated (with respect to the surjective map \(p : X \rightarrow Y\) ) if \(C\) contains every set \({p}^{-1}( {\{ y\} })\) that it intersects. Thus \(C\) is saturated if it equals the complete inverse image of a subset of \(Y\). To say that \(p\) is a quotient map is equivalent to saying that \(p\) is continuous and \(p\) maps saturated open sets of \(X\) to open sets of \(Y\) (or saturated closed sets of \(X\) to closed sets of \(Y\) ).
 
-Two special kinds of quotient maps are the open maps and the closed maps. Recall that a map \(f : X \rightarrow Y\) is said to be an open map if for each open set \(U\) of \(X\), the set \(f( U)\) is open in \(Y\). It is said to be a closed map if for each closed set \(A\) of \(X\), the set \(f( A)\) is closed in \(Y\). It follows immediately from the definition that if \(p : X \rightarrow Y\) is a surjective continuous map that is either open or closed, then \(p\) is a quotient map. There are quotient maps that are neither open nor closed. (See Exercise 3.)
+Two special kinds of quotient maps are the open maps and the closed maps. Recall that a map \(f : X \rightarrow Y\) is said to be an open map if for each open set \(U\) of \(X\), the set \(f( U)\) is open in \(Y\). It is said to be a \idx[closed map]{Closed map} if for each closed set \(A\) of \(X\), the set \(f( A)\) is closed in \(Y\). It follows immediately from the definition that if \(p : X \rightarrow Y\) is a surjective continuous map that is either open or closed, then \(p\) is a quotient map. There are quotient maps that are neither open nor closed. (See Exercise 3.)
 
 \begin{centeredblock}
 \begin{example}
@@ -2419,7 +2419,7 @@ There is a special situation in which the quotient topology occurs particularly 
  Let \(X\) be a topological space, and let \({X}^{ * }\) be a partition of \(X\) into disjoint subsets whose union is \(X\). Let \(p : X \rightarrow {X}^{ * }\) be the surjective map that carries each point of \(X\) to the element of \({X}^{ * }\) containing it. In the quotient topology induced by \(p\), the space \({X}^{ * }\) is called a quotient space of \(X\).
 \end{definition}
 
-Given \({X}^{ * }\), there is an equivalence relation on \(X\) of which the elements of \({X}^{ * }\) are the equivalence classes. One can think of \({X}^{ * }\) as having been obtained by ``identifying'' each pair of equivalent points. For this reason, the quotient space \({X}^{ * }\) is often called an identification space, or a decomposition space, of the space \(X\).
+Given \({X}^{ * }\), there is an equivalence relation on \(X\) of which the elements of \({X}^{ * }\) are the equivalence classes. One can think of \({X}^{ * }\) as having been obtained by ``identifying'' each pair of equivalent points. For this reason, the quotient space \({X}^{ * }\) is often called an \idx[identification space]{Identification space}, or a \idx[decomposition space]{Decomposition space}, of the space \(X\).
 
 We can describe the topology of \({X}^{ * }\) in another way. A subset \(U\) of \({X}^{ * }\) is a collection of equivalence classes, and the set \({p}^{-1}( U)\) is just the union of the equivalence classes belonging to \(U\). Thus the typical open set of \({X}^{ * }\) is a collection of equivalence classes whose union is an open set of \(X\).
 
@@ -2557,7 +2557,7 @@ Perhaps the most important result in the study of quotient spaces has to do with
 (b) If \(Z\) is Hausdorff, so is \({X}^{ * }\).
 
 \begin{proof}
- By the preceding theorem, \(g\) induces a continuous map \(f : {X}^{ * } \rightarrow Z\) ; it is clear that \(f\) is bijective. Suppose that \(f\) is a homeomorphism. Then both \(f\) and the projection map \(p : X \rightarrow {X}^{ * }\) are quotient maps, so that their composite \(q\) is a quotient map. Conversely, suppose that \(g\) is a quotient map Then it follows from the preceding theorem that \(f\) is a quotient map. Being bijective, \(f\) is thus a homeomorphism.
+ By the preceding theorem, \(g\) induces a continuous map \(f : {X}^{ * } \rightarrow Z\) ; it is clear that \(f\) is bijective. Suppose that \(f\) is a homeomorphism. Then both \(f\) and the \idx[projection map]{Projection map} \(p : X \rightarrow {X}^{ * }\) are quotient maps, so that their composite \(q\) is a quotient map. Conversely, suppose that \(g\) is a quotient map Then it follows from the preceding theorem that \(f\) is a quotient map. Being bijective, \(f\) is thus a homeomorphism.
 
  Suppose \(Z\) is Hausdorff. Given distinct points of \({X}^{ * }\), their images under \(f\) are distinct and thus possess disjoint neighborhoods \(U\) and \(V\). Then \({f}^{-1}( U)\) and \({f}^{-1}( V)\) are disjoint neighborhoods of the two given points of \({X}^{ * }\).
 \end{proof}
@@ -2626,13 +2626,13 @@ To verify this fact, it suffices to show that \(g\) is not a quotient map. Consi
 \item Recall that \({\mathbb{R}}_{K}\) denotes the real line in the \(K\) -topology. (See \(\S\ {13}\).) Let \(Y\) be the quotient space obtained from \({\mathbb{R}}_{K}\) by collapsing the set \(K\) to a point; let \(p : {\mathbb{R}}_{K} \rightarrow Y\) be the quotient map.
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that \(Y\) satisfies the \({T}_{1}\) axiom, but is not Hausdorff.
-  \item Show that \(p \times p.{\mathbb{R}}_{K} \times {\mathbb{R}}_{K} \rightarrow Y \times Y\) is not a quotient map. [Hint: The diagonal is not closed in \(Y \times Y\), but its inverse image is closed in \({\mathbb{R}}_{K} \times {\mathbb{R}}_{K}\).]
+  \item Show that \(p \times p.{\mathbb{R}}_{K} \times {\mathbb{R}}_{K} \rightarrow Y \times Y\) is not a quotient map. [Hint: The \idx[diagonal]{Diagonal} is not closed in \(Y \times Y\), but its inverse image is closed in \({\mathbb{R}}_{K} \times {\mathbb{R}}_{K}\).]
   \end{enumerate}
 \end{enumerate}
 
 \suppsection{Supplementary Exercises: Topological Groups}
 
-In these exercises we consider topological groups and some of their properties. The quotient topology gets its name from the special case that arises when one forms the quotient of a topological group by a subgroup.
+In these exercises we consider topological groups and some of their properties. The quotient topology gets its name from the special case that arises when one forms the quotient of a \idx[topological group]{Topological group} by a subgroup.
 
 A topological group \(G\) is a group that is also a topological space satisfying the \({T}_{1}\) axiom, such that the map of \(G \times G\) into \(G\) sending \(x \times y\) into \(x \cdot y\), and the map of \(G\) into \(G\) sending \(x\) into \({x}^{-1}\), are continuous maps. Throughout the following exercises, let \(G\) denote a topological group.
 
@@ -2645,7 +2645,7 @@ A topological group \(G\) is a group that is also a topological space satisfying
   \item \(( {\mathbb{R}, + })\)
   \item \(( {{\mathbb{R}}_{ + }, \cdot })\)
   \item \(( {{S}^{1}, \cdot })\), where we take \({S}^{1}\) to be the space of all complex numbers \(z\) for which \(| z| = 1\).
-  \item The general linear group \(\mathrm{{GL}}(n)\), under the operation of matrix multiplication. (GL(n) is the set of all nonsingular \(n\) by \(n\) matrices, topologized by considering it as a subset of euclidean space of dimension \({n}^{2}\) in the obvious way.)
+  \item The \idx[general linear group]{General linear group} \(\mathrm{{GL}}(n)\), under the operation of matrix multiplication. (GL(n) is the set of all nonsingular \(n\) by \(n\) matrices, topologized by considering it as a subset of euclidean space of dimension \({n}^{2}\) in the obvious way.)
   \end{enumerate}
 
 \item Let \(H\) be a subspace of \(G\). Show that if \(H\) is also a subgroup of \(G\), then both \(H\) and \(\bar{H}\) are topological groups.
@@ -2656,9 +2656,9 @@ A topological group \(G\) is a group that is also a topological space satisfying
 {f}_{\alpha }(x) = \alpha \cdot x\;\text{ and }\;{g}_{\alpha }(x) = x \cdot \alpha
 \]
 
-are homeomorphisms of \(G\). Conclude that \(G\) is a homogeneous space. (This means that for every pair \(x,y\) of points of \(G\), there exists a homeomorphism of \(G\) onto itself that carries \(x\) to \(y\).)
+are homeomorphisms of \(G\). Conclude that \(G\) is a \idx[homogeneous space]{Homogeneous space}. (This means that for every pair \(x,y\) of points of \(G\), there exists a homeomorphism of \(G\) onto itself that carries \(x\) to \(y\).)
 
-\item Let \(H\) be a subgroup of \(G\). If \(x \in G\), define \({xH} = \{ x \cdot h \mid h \in H\}\) ; this set is called a left coset of \(H\) in \(G\). Let \(G/H\) denote the collection of left cosets of \(H\) in \(G\) ; it is a partition of \(G\). Give \(G/H\) the quotient topology.
+\item Let \(H\) be a subgroup of \(G\). If \(x \in G\), define \({xH} = \{ x \cdot h \mid h \in H\}\) ; this set is called a left \idx[coset]{Coset} of \(H\) in \(G\). Let \(G/H\) denote the collection of left cosets of \(H\) in \(G\) ; it is a partition of \(G\). Give \(G/H\) the quotient topology.
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that if \(\alpha \in G\), the map \({f}_{\alpha }\) of the preceding exercise induces a homeomorphism of \(G/H\) carrying \({xH}\) to \(( {\alpha \cdot x}) H\). Conclude that \(G/H\) is a homogeneous space.
   \item Show that if \(H\) is a closed set in the topology of \(G\), then one-point sets are closed in \(G/H\).
@@ -2670,7 +2670,7 @@ are homeomorphisms of \(G\). Conclude that \(G\) is a homogeneous space. (This m
 
 \item If \(A\) and \(B\) are subsets of \(G\), let \(A \cdot B\) denote the set of all points \(a \cdot b\) for \(a \in A\) and \(b \in B\). Let \({A}^{-1}\) denote the set of all points \({a}^{-1}\), for \(a \in A\).
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
-  \item A neighborhood \(V\) of the identity element \(e\) is said to be symmetric if \(V =\) \({V}^{-1}\). If \(U\) is a neighborhood of \(e\), show there is a symmetric neighborhood \(V\) of \(e\) such that \(V \cdot V \subset U\). [Hint: If \(W\) is a neighborhood of \(e\), then \(W \cdot {W}^{-1}\) is symmetric.]
+  \item A neighborhood \(V\) of the identity element \(e\) is said to be symmetric if \(V =\) \({V}^{-1}\). If \(U\) is a neighborhood of \(e\), show there is a \idx[symmetric neighborhood]{Symmetric neighborhood} \(V\) of \(e\) such that \(V \cdot V \subset U\). [Hint: If \(W\) is a neighborhood of \(e\), then \(W \cdot {W}^{-1}\) is symmetric.]
   \item Show that \(G\) is Hausdorff. In fact, show that if \(x \neq y\), there is a neighborhood \(V\) of \(e\) such that \(V \cdot x\) and \(V \cdot y\) are disjoint.
   \item Show that \(G\) satisfies the following separation axiom, which is called the regularity axiom: Given a closed set \(A\) and a point \(x\) not in \(A\), there exist disjoint open sets containing \(A\) and \(x\), respectively. [Hint: There is a neighborhood \(V\) of \(e\) such that \(V \cdot x\) and \(V \cdot A\) are disjoint.]
   \item Let \(H\) be a subgroup of \(G\) that is closed in the topology of \(G\) ; let \(p : G \rightarrow\) \(G/H\) be the quotient map. Show that \(G/H\) satisfies the regularity axiom. [Hint: Examine the proof of (c) when \(A\) is saturated.]

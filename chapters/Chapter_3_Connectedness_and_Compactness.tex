@@ -1,4 +1,4 @@
-\chapteropening[Connectedness and Compactness]{Connectedness \\and Compactness}
+\chapteropening[\idx[Connectedness]{Connectedness} and \idx[Compactness]{Compactness}]{Connectedness \\and Compactness}
 
 In the study of calculus, there are three basic theorems about continuous functions, and on these theorems the rest of calculus depends. They are the following:
 
@@ -6,7 +6,7 @@ Intermediate value theorem. If \(f : [ {a,b}] \rightarrow \mathbb{R}\) is contin
 
  Maximum value theorem. If \(f : [ {a,b}] \rightarrow \mathbb{R}\) is continuous, then there exists an element \(c \in [ {a,b}]\) such that \(f(x) \leq f( c)\) for every \(x \in [ {a,b}]\).
 
-Uniform continuity theorem. If \(f : [ {a,b}] \rightarrow \mathbb{R}\) is continuous, then given \(\epsilon > 0\), there exists \(\delta > 0\) such that \(| {f( {x}_{1}) - f( {x}_{2}) }| < \epsilon\) for every pair of numbers \({x}_{1},{x}_{2}\) of \([ {a,b}]\) for which \(| {{x}_{1} - {x}_{2}}| < \delta\).
+\idx[Uniform continuity theorem]{Uniform continuity theorem}. If \(f : [ {a,b}] \rightarrow \mathbb{R}\) is continuous, then given \(\epsilon > 0\), there exists \(\delta > 0\) such that \(| {f( {x}_{1}) - f( {x}_{2}) }| < \epsilon\) for every pair of numbers \({x}_{1},{x}_{2}\) of \([ {a,b}]\) for which \(| {{x}_{1} - {x}_{2}}| < \delta\).
 
 These theorems are used in a number of places. The intermediate value theorem is used for instance in constructing inverse functions, such as \(\sqrt[3]{x}\) and arcsin \(x\) ; and the maximum value theorem is used for proving the mean value theorem for derivatives, upon which the two fundamental theorems of calculus depend. The uniform continuity theorem is used, among other things, for proving that every continuous function is integrable.
 
@@ -21,7 +21,7 @@ As the three quoted theorems are fundamental for the theory of calculus, so are 
 The definition of connectedness for a topological space is a quite natural one. One says that a space can be ``separated'' if it can be broken up into two ``globs''—disjoint open sets. Otherwise, one says that it is connected. From this simple idea much follows.
 
 \begin{definition}
- Let \(X\) be a topological space. A separation of \(X\) is a pair \(U,V\) of disjoint nonempty open subsets of \(X\) whose union is \(X\). The space \(X\) is said to be connected if there does not exist a separation of \(X\).
+ Let \(X\) be a topological space. A \idx[separation]{Separation} of \(X\) is a pair \(U,V\) of disjoint nonempty open subsets of \(X\) whose union is \(X\). The space \(X\) is said to be connected if there does not exist a separation of \(X\).
 \end{definition}
 
 Connectedness is obviously a topological property, since it is formulated entirely in terms of the collection of open sets of \(X\). Said differently, if \(X\) is connected, so is any space homeomorphic to \(X\).
@@ -125,7 +125,7 @@ Said differently: If \(B\) is formed by adjoining to the connected subspace \(A\
 
 \begin{theorem}
 \label{thm:\thetheorem}
- The image of a connected space under a continuous map is connected.
+ The image of a \idx[connected space]{Connected space} under a continuous map is connected.
 
 \end{theorem}
 \begin{proof}
@@ -194,12 +194,12 @@ The argument just given generalizes to show that an arbitrary product of connect
 \item Let \(\{ {A}_{n}\}\) be a sequence of connected subspaces of \(X\), such that \({A}_{n} \cap {A}_{n + 1} \neq \varnothing\) for all \(n\). Show that \(\bigcup {A}_{n}\) is connected.
 \item Let \(\{ {A}_{\alpha }\}\) be a collection of connected subspaces of \(X\) ; let \(A\) be a connected subspace of \(X\). Show that if \(A \cap {A}_{\alpha } \neq \varnothing\) for all \(\alpha\), then \(A \cup ( {\bigcup {A}_{\alpha }})\) is connected.
 \item Show that if \(X\) is an infinite set, it is connected in the finite complement topology.
-\item A space is totally disconnected if its only connected subspaces are one-point sets. Show that if \(X\) has the discrete topology, then \(X\) is totally disconnected. Does the converse hold?
+\item A space is \idx[totally disconnected]{Totally disconnected} if its only connected subspaces are one-point sets. Show that if \(X\) has the discrete topology, then \(X\) is totally disconnected. Does the converse hold?
 \item Let \(A \subset X\). Show that if \(C\) is a connected subspace of \(X\) that intersects both \(A\) and \(X - A\), then \(C\) intersects \(\operatorname{Bd}A\).
 \item Is the space \({\mathbb{R}}_{\ell }\) connected? Justify your answer.
 \item Determine whether or not \({\mathbb{R}}^{\omega }\) is connected in the uniform topology.
 \item Let \(A\) be a proper subset of \(X\), and let \(B\) be a proper subset of \(Y\). If \(X\) and \(Y\) are connected, show that \[ ( {X \times Y}) - ( {A \times B}) \] is connected.
-\item Let \({\{ {X}_{\alpha }\} }_{\alpha \in J}\) be an indexed family of connected spaces; let \(X\) be the product space \[ X = \mathop{\prod }\limits_{{\alpha \in J}}{X}_{\alpha } \] Let \(\mathbf{a} = ( {a}_{\alpha })\) be a fixed point of \(X\).
+\item Let \({\{ {X}_{\alpha }\} }_{\alpha \in J}\) be an indexed family of connected spaces; let \(X\) be the product space \[ X = \mathop{\prod }\limits_{{\alpha \in J}}{X}_{\alpha } \] Let \(\mathbf{a} = ( {a}_{\alpha })\) be a \idx[fixed point]{Fixed point} of \(X\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Given any finite subset \(K\) of \(J\), let \({X}_{K}\) denote the subspace of \(X\) consisting of all points \(\mathbf{x} = ( {x}_{\alpha })\) such that \({x}_{\alpha } = {a}_{\alpha }\) for \(\alpha \notin K\). Show that \({X}_{K}\) is connected.
  \item Show that the union \(Y\) of the spaces \({X}_{K}\) is connected.
@@ -212,7 +212,7 @@ The argument just given generalizes to show that an arbitrary product of connect
 
 The theorems of the preceding section show us how to construct new connected spaces out of given ones. But where can we find some connected spaces to start with \({}^{2}\) The best place to begin is the real line. We shall prove that \(\mathbb{R}\) is connected, and so are the intervals and rays in \(\mathbb{R}\).
 
-One application is the intermediate value theorem of calculus, suitably generalized. Another is the result that such familiar spaces as balls and spheres in euclidean space are connected; the proof involves a new notion, called path connectedness, which we also discuss.
+One application is the intermediate value theorem of calculus, suitably generalized. Another is the result that such familiar spaces as balls and spheres in euclidean space are connected; the proof involves a new notion, called \idx[path]{Path} connectedness, which we also discuss.
 
 The fact that intervals and rays in \(\mathbb{R}\) are connected may be familiar to you from analysis. We prove it again here, in generalized form. It turns out that this fact does not depend on the algebraic properties of \(\mathbb{R}\), but only on its order properties. To make this clear, we shall prove the theorem for an arbitrary ordered set that has the order properties of \(\mathbb{R}\). Such a set is called a linear continuum.
 
@@ -381,7 +381,7 @@ is a nonempty subset of \([ {a,b}]\) ; by continuity, it is open in \([ {a,b}]\)
  S = \{ x \times \sin ( {1/x}) \mid 0 < x \leq 1\}.
  \]
 
-Because \(S\) is the image of the connected set \((0,1\rbrack\) under a continuous map, \(S\) is connected. Therefore, its closure \(\bar{S}\) in \({\mathbb{R}}^{2}\) is also connected. The set \(\bar{S}\) is a classical example in topology called the topologist's sine curve. It is illustrated in \hyperref[fig:24.5]{Figure 24.5}; it equals the union of \(S\) and the vertical interval \(0 \times [ {-1,1}]\). We show that \(\bar{S}\) is not path connected.
+Because \(S\) is the image of the connected set \((0,1\rbrack\) under a continuous map, \(S\) is connected. Therefore, its closure \(\bar{S}\) in \({\mathbb{R}}^{2}\) is also connected. The set \(\bar{S}\) is a classical example in topology called the \idx[topologist's sine curve]{Topologist's sine curve}. It is illustrated in \hyperref[fig:24.5]{Figure 24.5}; it equals the union of \(S\) and the vertical interval \(0 \times [ {-1,1}]\). We show that \(\bar{S}\) is not path connected.
 
 \munkresfig[0.7]{24.4}[Figure 24.4]
 Suppose there is a path \(f : [ {a,c}] \rightarrow \bar{S}\) beginning at the origin and ending at a point of \(S\). The set of those \(t\) for which \(f( t) \in 0 \times [ {-1,1}]\) is closed, so it has a largest element \(b\). Then \(f : [ {b,c}] \rightarrow \bar{S}\) is a path that maps \(b\) into the vertical interval \(0 \times [ {-1,1}]\) and maps the other points of \([ {b,c}]\) to points of \(S\).
@@ -433,7 +433,7 @@ To find \({t}_{n}\), we proceed as follows: Given \(n\), choose \(u\) with \(0 <
 \item Show that if \(U\) is an open connected subspace of \({\mathbb{R}}^{2}\), then \(U\) is path connected. [Hint: Show that given \({x}_{0} \in U\), the set of points that can be joined to \({x}_{0}\) by a path in \(U\) is both open and closed in \(U\).]
 \item If \(A\) is a connected subspace of \(X\), does it follow that Int \(A\) and Bd \(A\) are connected? Does the converse hold? Justify your answers.
 
-\item[*12.] Recall that \({S}_{\Omega }\) denotes the minimal uncountable well-ordered set. Let \(L\) denote the ordered set \({S}_{\Omega } \times \lbrack 0,1)\) in the dictionary order, with its smallest element deleted. The set \(L\) is a classical example in topology called the long line. \textsl{Theorem.} The long line is path connected and locally homeomorphic to \(\mathbb{R}\), but it cannot be imbedded in \(\mathbb{R}\).
+\item[*12.] Recall that \({S}_{\Omega }\) denotes the minimal uncountable well-ordered set. Let \(L\) denote the ordered set \({S}_{\Omega } \times \lbrack 0,1)\) in the dictionary order, with its smallest element deleted. The set \(L\) is a classical example in topology called the \idx[long line]{Long line}. \textsl{Theorem.} The long line is path connected and locally homeomorphic to \(\mathbb{R}\), but it cannot be imbedded in \(\mathbb{R}\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Let \(X\) be an ordered set; let \(a < b < c\) be points of \(X\). Show that \(\lbrack a,c)\) has the order type of \(\lbrack 0,1)\) if and only if both \(\lbrack a,b)\) and \(\lbrack b,c)\) have the order type of \(\lbrack 0,1)\)
  \item Let \(X\) be an ordered set. Let \({x}_{0} < {x}_{1} < \cdots\) be an increasing sequence of points of \(X\) ; suppose \(b = \sup \{ {x}_{t}\}\) Show that \([ {{x}_{0},b})\) has the order type of \(\lbrack 0,1)\) if and only if each interval \([ {{x}_{i},{x}_{i + 1}})\) has the order type of \(\lbrack 0,1)\).
@@ -443,7 +443,7 @@ To find \({t}_{n}\), we proceed as follows: Given \(n\), choose \(u\) with \(0 <
  \item Show that \(L\) cannot be imbedded in \(\mathbb{R}\), or indeed in \({\mathbb{R}}^{n}\) for any \(n\). [Hint: Any subspace of \({\mathbb{R}}^{n}\) has a countable basis for its topology.]
  \end{enumerate}
 \end{enumerate}
-\booksection*{25}{Components and Local Connectedness}[\protect\sectionDagger]
+\booksection*{25}{Components and \idx[Local Connectedness]{Local connectedness}}[\protect\sectionDagger]
 \customfootnote{${}^{\dagger}$ This section will be assumed in Part II of the book.}
 
 Given an arbitrary space \(X\), there is a natural way to break it up into pieces that are connected (or path connected). We consider that process now.
@@ -465,7 +465,7 @@ The components of \(X\) can also be described as follows:
 Being equivalence classes, the components of \(X\) are disjoint and their union is \(X\). Each connected subspace \(A\) of \(X\) intersects only one of them. For if \(A\) intersects the components \({C}_{1}\) and \({C}_{2}\) of \(X\), say in points \({x}_{1}\) and \({x}_{2}\), respectively, then \({x}_{1} \sim {x}_{2}\) by definition; this cannot happen unless \({C}_{1} = {C}_{2}\).
 
 
-To show the component \(C\) is connected, choose a point \({x}_{0}\) of \(C\). For each point \(x\) of \(C\), we know that \({x}_{0} \sim x\), so there is a connected subspace \({A}_{x}\) containing \({x}_{0}\) and \(x\). By the result just proved, \({A}_{x} \subset C\). Therefore,
+To show the \idx[component]{Component} \(C\) is connected, choose a point \({x}_{0}\) of \(C\). For each point \(x\) of \(C\), we know that \({x}_{0} \sim x\), so there is a connected subspace \({A}_{x}\) containing \({x}_{0}\) and \(x\). By the result just proved, \({A}_{x} \subset C\). Therefore,
 
 \[
 C = \mathop{\bigcup }\limits_{{x \in C}}{A}_{x}
@@ -501,7 +501,7 @@ One can say even less about the path components of \(X\), for they need be neith
 \begin{centeredblock}
 \begin{example}
 \label{ex:\thesection.\theexample}
- The `` topologist's sine curve'' \(\bar{S}\) of the preceding section is a space that has a single component (since it is connected) and two path components. One path component is the curve \(S\) and the other is the vertical interval \(V = 0 \times [ {-1,1}]\). Note that \(S\) is open in \(\bar{S}\) but not closed, while \(V\) is closed but not open.
+ The `` topologist's sine curve'' \(\bar{S}\) of the preceding section is a space that has a single component (since it is connected) and two path components. One \idx[path component]{Path component} is the curve \(S\) and the other is the vertical interval \(V = 0 \times [ {-1,1}]\). Note that \(S\) is open in \(\bar{S}\) but not closed, while \(V\) is closed but not open.
 
 If one forms a space from \(\bar{S}\) by deleting all points of \(V\) having rational second coordinate, one obtains a space that has only one component but uncountably many path components.
 \end{example}
@@ -571,22 +571,22 @@ Because \(X\) is locally path connected, each path component of \(X\) is open in
  \item Find a subset of \({\mathbb{R}}^{2}\) that is path connected but is locally connected at none of its points.
  \end{enumerate}
 \item A space \(X\) is said to be weakly locally connected at \(x\) if for every neighborhood \(U\) of \(x\), there is a connected subspace of \(X\) contained in \(U\) that contains a neighborhood of \(x\). Show that if \(X\) is weakly locally connected at each of its points, then \(X\) is locally connected. [Hint: Show that components of open sets are open.]
-\item Consider the ``infinite broom'' \(X\) pictured in \hyperref[fig:25.1]{Figure 25.1}. Show that \(X\) is not locally connected at \(p\), but is weakly locally connected at \(p\). [Hint: Any connected neighborhood of \(p\) must contain all the points \({a}_{i}\).] \munkresfig[1.0]{25.1}[Figure 25.1]
+\item Consider the ``\idx[infinite broom]{Infinite broom}'' \(X\) pictured in \hyperref[fig:25.1]{Figure 25.1}. Show that \(X\) is not locally connected at \(p\), but is weakly locally connected at \(p\). [Hint: Any connected neighborhood of \(p\) must contain all the points \({a}_{i}\).] \munkresfig[1.0]{25.1}[Figure 25.1]
 \item Let \(p : X \rightarrow Y\) be a quotient map. Show that if \(X\) is locally connected, then \(Y\) is locally connected. [Hint: If \(C\) is a component of the open set \(U\) of \(Y\), show that \({p}^{-1}( C)\) is a union of components of \({p}^{-1}( U)\).]
 \item Let \(G\) be a topological group; let \(C\) be the component of \(G\) containing the identity element \(e\). Show that \(C\) is a normal subgroup of \(G\). [Hint: If \(x \in G\), then \({xC}\) is the component of \(G\) containing \(x\).]
 \item Let \(X\) be a space. Let us define \(x \sim y\) if there is no separation \(X = A \cup B\) of \(X\) into disjoint open sets such that \(x \in A\) and \(y \in B\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show this relation is an equivalence relation. The equivalence classes are called the quasicomponents of \(X\).
- \item Show that each component of \(X\) lies in a quasicomponent of \(X\), and that the components and quasicomponents of \(X\) are the same if \(X\) is locally connected.
+ \item Show that each component of \(X\) lies in a \idx[quasicomponent]{Quasicomponent} of \(X\), and that the components and quasicomponents of \(X\) are the same if \(X\) is locally connected.
  \item Let \(K\) denote the set \(\{ {1/n \mid n \in {\mathbb{Z}}_{ + }}\}\) and let \(- K\) denote the set \(\{ - 1/n \mid n \in {\mathbb{Z}}_{ + }\}\). Determine the components, path components, and quasicomponents of the following subspaces of \({\mathbb{R}}^{2}\) : \[ A = ( {K \times [ {0,1}] }) \cup \{ 0 \times 0\} \cup \{ 0 \times 1\}. \] \[ B = A \cup ( {[ {0,1}] \times \{ 0\rbrack }) \text{.} \] \[ C = ( {K \times [ {0,1}] }) \cup ( {-K \times [ {-1,0}] }) \cup ( {[ {0,1}] \times - K}) \cup ( {[ {-1,0}] \times K}). \]
  \end{enumerate}
 \end{enumerate}
-\booksection{26}{Compact Spaces}
+\booksection{26}{\idx[Compact]{Compact} Spaces}
 
 The notion of compactness is not nearly so natural as that of connectedness. From the beginnings of topology, it was clear that the closed interval \([ {a,b}]\) of the real line had a certain property that was crucial for proving such theorems as the maximum value theorem and the uniform continuity theorem. But for a long time, it was not clear how this property should be formulated for an arbitrary topological space. It used to be thought that the crucial property of \([ {a,b}]\) was the fact that every infinite subset of \([ {a,b}]\) has a limit point, and this property was the one dignified with the name of compactness. Later, mathematicians realized that this formulation does not lie at the heart of the matter, but rather that a stronger formulation, in terms of open coverings of the space, is more central. The latter formulation is what we now call compactness. It is not as natural or intuitive as the former; some familiarity with it is needed before its usefulness becomes apparent.
 
 \begin{definition}
- A collection \(\mathcal{A}\) of subsets of a space \(X\) is said to cover \(X\), or to be a covering of \(X\), if the union of the elements of \(\mathcal{A}\) is equal to \(X\). It is called an open covering of \(X\) if its elements are open subsets of \(X\).
+ A collection \(\mathcal{A}\) of subsets of a space \(X\) is said to cover \(X\), or to be a \idx[covering]{Covering} of \(X\), if the union of the elements of \(\mathcal{A}\) is equal to \(X\). It is called an \idx[open covering]{Open covering} of \(X\) if its elements are open subsets of \(X\).
 \end{definition}
 
 \begin{definition}
@@ -778,7 +778,7 @@ Step 1. Suppose that we are given spaces \(X\) and \(Y\), with \(Y\) compact. Su
 
 There is a neighborhood \(W\) of \({x}_{0}\) in \(X\) such that \(N\) contains the entire set \(W \times Y\)
 
-The set \(W \times Y\) is often called a tube about \({x}_{0} \times Y\).
+The set \(W \times Y\) is often called a \idx[tube]{Tube} about \({x}_{0} \times Y\).
 
 First let us cover \({x}_{0} \times Y\) by basis elements \(U \times V\) (for the topology of \(X \times Y\) ) lying in \(N\). The space \({x}_{0} \times Y\) is compact, being homeomorphic to \(Y\). Therefore, we can cover \({x}_{0} \times Y\) by finitely many such basis elements
 
@@ -819,7 +819,7 @@ The statement proved in Step 1 of the preceding proof will be useful to us later
 \end{proof}
 
 \begin{lemma}
-\label{lem:\thetheorem}[The tube lemma]
+\label{lem:\thetheorem}[The \idx[tube lemma]{Tube lemma}]
  Consider the product space \(X \times Y\), where \(Y\) is compact. If \(N\) is an open set of \(X \times Y\) containing the slice \({x}_{0} \times Y\) of \(X \times Y\), then \(N\) contains some tube \(W \times Y\) about \({x}_{0} \times Y\), where \(W\) is a neighborhood of \({x}_{0}\) in \(X\).
 \end{lemma}
 
@@ -845,7 +845,7 @@ In proving the fact that a cartesian product of connected spaces is connected, o
 There is one final criterion for a space to be compact, a criterion that is formulated in terms of closed sets rather than open sets. It does not look very natural nor very useful at first glance, but it in fact proves to be useful on a number of occasions. First we make a definition.
 
 \begin{definition}
- A collection \(\mathcal{C}\) of subsets of \(X\) is said to have the finite intersection property if for every finite subcollection
+ A collection \(\mathcal{C}\) of subsets of \(X\) is said to have the \idx[finite intersection property]{Finite intersection property} if for every finite subcollection
 
  \[
  \{ {{C}_{1},\ldots ,{C}_{n}}\}
@@ -922,7 +922,7 @@ We shall use the closed set criterion for compactness in the next section to pro
  \item Give examples to show that this theorem fails if you delete the requirement that \(X\) be compact, or if you delete the requirement that the sequence be monotone. [Hint: See the exercises of \S\ 21.]
  \end{enumerate}
 \item \textsl{Theorem.} Let \(X\) be a compact Hausdorff space. Let \(\mathcal{A}\) be a collection of closed connected subsets of \(X\) that is simply ordered by proper inclusion. Then \[ Y = \mathop{\bigcap }\limits_{{A \in \mathcal{A}}}A \] is connected. [Hint: If \(C \cup D\) is a separation of \(Y\), choose disjoint open sets \(U\) and \(V\) of \(X\) containing \(C\) and \(D\), respectively, and show that \[ \mathop{\bigcap }\limits_{{A \in \mathcal{A}}}( {A - ( {U \cup V}) }) \] is not empty.]
-\item Let \(p : X \rightarrow Y\) be a closed continuous surjective map such that \({p}^{-1}( {\{ y\} })\) is compact, for each \(y \in Y\). (Such a map is called a perfect map.) Show that if \(Y\) is compact, then \(X\) is compact. [Hint: If \(U\) is an open set containing \({p}^{-1}( {\{ y\} })\), there is a neighborhood \(W\) of \(y\) such that \({p}^{-1}( W)\) is contained in \(U\) ]
+\item Let \(p : X \rightarrow Y\) be a closed continuous surjective map such that \({p}^{-1}( {\{ y\} })\) is compact, for each \(y \in Y\). (Such a map is called a \idx[perfect map]{Perfect map}.) Show that if \(Y\) is compact, then \(X\) is compact. [Hint: If \(U\) is an open set containing \({p}^{-1}( {\{ y\} })\), there is a neighborhood \(W\) of \(y\) such that \({p}^{-1}( W)\) is contained in \(U\) ]
 \item Let \(G\) be a topological group.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Let \(A\) and \(B\) be subspaces of \(G\). If \(A\) is closed and \(B\) is compact, show \(A \cdot B\) is closed. [Hint: If \(c\) is not in \(A \cdot B\), find a neighborhood \(W\) of \(c\) such that \(W \cdot {B}^{-1}\) is disjoint from \(A\).]
@@ -932,7 +932,7 @@ We shall use the closed set criterion for compactness in the next section to pro
 \end{enumerate}
 \booksection{27}{Compact Subspaces of the Real Line}
 
-The theorems of the preceding section enable us to construct new compact spaces from existing ones, but in order to get very far we have to find some compact spaces to start with. The natural place to begin is the real line; we shall prove that every closed interval in \(\mathbb{R}\) is compact. Applications include the extreme value theorem and the uniform continuity theorem of calculus, suitably generalized. We also give a characterization of all compact subspaces of \({\mathbb{R}}^{n}\), and a proof of the uncountability of the set of real numbers.
+The theorems of the preceding section enable us to construct new compact spaces from existing ones, but in order to get very far we have to find some compact spaces to start with. The natural place to begin is the real line; we shall prove that every closed interval in \(\mathbb{R}\) is compact. Applications include the \idx[extreme value theorem]{Extreme value theorem} and the uniform continuity theorem of calculus, suitably generalized. We also give a characterization of all compact subspaces of \({\mathbb{R}}^{n}\), and a proof of the uncountability of the set of real numbers.
 
 It turns out that in order to prove every closed interval in \(\mathbb{R}\) is compact, we need only one of the order properties of the real line-the least upper bound property. We shall prove the theorem using only this hypothesis; then it will apply not only to the real line, but to well-ordered sets and other ordered sets as well.
 
@@ -1043,10 +1043,10 @@ covers \(A\). If \({a}_{i}\) is the largest of the elements \({a}_{1},\ldots {a}
 A similar argument shows that \(A\) has a smallest element.
 \end{proof}
 
-Now we prove the uniform continuity theorem of calculus. In the process, we are led to introduce a new notion that will prove to be surprisingly useful, that of a Lebesgue number for an open covering of a metric space. First, a preliminary notion:
+Now we prove the uniform continuity theorem of calculus. In the process, we are led to introduce a new notion that will prove to be surprisingly useful, that of a \idx[Lebesgue number]{Lebesgue number} for an open covering of a metric space. First, a preliminary notion:
 
 \begin{definition}
- Let (X, d) be a metric space; let \(A\) be a nonempty subset of \(X\). For each \(x \in X\), we define the distance from \(x\) to \(A\) by the equation
+ Let (X, d) be a metric space; let \(A\) be a nonempty subset of \(X\). For each \(x \in X\), we define the \idx[distance from \(x\) to \(A\)]{Distance from \(x\) to \(A\)} by the equation
 
 \[
 d( {x,A}) = \inf \{ d( {x,a}) \mid a \in A\}.
@@ -1080,7 +1080,7 @@ Now we introduce the notion of Lebesgue number. Recall that the diameter of a bo
 \]
 
 \begin{lemma}
-\label{lem:\thetheorem}[The Lebesgue number lemma]
+\label{lem:\thetheorem}[The \idx[Lebesgue number lemma]{Lebesgue number lemma}]
  Let \(\mathcal{A}\) be an open covering of the metric space (X, d). If \(X\) is compact, there is a \(\delta > 0\) such that for each subset of \(X\) having diameter less than \(\delta\), there exists an element of \(\mathcal{A}\) containing it.
 \end{lemma}
 
@@ -1107,7 +1107,7 @@ where \(d( {{x}_{0},{C}_{m}})\) is the largest of the numbers \(d( {{x}_{0},{C}_
 \end{proof}
 
 \begin{definition}
- A function \(f\) from the metric space \(( {X,{d}_{X}})\) to the metric space \(( {Y,{d}_{Y}})\) is said to be uniformly continuous if given \(\epsilon > 0\), there is a \(\delta > 0\) such that for every pair of points \({x}_{0},{x}_{1}\) of \(X\),
+ A function \(f\) from the metric space \(( {X,{d}_{X}})\) to the metric space \(( {Y,{d}_{Y}})\) is said to be \idx[uniformly continuous]{Uniformly continuous} if given \(\epsilon > 0\), there is a \(\delta > 0\) such that for every pair of points \({x}_{0},{x}_{1}\) of \(X\),
 
 \[
 {d}_{X}( {{x}_{0},{x}_{1}}) < \delta \Rightarrow {d}_{Y}( {f( {x}_{0}),f( {x}_{1}) }) < \epsilon
@@ -1126,7 +1126,7 @@ Finally, we prove that the real numbers are uncountable. The interesting thing a
 \end{proof}
 
 \begin{definition}
- If \(X\) is a space, a point \(x\) of \(X\) is said to be an isolated point of \(X\) if the one-point set \(\{ x\}\) is open in \(X\)
+ If \(X\) is a space, a point \(x\) of \(X\) is said to be an \idx[isolated point]{Isolated point} of \(X\) if the one-point set \(\{ x\}\) is open in \(X\)
 \end{definition}
 
 \begin{theorem}
@@ -1175,7 +1175,7 @@ of nonempty closed sets of \(X\). Because \(X\) is compact, there is a point \(x
  \end{enumerate}
 \item Show that a connected metric space having more than one point is uncountable.
 \item Let \(X\) be a compact Hausdorff space, let \(\{ {A}_{n}\}\) be a countable collection of closed sets of \(X\). Show that if each set \({A}_{n}\) has empty interior in \(X\), then the union \(\cup {A}_{n}\) has empty interior in \(X\). [Hint: Imitate the proof of Theorem 27.7.] This is a special case of the Baire category theorem, which we shall study in Chapter 8.
-\item Let \({A}_{0}\) be the closed interval \([ {0,1}]\) in \(\mathbb{R}\). Let \({A}_{1}\) be the set obtained from \({A}_{0}\) by deleting its ``middle third'' \(( {\frac{1}{3},\frac{2}{3}})\). Let \({A}_{2}\) be the set obtained from \({A}_{1}\) by deleting its ``middle thirds'' \(( {\frac{1}{9},\frac{2}{9}})\) and \(( {\frac{7}{9},\frac{8}{9}})\) In general, define \({A}_{n}\) by the equation \[ {A}_{n} = {A}_{n - 1} - \mathop{\bigcup }\limits_{{k = 0}}^{\infty }( {\frac{1 + {3k}}{{3}^{n}},\frac{2 + {3k}}{{3}^{n}}}). \] The intersection \[ C = \mathop{\bigcap }\limits_{{n \in {\mathbb{Z}}_{ + }}}{A}_{n} \] is called the Cantor set; it is a subspace of \([ {0,1}]\)
+\item Let \({A}_{0}\) be the closed interval \([ {0,1}]\) in \(\mathbb{R}\). Let \({A}_{1}\) be the set obtained from \({A}_{0}\) by deleting its ``middle third'' \(( {\frac{1}{3},\frac{2}{3}})\). Let \({A}_{2}\) be the set obtained from \({A}_{1}\) by deleting its ``middle thirds'' \(( {\frac{1}{9},\frac{2}{9}})\) and \(( {\frac{7}{9},\frac{8}{9}})\) In general, define \({A}_{n}\) by the equation \[ {A}_{n} = {A}_{n - 1} - \mathop{\bigcup }\limits_{{k = 0}}^{\infty }( {\frac{1 + {3k}}{{3}^{n}},\frac{2 + {3k}}{{3}^{n}}}). \] The intersection \[ C = \mathop{\bigcap }\limits_{{n \in {\mathbb{Z}}_{ + }}}{A}_{n} \] is called the \idx[Cantor set]{Cantor set}; it is a subspace of \([ {0,1}]\)
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show that \(C\) is totally disconnected.
  \item Show that \(C\) is compact.
@@ -1184,7 +1184,7 @@ of nonempty closed sets of \(X\). Because \(X\) is compact, there is a point \(x
  \item Conclude that \(C\) is uncountable.
  \end{enumerate}
 \end{enumerate}
-\booksection{28}{Limit Point Compactness}
+\booksection{28}{\idx[Limit Point Compactness]{Limit point compactness}}
 
 As indicated when we first mentioned compact sets, there are other formulations of the notion of compactness that are frequently useful. In this section we introduce one of them. Weaker in general than compactness, it coincides with compactness for metrizable spaces.
 
@@ -1192,7 +1192,7 @@ As indicated when we first mentioned compact sets, there are other formulations 
  A space \(X\) is said to be limit point compact if every infinite subset of \(X\) has a limit point.
 \end{definition}
 
-In some ways this property is more natural and intuitive than that of compactness. In the early days of topology, it was given the name ``compactness,'' while the open covering formulation was called ``bicompactness.'' Later, the word ``compact'' was shifted to apply to the open covering definition, leaving this one to search for a new name. It still has not found a name on which everyone agrees. On historical grounds, some call it ``Fréchet compactness'', others call it the ``Bolzano-Weierstrass property''. We have invented the term ``limit point compactness''. It seems as good a term as any; at least it describes what the property is about.
+In some ways this property is more natural and intuitive than that of compactness. In the early days of topology, it was given the name ``compactness,'' while the open covering formulation was called ``\idx[bicompactness]{Bicompactness}.'' Later, the word ``compact'' was shifted to apply to the open covering definition, leaving this one to search for a new name. It still has not found a name on which everyone agrees. On historical grounds, some call it ``Fréchet compactness'', others call it the ``Bolzano-Weierstrass property''. We have invented the term ``limit point compactness''. It seems as good a term as any; at least it describes what the property is about.
 
 \begin{theorem}
 \label{thm:\thetheorem}
@@ -1219,7 +1219,7 @@ So suppose \(A\) has no limit point. Then \(A\) contains all its limit points, s
 \end{example}
 \end{centeredblock}
 
-We now show these two versions of compactness coincide for metrizable spaces; for this purpose, we introduce yet another version of compactness called sequential compactness. This result will be used in Chapter 7.
+We now show these two versions of compactness coincide for metrizable spaces; for this purpose, we introduce yet another version of compactness called \idx[sequential compactness]{Sequential compactness}. This result will be used in Chapter 7.
 
 \begin{definition}
  Let \(X\) be a topological space. If \(( {x}_{n})\) is a sequence of points of \(X\), and if
@@ -1228,7 +1228,7 @@ We now show these two versions of compactness coincide for metrizable spaces; fo
 {n}_{1} < {n}_{2} < \cdots < {n}_{i} < \cdots
 \]
 
-is an increasing sequence of positive integers, then the sequence \(( {y}_{i})\) defined by setting \({y}_{i} = {x}_{{n}_{i}}\) is called a subsequence of the sequence \(( {x}_{n})\). The space \(X\) is said to be sequentially compact if every sequence of points of \(X\) has a convergent subsequence.
+is an increasing sequence of positive integers, then the sequence \(( {y}_{i})\) defined by setting \({y}_{i} = {x}_{{n}_{i}}\) is called a \idx[subsequence]{Subsequence} of the sequence \(( {x}_{n})\). The space \(X\) is said to be sequentially compact if every sequence of points of \(X\) has a convergent subsequence.
 \end{definition}
 
 **Theorem 28.2. Let \(X\) be a metrizable space. Then the following are equivalent:
@@ -1286,10 +1286,10 @@ Finally, we show that if \(X\) is sequentially compact, then \(X\) is compact. L
  \item If \(A\) is a closed subset of \(X\), does it follow that \(A\) is limit point compact?
  \item If \(X\) is a subspace of the Hausdorff space \(Z\), does it follow that \(X\) is closed in \(Z\) ? We comment that it is not in general true that the product of two limit point compact spaces is limit point compact, even if the Hausdorff condition is assumed. But the examples are fairly sophisticated. See \cite{SteenSeebach1970}, Example II2.
  \end{enumerate}
-\item A space \(X\) is said to be countably compact if every countable open covering of \(X\) contains a finite subcollection that covers \(X\). Show that for a \({T}_{1}\) space \(X\), countable compactness is equivalent to limit point compactness. [Hint: If no finite subcollection of \({U}_{n}\) covers \(X\), choose \({x}_{n} \notin {U}_{1} \cup \cdots \cup {U}_{n}\), for each \(n\).]
+\item A space \(X\) is said to be countably compact if every countable open covering of \(X\) contains a finite subcollection that covers \(X\). Show that for a \({T}_{1}\) space \(X\), \idx[countable compactness]{Countable compactness} is equivalent to limit point compactness. [Hint: If no finite subcollection of \({U}_{n}\) covers \(X\), choose \({x}_{n} \notin {U}_{1} \cup \cdots \cup {U}_{n}\), for each \(n\).]
 \item Show that \(X\) is countably compact if and only if every nested sequence \({C}_{1} \supset\) \({C}_{2} \supset\) - of closed nonempty sets of \(X\) has a nonempty intersection.
-\item Let \((X, d)\) be a metric space. If \(f : X \rightarrow X\) satisfies the condition \[ d( {f(x),f( y) }) = d( {x,y}) \] for all \(x,y \in X\), then \(f\) is called an isometry of \(X\). Show that if \(f\) is an isometry and \(X\) is compact, then \(f\) is bijective and hence a homeomorphism. [Hint: If \(a \notin f( X)\), choose \(\epsilon\) so that the \(\epsilon\) -neighborhood of \(a\) is disjoint from \(f( X)\). Set \({x}_{1} = a\), and \({x}_{n + 1} = f( {x}_{n})\) in general. Show that \(d( {{x}_{n},{x}_{m}}) \geq \epsilon\) for \(n \neq m\).]
-\item Let \((X, d)\) be a metric space. If \(f\) satisfies the condition \[ d( {f(x),f( y) }) < d( {x,y}) \] for all \(x,y \in X\) with \(x \neq y\), then \(f\) is called a shrinking map. If there is a number \(\alpha < 1\) such that \[ d( {f(x),f( y) }) \leq {\alpha d}( {x,y}) \] for all \(x,y \in X\), then \(f\) is called a contraction. A fixed point of \(f\) is a point \(x\) such that \(f(x) = x\).
+\item Let \((X, d)\) be a metric space. If \(f : X \rightarrow X\) satisfies the condition \[ d( {f(x),f( y) }) = d( {x,y}) \] for all \(x,y \in X\), then \(f\) is called an \idx[isometry]{Isometry} of \(X\). Show that if \(f\) is an isometry and \(X\) is compact, then \(f\) is bijective and hence a homeomorphism. [Hint: If \(a \notin f( X)\), choose \(\epsilon\) so that the \(\epsilon\) -neighborhood of \(a\) is disjoint from \(f( X)\). Set \({x}_{1} = a\), and \({x}_{n + 1} = f( {x}_{n})\) in general. Show that \(d( {{x}_{n},{x}_{m}}) \geq \epsilon\) for \(n \neq m\).]
+\item Let \((X, d)\) be a metric space. If \(f\) satisfies the condition \[ d( {f(x),f( y) }) < d( {x,y}) \] for all \(x,y \in X\) with \(x \neq y\), then \(f\) is called a \idx[shrinking map]{Shrinking map}. If there is a number \(\alpha < 1\) such that \[ d( {f(x),f( y) }) \leq {\alpha d}( {x,y}) \] for all \(x,y \in X\), then \(f\) is called a \idx[contraction]{Contraction}. A fixed point of \(f\) is a point \(x\) such that \(f(x) = x\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item If \(f\) is a contraction and \(X\) is compact, show \(f\) has a unique fixed point. [Hint: Define \({f}^{1} = f\) and \({f}^{n + 1} = f \circ {f}^{n}\). Consider the intersection \(A\) of the sets \({A}_{n} = {f}^{n}( X)\).]
  \item Show more generally that if \(f\) is a shrinking map and \(X\) is compact, then \(f\) has a unique fixed point. [Hint: Let \(A\) be as before. Given \(x \in A\), choose \({x}_{n}\) so that \(x = {f}^{n + 1}( {x}_{n})\). If \(a\) is the limit of some subsequence of the sequence \({y}_{n} = {f}^{n}( {x}_{n})\), show that \(a \in A\) and \(f( a) = x\). Conclude that \(A = f( A)\), so that diam \(A = 0\).]
@@ -1297,9 +1297,9 @@ Finally, we show that if \(X\) is sequentially compact, then \(X\) is compact. L
  \item The result in (a) holds if \(X\) is a complete metric space, such as \(\mathbb{R}\) ; see the exercises of \(\S\ {43}\). The result in (b) does not. Show that the map \(f : \mathbb{R} \rightarrow\) \(\mathbb{R}\) given by \(f(x) = [ {x + {( {x}^{2} + 1) }^{1/2}}] /2\) is a shrinking map that is not a contraction and has no fixed point.
  \end{enumerate}
 \end{enumerate}
-\booksection{29}{Local Compactness}
+\booksection{29}{\idx[Local Compactness]{Local compactness}}
 
-In this section we study the notion of local compactness, and we prove the basic theorem that any locally compact Hausdorff space can be imbedded in a certain compact Hausdorff space that is called its one-point compactification.
+In this section we study the notion of local compactness, and we prove the basic theorem that any locally compact Hausdorff space can be imbedded in a certain compact Hausdorff space that is called its one-point \idx[compactification]{Compactification}.
 
 \begin{definition}
  A space \(X\) is said to be locally compact at \(x\) if there is some compact subspace \(C\) of \(X\) that contains a neighborhood of \(x\). If \(X\) is locally compact at each of its points, \(X\) is said simply to be locally compact.
