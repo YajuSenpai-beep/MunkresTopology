@@ -2,15 +2,15 @@
 
 We now return to a problem we left unresolved in Chapter 3. We shall prove the Tychonoff theorem, to the effect that arbitrary products of compact spaces are compact. The proof makes use of Zorn's Lemma (see \S\ 11). An alternate proof, which relies instead on the well-ordering theorem, is outlined in the exercises.
 
-The Tychonoff theorem is of great usefulness to analysts (less so to geometers). We apply it in \S\ 38 to construct the Stone-Čech compactification of a completely regular space, and in \S\ 47 in proving the general version of Ascoli's theorem.
+The Tychonoff theorem is of great usefulness to analysts (less so to geometers). We apply it in \S\ 38 to construct the \idx[Stone-Čech compactification]{Stone-Čech compactification} of a completely regular space, and in \S\ 47 in proving the general version of \idx[Ascoli's theorem]{Ascoli's theorem}.
 
 \booksection{37}{The Tychonoff Theorem}
 
-Like the Urysohn lemma, the Tychonoff theorem is what we call a ``deep'' theorem. Its proof involves not one but several original ideas; it is anything but straightforward. We shall discuss the crucial ideas of the proof in some detail before turning to the proof itself.
+Like the \idx[Urysohn lemma]{Urysohn lemma}, the Tychonoff theorem is what we call a ``deep'' theorem. Its proof involves not one but several original ideas; it is anything but straightforward. We shall discuss the crucial ideas of the proof in some detail before turning to the proof itself.
 
 In Chapter 3, we proved the product \(X \times Y\) of two compact spaces to be compact. For that proof the open covering formulation of compactness was quite satisfactory. Given an open covering of \(X \times Y\) by basis elements, we covered each slice \(x \times Y\) by finitely many of them, and proceeded from that to construct a finite covering of \(X \times Y\).
 
-It is quite tricky to make this approach work for an arbitrary product of compact spaces; one must well-order the index set and use transfinite induction. (See Exercise 5.) An alternate approach is to abandon open coverings and to approach the problem by applying the closed set formulation of compactness, using Zorn's lemma.
+It is quite tricky to make this approach work for an arbitrary product of compact spaces; one must well-order the index set and use \idx[transfinite induction]{Transfinite induction}. (See Exercise 5.) An alternate approach is to abandon open coverings and to approach the problem by applying the closed set formulation of compactness, using Zorn's lemma.
 
 To see how this idea might work, let us consider first the simplest possible case: the product of two compact spaces \({X}_{1} \times {X}_{2}\). Suppose that \(\mathcal{A}\) is a collection of closed subsets of \({X}_{1} \times {X}_{2}\) that has the finite intersection property. Consider the projection map \({\pi }_{1} : {X}_{1} \times {X}_{2} \rightarrow {X}_{1}\). The collection
 
@@ -55,7 +55,7 @@ We often say that a collection \(\mathcal{D}\) satisfying the conclusion of this
 
 \begin{proof}
  As you might expect, we construct \(\mathcal{D}\) by using Zorn's lemma. It states that, given a set \(A\) that is strictly partially ordered, in which every simply ordered subset has an upper bound, \(A\) itself has a maximal element.
-The set \(A\) to which we shall apply Zorn's lemma is not a subset of \(X\), nor even a collection of subsets of \(X\), but a set whose elements are collections of subsets of \(X\). For purposes of this proof, we shall call a set whose elements are collections of subsets of \(X\) a ``superset'' and shall denote it by an outline letter. To summarize the notation:
+The set \(A\) to which we shall apply Zorn's lemma is not a subset of \(X\), nor even a collection of subsets of \(X\), but a set whose elements are collections of subsets of \(X\). For purposes of this proof, we shall call a set whose elements are collections of subsets of \(X\) a ``\idx[superset]{Superset}'' and shall denote it by an outline letter. To summarize the notation:
 
 \(c\) is an element of \(X\).
 
@@ -151,7 +151,7 @@ It follows from (b) of \hyperref[lem:37.2]{Lemma 37.2} that every subbasis eleme
  \item Let \(D \in \mathcal{D}\). Show that if \(A \supset D\), then \(A \in \mathcal{D}\).
  \item Show that if \(X\) satisfies the \({T}_{1}\) axiom, there is at most one point belonging to \(\mathop{\bigcap }\limits_{{D \in \mathcal{D}}}\bar{D}\).
  \end{enumerate}
-\item A collection \(\mathcal{A}\) of subsets of \(X\) has the countable intersection property if every countable intersection of elements of \(\mathcal{A}\) is nonempty. Show that \(X\) is a Lindelöf space if and only if for every collection \(\mathcal{A}\) of subsets of \(X\) having the countable intersection property,
+\item A collection \(\mathcal{A}\) of subsets of \(X\) has the \idx[countable intersection property]{Countable intersection property} if every countable intersection of elements of \(\mathcal{A}\) is nonempty. Show that \(X\) is a Lindelöf space if and only if for every collection \(\mathcal{A}\) of subsets of \(X\) having the countable intersection property,
 \[
 \mathop{\bigcap }\limits_{{A \in \mathcal{A}}}\bar{A}
 \]
@@ -183,7 +183,7 @@ is nonempty.
 
 (c) Show \(D\) is connected.
 
-\item[*5.] Here is a proof of the Tychonoff theorem that relies on the well-ordering theorem rather than on Zorn's lemma. First, prove the following version of the tube lemma; then prove the theorem.
+\item[*5.] Here is a proof of the Tychonoff theorem that relies on the well-ordering theorem rather than on Zorn's lemma. First, prove the following version of the \idx[tube lemma]{Tube lemma}; then prove the theorem.
 
 \textbf{Lemma.} Let \(\mathcal{A}\) be a collection of basis elements for the topology of the product space \(X \times Y\), such that no finite subcollection of \(\mathcal{A}\) covers \(X \times Y\). If \(X\) is compact, there is a point \(x \in X\) such that no finite subcollection of \(\mathcal{A}\) covers the slice \(\{ x\} \times Y\).
 
@@ -340,7 +340,7 @@ Then define \(h : X \rightarrow \mathop{\prod }\limits_{{\alpha \in J}}{I}_{\alp
 h(x) = {( {f}_{\alpha }(x) ) }_{\alpha \in J}.
 \]
 
-By the Tychonoff theorem, \(\prod {I}_{\alpha }\) is compact. Because \(X\) is completely regular, the collection \(\{ {f}_{\alpha }\}\) separates points from closed sets in \(X\). Therefore, by \hyperref[thm:34.2]{Theorem 34.2}, the map \(h\) is an imbedding.
+By the Tychonoff theorem, \(\prod {I}_{\alpha }\) is compact. Because \(X\) is completely regular, the collection \(\{ {f}_{\alpha }\}\) \idx[separates points from closed sets]{Separates points from closed sets} in \(X\). Therefore, by \hyperref[thm:34.2]{Theorem 34.2}, the map \(h\) is an imbedding.
 
 Let \(Y\) be the compactification of \(X\) induced by the imbedding \(h\). Then there is an imbedding \(H : Y \rightarrow \prod {I}_{\alpha }\) that equals \(h\) when restricted to the subspace \(X\) of \(Y\). Given a bounded continuous real-valued function \(f\) on \(X\), we show it extends to \(Y\). The function \(f\) belongs to the collection \({\{ {f}_{\alpha }\} }_{\alpha \in J}\), so it equals \({f}_{\beta }\) for some index \(\beta\). Let \({\pi }_{\beta } : \prod {I}_{\alpha } \rightarrow {I}_{\beta }\) be the projection mapping. Then the continuous map \({\pi }_{\beta } \circ H\) : \(Y \rightarrow {I}_{\beta }\) is the desired extension of \(f\). For if \(x \in X\), we have
 
@@ -415,6 +415,6 @@ The composite \({f}_{1} \circ {f}_{2} : {Y}_{1} \rightarrow {Y}_{1}\) has the pr
  \end{enumerate}
 \item We have constructed a correspondence \(X \rightarrow \beta (X)\) that assigns, to each completely regular space, its Stone-Čech compactification. Now let us assign, to each continuous map \(f : X \rightarrow Y\) of completely regular spaces, the unique continuous map \(\beta ( f) : \beta (X) \rightarrow \beta (Y)\) that extends the map \(i \circ f\), where \(i : Y \rightarrow \beta (Y)\) is the inclusion map. Verify the following:
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
- \item (i) If \({1}_{X} : X \rightarrow X\) is the identity map of \(X\), then \(\beta ( {1}_{X})\) is the identity map of \(\beta (X)\). (ii) If \(f : X \rightarrow Y\) and \(g : Y \rightarrow Z\), then \(\beta ( {g \circ f}) = \beta ( g) \circ \beta ( f)\). These properties tell us that the correspondence we have constructed is what is called a functor; it is a functor from the ``category'' of completely regular spaces and continuous maps of such spaces, to the ``category'' of compact Hausdorff spaces and continuous maps of such spaces. You will see these properties again in Part II of the book; they are fundamental in algebra and in algebraic topology.
+ \item (i) If \({1}_{X} : X \rightarrow X\) is the identity map of \(X\), then \(\beta ( {1}_{X})\) is the identity map of \(\beta (X)\). (ii) If \(f : X \rightarrow Y\) and \(g : Y \rightarrow Z\), then \(\beta ( {g \circ f}) = \beta ( g) \circ \beta ( f)\). These properties tell us that the correspondence we have constructed is what is called a \idx[functor]{Functor}; it is a functor from the ``category'' of completely regular spaces and continuous maps of such spaces, to the ``category'' of compact Hausdorff spaces and continuous maps of such spaces. You will see these properties again in Part II of the book; they are fundamental in algebra and in algebraic topology.
  \end{enumerate}
 \end{enumerate}
