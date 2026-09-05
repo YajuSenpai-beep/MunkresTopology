@@ -1148,7 +1148,7 @@ Let \(x_{n} = f(n)\). Apply Step 1 to the nonempty open set \(U = X\) to choose 
 \bar{V}_{1} \supset {\bar{V}}_{2} \supset \cdots
 \]
 
-of nonempty closed sets of \(X\). Because \(X\) is compact, there is a point \(x \in \bigcap {\bar{V}}_{n}\), by \hyperref[thm:26.9]{Theorem 26.9}. Now \(x\) cannot equal \(x_{n}\) for any \(n\), since \(x\) belongs to \(V_{n}\) and \(x_{n}\) does not.
+of nonempty closed sets of \(X\). Because \(X\) is compact, there is a point \(x \in \bigcap {\bar{V}}_{n}\), by \hyperref[thm:26.9]{Theorem 26.9}. Now \(x\) cannot equal \(x_{n}\) for any \(n\), since \(x\) belongs to \(\bar{V}_{n}\) and \(x_{n}\) does not.
 \end{proof}
 
 \begin{corollary}
@@ -1208,7 +1208,7 @@ So suppose \(A\) has no limit point. Then \(A\) contains all its limit points, s
 \begin{centeredblock}
 \begin{example}
 \label{ex:\thesection.\theexample}
- Let \(Y\) consist of two points, give \(Y\) the topology consisting of \(Y\) and the empty set. Then the space \(X = \mathbb{Z}_{ + } \times Y\) is limit point compact, for every nonempty subset of \(X\) has a limit point. It is not compact, for the covering of \(X\) by the open sets \(U_{n} = [ n] \times Y\) has no finite subcollection covering \(X\)
+ Let \(Y\) consist of two points, give \(Y\) the topology consisting of \(Y\) and the empty set. Then the space \(X = \mathbb{Z}_{ + } \times Y\) is limit point compact, for every nonempty subset of \(X\) has a limit point. It is not compact, for the covering of \(X\) by the open sets \(U_{n} = \{ n\} \times Y\) has no finite subcollection covering \(X\)
 \end{example}
 \end{centeredblock}
 
@@ -1231,7 +1231,7 @@ n_{1} < n_{2} < \cdots < n_{i} < \cdots
 is an increasing sequence of positive integers, then the sequence \(( y_{i})\) defined by setting \(y_{i} = x_{n_{i}}\) is called a \idx[subsequence]{Subsequence} of the sequence \(( x_{n})\). The space \(X\) is said to be sequentially compact if every sequence of points of \(X\) has a convergent subsequence.
 \end{definition}
 
-**Theorem 28.2. Let \(X\) be a metrizable space. Then the following are equivalent:
+*Theorem 28.2. Let \(X\) be a metrizable space. Then the following are equivalent:
 
 \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\arabic*), align=left]
 \item \(X\) is compact.
