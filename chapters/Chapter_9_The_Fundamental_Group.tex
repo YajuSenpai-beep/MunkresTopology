@@ -77,6 +77,7 @@ G( {x,t}) = \{ \begin{array}{ll} F( {x,{2t}}) & \text{ for }t \in [ {0,\frac{1}{
 The map \(G\) is well defined, since if \(t = \frac{1}{2}\), we have \(F( {x,{2t}}) = {f}^{\prime }(x) = {F}^{\prime }( {x,{2t} - 1})\). Because \(G\) is continuous on the two closed subsets \(X \times [ {0,\frac{1}{2}}]\) and \(X \times [ {\frac{1}{2},1}]\) of \(X \times I\), it is continuous on all of \(X \times I\), by the pasting lemma. Thus \(G\) is the required homotopy between \(f\) and \({f}^{\prime \prime }\).
 
 You can check that if \(F\) and \({F}^{\prime }\) are path homotopies, so is \(G\). See Figure 51.2.
+\munkresfig[0.7]{51.2}[Figure 51.2]
 \end{proof}
 
 \begin{centeredblock}
@@ -444,7 +445,7 @@ Let \(k : ( {Y,{y}_{0}}) \rightarrow ( {X,{x}_{0}})\) be the inverse of \(h\). T
 \item Let \({x}_{0}\) and \({x}_{1}\) be points of the path-connected space \(X\). Show that \({\pi }_{1}( {X,{x}_{0}})\) is abelian if and only if for every pair \(\alpha\) and \(\beta\) of paths from \({x}_{0}\) to \({x}_{1}\), we have \(\widehat{\alpha } = \widehat{\beta }\).
 \item Let \(A \subset X\) ; suppose \(r : X \rightarrow A\) is a continuous map such that \(r( a) = a\) for each \(a \in A\). (The map \(r\) is called a retraction of \(X\) onto \(A\).) If \({a}_{0} \in A\), show that \[ {r}_{ * } : {\pi }_{1}( {X,{a}_{0}}) \rightarrow {\pi }_{1}( {A,{a}_{0}}) \] is surjective.
 \item Let \(A\) be a subspace of \({\mathbb{R}}^{n}\) ; let \(h : ( {A,{a}_{0}}) \rightarrow ( {Y,{y}_{0}})\). Show that if \(h\) is extendable to a continuous map of \({\mathbb{R}}^{n}\) into \(Y\), then \({h}_{ * }\) is the trivial homomorphism (the homomorphism that maps everything to the identity element).
-\item Show that if \(X\) is path connected, the homomorphism induced by a continuous map is independent of base point, up to isomorphisms of the groups involved. More precisely, let \(h : X \rightarrow Y\) be continuous, with \(h( {x}_{0}) = {y}_{0}\) and \(h( {x}_{1}) = {y}_{1}\). Let \(\alpha\) be a path in \(X\) from \({x}_{0}\) to \({x}_{1}\), and let \(\beta = h \circ \alpha\). Show that \[ \widehat{\beta } \circ {( {h}_{{x}_{0}}) }_{ * } = {( {h}_{{x}_{1}}) }_{ * } \circ \widehat{\alpha }. \] This equation expresses the fact that the following diagram of maps ``commutes.'' \munkresfig[0.3]{52.2}[Figure 52.2]
+\item Show that if \(X\) is path connected, the homomorphism induced by a continuous map is independent of base point, up to isomorphisms of the groups involved. More precisely, let \(h : X \rightarrow Y\) be continuous, with \(h( {x}_{0}) = {y}_{0}\) and \(h( {x}_{1}) = {y}_{1}\). Let \(\alpha\) be a path in \(X\) from \({x}_{0}\) to \({x}_{1}\), and let \(\beta = h \circ \alpha\). Show that \[ \widehat{\beta } \circ {( {h}_{{x}_{0}}) }_{ * } = {( {h}_{{x}_{1}}) }_{ * } \circ \widehat{\alpha }. \] This equation expresses the fact that the following diagram of maps ``commutes.'' \munkresfig[0.3]{com_52_2}
 \item Let \(G\) be a topological group with operation \(\cdot\) and identity element \({x}_{0}\) Let \(\Omega ( {G,{x}_{0}})\) denote the set of all loops in \(G\) based at \({x}_{0}\). If \(f,g \in \Omega ( {G,{x}_{0}})\), let us define a loop \(f \otimes g\) by the rule \[ ( {f \otimes g}) ( s) = f( s) \cdot g( s). \]
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show that this operation makes the set \(\Omega ( {G,{x}_{0}})\) into a group.
@@ -639,7 +640,7 @@ The study of covering spaces of a space \(X\) is intimately related to the study
 Let \(p : E \rightarrow B\) be a map. If \(f\) is a continuous mapping of some space \(X\) into \(B\), a lifting of \(f\) is a map \(\bar{f} : X \rightarrow E\) such that \(p \circ \bar{f} = f\).
 \end{definition}
 
-\munkresfig[0.2]{54.0}[Figure 54.0]
+\munkresfig[0.2]{com_54_0}
 
 The existence of liftings when \(p\) is a covering map is an important tool in studying covering spaces and the fundamental group. First, we show that for a covering space, paths can be lifted; then we show that path homotopies can be lifted as well. First, an example:
 
@@ -1150,7 +1151,7 @@ If \(h : {S}^{1} \rightarrow {S}^{1}\) is continuous and antipode-preserving, th
 Let \({b}_{0}\) be the point (1,0) of \({S}^{1}\). Let \(\rho : {S}^{1} \rightarrow {S}^{1}\) be a rotation of \({S}^{1}\) that maps \(h( {b}_{0})\) to \({b}_{0}\). Since \(\rho\) preserves antipodes, so does the composite \(\rho \circ h\). Furthermore, if \(H\) were a homotopy between \(h\) and a constant map, then \(\rho \circ H\) would be a homotopy between \(\rho \circ h\) and a constant map. Therefore, it suffices to prove the theorem under the additional hypothesis that \(h( {b}_{0}) = {b}_{0}\).
 Step 1. Let \(q : {S}^{1} \rightarrow {S}^{1}\) be the map \(q( z) = {z}^{2}\), where \(z\) is a complex number. Or in real coordinates, \(q( {\cos \theta ,\sin \theta }) = ( {\cos {2\theta },\sin {2\theta }})\). The map \(q\) is a quotient map, being continuous, closed, and surjective. The inverse image under \(q\) of any point of \({S}^{1}\) consists of two antipodal points \(z\) and \(- z\) of \({S}^{1}\). Because \(h( {-z}) = - h( z)\), one has the equation \(q( {h( {-z}) }) = q( {h( z) })\). Therefore, because \(q\) is a quotient map, the map \(q \circ h\) induces a continuous map \(k : {S}^{1} \rightarrow {S}^{1}\) such that \(k \circ q = q \circ h\). Note that \(q( {b}_{0}) = h( {b}_{0}) = {b}_{0}\), so that \(k( {b}_{0}) = {b}_{0}\) as well. Also, \(h( {-{b}_{0}}) = - {b}_{0}\). Step 2. We show that the homomorphism \({k}_{ * }\) of \({\pi }_{1}( {{S}^{1},{b}_{0}})\) with itself is nontrivial. For this purpose, we first show that \(q\) is a covering map. (We gave this as an exercise in \S\ 53.) The proof is similar to the proof that the standard map \(p : \mathbb{R} \rightarrow {S}^{1}\) is a covering map. If, for instance, \(U\) is the subset of \({S}^{1}\) consisting of those points having positive second coordinate, then \({p}^{-1}( U)\) consists of those points of \({S}^{1}\) lying in the first and third quadrants of \({\mathbb{R}}^{2}\). The map \(q\) carries each of these sets homeomorphically onto \(U\). Similar arguments apply when \(U\) is the intersection of \({S}^{1}\) with the open lower half-plane, or with the open right and left half-planes.
 
-\munkresfig[0.2]{57.0}[Figure 57.0] 
+\munkresfig[0.2]{com_57_0} 
 
 Second, we note that if \(\bar{f}\) is any path in \({S}^{1}\) from \({b}_{0}\) to \(- {b}_{0}\), then the loop \(f = q \circ \bar{f}\) represents a nontrivial element of \({\pi }_{1}( {{S}^{1},{b}_{0}})\). For \(\bar{f}\) is a lifting of \(f\) to \({S}^{1}\) that begins at \({b}_{0}\) and does not end at \({b}_{0}\).
 
@@ -1265,10 +1266,7 @@ is a homotopy between the identity map of \(X\) and the map \(j \circ r\). For \
 What made the preceding proof work? Roughly speaking, it worked because we had a natural way of deforming the identity map of \({\mathbb{R}}^{n + 1} - 0\) to a map that collapsed all of \({\mathbb{R}}^{n + 1} - \mathbf{0}\) onto \({S}^{n}\). The deformation \(H\) gradually collapsed each radial line emanating from the origin to the point where it intersected \({S}^{n}\) ; each point of \({S}^{n}\) remained fixed during this deformation.
 
 Figure 58.1 illustrates, in the case \(n = 1\), how the deformation \(H\) gives rise to a path homotopy \(H( {f( s),t})\) between the loop \(f\) in \({\mathbb{R}}^{2} - \mathbf{0}\) and the loop \(g = f/\parallel f\parallel\) in \({S}^{1}\).
-% \end{center}
-\hspace*{3em} 
-
-Figure 58.1
+\munkresfig[0.9]{58.1}[Figure 58.1]
 
 These comments lead us to formulate a more general situation in which the same procedure applies.
 \end{proof}
@@ -1344,7 +1342,7 @@ We now show that two spaces having the same homotopy type have isomorphic fundam
 Let \(h,k : X \rightarrow Y\) be continuous maps; let \(h( {x}_{0}) = {y}_{0}\) and \(k( {x}_{0}) = {y}_{1}\). If \(h\) and \(k\) are homotopic, there is a path \(\alpha\) in \(Y\) from \({y}_{0}\) to \({y}_{1}\) such that \({k}_{ * } = \widehat{\alpha } \circ {h}_{ * }\). Indeed, if \(H : X \times I \rightarrow Y\) is the homotopy between \(h\) and \(k\), then \(\alpha\) is the path \(\alpha ( t) = H( {{x}_{0},t})\).
 \end{lemma}
 
-\munkresfig[0.3]{58.25}[Figure 58.25] 
+\munkresfig[0.3]{com_58_25} 
 
 \begin{proof}
 Let \(f : I \rightarrow X\) be a loop in \(X\) based at \({x}_{0}\). We must show that
@@ -1431,7 +1429,7 @@ Let \(g : Y \rightarrow X\) be a homotopy inverse for \(f\). Consider the maps
 
 where \({x}_{1} = g( {y}_{0})\) and \({y}_{1} = f( {x}_{1})\). We have the corresponding induced homomorphisms:
 
-\munkresfig[0.3]{58.35}[Figure 58.35] 
+\munkresfig[0.3]{com_58_35} 
 
 [Here we have to distinguish between the homomorphisms induced by \(f\) relative to two different base points.] Now
 
