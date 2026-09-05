@@ -36,7 +36,7 @@ Given two covering maps \(p : E \rightarrow B\) and \(p^{\prime } : E^{\prime } 
 
 \begin{lemma}
 \label{lem:\thetheorem}[The general lifting lemma]
-	Let \(p : E \rightarrow B\) be a covering map; let \(p( e_{0}) = b_{0}\). Let \(f : Y \rightarrow B\) be a continuous map, with \(f( y_{0}) = b_{0}\). Suppose \(Y\) is path connected and locally path connected. The map \(f\) can be lifted to a map \(\bar{f} : Y \rightarrow E\) such that \(\bar{f}( y_{0}) = e_{0}\) if and only if
+	Let \(p : E \rightarrow B\) be a covering map; let \(p( e_{0}) = b_{0}\). Let \(f : Y \rightarrow B\) be a continuous map, with \(f( y_{0}) = b_{0}\). Suppose \(Y\) is path connected and locally path connected. The map \(f\) can be lifted to a map \(\widetilde{f} : Y \rightarrow E\) such that \(\widetilde{f}( y_{0}) = e_{0}\) if and only if
 
 \[
 f_{ * }( {{\pi }_{1}( {Y,y_{0}}) }) \subset {p}_{ * }( {{\pi }_{1}( {E,e_{0}}) }).
@@ -46,23 +46,23 @@ Furthermore, if such a lifting exists, it is unique.
 \end{lemma}
 
 \begin{proof}
-	If the lifting \(\bar{f}\) exists, then
+	If the lifting \(\widetilde{f}\) exists, then
 \[
-f_{ * }( {{\pi }_{1}( {Y,y_{0}}) }) = p_{ * }( {\bar{f}_{ * }( {{\pi }_{1}( {Y,y_{0}}) }) }) \subset {p}_{ * }( {{\pi }_{1}( {E,e_{0}}) }).
+f_{ * }( {{\pi }_{1}( {Y,y_{0}}) }) = p_{ * }( {\widetilde{f}_{ * }( {{\pi }_{1}( {Y,y_{0}}) }) }) \subset {p}_{ * }( {{\pi }_{1}( {E,e_{0}}) }).
 \]
 
 This proves the ``only if'' part of the theorem.
 
-Now we prove that if \(\bar{f}\) exists, it is unique. Given \(y_{1} \in Y\), choose a path \(\alpha\) in \(Y\) from \(y_{0}\) to \(y_{1}\). Take the path \(f \circ \alpha\) in \(B\) and lift it to a path \(\gamma\) in \(E\) beginning at \(e_{0}\). If a lifting \(\bar{f}\) of \(f\) exists, then \(\bar{f}( y_{1})\) must equal the end point \(\gamma (1)\) of \(\gamma\), for \(\bar{f} \circ \alpha\) is a lifting of \(f \circ \alpha\) that begins at \(e_{0}\), and path liftings are unique.
+Now we prove that if \(\widetilde{f}\) exists, it is unique. Given \(y_{1} \in Y\), choose a path \(\alpha\) in \(Y\) from \(y_{0}\) to \(y_{1}\). Take the path \(f \circ \alpha\) in \(B\) and lift it to a path \(\gamma\) in \(E\) beginning at \(e_{0}\). If a lifting \(\widetilde{f}\) of \(f\) exists, then \(\widetilde{f}( y_{1})\) must equal the end point \(\gamma (1)\) of \(\gamma\), for \(\widetilde{f} \circ \alpha\) is a lifting of \(f \circ \alpha\) that begins at \(e_{0}\), and path liftings are unique.
 
-Finally, we prove the ``if'' part of the theorem. The uniqueness part of the proof gives us a clue how to proceed. Given \(y_{1} \in Y\), choose a path \(\alpha\) in \(Y\) from \(y_{0}\) to \(y_{1}\). Lift the path \(f \circ \alpha\) to a path \(\gamma\) in \(E\) beginning at \(e_{0}\), and define \(\bar{f}( y_{1}) = \gamma (1)\). See \hyperref[fig:79.1]{Figure 79.1}. It is a certain amount of work to show that \(\bar{f}\) is well-defined, independent of the choice of \(\alpha\). Once we prove that, continuity of \(\bar{f}\) is proved easily, as we now show.
+Finally, we prove the ``if'' part of the theorem. The uniqueness part of the proof gives us a clue how to proceed. Given \(y_{1} \in Y\), choose a path \(\alpha\) in \(Y\) from \(y_{0}\) to \(y_{1}\). Lift the path \(f \circ \alpha\) to a path \(\gamma\) in \(E\) beginning at \(e_{0}\), and define \(\widetilde{f}( y_{1}) = \gamma (1)\). See \hyperref[fig:79.1]{Figure 79.1}. It is a certain amount of work to show that \(\widetilde{f}\) is well-defined, independent of the choice of \(\alpha\). Once we prove that, continuity of \(\widetilde{f}\) is proved easily, as we now show.
 
 \munkresfig[1.0]{79.1}[Figure 79.1]
-To prove continuity of \(\bar{f}\) at the point \(y_{1}\) of \(Y\), we show that, given a neighborhood \(N\) of \(\bar{f}( y_{1})\), there is a neighborhood \(W\) of \(y_{1}\) such that \(\bar{f}( W) \subset N\). To begin, choose a path-connected neighborhood \(U\) of \(f( y_{1})\) that is evenly covered by \(p\). Break \(p^{-1}( U)\) up into slices, and let \(V_{0}\) be the slice that contains the point \(\bar{f}( y_{1})\). Replacing \(U\) by a smaller neighborhood of \(f( y_{1})\) if necessary, we can assume that \(V_{0} \subset N\). Let \(p_{0} : V_{0} \rightarrow U\) be obtained by restricting \(p\) ; then \(p_{0}\) is a homeomorphism. Because \(f\) is continuous at \(y_{1}\) and \(Y\) is locally path connected, we can find a path-connected neighborhood \(W\) of \(y_{1}\) such that \(f( W) \subset U\). We shall show that \(\bar{f}( W) \subset {V}_{0}\) ; then our result is proved.
+To prove continuity of \(\widetilde{f}\) at the point \(y_{1}\) of \(Y\), we show that, given a neighborhood \(N\) of \(\widetilde{f}( y_{1})\), there is a neighborhood \(W\) of \(y_{1}\) such that \(\widetilde{f}( W) \subset N\). To begin, choose a path-connected neighborhood \(U\) of \(f( y_{1})\) that is evenly covered by \(p\). Break \(p^{-1}( U)\) up into slices, and let \(V_{0}\) be the slice that contains the point \(\widetilde{f}( y_{1})\). Replacing \(U\) by a smaller neighborhood of \(f( y_{1})\) if necessary, we can assume that \(V_{0} \subset N\). Let \(p_{0} : V_{0} \rightarrow U\) be obtained by restricting \(p\) ; then \(p_{0}\) is a homeomorphism. Because \(f\) is continuous at \(y_{1}\) and \(Y\) is locally path connected, we can find a path-connected neighborhood \(W\) of \(y_{1}\) such that \(f( W) \subset U\). We shall show that \(\widetilde{f}( W) \subset {V}_{0}\) ; then our result is proved.
 
-Given \(y \in W\), choose a path \(\beta\) in \(W\) from \(y_{1}\) to \(y\). Since \(\bar{f}\) is well defined, \(\bar{f}( y)\) can be obtained by taking the path \(\alpha * \beta\) from \(y_{0}\) to \(y\), lifting the path \(f \circ ( {\alpha * \beta })\) to a path in \(E\) beginning at \(e_{0}\), and letting \(\bar{f}( y)\) be the end point of this lifted path. Now \(\gamma\) is a lifting of \(\alpha\) that begins at \(e_{0}\). Since the path \(f \circ \beta\) lies in \(U\), the path \(\delta = p_0^{-1} \circ f \circ \beta\) is a lifting of it that begins at \(\bar{f}( y_{1})\). Then \(\gamma * \delta\) is a lifting of \(f \circ ( {\alpha * \beta })\) that begins at \(e_{0}\) ; it ends at the point \(\delta (1)\) of \(V_{0}\). Hence \(\bar{f}( W) \subset {V}_{0}\), as desired.
+Given \(y \in W\), choose a path \(\beta\) in \(W\) from \(y_{1}\) to \(y\). Since \(\widetilde{f}\) is well defined, \(\widetilde{f}( y)\) can be obtained by taking the path \(\alpha * \beta\) from \(y_{0}\) to \(y\), lifting the path \(f \circ ( {\alpha * \beta })\) to a path in \(E\) beginning at \(e_{0}\), and letting \(\widetilde{f}( y)\) be the end point of this lifted path. Now \(\gamma\) is a lifting of \(\alpha\) that begins at \(e_{0}\). Since the path \(f \circ \beta\) lies in \(U\), the path \(\delta = p_0^{-1} \circ f \circ \beta\) is a lifting of it that begins at \(\widetilde{f}( y_{1})\). Then \(\gamma * \delta\) is a lifting of \(f \circ ( {\alpha * \beta })\) that begins at \(e_{0}\) ; it ends at the point \(\delta (1)\) of \(V_{0}\). Hence \(\widetilde{f}( W) \subset {V}_{0}\), as desired.
 
-Finally, we show \(\bar{f}\) is well defined. Let \(\alpha\) and \(\beta\) be two paths in \(Y\) from \(y_{0}\) to \(y_{1}\). We must show that if we lift \(f \circ \alpha\) and \(f \circ \beta\) to paths in \(E\) beginning at \(e_{0}\), then these lifted paths end at the same point of \(E\).
+Finally, we show \(\widetilde{f}\) is well defined. Let \(\alpha\) and \(\beta\) be two paths in \(Y\) from \(y_{0}\) to \(y_{1}\). We must show that if we lift \(f \circ \alpha\) and \(f \circ \beta\) to paths in \(E\) beginning at \(e_{0}\), then these lifted paths end at the same point of \(E\).
 
 First, we lift \(f \circ \alpha\) to a path \(\gamma\) in \(E\) beginning at \(e_{0}\) ; then we lift \(f \circ \bar{\beta }\) to a path \(\delta\) in \(E\) beginning at the end point \(\gamma (1)\) of \(\gamma\). Then \(\gamma * \delta\) is a lifting of the loop \(f \circ ( {\alpha * \bar{\beta }})\). Now by hypothesis,
 
@@ -72,7 +72,7 @@ f_{ * }( {{\pi }_{1}( {Y,y_{0}}) }) \subset {p}_{ * }( {{\pi }_{1}( {E,e_{0}}) }
 
 Hence \([ {f \circ ( {\alpha * \bar{\beta }}) }]\) belongs to the image of \(p_{ * }\). \hyperref[thm:54.6]{Theorem 54.6} now implies that its lift \(\gamma * \delta\) is a loop in \(E\).
 
-It follows that \(\bar{f}\) is well defined. For \(\bar{\delta }\) is a lifting of \(f \circ \beta\) that begins at \(e_{0}\), and \(\gamma\) is a lifting of \(f \circ \alpha\) that begins at \(e_{0}\), and both liftings end at the same point of \(E\).
+It follows that \(\widetilde{f}\) is well defined. For \(\bar{\delta }\) is a lifting of \(f \circ \beta\) that begins at \(e_{0}\), and \(\gamma\) is a lifting of \(f \circ \alpha\) that begins at \(e_{0}\), and both liftings end at the same point of \(E\).
 \end{proof}
 \begin{theorem}
 \label{thm:\thetheorem}
@@ -119,12 +119,12 @@ If \(H_{1}\) and \(H_{2}\) are subgroups of a group \(G\), you may recall from a
 \begin{proof}
 	(a) First, we show that \([ \alpha ] * H_{1} * {[ \alpha ] }^{-1} \subset {H}_{0}\). Given an element \([ h]\) of \(H_{1}\), we have \([ h] = p_{ * }( [ \widetilde{h}] )\) for some loop \(\widetilde{h}\) in \(E\) based at \(e_{1}\). Let \(\widetilde{k}\) be the path \(\widetilde{k} = ( {\gamma * \widetilde{h}}) * \widetilde{\gamma }\) ; it is a loop in \(E\) based at \(e_{0}\), and
 \[
-p_{ * }( [ \bar{k}] ) = [ {( {\alpha * h}) * \bar{\alpha }}] = [ \alpha ] * [ h] * {[ \alpha ] }^{-1},
+p_{ * }( [ \widetilde{k}] ) = [ {( {\alpha * h}) * \bar{\alpha }}] = [ \alpha ] * [ h] * {[ \alpha ] }^{-1},
 \]
 
 so the latter element belongs to \(p_{ * }( {{\pi }_{1}( {E,e_{0}}) }) = H_{0}\), as desired. See \hyperref[fig:79.2]{Figure 79.2}.
 
-Now we show that \([ \alpha ] * H_{1} * {[ \alpha ] }^{-1} \supset {H}_{0}\). Note that \(\bar{\gamma }\) is a path from \(e_{1}\) to \(e_{0}\) and \(\bar{\alpha }\) equals the loop \(p \circ \bar{\gamma }\). By the result just proved, we have
+Now we show that \([ \alpha ] * H_{1} * {[ \alpha ] }^{-1} \supset {H}_{0}\). Note that \(\widetilde{\gamma }\) is a path from \(e_{1}\) to \(e_{0}\) and \(\bar{\alpha }\) equals the loop \(p \circ \widetilde{\gamma }\). By the result just proved, we have
 
 \[
 [ \bar{\alpha }] * H_{0} * {[ \bar{\alpha }] }^{-1} \subset {H}_{1}
@@ -225,7 +225,7 @@ Now we show \(p_{0} : E_{0} \rightarrow B\) is a covering map. Given \(x \in B\)
 
 \begin{proof}
 	By our convention, \(X,Y\), and \(Z\) are path connected and locally path connected. Let \(x_{0} \in X\) ; set \(y_{0} = q( x_{0})\) and \(z_{0} = p( x_{0})\).
-(a) Assume that \(p\) and \(r\) are covering maps. We show first that \(q\) is surjective. Given \(y \in Y\), choose a path \(\bar{\alpha }\) in \(Y\) from \(y_{0}\) to \(y\). Then \(\alpha = r \circ \bar{\alpha }\) is a path in \(Z\) beginning at \(z_{0}\) ; let \(\widetilde{\bar{\alpha }}\) be a lifting of \(\alpha\) to a path in \(X\) beginning at \(x_{0}\). Then \(q \circ \widetilde{\bar{\alpha }}\) is a lifting of \(\alpha\) to \(Y\) that begins at \(y_{0}\). By uniqueness of path liftings, \(\widetilde{\alpha } = q \circ \widetilde{\bar{\alpha }}\). Then \(q\) maps the end point of \(\overline{\bar{\alpha }}\) to the end point \(y\) of \(\bar{\alpha }\). Thus \(q\) is surjective.
+(a) Assume that \(p\) and \(r\) are covering maps. We show first that \(q\) is surjective. Given \(y \in Y\), choose a path \(\widetilde{\alpha }\) in \(Y\) from \(y_{0}\) to \(y\). Then \(\alpha = r \circ \widetilde{\alpha }\) is a path in \(Z\) beginning at \(z_{0}\) ; let \(\widetilde{\alpha }\) be a lifting of \(\alpha\) to a path in \(X\) beginning at \(x_{0}\). Then \(q \circ \widetilde{\alpha }\) is a lifting of \(\alpha\) to \(Y\) that begins at \(y_{0}\). By uniqueness of path liftings, \(\widetilde{\alpha } = q \circ \widetilde{\alpha }\). Then \(q\) maps the end point of \(\widetilde{\alpha }\) to the end point \(y\) of \(\widetilde{\alpha }\). Thus \(q\) is surjective.
 
 Given \(y \in Y\), we find a neighborhood of \(y\) that is evenly covered by \(q\). Let \(z =\) \(r( y)\). Since \(p\) and \(r\) are covering maps, we can find a path-connected neighborhood \(U\) of \(z\) that is evenly covered by both \(p\) and \(r\). Let \(V\) be the slice of \(r^{-1}( U)\) that contains the point \(y\) ; we show \(V\) is evenly covered by \(q\). Let \(\{ U_{\alpha }\}\) be the collection of slices of \(p^{-1}( U)\). Now \(q\) maps each set \(U_{\alpha }\) into the set \(r^{-1}( U)\) ; because \(U_{\alpha }\) is connected, it must be mapped by \(q\) into a single one of the slices of \(r^{-1}( U)\). Therefore, \(q^{-1}( V)\) equals the union of those slices \(U_{\alpha }\) that are mapped by \(q\) into \(V\). It is easy to see that each such \(U_{\alpha }\) is mapped homeomorphically onto \(V\) by \(q\). For let \(p_{0},q_{0},r_{0}\) be the maps obtained by restricting \(p,q\), and \(r\), respectively, as indicated in the following diagram:
 
@@ -272,7 +272,7 @@ i_{ * } : {\pi }_{1}( {U,b_{0}}) \rightarrow {\pi }_{1}( {B,b_{0}}).
 \end{lemma}
 
 \begin{proof}
-	Let \(U\) be a neighborhood of \(b_{0}\) that is evenly covered by \(p\) ; break \(p^{-1}( U)\) up into slices; let \(U_{\alpha }\) be the slice containing \(e_{0}\). Let \(f\) be a loop in \(U\) based at \(b_{0}\). Because \(p\) defines a homeomorphism of \(U_{\alpha }\) with \(U\), the loop \(f\) lifts to a loop \(\bar{f}\) in \(U_{\alpha }\) based at \(e_{0}\). Since \(E\) is simply connected, there is a path homotopy \(\bar{F}\) in \(E\) between \(\bar{f}\) and a constant loop. Then \(p \circ \bar{F}\) is a path homotopy in \(B\) between \(f\) and a constant loop.
+	Let \(U\) be a neighborhood of \(b_{0}\) that is evenly covered by \(p\) ; break \(p^{-1}( U)\) up into slices; let \(U_{\alpha }\) be the slice containing \(e_{0}\). Let \(f\) be a loop in \(U\) based at \(b_{0}\). Because \(p\) defines a homeomorphism of \(U_{\alpha }\) with \(U\), the loop \(f\) lifts to a loop \(\widetilde{f}\) in \(U_{\alpha }\) based at \(e_{0}\). Since \(E\) is simply connected, there is a path homotopy \(\widetilde{F}\) in \(E\) between \(\widetilde{f}\) and a constant loop. Then \(p \circ \widetilde{F}\) is a path homotopy in \(B\) between \(f\) and a constant loop.
 \begin{centeredblock}
 \begin{example}
 \label{ex:\thesection.\theexample}
@@ -613,30 +613,30 @@ To begin, given \(c \in [ {0,1}]\), let \({\alpha }_{c} : I \rightarrow B\) deno
 {\alpha }_{c}( t) = \alpha ( {tc}) \;\text{ for }\;0 \leq t \leq 1.
 \]
 
-Then \({\alpha }_{c}\) is the ``portion'' of \(\alpha\) that runs from \(\alpha ( 0)\) to \(\alpha ( c)\). In particular, \({\alpha }_{0}\) is the constant path at \(b_{0}\), and \({\alpha }_{1}\) is the path \(\alpha\) itself. We define \(\bar{\alpha } : I \rightarrow E\) by the equation
+Then \({\alpha }_{c}\) is the ``portion'' of \(\alpha\) that runs from \(\alpha ( 0)\) to \(\alpha ( c)\). In particular, \({\alpha }_{0}\) is the constant path at \(b_{0}\), and \({\alpha }_{1}\) is the path \(\alpha\) itself. We define \(\widetilde{\alpha } : I \rightarrow E\) by the equation
 
 \[
-\bar{\alpha }( c) = {( {\alpha }_{c}) }^{\# }
+\widetilde{\alpha }( c) = {( {\alpha }_{c}) }^{\# }
 \]
 
-and show that \(\bar{\alpha }\) is continuous. Then \(\bar{\alpha }\) is a lift of \(\alpha\), since \(p( {\bar{\alpha }( c) }) = {\alpha }_{c}(1) = \alpha ( c)\) ; furthermore, \(\bar{\alpha }\) begins at \({( {\alpha }_{0}) }^{\# } = e_{0}\) and ends at \({( {\alpha }_{1}) }^{\# } = {\alpha }^{\# }\).
+and show that \(\widetilde{\alpha }\) is continuous. Then \(\widetilde{\alpha }\) is a lift of \(\alpha\), since \(p( {\widetilde{\alpha }( c) }) = {\alpha }_{c}(1) = \alpha ( c)\) ; furthermore, \(\widetilde{\alpha }\) begins at \({( {\alpha }_{0}) }^{\# } = e_{0}\) and ends at \({( {\alpha }_{1}) }^{\# } = {\alpha }^{\# }\).
 
 To verify continuity, we introduce the following notation. Given \(0 \leq c < d \leq 1\), let \({\delta }_{c,d}\) denote the path that equals the positive linear map of \(I\) onto \([ {c,d}]\) followed by \(\alpha\). Note that the paths \({\alpha }_{d}\) and \({\alpha }_{c} * {\delta }_{c,d}\) are path homotopic because one is just a reparametrization of the other. See \hyperref[fig:82.2]{Figure 82.2}.
 
 \munkresfig[0.8]{82.2}[Figure 82.2]
-We now verify continuity of \(\bar{\alpha }\) at the point \(c\) of \([ {0,1}]\). Let \(W\) be a basis element in \(E\) about the point \(\bar{\alpha }( c)\). Then \(W\) equals \(B( {U,{\alpha }_{c}})\) for some path-connected neighborhood \(U\) of \(\alpha ( c)\). Choose \(\epsilon > 0\) so that for \(| {c - t}| < \epsilon\), the point \(\alpha ( t)\) lies in \(U\). We show that if \(d\) is a point of \([ {0,1}]\) with \(| {c - d}| < \epsilon\), then \(\bar{\alpha }( d) \in W\) ; this proves continuity of \(\widetilde{\alpha }\) at \(c\).
+We now verify continuity of \(\widetilde{\alpha }\) at the point \(c\) of \([ {0,1}]\). Let \(W\) be a basis element in \(E\) about the point \(\widetilde{\alpha }( c)\). Then \(W\) equals \(B( {U,{\alpha }_{c}})\) for some path-connected neighborhood \(U\) of \(\alpha ( c)\). Choose \(\epsilon > 0\) so that for \(| {c - t}| < \epsilon\), the point \(\alpha ( t)\) lies in \(U\). We show that if \(d\) is a point of \([ {0,1}]\) with \(| {c - d}| < \epsilon\), then \(\widetilde{\alpha }( d) \in W\) ; this proves continuity of \(\widetilde{\alpha }\) at \(c\).
 
 So suppose \(| {c - d}| < \epsilon\). Take first the case where \(d > c\). Set \(\delta = {\delta }_{c,d}\) ; then since \([ {\alpha }_{d}] = [ {{\alpha }_{c} * \delta }]\), we have
 
 \[
-\bar{\alpha }( d) = {( {\alpha }_{d}) }^{\# } = {( {\alpha }_{c} * \delta ) }^{\# }.
+\widetilde{\alpha }( d) = {( {\alpha }_{d}) }^{\# } = {( {\alpha }_{c} * \delta ) }^{\# }.
 \]
 
-Since \(\delta\) lies in \(U\), we have \(\bar{\alpha }( d) \in B( {U,{\alpha }_{c}})\), as desired. If \(d < c\), set \(\delta = {\delta }_{d,c}\) and proceed similarly.
+Since \(\delta\) lies in \(U\), we have \(\widetilde{\alpha }( d) \in B( {U,{\alpha }_{c}})\), as desired. If \(d < c\), set \(\delta = {\delta }_{d,c}\) and proceed similarly.
 
-Step 6. The map \(p : E \rightarrow B\) is a covering map. We need only verify that \(E\) is path connected, and this is easy. For if \({\alpha }^{\# }\) is any point of \(E\), then the lift \(\bar{\alpha }\) of the path \(\alpha\) is a path in \(E\) from \(e_{0}\) to \({\alpha }^{\# }\).
+Step 6. The map \(p : E \rightarrow B\) is a covering map. We need only verify that \(E\) is path connected, and this is easy. For if \({\alpha }^{\# }\) is any point of \(E\), then the lift \(\widetilde{\alpha }\) of the path \(\alpha\) is a path in \(E\) from \(e_{0}\) to \({\alpha }^{\# }\).
 
-Step 7. Finally, \(H = p_{ * }( {{\pi }_{1}( {E,e_{0}}) })\). Let \(\alpha\) be a loop in \(B\) at \(b_{0}\). Let \(\bar{\alpha }\) be its lift to \(E\) beginning at \(e_{0}\). \hyperref[thm:54.6]{Theorem 54.6} tells us that \([ \alpha ] \in {p}_{ * }( {{\pi }_{1}( {E,e_{0}}) })\) if and only if \(\bar{\alpha }\) is a loop in \(E\). Now the final point of \(\bar{\alpha }\) is the point \({\alpha }^{\# }\), and \({\alpha }^{\# } = e_{0}\) if and only if \(\alpha\) is equivalent to the constant path at \(b_{0}\), i.e., if and only if \([ {\alpha * \bar{e}_{b_{0}}}] \in H\). This occurs precisely when \([ \alpha ] \in H\).
+Step 7. Finally, \(H = p_{ * }( {{\pi }_{1}( {E,e_{0}}) })\). Let \(\alpha\) be a loop in \(B\) at \(b_{0}\). Let \(\widetilde{\alpha }\) be its lift to \(E\) beginning at \(e_{0}\). \hyperref[thm:54.6]{Theorem 54.6} tells us that \([ \alpha ] \in {p}_{ * }( {{\pi }_{1}( {E,e_{0}}) })\) if and only if \(\widetilde{\alpha }\) is a loop in \(E\). Now the final point of \(\widetilde{\alpha }\) is the point \({\alpha }^{\# }\), and \({\alpha }^{\# } = e_{0}\) if and only if \(\alpha\) is equivalent to the constant path at \(b_{0}\), i.e., if and only if \([ {\alpha * \widetilde{e}_{b_{0}}}] \in H\). This occurs precisely when \([ \alpha ] \in H\).
 \end{proof}
 \begin{corollary}
 \label{cor:\thetheorem}
