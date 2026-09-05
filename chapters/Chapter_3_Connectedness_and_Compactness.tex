@@ -6,7 +6,7 @@ Intermediate value theorem. If \(f : [ {a,b}] \rightarrow \mathbb{R}\) is contin
 
  Maximum value theorem. If \(f : [ {a,b}] \rightarrow \mathbb{R}\) is continuous, then there exists an element \(c \in [ {a,b}]\) such that \(f(x) \leq f( c)\) for every \(x \in [ {a,b}]\).
 
-\idx[Uniform continuity theorem]{Uniform continuity theorem}. If \(f : [ {a,b}] \rightarrow \mathbb{R}\) is continuous, then given \(\epsilon > 0\), there exists \(\delta > 0\) such that \(| {f( {x}_{1}) - f( {x}_{2}) }| < \epsilon\) for every pair of numbers \({x}_{1},{x}_{2}\) of \([ {a,b}]\) for which \(| {{x}_{1} - {x}_{2}}| < \delta\).
+\idx[Uniform continuity theorem]{Uniform continuity theorem}. If \(f : [ {a,b}] \rightarrow \mathbb{R}\) is continuous, then given \(\epsilon > 0\), there exists \(\delta > 0\) such that \(| {f( x_{1}) - f( x_{2}) }| < \epsilon\) for every pair of numbers \(x_{1},x_{2}\) of \([ {a,b}]\) for which \(| {x_{1} - x_{2}}| < \delta\).
 
 These theorems are used in a number of places. The intermediate value theorem is used for instance in constructing inverse functions, such as \(\sqrt[3]{x}\) and arcsin \(x\) ; and the maximum value theorem is used for proving the mean value theorem for derivatives, upon which the two fundamental theorems of calculus depend. The uniform continuity theorem is used, among other things, for proving that every continuous function is integrable.
 
@@ -80,7 +80,7 @@ Conversely, suppose that \(A\) and \(B\) are disjoint nonempty sets whose union 
 \begin{centeredblock}
 \begin{example}
 \label{ex:\thesection.\theexample}
- Consider the following subset of the plane \({\mathbb{R}}^{2}\) :
+ Consider the following subset of the plane \(\mathbb{R}^{2}\) :
 
  \[
  X = \{ x \times y \mid y = 0\} \cup \{ x \times y \mid x > 0\text{ and }y = 1/x\}.
@@ -92,7 +92,7 @@ Then \(X\) is not connected, indeed, the two indicated sets form a separation of
 \end{example}
 \end{centeredblock}
 
-We have given several examples of spaces that are not connected. How can one construct spaces that are connected? We shall now prove several theorems that tell how to form new connected spaces from given ones. In the next section we shall apply these theorems to show that some specific spaces, such as intervals in \(\mathbb{R}\), and balls and cubes in \({\mathbb{R}}^{n}\), are connected. First, a lemma:
+We have given several examples of spaces that are not connected. How can one construct spaces that are connected? We shall now prove several theorems that tell how to form new connected spaces from given ones. In the next section we shall apply these theorems to show that some specific spaces, such as intervals in \(\mathbb{R}\), and balls and cubes in \(\mathbb{R}^{n}\), are connected. First, a lemma:
 
 \begin{lemma}
 \label{lem:\thetheorem}
@@ -109,7 +109,7 @@ Since \(C\) and \(D\) are both open in \(X\), the sets \(C \cap Y\) and \(D \cap
 
 \end{theorem}
 \begin{proof}
- Let \(\{ {A}_{\alpha }\}\) be a collection of connected subspaces of a space \(X\) ; let \(p\) be a point of \(\bigcap {A}_{\alpha }\). We prove that the space \(Y = \bigcup {A}_{\alpha }\) is connected. Suppose that \(Y = C \cup D\) is a separation of \(Y\). The point \(p\) is in one of the sets \(C\) or \(D\) ; suppose \(p \in C\). Since \({A}_{\alpha }\) is connected, it must lie entirely in either \(C\) or \(D\), and it cannot lie in \(D\) because it contains the point \(p\) of \(C\). Hence \({A}_{\alpha } \subset C\) for every \(\alpha\), so that \(\bigcup {A}_{\alpha } \subset C\), contradicting the fact that \(D\) is nonempty.
+ Let \(\{ A_{\alpha }\}\) be a collection of connected subspaces of a space \(X\) ; let \(p\) be a point of \(\bigcap {A}_{\alpha }\). We prove that the space \(Y = \bigcup {A}_{\alpha }\) is connected. Suppose that \(Y = C \cup D\) is a separation of \(Y\). The point \(p\) is in one of the sets \(C\) or \(D\) ; suppose \(p \in C\). Since \(A_{\alpha }\) is connected, it must lie entirely in either \(C\) or \(D\), and it cannot lie in \(D\) because it contains the point \(p\) of \(C\). Hence \(A_{\alpha } \subset C\) for every \(\alpha\), so that \(\bigcup {A}_{\alpha } \subset C\), contradicting the fact that \(D\) is nonempty.
 \end{proof}
 
 \begin{theorem}
@@ -135,7 +135,7 @@ Said differently: If \(B\) is formed by adjoining to the connected subspace \(A\
  g : X \rightarrow Z\text{.}
  \]
 
-Suppose that \(Z = A \cup B\) is a separation of \(Z\) into two disjoint nonempty sets open in \(Z\). Then \({g}^{-1}( A)\) and \({g}^{-1}( B)\) are disjoint sets whose union is \(X\) ; they are open in \(X\) because \(g\) is continuous, and nonempty because \(g\) is surjective. Therefore, they form a separation of \(X\), contradicting the assumption that \(X\) is connected.
+Suppose that \(Z = A \cup B\) is a separation of \(Z\) into two disjoint nonempty sets open in \(Z\). Then \(g^{-1}( A)\) and \(g^{-1}( B)\) are disjoint sets whose union is \(X\) ; they are open in \(X\) because \(g\) is continuous, and nonempty because \(g\) is surjective. Therefore, they form a separation of \(X\), contradicting the assumption that \(X\) is connected.
 \end{proof}
 
 \begin{theorem}
@@ -147,13 +147,13 @@ A finite cartesian product of connected spaces is connected.
 We prove the theorem first for the product of two connected spaces \(X\) and \(Y\). This proof is easy to visualize. Choose a ``base point'' \(a \times b\) in the product \(X \times Y\). Note that the ``horizontal slice'' \(X \times b\) is connected, being homeomorphic with \(X\), and each ``vertical slice'' \(x \times Y\) is connected, being homeomorphic with \(Y\). As a result, each ``T-shaped'' space
 
 \[
-{T}_{x} = ( {X \times b}) \cup ( {x \times Y})
+T_{x} = ( {X \times b}) \cup ( {x \times Y})
 \]
 
-is connected, being the union of two connected spaces that have the point \(x \times b\) in common. See \hyperref[fig:23.2]{Figure 23.2}. Now form the union \(\mathop{\bigcup }\limits_{{x \in X}}{T}_{x}\) of all these T-shaped spaces. This union is connected because it is the union of a collection of connected spaces that have the point \(a \times b\) in common. Since this union equals \(X \times Y\), the space \(X \times Y\) is connected.
+is connected, being the union of two connected spaces that have the point \(x \times b\) in common. See \hyperref[fig:23.2]{Figure 23.2}. Now form the union \(\mathop{\bigcup }\limits_{{x \in X}}T_{x}\) of all these T-shaped spaces. This union is connected because it is the union of a collection of connected spaces that have the point \(a \times b\) in common. Since this union equals \(X \times Y\), the space \(X \times Y\) is connected.
 
 \munkresfig[0.5]{23.2}[Figure 23.2]
-The proof for any finite product of connected spaces follows by induction, using the fact (easily proved) that \({X}_{1} \times \cdots \times {X}_{n}\) is homeomorphic with \(( {{X}_{1} \times \cdots \times {X}_{n - 1}}) \times\) \({X}_{n}\).
+The proof for any finite product of connected spaces follows by induction, using the fact (easily proved) that \(X_{1} \times \cdots \times {X}_{n}\) is homeomorphic with \(( {X_{1} \times \cdots \times {X}_{n - 1}}) \times\) \(X_{n}\).
 
 It is natural to ask whether this theorem extends to arbitrary products of connected spaces. The answer depends on which topology is used for the product, as the following examples show.
 \end{proof}
@@ -161,28 +161,28 @@ It is natural to ask whether this theorem extends to arbitrary products of conne
 \begin{centeredblock}
 \begin{example}
 \label{ex:\thesection.\theexample}
- Consider the cartesian product \({\mathbb{R}}^{\omega }\) in the box topology. We can write \({\mathbb{R}}^{\omega }\) as the union of the set \(A\) consisting of all bounded sequences of real numbers, and the set \(B\) of all unbounded sequences. These sets are disjoint, and each is open in the box topology. For if \(\mathbf{a}\) is a point of \({\mathbb{R}}^{\omega }\), the open set
+ Consider the cartesian product \(\mathbb{R}^{\omega }\) in the box topology. We can write \(\mathbb{R}^{\omega }\) as the union of the set \(A\) consisting of all bounded sequences of real numbers, and the set \(B\) of all unbounded sequences. These sets are disjoint, and each is open in the box topology. For if \(\mathbf{a}\) is a point of \(\mathbb{R}^{\omega }\), the open set
 
  \[
- U = ( {{a}_{1} - 1,{a}_{1} + 1}) \times ( {{a}_{2} - 1,{a}_{2} + 1}) \times
+ U = ( {a_{1} - 1,a_{1} + 1}) \times ( {a_{2} - 1,a_{2} + 1}) \times
  \]
 
-consists entirely of bounded sequences if \(a\) is bounded, and of unbounded sequences if \(a\) is unbounded. Thus, even though \(\mathbb{R}\) is connected (as we shall prove in the next section), \({\mathbb{R}}^{\omega }\) is not connected in the box topology.
+consists entirely of bounded sequences if \(a\) is bounded, and of unbounded sequences if \(a\) is unbounded. Thus, even though \(\mathbb{R}\) is connected (as we shall prove in the next section), \(\mathbb{R}^{\omega }\) is not connected in the box topology.
 \end{example}
 \end{centeredblock}
 
 \begin{centeredblock}
 \begin{example}
 \label{ex:\thesection.\theexample}
- Now consider \({\mathbb{R}}^{\omega }\) in the product topology. Assuming that \(\mathbb{R}\) is connected, we show that \({\mathbb{R}}^{\omega }\) is connected. Let \({\overline{\mathbb{R}}}^{n}\) denote the subspace of \({\mathbb{R}}^{\omega }\) consisting of all sequences \(\mathbf{x} = ( {{x}_{1},{x}_{2},\ldots })\) such that \({x}_{i} = 0\) for \(i > n\). The space \({\overline{\mathbb{R}}}^{n}\) is clearly homeomorphic to \({\mathbb{R}}^{n}\), so that it is connected, by the preceding theorem. It follows that the space \({\mathbb{R}}^{\infty }\) that is the union of the spaces \({\overline{\mathbb{R}}}^{n}\) is connected, for these spaces have the point \(\mathbf{0} = ( {0,0,\ldots })\) in common. We show that the closure of \({\mathbb{R}}^{\infty }\) equals all of \({\mathbb{R}}^{\omega }\), from which it follows that \({\mathbb{R}}^{\omega }\) is connected as well.
+ Now consider \(\mathbb{R}^{\omega }\) in the product topology. Assuming that \(\mathbb{R}\) is connected, we show that \(\mathbb{R}^{\omega }\) is connected. Let \({\overline{\mathbb{R}}}^{n}\) denote the subspace of \(\mathbb{R}^{\omega }\) consisting of all sequences \(\mathbf{x} = ( {x_{1},x_{2},\ldots })\) such that \(x_{i} = 0\) for \(i > n\). The space \({\overline{\mathbb{R}}}^{n}\) is clearly homeomorphic to \(\mathbb{R}^{n}\), so that it is connected, by the preceding theorem. It follows that the space \(\mathbb{R}^{\infty }\) that is the union of the spaces \({\overline{\mathbb{R}}}^{n}\) is connected, for these spaces have the point \(\mathbf{0} = ( {0,0,\ldots })\) in common. We show that the closure of \(\mathbb{R}^{\infty }\) equals all of \(\mathbb{R}^{\omega }\), from which it follows that \(\mathbb{R}^{\omega }\) is connected as well.
 
-Let \(\mathbf{a} = ( {{a}_{1},{a}_{2},\ldots })\) be a point of \({\mathbb{R}}^{\omega }\). Let \(U = \prod {U}_{i}\) be a basis element for the product topology that contains a. We show that \(U\) intersects \({\mathbb{R}}^{\infty }\). There is an integer \(N\) such that \({U}_{i} = \mathbb{R}\) for \(i > N\). Then the point
+Let \(\mathbf{a} = ( {a_{1},a_{2},\ldots })\) be a point of \(\mathbb{R}^{\omega }\). Let \(U = \prod {U}_{i}\) be a basis element for the product topology that contains a. We show that \(U\) intersects \(\mathbb{R}^{\infty }\). There is an integer \(N\) such that \(U_{i} = \mathbb{R}\) for \(i > N\). Then the point
 
 \[
-\mathbf{x} = ( {{a}_{1},\ldots ,{a}_{n},0,0,\;})
+\mathbf{x} = ( {a_{1},\ldots ,a_{n},0,0,\;})
 \]
 
-of \({\mathbb{R}}^{\infty }\) belongs to \(U\), since \({a}_{i} \in {U}_{i}\) for all \(i\), and \(0 \in {U}_{i}\) for \(i > N\).
+of \(\mathbb{R}^{\infty }\) belongs to \(U\), since \(a_{i} \in {U}_{i}\) for all \(i\), and \(0 \in {U}_{i}\) for \(i > N\).
 \end{example}
 \end{centeredblock}
 
@@ -190,22 +190,22 @@ The argument just given generalizes to show that an arbitrary product of connect
 
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
-\item Let \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\) be two topologies on \(X\). If \({\mathcal{T}}^{\prime } \supset \mathcal{T}\), what does connectedness of \(X\) in one topology imply about connectedness in the other?
-\item Let \(\{ {A}_{n}\}\) be a sequence of connected subspaces of \(X\), such that \({A}_{n} \cap {A}_{n + 1} \neq \varnothing\) for all \(n\). Show that \(\bigcup {A}_{n}\) is connected.
-\item Let \(\{ {A}_{\alpha }\}\) be a collection of connected subspaces of \(X\) ; let \(A\) be a connected subspace of \(X\). Show that if \(A \cap {A}_{\alpha } \neq \varnothing\) for all \(\alpha\), then \(A \cup ( {\bigcup {A}_{\alpha }})\) is connected.
+\item Let \(\mathcal{T}\) and \(\mathcal{T}^{\prime }\) be two topologies on \(X\). If \(\mathcal{T}^{\prime } \supset \mathcal{T}\), what does connectedness of \(X\) in one topology imply about connectedness in the other?
+\item Let \(\{ A_{n}\}\) be a sequence of connected subspaces of \(X\), such that \(A_{n} \cap {A}_{n + 1} \neq \varnothing\) for all \(n\). Show that \(\bigcup {A}_{n}\) is connected.
+\item Let \(\{ A_{\alpha }\}\) be a collection of connected subspaces of \(X\) ; let \(A\) be a connected subspace of \(X\). Show that if \(A \cap {A}_{\alpha } \neq \varnothing\) for all \(\alpha\), then \(A \cup ( {\bigcup {A}_{\alpha }})\) is connected.
 \item Show that if \(X\) is an infinite set, it is connected in the finite complement topology.
 \item A space is \idx[totally disconnected]{Totally disconnected} if its only connected subspaces are one-point sets. Show that if \(X\) has the discrete topology, then \(X\) is totally disconnected. Does the converse hold?
 \item Let \(A \subset X\). Show that if \(C\) is a connected subspace of \(X\) that intersects both \(A\) and \(X - A\), then \(C\) intersects \(\operatorname{Bd}A\).
-\item Is the space \({\mathbb{R}}_{\ell }\) connected? Justify your answer.
-\item Determine whether or not \({\mathbb{R}}^{\omega }\) is connected in the uniform topology.
+\item Is the space \(\mathbb{R}_{\ell }\) connected? Justify your answer.
+\item Determine whether or not \(\mathbb{R}^{\omega }\) is connected in the uniform topology.
 \item Let \(A\) be a proper subset of \(X\), and let \(B\) be a proper subset of \(Y\). If \(X\) and \(Y\) are connected, show that \[ ( {X \times Y}) - ( {A \times B}) \] is connected.
-\item Let \({\{ {X}_{\alpha }\} }_{\alpha \in J}\) be an indexed family of connected spaces; let \(X\) be the product space \[ X = \mathop{\prod }\limits_{{\alpha \in J}}{X}_{\alpha } \] Let \(\mathbf{a} = ( {a}_{\alpha })\) be a \idx[fixed point]{Fixed point} of \(X\).
+\item Let \({\{ X_{\alpha }\} }_{\alpha \in J}\) be an indexed family of connected spaces; let \(X\) be the product space \[ X = \mathop{\prod }\limits_{{\alpha \in J}}X_{\alpha } \] Let \(\mathbf{a} = ( a_{\alpha })\) be a \idx[fixed point]{Fixed point} of \(X\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
- \item Given any finite subset \(K\) of \(J\), let \({X}_{K}\) denote the subspace of \(X\) consisting of all points \(\mathbf{x} = ( {x}_{\alpha })\) such that \({x}_{\alpha } = {a}_{\alpha }\) for \(\alpha \notin K\). Show that \({X}_{K}\) is connected.
- \item Show that the union \(Y\) of the spaces \({X}_{K}\) is connected.
+ \item Given any finite subset \(K\) of \(J\), let \(X_{K}\) denote the subspace of \(X\) consisting of all points \(\mathbf{x} = ( x_{\alpha })\) such that \(x_{\alpha } = a_{\alpha }\) for \(\alpha \notin K\). Show that \(X_{K}\) is connected.
+ \item Show that the union \(Y\) of the spaces \(X_{K}\) is connected.
  \item Show that \(X\) equals the closure of \(Y\) ; conclude that \(X\) is connected
  \end{enumerate}
-\item Let \(p : X \rightarrow Y\) be a quotient map. Show that if each set \({p}^{-1}( {\{ y\} })\) is connected, and if \(Y\) is connected, then \(X\) is connected.
+\item Let \(p : X \rightarrow Y\) be a quotient map. Show that if each set \(p^{-1}( {\{ y\} })\) is connected, and if \(Y\) is connected, then \(X\) is connected.
 \item Let \(Y \subset X\) ; let \(X\) and \(Y\) be connected. Show that if \(A\) and \(B\) form a separation of \(X - Y\), then \(Y \cup A\) and \(Y \cup B\) are connected.
 \end{enumerate}
 \booksection{24}{Connected Subspaces of the Real Line}
@@ -236,24 +236,24 @@ Recall that a subspace \(Y\) of \(L\) is said to be convex if for every pair of 
 So suppose that \(Y\) is the union of the disjoint nonempty sets \(A\) and \(B\), each of which is open in \(Y\). Choose \(a \in A\) and \(b \in B\) ; suppose for convenience that \(a < b\). The interval \([ {a,b}]\) of points of \(L\) is contained in \(Y\). Hence \([ {a,b}]\) is the union of the disjoint sets
 
 \[
-{A}_{0} = A \cap [ {a,b}] \;\text{ and }\;{B}_{0} = B \cap [ {a,b}] ,
+A_{0} = A \cap [ {a,b}] \;\text{ and }\;B_{0} = B \cap [ {a,b}] ,
 \]
 
-each of which is open in \([ {a,b}]\) in the subspace topology, which is the same as the order topology. The sets \({A}_{0}\) and \({B}_{0}\) are nonempty because \(a \in {A}_{0}\) and \(b \in {B}_{0}\). Thus, \({A}_{0}\) and \({B}_{0}\) constitute a separation of \([ {a,b}]\).
+each of which is open in \([ {a,b}]\) in the subspace topology, which is the same as the order topology. The sets \(A_{0}\) and \(B_{0}\) are nonempty because \(a \in {A}_{0}\) and \(b \in {B}_{0}\). Thus, \(A_{0}\) and \(B_{0}\) constitute a separation of \([ {a,b}]\).
 
-Let \(c = \sup {A}_{0}\). We show that \(c\) belongs neither to \({A}_{0}\) nor to \({B}_{0}\), which contradicts the fact that \([ {a,b}]\) is the union of \({A}_{0}\) and \({B}_{0}\).
+Let \(c = \sup {A}_{0}\). We show that \(c\) belongs neither to \(A_{0}\) nor to \(B_{0}\), which contradicts the fact that \([ {a,b}]\) is the union of \(A_{0}\) and \(B_{0}\).
 
-Case 1. Suppose that \(c \in {B}_{0}\). Then \(c \neq a\), so either \(c = b\) or \(a < c < b\). In either case, it follows from the fact that \({B}_{0}\) is open in \([ {a,b}]\) that there is some interval of the form \((d,c\rbrack\) contained in \({B}_{0}\). If \(c = b\), we have a contradiction at once, for \(d\) is a smaller upper bound on \({A}_{0}\) than \(c\). If \(c < b\), we note that \((c,b\rbrack\) does not intersect \({A}_{0}\) (because \(c\) is an upper bound on \({A}_{0}\) ). Then
+Case 1. Suppose that \(c \in {B}_{0}\). Then \(c \neq a\), so either \(c = b\) or \(a < c < b\). In either case, it follows from the fact that \(B_{0}\) is open in \([ {a,b}]\) that there is some interval of the form \((d,c\rbrack\) contained in \(B_{0}\). If \(c = b\), we have a contradiction at once, for \(d\) is a smaller upper bound on \(A_{0}\) than \(c\). If \(c < b\), we note that \((c,b\rbrack\) does not intersect \(A_{0}\) (because \(c\) is an upper bound on \(A_{0}\) ). Then
 
 \[
 (d,b\rbrack = (d,c\rbrack \cup (c,b\rbrack
 \]
 
-does not intersect \({A}_{0}\). Again, \(d\) is a smaller upper bound on \({A}_{0}\) than \(c\), contrary to construction. See \hyperref[fig:24.1]{Figure 24.1}.
+does not intersect \(A_{0}\). Again, \(d\) is a smaller upper bound on \(A_{0}\) than \(c\), contrary to construction. See \hyperref[fig:24.1]{Figure 24.1}.
 
 \munkresfig[0.2]{24.1}[Figure 24.1]
 \munkresfig[0.2]{24.2}[Figure 24.2]
-Case 2. Suppose that \(c \in {A}_{0}\). Then \(c \neq b\), so either \(c = a\) or \(a < c < b\). Because \({A}_{0}\) is open in \([ {a,b}]\), there must be some interval of the form \(\lbrack c,e)\) contained in \({A}_{0}\). See \hyperref[fig:24.2]{Figure 24.2}. Because of order property (2) of the linear continuum \(L\), we can choose a point \(z\) of \(L\) such that \(c < z < e\). Then \(z \in {A}_{0}\), contrary to the fact that \(c\) is an upper bound for \({A}_{0}\).
+Case 2. Suppose that \(c \in {A}_{0}\). Then \(c \neq b\), so either \(c = a\) or \(a < c < b\). Because \(A_{0}\) is open in \([ {a,b}]\), there must be some interval of the form \(\lbrack c,e)\) contained in \(A_{0}\). See \hyperref[fig:24.2]{Figure 24.2}. Because of order property (2) of the linear continuum \(L\), we can choose a point \(z\) of \(L\) such that \(c < z < e\). Then \(z \in {A}_{0}\), contrary to the fact that \(c\) is an upper bound for \(A_{0}\).
 \end{proof}
 
 \begin{corollary}
@@ -283,7 +283,7 @@ are disjoint, and they are nonempty because one contains \(f( a)\) and the other
 \begin{centeredblock}
 \begin{example}
 \label{ex:\thesection.\theexample}
- One example of a linear continuum different from \(\mathbb{R}\) is the ordered square. We check the least upper bound property. (The second property of a linear continuum is trivial to check.) Let \(A\) be a subset of \(I \times I\), let \({\pi }_{1} : I \times I \rightarrow I\) be projection on the first coordinate; let \(b = \sup {\pi }_{1}( A)\). If \(b \in {\pi }_{1}( A)\), then \(A\) intersects the subset \(b \times I\) of \(I \times I\). Because \(b \times I\) has the order type of \(I\), the set \(A \cap ( {b \times I})\) will have a least upper bound \(b \times c\), which will be the least upper bound of \(A\). See \hyperref[fig:24.3]{Figure 24.3}. If \(b \notin {\pi }_{1}( A)\), then \(b \times 0\) is the least upper bound of \(A\) ; no element of the form \({b}^{\prime } \times c\) with \({b}^{\prime } < b\) can be an upper bound for \(A\), for then \({b}^{\prime }\) would be an upper bound for \({\pi }_{1}( A)\).
+ One example of a linear continuum different from \(\mathbb{R}\) is the ordered square. We check the least upper bound property. (The second property of a linear continuum is trivial to check.) Let \(A\) be a subset of \(I \times I\), let \({\pi }_{1} : I \times I \rightarrow I\) be projection on the first coordinate; let \(b = \sup {\pi }_{1}( A)\). If \(b \in {\pi }_{1}( A)\), then \(A\) intersects the subset \(b \times I\) of \(I \times I\). Because \(b \times I\) has the order type of \(I\), the set \(A \cap ( {b \times I})\) will have a least upper bound \(b \times c\), which will be the least upper bound of \(A\). See \hyperref[fig:24.3]{Figure 24.3}. If \(b \notin {\pi }_{1}( A)\), then \(b \times 0\) is the least upper bound of \(A\) ; no element of the form \(b^{\prime } \times c\) with \(b^{\prime } < b\) can be an upper bound for \(A\), for then \(b^{\prime }\) would be an upper bound for \({\pi }_{1}( A)\).
 
 \munkresfig[1.0]{24.3}[Figure 24.3]
 \end{example}
@@ -309,66 +309,66 @@ The converse does not hold; a connected space need not be path connected. See Ex
 \begin{centeredblock*}
 \begin{example}
 \label{ex:\thesection.\theexample}
- Define the unit ball \( {B}^{n}\) in \({\mathbb{R}}^{n}\) by the equation
+ Define the unit ball \( B^{n}\) in \(\mathbb{R}^{n}\) by the equation
 
  \[
- {B}^{n} = \{ \mathbf{x} \mid \parallel \mathbf{x}\parallel \leq 1\}
+ B^{n} = \{ \mathbf{x} \mid \parallel \mathbf{x}\parallel \leq 1\}
  \]
 
  where
 
  \[
- \parallel \mathbf{x}\parallel = \begin{Vmatrix}( {{x}_{1},\ldots ,{x}_{n}}) \end{Vmatrix} = {( {x}_{1}^{2} + \cdots + {x}_{n}^{2}) }^{1/2}
+ \parallel \mathbf{x}\parallel = \begin{Vmatrix}( {x_{1},\ldots ,x_{n}}) \end{Vmatrix} = {( x_1^{2} + \cdots + x_n^{2}) }^{1/2}
  \]
 
-The unit ball is path connected; given any two points \(\mathbf{x}\) and \(\mathbf{y}\) of \({B}^{n}\), the straight-line path \(f : [ {0,1}] \rightarrow {\mathbb{R}}^{n}\) defined by
+The unit ball is path connected; given any two points \(\mathbf{x}\) and \(\mathbf{y}\) of \(B^{n}\), the straight-line path \(f : [ {0,1}] \rightarrow {\mathbb{R}}^{n}\) defined by
 
 \[
 f( t) = ( {1 - t}) \mathbf{x} + t\mathbf{y}
 \]
 
-lies in \({B}^{n}\). For if \(\mathbf{x}\) and \(\mathbf{y}\) are in \({B}^{n}\) and \(t\) is in \([ {0,1}]\),
+lies in \(B^{n}\). For if \(\mathbf{x}\) and \(\mathbf{y}\) are in \(B^{n}\) and \(t\) is in \([ {0,1}]\),
 
 \[
 \parallel f( t) \parallel \leq ( {1 - t}) \parallel \mathbf{x}\parallel + t\parallel \mathbf{y}\parallel \leq 1.
 \]
 
-A similar argument shows that every open ball \({B}_{d}( {\mathbf{x},\epsilon })\) and every closed ball \({\bar{B}}_{d}( {\mathbf{x},\epsilon })\) in \({\mathbb{R}}^{n}\) is path connected.
+A similar argument shows that every open ball \(B_{d}( {\mathbf{x},\epsilon })\) and every closed ball \(\bar{B}_{d}( {\mathbf{x},\epsilon })\) in \(\mathbb{R}^{n}\) is path connected.
 \end{example}
 \end{centeredblock*}
 
 \begin{centeredblock}
 \begin{example}
 \label{ex:\thesection.\theexample}
- Define punctured euclidean space to be the space \({\mathbb{R}}^{n} - \{ \mathbf{0}\}\), where 0 is the origin in \({\mathbb{R}}^{n}\). If \(n > 1\), this space is path connected. Given \(\mathbf{x}\) and \(\mathbf{y}\) different from 0, we can join \(x\) and \(y\) by the straight-line path between them if that path does not go through the origin. Otherwise, we can choose a point \(\mathbf{z}\) not on the line joining \(\mathbf{x}\) and \(\mathbf{y}\), and take the broken-line path from \(x\) to \(z\), and then from \(z\) to \(y\)
+ Define punctured euclidean space to be the space \(\mathbb{R}^{n} - \{ \mathbf{0}\}\), where 0 is the origin in \(\mathbb{R}^{n}\). If \(n > 1\), this space is path connected. Given \(\mathbf{x}\) and \(\mathbf{y}\) different from 0, we can join \(x\) and \(y\) by the straight-line path between them if that path does not go through the origin. Otherwise, we can choose a point \(\mathbf{z}\) not on the line joining \(\mathbf{x}\) and \(\mathbf{y}\), and take the broken-line path from \(x\) to \(z\), and then from \(z\) to \(y\)
 \end{example}
 \end{centeredblock}
 
 \begin{centeredblock}
 \begin{example}
 \label{ex:\thesection.\theexample}
- Define the unit sphere \({S}^{n - 1}\) in \({\mathbb{R}}^{n}\) by the equation
+ Define the unit sphere \(S^{n - 1}\) in \(\mathbb{R}^{n}\) by the equation
 
  \[
- {S}^{n - 1} = \{ \mathbf{x} \mid \parallel \mathbf{x}\parallel = 1\}.
+ S^{n - 1} = \{ \mathbf{x} \mid \parallel \mathbf{x}\parallel = 1\}.
  \]
 
-If \(n > 1\), it is path connected. For the map \(g : {\mathbb{R}}^{n} - \{ \mathbf{0}\} \rightarrow {S}^{n - 1}\) defined by \(g( \mathbf{x}) = \mathbf{x}/\parallel \mathbf{x}\parallel\) is continuous and surjective; and it is easy to show that the continuous image of a path-connected space is path connected.
+If \(n > 1\), it is path connected. For the map \(g : \mathbb{R}^{n} - \{ \mathbf{0}\} \rightarrow {S}^{n - 1}\) defined by \(g( \mathbf{x}) = \mathbf{x}/\parallel \mathbf{x}\parallel\) is continuous and surjective; and it is easy to show that the continuous image of a path-connected space is path connected.
 \end{example}
 \end{centeredblock}
 
 \begin{centeredblock}
 \begin{example}
 \label{ex:\thesection.\theexample}
- The ordered square \({I}_{o}^{2}\) is connected but not path connected.
+ The ordered square \(I_o^{2}\) is connected but not path connected.
 
-Being a linear continuum, the ordered square is connected. Let \(p = 0 \times 0\) and \(q =\) \(1 \times 1\). We suppose there is a path \(f : [ {a,b}] \rightarrow {I}_{o}^{2}\) joining \(p\) and \(q\) and derive a contradiction. The image set \(f( [ {a,b}] )\) must contain every point \(x \times y\) of \({I}_{o}^{2}\), by the intermediate value theorem. Therefore, for each \(x \in I\), the set
+Being a linear continuum, the ordered square is connected. Let \(p = 0 \times 0\) and \(q =\) \(1 \times 1\). We suppose there is a path \(f : [ {a,b}] \rightarrow {I}_o^{2}\) joining \(p\) and \(q\) and derive a contradiction. The image set \(f( [ {a,b}] )\) must contain every point \(x \times y\) of \(I_o^{2}\), by the intermediate value theorem. Therefore, for each \(x \in I\), the set
 
 \[
-{U}_{x} = {f}^{-1}( {x \times ( {0,1}) })
+U_{x} = f^{-1}( {x \times ( {0,1}) })
 \]
 
-is a nonempty subset of \([ {a,b}]\) ; by continuity, it is open in \([ {a,b}]\). See \hyperref[fig:24.4]{Figure 24.4}. Choose, for each \(x \in I\), a rational number \({q}_{x}\) belonging to \({U}_{x}\). Since the sets \({U}_{x}\) are disjoint, the map \(x \rightarrow {q}_{x}\) is an injective mapping of \(I\) into \(\mathbb{Q}\). This contradicts the fact that the interval \(I\) is uncountable (which we shall prove later).
+is a nonempty subset of \([ {a,b}]\) ; by continuity, it is open in \([ {a,b}]\). See \hyperref[fig:24.4]{Figure 24.4}. Choose, for each \(x \in I\), a rational number \(q_{x}\) belonging to \(U_{x}\). Since the sets \(U_{x}\) are disjoint, the map \(x \rightarrow {q}_{x}\) is an injective mapping of \(I\) into \(\mathbb{Q}\). This contradicts the fact that the interval \(I\) is uncountable (which we shall prove later).
 \end{example}
 \end{centeredblock}
 
@@ -381,14 +381,14 @@ is a nonempty subset of \([ {a,b}]\) ; by continuity, it is open in \([ {a,b}]\)
  S = \{ x \times \sin ( {1/x}) \mid 0 < x \leq 1\}.
  \]
 
-Because \(S\) is the image of the connected set \((0,1\rbrack\) under a continuous map, \(S\) is connected. Therefore, its closure \(\bar{S}\) in \({\mathbb{R}}^{2}\) is also connected. The set \(\bar{S}\) is a classical example in topology called the \idx[topologist's sine curve]{Topologist's sine curve}. It is illustrated in \hyperref[fig:24.5]{Figure 24.5}; it equals the union of \(S\) and the vertical interval \(0 \times [ {-1,1}]\). We show that \(\bar{S}\) is not path connected.
+Because \(S\) is the image of the connected set \((0,1\rbrack\) under a continuous map, \(S\) is connected. Therefore, its closure \(\bar{S}\) in \(\mathbb{R}^{2}\) is also connected. The set \(\bar{S}\) is a classical example in topology called the \idx[topologist's sine curve]{Topologist's sine curve}. It is illustrated in \hyperref[fig:24.5]{Figure 24.5}; it equals the union of \(S\) and the vertical interval \(0 \times [ {-1,1}]\). We show that \(\bar{S}\) is not path connected.
 
 \munkresfig[0.7]{24.4}[Figure 24.4]
 Suppose there is a path \(f : [ {a,c}] \rightarrow \bar{S}\) beginning at the origin and ending at a point of \(S\). The set of those \(t\) for which \(f( t) \in 0 \times [ {-1,1}]\) is closed, so it has a largest element \(b\). Then \(f : [ {b,c}] \rightarrow \bar{S}\) is a path that maps \(b\) into the vertical interval \(0 \times [ {-1,1}]\) and maps the other points of \([ {b,c}]\) to points of \(S\).
 
-Replace \([ {b,c}]\) by \([ {0,1}]\) for convenience; let \(f( t) = ( {x( t),y( t) })\). Then \(x( 0) = 0\), while \(x( t) > 0\) and \(y( t) = \sin ( {1/x( t) })\) for \(t > 0\). We show there is a sequence of points \({t}_{n} \rightarrow 0\) such that \(y( {t}_{n}) = {( -1) }^{n}\). Then the sequence \(y( {t}_{n})\) does not converge, contradicting continuity of \(f\).
+Replace \([ {b,c}]\) by \([ {0,1}]\) for convenience; let \(f( t) = ( {x( t),y( t) })\). Then \(x( 0) = 0\), while \(x( t) > 0\) and \(y( t) = \sin ( {1/x( t) })\) for \(t > 0\). We show there is a sequence of points \(t_{n} \rightarrow 0\) such that \(y( t_{n}) = {( -1) }^{n}\). Then the sequence \(y( t_{n})\) does not converge, contradicting continuity of \(f\).
 
-To find \({t}_{n}\), we proceed as follows: Given \(n\), choose \(u\) with \(0 < u < x( {1/n})\) such that \(\sin ( {1/u}) = {( -1) }^{n}\). Then use the intermediate value theorem to find \({t}_{n}\) with \(0 < {t}_{n} < 1/n\) such that \(x( {t}_{n}) = u\).
+To find \(t_{n}\), we proceed as follows: Given \(n\), choose \(u\) with \(0 < u < x( {1/n})\) such that \(\sin ( {1/u}) = {( -1) }^{n}\). Then use the intermediate value theorem to find \(t_{n}\) with \(0 < t_{n} < 1/n\) such that \(x( t_{n}) = u\).
 
 \munkresfig[0.7]{24.5}[Figure 24.5]
 \end{example}
@@ -401,14 +401,14 @@ To find \({t}_{n}\), we proceed as follows: Given \(n\), choose \(u\) with \(0 <
  \item Show that no two of the spaces \(( {0,1}),(0,1\rbrack\), and \([ {0,1}]\) are homeomorphic. [Hint: What happens if you remove a point from each of these spaces?]
 
  \item Suppose that there exist imbeddings \(f : X \rightarrow Y\) and \(g : Y \rightarrow X\). Show by means of an example that \(X\) and \(Y\) need not be homeomorphic.
- \item Show \({\mathbb{R}}^{n}\) and \(\mathbb{R}\) are not homeomorphic if \(n > 1\).
+ \item Show \(\mathbb{R}^{n}\) and \(\mathbb{R}\) are not homeomorphic if \(n > 1\).
  \end{enumerate}
-\item Let \(f : {S}^{1} \rightarrow \mathbb{R}\) be a continuous map. Show there exists a point \(x\) of \({S}^{1}\) such that \(f(x) = f( {-x})\).
+\item Let \(f : S^{1} \rightarrow \mathbb{R}\) be a continuous map. Show there exists a point \(x\) of \(S^{1}\) such that \(f(x) = f( {-x})\).
 \item Let \(f : X \rightarrow X\) be continuous. Show that if \(X = [ {0,1}]\), there is a point \(x\) such that \(f(x) = x\). The point \(x\) is called a fixed point of \(f\). What happens if \(X\) equals \(\lbrack 0,1)\) or \(( {0,1})\) ?
 \item Let \(X\) be an ordered set in the order topology. Show that if \(X\) is connected, then \(X\) is a linear continuum.
 \item Consider the following sets in the dictionary order. Which are linear continua?
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
- \item \({\mathbb{Z}}_{ + } \times \lbrack 0,1)\)
+ \item \(\mathbb{Z}_{ + } \times \lbrack 0,1)\)
  \item \(\lbrack 0,1) \times {\mathbb{Z}}_{ + }\)
  \item \(\lbrack 0,1) \times [ {0,1}]\)
  \item \([ {0,1}] \times \lbrack 0,1)\)
@@ -418,7 +418,7 @@ To find \({t}_{n}\), we proceed as follows: Given \(n\), choose \(u\) with \(0 <
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Let \(X\) and \(Y\) be ordered sets in the order topology. Show that if \(f : X \rightarrow Y\) is order preserving and surjective, then \(f\) is a homeomorphism.
 
- \item Let \(X = Y = {\overline{\mathbb{R}}}_{ + }\). Given a positive integer \(n\), show that the function \(f(x) =\) \({x}^{n}\) is order preserving and surjective. Conclude that its inverse, the nth root function, is continuous.
+ \item Let \(X = Y = {\overline{\mathbb{R}}}_{ + }\). Given a positive integer \(n\), show that the function \(f(x) =\) \(x^{n}\) is order preserving and surjective. Conclude that its inverse, the nth root function, is continuous.
  \item Let \(X\) be the subspace \(( {-\infty , - 1}) \cup \lbrack 0,\infty )\) of \(\mathbb{R}\). Show that the function \(f : X \rightarrow \mathbb{R}\) defined by setting \(f(x) = x + 1\) if \(x < - 1\), and \(f(x) = x\) if \(x \geq 0\), is order preserving and surjective. Is \(f\) a homeomorphism? Compare with (a).
  \end{enumerate}
 \item
@@ -427,20 +427,20 @@ To find \({t}_{n}\), we proceed as follows: Given \(n\), choose \(u\) with \(0 <
 
  \item If \(A \subset X\) and \(A\) is path connected, is \(\bar{A}\) necessarily path connected?
  \item If \(f : X \rightarrow Y\) is continuous and \(X\) is path connected, is \(f( X)\) necessarily path connected?
- \item If \(\{ {A}_{\alpha }\}\) is a collection of path-connected subspaces of \(X\) and if \(\bigcap {A}_{\alpha } \neq \varnothing\), is \(\bigcup {A}_{\alpha }\) necessarily path connected?
+ \item If \(\{ A_{\alpha }\}\) is a collection of path-connected subspaces of \(X\) and if \(\bigcap {A}_{\alpha } \neq \varnothing\), is \(\bigcup {A}_{\alpha }\) necessarily path connected?
  \end{enumerate}
-\item Assume that \(\mathbb{R}\) is uncountable. Show that if \(A\) is a countable subset of \({\mathbb{R}}^{2}\), then \({\mathbb{R}}^{2} - A\) is path connected. [Hint: How many lines are there passing through a given point of \({\mathbb{R}}^{2}\) ?]
-\item Show that if \(U\) is an open connected subspace of \({\mathbb{R}}^{2}\), then \(U\) is path connected. [Hint: Show that given \({x}_{0} \in U\), the set of points that can be joined to \({x}_{0}\) by a path in \(U\) is both open and closed in \(U\).]
+\item Assume that \(\mathbb{R}\) is uncountable. Show that if \(A\) is a countable subset of \(\mathbb{R}^{2}\), then \(\mathbb{R}^{2} - A\) is path connected. [Hint: How many lines are there passing through a given point of \(\mathbb{R}^{2}\) ?]
+\item Show that if \(U\) is an open connected subspace of \(\mathbb{R}^{2}\), then \(U\) is path connected. [Hint: Show that given \(x_{0} \in U\), the set of points that can be joined to \(x_{0}\) by a path in \(U\) is both open and closed in \(U\).]
 \item If \(A\) is a connected subspace of \(X\), does it follow that Int \(A\) and Bd \(A\) are connected? Does the converse hold? Justify your answers.
 
-\item[*12.] Recall that \({S}_{\Omega }\) denotes the minimal uncountable well-ordered set. Let \(L\) denote the ordered set \({S}_{\Omega } \times \lbrack 0,1)\) in the dictionary order, with its smallest element deleted. The set \(L\) is a classical example in topology called the \idx[long line]{Long line}. \textsl{Theorem.} The long line is path connected and locally homeomorphic to \(\mathbb{R}\), but it cannot be imbedded in \(\mathbb{R}\).
+\item[*12.] Recall that \(S_{\Omega }\) denotes the minimal uncountable well-ordered set. Let \(L\) denote the ordered set \(S_{\Omega } \times \lbrack 0,1)\) in the dictionary order, with its smallest element deleted. The set \(L\) is a classical example in topology called the \idx[long line]{Long line}. \textsl{Theorem.} The long line is path connected and locally homeomorphic to \(\mathbb{R}\), but it cannot be imbedded in \(\mathbb{R}\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Let \(X\) be an ordered set; let \(a < b < c\) be points of \(X\). Show that \(\lbrack a,c)\) has the order type of \(\lbrack 0,1)\) if and only if both \(\lbrack a,b)\) and \(\lbrack b,c)\) have the order type of \(\lbrack 0,1)\)
- \item Let \(X\) be an ordered set. Let \({x}_{0} < {x}_{1} < \cdots\) be an increasing sequence of points of \(X\) ; suppose \(b = \sup \{ {x}_{t}\}\) Show that \([ {{x}_{0},b})\) has the order type of \(\lbrack 0,1)\) if and only if each interval \([ {{x}_{i},{x}_{i + 1}})\) has the order type of \(\lbrack 0,1)\).
- \item Let \({a}_{0}\) denote the smallest element of \({S}_{\Omega }\). For each element \(a\) of \({S}_{\Omega }\) different from \({a}_{0}\), show that the interval \([ {{a}_{0} \times 0,a \times 0})\) of \({S}_{\Omega } \times \lbrack 0,1)\) has the order type of \(\lbrack 0,1)\). [Hint: Proceed by transfinite induction. Either \(a\) has an immediate predecessor in \({S}_{\Omega }\), or there is an increasing sequence \({a}_{i}\) in \({S}_{\Omega }\) with \(a = \sup \{ {a}_{i}\}\).]
+ \item Let \(X\) be an ordered set. Let \(x_{0} < x_{1} < \cdots\) be an increasing sequence of points of \(X\) ; suppose \(b = \sup \{ x_{t}\}\) Show that \([ {x_{0},b})\) has the order type of \(\lbrack 0,1)\) if and only if each interval \([ {x_{i},x_{i + 1}})\) has the order type of \(\lbrack 0,1)\).
+ \item Let \(a_{0}\) denote the smallest element of \(S_{\Omega }\). For each element \(a\) of \(S_{\Omega }\) different from \(a_{0}\), show that the interval \([ {a_{0} \times 0,a \times 0})\) of \(S_{\Omega } \times \lbrack 0,1)\) has the order type of \(\lbrack 0,1)\). [Hint: Proceed by transfinite induction. Either \(a\) has an immediate predecessor in \(S_{\Omega }\), or there is an increasing sequence \(a_{i}\) in \(S_{\Omega }\) with \(a = \sup \{ a_{i}\}\).]
  \item Show that \(L\) is path connected.
  \item Show that every point of \(L\) has a neighborhood homeomorphic with an open interval in \(\mathbb{R}\).
- \item Show that \(L\) cannot be imbedded in \(\mathbb{R}\), or indeed in \({\mathbb{R}}^{n}\) for any \(n\). [Hint: Any subspace of \({\mathbb{R}}^{n}\) has a countable basis for its topology.]
+ \item Show that \(L\) cannot be imbedded in \(\mathbb{R}\), or indeed in \(\mathbb{R}^{n}\) for any \(n\). [Hint: Any subspace of \(\mathbb{R}^{n}\) has a countable basis for its topology.]
  \end{enumerate}
 \end{enumerate}
 \booksection*{25}{Components and Local Connectedness}[\protect\sectionDagger]
@@ -462,16 +462,16 @@ The components of \(X\) can also be described as follows:
 
 \end{theorem}
 \begin{proof}
-Being equivalence classes, the components of \(X\) are disjoint and their union is \(X\). Each connected subspace \(A\) of \(X\) intersects only one of them. For if \(A\) intersects the components \({C}_{1}\) and \({C}_{2}\) of \(X\), say in points \({x}_{1}\) and \({x}_{2}\), respectively, then \({x}_{1} \sim {x}_{2}\) by definition; this cannot happen unless \({C}_{1} = {C}_{2}\).
+Being equivalence classes, the components of \(X\) are disjoint and their union is \(X\). Each connected subspace \(A\) of \(X\) intersects only one of them. For if \(A\) intersects the components \(C_{1}\) and \(C_{2}\) of \(X\), say in points \(x_{1}\) and \(x_{2}\), respectively, then \(x_{1} \sim {x}_{2}\) by definition; this cannot happen unless \(C_{1} = C_{2}\).
 
 
-To show the \idx[component]{Component} \(C\) is connected, choose a point \({x}_{0}\) of \(C\). For each point \(x\) of \(C\), we know that \({x}_{0} \sim x\), so there is a connected subspace \({A}_{x}\) containing \({x}_{0}\) and \(x\). By the result just proved, \({A}_{x} \subset C\). Therefore,
+To show the \idx[component]{Component} \(C\) is connected, choose a point \(x_{0}\) of \(C\). For each point \(x\) of \(C\), we know that \(x_{0} \sim x\), so there is a connected subspace \(A_{x}\) containing \(x_{0}\) and \(x\). By the result just proved, \(A_{x} \subset C\). Therefore,
 
 \[
-C = \mathop{\bigcup }\limits_{{x \in C}}{A}_{x}
+C = \mathop{\bigcup }\limits_{{x \in C}}A_{x}
 \]
 
-Since the subspaces \({A}_{x}\) are connected and have the point \({x}_{0}\) in common, their union is connected.
+Since the subspaces \(A_{x}\) are connected and have the point \(x_{0}\) in common, their union is connected.
 \end{proof}
 
 \begin{definition}
@@ -555,30 +555,30 @@ Because \(X\) is locally path connected, each path component of \(X\) is open in
 \end{proof}
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
-\item What are the components and path components of \({\mathbb{R}}_{\ell }\) ? What are the continuous maps \(f : \mathbb{R} \rightarrow {\mathbb{R}}_{\ell }\) ?
+\item What are the components and path components of \(\mathbb{R}_{\ell }\) ? What are the continuous maps \(f : \mathbb{R} \rightarrow {\mathbb{R}}_{\ell }\) ?
 \item
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
- \item What are the components and path components of \({\mathbb{R}}^{\omega }\) (in the product topology)?
+ \item What are the components and path components of \(\mathbb{R}^{\omega }\) (in the product topology)?
 
- \item Consider \({\mathbb{R}}^{\omega }\) in the uniform topology. Show that \(\mathbf{x}\) and \(\mathbf{y}\) lie in the same component of \({\mathbb{R}}^{\omega }\) if and only if the sequence \[ \mathbf{x} - \mathbf{y} = ( {{x}_{1} - {y}_{1},{x}_{2} - {y}_{2},\ldots }) \] is bounded. [Hint: It suffices to consider the case where \(\mathbf{y} = \mathbf{0}\).]
- \item Give \({\mathbb{R}}^{\omega }\) the box topology. Show that \(\mathbf{x}\) and \(\mathbf{y}\) lie in the same component of \({\mathbb{R}}^{\omega }\) if and only if the sequence \(\mathbf{x} - \mathbf{y}\) is ``eventually zero.'' [Hint: If \(\mathbf{x} - \mathbf{y}\) is not eventually zero, show there is homeomorphism \(h\) of \({\mathbb{R}}^{\omega }\) with itself such that \(h( \mathbf{x})\) is bounded and \(h( \mathbf{y})\) is unbounded.]
+ \item Consider \(\mathbb{R}^{\omega }\) in the uniform topology. Show that \(\mathbf{x}\) and \(\mathbf{y}\) lie in the same component of \(\mathbb{R}^{\omega }\) if and only if the sequence \[ \mathbf{x} - \mathbf{y} = ( {x_{1} - y_{1},x_{2} - y_{2},\ldots }) \] is bounded. [Hint: It suffices to consider the case where \(\mathbf{y} = \mathbf{0}\).]
+ \item Give \(\mathbb{R}^{\omega }\) the box topology. Show that \(\mathbf{x}\) and \(\mathbf{y}\) lie in the same component of \(\mathbb{R}^{\omega }\) if and only if the sequence \(\mathbf{x} - \mathbf{y}\) is ``eventually zero.'' [Hint: If \(\mathbf{x} - \mathbf{y}\) is not eventually zero, show there is homeomorphism \(h\) of \(\mathbb{R}^{\omega }\) with itself such that \(h( \mathbf{x})\) is bounded and \(h( \mathbf{y})\) is unbounded.]
  \end{enumerate}
 \item Show that the ordered square is locally connected but not locally path connected. What are the path components of this space?
 \item Let \(X\) be locally path connected. Show that every connected open set in \(X\) is path connected.
-\item Let \(X\) denote the rational points of the interval \([ {0,1}] \times 0\) of \({\mathbb{R}}^{2}\). Let \(T\) denote the union of all line segments joining the point \(p = 0 \times 1\) to points of \(X\).
+\item Let \(X\) denote the rational points of the interval \([ {0,1}] \times 0\) of \(\mathbb{R}^{2}\). Let \(T\) denote the union of all line segments joining the point \(p = 0 \times 1\) to points of \(X\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show that \(T\) is path connected, but is locally connected only at the point \(p\).
- \item Find a subset of \({\mathbb{R}}^{2}\) that is path connected but is locally connected at none of its points.
+ \item Find a subset of \(\mathbb{R}^{2}\) that is path connected but is locally connected at none of its points.
  \end{enumerate}
 \item A space \(X\) is said to be weakly locally connected at \(x\) if for every neighborhood \(U\) of \(x\), there is a connected subspace of \(X\) contained in \(U\) that contains a neighborhood of \(x\). Show that if \(X\) is weakly locally connected at each of its points, then \(X\) is locally connected. [Hint: Show that components of open sets are open.]
-\item Consider the ``\idx[infinite broom]{Infinite broom}'' \(X\) pictured in \hyperref[fig:25.1]{Figure 25.1}. Show that \(X\) is not locally connected at \(p\), but is weakly locally connected at \(p\). [Hint: Any connected neighborhood of \(p\) must contain all the points \({a}_{i}\).] \munkresfig[1.0]{25.1}[Figure 25.1]
-\item Let \(p : X \rightarrow Y\) be a quotient map. Show that if \(X\) is locally connected, then \(Y\) is locally connected. [Hint: If \(C\) is a component of the open set \(U\) of \(Y\), show that \({p}^{-1}( C)\) is a union of components of \({p}^{-1}( U)\).]
+\item Consider the ``\idx[infinite broom]{Infinite broom}'' \(X\) pictured in \hyperref[fig:25.1]{Figure 25.1}. Show that \(X\) is not locally connected at \(p\), but is weakly locally connected at \(p\). [Hint: Any connected neighborhood of \(p\) must contain all the points \(a_{i}\).] \munkresfig[1.0]{25.1}[Figure 25.1]
+\item Let \(p : X \rightarrow Y\) be a quotient map. Show that if \(X\) is locally connected, then \(Y\) is locally connected. [Hint: If \(C\) is a component of the open set \(U\) of \(Y\), show that \(p^{-1}( C)\) is a union of components of \(p^{-1}( U)\).]
 \item Let \(G\) be a topological group; let \(C\) be the component of \(G\) containing the identity element \(e\). Show that \(C\) is a normal subgroup of \(G\). [Hint: If \(x \in G\), then \({xC}\) is the component of \(G\) containing \(x\).]
 \item Let \(X\) be a space. Let us define \(x \sim y\) if there is no separation \(X = A \cup B\) of \(X\) into disjoint open sets such that \(x \in A\) and \(y \in B\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show this relation is an equivalence relation. The equivalence classes are called the quasicomponents of \(X\).
  \item Show that each component of \(X\) lies in a \idx[quasicomponent]{Quasicomponent} of \(X\), and that the components and quasicomponents of \(X\) are the same if \(X\) is locally connected.
- \item Let \(K\) denote the set \(\{ {1/n \mid n \in {\mathbb{Z}}_{ + }}\}\) and let \(- K\) denote the set \(\{ - 1/n \mid n \in {\mathbb{Z}}_{ + }\}\). Determine the components, path components, and quasicomponents of the following subspaces of \({\mathbb{R}}^{2}\) : \[ A = ( {K \times [ {0,1}] }) \cup \{ 0 \times 0\} \cup \{ 0 \times 1\}. \] \[ B = A \cup ( {[ {0,1}] \times \{ 0\rbrack }) \text{.} \] \[ C = ( {K \times [ {0,1}] }) \cup ( {-K \times [ {-1,0}] }) \cup ( {[ {0,1}] \times - K}) \cup ( {[ {-1,0}] \times K}). \]
+ \item Let \(K\) denote the set \(\{ {1/n \mid n \in {\mathbb{Z}}_{ + }}\}\) and let \(- K\) denote the set \(\{ - 1/n \mid n \in {\mathbb{Z}}_{ + }\}\). Determine the components, path components, and quasicomponents of the following subspaces of \(\mathbb{R}^{2}\) : \[ A = ( {K \times [ {0,1}] }) \cup \{ 0 \times 0\} \cup \{ 0 \times 1\}. \] \[ B = A \cup ( {[ {0,1}] \times \{ 0\rbrack }) \text{.} \] \[ C = ( {K \times [ {0,1}] }) \cup ( {-K \times [ {-1,0}] }) \cup ( {[ {0,1}] \times - K}) \cup ( {[ {-1,0}] \times K}). \]
  \end{enumerate}
 \end{enumerate}
 \booksection{26}{Compact Spaces}
@@ -639,7 +639,7 @@ contains no finite subcollection covering \((0,1)\). Nor is the interval \((0,1)
 \end{example}
 \end{centeredblock}
 
-In general, it takes some effort to decide whether a given space is compact or not. First we shall prove some general theorems that show us how to construct new compact spaces out of existing ones. Then in the next section we shall show certain specific spaces are compact. These spaces include all closed intervals in the real line, and all closed and bounded subsets of \({\mathbb{R}}^{n}\).
+In general, it takes some effort to decide whether a given space is compact or not. First we shall prove some general theorems that show us how to construct new compact spaces out of existing ones. Then in the next section we shall show certain specific spaces are compact. These spaces include all closed intervals in the real line, and all closed and bounded subsets of \(\mathbb{R}^{n}\).
 
 Let us first prove some facts about subspaces. If \(Y\) is a subspace of \(X\), a collection \(\mathcal{A}\) of subsets of \(X\) is said to cover \(Y\) if the union of its elements contains \(Y\).
 
@@ -649,27 +649,27 @@ Let us first prove some facts about subspaces. If \(Y\) is a subspace of \(X\), 
 \end{lemma}
 
 \begin{proof}
-Suppose that \(Y\) is compact and \(\mathcal{A} = {\{ {A}_{\alpha }\} }_{\alpha \in J}\) is a covering of \(Y\) by sets open in \(X\). Then the collection
+Suppose that \(Y\) is compact and \(\mathcal{A} = {\{ A_{\alpha }\} }_{\alpha \in J}\) is a covering of \(Y\) by sets open in \(X\). Then the collection
 
 \[
-\{ {{A}_{\alpha } \cap Y \mid \alpha \in J}\}
+\{ {A_{\alpha } \cap Y \mid \alpha \in J}\}
 \]
 
 is a covering of \(Y\) by sets open in \(Y\) ; hence a finite subcollection
 
 \[
-\{ {{A}_{{\alpha }_{1}} \cap Y,\ldots ,{A}_{{\alpha }_{n}} \cap Y}\}
+\{ {A_{{\alpha }_{1}} \cap Y,\ldots ,A_{{\alpha }_{n}} \cap Y}\}
 \]
 
-covers \(Y\). Then \(\{ {{A}_{{\alpha }_{1}},\ldots ,{A}_{{\alpha }_{n}}}\}\) is a subcollection of \(\mathcal{A}\) that covers \(Y\).
+covers \(Y\). Then \(\{ {A_{{\alpha }_{1}},\ldots ,A_{{\alpha }_{n}}}\}\) is a subcollection of \(\mathcal{A}\) that covers \(Y\).
 
-Conversely, suppose the given condition holds; we wish to prove \(Y\) compact. Let \({\mathcal{A}}^{\prime } = \{ {A}_{\alpha }^{\prime }\}\) be a covering of \(Y\) by sets open in \(Y\). For each \(\alpha\), choose a set \({A}_{\alpha }\) open in \(X\) such that
+Conversely, suppose the given condition holds; we wish to prove \(Y\) compact. Let \(\mathcal{A}^{\prime } = \{ A_{\alpha }^{\prime }\}\) be a covering of \(Y\) by sets open in \(Y\). For each \(\alpha\), choose a set \(A_{\alpha }\) open in \(X\) such that
 
 \[
-{A}_{\alpha }^{\prime } = {A}_{\alpha } \cap Y
+A_{\alpha }^{\prime } = A_{\alpha } \cap Y
 \]
 
-The collection \(\mathcal{A} = \{ {A}_{\alpha }\}\) is a covering of \(Y\) by sets open in \(X\). By hypothesis, some finite subcollection \(\{ {{A}_{{\alpha }_{1}},\ldots ,{A}_{{\alpha }_{n}}}\}\) covers \(Y\). Then \(\{ {{A}_{{\alpha }_{1}}^{\prime },\ldots ,{A}_{{\alpha }_{n}}^{\prime }}\}\) is a subcollection of \({\mathcal{A}}^{\prime }\) that covers \(Y\).
+The collection \(\mathcal{A} = \{ A_{\alpha }\}\) is a covering of \(Y\) by sets open in \(X\). By hypothesis, some finite subcollection \(\{ {A_{{\alpha }_{1}},\ldots ,A_{{\alpha }_{n}}}\}\) covers \(Y\). Then \(\{ {A_{{\alpha }_{1}}^{\prime },\ldots ,A_{{\alpha }_{n}}^{\prime }}\}\) is a subcollection of \(\mathcal{A}^{\prime }\) that covers \(Y\).
 \end{proof}
 
 \begin{theorem}
@@ -695,21 +695,21 @@ Every compact subspace of a Hausdorff space is closed.
 \begin{proof}
 Let \(Y\) be a compact subspace of the Hausdorff space \(X\). We shall prove that \(X - Y\) is open, so that \(Y\) is closed.
 
-Let \({x}_{0}\) be a point of \(X - Y\). We show there is a neighborhood of \({x}_{0}\) that is disjoint from \(Y\). For each point \(y\) of \(Y\), let us choose disjoint neighborhoods \({U}_{y}\) and \({V}_{y}\) of the points \({x}_{0}\) and \(y\), respectively (using the Hausdorff condition). The collection \(\{ {{V}_{y} \mid y \in Y}\}\) is a covering of \(Y\) by sets open in \(X\) ; therefore, finitely many of them \({V}_{{y}_{1}},\ldots ,{V}_{{y}_{n}}\) cover \(Y\). The open set
+Let \(x_{0}\) be a point of \(X - Y\). We show there is a neighborhood of \(x_{0}\) that is disjoint from \(Y\). For each point \(y\) of \(Y\), let us choose disjoint neighborhoods \(U_{y}\) and \(V_{y}\) of the points \(x_{0}\) and \(y\), respectively (using the Hausdorff condition). The collection \(\{ {V_{y} \mid y \in Y}\}\) is a covering of \(Y\) by sets open in \(X\) ; therefore, finitely many of them \(V_{y_{1}},\ldots ,V_{y_{n}}\) cover \(Y\). The open set
 
 \[
-V = {V}_{{y}_{1}} \cup \cdots \cup {V}_{{y}_{n}}
+V = V_{y_{1}} \cup \cdots \cup {V}_{y_{n}}
 \]
 
 contains \(Y\), and it is disjoint from the open set
 
 \[
-U = {U}_{{y}_{1}} \cap \cdots \cap {U}_{{y}_{n}}
+U = U_{y_{1}} \cap \cdots \cap {U}_{y_{n}}
 \]
 
-formed by taking the intersection of the corresponding neighborhoods of \({x}_{0}\). For if \(z\) is a point of \(V\), then \(z \in {V}_{{y}_{i}}\) for some \(i\), hence \(z \notin {U}_{{y}_{i}}\) and so \(z \notin U\). See \hyperref[fig:26.1]{Figure 26.1}.
+formed by taking the intersection of the corresponding neighborhoods of \(x_{0}\). For if \(z\) is a point of \(V\), then \(z \in {V}_{y_{i}}\) for some \(i\), hence \(z \notin {U}_{y_{i}}\) and so \(z \notin U\). See \hyperref[fig:26.1]{Figure 26.1}.
 
-Then \(U\) is a neighborhood of \({x}_{0}\) disjoint from \(Y\), as desired.
+Then \(U\) is a neighborhood of \(x_{0}\) disjoint from \(Y\), as desired.
 
 \munkresfig[0.8]{26.1}[Figure 26.1]
 The statement we proved in the course of the preceding proof will be useful to us later, so we repeat it here for reference purposes:
@@ -717,7 +717,7 @@ The statement we proved in the course of the preceding proof will be useful to u
 
 \begin{lemma}
 \label{lem:\thetheorem}
- If \(Y\) is a compact subspace of the Hausdorff space \(X\) and \({x}_{0}\) is not in \(Y\), then there exist disjoint open sets \(U\) and \(V\) of \(X\) containing \({x}_{0}\) and \(Y\), respectively.
+ If \(Y\) is a compact subspace of the Hausdorff space \(X\) and \(x_{0}\) is not in \(Y\), then there exist disjoint open sets \(U\) and \(V\) of \(X\) containing \(x_{0}\) and \(Y\), respectively.
 \end{lemma}
 
 \begin{centeredblock}
@@ -743,16 +743,16 @@ The statement we proved in the course of the preceding proof will be useful to u
 Let \(f : X \rightarrow Y\) be continuous; let \(X\) be compact. Let \(\mathcal{A}\) be a covering of the set \(f( X)\) by sets open in \(Y\). The collection
 
 \[
-\{ {{f}^{-1}( A) \mid A \in \mathcal{A}}\}
+\{ {f^{-1}( A) \mid A \in \mathcal{A}}\}
 \]
 
 is a collection of sets covering \(X\) ; these sets are open in \(X\) because \(f\) is continuous. Hence finitely many of them, say
 
 \[
-{f}^{-1}( {A}_{1}),\ldots ,{f}^{-1}( {A}_{n}),
+f^{-1}( A_{1}),\ldots ,f^{-1}( A_{n}),
 \]
 
-cover \(X\). Then the sets \({A}_{1},\ldots ,{A}_{n}\) cover \(f( X)\).
+cover \(X\). Then the sets \(A_{1},\ldots ,A_{n}\) cover \(f( X)\).
 \end{proof}
 
 One important use of the preceding theorem is as a tool for verifying that a map is a homeomorphism:
@@ -763,7 +763,7 @@ One important use of the preceding theorem is as a tool for verifying that a map
 
 \end{theorem}
 \begin{proof}
- We shall prove that images of closed sets of \(X\) under \(f\) are closed in \(Y\) ; this will prove continuity of the map \({f}^{-1}\). If \(A\) is closed in \(X\), then \(A\) is compact, by \hyperref[thm:26.2]{Theorem 26.2}. Therefore, by the theorem just proved, \(f( A)\) is compact. Since \(Y\) is Hausdorff, \(f( A)\) is closed in \(Y\), by \hyperref[thm:26.3]{Theorem 26.3}.
+ We shall prove that images of closed sets of \(X\) under \(f\) are closed in \(Y\) ; this will prove continuity of the map \(f^{-1}\). If \(A\) is closed in \(X\), then \(A\) is compact, by \hyperref[thm:26.2]{Theorem 26.2}. Therefore, by the theorem just proved, \(f( A)\) is compact. Since \(Y\) is Hausdorff, \(f( A)\) is closed in \(Y\), by \hyperref[thm:26.3]{Theorem 26.3}.
 \end{proof}
 
 \begin{theorem}
@@ -774,43 +774,43 @@ One important use of the preceding theorem is as a tool for verifying that a map
 \begin{proof}
  We shall prove that the product of two compact spaces is compact; the theorem follows by induction for any finite product.
 
-Step 1. Suppose that we are given spaces \(X\) and \(Y\), with \(Y\) compact. Suppose that \({x}_{0}\) is a point of \(X\), and \(N\) is an open set of \(X \times Y\) containing the ``slice'' \({x}_{0} \times Y\) of \(X \times Y\) We prove the following
+Step 1. Suppose that we are given spaces \(X\) and \(Y\), with \(Y\) compact. Suppose that \(x_{0}\) is a point of \(X\), and \(N\) is an open set of \(X \times Y\) containing the ``slice'' \(x_{0} \times Y\) of \(X \times Y\) We prove the following
 
-There is a neighborhood \(W\) of \({x}_{0}\) in \(X\) such that \(N\) contains the entire set \(W \times Y\)
+There is a neighborhood \(W\) of \(x_{0}\) in \(X\) such that \(N\) contains the entire set \(W \times Y\)
 
-The set \(W \times Y\) is often called a \idx[tube]{Tube} about \({x}_{0} \times Y\).
+The set \(W \times Y\) is often called a \idx[tube]{Tube} about \(x_{0} \times Y\).
 
-First let us cover \({x}_{0} \times Y\) by basis elements \(U \times V\) (for the topology of \(X \times Y\) ) lying in \(N\). The space \({x}_{0} \times Y\) is compact, being homeomorphic to \(Y\). Therefore, we can cover \({x}_{0} \times Y\) by finitely many such basis elements
-
-\[
-{U}_{1} \times {V}_{1},\ldots ,{U}_{n} \times {V}_{n}
-\]
-
-(We assume that each of the basis elements \({U}_{i} \times {V}_{i}\) actually intersects \({x}_{0} \times Y\), since otherwise that basis element would be superfluous; we could discard it from the finite collection and still have a covering of \({x}_{0} \times Y\).) Define
+First let us cover \(x_{0} \times Y\) by basis elements \(U \times V\) (for the topology of \(X \times Y\) ) lying in \(N\). The space \(x_{0} \times Y\) is compact, being homeomorphic to \(Y\). Therefore, we can cover \(x_{0} \times Y\) by finitely many such basis elements
 
 \[
-W = {U}_{1} \cap \cdots \cap {U}_{n}
+U_{1} \times {V}_{1},\ldots ,U_{n} \times {V}_{n}
 \]
 
-The set \(W\) is open, and it contains \({x}_{0}\) because each set \({U}_{i} \times {V}_{i}\) intersects \({x}_{0} \times Y\).
+(We assume that each of the basis elements \(U_{i} \times {V}_{i}\) actually intersects \(x_{0} \times Y\), since otherwise that basis element would be superfluous; we could discard it from the finite collection and still have a covering of \(x_{0} \times Y\).) Define
 
-We assert that the sets \({U}_{i} \times {V}_{i}\), which were chosen to cover the slice \({x}_{0} \times Y\), actually cover the tube \(W \times Y\). Let \(x \times y\) be a point of \(W \times Y\). Consider the point \({x}_{0} \times y\) of the slice \({x}_{0} \times Y\) having the same \(y\) -coordinate as this point. Now \({x}_{0} \times y\) belongs to \({U}_{i} \times {V}_{i}\) for some \(i\), so that \(y \in {V}_{i}\). But \(x \in {U}_{j}\) for every \(j\) (because \(x \in W\) ). Therefore, we have \(x \times y \in {U}_{i} \times {V}_{i}\), as desired.
+\[
+W = U_{1} \cap \cdots \cap {U}_{n}
+\]
 
-Since all the sets \({U}_{i} \times {V}_{i}\) lie in \(N\), and since they cover \(W \times Y\), the tube \(W \times Y\) lies in \(N\) also. See \hyperref[fig:26.2]{Figure 26.2}.
+The set \(W\) is open, and it contains \(x_{0}\) because each set \(U_{i} \times {V}_{i}\) intersects \(x_{0} \times Y\).
 
-Step 2. Now we prove the theorem. Let \(X\) and \(Y\) be compact spaces. Let \(\mathcal{A}\) be an open covering of \(X \times Y\). Given \({x}_{0} \in X\), the slice \({x}_{0} \times Y\) is compact and may therefore be covered by finitely many elements \({A}_{1},\ldots ,{A}_{m}\) of \(\mathcal{A}\). Their union \(N = {A}_{1} \cup \cdots \cup {A}_{m}\) is an open set containing \({x}_{0} \times Y\) ; by Step 1, the open set \(N\) contains a tube \(W \times Y\) about \({x}_{0} \times Y\), where \(W\) is open in \(X\). Then \(W \times Y\) is covered by finitely many elements \({A}_{1},\ldots ,{A}_{m}\) of \(\mathcal{A}\).
+We assert that the sets \(U_{i} \times {V}_{i}\), which were chosen to cover the slice \(x_{0} \times Y\), actually cover the tube \(W \times Y\). Let \(x \times y\) be a point of \(W \times Y\). Consider the point \(x_{0} \times y\) of the slice \(x_{0} \times Y\) having the same \(y\) -coordinate as this point. Now \(x_{0} \times y\) belongs to \(U_{i} \times {V}_{i}\) for some \(i\), so that \(y \in {V}_{i}\). But \(x \in {U}_{j}\) for every \(j\) (because \(x \in W\) ). Therefore, we have \(x \times y \in {U}_{i} \times {V}_{i}\), as desired.
+
+Since all the sets \(U_{i} \times {V}_{i}\) lie in \(N\), and since they cover \(W \times Y\), the tube \(W \times Y\) lies in \(N\) also. See \hyperref[fig:26.2]{Figure 26.2}.
+
+Step 2. Now we prove the theorem. Let \(X\) and \(Y\) be compact spaces. Let \(\mathcal{A}\) be an open covering of \(X \times Y\). Given \(x_{0} \in X\), the slice \(x_{0} \times Y\) is compact and may therefore be covered by finitely many elements \(A_{1},\ldots ,A_{m}\) of \(\mathcal{A}\). Their union \(N = A_{1} \cup \cdots \cup {A}_{m}\) is an open set containing \(x_{0} \times Y\) ; by Step 1, the open set \(N\) contains a tube \(W \times Y\) about \(x_{0} \times Y\), where \(W\) is open in \(X\). Then \(W \times Y\) is covered by finitely many elements \(A_{1},\ldots ,A_{m}\) of \(\mathcal{A}\).
 
 \munkresfig[0.8]{26.2}[Figure 26.2]
-Thus, for each \(x\) in \(X\), we can choose a neighborhood \({W}_{x}\) of \(x\) such that the tube \({W}_{x} \times Y\) can be covered by finitely many elements of \(\mathcal{A}\). The collection of all the neighborhoods \({W}_{x}\) is an open covering of \(X\) ; therefore by compactness of \(X\), there exists a finite subcollection
+Thus, for each \(x\) in \(X\), we can choose a neighborhood \(W_{x}\) of \(x\) such that the tube \(W_{x} \times Y\) can be covered by finitely many elements of \(\mathcal{A}\). The collection of all the neighborhoods \(W_{x}\) is an open covering of \(X\) ; therefore by compactness of \(X\), there exists a finite subcollection
 
 \[
-\{ {{W}_{1},\ldots ,{W}_{k}}\}
+\{ {W_{1},\ldots ,W_{k}}\}
 \]
 
 covering \(X\). The union of the tubes
 
 \[
-{W}_{1} \times Y,\ldots ,{W}_{k} \times Y
+W_{1} \times Y,\ldots ,W_{k} \times Y
 \]
 
 is all of \(X \times Y\) ; since each may be covered by finitely many elements of \(\mathcal{A}\), so may \(X \times Y\) be covered.
@@ -820,16 +820,16 @@ The statement proved in Step 1 of the preceding proof will be useful to us later
 
 \begin{lemma}
 \label{lem:\thetheorem}[The tube lemma]
- Consider the product space \(X \times Y\), where \(Y\) is compact. If \(N\) is an open set of \(X \times Y\) containing the slice \({x}_{0} \times Y\) of \(X \times Y\), then \(N\) contains some tube \(W \times Y\) about \({x}_{0} \times Y\), where \(W\) is a neighborhood of \({x}_{0}\) in \(X\).
+ Consider the product space \(X \times Y\), where \(Y\) is compact. If \(N\) is an open set of \(X \times Y\) containing the slice \(x_{0} \times Y\) of \(X \times Y\), then \(N\) contains some tube \(W \times Y\) about \(x_{0} \times Y\), where \(W\) is a neighborhood of \(x_{0}\) in \(X\).
 \end{lemma}
 
 \begin{centeredblock}
 \begin{example}
 \label{ex:\thesection.\theexample}
- The tube lemma is certainly not true if \(Y\) is not compact. For example, let \(Y\) be the \(y\) -axis in \({\mathbb{R}}^{2}\), and let
+ The tube lemma is certainly not true if \(Y\) is not compact. For example, let \(Y\) be the \(y\) -axis in \(\mathbb{R}^{2}\), and let
 
 \[
-N = \{ {x \times y,| x| < 1/( {{y}^{2} + 1}) }\}.
+N = \{ {x \times y,| x| < 1/( {y^{2} + 1}) }\}.
 \]
 
 Then \(N\) is an open set containing the set \(0 \times \mathbb{R}\), but it contains no tube about \(0 \times \mathbb{R}\). It is illustrated in \hyperref[fig:26.3]{Figure 26.3}
@@ -848,10 +848,10 @@ There is one final criterion for a space to be compact, a criterion that is form
  A collection \(\mathcal{C}\) of subsets of \(X\) is said to have the \idx[finite intersection property]{Finite intersection property} if for every finite subcollection
 
  \[
- \{ {{C}_{1},\ldots ,{C}_{n}}\}
+ \{ {C_{1},\ldots ,C_{n}}\}
  \]
 
- of \(\mathcal{C}\), the intersection \({C}_{1} \cap \cdots \cap {C}_{n}\) is nonempty.
+ of \(\mathcal{C}\), the intersection \(C_{1} \cap \cdots \cap {C}_{n}\) is nonempty.
 \end{definition}
 
 \begin{theorem}
@@ -870,23 +870,23 @@ be the collection of their complements. Then the following statements hold:
 \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\arabic*), align=left]
 \item \(\mathcal{A}\) is a collection of open sets if and only if \(\mathcal{C}\) is a collection of closed sets.
 \item The collection \(\mathcal{A}\) covers \(X\) if and only if the intersection \(\mathop{\bigcap }\limits_{{C \in \mathcal{C}}}C\) of all the elements of \(\mathcal{C}\) is empty
-\item The finite subcollection \(\{ {{A}_{1},\ldots ,{A}_{n}}\}\) of \(\mathcal{A}\) covers \(X\) if and only if the intersection of the corresponding elements \({C}_{i} = X - {A}_{i}\) of \(\mathcal{C}\) is empty.
+\item The finite subcollection \(\{ {A_{1},\ldots ,A_{n}}\}\) of \(\mathcal{A}\) covers \(X\) if and only if the intersection of the corresponding elements \(C_{i} = X - A_{i}\) of \(\mathcal{C}\) is empty.
 \end{enumerate}
 
 The first statement is trivial, while the second and third follow from DeMorgan's law:
 
 \[
-X - ( {\mathop{\bigcup }\limits_{{\alpha \in J}}{A}_{\alpha }}) = \mathop{\bigcap }\limits_{{\alpha \in J}}( {X - {A}_{\alpha }})
+X - ( {\mathop{\bigcup }\limits_{{\alpha \in J}}A_{\alpha }}) = \mathop{\bigcap }\limits_{{\alpha \in J}}( {X - A_{\alpha }})
 \]
 
 The proof of the theorem now proceeds in two easy steps: taking the contrapositive (of the theorem), and then the complement (of the sets)!
 
 The statement that \(X\) is compact is equivalent to saying: ``Given any collection \(\mathcal{A}\) of open subsets of \(X\), if \(\mathcal{A}\) covers \(X\), then some finite subcollection of \(\mathcal{A}\) covers \(X\).'' This statement is equivalent to its contrapositive, which is the following: ``Given any collection \(\mathcal{A}\) of open sets, if no finite subcollection of \(\mathcal{A}\) covers \(X\), then \(\mathcal{A}\) does not cover \(X\).'' Letting \(\mathcal{C}\) be, as earlier, the collection \(\{ X - A \mid A \in \mathcal{A}\}\) and applying (1)-(3), we see that this statement is in turn equivalent to the following: ``Given any collection \(\mathcal{C}\) of closed sets, if every finite intersection of elements of \(\mathcal{C}\) is nonempty, then the intersection of all the elements of \(\mathcal{C}\) is nonempty.'' This is just the condition of our theorem.
 
-A special case of this theorem occurs when we have a nested sequence \({C}_{1} \supset {C}_{2} \supset\) \(\cdots \supset {C}_{n} \supset {C}_{n + 1} \supset \cdots\) of closed sets in a compact space \(X\). If each of the sets \({C}_{n}\) is nonempty, then the collection \(\mathcal{C} = {\{ {C}_{n}\} }_{n \in {\mathbb{Z}}_{ + }}\) automatically has the finite intersection property. Then the intersection
+A special case of this theorem occurs when we have a nested sequence \(C_{1} \supset {C}_{2} \supset\) \(\cdots \supset {C}_{n} \supset {C}_{n + 1} \supset \cdots\) of closed sets in a compact space \(X\). If each of the sets \(C_{n}\) is nonempty, then the collection \(\mathcal{C} = {\{ C_{n}\} }_{n \in {\mathbb{Z}}_{ + }}\) automatically has the finite intersection property. Then the intersection
 
 \[
-\mathop{\bigcap }\limits_{{n \in {\mathbb{Z}}_{ + }}}{C}_{n}
+\mathop{\bigcap }\limits_{{n \in {\mathbb{Z}}_{ + }}}C_{n}
 \]
 
 is nonempty.
@@ -898,9 +898,9 @@ We shall use the closed set criterion for compactness in the next section to pro
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
- \item Let \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\) be two topologies on the set \(X\) ; suppose that \({\mathcal{T}}^{\prime } \supset \mathcal{T}\). What does compactness of \(X\) under one of these topologies imply about compactness under the other?
+ \item Let \(\mathcal{T}\) and \(\mathcal{T}^{\prime }\) be two topologies on the set \(X\) ; suppose that \(\mathcal{T}^{\prime } \supset \mathcal{T}\). What does compactness of \(X\) under one of these topologies imply about compactness under the other?
 
- \item Show that if \(X\) is compact Hausdorff under both \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\), then either \(\mathcal{T}\) and \({\mathcal{T}}^{\prime }\) are equal or they are not comparable.
+ \item Show that if \(X\) is compact Hausdorff under both \(\mathcal{T}\) and \(\mathcal{T}^{\prime }\), then either \(\mathcal{T}\) and \(\mathcal{T}^{\prime }\) are equal or they are not comparable.
  \end{enumerate}
 \item
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
@@ -913,16 +913,16 @@ We shall use the closed set criterion for compactness in the next section to pro
 \item Let \(A\) and \(B\) be disjoint compact subspaces of the Hausdorff space \(X\). Show that there exist disjoint open sets \(U\) and \(V\) containing \(A\) and \(B\), respectively.
 \item Show that if \(f : X \rightarrow Y\) is continuous, where \(X\) is compact and \(Y\) is Hausdorff, then \(f\) is a closed map (that is, \(f\) carries closed sets to closed sets).
 \item Show that if \(Y\) is compact, then the projection \({\pi }_{1} : X \times Y \rightarrow X\) is a closed map.
-\item \textsl{Theorem.} Let \(f : X \rightarrow Y\) ; let \(Y\) be compact Hausdorff. Then \(f\) is continuous if and only if the graph of \(f\), \[ {G}_{f} = \{ x \times f(x) \mid x \in X\} \] is closed in \(X \times Y\). [Hint: If \({G}_{f}\) is closed and \(V\) is a neighborhood of \(f( {x}_{0})\), then the intersection of \({G}_{f}\) and \(X \times ( {Y - V})\) is closed. Apply Exercise 7.]
+\item \textsl{Theorem.} Let \(f : X \rightarrow Y\) ; let \(Y\) be compact Hausdorff. Then \(f\) is continuous if and only if the graph of \(f\), \[ G_{f} = \{ x \times f(x) \mid x \in X\} \] is closed in \(X \times Y\). [Hint: If \(G_{f}\) is closed and \(V\) is a neighborhood of \(f( x_{0})\), then the intersection of \(G_{f}\) and \(X \times ( {Y - V})\) is closed. Apply Exercise 7.]
 \item Generalize the tube lemma as follows: \textsl{Theorem.} Let \(A\) and \(B\) be subspaces of \(X\) and \(Y\), respectively; let \(N\) be an open set in \(X \times Y\) containing \(A \times B\). If \(A\) and \(B\) are compact, then there exist open sets \(U\) and \(V\) in \(X\) and \(Y\), respectively, such that \[ A \times B \subset U \times V \subset N. \]
 \item
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
- \item Prove the following partial converse to the uniform limit theorem: \textsl{Theorem.} Let \({f}_{n} : X \rightarrow \mathbb{R}\) be a sequence of continuous functions, with \({f}_{n}(x) \rightarrow f(x)\) for each \(x \in X\). If \(f\) is continuous, and if the sequence \({f}_{n}\) is monotone increasing, and if \(X\) is compact, then the convergence is uniform. [We say that \({f}_{n}\) is monotone increasing if \({f}_{n}(x) \leq {f}_{n + 1}(x)\) for all \(n\) and \(x\).]
+ \item Prove the following partial converse to the uniform limit theorem: \textsl{Theorem.} Let \(f_{n} : X \rightarrow \mathbb{R}\) be a sequence of continuous functions, with \(f_{n}(x) \rightarrow f(x)\) for each \(x \in X\). If \(f\) is continuous, and if the sequence \(f_{n}\) is monotone increasing, and if \(X\) is compact, then the convergence is uniform. [We say that \(f_{n}\) is monotone increasing if \(f_{n}(x) \leq {f}_{n + 1}(x)\) for all \(n\) and \(x\).]
 
  \item Give examples to show that this theorem fails if you delete the requirement that \(X\) be compact, or if you delete the requirement that the sequence be monotone. [Hint: See the exercises of \S\ 21.]
  \end{enumerate}
 \item \textsl{Theorem.} Let \(X\) be a compact Hausdorff space. Let \(\mathcal{A}\) be a collection of closed connected subsets of \(X\) that is simply ordered by proper inclusion. Then \[ Y = \mathop{\bigcap }\limits_{{A \in \mathcal{A}}}A \] is connected. [Hint: If \(C \cup D\) is a separation of \(Y\), choose disjoint open sets \(U\) and \(V\) of \(X\) containing \(C\) and \(D\), respectively, and show that \[ \mathop{\bigcap }\limits_{{A \in \mathcal{A}}}( {A - ( {U \cup V}) }) \] is not empty.]
-\item Let \(p : X \rightarrow Y\) be a closed continuous surjective map such that \({p}^{-1}( {\{ y\} })\) is compact, for each \(y \in Y\). (Such a map is called a \idx[perfect map]{Perfect map}.) Show that if \(Y\) is compact, then \(X\) is compact. [Hint: If \(U\) is an open set containing \({p}^{-1}( {\{ y\} })\), there is a neighborhood \(W\) of \(y\) such that \({p}^{-1}( W)\) is contained in \(U\) ]
+\item Let \(p : X \rightarrow Y\) be a closed continuous surjective map such that \(p^{-1}( {\{ y\} })\) is compact, for each \(y \in Y\). (Such a map is called a \idx[perfect map]{Perfect map}.) Show that if \(Y\) is compact, then \(X\) is compact. [Hint: If \(U\) is an open set containing \(p^{-1}( {\{ y\} })\), there is a neighborhood \(W\) of \(y\) such that \(p^{-1}( W)\) is contained in \(U\) ]
 \item Let \(G\) be a topological group.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Let \(A\) and \(B\) be subspaces of \(G\). If \(A\) is closed and \(B\) is compact, show \(A \cdot B\) is closed. [Hint: If \(c\) is not in \(A \cdot B\), find a neighborhood \(W\) of \(c\) such that \(W \cdot {B}^{-1}\) is disjoint from \(A\).]
@@ -932,7 +932,7 @@ We shall use the closed set criterion for compactness in the next section to pro
 \end{enumerate}
 \booksection{27}{Compact Subspaces of the Real Line}
 
-The theorems of the preceding section enable us to construct new compact spaces from existing ones, but in order to get very far we have to find some compact spaces to start with. The natural place to begin is the real line; we shall prove that every closed interval in \(\mathbb{R}\) is compact. Applications include the \idx[extreme value theorem]{Extreme value theorem} and the uniform continuity theorem of calculus, suitably generalized. We also give a characterization of all compact subspaces of \({\mathbb{R}}^{n}\), and a proof of the uncountability of the set of real numbers.
+The theorems of the preceding section enable us to construct new compact spaces from existing ones, but in order to get very far we have to find some compact spaces to start with. The natural place to begin is the real line; we shall prove that every closed interval in \(\mathbb{R}\) is compact. Applications include the \idx[extreme value theorem]{Extreme value theorem} and the uniform continuity theorem of calculus, suitably generalized. We also give a characterization of all compact subspaces of \(\mathbb{R}^{n}\), and a proof of the uncountability of the set of real numbers.
 
 It turns out that in order to prove every closed interval in \(\mathbb{R}\) is compact, we need only one of the order properties of the real line-the least upper bound property. We shall prove the theorem using only this hypothesis; then it will apply not only to the real line, but to well-ordered sets and other ordered sets as well.
 
@@ -966,11 +966,11 @@ can also be covered by finitely many elements of \(\mathcal{A}\). This means tha
  Every closed interval in \(\mathbb{R}\) is compact.
 \end{corollary}
 
-Now we characterize the compact subspaces of \({\mathbb{R}}^{n}\) :
+Now we characterize the compact subspaces of \(\mathbb{R}^{n}\) :
 
 \begin{theorem}
 \label{thm:\thetheorem}
- A subspace \(A\) of \({\mathbb{R}}^{n}\) is compact if and only if it is closed and is bounded in the euclidean metric \(d\) or the square metric \(\rho\).
+ A subspace \(A\) of \(\mathbb{R}^{n}\) is compact if and only if it is closed and is bounded in the euclidean metric \(d\) or the square metric \(\rho\).
 
 \end{theorem}
 \begin{proof}
@@ -985,12 +985,12 @@ imply that \(A\) is bounded under \(d\) if and only if it is bounded under \(\rh
 Suppose that \(A\) is compact. Then, by \hyperref[thm:26.3]{Theorem 26.3}, it is closed. Consider the collection of open sets
 
 \[
-\{ {{B}_{\rho }( {0,m}) \mid m \in {\mathbb{Z}}_{ + }}\},
+\{ {B_{\rho }( {0,m}) \mid m \in {\mathbb{Z}}_{ + }}\},
 \]
 
-whose union is all of \({\mathbb{R}}^{n}\). Some finite subcollection covers \(A\). It follows that \(A \subset\) \({B}_{\rho }( {0,M})\) for some \(M\). Therefore, for any two points \(x\) and \(y\) of \(A\), we have \(\rho ( {x,y}) \leq\) \({2M}\). Thus \(A\) is bounded under \(\rho\).
+whose union is all of \(\mathbb{R}^{n}\). Some finite subcollection covers \(A\). It follows that \(A \subset\) \(B_{\rho }( {0,M})\) for some \(M\). Therefore, for any two points \(x\) and \(y\) of \(A\), we have \(\rho ( {x,y}) \leq\) \({2M}\). Thus \(A\) is bounded under \(\rho\).
 
-Conversely, suppose that \(A\) is closed and bounded under \(\rho\) ; suppose that \(\rho ( {x,y}) \leq\) \(N\) for every pair \(x,y\) of points of \(A\). Choose a point \({x}_{0}\) of \(A\), and let \(\rho ( {{x}_{0},\mathbf{0}}) = b\). The triangle inequality implies that \(\rho ( {x,\mathbf{0}}) \leq N + b\) for every \(x\) in \(A\). If \(P = N + b\), then \(A\) is a subset of the cube \([ -P,P{] }^{n}\), which is compact. Being closed, \(A\) is also compact.
+Conversely, suppose that \(A\) is closed and bounded under \(\rho\) ; suppose that \(\rho ( {x,y}) \leq\) \(N\) for every pair \(x,y\) of points of \(A\). Choose a point \(x_{0}\) of \(A\), and let \(\rho ( {x_{0},\mathbf{0}}) = b\). The triangle inequality implies that \(\rho ( {x,\mathbf{0}}) \leq N + b\) for every \(x\) in \(A\). If \(P = N + b\), then \(A\) is a subset of the cube \([ -P,P{] }^{n}\), which is compact. Being closed, \(A\) is also compact.
 
 Students often remember this theorem as stating that the collection of compact sets in a metric space equals the collection of closed and bounded sets. This statement is clearly ridiculous as it stands, because the question as to which sets are bounded depends for its answer on the metric, whereas which sets are compact depends only on the topology of the space.
 \end{proof}
@@ -998,19 +998,19 @@ Students often remember this theorem as stating that the collection of compact s
 \begin{centeredblock*}
 \begin{example}
 \label{ex:\thesection.\theexample}
- The unit sphere \({S}^{n - 1}\) and the closed unit ball \({B}^{n}\) in \({\mathbb{R}}^{n}\) are compact because they are closed and bounded. The set
+ The unit sphere \(S^{n - 1}\) and the closed unit ball \(B^{n}\) in \(\mathbb{R}^{n}\) are compact because they are closed and bounded. The set
 
 \[
 A = \{ x \times ( {1/x}) \mid 0 < x \leq 1\}
 \]
 
-is closed in \({\mathbb{R}}^{2}\), but it is not compact because it is not bounded. The set
+is closed in \(\mathbb{R}^{2}\), but it is not compact because it is not bounded. The set
 
 \[
 S = \{ x \times ( {\sin ( {1/x}) }) \mid 0 < x \leq 1\}
 \]
 
-is bounded in \({\mathbb{R}}^{2}\), but it is not compact because it is not closed.
+is bounded in \(\mathbb{R}^{2}\), but it is not compact because it is not closed.
 \end{example}
 \end{centeredblock*}
 
@@ -1035,10 +1035,10 @@ If \(A\) has no largest element, then the collection
 forms an open covering of \(A\). Since \(A\) is compact, some finite subcollection
 
 \[
-\{ {( {-\infty ,{a}_{1}}),\ldots ,( {-\infty ,{a}_{n}}) }\}
+\{ {( {-\infty ,a_{1}}),\ldots ,( {-\infty ,a_{n}}) }\}
 \]
 
-covers \(A\). If \({a}_{i}\) is the largest of the elements \({a}_{1},\ldots {a}_{n}\), then \({a}_{i}\) belongs to none of these sets, contrary to the fact that they cover \(A\).
+covers \(A\). If \(a_{i}\) is the largest of the elements \(a_{1},\ldots {a}_{n}\), then \(a_{i}\) belongs to none of these sets, contrary to the fact that they cover \(A\).
 
 A similar argument shows that \(A\) has a smallest element.
 \end{proof}
@@ -1076,7 +1076,7 @@ The same inequality holds with \(x\) and \(y\) interchanged; continuity of the f
 Now we introduce the notion of Lebesgue number. Recall that the diameter of a bounded subset \(A\) of a metric space (X, d) is the number
 
 \[
-\sup \{ {d( {{a}_{1},{a}_{2}}) \mid {a}_{1},{a}_{2} \in A}\}.
+\sup \{ {d( {a_{1},a_{2}}) \mid {a}_{1},a_{2} \in A}\}.
 \]
 
 \begin{lemma}
@@ -1089,38 +1089,38 @@ The number \(\delta\) is called a Lebesgue number for the covering \(\mathcal{A}
 \begin{proof}
 Let \(\mathcal{A}\) be an open covering of \(X\). If \(X\) itself is an element of \(\mathcal{A}\), then any positive number is a Lebesgue number for \(\mathcal{A}\). So assume \(X\) is not an element of \(\mathcal{A}\).
 
-Choose a finite subcollection \(\{ {{A}_{1},\ldots ,{A}_{n}}\}\) of \(\mathcal{A}\) that covers \(X\). For each \(i\), set \({C}_{i} = X - {A}_{i}\), and define \(f : X \rightarrow \mathbb{R}\) by letting \(f(x)\) be the average of the numbers \(d( {x,{C}_{l}})\). That is,
+Choose a finite subcollection \(\{ {A_{1},\ldots ,A_{n}}\}\) of \(\mathcal{A}\) that covers \(X\). For each \(i\), set \(C_{i} = X - A_{i}\), and define \(f : X \rightarrow \mathbb{R}\) by letting \(f(x)\) be the average of the numbers \(d( {x,C_{l}})\). That is,
 
 \[
-f(x) = \frac{1}{n}\mathop{\sum }\limits_{{i = 1}}^{n}d( {x,{C}_{i}}).
+f(x) = \frac{1}{n}\mathop{\sum }\limits_{{i = 1}}^{n}d( {x,C_{i}}).
 \]
 
-We show that \(f(x) > 0\) for all \(x\). Given \(x \in X\), choose \(i\) so that \(x \in {A}_{i}\). Then choose \(\epsilon\) so the \(\epsilon\) -neighborhood of \(x\) lies in \({A}_{i}\). Then \(d( {x,{C}_{i}}) \geq \epsilon\), so that \(f(x) \geq \epsilon /n\).
+We show that \(f(x) > 0\) for all \(x\). Given \(x \in X\), choose \(i\) so that \(x \in {A}_{i}\). Then choose \(\epsilon\) so the \(\epsilon\) -neighborhood of \(x\) lies in \(A_{i}\). Then \(d( {x,C_{i}}) \geq \epsilon\), so that \(f(x) \geq \epsilon /n\).
 
-Since \(f\) is continuous, it has a minimum value \(\delta\) ; we show that \(\delta\) is our required Lebesgue number Let \(B\) be a subset of \(X\) of diameter less than \(\delta\). Choose a point \({x}_{0}\) of \(B\), then \(B\) lies in the \(\delta\) -neighborhood of \({x}_{0}\). Now
+Since \(f\) is continuous, it has a minimum value \(\delta\) ; we show that \(\delta\) is our required Lebesgue number Let \(B\) be a subset of \(X\) of diameter less than \(\delta\). Choose a point \(x_{0}\) of \(B\), then \(B\) lies in the \(\delta\) -neighborhood of \(x_{0}\). Now
 
 \[
-\delta \leq f( {x}_{0}) \leq d( {{x}_{0},{C}_{m}})
+\delta \leq f( x_{0}) \leq d( {x_{0},C_{m}})
 \]
 
-where \(d( {{x}_{0},{C}_{m}})\) is the largest of the numbers \(d( {{x}_{0},{C}_{i}})\). Then the \(\delta\) -neighborhood of \({x}_{0}\) is contained in the element \({A}_{m} = X - {C}_{m}\) of the covering \(\mathcal{A}\).
+where \(d( {x_{0},C_{m}})\) is the largest of the numbers \(d( {x_{0},C_{i}})\). Then the \(\delta\) -neighborhood of \(x_{0}\) is contained in the element \(A_{m} = X - C_{m}\) of the covering \(\mathcal{A}\).
 \end{proof}
 
 \begin{definition}
- A function \(f\) from the metric space \(( {X,{d}_{X}})\) to the metric space \(( {Y,{d}_{Y}})\) is said to be \idx[uniformly continuous]{Uniformly continuous} if given \(\epsilon > 0\), there is a \(\delta > 0\) such that for every pair of points \({x}_{0},{x}_{1}\) of \(X\),
+ A function \(f\) from the metric space \(( {X,d_{X}})\) to the metric space \(( {Y,d_{Y}})\) is said to be \idx[uniformly continuous]{Uniformly continuous} if given \(\epsilon > 0\), there is a \(\delta > 0\) such that for every pair of points \(x_{0},x_{1}\) of \(X\),
 
 \[
-{d}_{X}( {{x}_{0},{x}_{1}}) < \delta \Rightarrow {d}_{Y}( {f( {x}_{0}),f( {x}_{1}) }) < \epsilon
+d_{X}( {x_{0},x_{1}}) < \delta \Rightarrow {d}_{Y}( {f( x_{0}),f( x_{1}) }) < \epsilon
 \]
 \end{definition}
 
 \begin{theorem}
 \label{thm:\thetheorem}[Uniform continuity theorem]
- Let \(f : X \rightarrow Y\) be a continuous map of the compact metric space \(( {X,{d}_{X}})\) to the metric space \(( {Y,{d}_{Y}})\). Then \(f\) is uniformly continuous.
+ Let \(f : X \rightarrow Y\) be a continuous map of the compact metric space \(( {X,d_{X}})\) to the metric space \(( {Y,d_{Y}})\). Then \(f\) is uniformly continuous.
 
 \end{theorem}
 \begin{proof}
-Given \(\epsilon > 0\), take the open covering of \(Y\) by balls \(B( {y,\epsilon /2})\) of radius \(\epsilon /2\). Let \(\mathcal{A}\) be the open covering of \(X\) by the inverse images of these balls under \(f\). Choose \(\delta\) to be a Lebesgue number for the covering \(\mathcal{A}\). Then if \({x}_{1}\) and \({x}_{2}\) are two points of \(X\) such that \({d}_{X}( {{x}_{1},{x}_{2}}) < \delta\), the two-point set \(\{ {{x}_{1},{x}_{2}}\}\) has diameter less than \(\delta\), so that its image \(\{ {f( {x}_{1}),f( {x}_{2}) }\}\) lies in some ball \(B( {y,\epsilon /2})\). Then \({d}_{Y}( {f( {x}_{1}),f( {x}_{2}) }) < \epsilon\), as desired.
+Given \(\epsilon > 0\), take the open covering of \(Y\) by balls \(B( {y,\epsilon /2})\) of radius \(\epsilon /2\). Let \(\mathcal{A}\) be the open covering of \(X\) by the inverse images of these balls under \(f\). Choose \(\delta\) to be a Lebesgue number for the covering \(\mathcal{A}\). Then if \(x_{1}\) and \(x_{2}\) are two points of \(X\) such that \(d_{X}( {x_{1},x_{2}}) < \delta\), the two-point set \(\{ {x_{1},x_{2}}\}\) has diameter less than \(\delta\), so that its image \(\{ {f( x_{1}),f( x_{2}) }\}\) lies in some ball \(B( {y,\epsilon /2})\). Then \(d_{Y}( {f( x_{1}),f( x_{2}) }) < \epsilon\), as desired.
 
 Finally, we prove that the real numbers are uncountable. The interesting thing about this proof is that it involves no algebra at all-no decimal or binary expansions of real numbers or the like-just the order properties of \(\mathbb{R}\).
 \end{proof}
@@ -1137,18 +1137,18 @@ Finally, we prove that the real numbers are uncountable. The interesting thing a
 \begin{proof}
 Step 1. We show first that given any nonempty open set \(U\) of \(X\) and any point \(x\) of \(X\), there exists a nonempty open set \(V\) contained in \(U\) such that \(x \notin \bar{V}\).
 
-Choose a point \(y\) of \(U\) different from \(x\) ; this is possible if \(x\) is in \(U\) because \(x\) is not an isolated point of \(X\) and it is possible if \(x\) is not in \(U\) simply because \(U\) is nonempty. Now choose disjoint open sets \({W}_{1}\) and \({W}_{2}\) about \(x\) and \(y\), respectively. Then the set \(V = {W}_{2} \cap U\) is the desired open set, it is contained in \(U\), it is nonempty because it contains \(y\), and its closure does not contain \(x\). See \hyperref[fig:27.3]{Figure 27.3}
+Choose a point \(y\) of \(U\) different from \(x\) ; this is possible if \(x\) is in \(U\) because \(x\) is not an isolated point of \(X\) and it is possible if \(x\) is not in \(U\) simply because \(U\) is nonempty. Now choose disjoint open sets \(W_{1}\) and \(W_{2}\) about \(x\) and \(y\), respectively. Then the set \(V = W_{2} \cap U\) is the desired open set, it is contained in \(U\), it is nonempty because it contains \(y\), and its closure does not contain \(x\). See \hyperref[fig:27.3]{Figure 27.3}
 
-Step 2. We show that given \(f : {\mathbb{Z}}_{ + } \rightarrow X\), the function \(f\) is not surjective. It follows that \(X\) is uncountable.
+Step 2. We show that given \(f : \mathbb{Z}_{ + } \rightarrow X\), the function \(f\) is not surjective. It follows that \(X\) is uncountable.
 
 \munkresfig[0.6]{27.3}[Figure 27.3]
-Let \({x}_{n} = f(n)\). Apply Step 1 to the nonempty open set \(U = X\) to choose a nonempty open set \({V}_{1} \subset X\) such that \({\bar{V}}_{1}\) does not contain \({x}_{1}\). In general, given \({V}_{n - 1}\) open and nonempty, choose \({V}_{n}\) to be a nonempty open set such that \({V}_{n} \subset {V}_{n - 1}\) and \({\bar{V}}_{n}\) does not contain \({x}_{n}\). Consider the nested sequence
+Let \(x_{n} = f(n)\). Apply Step 1 to the nonempty open set \(U = X\) to choose a nonempty open set \(V_{1} \subset X\) such that \(\bar{V}_{1}\) does not contain \(x_{1}\). In general, given \(V_{n - 1}\) open and nonempty, choose \(V_{n}\) to be a nonempty open set such that \(V_{n} \subset {V}_{n - 1}\) and \(\bar{V}_{n}\) does not contain \(x_{n}\). Consider the nested sequence
 
 \[
-{\bar{V}}_{1} \supset {\bar{V}}_{2} \supset \cdots
+\bar{V}_{1} \supset {\bar{V}}_{2} \supset \cdots
 \]
 
-of nonempty closed sets of \(X\). Because \(X\) is compact, there is a point \(x \in \bigcap {\bar{V}}_{n}\), by \hyperref[thm:26.9]{Theorem 26.9}. Now \(x\) cannot equal \({x}_{n}\) for any \(n\), since \(x\) belongs to \({V}_{n}\) and \({x}_{n}\) does not.
+of nonempty closed sets of \(X\). Because \(X\) is compact, there is a point \(x \in \bigcap {\bar{V}}_{n}\), by \hyperref[thm:26.9]{Theorem 26.9}. Now \(x\) cannot equal \(x_{n}\) for any \(n\), since \(x\) belongs to \(V_{n}\) and \(x_{n}\) does not.
 \end{proof}
 
 \begin{corollary}
@@ -1163,23 +1163,23 @@ of nonempty closed sets of \(X\). Because \(X\) is compact, there is a point \(x
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show that \(d( {x,A}) = 0\) if and only if \(x \in \bar{A}\).
  \item Show that if \(A\) is compact, \(d( {x,A}) = d( {x,a})\) for some \(a \in A\).
- \item Define the \(\epsilon\) -neighborhood of \(A\) in \(X\) to be the set \[ U( {A,\epsilon }) = \{ x \mid d( {x,A}) < \epsilon \}. \] Show that \(U( {A,\epsilon })\) equals the union of the open balls \({B}_{d}( {a,\epsilon })\) for \(a \in A\)
+ \item Define the \(\epsilon\) -neighborhood of \(A\) in \(X\) to be the set \[ U( {A,\epsilon }) = \{ x \mid d( {x,A}) < \epsilon \}. \] Show that \(U( {A,\epsilon })\) equals the union of the open balls \(B_{d}( {a,\epsilon })\) for \(a \in A\)
  \item Assume that \(A\) is compact; let \(U\) be an open set containing \(A\). Show that some \(\epsilon\) -neighborhood of \(A\) is contained in \(U\).
  \item Show the result in (d) need not hold if \(A\) is closed but not compact.
  \end{enumerate}
-\item Recall that \({\mathbb{R}}_{K}\) denotes \(\mathbb{R}\) in the \(K\) -topology.
+\item Recall that \(\mathbb{R}_{K}\) denotes \(\mathbb{R}\) in the \(K\) -topology.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
- \item Show that \([ {0,1}]\) is not compact as a subspace of \({\mathbb{R}}_{K}\).
- \item Show that \({\mathbb{R}}_{K}\) is connected. [Hint \(( {-\infty, 0})\) and \(( {0,\infty })\) inherit their usual topologies as subspaces of \({\mathbb{R}}_{K}\).]
- \item Show that \({\mathbb{R}}_{K}\) is not path connected.
+ \item Show that \([ {0,1}]\) is not compact as a subspace of \(\mathbb{R}_{K}\).
+ \item Show that \(\mathbb{R}_{K}\) is connected. [Hint \(( {-\infty, 0})\) and \(( {0,\infty })\) inherit their usual topologies as subspaces of \(\mathbb{R}_{K}\).]
+ \item Show that \(\mathbb{R}_{K}\) is not path connected.
  \end{enumerate}
 \item Show that a connected metric space having more than one point is uncountable.
-\item Let \(X\) be a compact Hausdorff space, let \(\{ {A}_{n}\}\) be a countable collection of closed sets of \(X\). Show that if each set \({A}_{n}\) has empty interior in \(X\), then the union \(\cup {A}_{n}\) has empty interior in \(X\). [Hint: Imitate the proof of Theorem 27.7.] This is a special case of the Baire category theorem, which we shall study in Chapter 8.
-\item Let \({A}_{0}\) be the closed interval \([ {0,1}]\) in \(\mathbb{R}\). Let \({A}_{1}\) be the set obtained from \({A}_{0}\) by deleting its ``middle third'' \(( {\frac{1}{3},\frac{2}{3}})\). Let \({A}_{2}\) be the set obtained from \({A}_{1}\) by deleting its ``middle thirds'' \(( {\frac{1}{9},\frac{2}{9}})\) and \(( {\frac{7}{9},\frac{8}{9}})\) In general, define \({A}_{n}\) by the equation \[ {A}_{n} = {A}_{n - 1} - \mathop{\bigcup }\limits_{{k = 0}}^{\infty }( {\frac{1 + {3k}}{{3}^{n}},\frac{2 + {3k}}{{3}^{n}}}). \] The intersection \[ C = \mathop{\bigcap }\limits_{{n \in {\mathbb{Z}}_{ + }}}{A}_{n} \] is called the \idx[Cantor set]{Cantor set}; it is a subspace of \([ {0,1}]\)
+\item Let \(X\) be a compact Hausdorff space, let \(\{ A_{n}\}\) be a countable collection of closed sets of \(X\). Show that if each set \(A_{n}\) has empty interior in \(X\), then the union \(\cup {A}_{n}\) has empty interior in \(X\). [Hint: Imitate the proof of Theorem 27.7.] This is a special case of the Baire category theorem, which we shall study in Chapter 8.
+\item Let \(A_{0}\) be the closed interval \([ {0,1}]\) in \(\mathbb{R}\). Let \(A_{1}\) be the set obtained from \(A_{0}\) by deleting its ``middle third'' \(( {\frac{1}{3},\frac{2}{3}})\). Let \(A_{2}\) be the set obtained from \(A_{1}\) by deleting its ``middle thirds'' \(( {\frac{1}{9},\frac{2}{9}})\) and \(( {\frac{7}{9},\frac{8}{9}})\) In general, define \(A_{n}\) by the equation \[ A_{n} = A_{n - 1} - \mathop{\bigcup }\limits_{{k = 0}}^{\infty }( {\frac{1 + {3k}}{3^{n}},\frac{2 + {3k}}{3^{n}}}). \] The intersection \[ C = \mathop{\bigcap }\limits_{{n \in {\mathbb{Z}}_{ + }}}A_{n} \] is called the \idx[Cantor set]{Cantor set}; it is a subspace of \([ {0,1}]\)
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show that \(C\) is totally disconnected.
  \item Show that \(C\) is compact.
- \item Show that each set \({A}_{n}\) is a union of finitely many disjoint closed intervals of length \(1/{3}^{n}\) ; and show that the end points of these intervals lie in \(C\).
+ \item Show that each set \(A_{n}\) is a union of finitely many disjoint closed intervals of length \(1/3^{n}\) ; and show that the end points of these intervals lie in \(C\).
  \item Show that \(C\) has no isolated points.
  \item Conclude that \(C\) is uncountable.
  \end{enumerate}
@@ -1202,33 +1202,33 @@ Compactness implies limit point compactness, but not conversely.
 \begin{proof}
 Let \(X\) be a compact space. Given a subset \(A\) of \(X\), we wish to prove that if \(A\) is infinite, then \(A\) has a limit point. We prove the contrapositive-if \(A\) has no limit point, then \(A\) must be finite.
 
-So suppose \(A\) has no limit point. Then \(A\) contains all its limit points, so that \(A\) is closed. Furthermore, for each \(a \in A\) we can choose a neighborhood \({U}_{a}\) of \(a\) such that \({U}_{a}\) intersects \(A\) in the point \(a\) alone. The space \(X\) is covered by the open set \(X - A\) and the open sets \({U}_{a}\) ; being compact, it can be covered by finitely many of these sets. Since \(X - A\) does not intersect \(A\), and each set \({U}_{a}\) contains only one point of \(A\), the set \(A\) must be finite.
+So suppose \(A\) has no limit point. Then \(A\) contains all its limit points, so that \(A\) is closed. Furthermore, for each \(a \in A\) we can choose a neighborhood \(U_{a}\) of \(a\) such that \(U_{a}\) intersects \(A\) in the point \(a\) alone. The space \(X\) is covered by the open set \(X - A\) and the open sets \(U_{a}\) ; being compact, it can be covered by finitely many of these sets. Since \(X - A\) does not intersect \(A\), and each set \(U_{a}\) contains only one point of \(A\), the set \(A\) must be finite.
 \end{proof}
 
 \begin{centeredblock}
 \begin{example}
 \label{ex:\thesection.\theexample}
- Let \(Y\) consist of two points, give \(Y\) the topology consisting of \(Y\) and the empty set. Then the space \(X = {\mathbb{Z}}_{ + } \times Y\) is limit point compact, for every nonempty subset of \(X\) has a limit point. It is not compact, for the covering of \(X\) by the open sets \({U}_{n} = [ n] \times Y\) has no finite subcollection covering \(X\)
+ Let \(Y\) consist of two points, give \(Y\) the topology consisting of \(Y\) and the empty set. Then the space \(X = \mathbb{Z}_{ + } \times Y\) is limit point compact, for every nonempty subset of \(X\) has a limit point. It is not compact, for the covering of \(X\) by the open sets \(U_{n} = [ n] \times Y\) has no finite subcollection covering \(X\)
 \end{example}
 \end{centeredblock}
 
 \begin{centeredblock}
 \begin{example}
 \label{ex:\thesection.\theexample}
- Here is a less trivial example. Consider the minimal uncountable well-ordered set \({S}_{\Omega }\), in the order topology. The space \({S}_{\Omega }\) is not compact, since it has no largest element. However, it is limit point compact. Let \(A\) be an infinite subset of \({S}_{\Omega }\). Choose a subset \(B\) of \(A\) that is countably infinite. Being countable, the set \(B\) has an upper bound \(b\) in \({S}_{\Omega }\) ; then \(B\) is a subset of the interval \([ {{a}_{0},b}]\) of \({S}_{\Omega }\), where \({a}_{0}\) is the smallest element of \({S}_{\Omega }\). Since \({S}_{\Omega }\) has the least upper bound property, the interval \([ {{a}_{0},b}]\) is compact. By the preceding theorem, \(B\) has a limit point \(x\) in \([ {{a}_{0},b}]\). The point \(x\) is also a limit point of \(A\). Thus \({S}_{\Omega }\) is limit point compact.
+ Here is a less trivial example. Consider the minimal uncountable well-ordered set \(S_{\Omega }\), in the order topology. The space \(S_{\Omega }\) is not compact, since it has no largest element. However, it is limit point compact. Let \(A\) be an infinite subset of \(S_{\Omega }\). Choose a subset \(B\) of \(A\) that is countably infinite. Being countable, the set \(B\) has an upper bound \(b\) in \(S_{\Omega }\) ; then \(B\) is a subset of the interval \([ {a_{0},b}]\) of \(S_{\Omega }\), where \(a_{0}\) is the smallest element of \(S_{\Omega }\). Since \(S_{\Omega }\) has the least upper bound property, the interval \([ {a_{0},b}]\) is compact. By the preceding theorem, \(B\) has a limit point \(x\) in \([ {a_{0},b}]\). The point \(x\) is also a limit point of \(A\). Thus \(S_{\Omega }\) is limit point compact.
 \end{example}
 \end{centeredblock}
 
 We now show these two versions of compactness coincide for metrizable spaces; for this purpose, we introduce yet another version of compactness called \idx[sequential compactness]{Sequential compactness}. This result will be used in Chapter 7.
 
 \begin{definition}
- Let \(X\) be a topological space. If \(( {x}_{n})\) is a sequence of points of \(X\), and if
+ Let \(X\) be a topological space. If \(( x_{n})\) is a sequence of points of \(X\), and if
 
 \[
-{n}_{1} < {n}_{2} < \cdots < {n}_{i} < \cdots
+n_{1} < n_{2} < \cdots < n_{i} < \cdots
 \]
 
-is an increasing sequence of positive integers, then the sequence \(( {y}_{i})\) defined by setting \({y}_{i} = {x}_{{n}_{i}}\) is called a \idx[subsequence]{Subsequence} of the sequence \(( {x}_{n})\). The space \(X\) is said to be sequentially compact if every sequence of points of \(X\) has a convergent subsequence.
+is an increasing sequence of positive integers, then the sequence \(( y_{i})\) defined by setting \(y_{i} = x_{n_{i}}\) is called a \idx[subsequence]{Subsequence} of the sequence \(( x_{n})\). The space \(X\) is said to be sequentially compact if every sequence of points of \(X\) has a convergent subsequence.
 \end{definition}
 
 **Theorem 28.2. Let \(X\) be a metrizable space. Then the following are equivalent:
@@ -1239,62 +1239,62 @@ is an increasing sequence of positive integers, then the sequence \(( {y}_{i})\)
 \item \(X\) is sequentially compact.
 \end{enumerate}
 
-Proof. We have already proved that (1) \(\Rightarrow\) (2). To show that (2) \(\Rightarrow\) (3), assume that \(X\) is limit point compact. Given a sequence \(( {x}_{n})\) of points of \(X\), consider the set \(A = \{ {{x}_{n} \mid n \in {\mathbb{Z}}_{ + }}\}\). If the set \(A\) is finite, then there is a point \(x\) such that \(x = {x}_{n}\) for infinitely many values of \(n\). In this case, the sequence \(( {x}_{n})\) has a subsequence that is constant, and therefore converges trivially. On the other hand, if \(A\) is infinite, then \(A\) has a limit point \(x\). We define a subsequence of \(( {x}_{n})\) converging to \(x\) as follows: First choose \({n}_{1}\) so that
+Proof. We have already proved that (1) \(\Rightarrow\) (2). To show that (2) \(\Rightarrow\) (3), assume that \(X\) is limit point compact. Given a sequence \(( x_{n})\) of points of \(X\), consider the set \(A = \{ {x_{n} \mid n \in {\mathbb{Z}}_{ + }}\}\). If the set \(A\) is finite, then there is a point \(x\) such that \(x = x_{n}\) for infinitely many values of \(n\). In this case, the sequence \(( x_{n})\) has a subsequence that is constant, and therefore converges trivially. On the other hand, if \(A\) is infinite, then \(A\) has a limit point \(x\). We define a subsequence of \(( x_{n})\) converging to \(x\) as follows: First choose \(n_{1}\) so that
 
 \[
-{x}_{{n}_{1}} \in B( {x,1}) \text{.}
+x_{n_{1}} \in B( {x,1}) \text{.}
 \]
 
-Then suppose that the positive integer \({n}_{i - 1}\) is given. Because the ball \(B( {x,1/i})\) intersects \(A\) in infinitely many points, we can choose an index \({n}_{i} > {n}_{i - 1}\) such that
+Then suppose that the positive integer \(n_{i - 1}\) is given. Because the ball \(B( {x,1/i})\) intersects \(A\) in infinitely many points, we can choose an index \(n_{i} > n_{i - 1}\) such that
 
 \[
-{x}_{{n}_{i}} \in B( {x,1/i}) \text{.}
+x_{n_{i}} \in B( {x,1/i}) \text{.}
 \]
 
-Then the subsequence \({x}_{{n}_{1}},{x}_{{n}_{2}},\ldots\) converges to \(x\).
+Then the subsequence \(x_{n_{1}},x_{n_{2}},\ldots\) converges to \(x\).
 
 Finally, we show that \(( 3) \Rightarrow (1)\). This is the hardest part of the proof.
 
 First, we show that if \(X\) is sequentially compact, then the Lebesgue number lemma holds for \(X\). (This would follow from compactness, but compactness is what we are trying to prove!) Let \(\mathcal{A}\) be an open covering of \(X\). We assume that there is no \(\delta > 0\) such that each set of diameter less than \(\delta\) has an element of \(\mathcal{A}\) containing it, and derive a contradiction.
 
-Our assumption implies in particular that for each positive integer \(n\), there exists a set of diameter less than \(1/n\) that is not contained in any element of \(\mathcal{A}\) ; let \({C}_{n}\) be such a set. Choose a point \({x}_{n} \in {C}_{n}\), for each \(n\). By hypothesis, some subsequence \(( {x}_{{n}_{i}})\) of the sequence \(( {x}_{n})\) converges, say to the point \(a\). Now \(a\) belongs to some element \(A\) of the collection \(\mathcal{A}\) ; because \(A\) is open, we may choose an \(\epsilon > 0\) such that \(B( {a,\epsilon }) \subset A\). If \(i\) is large enough that \(1/{n}_{i} < \epsilon /2\), then the set \({C}_{{n}_{i}}\) lies in the \(\epsilon /2\) -neighborhood of \({x}_{{n}_{i}}\) ; if \(i\) is also chosen large enough that \(d( {{x}_{{n}_{i}},a}) < \epsilon /2\), then \({C}_{{n}_{i}}\) lies in the \(\epsilon\) -neighborhood of \(a\). But this means that \({C}_{{n}_{i}} \subset A\), contrary to hypothesis.
+Our assumption implies in particular that for each positive integer \(n\), there exists a set of diameter less than \(1/n\) that is not contained in any element of \(\mathcal{A}\) ; let \(C_{n}\) be such a set. Choose a point \(x_{n} \in {C}_{n}\), for each \(n\). By hypothesis, some subsequence \(( x_{n_{i}})\) of the sequence \(( x_{n})\) converges, say to the point \(a\). Now \(a\) belongs to some element \(A\) of the collection \(\mathcal{A}\) ; because \(A\) is open, we may choose an \(\epsilon > 0\) such that \(B( {a,\epsilon }) \subset A\). If \(i\) is large enough that \(1/n_{i} < \epsilon /2\), then the set \(C_{n_{i}}\) lies in the \(\epsilon /2\) -neighborhood of \(x_{n_{i}}\) ; if \(i\) is also chosen large enough that \(d( {x_{n_{i}},a}) < \epsilon /2\), then \(C_{n_{i}}\) lies in the \(\epsilon\) -neighborhood of \(a\). But this means that \(C_{n_{i}} \subset A\), contrary to hypothesis.
 
-Second, we show that if \(X\) is sequentially compact, then given \(\epsilon > 0\), there exists a finite covering of \(X\) by open \(\epsilon\) -balls. Once again, we proceed by contradiction. Assume that there exists an \(\epsilon > 0\) such that \(X\) cannot be covered by finitely many \(\epsilon\) -balls. Construct a sequence of points \({x}_{n}\) of \(X\) as follows: First, choose \({x}_{1}\) to be any point of \(X\). Noting that the ball \(B( {{x}_{1},\epsilon })\) is not all of \(X\) (otherwise \(X\) could be covered by a single \(\epsilon\) -ball), choose \({x}_{2}\) to be a point of \(X\) not in \(B( {{x}_{1},\epsilon })\). In general, given \({x}_{1},\ldots ,{x}_{n}\), choose \({x}_{n + 1}\) to be a point not in the union
+Second, we show that if \(X\) is sequentially compact, then given \(\epsilon > 0\), there exists a finite covering of \(X\) by open \(\epsilon\) -balls. Once again, we proceed by contradiction. Assume that there exists an \(\epsilon > 0\) such that \(X\) cannot be covered by finitely many \(\epsilon\) -balls. Construct a sequence of points \(x_{n}\) of \(X\) as follows: First, choose \(x_{1}\) to be any point of \(X\). Noting that the ball \(B( {x_{1},\epsilon })\) is not all of \(X\) (otherwise \(X\) could be covered by a single \(\epsilon\) -ball), choose \(x_{2}\) to be a point of \(X\) not in \(B( {x_{1},\epsilon })\). In general, given \(x_{1},\ldots ,x_{n}\), choose \(x_{n + 1}\) to be a point not in the union
 
 \[
-B( {{x}_{1},\epsilon }) \cup \cdots \cup B( {{x}_{n},\epsilon }),
+B( {x_{1},\epsilon }) \cup \cdots \cup B( {x_{n},\epsilon }),
 \]
 
-using the fact that these balls do not cover \(X\). Note that by construction \(d( {{x}_{n + 1},{x}_{i}}) \geq\) \(\epsilon\) for \(i = 1,\ldots, n\). Therefore, the sequence \(( {x}_{n})\) can have no convergent subsequence; in fact, any ball of radius \(\epsilon /2\) can contain \({x}_{n}\) for at most one value of \(n\).
+using the fact that these balls do not cover \(X\). Note that by construction \(d( {x_{n + 1},x_{i}}) \geq\) \(\epsilon\) for \(i = 1,\ldots, n\). Therefore, the sequence \(( x_{n})\) can have no convergent subsequence; in fact, any ball of radius \(\epsilon /2\) can contain \(x_{n}\) for at most one value of \(n\).
 
 Finally, we show that if \(X\) is sequentially compact, then \(X\) is compact. Let \(\mathcal{A}\) be an open covering of \(X\). Because \(X\) is sequentially compact, the open covering \(\mathcal{A}\) has a Lebesgue number \(\delta\). Let \(\epsilon = \delta /3\) ; use sequential compactness of \(X\) to find a finite covering of \(X\) by open \(\epsilon\) -balls. Each of these balls has diameter at most \({2\delta }/3\), so it lies in an element of \(\mathcal{A}\). Choosing one such element of \(\mathcal{A}\) for each of these \(\epsilon\) -balls, we obtain a finite subcollection of \(\mathcal{A}\) that covers \(X\).
 
 \begin{centeredblock}
 \begin{example}
 \label{ex:\thesection.\theexample}
- Recall that \({\bar{S}}_{\Omega }\) denotes the minimal uncountable well-ordered set \({S}_{\Omega }\) with the point \(\Omega\) adjoined. (In the order topology, \(\Omega\) is a limit point of \({S}_{\Omega }\), which is why we introduced the notation \({\bar{S}}_{\Omega }\) for \({S}_{\Omega } \cup \{ \Omega \}\), back in \S\ 10) It is easy to see that the space \({\bar{S}}_{\Omega }\) is not metrizable, for it does not satisfy the sequence lemma: The point \(\Omega\) is a limit point of \({S}_{\Omega }\), but it is not the limit of a sequence of points of \({S}_{\Omega }\), for any sequence of points of \({S}_{\Omega }\) has an upper bound in \({S}_{\Omega }\). The space \({S}_{\Omega }\), on the other hand, does satisfy the sequence lemma, as you can readily check. Nevertheless, \({S}_{\Omega }\) is not metrizable, for it is limit point compact but not compact.
+ Recall that \(\bar{S}_{\Omega }\) denotes the minimal uncountable well-ordered set \(S_{\Omega }\) with the point \(\Omega\) adjoined. (In the order topology, \(\Omega\) is a limit point of \(S_{\Omega }\), which is why we introduced the notation \(\bar{S}_{\Omega }\) for \(S_{\Omega } \cup \{ \Omega \}\), back in \S\ 10) It is easy to see that the space \(\bar{S}_{\Omega }\) is not metrizable, for it does not satisfy the sequence lemma: The point \(\Omega\) is a limit point of \(S_{\Omega }\), but it is not the limit of a sequence of points of \(S_{\Omega }\), for any sequence of points of \(S_{\Omega }\) has an upper bound in \(S_{\Omega }\). The space \(S_{\Omega }\), on the other hand, does satisfy the sequence lemma, as you can readily check. Nevertheless, \(S_{\Omega }\) is not metrizable, for it is limit point compact but not compact.
 \end{example}
 \end{centeredblock}
 
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item Give \({[ 0,1] }^{\omega }\) the uniform topology. Find an infinite subset of this space that has no limit point
-\item Show that \([ {0,1}]\) is not limit point compact as a subspace of \({\mathbb{R}}_{\ell }\).
+\item Show that \([ {0,1}]\) is not limit point compact as a subspace of \(\mathbb{R}_{\ell }\).
 \item Let \(X\) be limit point compact.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item If \(f : X \rightarrow Y\) is continuous, does it follow that \(f( X)\) is limit point compact?
  \item If \(A\) is a closed subset of \(X\), does it follow that \(A\) is limit point compact?
  \item If \(X\) is a subspace of the Hausdorff space \(Z\), does it follow that \(X\) is closed in \(Z\) ? We comment that it is not in general true that the product of two limit point compact spaces is limit point compact, even if the Hausdorff condition is assumed. But the examples are fairly sophisticated. See \cite{SteenSeebach1970}, Example II2.
  \end{enumerate}
-\item A space \(X\) is said to be countably compact if every countable open covering of \(X\) contains a finite subcollection that covers \(X\). Show that for a \({T}_{1}\) space \(X\), \idx[countable compactness]{Countable compactness} is equivalent to limit point compactness. [Hint: If no finite subcollection of \({U}_{n}\) covers \(X\), choose \({x}_{n} \notin {U}_{1} \cup \cdots \cup {U}_{n}\), for each \(n\).]
-\item Show that \(X\) is countably compact if and only if every nested sequence \({C}_{1} \supset\) \({C}_{2} \supset\) - of closed nonempty sets of \(X\) has a nonempty intersection.
-\item Let \((X, d)\) be a metric space. If \(f : X \rightarrow X\) satisfies the condition \[ d( {f(x),f( y) }) = d( {x,y}) \] for all \(x,y \in X\), then \(f\) is called an \idx[isometry]{Isometry} of \(X\). Show that if \(f\) is an isometry and \(X\) is compact, then \(f\) is bijective and hence a homeomorphism. [Hint: If \(a \notin f( X)\), choose \(\epsilon\) so that the \(\epsilon\) -neighborhood of \(a\) is disjoint from \(f( X)\). Set \({x}_{1} = a\), and \({x}_{n + 1} = f( {x}_{n})\) in general. Show that \(d( {{x}_{n},{x}_{m}}) \geq \epsilon\) for \(n \neq m\).]
+\item A space \(X\) is said to be countably compact if every countable open covering of \(X\) contains a finite subcollection that covers \(X\). Show that for a \(T_{1}\) space \(X\), \idx[countable compactness]{Countable compactness} is equivalent to limit point compactness. [Hint: If no finite subcollection of \(U_{n}\) covers \(X\), choose \(x_{n} \notin {U}_{1} \cup \cdots \cup {U}_{n}\), for each \(n\).]
+\item Show that \(X\) is countably compact if and only if every nested sequence \(C_{1} \supset\) \(C_{2} \supset\) - of closed nonempty sets of \(X\) has a nonempty intersection.
+\item Let \((X, d)\) be a metric space. If \(f : X \rightarrow X\) satisfies the condition \[ d( {f(x),f( y) }) = d( {x,y}) \] for all \(x,y \in X\), then \(f\) is called an \idx[isometry]{Isometry} of \(X\). Show that if \(f\) is an isometry and \(X\) is compact, then \(f\) is bijective and hence a homeomorphism. [Hint: If \(a \notin f( X)\), choose \(\epsilon\) so that the \(\epsilon\) -neighborhood of \(a\) is disjoint from \(f( X)\). Set \(x_{1} = a\), and \(x_{n + 1} = f( x_{n})\) in general. Show that \(d( {x_{n},x_{m}}) \geq \epsilon\) for \(n \neq m\).]
 \item Let \((X, d)\) be a metric space. If \(f\) satisfies the condition \[ d( {f(x),f( y) }) < d( {x,y}) \] for all \(x,y \in X\) with \(x \neq y\), then \(f\) is called a \idx[shrinking map]{Shrinking map}. If there is a number \(\alpha < 1\) such that \[ d( {f(x),f( y) }) \leq {\alpha d}( {x,y}) \] for all \(x,y \in X\), then \(f\) is called a \idx[contraction]{Contraction}. A fixed point of \(f\) is a point \(x\) such that \(f(x) = x\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
- \item If \(f\) is a contraction and \(X\) is compact, show \(f\) has a unique fixed point. [Hint: Define \({f}^{1} = f\) and \({f}^{n + 1} = f \circ {f}^{n}\). Consider the intersection \(A\) of the sets \({A}_{n} = {f}^{n}( X)\).]
- \item Show more generally that if \(f\) is a shrinking map and \(X\) is compact, then \(f\) has a unique fixed point. [Hint: Let \(A\) be as before. Given \(x \in A\), choose \({x}_{n}\) so that \(x = {f}^{n + 1}( {x}_{n})\). If \(a\) is the limit of some subsequence of the sequence \({y}_{n} = {f}^{n}( {x}_{n})\), show that \(a \in A\) and \(f( a) = x\). Conclude that \(A = f( A)\), so that diam \(A = 0\).]
- \item Let \(X = [ {0,1}]\). Show that \(f(x) = x - {x}^{2}/2\) maps \(X\) into \(X\) and is a shrinking map that is not a contraction. [Hint Use the mean-value theorem of calculus.]
- \item The result in (a) holds if \(X\) is a complete metric space, such as \(\mathbb{R}\) ; see the exercises of \(\S\ {43}\). The result in (b) does not. Show that the map \(f : \mathbb{R} \rightarrow\) \(\mathbb{R}\) given by \(f(x) = [ {x + {( {x}^{2} + 1) }^{1/2}}] /2\) is a shrinking map that is not a contraction and has no fixed point.
+ \item If \(f\) is a contraction and \(X\) is compact, show \(f\) has a unique fixed point. [Hint: Define \(f^{1} = f\) and \(f^{n + 1} = f \circ {f}^{n}\). Consider the intersection \(A\) of the sets \(A_{n} = f^{n}( X)\).]
+ \item Show more generally that if \(f\) is a shrinking map and \(X\) is compact, then \(f\) has a unique fixed point. [Hint: Let \(A\) be as before. Given \(x \in A\), choose \(x_{n}\) so that \(x = f^{n + 1}( x_{n})\). If \(a\) is the limit of some subsequence of the sequence \(y_{n} = f^{n}( x_{n})\), show that \(a \in A\) and \(f( a) = x\). Conclude that \(A = f( A)\), so that diam \(A = 0\).]
+ \item Let \(X = [ {0,1}]\). Show that \(f(x) = x - x^{2}/2\) maps \(X\) into \(X\) and is a shrinking map that is not a contraction. [Hint Use the mean-value theorem of calculus.]
+ \item The result in (a) holds if \(X\) is a complete metric space, such as \(\mathbb{R}\) ; see the exercises of \(\S\ {43}\). The result in (b) does not. Show that the map \(f : \mathbb{R} \rightarrow\) \(\mathbb{R}\) given by \(f(x) = [ {x + {( x^{2} + 1) }^{1/2}}] /2\) is a shrinking map that is not a contraction and has no fixed point.
  \end{enumerate}
 \end{enumerate}
 \booksection{29}{Local Compactness}
@@ -1317,16 +1317,16 @@ Note that a compact space is automatically locally compact.
 \begin{centeredblock*}
 \begin{example}
 \label{ex:\thesection.\theexample}
- The space \({\mathbb{R}}^{n}\) is locally compact, the point \(x\) lies in some basis element \(( {{a}_{1},{b}_{1}}) \times \cdots \times ( {{a}_{n},{b}_{n}})\), which in turn lies in the compact subspace \([ {{a}_{1},{b}_{1}}] \times \cdots \times [ {{a}_{n},{b}_{n}}]\). The space \({\mathbb{R}}^{\omega }\) is not locally compact, none of its basis elements are contained in compact subspaces For if
+ The space \(\mathbb{R}^{n}\) is locally compact, the point \(x\) lies in some basis element \(( {a_{1},b_{1}}) \times \cdots \times ( {a_{n},b_{n}})\), which in turn lies in the compact subspace \([ {a_{1},b_{1}}] \times \cdots \times [ {a_{n},b_{n}}]\). The space \(\mathbb{R}^{\omega }\) is not locally compact, none of its basis elements are contained in compact subspaces For if
 
 \[
-B = ( {{a}_{1},{b}_{1}}) \times \cdots \times ( {{a}_{n},{b}_{n}}) \times \mathbb{R} \times \cdots \times \mathbb{R} \times \cdots
+B = ( {a_{1},b_{1}}) \times \cdots \times ( {a_{n},b_{n}}) \times \mathbb{R} \times \cdots \times \mathbb{R} \times \cdots
 \]
 
 were contained in a compact subspace, then its closure
 
 \[
-\bar{B} = [ {{a}_{1},{b}_{1}}] \times \cdots \times [ {{a}_{n},{b}_{n}}] \times \mathbb{R} \times \cdots
+\bar{B} = [ {a_{1},b_{1}}] \times \cdots \times [ {a_{n},b_{n}}] \times \mathbb{R} \times \cdots
 \]
 
 would be compact, which it is not.
@@ -1352,45 +1352,45 @@ Two of the most well-behaved classes of spaces to deal with in mathematics are t
  \item \(Y\) is a compact Hausdorff space.
  \end{enumerate}
 
-If \(Y\) and \({Y}^{\prime }\) are two spaces satisfying these conditions, then there is a homeomorphism of \(Y\) with \({Y}^{\prime }\) that equals the identity map on \(X\).
+If \(Y\) and \(Y^{\prime }\) are two spaces satisfying these conditions, then there is a homeomorphism of \(Y\) with \(Y^{\prime }\) that equals the identity map on \(X\).
 
 \end{theorem}
 \begin{proof}
-Step 1. We first verify uniqueness. Let \(Y\) and \({Y}^{\prime }\) be two spaces satisfying these conditions. Define \(h : Y \rightarrow {Y}^{\prime }\) by letting \(h\) map the single point \(p\) of \(Y - X\) to the point \(q\) of \({Y}^{\prime } - X\), and letting \(h\) equal the identity on \(X\). We show that if \(U\) is open in \(Y\), then \(h( U)\) is open in \({Y}^{\prime }\). Symmetry then implies that \(h\) is a homeomorphism.
+Step 1. We first verify uniqueness. Let \(Y\) and \(Y^{\prime }\) be two spaces satisfying these conditions. Define \(h : Y \rightarrow {Y}^{\prime }\) by letting \(h\) map the single point \(p\) of \(Y - X\) to the point \(q\) of \(Y^{\prime } - X\), and letting \(h\) equal the identity on \(X\). We show that if \(U\) is open in \(Y\), then \(h( U)\) is open in \(Y^{\prime }\). Symmetry then implies that \(h\) is a homeomorphism.
 
-First, consider the case where \(U\) does not contain \(p\). Then \(h( U) = U\). Since \(U\) is open in \(Y\) and is contained in \(X\), it is open in \(X\). Because \(X\) is open in \({Y}^{\prime }\), the set \(U\) is also open in \({Y}^{\prime }\), as desired.
+First, consider the case where \(U\) does not contain \(p\). Then \(h( U) = U\). Since \(U\) is open in \(Y\) and is contained in \(X\), it is open in \(X\). Because \(X\) is open in \(Y^{\prime }\), the set \(U\) is also open in \(Y^{\prime }\), as desired.
 
-Second, suppose that \(U\) contains \(p\). Since \(C = Y - U\) is closed in \(Y\), it is compact as a subspace of \(Y\). Because \(C\) is contained in \(X\), it is a compact subspace of \(X\). Then because \(X\) is a subspace of \({Y}^{\prime }\), the space \(C\) is also a compact subspace of \({Y}^{\prime }\). Because \({Y}^{\prime }\) is Hausdorff, \(C\) is closed in \({Y}^{\prime }\), so that \(h( U) = {Y}^{\prime } - C\) is open in \({Y}^{\prime }\), as desired.
+Second, suppose that \(U\) contains \(p\). Since \(C = Y - U\) is closed in \(Y\), it is compact as a subspace of \(Y\). Because \(C\) is contained in \(X\), it is a compact subspace of \(X\). Then because \(X\) is a subspace of \(Y^{\prime }\), the space \(C\) is also a compact subspace of \(Y^{\prime }\). Because \(Y^{\prime }\) is Hausdorff, \(C\) is closed in \(Y^{\prime }\), so that \(h( U) = Y^{\prime } - C\) is open in \(Y^{\prime }\), as desired.
 
 Step 2. Now we suppose \(X\) is locally compact Hausdorff and construct the space \(Y\). Step 1 gives us an idea how to proceed. Let us take some object that is not a point of \(X\), denote it by the symbol \(\infty\) for convenience, and adjoin it to \(X\), forming the set \(Y = X \cup \{ \infty \}\). Topologize \(Y\) by defining the collection of open sets of \(Y\) to consist of (1) all sets \(U\) that are open in \(X\), and (2) all sets of the form \(Y - C\), where \(C\) is a compact subspace of \(X\).
 
 We need to check that this collection is, in fact, a topology on \(Y\) The empty set is a set of type (1), and the space \(Y\) is a set of type (2). Checking that the intersection of two open sets is open involves three cases:
 
 \[
-{U}_{1} \cap {U}_{2}\;\text{ is of type (1). }
+U_{1} \cap {U}_{2}\;\text{ is of type (1). }
 \]
 
 \[
-( {Y - {C}_{1}}) \cap ( {Y - {C}_{2}}) = Y - ( {{C}_{1} \cup {C}_{2}}) \;\text{ is of type (2). }
+( {Y - C_{1}}) \cap ( {Y - C_{2}}) = Y - ( {C_{1} \cup {C}_{2}}) \;\text{ is of type (2). }
 \]
 
 \[
-{U}_{1} \cap ( {Y - {C}_{1}}) = {U}_{1} \cap ( {X - {C}_{1}}) \;\text{ is of type }( l),
+U_{1} \cap ( {Y - C_{1}}) = U_{1} \cap ( {X - C_{1}}) \;\text{ is of type }( l),
 \]
 
-because \({C}_{1}\) is closed in \(X\). Similarly, one checks that the union of any collection of open sets is open.
+because \(C_{1}\) is closed in \(X\). Similarly, one checks that the union of any collection of open sets is open.
 
 \[
 \bigcup {U}_{\alpha } = U
 \]
 
 \[
-\bigcup ( {Y - {C}_{\beta }}) = Y - ( {\bigcap {C}_{\beta }}) = Y - C
+\bigcup ( {Y - C_{\beta }}) = Y - ( {\bigcap {C}_{\beta }}) = Y - C
 \]
  is of type (2).
 
 \[
-( {\bigcup {U}_{\alpha }}) \cup ( {\bigcup ( {Y - {C}_{\beta }}) }) = U \cup ( {Y - C}) = Y - ( {C - U})
+( {\bigcup {U}_{\alpha }}) \cup ( {\bigcup ( {Y - C_{\beta }}) }) = U \cup ( {Y - C}) = Y - ( {C - U})
 \]
 
 which is of type (2) because \(C - U\) is a closed subspace of \(C\) and therefore compact.
@@ -1415,7 +1415,7 @@ We have shown that \(X\) has a one-point compactification \(Y\) if and only if \
 \begin{centeredblock}
 \begin{example}
 \label{ex:\thesection.\theexample}
- The one-point compactification of the real line \(\mathbb{R}\) is homeomorphic with the circle, as you may readily check. Similarly, the one-point compactification of \({\mathbb{R}}^{2}\) is homeomorphic to the sphere \({S}^{2}\). If \({\mathbb{R}}^{2}\) is looked at as the space \(\mathbb{C}\) of complex numbers, then \(\mathbb{C} \cup \{ \infty \}\) is called the Riemann sphere, or the extended complex plane.
+ The one-point compactification of the real line \(\mathbb{R}\) is homeomorphic with the circle, as you may readily check. Similarly, the one-point compactification of \(\mathbb{R}^{2}\) is homeomorphic to the sphere \(S^{2}\). If \(\mathbb{R}^{2}\) is looked at as the space \(\mathbb{C}\) of complex numbers, then \(\mathbb{C} \cup \{ \infty \}\) is called the Riemann sphere, or the extended complex plane.
 \end{example}
 \end{centeredblock}
 
@@ -1455,23 +1455,23 @@ This follows from \hyperref[thm:29.1]{Theorem 29.1} and \hyperref[cor:29.3]{Coro
 \section*{Exercises}
 \begin{enumerate}[itemsep=0.4em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=\arabic*., ref=\arabic*]
 \item Show that the rationals \(\mathbb{Q}\) are not locally compact.
-\item Let \(\{ {X}_{\alpha }\}\) be an indexed family of nonempty spaces.
+\item Let \(\{ X_{\alpha }\}\) be an indexed family of nonempty spaces.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
- \item Show that if \(\prod {X}_{\alpha }\) is locally compact, then each \({X}_{\alpha }\) is locally compact and \({X}_{\alpha }\) is compact for all but finitely many values of \(\alpha\).
+ \item Show that if \(\prod {X}_{\alpha }\) is locally compact, then each \(X_{\alpha }\) is locally compact and \(X_{\alpha }\) is compact for all but finitely many values of \(\alpha\).
  \item Prove the converse, assuming the Tychonoff theorem.
  \end{enumerate}
 \item Let \(X\) be a locally compact space. If \(f : X \rightarrow Y\) is continuous, does it follow that \(f( X)\) is locally compact? What if \(f\) is both continuous and open? Justify your answer.
 \item Show that \({[ 0,1] }^{\omega }\) is not locally compact in the uniform topology.
-\item If \(f : {X}_{1} \rightarrow {X}_{2}\) is a homeomorphism of locally compact Hausdorff spaces, show \(f\) extends to a homeomorphism of their one-point compactifications.
-\item Show that the one-point compactification of \(\mathbb{R}\) is homeomorphic with the circle \({S}^{1}\).
-\item Show that the one-point compactification of \({S}_{\Omega }\) is homeomorphic with \({\bar{S}}_{\Omega }\).
-\item Show that the one-point compactification of \({\mathbb{Z}}_{ + }\) is homeomorphic with the subspace \(\{ 0\} \cup \{ {1/n \mid n \in {\mathbb{Z}}_{ + }}\}\) of \(\mathbb{R}\).
+\item If \(f : X_{1} \rightarrow {X}_{2}\) is a homeomorphism of locally compact Hausdorff spaces, show \(f\) extends to a homeomorphism of their one-point compactifications.
+\item Show that the one-point compactification of \(\mathbb{R}\) is homeomorphic with the circle \(S^{1}\).
+\item Show that the one-point compactification of \(S_{\Omega }\) is homeomorphic with \(\bar{S}_{\Omega }\).
+\item Show that the one-point compactification of \(\mathbb{Z}_{ + }\) is homeomorphic with the subspace \(\{ 0\} \cup \{ {1/n \mid n \in {\mathbb{Z}}_{ + }}\}\) of \(\mathbb{R}\).
 \item Show that if \(G\) is a locally compact topological group and \(H\) is a subgroup, then \(G/H\) is locally compact.
 \item Show that if \(X\) is a Hausdorff space that is locally compact at the point \(x\), then for each neighborhood \(U\) of \(x\), there is a neighborhood \(V\) of \(x\) such that \(\bar{V}\) is compact and \(\bar{V} \subset U\).
 
 \item[*11.] Prove the following:
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
- \item \textsl{Lemma.} If \(p : X \rightarrow Y\) is a quotient map and if \(Z\) is a locally compact Hausdorff space, then the map \[ \pi = p \times {i}_{Z} : X \times Z \rightarrow Y \times Z \] is a quotient map. [Hint: If \({\pi }^{-1}( A)\) is open and contains \(x \times y\), choose open sets \({U}_{1}\) and \(V\) with \(\bar{V}\) compact, such that \(x \times y \in {U}_{1} \times V\) and \({U}_{1} \times \bar{V} \subset {\pi }^{-1}( A)\). Given \({U}_{i} \times \bar{V} \subset {\pi }^{-1}( A)\), use the tube lemma to choose an open set \({U}_{i + 1}\) containing \({p}^{-1}( {p( {U}_{i}) })\) such that \({U}_{i + 1} \times \bar{V} \subset {\pi }^{-1}( A)\). Let \(U = \bigcup {U}_{i}\) ; show that \(U \times V\) is a saturated neighborhood of \(x \times y\) that is contained in \({\pi }^{-1}( A)\). An entirely different proof of this result will be outlined in the exercises of \S\ 46.]
+ \item \textsl{Lemma.} If \(p : X \rightarrow Y\) is a quotient map and if \(Z\) is a locally compact Hausdorff space, then the map \[ \pi = p \times {i}_{Z} : X \times Z \rightarrow Y \times Z \] is a quotient map. [Hint: If \({\pi }^{-1}( A)\) is open and contains \(x \times y\), choose open sets \(U_{1}\) and \(V\) with \(\bar{V}\) compact, such that \(x \times y \in {U}_{1} \times V\) and \(U_{1} \times \bar{V} \subset {\pi }^{-1}( A)\). Given \(U_{i} \times \bar{V} \subset {\pi }^{-1}( A)\), use the tube lemma to choose an open set \(U_{i + 1}\) containing \(p^{-1}( {p( U_{i}) })\) such that \(U_{i + 1} \times \bar{V} \subset {\pi }^{-1}( A)\). Let \(U = \bigcup {U}_{i}\) ; show that \(U \times V\) is a saturated neighborhood of \(x \times y\) that is contained in \({\pi }^{-1}( A)\). An entirely different proof of this result will be outlined in the exercises of \S\ 46.]
  \item \textsl{Theorem.} Let \(p : A \rightarrow B\) and \(q : C \rightarrow D\) be quotient maps. If \(B\) and \(C\) are locally compact Hausdorff spaces, then \(p \times q : A \times C \rightarrow B \times D\) is a quotient map.
  \end{enumerate}
 \end{enumerate}
@@ -1501,23 +1501,23 @@ A directed set \(J\) is a set with a partial order \(\preccurlyeq\) such that fo
 
 2. A subset \(K\) of \(J\) is said to be cofinal in \(J\) if for each \(\alpha \in J\), there exists \(\beta \in K\) such that \(\alpha \preccurlyeq \beta\). Show that if \(J\) is a directed set and \(K\) is cofinal in \(J\), then \(K\) is a directed set.
 
-3. Let \(X\) be a topological space. A net in \(X\) is a function \(f\) from a directed set \(J\) into \(X\). If \(\alpha \in J\), we usually denote \(f( \alpha )\) by \({x}_{\alpha }\). We denote the net \(f\) itself by the symbol \({( {x}_{\alpha }) }_{\alpha \in J}\), or merely by \(( {x}_{\alpha })\) if the index set is understood.
+3. Let \(X\) be a topological space. A net in \(X\) is a function \(f\) from a directed set \(J\) into \(X\). If \(\alpha \in J\), we usually denote \(f( \alpha )\) by \(x_{\alpha }\). We denote the net \(f\) itself by the symbol \({( x_{\alpha }) }_{\alpha \in J}\), or merely by \(( x_{\alpha })\) if the index set is understood.
 
-The net \(( {x}_{\alpha })\) is said to converge to the point \(x\) of \(X\) (written \({x}_{\alpha } \rightarrow x\) ) if for each neighborhood \(U\) of \(x\), there exists \(\alpha \in J\) such that
+The net \(( x_{\alpha })\) is said to converge to the point \(x\) of \(X\) (written \(x_{\alpha } \rightarrow x\) ) if for each neighborhood \(U\) of \(x\), there exists \(\alpha \in J\) such that
 
 \[
 \alpha \preccurlyeq \beta \Rightarrow {x}_{\beta } \in U
 \]
 
-Show that these definitions reduce to familiar ones when \(J = {\mathbb{Z}}_{ + }\).
+Show that these definitions reduce to familiar ones when \(J = \mathbb{Z}_{ + }\).
 
 4. Suppose that
 
 \[
-{( {x}_{\alpha }) }_{\alpha \in J} \rightarrow x\text{ in }X\text{ and }{( {y}_{\alpha }) }_{\alpha \in J} \rightarrow y\text{ in }Y.
+{( x_{\alpha }) }_{\alpha \in J} \rightarrow x\text{ in }X\text{ and }{( y_{\alpha }) }_{\alpha \in J} \rightarrow y\text{ in }Y.
 \]
 
-Show that \(( {{x}_{\alpha } \times {y}_{\alpha }}) \rightarrow x \times y\) in \(X \times Y\).
+Show that \(( {x_{\alpha } \times {y}_{\alpha }}) \rightarrow x \times y\) in \(X \times Y\).
 
 5. Show that if \(X\) is Hausdorff, a net in \(X\) converges to at most one point.
 
@@ -1525,24 +1525,24 @@ Show that \(( {{x}_{\alpha } \times {y}_{\alpha }}) \rightarrow x \times y\) in 
 
 [Hint: To prove the implication \(\Rightarrow\), take as index set the collection of all neighborhoods of \(x\), partially ordered by reverse inclusion.]
 
-7. Theorem. Let \(f : X \rightarrow Y\). Then \(f\) is continuous if and only if for every convergent net \(( {x}_{\alpha })\) in \(X\), converging to \(x\), say, the net \(( {f( {x}_{\alpha }) })\) converges to \(f(x)\).
+7. Theorem. Let \(f : X \rightarrow Y\). Then \(f\) is continuous if and only if for every convergent net \(( x_{\alpha })\) in \(X\), converging to \(x\), say, the net \(( {f( x_{\alpha }) })\) converges to \(f(x)\).
 
-8. Let \(f : J \rightarrow X\) be a net in \(X\) ; let \(f( \alpha ) = {x}_{\alpha }\). If \(K\) is a directed set and \(g : K \rightarrow J\) is a function such that
+8. Let \(f : J \rightarrow X\) be a net in \(X\) ; let \(f( \alpha ) = x_{\alpha }\). If \(K\) is a directed set and \(g : K \rightarrow J\) is a function such that
 
 (i) \(i \preccurlyeq j \Rightarrow g( i) \preccurlyeq g( j)\),
 
 (ii) \(g( K)\) is cofinal in \(J\),
 
-then the composite function \(f \circ g : K \rightarrow X\) is called a subnet of \(( {x}_{\alpha })\). Show that if the net \(( {x}_{\alpha })\) converges to \(x\), so does any subnet.
+then the composite function \(f \circ g : K \rightarrow X\) is called a subnet of \(( x_{\alpha })\). Show that if the net \(( x_{\alpha })\) converges to \(x\), so does any subnet.
 
-9. Let \({( {x}_{\alpha }) }_{\alpha \in J}\) be a net in \(X\). We say that \(x\) is an accumulation point of the net \(( {x}_{\alpha })\) if for each neighborhood \(U\) of \(x\), the set of those \(\alpha\) for which \({x}_{\alpha } \in U\) is cofinal in \(J\).
+9. Let \({( x_{\alpha }) }_{\alpha \in J}\) be a net in \(X\). We say that \(x\) is an accumulation point of the net \(( x_{\alpha })\) if for each neighborhood \(U\) of \(x\), the set of those \(\alpha\) for which \(x_{\alpha } \in U\) is cofinal in \(J\).
 
 \textsl{Lemma.}
- The net \(( {x}_{\alpha })\) has the point \(x\) as an accumulation point if and only if some subnet of \(( {x}_{\alpha })\) converges to \(x\).
+ The net \(( x_{\alpha })\) has the point \(x\) as an accumulation point if and only if some subnet of \(( x_{\alpha })\) converges to \(x\).
 
-[Hint: To prove the implication \(\Rightarrow\), let \(K\) be the set of all pairs \(( {\alpha, U})\) where \(\alpha \in J\) and \(U\) is a neighborhood of \(x\) containing \({x}_{\alpha }\). Define \(( {\alpha, U}) \preccurlyeq ( {\beta, V})\) if \(\alpha \preccurlyeq \beta\) and \(V \subset U\). Show that \(K\) is a directed set and use it to define the subnet.]
+[Hint: To prove the implication \(\Rightarrow\), let \(K\) be the set of all pairs \(( {\alpha, U})\) where \(\alpha \in J\) and \(U\) is a neighborhood of \(x\) containing \(x_{\alpha }\). Define \(( {\alpha, U}) \preccurlyeq ( {\beta, V})\) if \(\alpha \preccurlyeq \beta\) and \(V \subset U\). Show that \(K\) is a directed set and use it to define the subnet.]
 
-10. Theorem. X is compact if and only if every net in \(X\) has a convergent subnet. [Hint: To prove the implication \(\Rightarrow\), let \({B}_{\alpha } = \{ {{x}_{\beta } \mid \alpha \preccurlyeq \beta }\}\) and show that \(\{ {B}_{\alpha }\}\) has the finite intersection property. To prove \(\Leftarrow\), let \(\mathcal{A}\) be a collection of closed sets having the finite intersection property, and let \(\mathcal{B}\) be the collection of all finite intersections of elements of \(\mathcal{A}\), partially ordered by reverse inclusion.]
+10. Theorem. X is compact if and only if every net in \(X\) has a convergent subnet. [Hint: To prove the implication \(\Rightarrow\), let \(B_{\alpha } = \{ {x_{\beta } \mid \alpha \preccurlyeq \beta }\}\) and show that \(\{ B_{\alpha }\}\) has the finite intersection property. To prove \(\Leftarrow\), let \(\mathcal{A}\) be a collection of closed sets having the finite intersection property, and let \(\mathcal{B}\) be the collection of all finite intersections of elements of \(\mathcal{A}\), partially ordered by reverse inclusion.]
 
 11. Corollary. Let \(G\) be a topological group; let \(A\) and \(B\) be subsets of \(G\). If \(A\) is closed in \(G\) and \(B\) is compact, then \(A \cdot B\) is closed in \(G\). [Hint: First give a proof using sequences, assuming that \(G\) is metrizable.]
 
