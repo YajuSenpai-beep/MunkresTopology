@@ -73,15 +73,15 @@
     {\section*{\S\ #2\ #3\IfValueT{#4}{ #4}}}%
   \phantomsection
   \IfBooleanTF{#1}
-    {\addcontentsline{toc}{section}{\llap{\raisebox{0.15ex}{\small *}}#2\quad#3}}
-    {\addcontentsline{toc}{section}{#2\quad#3}}%
+    {\addcontentsline{toc}{section}{\makebox[1.6em][r]{\raisebox{0.15ex}{\small *}#2}\quad#3}}
+    {\addcontentsline{toc}{section}{\makebox[1.6em][r]{#2}\quad#3}}%
   \markright{#3}%
 }
 % Supplementary exercises: *-prefixed, no section number
 \NewDocumentCommand{\suppsection}{m}{%
   \section*{\raisebox{0.15ex}{\small *}\ #1}%
   \phantomsection
-  \addcontentsline{toc}{section}{\llap{\raisebox{0.15ex}{\small *}}#1}%
+  \addcontentsline{toc}{section}{\hspace{0.24em}\raisebox{0.15ex}{\small *}\kern0.03em#1}%
   \markright{#1}%
 }
 \titleformat{\subsection}
@@ -342,7 +342,7 @@
         \parindent \z@ \rightskip \@pnumwidth
         \parfillskip -\@pnumwidth
         \leavevmode\large
-        \hskip 1.5em #1\nobreak
+        \hskip 0.5em #1\nobreak
         \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill
         \hb@xt@\@pnumwidth{\hfil #2}\par
       \endgroup
