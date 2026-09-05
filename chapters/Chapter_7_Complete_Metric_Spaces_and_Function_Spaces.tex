@@ -525,7 +525,7 @@ Now we prove the classical version of Ascoli's theorem, which concerns compact s
 
 We begin by proving a partial converse to the preceding lemma, which holds when \(X\) and \(Y\) are compact.
 
-**Lemma 45.3. Let \(X\) be a space; let \((Y, d)\) be a metric space; assume \(X\) and \(Y\) are compact. If the subset \(\mathcal{F}\) of \(\mathcal{C}({X,Y})\) is equicontinuous under \(d\), then \(\mathcal{F}\) is totally bounded under the uniform and sup metrics corresponding to \(d\).
+*Lemma 45.3. Let \(X\) be a space; let \((Y, d)\) be a metric space; assume \(X\) and \(Y\) are compact. If the subset \(\mathcal{F}\) of \(\mathcal{C}({X,Y})\) is equicontinuous under \(d\), then \(\mathcal{F}\) is totally bounded under the uniform and sup metrics corresponding to \(d\).
 
 Proof. Since \(X\) is compact, the sup metric \(\rho\) is defined on \(\mathcal{C}({X,Y})\). Total boundedness under \(\rho\) is equivalent to total boundedness under \(\bar{\rho }\), for whenever \(\epsilon < 1\), every \(\epsilon\) -ball under \(\rho\) is also an \(\epsilon\) -ball under \(\bar{\rho }\), and conversely. Therefore, we may as well use the metric \(\rho\) throughout.
 
@@ -564,7 +564,7 @@ Thus \(f\) belongs to \(B_{\rho }({f_{\alpha },\epsilon })\), as asserted.
 If \((Y, d)\) is a metric space, a subset \(\mathcal{F}\) of \(\mathcal{C}({X,Y})\) is said to be pointwise bounded under \(d\) if for each \(a \in X\), the subset \(\mathcal{F}_{a} = \{ f( a) \mid f \in \mathcal{F}\}\) of \(Y\) is bounded under \(d\).
 \end{definition}
 
-**Theorem 45.4 (Ascoli's theorem, classical version). Let \(X\) be a compact space; let \(({\mathbb{R}^{n},d})\) denote euclidean space in either the square metric or the euclidean metric; give \(\mathcal{C}({X,\mathbb{R}^{n}})\) the corresponding uniform topology. A subspace \(\mathcal{F}\) of \(\mathcal{C}({X,\mathbb{R}^{n}})\) has compact closure if and only if \(\mathcal{F}\) is equicontinuous and pointwise bounded under \(d\).
+*Theorem 45.4 (Ascoli's theorem, classical version). Let \(X\) be a compact space; let \(({\mathbb{R}^{n},d})\) denote euclidean space in either the square metric or the euclidean metric; give \(\mathcal{C}({X,\mathbb{R}^{n}})\) the corresponding uniform topology. A subspace \(\mathcal{F}\) of \(\mathcal{C}({X,\mathbb{R}^{n}})\) has compact closure if and only if \(\mathcal{F}\) is equicontinuous and pointwise bounded under \(d\).
 
 \begin{proof}
 Since \(X\) is compact, the sup metric \(\rho\) is defined on \(\mathcal{C}({X,\mathbb{R}^{n}})\) and gives the uniform topology on \(\mathcal{C}({X,\mathbb{R}^{n}})\). Throughout, let \(\mathcal{G}\) denote the closure of \(\mathcal{F}\) in \(\mathcal{C}({X,\mathbb{R}^{n}})\).
@@ -589,7 +589,7 @@ Completeness is easy, for \(\mathcal{G}\) is a closed subspace of the complete m
 We verify total boundedness. First, Step 2 implies that \(\mathcal{G}\) is equicontinuous and pointwise bounded under \(d\) ; then Step 3 tells us that there is a compact subspace \(Y\) of \(\mathbb{R}^{n}\) such that \(\mathcal{G} \subset \mathcal{C}({X,Y})\). Equicontinuity of \(\mathcal{G}\) now implies, by Lemma 45.3, that \(\mathcal{G}\) is totally bounded under \(\rho\), as desired.
 \end{proof}
 
-**Corollary 45.5. Let \(X\) be compact; let \(d\) denote either the square metric or the euclidean metric on \(\mathbb{R}^{n}\) ; give \(\mathcal{C}({X,\mathbb{R}^{n}})\) the corresponding uniform topology. A subspace \(\mathcal{F}\) of \(\mathcal{C}({X,\mathbb{R}^{n}})\) is compact if and only if it is closed, bounded under the sup metric \(\rho\), and equicontinuous under \(d\).
+*Corollary 45.5. Let \(X\) be compact; let \(d\) denote either the square metric or the euclidean metric on \(\mathbb{R}^{n}\) ; give \(\mathcal{C}({X,\mathbb{R}^{n}})\) the corresponding uniform topology. A subspace \(\mathcal{F}\) of \(\mathcal{C}({X,\mathbb{R}^{n}})\) is compact if and only if it is closed, bounded under the sup metric \(\rho\), and equicontinuous under \(d\).
 
 Proof. If \(\mathcal{F}\) is compact, it must be closed and bounded; the preceding theorem implies that it is also equicontinuous. Conversely, if \(\mathcal{F}\) is closed, it equals its closure \(\mathcal{G}\) ; if it is bounded under \(\rho\), it is pointwise bounded under \(d\) ; and if it is also equicontinuous, the preceding theorem implies that it is compact.
 
@@ -702,7 +702,13 @@ A space \(X\) is said to be compactly generated if it satisfies the following co
 
 This condition is equivalent to requiring that a set \(B\) be closed in \(X\) if \(B \cap C\) is closed in \(C\) for each compact \(C\). It is a fairly mild restriction on the space; many familiar spaces are compactly generated. For instance:
 
-\hyperref[lem:46.3]{Lemma 46.3}. If \(X\) is locally compact, or if \(X\) satisfies the first countability axiom, then \(X\) is compactly generated. Proof. Suppose that \(X\) is locally compact. Let \(A \cap C\) be open in \(C\) for every compact subspace \(C\) of \(X\). We show \(A\) is open in \(X\). Given \(x \in A\), choose a neighborhood \(U\) of \(x\) that lies in a compact subspace \(C\) of \(X\). Since \(A \cap C\) is open in \(C\) by hypothesis, \(A \cap U\) is open in \(U\), and hence open in \(X\). Then \(A \cap U\) is a neighborhood of \(x\) contained in \(A\), so that \(A\) is open in \(X\).
+\begin{lemma}
+\label{lem:46.3}
+If \(X\) is locally compact, or if \(X\) satisfies the first countability axiom, then \(X\) is compactly generated.
+\end{lemma}
+
+\begin{proof}
+Suppose that \(X\) is locally compact. Let \(A \cap C\) be open in \(C\) for every compact subspace \(C\) of \(X\). We show \(A\) is open in \(X\). Given \(x \in A\), choose a neighborhood \(U\) of \(x\) that lies in a compact subspace \(C\) of \(X\). Since \(A \cap C\) is open in \(C\) by hypothesis, \(A \cap U\) is open in \(U\), and hence open in \(X\). Then \(A \cap U\) is a neighborhood of \(x\) contained in \(A\), so that \(A\) is open in \(X\).
 
 Suppose that \(X\) satisfies the first countability axiom. If \(B \cap C\) is closed in \(C\) for each compact subspace \(C\) of \(X\), we show that \(B\) is closed in \(X\). Let \(x\) be a point of \(\bar{B}\) ; we show that \(x \in B\). Since \(X\) has a countable basis at \(x\), there is a sequence \((x_{n})\) of points of \(B\) converging to \(x\). The subspace
 
@@ -711,6 +717,7 @@ C = \{ x\} \cup \{ {x_{n} \mid n \in {\mathbb{Z}}_{ + }}\}
 \]
 
 is compact, so that \(B \cap C\) is by assumption closed in \(C\). Since \(B \cap C\) contains \(x_{n}\) for every \(n\), it contains \(x\) as well. Therefore, \(x \in B\), as desired.
+\end{proof}
 
 The crucial fact about compactly generated spaces is the following:
 
@@ -830,7 +837,10 @@ Given a function \(f : X \times Z \rightarrow Y\), there is a corresponding func
 Conversely, given \(F : Z \rightarrow \mathcal{C}({X,Y})\), this equation defines a corresponding function \(f : X \times Z \rightarrow Y\). We say that \(F\) is the map of \(Z\) into \(\mathcal{C}({X,Y})\) that is induced by \(f\).
 \end{definition}
 
-**Theorem 46.11. Let \(X\) and \(Y\) be spaces; give \(\mathcal{C}({X,Y})\) the compact-open topology. If \(f : X \times Z \rightarrow Y\) is continuous, then so is the induced function \(F : Z \rightarrow \mathcal{C}({X,Y})\). The converse holds if \(X\) is locally compact Hausdorff.
+\begin{theorem}
+\label{thm:\thetheorem}
+Let \(X\) and \(Y\) be spaces; give \(\mathcal{C}({X,Y})\) the compact-open topology. If \(f : X \times Z \rightarrow Y\) is continuous, then so is the induced function \(F : Z \rightarrow \mathcal{C}({X,Y})\). The converse holds if \(X\) is locally compact Hausdorff.
+\end{theorem}
 
 \begin{proof}
 Suppose first that \(F\) is continuous and that \(X\) is locally compact Hausdorff. It follows that \(f\) is continuous, since \(f\) equals the composite
