@@ -9,14 +9,11 @@
 \RequirePackage{fontspec}        % 用于 XeLaTeX 字体配置
 \RequirePackage{tikz}
 \usetikzlibrary{arrows.meta, calc}
-\RequirePackage{mathrsfs}
 \RequirePackage{xcolor}
-\RequirePackage{xstring}
 \RequirePackage[shortlabels]{enumitem}
 
 % ---------- 章节格式（\part） ----------
 \RequirePackage{titlesec}
-\RequirePackage{varwidth}
 \newcommand{\partfontsize}{\fontsize{36}{48}\bfseries\selectfont}
 \titleformat{\part}[display]
   {\filright\partfontsize}
@@ -127,7 +124,6 @@
 \newcommand{\exref}[1]{\hyperref[ex:\thesection.#1]{Example #1}}
 % 跨节引用: \exrefs{12}{1} -> \hyperref[ex:12.1]{Example 1 of §12}
 \newcommand{\exrefs}[2]{\hyperref[ex:#1.#2]{Example #2 of \S#1}}
-\newcommand{\HRule}{\begin{center}\rule{0.9\linewidth}{0.2mm}\end{center}}
 \newcommand{\customfootnote}[1]{%
   \let\thefootnote\relax\footnotetext{#1}%
 }
@@ -223,7 +219,6 @@
 
 % ---------- 数学符号快捷命令 ----------
 \newcommand{\C}[1]{\ensuremath{\mathcal{#1}}}
-\newcommand{\mc}[1]{\ensuremath{\mathscr{#1}}}
 \newcommand{\B}[1]{\ensuremath{\mathbb{#1}}}
 \newcommand{\FF}[1]{\ensuremath{\mathbf{#1}}}
 \newcommand{\F}[1]{\ensuremath{\mathbf{#1}}}
@@ -303,7 +298,6 @@
 \setcounter{tocdepth}{1}
 
 % ---------- 目录 ----------
-\setcounter{tocdepth}{1}
 \makeatletter
 % All chapters: "Chapter N. Title ...... page" + dot leaders
 \renewcommand*\l@chapter[2]{%
