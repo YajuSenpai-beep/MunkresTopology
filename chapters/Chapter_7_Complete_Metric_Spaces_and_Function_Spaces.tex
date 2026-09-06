@@ -18,7 +18,6 @@ In this section we define the notion of completeness and show that if \(Y\) is a
 \[
 d({x_{n},x_{m}}) < \epsilon \;\text{ whenever }n,m \geq N
 \]
-
 The metric space \((X, d)\) is said to be complete if every Cauchy sequence in \(X\) converges.
 \end{definition}
 
@@ -31,7 +30,6 @@ Note also that if \(X\) is complete under the metric \(d\), then \(X\) is comple
 \[
 \bar{d}({x,y}) = \min \{ d({x,y}),1\}
 \]
-
 corresponding to \(d\), and conversely. For a sequence \((x_{n})\) is a Cauchy sequence under \(\bar{d}\) if and only if it is a Cauchy sequence under \(d\). And a sequence converges under \(\bar{d}\) if and only if it converges under \(d\).
 
 A useful criterion for a metric space to be complete is the following:
@@ -48,13 +46,11 @@ Given \(\epsilon > 0\), first choose \(N\) large enough that
 \[
 d({x_{n},x_{m}}) < \epsilon /2
 \]
-
 for all \(n,m \geq N\) [using the fact that \((x_{n})\) is a Cauchy sequence]. Then choose an integer \(i\) large enough that \(n_{i} \geq N\) and
 
 \[
 d({x_{n_{i}},x}) < \epsilon /2
 \]
-
 [using the fact that \(n_{1} < n_{2} < \cdots\) is an increasing sequence of integers and \(x_{n_{i}}\) converges to \(x\) ]. Putting these facts together, we have the desired result that for \(n \geq N\),
 
 \[
@@ -71,13 +67,11 @@ d({x_{n},x}) \leq d({x_{n},x_{n_{i}}}) + d({x_{n_{i}},x}) < \epsilon .
 \[
 \rho ({x_{n},x_{m}}) \leq 1
 \]
-
 for all \(n,m \geq N\), then the number
 
 \[
 M = \max \{ {\rho ({x_{1},\mathbf{0}}),\ldots ,\rho ({x_{N - 1},\mathbf{0}}),\rho ({x_{N},\mathbf{0}}) + 1}\}
 \]
-
 is an upper bound for \(\rho ({x_{n},0})\). Thus the points of the sequence \((x_{n})\) all lie in the cube \({[ -M,M] }^{k}\). Since this cube is compact, the sequence \((x_{n})\) has a convergent subsequence, by *Theorem 28.2. Then \(({\mathbb{R}^{k},\rho })\) is complete.
 
 To show that \(({\mathbb{R}^{k},d})\) is complete, note that a sequence is a Cauchy sequence relative to \(d\) if and only if it is a Cauchy sequence relative to \(\rho\), and a sequence converges relative to \(d\) if and only if it converges relative to \(\rho\).
@@ -108,7 +102,6 @@ Then \(D\) induces the product topology on \(\mathbb{R}^{\omega }\) ; we verify 
 \[
 \bar{d}({{\pi }_{i}( \mathbf{x}),{\pi }_{i}( \mathbf{y}) }) \leq {iD}({\mathbf{x},\mathbf{y}}),
 \]
-
 we see that for fixed \(i\) the sequence \({\pi }_{i}(\mathbf{x}_{n})\) is a Cauchy sequence in \(\mathbb{R}\), so it converges, say to \(a_{i}\). Then the sequence \(\mathbf{x}_{n}\) converges to the point \(\mathbf{a} = ({a_{1},a_{2},\ldots })\) of \(\mathbb{R}^{\omega }\).
 \end{proof}
 
@@ -120,7 +113,6 @@ we see that for fixed \(i\) the sequence \({\pi }_{i}(\mathbf{x}_{n})\) is a Cau
 \[
 {1.4},{1.41},{1.414},{1.4142},{1.41421},\ldots
 \]
-
 of finite decimals converging (in \(\mathbb{R}\) ) to \(\sqrt{2}\) is a Cauchy sequence in \(\mathbb{Q}\) that does not converge (in \(\mathbb{Q}\)).
 \end{example}
 \end{centeredblock}
@@ -133,7 +125,6 @@ Another noncomplete space is the open interval \((-1,1)\) in \(\mathbb{R}\), in 
 \[
 x_{n} = 1 - 1/n
 \]
-
 is a Cauchy sequence that does not converge. This example shows that completeness is not a topological property, that is, it is not preserved by homeomorphisms. For \((-1,1)\) is homeomorphic to the real line \(\mathbb{R}\), and \(\mathbb{R}\) is complete in its usual metric.
 \end{example}
 \end{centeredblock}
@@ -168,7 +159,6 @@ Recall that if \((Y, d)\) is complete, so is \(({Y,\bar{d}})\), where \(\bar{d}\
 \[
 \bar{d}({f_{n}( \alpha ),f_{m}( \alpha ) }) \leq \bar{\rho }({f_{n},f_{m}})
 \]
-
 for all \(n,m\) means that the sequence \(f_{1}( \alpha ),f_{2}( \alpha ),\ldots\) is a Cauchy sequence in \(({Y,\bar{d}})\). Hence this sequence converges, say to a point \(y_{\alpha }\). Let \(f : J \rightarrow Y\) be the function defined by \(f( \alpha ) = y_{\alpha }\). We assert that the sequence \((f_{n})\) converges to \(f\) in the metric \(\bar{\rho }\).
 
 Given \(\epsilon > 0\), first choose \(N\) large enough that \(\bar{\rho }({f_{n},f_{m}}) < \epsilon /2\) whenever \(n,m \geq\) \(N\). Then, in particular,
@@ -176,7 +166,6 @@ Given \(\epsilon > 0\), first choose \(N\) large enough that \(\bar{\rho }({f_{n
 \[
 \bar{d}({f_{n}( \alpha ),f_{m}( \alpha ) }) < \epsilon /2
 \]
-
 for \(n,m \geq N\) and \(\alpha \in J\). Letting \(n\) and \(\alpha\) be fixed, and letting \(m\) become arbitrarily large, we see that
 
 \[
@@ -188,7 +177,6 @@ This inequality holds for all \(\alpha\) in \(J\), provided merely that \(n \geq
 \[
 \bar{\rho }({f_{n},f}) \leq \epsilon /2 < \epsilon
 \]
-
 for \(n \geq N\), as desired.
 
 Now let us specialize somewhat, and consider the set \(Y^{X}\) where \(X\) is a topological space rather than merely a set. Of course, this has no effect on what has gone before; the topology of \(X\) is irrelevant when considering the set of all functions \(f : X \rightarrow Y\). But suppose that we consider the subset \(\mathcal{C}({X,Y})\) of \(Y^{X}\) consisting of all continuous functions \(f : X \rightarrow Y\). It turns out that if \(Y\) is complete, this subset is also complete in the uniform metric. The same holds for the set \(\mathcal{B}({X,Y})\) of all bounded functions \(f : X \rightarrow Y\). (A function \(f\) is said to be bounded if its image \(f(X)\) is a bounded subset of the metric space \((Y, d)\).)
@@ -203,7 +191,6 @@ The first part of this theorem is just the uniform limit theorem (\hyperref[thm:
 \[
 \bar{\rho }({f,f_{n}}) < \epsilon
 \]
-
 for all \(n > N\). Then for all \(x \in X\) and all \(n \geq N\),
 
 \[
@@ -260,7 +247,6 @@ d({x,a}) \leq d({x,b}) + d({a,b}),
 \[
 d({x,b}) \leq d({x,a}) + d({a,b}),
 \]
-
 that
 
 \[
@@ -388,7 +374,6 @@ We assert that the sequence of functions \((f_{n})\) defined in Step 2 is a Cauc
 \[
 \rho ({f_{n},f_{n + m}}) \leq 1/2^{n} + 1/2^{n + 1} + \cdots + 1/2^{n + m - 1} < 2/2^{n}
 \]
-
 for all \(n\) and \(m\).
 
 Step 4. Because \(\mathcal{C}({I,I^{2}})\) is complete, the sequence \(f_{n}\) converges to a continuous function \(f : I \rightarrow {I}^{2}\). We prove that \(f\) is surjective.
@@ -406,7 +391,6 @@ By the result of the previous paragraph, there is a point \(t_{0} \in I\) such t
 \[
 d({\mathbf{x},f(t_{0}) }) < \epsilon ,
 \]
-
 so the \(\epsilon\) -neighborhood of \(\mathbf{x}\) intersects \(f(I)\).
 
 It follows that \(\mathbf{x}\) belongs to the closure of \(f(I)\). But \(I\) is compact, so \(f(I)\) is compact and is therefore closed. Hence \(\mathbf{x}\) lies in \(f(I)\), as desired.
@@ -476,7 +460,6 @@ Let \((Y, d)\) be a metric space. Let \(\mathcal{F}\) be a subset of the functio
 \[
 d({f(x),f(x_{0}) }) < \epsilon
 \]
-
 If the set \(\mathcal{F}\) is equicontinuous at \(x_{0}\) for each \(x_{0} \in X\), it is said simply to be equicontinuous.
 \end{definition}
 
@@ -496,13 +479,11 @@ Set \(\delta = \epsilon /3\) ; cover \(\mathcal{F}\) by finitely many open \(\de
 \[
 B({f_{1},\delta }),\ldots, B({f_{n},\delta })
 \]
-
 in \(\mathcal{C}({X,Y})\). Each function \(f_{i}\) is continuous; therefore, we can choose a neighborhood \(U\) of \(x_{0}\) such that for \(i = 1,\ldots, n\),
 
 \[
 d({f_{i}(x),f_{i}(x_{0}) }) < \delta
 \]
-
 whenever \(x \in U\).
 
 Let \(f\) be an arbitrary element of \(\mathcal{F}\). Then \(f\) belongs to at least one of the above \(\delta\) -balls, say to \(B({f_{i},\delta })\). Then for \(x \in U\), we have
@@ -715,7 +696,6 @@ Suppose that \(X\) satisfies the first countability axiom. If \(B \cap C\) is cl
 \[
 C = \{ x\} \cup \{ {x_{n} \mid n \in {\mathbb{Z}}_{ + }}\}
 \]
-
 is compact, so that \(B \cap C\) is by assumption closed in \(C\). Since \(B \cap C\) contains \(x_{n}\) for every \(n\), it contains \(x\) as well. Therefore, \(x \in B\), as desired.
 \end{proof}
 
@@ -757,7 +737,6 @@ Let \(X\) be a space; let \((Y, d)\) be a metric space. For the function space \
 \[
 \text{ (uniform) } \supset \text{ (compact convergence) } \supset \text{ (pointwise convergence). }
 \]
-
 If \(X\) is compact, the first two coincide, and if \(X\) is discrete, the second two coincide.
 
 Now the definitions of the uniform topology and the compact convergence topology made specific use of the metric \(d\) for the space \(Y\). But the topology of pointwise convergence did not; in fact, it is defined for any space \(Y\). It is natural to ask whether either of these other topologies can be extended to the case where \(Y\) is an arbitrary topological space. There is no satisfactory answer to this question for the space \(Y^{X}\) of all functions mapping \(X\) into \(Y\). But for the subspace \(\mathcal{C}({X,Y})\) of continuous functions, one can prove something. It turns out that there is in general a topology on \(\mathcal{C}({X,Y})\), called the compact-open topology, that coincides with the compact convergence topology when \(Y\) is a metric space. This topology is important in its own right, as we shall see.
@@ -794,7 +773,6 @@ Each point \(x\) of \(X\) has a neighborhood \(V_{x}\) such that \(f(\bar{V}_{x}
 \[
 S({C_{x_{1}},U_{x_{1}}}) \cap \cdots \cap S({C_{x_{n}},U_{x_{n}}})
 \]
-
 contains \(f\) and lies in \(B_{C}({f,\epsilon })\), as desired.
 \end{proof}
 \begin{corollary}
@@ -811,13 +789,11 @@ Let \(X\) be locally compact Hausdorff; let \(\mathcal{C}({X,Y})\) have the comp
 \[
 e : X \times \mathcal{C}({X,Y}) \rightarrow Y
 \]
-
 defined by the equation
 
 \[
 e({x,f}) = f(x)
 \]
-
 is continuous.
 
 The map \(e\) is called the evaluation map.
@@ -847,7 +823,6 @@ Suppose first that \(F\) is continuous and that \(X\) is locally compact Hausdor
 \[
 X \times Z\overset{i_{X} \times F}{ \rightarrow }X \times \mathcal{C}({X,Y}) \overset{e}{ \rightarrow }Y
 \]
-
 where \(i_{X}\) is the identity map of \(X\).
 
 Now suppose that \(f\) is continuous. To prove continuity of \(F\), we take a point \(z_{0}\) of \(Z\) and a subbasis element \(S({C,U})\) for \(\mathcal{C}({X,Y})\) containing \(F(z_{0})\), and find a neighborhood \(W\) of \(z_{0}\) that is mapped by \(F\) into \(S({C,U})\). This will suffice.
@@ -857,7 +832,6 @@ The statement that \(F(z_{0})\) lies in \(S({C,U})\) means simply that \(({F(z_{
 \[
 f^{-1}( U) \cap ({C \times Z})
 \]
-
 is an open set in the subspace \(C \times Z\) containing the slice \(C \times {z}_{0}\). The tube lemma of \S\ 26 implies that there is a neighborhood \(W\) of \(z_{0}\) in \(Z\) such that the entire tube \(C \times W\) lies in \(f^{-1}( U)\). See \hyperref[fig:46.2]{Figure 46.2}. Then for \(z \in W\) and \(x \in C\), we have \(f({x,z}) \in U\). Hence \(F( W) \subset S({C,U})\), as desired.
 
 \munkresfig[1.0]{46.2}[Figure 46.2]
@@ -868,7 +842,6 @@ If \(f\) and \(g\) are continuous maps of \(X\) into \(Y\), we say that \(f\) an
 \[
 h : X \times [ {0,1}] \rightarrow Y
 \]
-
 such that \(h({x,0}) = f(x)\) and \(h({x,1}) = g(x)\) for each \(x \in X\). The map \(h\) is called a homotopy between \(f\) and \(g\).
 
 Roughly speaking, a homotopy is a ``continuous one-parameter family'' of maps from \(X\) to \(Y\). More precisely, we note that a homotopy \(h\) gives rise to a map
@@ -876,7 +849,6 @@ Roughly speaking, a homotopy is a ``continuous one-parameter family'' of maps fr
 \[
 H : [ {0,1}] \rightarrow \mathcal{C}({X,Y})
 \]
-
 that assigns, to each parameter value \(t\) in \([ {0,1}]\), the corresponding continuous map from \(X\) to \(Y\). Assuming that \(X\) is locally compact Hausdorff, we see that \(h\) is continuous if and only if \(H\) is continuous. This means that a homotopy \(h\) between \(f\) and \(g\) corresponds precisely to a path in the function space \(\mathcal{C}({X,Y})\) from the point \(f\) of \(\mathcal{C}({X,Y})\) to the point \(g\).
 
 We shall return to a more detailed study of homotopy in Part II of the book.
@@ -925,7 +897,6 @@ Let \(X\) be a space and let \((Y, d)\) be a metric space. Give \(\mathcal{C}({X
 \[
 \mathcal{F}_{a} = \{ f( a) \mid f \in \mathcal{F}\}
 \]
-
 has compact closure for each \(a \in X\), then \(\mathcal{F}\) is contained in a compact subspace of \(\mathcal{C}({X,Y})\).
 
 (b) The converse holds if \(X\) is locally compact Hausdorff.
@@ -938,7 +909,6 @@ Step 1. We show that \(\mathcal{G}\) is a compact subspace of \(Y^{X}\). Given \
 \[
 \mathop{\prod }\limits_{{a \in X}}C_{a}
 \]
-
 since this product by definition consists of all functions \(f : X \rightarrow Y\) satisfying the condition \(f( a) \in {C}_{a}\) for all \(a\). This product space is compact, by the Tychonoff theorem; it is a closed subspace of the product space \(Y^{X}\). Because \(\mathcal{G}\) equals the closure of \(\mathcal{F}\) in \(Y^{X},\mathcal{G}\) is contained in \(\prod {C}_{a}\), being closed, \(\mathcal{G}\) is therefore compact.
 
 Step 2. We show that each function belonging to \(\mathcal{G}\) is continuous, and indeed that \(\mathcal{G}\) itself is equicontinuous under \(d\).
@@ -977,7 +947,6 @@ Using equicontinuity of \(\mathcal{G}\) and compactness of \(C\), we can cover \
 \[
 d({g(x),g(x_{i}) }) < \epsilon /3
 \]
-
 for \(x \in {U}_{i}\) and \(g \in \mathcal{G}\). Then we define \(B\) to be the basis element for \(Y^{X}\) defined by the equation
 
 \[
@@ -993,13 +962,11 @@ d({h(x),h(x_{i}) }) < \epsilon /3\;\text{ and }
 \[
 d({g(x),g(x_{i}) }) < \epsilon /3
 \]
-
 because \(x \in {U}_{i}\) and \(g,h \in \mathcal{G}\), while
 
 \[
 d({h(x_{i}),g(x_{i}) }) < \epsilon /3
 \]
-
 because \(h \in B\). It follows from the triangle inequality that \(d({h(x),g(x) }) < \epsilon\), as desired.
 
 Step 4. We complete the proof. The set \(\mathcal{G}\) contains \(\mathcal{F}\) and is contained in \(\mathcal{C}({X,Y})\). It is compact as a subspace of \(Y^{X}\) in the product topology. By the result just proved, it is also compact as a subspace of \(\mathcal{C}({X,Y})\) in the compact convergence topology.
@@ -1011,13 +978,11 @@ To show \(\mathcal{H}_{a}\) is compact, consider the composite of the map
 \[
 j : \mathcal{C}({X,Y}) \rightarrow X \times \mathcal{C}({X,Y})
 \]
-
 defined by \(j( f) = a \times f\), and the evaluation map
 
 \[
 e : X \times \mathcal{C}({X,Y}) \rightarrow Y
 \]
-
 given by the equation \(e({x,f}) = f(x)\). The map \(j\) is obviously continuous, and the map \(e\) is continuous by Theorems 46.8 and 46.10. The composite \(e \circ j\) maps \(\mathcal{H}\) to \(\mathcal{H}_{a}\) ; since \(\mathcal{H}\) is compact, so is \(\mathcal{H}_{a}\).
 
 Now we show that \(\mathcal{H}\) is equicontinuous at \(a\), relative to the metric \(d\). Let \(A\) be a compact subspace of \(X\) that contains a neighborhood of \(a\). It suffices to show that the subset
@@ -1025,7 +990,6 @@ Now we show that \(\mathcal{H}\) is equicontinuous at \(a\), relative to the met
 \[
 \mathcal{R} = \{ f \mid A : f \in \mathcal{H}\}
 \]
-
 of \(\mathcal{C}({A,Y})\) is equicontinuous at \(a\).
 
 Give \(\mathcal{C}({A,Y})\) the compact convergence topology. We show that the restriction map
@@ -1033,7 +997,6 @@ Give \(\mathcal{C}({A,Y})\) the compact convergence topology. We show that the r
 \[
 r : \mathcal{C}({X,Y}) \rightarrow \mathcal{C}({A,Y})
 \]
-
 is continuous. Let \(f\) be an element of \(\mathcal{C}({X,Y})\) and let \(B = B_{C}({f \mid A,\epsilon })\) be a basis element for \(\mathcal{C}({A,Y})\) containing \(f \mid A\), where \(C\) is a compact subspace of \(A\). Then \(C\) is a compact subspace of \(X\), and \(r\) maps the neighborhood \(B_{C}({f,\epsilon })\) of \(f\) in \(\mathcal{C}({X,Y})\) into \(B\).
 
 The map \(r\) maps \(\mathcal{H}\) onto \(\mathcal{R}\) ; because \(\mathcal{H}\) is compact, so is \(\mathcal{R}\). Now \(\mathcal{R}\) is a subspace of \(\mathcal{C}({A,Y})\) ; because \(A\) is compact, the compact convergence and the uniform topologies on \(\mathcal{C}({A,Y})\) coincide. It follows from \hyperref[thm:45.1]{Theorem 45.1} that \(\mathcal{R}\) is totally bounded in the uniform metric on \(\mathcal{C}({A,Y})\) ; then \hyperref[lem:45.2]{Lemma 45.2} implies that \(\mathcal{R}\) is equicontinuous relative to \(d\).
