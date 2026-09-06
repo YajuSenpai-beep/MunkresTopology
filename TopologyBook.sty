@@ -12,25 +12,29 @@
 \RequirePackage{xcolor}
 \RequirePackage[shortlabels]{enumitem}
 
-% ---------- 章节格式（\part） ----------
+% ---------- 章节格式（\part）----------
 \RequirePackage{titlesec}
 \newcommand{\partfontsize}{\fontsize{36}{48}\bfseries\selectfont}
-\titleformat{\part}[display]
-  {\filright\partfontsize}
-  {\partname~\Roman{part}}
-  {20pt}
-  {\partfontsize\MakeUppercase}
-\titlespacing*{\part}{0.05\textwidth}{\fill}{\fill}[0.01\textwidth]
-\assignpagestyle{\part}{empty}  % 需加载 titlesec 后使用
-\RequirePackage{etoolbox}
+% Part 页整体居中(文本框方案): 标题块放进 \parbox, 上下 \vspace*{\fill} 真正居中(水平左对齐)
 \makeatletter
 \newif\iffirstpart\firstparttrue
-\pretocmd{\part}{%
+\renewcommand{\part}[1]{%
+  \cleardoublepage
+  \thispagestyle{empty}%
   \iffirstpart
     \pagenumbering{arabic}\setcounter{page}{1}%
     \firstpartfalse
   \fi
-}{}{}
+  \stepcounter{part}%
+  \addcontentsline{toc}{part}{\@parthead}%  TOC: Part I 无页码(对齐原书)
+  \vspace*{\fill}%
+  {\filright\partfontsize\partname~\Roman{part}}\par
+  \vspace{20pt}%
+  {\filright\partfontsize\MakeUppercase{#1}}\par
+  \vspace*{\fill}%
+  \clearpage
+}
+\newcommand{\@parthead}{\partname~\Roman{part}}
 \makeatother
 
 % ---------- 章节标题 ----------
@@ -117,8 +121,8 @@
 % 统一章节开头: \chapteropening[short]{full} 或 \chapteropening{title}
 \NewDocumentCommand{\chapteropening}{om}{%
   \IfNoValueTF{#1}
-    {\chapter{#2}\vspace{6.5cm}\chaptermark{#2}}
-    {\chapter[#1]{#2}\vspace{6.5cm}\chaptermark{#1}}%
+    {\chapter{#2}\vspace{7cm}\chaptermark{#2}}
+    {\chapter[#1]{#2}\vspace{7cm}\chaptermark{#1}}%
 }
 % 节内引用: \exref{1} -> \hyperref[ex:\thesection.1]{Example 1}
 \newcommand{\exref}[1]{\hyperref[ex:\thesection.#1]{Example #1}}
