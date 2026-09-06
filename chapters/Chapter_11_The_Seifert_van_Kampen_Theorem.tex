@@ -9,7 +9,6 @@ Suppose \(G\) is an abelian group, and \({\{ G_{\alpha }\} }_{\alpha \in J}\) is
 \[
 x = x_{{\alpha }_{1}} + \cdots + x_{{\alpha }_{n}},
 \]
-
 where the indices \({\alpha }_{i}\) are distinct. In this case, we often write \(x\) as the formal sum \(x = \mathop{\sum }\limits_{{\alpha \in J}}x_{\alpha }\), where it is understood that \(x_{\alpha } = 0\) if \(\alpha\) is not one of the indices \({\alpha }_{1}\), \(\ldots ,{\alpha }_{n}\).
 
 If the groups \(G_{\alpha }\) generate \(G\), we often say that \(G\) is the sum of the groups \(G_{\alpha }\), writing \(G = \mathop{\sum }\limits_{{\alpha \in J}}G_{\alpha }\) in general, or \(G = G_{1} + \cdots + G_{n}\) in the case of the finite index set \(\{ 1,\ldots, n\}\).
@@ -19,7 +18,6 @@ Now suppose that the groups \(G_{\alpha }\) generate \(G\), and that for each \(
 \[
 G = {\bigoplus }_{\alpha \in J}G_{\alpha }
 \]
-
 or in the finite case, \(G = G_{1} \oplus \cdots \oplus {G}_{n}\)
 
 \begin{centeredblock}
@@ -45,7 +43,6 @@ We show first that if \(G\) has the stated extension property, then \(G\) is the
 \[
 \begin{aligned} & h(x) = \sum {h}_{\alpha }( x_{\alpha }) = x_{\beta }, \\ & h(x) = \sum {h}_{\alpha }( y_{\alpha }) = y_{\beta }, \end{aligned}
 \]
-
 so that \(x_{\beta } = y_{\beta }\).
 
 Now we show that if \(G\) is the direct sum of the \(G_{\alpha }\), then the extension condition holds. Given homomorphisms \(h_{\alpha }\), we define \(h(x)\) as follows: If \(x = \sum {x}_{\alpha }\), set \(h(x) =\) \(\sum {h}_{\alpha }( x_{\alpha })\). Because this sum is finite, it makes sense; because the expression for \(x\) is unique, \(h\) is well-defined. One checks readily that \(h\) is the desired homomorphism. Uniqueness follows by noting that \(h\) must satisfy this equation if it is a homomorphism that equals \(h_{\alpha }\) on \(G_{\alpha }\) for each \(\alpha\).
@@ -90,7 +87,6 @@ Consider first the cartesian product
 \[
 \mathop{\prod }\limits_{{\alpha \in J}}G_{\alpha }
 \]
-
 it is an abelian group if we add two \(J\) -tuples by adding them coordinate-wise. Let \(G\) denote the subgroup of the cartesian product consisting of those tuples \({( x_{\alpha }) }_{\alpha \in J}\) such that \(x_{\alpha } = 0_{\alpha }\), the identity element of \(G_{\alpha }\), for all but finitely many values of \(\alpha\). Given an index \(\beta\), define \(i_{\beta } : G_{\beta } \rightarrow G\) by letting \(i_{\beta }(x)\) be the tuple that has \(x\) as its \(\beta\) th coordinate and \(0_{\alpha }\) as its \(\alpha\) th coordinate for all \(\alpha \neq \beta\). It is immediate that \(i_{\beta }\) is a monomorphism. It is also immediate that since each element \(\mathbf{x}\) of \(G\) has only finitely many nonzero coordinates, \(\mathbf{x}\) can be written uniquely as a finite sum of elements from the groups \(i_{\beta }( G_{\beta })\).
 
 The extension condition that characterizes ordinary direct sums translates immediately into an extension condition for external direct sums:
@@ -175,7 +171,6 @@ Note that because we lack commutativity, we cannot rearrange the factors in the 
 \[
 ( {x_{1},\ldots ,x_{i - 1},x_{i}x_{i + 1},x_{i + 2},\ldots ,x_{n}}),
 \]
-
 of length \(n - 1\), which also represents \(x\). Furthermore, if any \(x_{i}\) equals 1, we can delete \(x_{i}\) from the sequence, again obtaining a shorter word that represents \(x\).
 
 Applying these reduction operations repeatedly, one can in general obtain a word representing \(x\) of the form \(( {y_{1},\ldots ,y_{m}})\), where no group \(G_{\alpha }\) contains both \(y_{i}\) and \(y_{i + 1}\), and where \(y_{i} \neq 1\) for all \(i\). Such a word is called a reduced word. This discussion does not apply, however, if \(x\) is the identity element of \(G\). For in that case, one might represent \(x\) by a word such as \(( {a,a^{-1}})\), which reduces successively to the word \(( {aa^{-1}})\) of length one, and then disappears altogether! Accordingly, we make the convention that the empty set is considered to be a reduced word (of length zero) that represents the identity element of \(G\). With this convention, it is true that if the groups \(G_{\alpha }\) generate \(G\), then every element of \(G\) can be represented by a reduced word in the elements of the groups \(G_{\alpha }\).
@@ -188,7 +183,6 @@ Let \(G\) be a group, let \({\{ G_{\alpha }\} }_{\alpha \in J}\) be a family of 
 \[
 G = \mathop{\prod }\limits_{{\alpha \in J}}^{ * }G_{\alpha }
 \]
-
 or in the finite case, \(G = G_{1} * \cdots * G_{n}\).
 \end{definition}
 
@@ -199,13 +193,11 @@ Suppose the groups \(G_{\alpha }\) generate \(G\), where \(G_{\alpha } \cap {G}_
 \[
 x_{1}\cdots {x}_{n} = x = y_{1}\cdots {y}_{m},
 \]
-
 the word
 
 \[
 ( {y_m^{-1},\ldots ,y_1^{-1},x_{1},\ldots ,x_{n}})
 \]
-
 represents 1. It must be possible to reduce this word, so we must have \({\alpha }_{1} = {\beta }_{1}\) ; the word then reduces to the word
 
 \[
@@ -248,7 +240,6 @@ Given \(x \in G\) with \(x \neq 1\), let \(( {x_{1},\ldots ,x_{n}})\) be the red
 \[
 h(x) = h( x_{1}) \cdots h( x_{n}) = h_{{\alpha }_{1}}( x_{1}) \cdots {h}_{{\alpha }_{n}}( x_{n}),
 \]
-
 where \({\alpha }_{i}\) is the index such that \(x_{i} \in {G}_{{\alpha }_{i}}\). Hence \(h\) is unique.
 
 To show \(h\) exists, we define it by equation \(( *)\) if \(x \neq 1\), and we set \(h(1) = 1\). Because the representation of \(x\) by a reduced word is unique, \(h\) is well-defined. We must show it is a homomorphism.
@@ -259,7 +250,6 @@ We first prove a preliminary result. Given a word \(w = ( {x_{1},\ldots ,x_{n}})
 \[
 \phi ( w) = h_{{\alpha }_{1}}( x_{1}) \cdots {h}_{{\alpha }_{n}}( x_{n}),
 \]
-
 where \({\alpha }_{i}\) is any index such that \(x_{i} \in {G}_{{\alpha }_{i}}\). Now \({\alpha }_{i}\) is unique unless \(x_{i} = 1\) ; hence \(\phi\) is well-defined. If \(w\) is the empty word, let \(\phi ( w)\) equal the identity element of \(H\). We show that if \(w^{\prime }\) is a word obtained from \(w\) by applying one of our reduction operations, \(\phi ( w^{\prime }) = \phi ( w)\).
 
 Suppose first that \(w^{\prime }\) is obtained by deleting \(x_{i} = 1\) from the word \(w\). Then the equation \(\phi ( w^{\prime }) = \phi ( w)\) follows from the fact that \(h_{{\alpha }_{i}}( x_{i}) = 1\). Second, suppose that \({\alpha }_{i} = {\alpha }_{i + 1}\) and that
@@ -273,7 +263,6 @@ The fact that
 \[
 h_{\alpha }( x_{i}) h_{\alpha }( x_{i + 1}) = h_{\alpha }( {x_{i}x_{i + 1}}),
 \]
-
 where \(\alpha = {\alpha }_{i} = {\alpha }_{i + 1}\), implies that \(\phi ( w) = \phi ( w^{\prime })\).
 
 It follows at once that if \(w\) is any word in the groups \(G_{\alpha }\) that represents \(x\), then \(h(x) = \phi ( w)\). For by definition of \(h\), this equation holds for any reduced word \(w\) ; and the process of reduction does not change the value of \(\phi\).
@@ -311,19 +300,16 @@ We proceed as follows: Let \(x \in {G}_{\alpha }\). For notational purposes, let
 \[
 {\pi }_{x}( \varnothing ) = (x)
 \]
-
 (ii)
 
 \[
 {\pi }_{x}( w) = ( {x,x_{1},\ldots ,x_{n}}) \;\text{ if }{\alpha }_{1} \neq \alpha ,
 \]
-
 (iii)
 
 \[
 {\pi }_{x}( w) = ( {xx_{1},\ldots ,x_{n}}) \;\text{ if }{\alpha }_{1} = \alpha \text{ and }x_{1} \neq {x}^{-1},
 \]
-
 (iv)
 
 \[
@@ -393,13 +379,11 @@ Second, we show that no nonempty reduced word
 \[
 w^{\prime } = ( {{\pi }_{x_{1}},\ldots ,{\pi }_{x_{n}}})
 \]
-
 in the groups \(G_{\alpha }^{\prime }\) represents the identity element of \(G\). Let \({\alpha }_{i}\) be the index such that \(x_{i} \in {G}_{{\alpha }_{i}}\) ; then \({\alpha }_{i} \neq {\alpha }_{i + 1}\) and \(x_{i} \neq {1}_{{\alpha }_{i}}\) for each \(i\). We compute
 
 \[
 {\pi }_{x_{1}}( {{\pi }_{x_{2}}( {\cdots ( {{\pi }_{x_{n}}( \varnothing ) }) }) }) = ( {x_{1},\ldots ,x_{n}}),
 \]
-
 so the element of \(G\) represented by \(w^{\prime }\) is not the identity element of \(P( W)\).
 
 Although this proof of the existence of free products is certainly correct, it has the disadvantage that it doesn't provide us with a convenient way of thinking about the elements of the free product. For many purposes this doesn't matter, for the extension condition is the crucial property that is used in the applications. Nevertheless, one would be more comfortable having a more concrete model for the free product.
@@ -417,7 +401,6 @@ This equation implies that if \(\pi\) is any element of \(P( W)\) belonging to t
 \[
 \pi ( \varnothing ) = ( {x_{1},\ldots ,x_{n}}) \;\text{ and }\;{\pi }^{\prime }( \varnothing ) = ( {y_{1},\ldots ,y_{k}}),
 \]
-
 then \(\pi ( {{\pi }^{\prime }( \varnothing ) })\) is the word obtained by taking the word \(( {x_{1},\ldots ,x_{n},y_{1},\ldots ,y_{k}})\) and reducing it!
 
 This gives us a way of thinking about the group \(G\). One can think of \(G\) as being simply the set \(W\) itself, with the product of two words obtained by juxtaposing them and reducing the result. The identity element corresponds to the empty word. And each group \(G_{\beta }\) corresponds to the subset of \(W\) consisting of the empty set and all words of length 1 of the form \((x)\), for \(x \in {G}_{\beta }\) and \(x \neq {1}_{\beta }\).
@@ -488,19 +471,16 @@ The composite of the inclusion and projection homomorphisms
 \[
 G_{1} \rightarrow {G}_{1} * G_{2} \rightarrow ( {G_{1} * G_{2}}) /N
 \]
-
 carries \(N_{1}\) to the identity element, so that it induces a homomorphism
 
 \[
 i_{1} : G_{1}/N_{1} \rightarrow ( {G_{1} * G_{2}}) /N
 \]
-
 Similarly, the composite of the inclusion and projection homomorphisms induces a homomorphism
 
 \[
 i_{2} : G_{2}/N_{2} \rightarrow ( {G_{1} * G_{2}}) /N
 \]
-
 We show that the extension condition of \hyperref[lem:68.5]{Lemma 68.5} holds with respect to \(i_{1}\) and \(i_{2}\) ; it follows that \(i_{1}\) and \(i_{2}\) are monomorphisms and that \(( {G_{1} * G_{2}}) /N\) is the external free product of \(G_{1}/N_{1}\) and \(G_{2}/N_{2}\) relative to these monomorphisms.
 
 So let \(h_{1} : G_{1}/N_{1} \rightarrow H\) and \(h_{2} : G_{2}/N_{2} \rightarrow H\) be arbitrary homomorphisms. The extension condition for \(G_{1} * G_{2}\) implies that there is a homomorphism of \(G_{1} * G_{2}\) into \(H\) that equals the composite
@@ -508,7 +488,6 @@ So let \(h_{1} : G_{1}/N_{1} \rightarrow H\) and \(h_{2} : G_{2}/N_{2} \rightarr
 \[
 G_{i} \rightarrow {G}_{i}/N_{i} \rightarrow H
 \]
-
 of the projection map and \(h_{i}\) on \(G_{i}\), for \(i = 1,2\). This homomorphism carries the elements of \(N_{1}\) and \(N_{2}\) to the identity element, so its kernel contains \(N\). Therefore it induces a homomorphism \(h : ( {G_{1} * G_{2}}) /N \rightarrow H\) that satisfies the conditions \(h_{1} = h \circ {i}_{1}\) and \(h_{2} = h \circ {i}_{2}\).
 \end{proof}
 \begin{corollary}
@@ -530,7 +509,6 @@ We can write \(x\) in the form \(x = x_{1}x_{2}\cdots {x}_{n}\), where each \(x_
 \[
 {cx}c^{-1} = ( {cx_{1}c^{-1}}) ( {cx_{2}c^{-1}}) \cdots ( {cx_{n}c^{-1}}),
 \]
-
 \({cx}c^{-1}\) is a product of conjugates of elements of \(S\), so that \({cx}c^{-1} \in {N}^{\prime }\), as desired.
 \end{proof}
 \section*{Exercises}
@@ -558,7 +536,6 @@ In this case, for each element \(x\) of \(G\), there is a unique reduced word in
 \[
 x = {( a_{{\alpha }_{1}}) }^{n_{1}}\cdots {( a_{{\alpha }_{k}}) }^{n_{k}},
 \]
-
 where \({\alpha }_{i} \neq {\alpha }_{i + 1}\) and \(n_{i} \neq 0\) for each \(i\). (Of course, \(n_{i}\) may be negative.)
 
 Free groups are characterized by the following extension property:
@@ -599,7 +576,6 @@ Let \(G\) be a group. If \(x,y \in G\), we denote by \([ {x,y}]\) the element
 \[
 [ {x,y}] = {xy}x^{-1}y^{-1}
 \]
-
 of \(G\) ; it is called the commutator of \(x\) and \(y\). The subgroup of \(G\) generated by the set of all commutators in \(G\) is called the commutator subgroup of \(G\) and denoted \([ {G,G}]\).
 \end{definition}
 
@@ -631,7 +607,6 @@ g[ {x,y}] g^{-1} = g( {{xy}x^{-1}y^{-1}}) g^{-1}
 \[
 = [ {{gx},y}] \cdot [ {y,g}] ,
 \]
-
 which is in \([ {G,G}]\), as desired.
 
 Step 2. We show that \([ {G,G}]\) is a normal subgroup of \(G\). Let \(z\) be an arbitrary element of \([ {G,G}]\) ; we show that any conjugate \({gz}g^{-1}\) of \(z\) is also in \([ {G,G}]\). The element \(z\) is a product of commutators and their inverses. Because
@@ -639,13 +614,11 @@ Step 2. We show that \([ {G,G}]\) is a normal subgroup of \(G\). Let \(z\) be an
 \[
 {[ x,y] }^{-1} = {( xyx^{-1}y^{-1}) }^{-1} = [ {y,x}] ,
 \]
-
 \(z\) actually equals a product of commutators. Let \(z = z_{1}\cdots {z}_{n}\), where each \(z_{i}\) is a commutator. Then
 
 \[
 {gz}g^{-1} = ( {gz_{1}g^{-1}}) ( {gz_{2}g^{-1}}) \cdots ( {gz_{n}g^{-1}}),
 \]
-
 which is a product of elements of \([ {G,G}]\) by Step 1 and hence belongs to \([ {G,G}]\).
 
 Step 3. We show that \(G/[ {G,G}]\) is abelian. Let \(G^{\prime } = [ {G,G}]\) ; we wish to show that
@@ -653,13 +626,11 @@ Step 3. We show that \(G/[ {G,G}]\) is abelian. Let \(G^{\prime } = [ {G,G}]\) ;
 \[
 ( {aG^{\prime }}) ( {bG^{\prime }}) = ( {bG^{\prime }}) ( {aG^{\prime }}),
 \]
-
 that is, \({ab}G^{\prime } = {ba}G^{\prime }\). This is equivalent to the equation
 
 \[
 a^{-1}b^{-1}{ab}G^{\prime } = G^{\prime },
 \]
-
 and this equation follows from the fact that \(a^{-1}b^{-1}{ab} = [ {a^{-1},b^{-1}}]\), which is an element of \(G^{\prime }\).
 
 Step 4. To complete the proof, we note that because \(H\) is abelian, \(h\) carries each commutator to the identity element of \(H\). Hence the kernel of \(h\) contains \([ {G,G}]\), so that \(h\) induces the desired homomorphism \(k\).
@@ -728,7 +699,6 @@ Let \(X = U \cup V\), where \(U\) and \(V\) are open in \(X\) ; assume \(U,V\), 
 \[
 {\phi }_{1} : {\pi }_{1}( {U,x_{0}}) \rightarrow H\;\text{ and }\;{\phi }_{2} : {\pi }_{1}( {V,x_{0}}) \rightarrow H
 \]
-
 be homomorphisms. Let \(i_{1},i_{2},j_{1},j_{2}\) be the homomorphisms indicated in the following diagram, each induced by inclusion.
 
 \munkresfig[0.5]{com_70_00} 
@@ -772,7 +742,6 @@ Then, for any path \(f\) in \(U\) or in \(V\), we define a loop \(L( f)\) in \(U
 \[
 L( f) = {\alpha }_{x} * ( {f * \bar{\alpha }_{y}}),
 \]
-
 where \(x\) is the initial point of \(f\) and \(y\) is the final point of \(f\). See \hyperref[fig:70.1]{Figure 70.1}. Finally, we define
 
 \[
@@ -785,7 +754,6 @@ First, we show that \(\sigma\) is an extension of \(\rho\). If \(f\) is a loop b
 \[
 L( f) = e_{x_{0}} * ( {f * e_{x_{0}}})
 \]
-
 because \({\alpha }_{x_{0}}\) is the constant path at \(x_{0}\). Then \(L( f)\) is path homotopic to \(f\) in either \(U\) or \(V\), so that \(\rho ( {L( f) }) = \rho ( f)\) by condition (1) for \(\rho\). Hence \(\sigma ( f) = \rho ( f)\).
 
 To check condition (I), let \(f\) and \(g\) be paths that are path homotopic in \(U\) or in \(V\). Then the loops \(L( f)\) and \(L( g)\) are also path homotopic either in \(U\) or in \(V\), so condition (1) for \(\rho\) applies. To check (2), let \(f\) and \(g\) be arbitrary paths in \(U\) or in \(V\) such that \(f(1) = g( 0)\). We have
@@ -793,13 +761,11 @@ To check condition (I), let \(f\) and \(g\) be paths that are path homotopic in 
 \[
 L( f) * L( g) = ( {{\alpha }_{x} * ( {f * \bar{\alpha }_{y}}) }) * ( {{\alpha }_{y} * ( {g * \bar{\alpha }_{z}}) })
 \]
-
 for appropriate points \(x,y\), and \(z\) ; this loop is path homotopic in \(U\) or \(V\) to \(L( {f * g})\). Then
 
 \[
 \rho ( {L( {f * g}) }) = \rho ( {L( f) * L( g) }) = \rho ( {L( f) }) \cdot \rho ( {L( g) })
 \]
-
 by conditions (I) and (2) for \(\rho\). Hence \(\sigma ( {f * g}) = \sigma ( f) \cdot \sigma ( g)\).
 
 Step 3. Finally, we extend \(\sigma\) to a set map \(\tau\) that assigns, to an arbitrary path \(f\) of \(X\), an element of \(H\). It will satisfy the following conditions:
@@ -837,7 +803,6 @@ Given \(i\), consider the positive linear map of \([ {0,1}]\) onto \([ {s_{i - 1
 \[
 f_{i} * {\beta }_{i}{ \simeq }_{p}{\beta }_{i - 1} * g_{i},
 \]
-
 with the path homotopy taking place in \(U\) or in \(V\).
 
 \munkresfig[1.0]{70.2}[Figure 70.2]
@@ -848,7 +813,6 @@ It follows from conditions (1) and (2) for \(\sigma\) that
 \[
 \sigma ( f_{i}) \cdot \sigma ( {\beta }_{i}) = \sigma ( {\beta }_{i - 1}) \cdot \sigma ( g_{i}),
 \]
-
 so that
 
 (**)
@@ -921,7 +885,6 @@ Let us show that \(\Phi \circ {j}_{1} = {\phi }_{1}\). If \(f\) is a loop in \(U
 \[
 = \rho ( f) = {\phi }_{1}( {[ f] }_{U}),
 \]
-
 as desired. The proof that \(\Phi \circ {j}_{2} = {\phi }_{2}\) is similar.
 
 The preceding theorem is the modern formulation of the Seifert-van Kampen theorem. We now turn to the classical version, which involves the free product of two groups. Recall that if \(G\) is the external free product \(G = G_{1} * G_{2}\), we often treat \(G_{1}\) and \(G_{2}\) as if they were subgroups of \(G\), for simplicity of notation.
@@ -933,13 +896,11 @@ Assume the hypotheses of the preceding theorem. Let
 \[
 j : {\pi }_{1}( {U,x_{0}}) * {\pi }_{1}( {V,x_{0}}) \rightarrow {\pi }_{1}( {X,x_{0}})
 \]
-
 be the homomorphism of the free product that extends the homomorphisms \(j_{1}\) and \(j_{2}\) induced by inclusion. Then \(j\) is surjective, and its kernel is the least normal subgroup \(N\) of the free product that contains all elements represented by words of the form
 
 \[
 ( {i_{1}{( g) }^{-1},i_{2}( g) }) \text{,}
 \]
-
 for \(g \in {\pi }_{1}( {U \cap V,x_{0}})\).
 
 Said differently, the kernel of \(j\) is generated by all elements of the free product of the form \(i_{1}{( g) }^{-1}i_{2}( g)\), and their conjugates.
@@ -974,13 +935,11 @@ It follows from \hyperref[thm:70.1]{Theorem 70.1} that there is a homomorphism \
 \[
 k( {gN}) = j( g) = j_{1}( g),
 \]
-
 so that
 
 \[
 \Phi ( {k( {gN}) }) = \Phi ( {j_{1}( g) }) = {\phi }_{1}( g) = {gN},
 \]
-
 as desired. A similar remark applies if \(g \in {\pi }_{1}( {V,x_{0}})\).
 \end{proof}
 \begin{corollary}
@@ -999,7 +958,6 @@ Assume the hypotheses of the Seifert-van Kampen theorem. If \(V\) is simply conn
 \[
 k : {\pi }_{1}( {U,x_{0}}) /N \rightarrow {\pi }_{1}( {X,x_{0}}),
 \]
-
 where \(N\) is the least normal subgroup of \({\pi }_{1}( {U,x_{0}})\) containing the image of the homomorphism
 
 \[
@@ -1105,7 +1063,6 @@ Finally, suppose there is a reduced nonempty word
 \[
 w = ( {g_{{\alpha }_{1}},\ldots ,g_{{\alpha }_{n}}})
 \]
-
 in the elements of the groups \(G_{\alpha }\) that represents the identity element of \({\pi }_{1}( {X,p})\). Let \(f\) be a loop in \(X\) whose path-homotopy class is represented by \(w\). Then \(f\) is path homotopic to a constant in \(X\), so it is path homotopic to a constant in some finite union of subspaces \(S_{\alpha }\). This contradicts \hyperref[thm:71.1]{Theorem 71.1}.
 
 The preceding theorem depended on the fact that the topology of \(X\) was coherent with the subspaces \(S_{\alpha }\). Consider the following example:
@@ -1140,7 +1097,6 @@ To show that \(X\) has the topology coherent with the subspaces \(S_{\alpha }\),
 \[
 {\pi }^{-1}( D) \cap ( {S^{1} \times \alpha }) = {\pi }_{\alpha }^{-1}( {D \cap {S}_{\alpha }})
 \]
-
 the latter set is closed in \(S^{1} \times \alpha\) because \({\pi }_{\alpha }\) is continuous. Then \({\pi }^{-1}( D)\) is closed in \(S^{1} \times J\), so that \(D\) is closed in \(X\) by definition of the quotient topology.
 \end{proof}
 \section*{Exercises}
@@ -1175,7 +1131,6 @@ Let \(X\) be a Hausdorff space; let \(A\) be a closed path-connected subspace of
 \[
 i_{ * } : {\pi }_{1}( {A,a}) \rightarrow {\pi }_{1}( {X,a})
 \]
-
 induced by inclusion is surjective, and its kernel is the least normal subgroup of \({\pi }_{1}( {A,a})\) containing the image of \(k_{ * } : {\pi }_{1}( {S^{1},p}) \rightarrow {\pi }_{1}( {A,a})\).
 
 We sometimes say that the fundamental group of \(X\) is obtained from the fundamental group of \(A\) by ``killing off'' the class \(k_{ * }[ f]\), where \([ f]\) generates \({\pi }_{1}( {S^{1},p})\).
@@ -1189,13 +1144,11 @@ Let \(C = h( B^{2})\), and let \(\pi : B^{2} \rightarrow C\) be the map obtained
 \[
 \pi \times \mathrm{{id}} : B^{2} \times I \rightarrow C \times I;
 \]
-
 it is a closed map because \(B^{2} \times I\) is compact and \(C \times I\) is Hausdorff; therefore, it is a quotient map. Its restriction
 
 \[
 {\pi }^{\prime } : ( {B^{2} - \mathbf{0}}) \times I \rightarrow ( {C - x_{0}}) \times I
 \]
-
 is also a quotient map, since its domain is open in \(B^{2} \times I\) and is saturated with respect to \(\pi \times \mathrm{{id}}\). There is a deformation retraction of \(B^{2} - 0\) onto \(S^{1}\) ; it induces, via the quotient map \({\pi }^{\prime }\), a deformation retraction of \(C - x_{0}\) onto \(\pi ( S^{1})\). We extend this deformation retraction to all of \(U \times I\) by letting it keep each point of \(A\) fixed during the deformation. Thus \(A\) is a deformation retract of \(U\).
 
 It follows that the inclusion of \(A\) into \(U\) induces an isomorphism of fundamental groups. Our theorem then reduces to proving the following statement:
@@ -1205,7 +1158,6 @@ Let \(f\) be a loop whose class generates \({\pi }_{1}( {S^{1},p})\). Then the i
 \[
 {\pi }_{1}( {U,a}) \rightarrow {\pi }_{1}( {X,a})
 \]
-
 whose kernel is the least normal subgroup containing the class of the loop \(g = h \circ f\).
 
 Step 2. In order to prove this result, it is convenient to consider first the homomorphism \({\pi }_{1}( {U,b}) \rightarrow {\pi }_{1}( {X,b})\) induced by inclusion relative to a base point \(b\) that does not belong to \(A\).
@@ -1215,7 +1167,6 @@ Let \(b\) be any point of \(U - A\). Write \(X\) as the union of the open sets \
 \[
 {\pi }_{1}( {U,b}) \rightarrow {\pi }_{1}( {X,b})
 \]
-
 induced by inclusion is surjective, and its kernel is the least normal subgroup containing the image of the infinite cyclic group \({\pi }_{1}( {U \cap V,b})\).
 
 Step 3. Now we change the base point back to \(a\), proving the theorem.
@@ -1297,7 +1248,6 @@ Let us note that the 2-fold dunce cap is a space we have seen before; it is home
 \[
 i( {x,y}) = ( {x,y,{( 1 - x^{2} - y^{2}) }^{1/2}}),
 \]
-
 and follow it by the map \(p\). We obtain a map \(\pi : B^{2} \rightarrow {P}^{2}\) that is continuous, closed, and surjective. On Int \(B\) it is injective, and for each \(x \in {S}^{1}\), it maps \(x\) and \(- x\) to the same point. Hence it induces a homeomorphism of the 2-fold dunce cap with \(P^{2}\).
 
 The fundamental group of the \(n\) -fold dunce cap is just what you might expect from our computation for \(P^{2}\).
@@ -1312,7 +1262,6 @@ Let \(h : B^{2} \rightarrow X\) be the quotient map, where \(X\) is the \(n\) -f
 \[
 \gamma ( t) = ( {\cos ( {{2\pi t}/n}),\sin ( {{2\pi t}/n}) })
 \]
-
 in \(S^{1}\) from \(p\) to \(r( p)\), then \(\alpha = h \circ \gamma\) represents a generator of \({\pi }_{1}( {A,a})\). See \hyperref[fig:73.3]{Figure 73.3}.
 
 Now the class of the loop
@@ -1320,7 +1269,6 @@ Now the class of the loop
 \[
 f = \gamma * ( {( {r \circ \gamma }) * ( {( {r^{2} \circ \gamma }) * \cdots * ( {r^{n - 1} \circ \gamma }) }) })
 \]
-
 generates \({\pi }_{1}( {S^{1},p})\). Since \(h( {r^{m}(x) }) = h(x)\) for all \(x\) and \(m\), the loop \(h \circ f\) equals the \(n\) -fold product \(\alpha * ( {\alpha * ( {\cdots * \alpha }) })\). The theorem follows.
 
 \munkresfig[0.6]{73.3}[Figure 73.3]

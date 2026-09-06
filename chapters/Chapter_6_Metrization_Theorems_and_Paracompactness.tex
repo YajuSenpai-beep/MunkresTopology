@@ -11,13 +11,11 @@ Now one way of expressing the condition that the basis \(\mathcal{B}\) is counta
 \[
 \mathcal{B} = \mathop{\bigcup }\limits_{{n \in {\mathbb{Z}}_{ + }}}\mathcal{B}_{n}
 \]
-
 where each collection \(\mathcal{B}_{n}\) is finite. This is an awkward way of saying that \(\mathcal{B}\) is countable, but it suggests how to formulate a weaker version of it. The Nagata-Smirnov condition is to require that the basis \(\mathcal{B}\) can be expressed in the form
 
 \[
 \mathcal{B} = \mathop{\bigcup }\limits_{{n \in {\mathbb{Z}}_{ + }}}\mathcal{B}_{n}
 \]
-
 where each collection \(\mathcal{B}_{n}\) is locally finite. We say that such a collection \(\mathcal{B}\) is countably locally finite. Surprisingly enough, this condition, along with regularity, is both necessary and sufficient for metrizability of \(X\). This we shall prove.
 
 There is another concept in topology that involves the notion of local finiteness. It is a generalization of the concept of compactness called ``paracompactness.'' Although of fairly recent origin, it has proved useful in many parts of mathematics. We introduce it here so that we can give another set of necessary and sufficient conditions for a space \(X\) to be metrizable. It turns out that \(X\) is metrizable if and only if it is both paracompact and locally metrizable. This we prove in \S\ 42.
@@ -42,13 +40,11 @@ In this section we prove some elementary properties of locally finite collection
 \[
 \mathcal{A} = \{ ({n,n + 2}) \mid n \in \mathbb{Z}\}
 \]
-
 is locally finite in the topological space \(\mathbb{R}\), as you can check. On the other hand, the collection
 
 \[
 \mathcal{B} = \{ {({0,1/n}) \mid n \in {\mathbb{Z}}_{ + }}\}
 \]
-
 is locally finite in (0,1) but not in \(\mathbb{R}\), as is the collection
 
 \[
@@ -75,7 +71,6 @@ To prove (c), let \(Y\) denote the union of the elements of \(\mathcal{A}\) :
 \[
 \mathop{\bigcup }\limits_{{A \in \mathcal{A}}}A = Y
 \]
-
 In general, \(\bigcup \bar{A} \subset \bar{Y}\) ; we prove the reverse inclusion, under the assumption of local finiteness. Let \(x \in \bar{Y}\) ; let \(U\) be a neighborhood of \(x\) that intersects only finitely many elements of \(\mathcal{A}\), say \(A_{1},\ldots ,A_{k}\). We assert that \(x\) belongs to one of the sets \(\bar{A}_{1}\), \(\ldots ,\bar{A}_{k}\), and hence belongs to \(\bigcup \bar{A}\). For otherwise, the set \(U - \bar{A}_{1} - \cdots - \bar{A}_{k}\) would be a neighborhood of \(x\) that intersects no element of \(\mathcal{A}\) and hence does not intersect \(Y\), contrary to the assumption that \(x \in \bar{Y}\).
 
 There is an analogous concept of local finiteness for an indexed family of subsets of \(X\). The indexed family \({\{ A_{\alpha }\} }_{\alpha \in J}\) is said to be a locally finite indexed family in \(X\) if every \(x \in X\) has a neighborhood that intersects \(A_{\alpha }\) for only finitely many values of \(\alpha\). What is the relation between the two formulations of local finiteness? It is easy to see that \({\{ A_{\alpha }\} }_{\alpha \in J}\) is a locally finite indexed family if and only if it is locally finite as a collection of sets and each nonempty subset \(A\) of \(X\) equals \(A_{\alpha }\) for at most finitely many values of \(\alpha\).
@@ -110,7 +105,6 @@ S_{n}(U) = \{ x \mid B({x,1/n}) \subset U\}.
 \[
 T_{n}(U) = S_{n}(U) - \mathop{\bigcup }\limits_{{V < U}}V
 \]
-
 The situation where \(\mathcal{A}\) consists of the three sets \(U < V < W\) is pictured in \hyperref[fig:39.1]{Figure 39.1}. Just as the figure suggests, the sets we have formed are disjoint.
 
 \munkresfig[0.7]{39.1}[Figure 39.1]
@@ -128,7 +122,6 @@ Now let us define
 \[
 \mathcal{E}_{n} = \{ {E_{n}(U) \mid U \in \mathcal{A}}\}
 \]
-
 We claim that \(\mathcal{E}_{n}\) is a locally finite collection of open sets that refines \(\mathcal{A}\). The fact that \(\mathcal{E}_{n}\) refines \(\mathcal{A}\) comes from the fact that \(E_{n}(V) \subset V\) for each \(V \in \mathcal{A}\). The fact that \(\mathcal{E}_{n}\) is locally finite comes from the fact that for any \(x\) in \(X\), the \(1/{6n}\) -neighborhood of \(x\) can intersect at most one element of \(\mathcal{E}_{n}\).
 
 Of course, the collection \(\mathcal{E}_{n}\), will not cover \(X\). (\hyperref[fig:39.2]{Figure 39.2} illustrates that fact.) But we assert that the collection
@@ -136,7 +129,6 @@ Of course, the collection \(\mathcal{E}_{n}\), will not cover \(X\). (\hyperref[
 \[
 \mathcal{E} = \mathop{\bigcup }\limits_{{n \in {\mathbb{Z}}_{ + }}}\mathcal{E}_{n}
 \]
-
 does cover \(X\).
 
 Let \(x\) be a point of \(X\). The collection \(\mathcal{A}\) with which we began covers \(X\) ; let us choose \(U\) to be the first element of \(\mathcal{A}\) (in the well-ordering \(<\) ) that contains \(x\). Since \(U\) is open, we can choose \(n\) so that \(B({x,1/n}) \subset U\). Then, by definition, \(x \in {S}_{n}(U)\). Now because \(U\) is the first element of \(\mathcal{A}\) that contains \(x\), the point \(x\) belongs to \(T_{n}(U)\). Then \(x\) also belongs to the element \(E_{n}(U)\) of \(\mathcal{E}_{n}\), as desired.
@@ -192,13 +184,11 @@ A = \mathop{\bigcap }\limits_{{n \in {\mathbb{Z}}_{ + }}}U({A,1/n})
 \[
 W = \bigcup {U}_{n} = \bigcup {\bar{U}}_{n}
 \]
-
 Since the basis \(\mathcal{B}\) for \(X\) is countably locally finite, we can write \(\mathcal{B} = \bigcup {\mathcal{B}}_{n}\), where each collection \(\mathcal{B}_{n}\) is locally finite. Let \(\mathcal{C}_{n}\) be the collection of those basis elements \(B\) such that \(B \in {\mathcal{B}}_{n}\) and \(\bar{B} \subset W\). Then \(\mathcal{C}_{n}\) is locally finite, being a subcollection of \(\mathcal{B}_{n}\). Define
 
 \[
 U_{n} = \mathop{\bigcup }\limits_{{B \in {\mathcal{C}}_{n}}}B
 \]
-
 Then \(U_{n}\) is an open set, and by \hyperref[lem:39.1]{Lemma 39.1},
 
 \[
@@ -210,7 +200,6 @@ Therefore, \(\bar{U}_{n} \subset W\), so that
 \[
 \bigcup {U}_{n} \subset \bigcup {\bar{U}}_{n} \subset W
 \]
-
 We assert that equality holds. Given \(x \in W\), there is by regularity a basis element \(B \in \mathcal{B}\) such that \(x \in B\) and \(\bar{B} \subset W\). Now \(B \in {\mathcal{B}}_{n}\) for some \(n\). Then \(B \in {\mathcal{C}}_{n}\) by definition, so that \(x \in {U}_{n}\). Thus \(W \subset \bigcup {U}_{n}\), as desired.
 
 Step 2. We show that every closed set \(C\) in \(X\) is a \(G_{\delta }\) set in \(X\). Given \(C\), let \(W = X - C\). By Step 1, there are sets \(U_{n}\) in \(X\) such that \(W = \bigcup {U}_{n}\). Then
@@ -218,7 +207,6 @@ Step 2. We show that every closed set \(C\) in \(X\) is a \(G_{\delta }\) set in
 \[
 C = \mathop{\bigcap }\limits_{n}({X - \bar{U}_{n}})
 \]
-
 so that \(C\) equals a countable intersection of open sets of \(X\).
 
 Step 3. We show \(X\) is normal. Let \(C\) and \(D\) be disjoint closed sets in \(X\). Applying Step 1 to the open set \(X - D\), we construct a countable collection \(\{ U_{n}\}\) of open sets such that \(\mathop{\bigcup }\limits_{n}U_{n} = \mathop{\bigcup }\limits_{n}\bar{U}_{n} = X - D\). Then \(\{ U_{n}\}\) covers \(C\) and each set \(\bar{U}_{n}\) is disjoint from \(D\). Similarly, there is a countable covering \(\{ V_{n}\}\) of \(D\) by open sets whose closures are disjoint from \(C\).
@@ -228,13 +216,11 @@ Now we are back in the situation that arose in the proof that a regular space wi
 \[
 U_n^{\prime } = U_{n} - \mathop{\bigcup }\limits_{{i = 1}}^{n}\bar{V}_{i}\;\text{ and }\;V_n^{\prime } = V_{n} - \mathop{\bigcup }\limits_{{i = 1}}^{n}\bar{U}_{i}
 \]
-
 Then the sets
 
 \[
 U^{\prime } = \mathop{\bigcup }\limits_{{n \in {\mathbb{Z}}_{ + }}}U_n^{\prime }\;\text{ and }\;V^{\prime } = \mathop{\bigcup }\limits_{{n \in {\mathbb{Z}}_{ + }}}V_n^{\prime }
 \]
-
 are disjoint open sets about \(C\) and \(D\), respectively.
 \end{proof}
 \begin{lemma}
@@ -257,7 +243,6 @@ Let \(\mathcal{B} = \bigcup {\mathcal{B}}_{n}\), where each collection \(\mathca
 \[
 f_{n,B} : X \rightarrow [{0,1/n}]
 \]
-
 such that \(f_{n,B}(x) > 0\) for \(x \in B\) and \(f_{n,B}(x) = 0\) for \(x \notin B\). The collection \(\{ f_{n,B}\}\) separates points from closed sets in \(X\). Given a point \(x_{0}\) and a neighborhood \(U\) of \(x_{0}\), there is a basis element \(B\) such that \(x_{0} \in B \subset U\). Then \(B \in {\mathcal{B}}_{n}\) for some \(n\), so that \(f_{n,B}(x_{0}) > 0\) and \(f_{n,B}\) vanishes outside \(U\).
 
 Let \(J\) be the subset of \(\mathbb{Z}_{ + } \times \mathcal{B}\) consisting of all pairs (n, B) such that \(B\) is an element of \(\mathcal{B}_{n}\). Define
@@ -265,7 +250,6 @@ Let \(J\) be the subset of \(\mathbb{Z}_{ + } \times \mathcal{B}\) consisting of
 \[
 F : X \rightarrow {[ 0,1] }^{J}
 \]
-
 by the equation
 
 \[
@@ -287,7 +271,6 @@ To prove continuity, we take a point \(x_{0}\) of \(X\) and a number \(\epsilon 
 \[
 x \in W \Rightarrow \rho ({F(x),F(x_{0}) }) < \epsilon
 \]
-
 Let \(n\) be fixed for the moment. Choose a neighborhood \(U_{n}\) of \(x_{0}\) that intersects only finitely many elements of the collection \(\mathcal{B}_{n}\). This means that as \(B\) ranges over \(\mathcal{B}_{n}\), all but finitely many of the functions \(f_{n,B}\) are identically equal to zero on \(U_{n}\). Because each function \(f_{n,B}\) is continuous, we can now choose a neighborhood \(V_{n}\) of \(x_{0}\) contained in \(U_{n}\) on which each of the remaining functions \(f_{n,B}\), for \(B \in {\mathcal{B}}_{n}\), varies by at most \(\epsilon /2\).
 
 Choose such a neighborhood \(V_{n}\) of \(x_{0}\) for each \(n \in {\mathbb{Z}}_{ + }\). Then choose \(N\) so that \(1/N \leq \epsilon /2\), and define \(W = V_{1} \cap \cdots \cap {V}_{N}\). We assert that \(W\) is the desired neighborhood of \(x_{0}\). Let \(x \in W\). If \(n \leq N\), then
@@ -295,19 +278,16 @@ Choose such a neighborhood \(V_{n}\) of \(x_{0}\) for each \(n \in {\mathbb{Z}}_
 \[
 | {f_{n,B}(x) - f_{n,B}(x_{0}) }| \leq \epsilon /2
 \]
-
 because the function \(f_{n,B}\) either vanishes identically or varies by at most \(\epsilon /2\) on \(W\). If \(n > N\), then
 
 \[
 | {f_{n,B}(x) - f_{n,B}(x_{0}) }| \leq 1/n < \epsilon /2
 \]
-
 because \(f_{n,B}\) maps \(X\) into \([{0,1/n}]\). Therefore,
 
 \[
 \rho ({F(x),F(x_{0}) }) \leq \epsilon /2 < \epsilon ,
 \]
-
 as desired.
 
 Step 2. Now we prove the converse. Assume \(X\) is metrizable. We know \(X\) is regular; let us show that \(X\) has a basis that is countably locally finite.
@@ -366,13 +346,11 @@ First one proves regularity. Let \(a\) be a point of \(X\) and let \(B\) be a cl
 \[
 V = \mathop{\bigcup }\limits_{{D \in \mathcal{D}}}D
 \]
-
 then \(V\) is an open set in \(X\) containing \(B\). Because \(\mathcal{D}\) is locally finite,
 
 \[
 \bar{V} = \mathop{\bigcup }\limits_{{D \in \mathcal{D}}}\bar{D}
 \]
-
 so that \(\bar{V}\) is disjoint from \(a\). Thus regularity is proved.
 
 To prove normality, one merely repeats the same argument, replacing \(a\) by the closed set \(A\) throughout and replacing the Hausdorff condition by regularity.
@@ -388,7 +366,6 @@ To prove normality, one merely repeats the same argument, replacing \(a\) by the
 \[
 \mathcal{C} = \{ B \cap Y \mid B \in \mathcal{B}\}
 \]
-
 is the required locally finite open refinement of \(\mathcal{A}\).
 \end{proof}
 
@@ -430,7 +407,6 @@ To prove the important theorem that every metrizable space is paracompact, we ne
 \[
 \mathcal{B} = \bigcup {\mathcal{B}}_{n}
 \]
-
 where each \(\mathcal{B}_{n}\) is locally finite.
 
 Now we apply essentially the same sort of shrinking trick we have used before to make sets from different \(\mathcal{B}_{n}\) 's disjoint. Given \(i\), let
@@ -438,19 +414,16 @@ Now we apply essentially the same sort of shrinking trick we have used before to
 \[
 V_{i} = \mathop{\bigcup }\limits_{{U \in {\mathcal{B}}_{i}}}U
 \]
-
 Then for each \(n \in {\mathbb{Z}}_{ + }\) and each element \(U\) of \(\mathcal{B}_{n}\), define
 
 \[
 S_{n}(U) = U - \mathop{\bigcup }\limits_{{i < n}}V_{i}
 \]
-
 [Note that \(S_{n}(U)\) is not necessarily open, nor closed.] Let
 
 \[
 \mathcal{C}_{n} = \{ {S_{n}(U) \mid U \in {\mathcal{B}}_{n}}\}
 \]
-
 Then \(\mathcal{C}_{n}\) is a refinement of \(\mathcal{B}_{n}\), because \(S_{n}(U) \subset U\) for each \(U \in {\mathcal{B}}_{n}\).
 
 Let \(\mathcal{C} = \bigcup {\mathcal{C}}_{n}\). We assert that \(\mathcal{C}\) is the required locally finite refinement of \(\mathcal{A}\), covering \(X\).
@@ -460,7 +433,6 @@ Let \(x\) be a point of \(X\). We wish to prove that \(x\) lies in an element of
 \[
 W_{1} \cap {W}_{2} \cap \cdots \cap {W}_{N} \cap U
 \]
-
 of \(x\) intersects only finitely many elements of \(\mathcal{C}\).
 
 \((2) \Rightarrow (3)\) Let \(\mathcal{A}\) be an open covering of \(X\). Let \(\mathcal{B}\) be the collection of all open sets \(U\) of \(X\) such that \(\bar{U}\) is contained in an element of \(\mathcal{A}\). By regularity, \(\mathcal{B}\) covers \(X\). Using (2), we can find a refinement \(\mathcal{C}\) of \(\mathcal{B}\) that covers \(X\) and is locally finite. Let
@@ -482,7 +454,6 @@ For each element \(B\) of \(\mathcal{B}\), let
 \[
 \mathcal{C}(B) = \{ C \mid C \in \mathcal{C}\text{ and }C \subset X - B\}
 \]
-
 Then define
 
 \[
@@ -548,7 +519,6 @@ One of the most useful properties that a paracompact space \(X\) possesses has t
 \[
 {\phi }_{\alpha } : X \rightarrow [{0,1}]
 \]
-
 is said to be a partition of unity on \(X\), dominated by \(\{ U_{\alpha }\}\), if:
 
 \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\arabic*), align=left]
@@ -607,13 +577,11 @@ We can now make sense of the formally infinite sum
 \[
 \Psi (x) = \mathop{\sum }\limits_{\alpha }{\psi }_{\alpha }(x)
 \]
-
 Since each \(x \in X\) has a neighborhood \(W_{x}\) that intersects the set (Support \({\psi }_{\alpha }\)) for only finitely many values of \(\alpha\), we can interpret this infinite sum to mean the sum of its (finitely many) nonzero terms. It follows that the restriction of \(\Psi\) to \(W_{x}\) equals a finite sum of continuous functions, and is thus continuous. Then since \(\Psi\) is continuous on \(W_{x}\) for each \(x\), it is continuous on \(X\). It is also positive. We now define
 
 \[
 {\phi }_{\alpha }(x) = {\psi }_{\alpha }(x) /\Psi (x)
 \]
-
 to obtain our desired partition of unity.
 \end{proof}
 
@@ -637,7 +605,6 @@ Because all the numbers \({\delta }_{\alpha }\) are positive, so is \(f\). We sh
 \[
 {\delta }_{\alpha }{\phi }_{\alpha }(x) \leq {\epsilon }_{C}{\phi }_{\alpha }(x) ;
 \]
-
 then the desired inequality follows by summing, as \(\sum {\phi }_{\alpha }(x) = 1\). If \(x \notin \operatorname{Support}{\phi }_{\alpha }\), then inequality \(( *)\) is trivial because \({\phi }_{\alpha }(x) = 0\). And if \(x \in \operatorname{Support}{\phi }_{\alpha }\) and \(x \in C\), then \(C\) intersects the support of \({\phi }_{\alpha }\), so that \({\delta }_{\alpha } \leq {\epsilon }_{C}\) by construction; thus \(( *)\) holds.
 \end{proof}
 \section*{Exercises}
@@ -714,13 +681,11 @@ Choose \(m\) so that \(2/m < \min \{ {{\epsilon }_{1},\ldots ,{\epsilon }_{k}}\}
 \[
 x \in D \subset {B}_{C}({y,1/m}) \text{,}
 \]
-
 the point \(x\) belongs to \(C\), so that \(C\) must be one of the sets \(C_{1},\ldots ,C_{k}\). Say \(C = C_{i}\). Since \(B_{C}({y,1/m})\) has diameter at most \(2/m < {\epsilon }_{i}\), it follows that
 
 \[
 x \in D \subset {B}_{C_{i}}({y,1/m}) \subset {B}_{C_{i}}({x,{\epsilon }_{i}}) \subset U,
 \]
-
 as desired.
 \end{proof}
 \section*{Exercises}
