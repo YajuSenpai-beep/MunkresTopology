@@ -26,6 +26,7 @@
     \firstpartfalse
   \fi
   \stepcounter{part}%
+  \addcontentsline{toc}{part}{\Roman{part}~#1}%  TOC: Part 条目(序号+标题; 前缀由 \l@part 加, 无页码)
   \vspace*{\fill}%
   {\filright\partfontsize\partname~\Roman{part}}\par
   \vspace{20pt}%
@@ -33,7 +34,6 @@
   \vspace*{\fill}%
   \clearpage
 }
-\newcommand{\@parthead}{\partname~\Roman{part}}
 \makeatother
 
 % ---------- 章节标题 ----------
@@ -326,7 +326,7 @@
       \vskip 2.0em \@plus\p@
       \begingroup
         \parindent \z@
-        {\leavevmode\Large\bfseries\partname~\MakeUppercase{#1}\par}%
+        {\leavevmode\Large\bfseries\partname~\Roman{part}~\MakeUppercase{#1}\par}%
         \nobreak
         \vskip 0em \@plus\p@
       \endgroup
