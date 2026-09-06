@@ -20,7 +20,6 @@ make clean    # 清理中间文件
 ├── chapters/                   # 14 章正文 + 前言/版权
 ├── images/                     # 插图（220 张 PNG）
 ├── fonts/                      # 字体文件（XeTeX）
-├── OCR_files/                  # 原始扫描 pdf 及 OCR/索引中间产物
 ├── TopologyBook.sty            # 样式文件
 ├── Topology_by_Munkres.tex     # 主文件
 ├── Topology_by_Munkres.ist     # makeindex 样式
@@ -28,7 +27,11 @@ make clean    # 清理中间文件
 └── Makefile                    # 编译脚本
 ```
 
+> 注：原始扫描 PDF 及 OCR/索引中间产物已 `.gitignore`（`OCR_files/`），存放于本仓库外
+> `..\论文素材\3.Munkres原始扫描文本 (Doc2X)\`，不以目录形式出现在仓库内。
+
 ## 现状
 
 - 14 章正文 + 前言；609 页；220 张 PNG 插图；参考文献 25 条。
 - 目录 TOC 已与原书对齐；`/PageLabels` 经 latexmk 收敛，阅读器页码与书印一致。
+- 索引已进书（`194` 条 `\idx`，书末含 Index 页）；交叉引用 522 处 `\label`。
