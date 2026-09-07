@@ -282,10 +282,11 @@
 \newtheorem*{ucorollary}{Corollary}
 \newtheorem*{utheorem}{Theorem}
 
+\newfontfamily{\ExampleSC}[Path=D:/texlive/2025/texmf-dist/fonts/opentype/huerta/alegreya/]{AlegreyaSC-Bold.otf}%  小型大写(原书 EXAMPLE 1.)
 \newtheoremstyle{ExampleStyle}%
-  {8pt}{8pt}{\normalfont\scshape}{0pt}%
-  {\bfseries}{}{.25em}%
-  {\thmname{#1} \thmnumber{#2}. \thmnote{(#3)}}
+  {8pt}{8pt}{\normalfont}{0pt}%
+  {}{}{.25em}%
+  {{\ExampleSC\thmname{#1}} \thmnumber{#2}. \thmnote{(#3)}}
 \theoremstyle{ExampleStyle}
 \newtheorem{example}{Example}
 \newtheoremstyle{DefinitionStyle}%
