@@ -273,7 +273,7 @@
 \newtheoremstyle{CustomBookMath}%
   {8pt}{8pt}{\itshape}{0pt}%
   {\bfseries}{}{.25em}%
-  {\thmname{#1} \thmnumber{#2} \thmnote{(#3)}}
+  {\thmname{#1} \thmnumber{#2}. \thmnote{(#3)}}%  数字后句点(对齐原书 Theorem 75.5.)
 \theoremstyle{CustomBookMath}
 \newtheorem{question}{Question}[chapter]
 \newtheorem{theorem}{Theorem}[section]
@@ -283,11 +283,16 @@
 \newtheorem*{utheorem}{Theorem}
 
 \newtheoremstyle{ExampleStyle}%
-  {8pt}{8pt}{\normalfont}{0pt}%
+  {8pt}{8pt}{\normalfont\scshape}{0pt}%
   {\bfseries}{}{.25em}%
-  {\thmname{#1} \thmnumber{#2} \thmnote{(#3)}}
+  {\thmname{#1} \thmnumber{#2}. \thmnote{(#3)}}
 \theoremstyle{ExampleStyle}
 \newtheorem{example}{Example}
+\newtheoremstyle{DefinitionStyle}%
+  {8pt}{8pt}{\normalfont}{0pt}%
+  {\bfseries}{}{.25em}%
+  {\thmname{#1} \thmnumber{#2}. \thmnote{(#3)}}
+\theoremstyle{DefinitionStyle}
 \makeatletter
 \@addtoreset{example}{section}
 \makeatother
