@@ -263,7 +263,7 @@ is also a finite intersection of elements of \(\mathcal{S}\), so it belongs to \
   \item \(\mathcal{T}_{1} =\) the standard topology,
   \item \(\mathcal{T}_{2} =\) the topology of \(\mathbb{R}_{K}\),
   \item \(\mathcal{T}_{3} =\) the finite complement topology,
-  \item \(\mathcal{T}_{4} =\) the upper limit topology, having all sets \((a, b)\) as basis,
+  \item \(\mathcal{T}_{4} =\) the upper limit topology, having all sets \((a, b]\) as basis,
   \item \(\mathcal{T}_{5} =\) the topology having all sets \(( {-\infty,a}) = \{ x \mid x < a\}\) as basis.
   \end{enumerate}
   Determine, for each of these topologies, which of the others it contains.
@@ -979,7 +979,10 @@ We shall study a number of such conditions in the next two chapters. The Hausdor
   \item \(C = A \cup B\)
   \item \(D = \{ x \times y \mid x\) is rational \(\}\)
   \item \(E = \{ {x \times y \mid 0 < x^{2} - y^{2} \leq 1}\}\)
-  \item \(F = \{ x \times y \mid x \neq 0\) and \(y \leq 1/x\}\) *21. ( Kuratowski) Consider the collection of all subsets \(A\) of the topological space \(X\). The operations of closure \(A \rightarrow \bar{A}\) and complementation \(A \rightarrow X - A\) are functions from this collection to itself.
+  \item \(F = \{ x \times y \mid x \neq 0\) and \(y \leq 1/x\}\)
+  \end{enumerate}
+\item[*21.] (Kuratowski) Consider the collection of all subsets \(A\) of the topological space \(X\). The operations of closure \(A \rightarrow \bar{A}\) and complementation \(A \rightarrow X - A\) are functions from this collection to itself.
+  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
   \item Show that starting with a given set \(A\), one can form no more than 14 distinct sets by applying these two operations successively.
   \item Find a subset \(A\) of \(\mathbb{R}\) (in its usual topology) for which the maximum of 14 is obtained
   \end{enumerate}
@@ -1376,8 +1379,9 @@ Yet another method for constructing continuous functions that is familiar from a
 
   \item Can you conjecture what functions \(f : \mathbb{R} \rightarrow \mathbb{R}\) are continuous when considered as maps from \(\mathbb{R}\) to \(\mathbb{R}_{\ell }\) ? As maps from \(\mathbb{R}_{\ell }\) to \(\mathbb{R}_{\ell }\) ? We shall return to this question in Chapter 3.
   \end{enumerate}
-\item Let \(Y\) be an ordered set in the order topology. Let \(f,g : X \rightarrow Y\) be continuous. (a) Show that the set \(\{ x \mid f(x) \leq g(x) \}\) is closed in \(X\)
+\item Let \(Y\) be an ordered set in the order topology. Let \(f,g : X \rightarrow Y\) be continuous.
   \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
+  \item Show that the set \(\{ x \mid f(x) \leq g(x) \}\) is closed in \(X\)
   \item Let \(h : X \rightarrow Y\) be the function \[ h(x) = \min \{ f(x),g(x) \}. \] Show that \(h\) is continuous [Hint: Use the pasting lemma.]
   \end{enumerate}
 \item Let \(\{ A_{\alpha }\}\) be a collection of subsets of \(X\) ; let \(X = \mathop{\bigcup }\limits_{\alpha }A_{\alpha }\). Let \(f : X \rightarrow Y\) ; suppose that \(f \mid {A}_{\alpha }\), is continuous for each \(\alpha\).

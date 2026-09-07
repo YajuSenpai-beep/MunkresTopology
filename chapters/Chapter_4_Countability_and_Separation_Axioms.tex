@@ -533,7 +533,7 @@ in the product space. See \hyperref[fig:32.3]{Figure 32.3}. Now we have a contra
   \item Let \(A\) and \(B\) be closed disjoint subsets of \(X\). For each component \(W\) of \(X - A \cup B\) that is an open interval with one end point in \(A\) and the other in \(B\), choose a point \(c_{W}\) of \(W\). Show that the set \(C\) of the points \(c_{W}\) is closed.
   \item Show that if \(V\) is a component of \(X - C\), then \(V\) does not intersect both \(A\) and \(B\).
   \end{enumerate}
-
+\addtocounter{enumi}{1}%  *8 显式标签不递增计数器, 补1
 \item[*9.] Prove the following: \textsl{Theorem.} If \(J\) is uncountable, then \(\mathbb{R}^{J}\) is not normal. \textsl{Proof.} (This proof is due to A. H. Stone, as adapted in \cite{SteenSeebach1970}.) Let \(X = {( \mathbb{Z}_{ + }) }^{J}\) ; it will suffice to show that \(X\) is not normal, since \(X\) is a closed subspace of \(\mathbb{R}^{J}\). We use functional notation for the elements of \(X\), so that the typical element of \(X\) is a function \(\mathbf{x} : J \rightarrow {\mathbb{Z}}_{ + }\)
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item If \(\mathbf{x} \in X\) and if \(B\) is a finite subset of \(J\), let \(U( {\mathbf{x},B})\) denote the set consisting of all those elements \(\mathbf{y}\) of \(X\) such that \(\mathbf{y}( \alpha ) = \mathbf{x}( \alpha )\) for \(\alpha \in B\). Show the sets \(U( {\mathbf{x},B})\) are a basis for \(X\).
@@ -541,7 +541,8 @@ in the product space. See \hyperref[fig:32.3]{Figure 32.3}. Now we have a contra
  \item Suppose \(U\) and \(V\) are open sets containing \(P_{1}\) and \(P_{2}\), respectively. Given a sequence \({\alpha }_{1},{\alpha }_{2},\ldots\) of distinct elements of \(J\), and a sequence \[ 0 = n_{0} < n_{1} < n_{2} < \cdots \] of integers, for each \(i \geq 1\) let us set \[ B_{i} = \{ {{\alpha }_{1},\ldots ,{\alpha }_{n_{i}}}\} \] and define \(\mathbf{x}_{i} \in X\) by the equations \[ \mathbf{x}_{i}( {\alpha }_{j}) = j\;\text{ for }1 \leq j \leq {n}_{i - 1}, \] \[ \mathbf{x}_{i}( \alpha ) = 1\;\text{ for all other values of }\alpha \text{.} \] Show that one can choose the sequences \({\alpha }_{j}\) and \(n_{j}\) so that for each \(i\), one has the inclusion \[ U( {\mathbf{x}_{i},B_{i}}) \subset U \] [Hint: To begin, note that \(\mathbf{x}_{1}( \alpha ) = 1\) for all \(\alpha\) ; now choose \(B_{1}\) so that \(U( {\mathbf{x}_{1},B_{1}}) \subset U\).]
  \item Let \(A\) be the set \(\{ {{\alpha }_{1},{\alpha }_{2},\ldots }\}\) constructed in (c) Define \(y : J \rightarrow {\mathbb{Z}}_{ + }\) by the equations \[ y( {\alpha }_{j}) = j\;\text{ for }{\alpha }_{j} \in A, \] \[ y( \alpha ) = 2\;\text{ for all other values of }\alpha \text{.} \] Choose \(B\) so that \(U( {y,B}) \subset V\). Then choose \(i\) so that \(B \cap A\) is contained in the set \(B_{i}\). Show that \[ U( {\mathbf{x}_{i + 1},B_{i + 1}}) \cap U( {\mathbf{y},B}) \] is not empty.
  \end{enumerate}
-\item Is every topological group normal? 
+\addtocounter{enumi}{1}%  *9 显式标签不递增计数器, 补1(使末项=10)
+\item Is every topological group normal?
 \end{enumerate}
 \booksection{33}{The Urysohn Lemma}
 
@@ -1102,6 +1103,7 @@ Finally, \(h\) maps all of \(X\) into the open interval \((-1,1)\). For if \(x \
  \item Show that the ``knotted x-axis'' \(K\) of \hyperref[fig:35.2]{Figure 35.2} is a retract of \(\mathbb{R}^{3}\).
 \item[*8.] Prove the following. \textsl{Theorem.} Let \(Y\) be a normal space. Then \(Y\) is an absolute retract if and only if \(Y\) has the universal extension property. [Hint: If \(X\) and \(Y\) are disjoint normal spaces, \(A\) is closed in \(X\), and \(f : A \rightarrow Y\) is a continuous map, define the adjunction space \(Z_{f}\) to be the quotient space obtained from \(X \cup Y\) by identifying each point \(a\) of \(A\) with the point \(f( a)\) and with all the points of \(f^{-1}( {\{ f( a) \} })\). Using the Tietze theorem, show that \(Z_{f}\) is normal. If \(p : X \cup Y \rightarrow {Z}_{f}\) is the quotient map, show that \(p \mid Y\) is a homeomorphism of \(Y\) with a closed subspace of \(Z_{f}\).]
  \end{enumerate}
+\addtocounter{enumi}{1}%  *8 显式标签不递增计数器, 补1(使末项=9)
 \item Let \(X_{1} \subset {X}_{2} \subset \cdots\) be a sequence of spaces, where \(X_{i}\) is a closed subspace of \(X_{i + 1}\) for each \(i\). Let \(X\) be the union of the \(X_{i}\) ; let us topologize \(X\) by declaring a set \(U\) to be open in \(X\) if \(U \cap {X}_{i}\) is open in \(X\) for each \(i\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show that this is a topology on \(X\) and that each space \(X_{i}\) is a subspace (in fact, a closed subspace) of \(X\) in this topology. This topology is called the topology coherent with the subspaces \(X_{i}\).
