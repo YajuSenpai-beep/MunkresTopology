@@ -251,7 +251,28 @@ This theorem states, roughly speaking, that if one divides \(F\) by \(N\) and th
 
 \begin{proof}
 	One has projection homomorphisms \(p,q,r,s\), as in the following diagram, where \(q( F) = F/N\) and \(p( F) = F/[ {F,F}]\).
-\munkresfig[0.7]{com_75_1} 
+% 交换图 com_75_1：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.5603}{%
+		\node (F)  at ( 20, -155) {$F$};
+		\node (qF) at (245,  -45) {$q(F)$};
+		\node (qQ) at (720,  -45) {$q(F)/[q(F),q(F)]$};
+		\node (pF) at (398, -207) {$p(F)$};
+		\node (pP) at (745, -262) {$p(F)/p(N)$};
+		\draw[->] (qF) -- node[above,pos=.5] {$s$} (qQ);
+		\draw[->] (F)  -- node[above,pos=.5] {$q$} (qF);
+		\draw[->] (F)  -- node[below,pos=.5] {$p$} (pF);
+		\draw[->] (qF) -- node[below,pos=.5] {$u$} (pP);
+		\draw[->] (pF) -- node[above,pos=.5] {$v$} (qQ);
+		\draw[->] ([xshift=-9pt]pP.east) -- node[right] {$\phi$} ([xshift=-9pt]qQ.east);
+		\draw[->] ([xshift=-18pt]qQ.east) -- node[left] {$\psi$} ([xshift=-18pt]pP.east);
+		\draw[->] (pF) -- node[below,pos=.5] {$r$} (pP);
+	}
+	\label{fig:com_75_1}
+\end{center}
+\par\nopagebreak 
 
 Because \(r \circ p\) maps \(N\) to 1, it induces a homomorphism \(u : q( F) \rightarrow p( F) /p( N)\). Then because \(p( F) /p( N)\) is abelian, the homomorphism \(u\) induces a homomorphism \(\phi\) of \(q( F) /[ {q( F),q( F) }]\). On the other hand, because \(s \circ q\) maps \(F\) into an abelian group, it induces a homomorphism \(v : p( F) \rightarrow q( F) /[ {q( F),q( F) }]\). Because \(s \circ q\) carries \(N\) to 1, so does \(v \circ p\) ; hence \(v\) induces a homomorphism \(\psi\) of \(p( F) /p( N)\).
 
@@ -849,7 +870,21 @@ On the other hand, suppose there is a neighborhood \(U\) of \(x\) that is homeom
 
 Indeed, let \(B\) be the open unit ball in \(\mathbb{R}^{2}\) centered at the origin, and suppose \(V\) is any neighborhood of 0 that is contained in \(B\). Choose \(\epsilon\) so that the open ball \(B_{\epsilon }\) of radius \(\epsilon\) centered at 0 lies in \(V\), and consider the inclusion mappings
 
-\munkresfig[0.4]{com_78_35} 
+% 交换图 com_78_35：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.3895}{%
+		\node (Be) at ( 60,  -70) {$\mathbf{B}_{\epsilon}-\mathbf{0}$};
+		\node (B)  at (880,  -70) {$\mathbf{B}-\mathbf{0}$};
+		\node (V)  at (530, -320) {$V-\mathbf{0}$};
+		\draw[->] (Be) -- node[above,pos=.5] {$i$} (B);
+		\draw[->] (Be) -- node[below left=-2pt,pos=.5] {$j$} (V);
+		\draw[->] (V)  -- node[above right=-3pt,pos=.5] {$k$} (B);
+	}
+	\label{fig:com_78_35}
+\end{center}
+\par\nopagebreak 
 
 The inclusion \(i\) is homotopic to the homeomorphism \(h(x) = x/\epsilon\), so it induces an isomorphism of fundamental groups. Therefore, \(k_{ * }\) is surjective; it follows that \(V - 0\) cannot be simply connected. See \hyperref[fig:78.4]{Figure 78.4}.
 
@@ -867,7 +902,21 @@ It follows that the fundamental group of \(X - x\) is not abelian, for it is eas
 Now we prove our result. For convenience, assume \(x\) is the origin in \(\mathbb{R}^{3}\). If \(W\) is an arbitrary neighborhood of 0, we can find a ``shrinking map'' \(f(x) = {\epsilon x}\) that carries \(X\) into \(W\). The space \(X_{\epsilon } = f( X)\) is a copy of \(X\) lying inside \(W\). Consider the inclusions
 
 \munkresfig[0.5]{78.5}[Figure 78.5]
-\munkresfig[0.5]{com_78_55} 
+% 交换图 com_78_55：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.4008}{%
+		\node (Xe) at ( 60,  -64) {$\mathbf{X}_{\epsilon}-\mathbf{0}$};
+		\node (X)  at (880,  -64) {$\mathbf{X}-\mathbf{0}$};
+		\node (W)  at (530, -320) {$W-\mathbf{0}$};
+		\draw[->] (Xe) -- node[above,pos=.5] {$i$} (X);
+		\draw[->] (Xe) -- node[below left=-2pt,pos=.5] {$j$} (W);
+		\draw[->] (W)  -- node[above right=-3pt,pos=.5] {$k$} (X);
+	}
+	\label{fig:com_78_55}
+\end{center}
+\par\nopagebreak 
 
 The inclusion \(i\) is homotopic to the homeomorphism \(h(x) = x/\epsilon\), so it induces an isomorphism of fundamental groups. It follows that \(k_{ * }\) is surjective, so the fundamental group of \(W - 0\) cannot be abelian.
 \end{proof}

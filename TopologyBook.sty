@@ -119,6 +119,27 @@
   \par\nopagebreak%
 }
 
+% ---------- 交换图 / 依赖图（原书手绘图 -> TikZ 复刻）----------
+% \munkrescomm{w_frac}{图体}
+%   w_frac = 原书 600dpi 实测「墨迹宽 / 版心宽」，决定该图外宽 = w_frac\textwidth
+%   图体坐标 = 原书实测归一化值 ×1000（该图墨迹宽记为 1000；原书 y 向下，故取负）
+%   字号 14.71pt / 线宽 1.025pt / 箭头头 Stealth[7.36pt,4.31pt]
+%     —— 均由原书实测换算为「正文 em」后按 14.71pt 落地；14.71pt
+%         = 12pt × (0.703\textwidth ÷ 该串 12pt 自然宽 200.93pt)，与原书比例一致。
+%         ⚠ 若改 \textwidth 或正文字号，这三个量需同时重算（详见 Chapter 6 内注释）
+%   用法示例见 chapters/Chapter_6_...tex（com_38_1）与各章 com_* 图
+\newcommand{\munkrescomm}[2]{%
+	\begin{tikzpicture}[
+		>={Stealth[length=7.36pt, width=4.31pt]},
+		line width=1.025pt,
+		every node/.style={font=\fontsize{14.71}{17.6}\selectfont,
+		                   anchor=center, inner sep=0pt, outer sep=0pt},
+		x=\dimexpr#1\textwidth/1000\relax, y=\dimexpr#1\textwidth/1000\relax,
+	]
+		#2
+	\end{tikzpicture}%
+}
+
 % ---------- 自定义命令 ----------
 % 统一章节开头: \chapteropening[short]{full} 或 \chapteropening{title}
 \NewDocumentCommand{\chapteropening}{om}{%

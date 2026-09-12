@@ -701,7 +701,28 @@ Let \(X = U \cup V\), where \(U\) and \(V\) are open in \(X\) ; assume \(U,V\), 
 \]
 be homomorphisms. Let \(i_{1},i_{2},j_{1},j_{2}\) be the homomorphisms indicated in the following diagram, each induced by inclusion.
 
-\munkresfig[0.5]{com_70_00} 
+% 交换图 com_70_00：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.4755}{%
+		\node (UV) at (140, -260) {$\pi_1(U \cap V, x_0)$};
+		\node (U)  at (635,  -15) {$\pi_1(U, x_0)$};
+		\node (X)  at (610, -260) {$\pi_1(X, x_0)$};
+		\node (V)  at (640, -500) {$\pi_1(V, x_0)$};
+		\node (H)  at (955, -260) {$H$};
+		\draw[->] (UV) -- node[above left=-2pt,pos=.45] {$i_1$} (U);
+		\draw[->] (UV) -- node[below left=-2pt,pos=.45] {$i_2$} (V);
+		\draw[->] (UV) -- (X);
+		\draw[->] (U) -- node[right] {$j_1$} (X);
+		\draw[->] (V) -- node[right] {$j_2$} (X);
+		\draw[->] (U) -- node[above right=-3pt,pos=.45] {$\phi_1$} (H);
+		\draw[->] (V) -- node[below right=-3pt,pos=.45] {$\phi_2$} (H);
+		\draw[->] (X) -- node[above,pos=.5] {$\Phi$} (H);
+	}
+	\label{fig:com_70_00}
+\end{center}
+\par\nopagebreak 
 
 If \({\phi }_{1} \circ {i}_{1} = {\phi }_{2} \circ {i}_{2}\), then there is a unique homomorphism \(\Phi : {\pi }_{1}( {X,x_{0}}) \rightarrow H\) such that \(\Phi \circ {j}_{1} = {\phi }_{1}\) and \(\Phi \circ {j}_{2} = {\phi }_{2}\).
 
@@ -926,7 +947,29 @@ We show that \(N\) equals \(\ker j\) by showing that \(k\) is injective. It suff
 
 Let \(H\) denote the group \({\pi }_{1}( {U,x_{0}}) * {\pi }_{1}( {V,x_{0}}) /N\). Let \({\phi }_{1} : {\pi }_{1}( {U,x_{0}}) \rightarrow H\) equal the inclusion of \({\pi }_{1}( {U,x_{0}})\) into the free product followed by projection of the free product onto its quotient by \(N\). Let \({\phi }_{2} : {\pi }_{1}( {V,x_{0}}) \rightarrow H\) be defined similarly. Consider the diagram
 
-\munkresfig[0.5]{com_70_01} 
+% 交换图 com_70_01：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.4758}{%
+		\node (UV) at (140, -260) {$\pi_1(U \cap V, x_0)$};
+		\node (U)  at (635,  -15) {$\pi_1(U, x_0)$};
+		\node (X)  at (610, -260) {$\pi_1(X, x_0)$};
+		\node (V)  at (640, -500) {$\pi_1(V, x_0)$};
+		\node (H)  at (955, -260) {$H$};
+		\draw[->] (UV) -- node[above left=-2pt,pos=.45] {$i_1$} (U);
+		\draw[->] (UV) -- node[below left=-2pt,pos=.45] {$i_2$} (V);
+		\draw[->] (UV) -- node[above,pos=.5] {$i_*$} (X);
+		\draw[->] (U) -- node[right] {$j_1$} (X);
+		\draw[->] (V) -- node[right] {$j_2$} (X);
+		\draw[->] (U) -- node[above right=-3pt,pos=.45] {$\phi_1$} (H);
+		\draw[->] (V) -- node[below right=-3pt,pos=.45] {$\phi_2$} (H);
+		\draw[->] ([yshift=-6pt]X.east) -- node[below,pos=.45] {$\Phi$} ([yshift=-6pt]H.west);
+		\draw[->] ([yshift=6pt]H.west) -- node[above,pos=.5] {$k$} ([yshift=6pt]X.east);
+	}
+	\label{fig:com_70_01}
+\end{center}
+\par\nopagebreak 
 
 It is easy to see that \({\phi }_{1} \circ {i}_{1} = {\phi }_{2} \circ {i}_{2}\). For if \(g \in {\pi }_{1}( {U \cap V,x_{0}})\), then \({\phi }_{1}( {i_{1}( g) })\) is the coset \(i_{1}( g) N\) in \(H\), and \({\phi }_{2}( {i_{2}( g) })\) is the coset \(i_{2}( g) N\). Because \(i_{1}{( g) }^{-1}i_{2}( g) \in N\), these cosets are equal.
 
@@ -1181,7 +1224,23 @@ Step 2 tells us that the homomorphism \({\pi }_{1}( {U,b}) \rightarrow {\pi }_{1
 
 Let \(\gamma\) be the straight-line path in \(B^{2}\) from \(q\) to \(p\) ; let \(\delta\) be the path \(\delta = h \circ \gamma\) in \(U\) from \(b\) to \(a\). The isomorphisms induced by the path \(\delta\) (both of which we denote by \(\widehat{\delta }\) ) commute with the homomorphisms induced by inclusion in the following diagram:
 
-\munkresfig[0.3]{com_72_10} 
+% 交换图 com_72_10：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.2883}{%
+		\node (A) at (180,  -55) {$\pi_1(U,b)$};
+		\node (B) at (830,  -55) {$\pi_1(X,b)$};
+		\node (C) at (180, -440) {$\pi_1(U,a)$};
+		\node (D) at (830, -440) {$\pi_1(X,a)$};
+		\draw[->] (A) -- (B);
+		\draw[->] (A) -- node[left] {$\hat{\alpha}$} (C);
+		\draw[->] (B) -- node[right] {$\hat{\alpha}$} (D);
+		\draw[->] (C) -- (D);
+	}
+	\label{fig:com_72_10}
+\end{center}
+\par\nopagebreak 
 
 Therefore, the homomorphism of \({\pi }_{1}( {U,a})\) into \({\pi }_{1}( {X,a})\) induced by inclusion is surjective, and its kernel is the least normal subgroup containing the element \(\widehat{\delta }( [ g_{0}] )\).
 

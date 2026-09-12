@@ -23,35 +23,26 @@ There is another concept in topology that involves the notion of local finitenes
 Some of the sections of this chapter are independent of one another. The dependence among them is expressed in the following diagram.
 
 % 各节依赖关系图（对应原书 p.244；样式同 preface.tex 的章节依赖图）
-% 几何取自原书 600dpi 实测，全部以「图宽 W」为单位（1 单位 = W/1000）：
-%   节点 anchor=base west，坐标 = 该行基线左端
-%     §39 (243.7, 0)      §40 (0, −87.8)     The Nagata-Smirnov… (311.8, −85.4)
-%     §41 (241.3, −175.0)                    §42 (242.5, −264.6)
+% 几何取自原书 600dpi 实测，全部以「图宽 W」为单位（1 单位 = W/1000）。
+% ⚠ 本图坐标记的是「该行基线左端」，与 \munkrescomm 默认的 anchor=center 不同，
+%   故每个 \node 用 [anchor=base west] 覆盖（TikZ 中逐节点选项优先级高于 every node）。
+%   §39 (243.7, 0)      §40 (0, −87.8)     The Nagata-Smirnov… (311.8, −85.4)
+%   §41 (241.3, −175.0)                    §42 (242.5, −264.6)
 %   箭头（自上而下）：§39→§40 斜 / §39→§41 竖 / §41→§42 短竖 / §40→§42 长斜
-% 尺寸关系（原书实测）：图宽 = 0.703 版心宽；四行等距 = 1.70 正文行距；
-%   线宽 = 0.0697 em；箭头头 长 0.50 em / 宽 0.293 em
-% 字号 14.71pt = 12pt × (0.703\textwidth ÷ 该串 12pt 自然宽 200.93pt)，
-%   使 "The Nagata-Smirnov metrization theorem" 恰占 0.688 图宽（即原书比例）。
-%   ⚠ 若改 \textwidth 或正文字号，上式需重算，字号与 x/y 必须同时改。
+% 尺寸/字号/线宽/箭头头的推导见 TopologyBook.sty 的 \munkrescomm
 \par\nopagebreak
 \begin{center}
-	\begin{tikzpicture}[
-		>={Stealth[length=7.36pt, width=4.31pt]},
-		every node/.style={font=\fontsize{14.71}{17.6}\selectfont,
-		                   anchor=base west, inner sep=0pt, outer sep=0pt},
-		line width=1.025pt,
-		x=0.000703\textwidth, y=0.000703\textwidth,
-	]
-		\node (dg39) at (243.7,    0.0) {§39 Local finiteness};
-		\node (dg40) at (  0.0,  -87.8) {§40};
-		\node (dgng) at (311.8,  -85.4) {The Nagata-Smirnov metrization theorem};
-		\node (dg41) at (241.3, -175.0) {§41 Paracompactness};
-		\node (dg42) at (242.5, -264.6) {§42 The Smirnov metrization theorem};
+	\munkrescomm{0.7043}{%
+		\node[anchor=base west] (dg39) at (243.7,    0.0) {§39 Local finiteness};
+		\node[anchor=base west] (dg40) at (  0.0,  -87.8) {§40};
+		\node[anchor=base west] (dgng) at (311.8,  -85.4) {The Nagata-Smirnov metrization theorem};
+		\node[anchor=base west] (dg41) at (241.3, -175.0) {§41 Paracompactness};
+		\node[anchor=base west] (dg42) at (242.5, -264.6) {§42 The Smirnov metrization theorem};
 		\draw[->] (228.2,   4.2) -- (  57.3,  -56.2);
 		\draw[->] (257.5, -16.7) -- ( 257.5, -133.8);
 		\draw[->] (257.0,-197.1) -- ( 257.0, -224.6);
 		\draw[->] ( 46.6,-104.6) -- ( 228.2, -234.2);
-	\end{tikzpicture}
+	}
 	\label{fig:com_38_1}
 \end{center}
 \par\nopagebreak
