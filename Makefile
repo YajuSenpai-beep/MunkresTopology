@@ -33,7 +33,7 @@ INDEXER = makeindex -s $(IST) $(TARGET).idx
 all: $(TARGET).pdf $(COVER).pdf
 
 # latexmk 自动重复编译至收敛,并自动调用 biber/makeindex
-$(TARGET).pdf: $(MAIN) $(STY) $(IST) $(TEX_SRC)
+$(TARGET).pdf: $(MAIN) $(STY) $(IST) $(TEX_SRC) Bibliography.bib
 	$(LATEXMK) --shell-escape $(MAIN)
 
 # ---- cover only (跨页封面；TikZ overlay 需两趟定坐标) ----

@@ -20,7 +20,7 @@
 %   QA611/514 行 9.6% → 0.46cm
 %   编号行右缘 54.6% → 距版心右缘 7.98cm(右对齐)
 % 用 cm 而非 em: em 随 \small/\ttfamily 变, 无法从代码推出宽度
-\newcommand{\cipnum}[1]{\noindent\makebox[\textwidth][r]{\hspace*{7.98cm}#1}\par}
+\newcommand{\cipnum}[1]{\noindent\makebox[\textwidth][r]{#1\hspace*{7.98cm}}\par}
 {\ttfamily
 \noindent Munkres, James R \\                          % 顶格(=版心左缘)
 
@@ -77,7 +77,9 @@ without permission in writing from the publisher.
 \vspace{1.5\baselineskip}
 
 Printed in the United States of America \\
-10 9 8 7
+% 印刷次数行(printer's key)：数字等距，重印时删最左一位而不移位
+% 间距 ≈ 数字宽的 2 倍(原书实测: 间距0.180/数字宽0.093 = 1.94×) → 本页 0.36cm
+10\hspace{0.36cm}9\hspace{0.36cm}8\hspace{0.36cm}7
 
 \vspace{1.5\baselineskip}
 {\ttfamily

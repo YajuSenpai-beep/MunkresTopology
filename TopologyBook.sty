@@ -27,7 +27,7 @@
     \firstpartfalse
   \fi
   \stepcounter{part}%
-  \addcontentsline{toc}{part}{\Roman{part}~#1}%  TOC: Part 条目(序号+标题; 前缀由 \l@part 加, 无页码)
+  \addcontentsline{toc}{part}{\Roman{part}\quad#1}%  TOC: Part 条目(序号与标题间隔用 \quad, 与 section 一致; 前缀由 \l@part 加, 无页码)
   \vspace*{\fill}%
   {\filright\partfontsize\partname~\Roman{part}}\par
   \vspace{20pt}%
@@ -202,6 +202,48 @@
 
 % ---------- 参考文献 ----------
 \RequirePackage[backend=biber, style=alphabetic, sorting=biborder]{biblatex}
+% 篇名不加外引号(对齐原书: 原书只在题名【内部】用引号, 如 [C] The origin of "Zorn's lemma")
+\DeclareFieldFormat[article,inproceedings,incollection]{title}{#1}
+% ── 文献体例对齐原书(amsalpha 式): Author. Title. Journal, vol:pages, year. ──
+%    即: 去掉 "In:" / 去掉 "pp." / 年份移到最后(原书的写法)
+\renewbibmacro{in:}{}%
+\DeclareFieldFormat{pages}{#1}%
+\DeclareBibliographyDriver{article}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \printnames{author}%
+  \setunit{\addperiod\space}%
+  \printfield{title}%
+  \setunit{\addperiod\space}%
+  \printfield{journaltitle}%
+  \setunit{\addcomma\space}%
+  \printfield{volume}%
+  \setunit{\addcolon}%
+  \printfield{pages}%
+  \setunit{\addcomma\space}%
+  \printfield{year}%
+  \setunit{\addperiod}%
+  \usebibmacro{finentry}%
+}
+% 图书: Author. Title[, Nrd edition]. Publisher, City, year. (原书体例)
+\DeclareBibliographyDriver{book}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \printnames{author}%
+  \setunit{\addperiod\space}%
+  \printfield{title}%
+  \iffieldundef{edition}%
+    {}%
+    {\setunit{\addcomma\space}\printfield{edition}\addspace edition}%
+  \setunit{\addperiod\space}%
+  \printlist{publisher}%
+  \setunit{\addcomma\space}%
+  \printlist{location}%
+  \setunit{\addcomma\space}%
+  \printfield{year}%
+  \setunit{\addperiod}%
+  \usebibmacro{finentry}%
+}
 \setlength{\bibitemsep}{1\baselineskip}
 \setlength{\bibparsep}{0.4\baselineskip}
 \setlength{\biblabelsep}{2em}
@@ -322,7 +364,7 @@
       \parindent \z@ \rightskip \@pnumwidth
       \parfillskip -\@pnumwidth
       \leavevmode\large\bfseries
-      \def\numberline##1{\chaptername~##1\ }%
+      \def\numberline##1{\chaptername~##1\quad}%   编号与标题间隔用 \quad，与 section 条目一致
       #1\nobreak
       \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill
       \hb@xt@\@pnumwidth{\hfil\bfseries #2}\par
@@ -337,7 +379,8 @@
       \vskip 2.0em \@plus\p@
       \begingroup
         \parindent \z@
-        {\leavevmode\Large\bfseries\partname~\Roman{part}~\MakeUppercase{#1}\par}%
+        % 注: 不用 \Roman{part}(在钩子里取不到值, 渲染为空); 序号随条目文本带入
+        {\leavevmode\Large\bfseries\partname~\MakeUppercase{#1}\par}%
         \nobreak
         \vskip 0em \@plus\p@
       \endgroup
