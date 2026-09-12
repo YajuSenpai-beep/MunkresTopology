@@ -365,7 +365,27 @@ Thus \(g\) is the desired extension of \(f\).
 
 \begin{proof}
  Consider the inclusion mapping \(j_{2} : X \rightarrow {Y}_{2}\). It is a continuous map of \(X\) into the compact Hausdorff space \(Y_{2}\). Because \(Y_{1}\) has the extension property, we may, by the preceding theorem, extend \(j_{2}\) to a continuous map \(f_{2} : Y_{1} \rightarrow {Y}_{2}\). Similarly, we may extend the inclusion map \(j_{1} : X \rightarrow {Y}_{1}\) to a continuous map \(f_{1} : Y_{2} \rightarrow {Y}_{1}\) (because \(Y_{2}\) has the extension property and \(Y_{1}\) is compact Hausdorff).
-\munkresfig[0.4]{com_37_3}
+% 交换图 com_37_3：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.3771}{%
+		\node (X1) at ( 76,  -22) {$X$};
+		\node (C1) at (200,  -45) {$\subset$};
+		\node (Y1) at (300,  -45) {$Y_1$};
+		\node (Y2) at ( 76, -330) {$Y_2$};
+		\draw[->] (X1) -- node[left] {$j_2$} (Y2);
+		\draw[->] (Y1) -- node[below,pos=.5] {$f_2$} (Y2);
+		\node (X2) at (676,  -22) {$X$};
+		\node (C2) at (800,  -45) {$\subset$};
+		\node (Y2b) at (900,  -45) {$Y_2$};
+		\node (Y1b) at (676, -330) {$Y_1$};
+		\draw[->] (X2) -- node[left] {$j_1$} (Y1b);
+		\draw[->] (Y2b) -- node[below,pos=.5] {$f_1$} (Y1b);
+	}
+	\label{fig:com_37_3}
+\end{center}
+\par\nopagebreak
 
 The composite \(f_{1} \circ {f}_{2} : Y_{1} \rightarrow {Y}_{1}\) has the property that for every \(x \in X\), one has \(f_{1}( {f_{2}(x) }) = x\). Therefore, \(f_{1} \circ {f}_{2}\) is a continuous extension of the identity map \(i_{X} : X \rightarrow X\). But the identity map of \(Y_{1}\) is also a continuous extension of \(i_{X}\). By uniqueness of extensions (\hyperref[lem:38.3]{Lemma 38.3}), \(f_{1} \circ {f}_{2}\) must equal the identity map of \(Y_{1}\). Similarly, \(f_{2} \circ {f}_{1}\) must equal the identity map of \(Y_{2}\). Thus \(f_{1}\) and \(f_{2}\) are homeomorphisms.
 \end{proof}

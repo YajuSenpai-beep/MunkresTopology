@@ -29,7 +29,21 @@ In this section, we show that the subgroup \(H_{0}\) of \({\pi }_{1}( {B,b_{0}})
 	Let \(p : E \rightarrow B\) and \(p^{\prime } : E^{\prime } \rightarrow B\) be covering maps. They are said to be equivalent if there exists a homeomorphism \(h : E \rightarrow {E}^{\prime }\) such that \(p = p^{\prime } \circ h\). The homeomorphism \(h\) is called an equivalence of covering maps or an equivalence of covering spaces.
 \end{definition}
 
-\munkresfig[0.3]{com_79_def}
+% 交换图 com_79_def：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.2348}{%
+		\node (E)  at (  47, -114) {$E$};
+		\node (Ep) at ( 941, -114) {$E'$};
+		\node (B)  at ( 481, -560) {$B$};
+		\draw[->] (E)  -- node[above] {$h$} (Ep);
+		\draw[->] (E)  -- node[below left=-2pt] {$p$}  (B);
+		\draw[->] (Ep) -- node[below right=-2pt] {$p'$} (B);
+	}
+	\label{fig:com_79_def}
+\end{center}
+\par\nopagebreak
 
 Given two covering maps \(p : E \rightarrow B\) and \(p^{\prime } : E^{\prime } \rightarrow B\) whose corresponding subgroups \(H_{0}\) and \(H_0^{\prime }\) are equal, we shall prove that there exists an equivalence \(h\) : \(E \rightarrow {E}^{\prime }\). For this purpose, we need to generalize the lifting lemmas of \S\ 54.
 
@@ -93,11 +107,37 @@ Since \(p^{\prime } \circ h = p\), we have \(H_{0} = H_0^{\prime }\).
 
 Now we prove the ``if'' part of the theorem; we assume that \(H_{0} = H_0^{\prime }\) and show that \(h\) exists. We shall apply the preceding lemma (four times!). Consider the maps
 
-\munkresfig[0.2]{com_79_2_a} 
+% 交换图 com_79_2_a：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.1442}{%
+		\node (Ep) at ( 805,  -95) {$E'$};
+		\node (E)  at (  75, -797) {$E$};
+		\node (B)  at ( 800, -798) {$B.$};
+		\draw[->] (Ep) -- node[right] {$p'$} (B);
+		\draw[->] (E)  -- node[above] {$p$}  (B);
+	}
+	\label{fig:com_79_2_a}
+\end{center}
+\par\nopagebreak 
 
 Because \(p^{\prime }\) is a covering map and \(E\) is path connected and locally path connected, there exists a map \(h : E \rightarrow {E}^{\prime }\) with \(h( e_{0}) = e_0^{\prime }\) that is a lifting of \(p\) (that is, such that \(p^{\prime } \circ h = p)\). Reversing the roles of \(E\) and \(E^{\prime }\) in this argument, we see there is a map \(k : E^{\prime } \rightarrow E\) with \(k( e_0^{\prime }) = e_{0}\) such that \(p \circ k = p^{\prime }\). Now consider the maps
 
-\munkresfig[0.2]{com_79_2_b}
+% 交换图 com_79_2_b：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.1374}{%
+		\node (Et) at ( 845,  -88) {$E$};
+		\node (E)  at (  76, -830) {$E$};
+		\node (B)  at ( 812, -824) {$B.$};
+		\draw[->] (Et) -- node[right] {$p$} (B);
+		\draw[->] (E)  -- node[above] {$p$} (B);
+	}
+	\label{fig:com_79_2_b}
+\end{center}
+\par\nopagebreak
 
 The map \(k \circ h : E \rightarrow E\) is a lifting of \(p\) (since \(p \circ k \circ h = p^{\prime } \circ h = p\) ), with \(p( e_{0}) = e_{0}\). The identity map \(i_{E}\) of \(E\) is another such lifting. The uniqueness part of the preceding lemma implies that \(k \circ h = i_{E}\). A similar argument shows that \(h \circ k\) equals the identity map of \(E^{\prime }\). 
 
@@ -211,7 +251,21 @@ Now we show \(p_{0} : E_{0} \rightarrow B\) is a covering map. Given \(x \in B\)
 \label{lem:\thetheorem}
 	Let \(p,q\), and \(r\) be continuous maps with \(p = r \circ q\), as in the following diagram:
 
-\munkresfig[0.2]{com_80_1} 
+% 交换图 com_80_1：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.1331}{%
+		\node (X) at ( 173,  -94) {$X$};
+		\node (Y) at ( 935, -398) {$Y$};
+		\node (Z) at ( 171, -711) {$Z$};
+		\draw[->] (X) -- node[above,pos=.55] {$q$} (Y);
+		\draw[->] (X) -- node[left] {$p$} (Z);
+		\draw[->] (Y) -- node[below,pos=.55] {$r$} (Z);
+	}
+	\label{fig:com_80_1}
+\end{center}
+\par\nopagebreak 
 
 (a) If \(p\) and \(r\) are covering maps, so is \(q\).
 
@@ -224,7 +278,21 @@ Now we show \(p_{0} : E_{0} \rightarrow B\) is a covering map. Given \(x \in B\)
 
 Given \(y \in Y\), we find a neighborhood of \(y\) that is evenly covered by \(q\). Let \(z =\) \(r( y)\). Since \(p\) and \(r\) are covering maps, we can find a path-connected neighborhood \(U\) of \(z\) that is evenly covered by both \(p\) and \(r\). Let \(V\) be the slice of \(r^{-1}( U)\) that contains the point \(y\) ; we show \(V\) is evenly covered by \(q\). Let \(\{ U_{\alpha }\}\) be the collection of slices of \(p^{-1}( U)\). Now \(q\) maps each set \(U_{\alpha }\) into the set \(r^{-1}( U)\) ; because \(U_{\alpha }\) is connected, it must be mapped by \(q\) into a single one of the slices of \(r^{-1}( U)\). Therefore, \(q^{-1}( V)\) equals the union of those slices \(U_{\alpha }\) that are mapped by \(q\) into \(V\). It is easy to see that each such \(U_{\alpha }\) is mapped homeomorphically onto \(V\) by \(q\). For let \(p_{0},q_{0},r_{0}\) be the maps obtained by restricting \(p,q\), and \(r\), respectively, as indicated in the following diagram:
 
-\munkresfig[0.2]{com_80_2} 
+% 交换图 com_80_2：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.1517}{%
+		\node (Ua) at ( 200, -112) {$U_{\alpha}$};
+		\node (U)  at ( 212, -659) {$U$};
+		\node (V)  at ( 936, -387) {$V$};
+		\draw[->] (Ua) -- node[above,pos=.45] {$q_0$} (V);
+		\draw[->] (Ua) -- node[left] {$p_0$} (U);
+		\draw[->] (V)  -- node[below,pos=.55] {$r_0$} (U);
+	}
+	\label{fig:com_80_2}
+\end{center}
+\par\nopagebreak 
 
 Because \(p_{0}\) and \(r_{0}\) are homeomorphisms, so is \(q_{0} = r_0^{-1} \circ {p}_{0}\).
 
@@ -234,7 +302,21 @@ Given \(z \in Z\), let \(U\) be a path-connected neighborhood of \(z\) that is e
 
 Let \(\{ U_{\alpha }\}\) be the collection of slices of \(p^{-1}( U)\) ; they are disjoint, open, and path connected, so they are the path components of \(p^{-1}( U)\). Now \(q\) maps each \(U_{\alpha }\) into the set \(r^{-1}( U)\) ; because \(U_{\alpha }\) is connected, it must be mapped by \(q\) into one of the sets \(V_{\beta }\). Therefore \(q^{-1}( V_{\beta })\) equals the union of a subcollection of the collection \(\{ U_{\alpha }\}\). \hyperref[thm:53.2]{Theorem 53.2} and \hyperref[lem:80.1]{Lemma 80.1} together imply that if \(U_{{\alpha }_{0}}\) is any one of the path components of \(q^{-1}( V_{\beta })\) then the map \(q_{0} : U_{{\alpha }_{0}} \rightarrow {V}_{\beta }\) obtained by restricting \(q\) is a covering map. In particular, \(q_{0}\) is surjective. Hence \(q_{0}\) is a homeomorphism, being continuous, open, and injective as well. Consider the maps
 
-\munkresfig[0.2]{com_80_3} 
+% 交换图 com_80_3：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.1661}{%
+		\node (Ua) at ( 190, -110) {$U_{\alpha_0}$};
+		\node (U)  at ( 193, -677) {$U$};
+		\node (Vb) at ( 905, -399) {$V_{\beta}$};
+		\draw[->] (Ua) -- node[above,pos=.45] {$q_0$} (Vb);
+		\draw[->] (Ua) -- node[left] {$p_0$} (U);
+		\draw[->] (Vb) -- node[below,pos=.55] {$r_0$} (U);
+	}
+	\label{fig:com_80_3}
+\end{center}
+\par\nopagebreak 
 
 obtained by restricting \(p,q\), and \(r\). Because \(p_{0}\) and \(q_{0}\) are homeomorphisms, so is \(r_{0}\).
 \end{proof}
@@ -243,7 +325,21 @@ obtained by restricting \(p,q\), and \(r\). Because \(p_{0}\) and \(q_{0}\) are 
 	Let \(p : E \rightarrow B\) be a covering map, with \(E\) simply connected. Given any covering map \(r : Y \rightarrow B\), there is a covering map \(q : E \rightarrow Y\) such that \(r \circ q = p\).
 \end{theorem}
 
-\munkresfig[0.2]{com_80_4} 
+% 交换图 com_80_4：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.1324}{%
+		\node (E) at ( 174,  -94) {$E$};
+		\node (Y) at ( 935, -404) {$Y$};
+		\node (B) at ( 173, -719) {$B$};
+		\draw[->] (E) -- node[above,pos=.55] {$q$} (Y);
+		\draw[->] (E) -- node[left] {$p$} (B);
+		\draw[->] (Y) -- node[below,pos=.55] {$r$} (B);
+	}
+	\label{fig:com_80_4}
+\end{center}
+\par\nopagebreak 
 
 This theorem shows why \(E\) is called a universal covering space of \(B\) ; it covers every other covering space of \(B\).
 
@@ -274,7 +370,26 @@ i_{ * } : {\pi }_{1}( {U,b_{0}}) \rightarrow {\pi }_{1}( {B,b_{0}}).
 
 Given \(n\), there is a retraction \(r : X \rightarrow {C}_{n}\) obtained by letting \(r\) map each circle \(C_{i}\) for \(i \neq n\) to the point \(b_{0}\). Choose \(n\) large enough that \(C_{n}\) lies in \(U\). Then in the following diagram of homomorphisms induced by inclusion, \(j_{ * }\) is injective, hence \(i_{ * }\) cannot be trivial.
 
-\munkresfig[0.4]{com_80_5}
+% 交换图 com_80_5：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	% 本图在 centeredblock(minipage 0.85\textwidth)内 —— 该处 \textwidth 被收窄为 432.91pt，
+	% 故 w 需按「块宽」表示：0.4000（由原书 ink/textwidth=0.3814 换算到块宽）
+	% ⚠ 纵向跨度按原书印刷形变比再放大 1.106：本图两行节点间距较紧，而图内字号固定
+	%    14.71pt，标签横向占比较原书为大，会把图撑宽（渲染 ar=2.805 vs 原书 ar=2.604）；
+	%    放大 y 后 ar 与原书一致。这是本图特有的一处经验修正。
+	\munkrescomm{0.4000}{%
+		\node (Cn) at ( 101,  -80) {$\pi_1(C_n,b_0)$};
+		\node (Xn) at ( 866,  -82) {$\pi_1(X,b_0)$};
+		\node (Un) at ( 517, -392) {$\pi_1(U,b_0)$};
+		\draw[->] (Cn) -- node[above,pos=.5] {$j_*$} (Xn);
+		\draw[->] (Cn) -- node[below right=-2pt,pos=.5] {$k_*$} (Un);
+		\draw[->] (Un) -- node[above left=-2pt,pos=.5] {$i_*$} (Xn);
+	}
+	\label{fig:com_80_5}
+\end{center}
+\par\nopagebreak
 
 It follows that even though \(X\) is path connected and locally path connected, it has no universal covering space.
 \end{example}
@@ -430,7 +545,23 @@ It follows that \(\pi\) is regular. Indeed, for any two points \(x_{1}\) and \(x
 	If \(p : X \rightarrow B\) is a regular covering map and \(G\) is its group of covering transformations, then there is a homeomorphism \(k : X/G \rightarrow B\) such that \(p = k \circ \pi\), where \(\pi : X \rightarrow X/G\) is the projection.
 \end{theorem}
 
-\munkresfig[0.2]{com_81_6} 
+% 交换图 com_81_6：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.1744}{%
+		\node (Xl) at ( 174,  -72) {$X$};
+		\node (Xr) at ( 871,  -77) {$X$};
+		\node (G)  at ( 172, -672) {$X/G$};
+		\node (B)  at ( 872, -678) {$B$};
+		\draw (Xl) -- node[above,pos=.5] {$=$} (Xr);
+		\draw[->] (Xl) -- node[right] {$\pi$} (G);
+		\draw[->] (Xr) -- node[right] {$p$} (B);
+		\draw[->] (G)  -- node[above,pos=.5] {$k$} (B);
+	}
+	\label{fig:com_81_6}
+\end{center}
+\par\nopagebreak 
 
 \begin{proof}
 	If \(g\) is a covering transformation, then \(p( {g(x) }) = p(x)\) by definition. Hence \(p\) is constant on each orbit, so it induces a continuous map \(k\) of the quotient space \(X/G\) into \(B\). On the other hand, \(p\) is a quotient map because it is continuous, surjective, and open. Because \(p\) is regular, any two points of \(p^{-1}( b)\) belong to the same orbit under the action of \(G\). Therefore, \(\pi\) induces a continuous map \(B \rightarrow X/G\) that is an inverse for \(k\).
@@ -461,7 +592,21 @@ It follows that \(\pi\) is regular. Indeed, for any two points \(x_{1}\) and \(x
 \item Let \(p : X \rightarrow B\) be a covering map (not necessarily regular); let \(G\) be its group of covering transformations.
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show that the action of \(G\) on \(X\) is properly discontinuous.
- \item Let \(\pi : X \rightarrow X/G\) be the projection map. Show there is a covering map \(k : X/G \rightarrow B\) such that \(k \circ \pi = p\). \munkresfig[0.2]{81.7_comm}
+ \item Let \(\pi : X \rightarrow X/G\) be the projection map. Show there is a covering map \(k : X/G \rightarrow B\) such that \(k \circ \pi = p\). % 交换图 81.7_comm：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.1795}{%
+		\node (X) at ( 135,  -73) {$X$};
+		\node (G) at ( 833, -326) {$X/G$};
+		\node (B) at ( 133, -583) {$B$};
+		\draw[->] (X) -- node[above,pos=.45] {$\pi$} (G);
+		\draw[->] (X) -- node[left]  {$p$} (B);
+		\draw[->] (G) -- node[below,pos=.45] {$k$} (B);
+	}
+	\label{fig:81.7_comm}
+\end{center}
+\par\nopagebreak
  \end{enumerate}
 \item Let \(G\) be a group of homeomorphisms of \(X\). The action of \(G\) on \(X\) is said to be fixed-point free if no element of \(G\) other than the identity \(e\) has a fixed point. Show that if \(X\) is Hausdorff, and if \(G\) is a finite group of homeomorphisms of \(X\) whose action is fixed-point free, then the action of \(G\) is properly discontinuous.
 \item Consider \(S^{3}\) as the space of all pairs of complex numbers \(( {z_{1},z_{2}})\) satisfying the equation \({| z_{1}| }^{2} + {| z_{2}| }^{2} = 1\). Given relatively prime positive integers \(n\) and \(k\), define \(h : S^{3} \rightarrow {S}^{3}\) by the equation \[ h( {z_{1},z_{2}}) = ( {z_{1}e^{{2\pi i}/n},z_{2}e^{{2\pi ik}/n}}). \]

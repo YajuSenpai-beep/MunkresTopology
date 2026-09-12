@@ -433,7 +433,23 @@ Let \(k : ( {Y,y_{0}}) \rightarrow ( {X,x_{0}})\) be the inverse of \(h\). Then 
 \item Let \(x_{0}\) and \(x_{1}\) be points of the path-connected space \(X\). Show that \({\pi }_{1}( {X,x_{0}})\) is abelian if and only if for every pair \(\alpha\) and \(\beta\) of paths from \(x_{0}\) to \(x_{1}\), we have \(\widehat{\alpha } = \widehat{\beta }\).
 \item Let \(A \subset X\) ; suppose \(r : X \rightarrow A\) is a continuous map such that \(r( a) = a\) for each \(a \in A\). (The map \(r\) is called a retraction of \(X\) onto \(A\).) If \(a_{0} \in A\), show that \[ r_{ * } : {\pi }_{1}( {X,a_{0}}) \rightarrow {\pi }_{1}( {A,a_{0}}) \] is surjective.
 \item Let \(A\) be a subspace of \(\mathbb{R}^{n}\) ; let \(h : ( {A,a_{0}}) \rightarrow ( {Y,y_{0}})\). Show that if \(h\) is extendable to a continuous map of \(\mathbb{R}^{n}\) into \(Y\), then \(h_{ * }\) is the trivial homomorphism (the homomorphism that maps everything to the identity element).
-\item Show that if \(X\) is path connected, the homomorphism induced by a continuous map is independent of base point, up to isomorphisms of the groups involved. More precisely, let \(h : X \rightarrow Y\) be continuous, with \(h( x_{0}) = y_{0}\) and \(h( x_{1}) = y_{1}\). Let \(\alpha\) be a path in \(X\) from \(x_{0}\) to \(x_{1}\), and let \(\beta = h \circ \alpha\). Show that \[ \widehat{\beta } \circ {( h_{x_{0}}) }_{ * } = {( h_{x_{1}}) }_{ * } \circ \widehat{\alpha }. \] This equation expresses the fact that the following diagram of maps ``commutes.'' \munkresfig[0.3]{com_52_2}
+\item Show that if \(X\) is path connected, the homomorphism induced by a continuous map is independent of base point, up to isomorphisms of the groups involved. More precisely, let \(h : X \rightarrow Y\) be continuous, with \(h( x_{0}) = y_{0}\) and \(h( x_{1}) = y_{1}\). Let \(\alpha\) be a path in \(X\) from \(x_{0}\) to \(x_{1}\), and let \(\beta = h \circ \alpha\). Show that \[ \widehat{\beta } \circ {( h_{x_{0}}) }_{ * } = {( h_{x_{1}}) }_{ * } \circ \widehat{\alpha }. \] This equation expresses the fact that the following diagram of maps ``commutes.'' % 交换图 com_52_2：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.3062}{%
+		\node (A) at (190, -118) {$\pi_1(X,x_0)$};
+		\node (B) at (820, -115) {$\pi_1(Y,y_0)$};
+		\node (C) at (190, -500) {$\pi_1(X,x_1)$};
+		\node (D) at (820, -500) {$\pi_1(Y,y_1)$};
+		\draw[->] (A) -- node[above,pos=.5] {$(h_{x_0})_*$} (B);
+		\draw[->] (A) -- node[left] {$\hat{\alpha}$} (C);
+		\draw[->] (B) -- node[right] {$\hat{\beta}$} (D);
+		\draw[->] (C) -- node[above,pos=.5] {$(h_{x_1})_*$} (D);
+	}
+	\label{fig:com_52_2}
+\end{center}
+\par\nopagebreak
 \item Let \(G\) be a topological group with operation \(\cdot\) and identity element \(x_{0}\) Let \(\Omega ( {G,x_{0}})\) denote the set of all loops in \(G\) based at \(x_{0}\). If \(f,g \in \Omega ( {G,x_{0}})\), let us define a loop \(f \otimes g\) by the rule \[ ( {f \otimes g}) ( s) = f( s) \cdot g( s). \]
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show that this operation makes the set \(\Omega ( {G,x_{0}})\) into a group.
@@ -619,7 +635,21 @@ The study of covering spaces of a space \(X\) is intimately related to the study
 Let \(p : E \rightarrow B\) be a map. If \(f\) is a continuous mapping of some space \(X\) into \(B\), a lifting of \(f\) is a map \(\bar{f} : X \rightarrow E\) such that \(p \circ \bar{f} = f\).
 \end{definition}
 
-\munkresfig[0.2]{com_54_0}
+% 交换图 com_54_0：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.1376}{%
+		\node (E) at (839,  -95) {$E$};
+		\node (X) at ( 85, -829) {$X$};
+		\node (B) at (838, -830) {$B$};
+		\draw[->] (X) -- node[above left=-2pt,pos=.5] {$\bar{f}$} (E);
+		\draw[->] (E) -- node[right] {$p$} (B);
+		\draw[->] (X) -- node[below,pos=.5] {$f$} (B);
+	}
+	\label{fig:com_54_0}
+\end{center}
+\par\nopagebreak
 
 The existence of liftings when \(p\) is a covering map is an important tool in studying covering spaces and the fundamental group. First, we show that for a covering space, paths can be lifted; then we show that path homotopies can be lifted as well. First, an example:
 
@@ -1106,7 +1136,23 @@ If \(h : S^{1} \rightarrow {S}^{1}\) is continuous and antipode-preserving, then
 Let \(b_{0}\) be the point (1,0) of \(S^{1}\). Let \(\rho : S^{1} \rightarrow {S}^{1}\) be a rotation of \(S^{1}\) that maps \(h( b_{0})\) to \(b_{0}\). Since \(\rho\) preserves antipodes, so does the composite \(\rho \circ h\). Furthermore, if \(H\) were a homotopy between \(h\) and a constant map, then \(\rho \circ H\) would be a homotopy between \(\rho \circ h\) and a constant map. Therefore, it suffices to prove the theorem under the additional hypothesis that \(h( b_{0}) = b_{0}\).
 Step 1. Let \(q : S^{1} \rightarrow {S}^{1}\) be the map \(q( z) = z^{2}\), where \(z\) is a complex number. Or in real coordinates, \(q( {\cos \theta ,\sin \theta }) = ( {\cos {2\theta },\sin {2\theta }})\). The map \(q\) is a quotient map, being continuous, closed, and surjective. The inverse image under \(q\) of any point of \(S^{1}\) consists of two antipodal points \(z\) and \(- z\) of \(S^{1}\). Because \(h( {-z}) = - h( z)\), one has the equation \(q( {h( {-z}) }) = q( {h( z) })\). Therefore, because \(q\) is a quotient map, the map \(q \circ h\) induces a continuous map \(k : S^{1} \rightarrow {S}^{1}\) such that \(k \circ q = q \circ h\). Note that \(q( b_{0}) = h( b_{0}) = b_{0}\), so that \(k( b_{0}) = b_{0}\) as well. Also, \(h( {-b_{0}}) = - b_{0}\). Step 2. We show that the homomorphism \(k_{ * }\) of \({\pi }_{1}( {S^{1},b_{0}})\) with itself is nontrivial. For this purpose, we first show that \(q\) is a covering map. (We gave this as an exercise in \S\ 53.) The proof is similar to the proof that the standard map \(p : \mathbb{R} \rightarrow {S}^{1}\) is a covering map. If, for instance, \(U\) is the subset of \(S^{1}\) consisting of those points having positive second coordinate, then \(p^{-1}( U)\) consists of those points of \(S^{1}\) lying in the first and third quadrants of \(\mathbb{R}^{2}\). The map \(q\) carries each of these sets homeomorphically onto \(U\). Similar arguments apply when \(U\) is the intersection of \(S^{1}\) with the open lower half-plane, or with the open right and left half-planes.
 
-\munkresfig[0.2]{com_57_0} 
+% 交换图 com_57_0：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.1439}{%
+		\node (A) at (116, -204) {$S^1$};
+		\node (B) at (910, -204) {$S^1$};
+		\node (C) at (113, -959) {$S^1$};
+		\node (D) at (879, -959) {$S^1$};
+		\draw[->] (B) -- node[above,pos=.5] {$h$} (A);
+		\draw[->] (A) -- node[left] {$q$} (C);
+		\draw[->] (B) -- node[right] {$q$} (D);
+		\draw[->] (C) -- node[above,pos=.5] {$k$} (D);
+	}
+	\label{fig:com_57_0}
+\end{center}
+\par\nopagebreak 
 
 Second, we note that if \(\bar{f}\) is any path in \(S^{1}\) from \(b_{0}\) to \(- b_{0}\), then the loop \(f = q \circ \bar{f}\) represents a nontrivial element of \({\pi }_{1}( {S^{1},b_{0}})\). For \(\bar{f}\) is a lifting of \(f\) to \(S^{1}\) that begins at \(b_{0}\) and does not end at \(b_{0}\).
 
@@ -1290,7 +1336,21 @@ We now show that two spaces having the same homotopy type have isomorphic fundam
 Let \(h,k : X \rightarrow Y\) be continuous maps; let \(h( x_{0}) = y_{0}\) and \(k( x_{0}) = y_{1}\). If \(h\) and \(k\) are homotopic, there is a path \(\alpha\) in \(Y\) from \(y_{0}\) to \(y_{1}\) such that \(k_{ * } = \widehat{\alpha } \circ {h}_{ * }\). Indeed, if \(H : X \times I \rightarrow Y\) is the homotopy between \(h\) and \(k\), then \(\alpha\) is the path \(\alpha ( t) = H( {x_{0},t})\).
 \end{lemma}
 
-\munkresfig[0.3]{com_58_25} 
+% 交换图 com_58_25：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.3048}{%
+		\node (A) at (187, -100) {$\pi_1(X,x_0)$};
+		\node (B) at (750, -100) {$\pi_1(Y,y_0)$};
+		\node (C) at (830, -450) {$\pi_1(Y,y_1)$};
+		\draw[->] (A) -- node[above,pos=.5] {$h_*$} (B);
+		\draw[->] (A) -- node[below right=-2pt,pos=.5] {$k_*$} (C);
+		\draw[->] (B) -- node[left] {$\hat{\alpha}$} (C);
+	}
+	\label{fig:com_58_25}
+\end{center}
+\par\nopagebreak 
 
 \begin{proof}
 Let \(f : I \rightarrow X\) be a loop in \(X\) based at \(x_{0}\). We must show that
@@ -1373,7 +1433,22 @@ Let \(g : Y \rightarrow X\) be a homotopy inverse for \(f\). Consider the maps
 \]
 where \(x_{1} = g( y_{0})\) and \(y_{1} = f( x_{1})\). We have the corresponding induced homomorphisms:
 
-\munkresfig[0.3]{com_58_35} 
+% 交换图 com_58_35：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+% 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
+\par\nopagebreak
+\begin{center}
+	\munkrescomm{0.3059}{%
+		\node (A) at (190, -110) {$\pi_1(X,x_0)$};
+		\node (B) at (850, -110) {$\pi_1(Y,y_0)$};
+		\node (C) at (250, -470) {$\pi_1(X,x_1)$};
+		\node (D) at (880, -470) {$\pi_1(Y,y_1)$};
+		\draw[->] (A) -- node[above,pos=.5] {$(f_{x_0})_*$} (B);
+		\draw[->] (C) -- node[above,pos=.5] {$(f_{x_1})_*$} (D);
+		\draw[->] (B) -- node[below right=-2pt,pos=.55] {$g_*$} (C);
+	}
+	\label{fig:com_58_35}
+\end{center}
+\par\nopagebreak 
 
 [Here we have to distinguish between the homomorphisms induced by \(f\) relative to two different base points.] Now
 
