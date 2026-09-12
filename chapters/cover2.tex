@@ -77,9 +77,10 @@
     \end{tikzpicture}%
 }
 
-% 书脊图案：预装成盒，插入时用 \scalebox 缩放（scope 的 scale 对 pic 未生效）
+% 书脊图案：缩放在盒内完成（使 \wd 即书脊内实际宽度，供自动堆叠量高使用）
+% 注：scope/pic 的 scale 对图案不生效，必须用 \scalebox
 \newsavebox{\spinepatternbox}
-\sbox{\spinepatternbox}{\begin{tikzpicture}\coverpattern\end{tikzpicture}}
+\sbox{\spinepatternbox}{\scalebox{0.17}{\begin{tikzpicture}\coverpattern\end{tikzpicture}}}
 
 % ── 标题块（前封/后封共用）──
 % 依赖调用处的 \centering 环境；两侧用同一宏 → 位置/字体完全一致
@@ -131,7 +132,37 @@
 \newdimen\frontshift
 \frontshift=\dimexpr \savepagewidth + \spinewidth\relax
 
-% ── 书脊（TikZ overlay：分界线 + 竖排文字）──
+% ═══ 书脊内容：自动堆叠 ═══
+% 各元素先装盒量"沿脊高度"(=盒宽 \wd)，再自顶向下按固定间隔累加定位。
+% 好处：改任一元素的字号/kern → 其下方元素自动重排，无需手工重算 yshift。
+% 颜色在盒内设定（盒定型时取色）；调整项集中在下方「书脊几何参数」与各 \sbox。
+\newsavebox{\spineMunkres}
+\sbox{\spineMunkres}{\color{linecolor}\Trajan\fontsize{20}{24}\selectfont MUNKRES}
+\newsavebox{\spineTopology}
+\sbox{\spineTopology}{\color{white}\SenatorTall\fontsize{72}{78}\selectfont
+    T\kern0.10em O\kern0.10em P\kern0.10em O\kern0.10em L\kern0.10em O\kern0.10em G\kern0.10em Y}
+\newsavebox{\spineSecond}
+\sbox{\spineSecond}{\color{linecolor}\RebarBold\fontsize{20}{24}\selectfont
+    S\kern0.06em E\kern0.06em C\kern0.06em O\kern0.06em N\kern0.06em D%
+    \kern0.60em E\kern0.06em D\kern0.06em I\kern0.06em T\kern0.06em I\kern0.06em O\kern0.06em N}
+
+\newlength{\spinecx}    % 书脊横向中线
+\newlength{\spiney}     % 当前元素垂直位置（距页底，逐次累加）
+\newlength{\spinetop}   % 内容顶端（距页底）—— 控制书脊顶部留白
+\newlength{\spinegap}   % 相邻元素间隔（沿脊方向）
+\setlength{\spinetop}{28.22cm}
+\setlength{\spinegap}{1.07cm}
+
+% 放置一个书脊元素：\spiney 由「上一元素底」推进 → 本元素中心 → 本元素底+间隔
+\newcommand{\spineplace}[1]{%
+    \addtolength{\spiney}{-0.5\wd#1}%
+    \node[rotate=-90, anchor=center, inner sep=0pt]
+        at ([xshift=\spinecx, yshift=\spiney]current page.south west) {\usebox{#1}};%
+    \addtolength{\spiney}{-0.5\wd#1}%
+    \addtolength{\spiney}{-\spinegap}%
+}
+
+% ── 书脊（TikZ overlay：分界线 + 内容）──
 \begin{tikzpicture}[remember picture,overlay]
     \draw[linecolor,line width=0.8pt]     % 后封/脊
         ([xshift=\savepagewidth]current page.north west) --
@@ -139,32 +170,15 @@
     \draw[linecolor,line width=0.8pt]     % 脊/前封
         ([xshift=\frontshift]current page.north west) --
         ([xshift=\frontshift]current page.south west);
-    % ── 书脊内容：三行各自独立节点（可分别维护）+ 中间图案 ──
-    %   序（自上而下）：MUNKRES · 图案 · TOPOLOGY · SECOND EDITION
-    %   各元素横向居书脊中线；y 为距页底高度，单独可调
-    \newlength{\spinecx}
+
     \setlength{\spinecx}{\dimexpr\savepagewidth+0.5\spinewidth\relax}
-    % MUNKRES（Trajan）——书脊顶
-    \node[rotate=-90, anchor=center, text=linecolor, inner sep=0pt]
-        at ([xshift=\spinecx, yshift=26.34cm]current page.south west)
-        {\Trajan\fontsize{20}{24}\selectfont MUNKRES};
-    % 图案（封面同款）：节点 + \scalebox 缩放（旋转 -90 与文字同向）
-    \node[rotate=-90, anchor=center, inner sep=0pt]
-        at ([xshift=\spinecx, yshift=22.385cm]current page.south west)
-        {\scalebox{0.17}{\usebox{\spinepatternbox}}};
-    % TOPOLOGY（SenatorTall；白色）
-    %   字号 72pt 决定"横跨书脊"宽度；\kern 决定字母间距（两者独立）
-    \node[rotate=-90, anchor=center, text=white, inner sep=0pt]
-        at ([xshift=\spinecx, yshift=17.30cm]current page.south west)
-        {\SenatorTall\fontsize{72}{78}\selectfont
-         T\kern0.10em O\kern0.10em P\kern0.10em O\kern0.10em L\kern0.10em O\kern0.10em G\kern0.10em Y};
-    % SECOND EDITION（RebarBold）
-    %   同样加参数：字号(20pt)决定横跨书脊宽度、\kern 决定字母间距
-    \node[rotate=-90, anchor=center, text=linecolor, inner sep=0pt]
-        at ([xshift=\spinecx, yshift=10.19cm]current page.south west)
-        {\RebarBold\fontsize{20}{24}\selectfont
-         S\kern0.06em E\kern0.06em C\kern0.06em O\kern0.06em N\kern0.06em D%
-         \kern0.60em E\kern0.06em D\kern0.06em I\kern0.06em T\kern0.06em I\kern0.06em O\kern0.06em N};
+    % 自顶向下依序放置（顺序 = 书脊上从上到下的顺序）
+    \setlength{\spiney}{\spinetop}
+    \spineplace{\spineMunkres}
+    \spineplace{\spinepatternbox}
+    \spineplace{\spineTopology}
+    \spineplace{\spineSecond}
+
     % 书脊底：PRENTICE / HALL（横排，不随书脊旋转）
     % 注意：须用 .south west（角点）；.south 是页面水平中点，xshift 会重复叠加
     \node[anchor=south, text=white, inner sep=0pt]
