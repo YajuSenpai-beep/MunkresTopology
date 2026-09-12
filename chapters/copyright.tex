@@ -15,22 +15,26 @@
 \vspace{0.3\baselineskip}
 
 % 不使用表格，手动控制缩进
+% 缩进值取自【原书实测】(占页宽 → cm, 页宽 21cm):
+%   主体各行 11.5% → 距版心左缘 0.86cm
+%   QA611/514 行 9.6% → 0.46cm
+%   编号行右缘 54.6% → 距版心右缘 7.98cm(右对齐)
+% 用 cm 而非 em: em 随 \small/\ttfamily 变, 无法从代码推出宽度
+\newcommand{\cipnum}[1]{\noindent\makebox[\textwidth][r]{\hspace*{7.98cm}#1}\par}
 {\ttfamily
-\noindent Munkres, James R \\ % 顶格，不缩进
+\noindent Munkres, James R \\                          % 顶格(=版心左缘)
 
-\noindent \hspace{2em} Topology/James Raymond Munkres --2nd ed \\
-\hspace{3em} p \hspace{1em}cm\\
-\hspace{2em} Includes bibliographical references and index. \\
-\hspace{2em} ISBN 0-13-181629-2 \\
-\hspace{2em} 1. Topology I. Title.
+\noindent\hspace*{0.86cm}Topology/James Raymond Munkres --2nd ed \\
+\hspace*{0.86cm}p\hspace*{0.30cm}cm\\
+\hspace*{0.86cm}Includes bibliographical references and index. \\
+\hspace*{0.86cm}ISBN 0-13-181629-2 \\
+\hspace*{0.86cm}1. Topology I. Title.
 
-\noindent \hspace{1em} QA611 M82 \hspace{0.5em} 2000 \\
-\noindent \hspace{1em} 514--dc21
+\noindent\hspace*{0.46cm}QA611 M82\hspace*{0.30cm}2000 \\
+\noindent\hspace*{0.46cm}514--dc21
 
-% 99-052942 和 CIP 的特殊处理
-\noindent \hspace{15em} 99-052942 \\ % 向右移动
-
-\noindent \hspace{16em} CIP % 进一步向右移动
+\cipnum{99-052942}
+\cipnum{CIP}
 }
 
 
@@ -76,22 +80,24 @@ Printed in the United States of America \\
 10 9 8 7
 
 \vspace{1.5\baselineskip}
-{\ttfamily 
+{\ttfamily
 ISBN 0-13-181629-2}
 
 \vspace{2\baselineskip}
 \end{flushleft}
 
-% 国际出版社信息
+% 国际出版社信息（字体同正文 Example 标题：\ExampleSC 小型大写）
 \begin{flushleft}
-PRENTICE-HALL INTERNATIONAL (UK) LIMITED, LONDON \\
-PRENTICE-HALL OF AUSTRALIA PTY. LIMITED, SYDNEY \\
-PRENTICE-HALL CANADA, INC., TORONTO \\
-PRENTICE-HALL HISPANOAMERICANA, S.A., MEXICO \\
-PRENTICE-HALL OF INDIA PRIVATE LIMITED, NEW DELHI \\
-PRENTICE-HALL OF JAPAN, INC., TOKYO \\
-PEARSON EDUCATION ASIA PTE. LTD. \\
-EDITORA PRENTICE-HALL DO BRASIL, LTDA., RIO DE JANEIRO
+{\ExampleSC
+Prentice-Hall International (UK) Limited, London \\
+Prentice-Hall of Australia Pty. Limited, Sydney \\
+Prentice-Hall Canada, Inc., Toronto \\
+Prentice-Hall Hispanoamericana, S.A., Mexico \\
+Prentice-Hall of India Private Limited, New Delhi \\
+Prentice-Hall of Japan, Inc., Tokyo \\
+Pearson Education Asia Pte. Ltd. \\
+Editora Prentice-Hall do Brasil, Ltda., Rio de Janeiro
+}
 \end{flushleft}
 
 \vspace*{\fill}
