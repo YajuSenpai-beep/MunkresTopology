@@ -33,39 +33,53 @@
 \newfontfamily{\RebarBold}{rebar-bold-1.ttf}
 \newfontfamily{\Trajan}{TrajanPro-Regular.otf}
 
-% ── 图案（黑白几何花形，仅封面用）──
+% ── 图案（黑白几何花形；封面/书脊共用）──
+% 以 pic 定义 → 可在任意 tikzpicture 内按需缩放/旋转复用（封面 14.4cm、书脊小尺寸）
+\tikzset{
+    armfill/.style={fill=covercolor,draw=linecolor,line width=2.2pt},
+    armline/.style={draw=linecolor,line width=2.2pt},
+    arm/.pic={
+        \draw[#1]
+            (0,0) |- (4,4)
+            -- ++(0,-\fpeval{4*(2-sqrt(2))})
+            -- (45:4) -- cycle;
+    }
+}
+
+% 图案本体：宏，在【当前 tikzpicture】内按当前单位向量绘制（±6 单位 = 全宽）
+% 封面用 \reversedpattern（14.4cm）；书脊用 scope 内 scale 缩小复用
+\newcommand{\coverpattern}{%
+    % 底层：光晕
+    \draw[line width=3pt,linecolor,fill=covercolor] (-6,-6) rectangle (6,6);
+    \foreach \i in {5.8, 5.75, ..., 3.9} {
+        \def\tmp{\fpeval{100*(\i/5.8)}}
+        \fill[covercolor!\tmp!white] circle[radius=\i];
+    }
+    % 8臂填充
+    \foreach \angle in {0,45,...,315} { \pic[rotate=\angle] {arm={armfill}}; }
+    % 顶层：指数衰减高光
+    \begin{scope}
+        \clip (-6,-6) rectangle (6,6);
+        \foreach \i in {0,1,...,100} {
+            \pgfmathsetmacro{\radius}{\i/50*5.0}
+            \pgfmathsetmacro{\opacity}{0.15 * exp(-\radius/1.2)}
+            \fill[white, opacity=\opacity] (0,0) circle (\radius);
+        }
+    \end{scope}
+    % 8臂边框
+    \foreach \angle in {0,45,...,315} { \pic[rotate=\angle] {arm={armline}}; }
+}
+
+% 封面用（保持原 14.4cm 尺度，由 \patternwidth 决定单位向量）
 \newcommand{\reversedpattern}{%
-    \begin{tikzpicture}[x=0.5\patternwidth/6, y=0.5\patternwidth/6,
-        armfill/.style={fill=covercolor,draw=linecolor,line width=2.2pt},
-        armline/.style={draw=linecolor,line width=2.2pt},
-        arm/.pic={
-            \draw[##1]
-                (0,0) |- (4,4)
-                -- ++(0,-\fpeval{4*(2-sqrt(2))})
-                -- (45:4) -- cycle;
-        }
-    ]
-        % 底层：光晕
-        \draw[line width=3pt,linecolor,fill=covercolor] (-6,-6) rectangle (6,6);
-        \foreach \i in {5.8, 5.75, ..., 3.9} {
-            \def\tmp{\fpeval{100*(\i/5.8)}}
-            \fill[covercolor!\tmp!white] circle[radius=\i];
-        }
-        % 8臂填充
-        \foreach \angle in {0,45,...,315} { \pic[rotate=\angle] {arm={armfill}}; }
-        % 顶层：指数衰减高光
-        \begin{scope}
-            \clip (-6,-6) rectangle (6,6);
-            \foreach \i in {0,1,...,100} {
-                \pgfmathsetmacro{\radius}{\i/50*5.0}
-                \pgfmathsetmacro{\opacity}{0.15 * exp(-\radius/1.2)}
-                \fill[white, opacity=\opacity] (0,0) circle (\radius);
-            }
-        \end{scope}
-        % 8臂边框
-        \foreach \angle in {0,45,...,315} { \pic[rotate=\angle] {arm={armline}}; }
+    \begin{tikzpicture}[x=0.5\patternwidth/6, y=0.5\patternwidth/6]
+        \coverpattern
     \end{tikzpicture}%
 }
+
+% 书脊图案：预装成盒，插入时用 \scalebox 缩放（scope 的 scale 对 pic 未生效）
+\newsavebox{\spinepatternbox}
+\sbox{\spinepatternbox}{\begin{tikzpicture}\coverpattern\end{tikzpicture}}
 
 % ── 标题块（前封/后封共用）──
 % 依赖调用处的 \centering 环境；两侧用同一宏 → 位置/字体完全一致
@@ -125,10 +139,40 @@
     \draw[linecolor,line width=0.8pt]     % 脊/前封
         ([xshift=\frontshift]current page.north west) --
         ([xshift=\frontshift]current page.south west);
-    \node[rotate=-90, anchor=center, text=linecolor,
-          font=\RebarBold\fontsize{26}{30}\selectfont]
-        at ([xshift=\dimexpr\savepagewidth+0.5\spinewidth\relax]current page.west)
-        {ZY6412 \hspace{1.2em} Topology \hspace{1.2em} 2nd};
+    % ── 书脊内容：三行各自独立节点（可分别维护）+ 中间图案 ──
+    %   序（自上而下）：MUNKRES · 图案 · TOPOLOGY · SECOND EDITION
+    %   各元素横向居书脊中线；y 为距页底高度，单独可调
+    \newlength{\spinecx}
+    \setlength{\spinecx}{\dimexpr\savepagewidth+0.5\spinewidth\relax}
+    % MUNKRES（Trajan）——书脊顶
+    \node[rotate=-90, anchor=center, text=linecolor, inner sep=0pt]
+        at ([xshift=\spinecx, yshift=26.34cm]current page.south west)
+        {\Trajan\fontsize{20}{24}\selectfont MUNKRES};
+    % 图案（封面同款）：节点 + \scalebox 缩放（旋转 -90 与文字同向）
+    \node[rotate=-90, anchor=center, inner sep=0pt]
+        at ([xshift=\spinecx, yshift=22.385cm]current page.south west)
+        {\scalebox{0.17}{\usebox{\spinepatternbox}}};
+    % TOPOLOGY（SenatorTall；白色）
+    %   字号 72pt 决定"横跨书脊"宽度；\kern 决定字母间距（两者独立）
+    \node[rotate=-90, anchor=center, text=white, inner sep=0pt]
+        at ([xshift=\spinecx, yshift=17.30cm]current page.south west)
+        {\SenatorTall\fontsize{72}{78}\selectfont
+         T\kern0.10em O\kern0.10em P\kern0.10em O\kern0.10em L\kern0.10em O\kern0.10em G\kern0.10em Y};
+    % SECOND EDITION（RebarBold）
+    %   同样加参数：字号(20pt)决定横跨书脊宽度、\kern 决定字母间距
+    \node[rotate=-90, anchor=center, text=linecolor, inner sep=0pt]
+        at ([xshift=\spinecx, yshift=10.19cm]current page.south west)
+        {\RebarBold\fontsize{20}{24}\selectfont
+         S\kern0.06em E\kern0.06em C\kern0.06em O\kern0.06em N\kern0.06em D%
+         \kern0.60em E\kern0.06em D\kern0.06em I\kern0.06em T\kern0.06em I\kern0.06em O\kern0.06em N};
+    % 书脊底：PRENTICE / HALL（横排，不随书脊旋转）
+    % 注意：须用 .south west（角点）；.south 是页面水平中点，xshift 会重复叠加
+    \node[anchor=south, text=white, inner sep=0pt]
+        at ([xshift=\spinecx, yshift=1.9cm]current page.south west)
+        {\Trajan\fontsize{10}{12}\selectfont PRENTICE};
+    \node[anchor=south, text=white, inner sep=0pt]
+        at ([xshift=\spinecx, yshift=1.3cm]current page.south west)
+        {\Trajan\fontsize{10}{12}\selectfont HALL};
 \end{tikzpicture}
 
 % ═══════════════════════════════════════════════════════════
