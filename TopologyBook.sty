@@ -188,8 +188,9 @@
   \cleardoublepage
   \@mainmatterfalse
   \@openrighttrue
-  \pagenumbering{roman}%
-  \setcounter{page}{0}%
+  \pagenumbering{roman}%   % 已隐含 \setcounter{page}{1} → 第 1 个物理页 = i
+  % 注：封面(Cover.tex)已拆出为独立 PDF。原先此处有 \setcounter{page}{0}
+  %     为封面留出"第 0 页"，现内文自己从物理第 1 页起算，故移除。
   \pagestyle{frontmatter}%
 }
 \makeatother
