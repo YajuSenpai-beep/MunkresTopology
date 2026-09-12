@@ -1,0 +1,24 @@
+% ═══════════════════════════════════════════════════════════
+%  封面（三栏跨页：封底 21cm │ 书脊 3cm │ 封面 21cm）
+%  —— 独立编译，产出 Cover.pdf
+%
+%  为什么与内文分开：
+%    封面页宽 45cm，内文页宽 21cm。若合在一个 PDF，阅读器按最宽页
+%    缩放/居中，会让 21cm 的正文页看起来挤在一侧（“内容往左偏”）。
+%    分开后：内文全 21cm 统一；封面单独交印厂（印刷本就分开）。
+%
+%  编译：xelatex Cover.tex      （或 make cover）
+% ═══════════════════════════════════════════════════════════
+\documentclass[12pt]{book}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{graphicx}
+% geometry 须与 TopologyBook.sty 一致：cover2 的版心补偿(\backoffset)依赖它
+\usepackage[paperwidth=21cm, paperheight=29.7cm, left=1cm, right=1cm,
+            top=1.2cm, bottom=1.5cm, includehead]{geometry}
+\setmainfont{Times New Roman}
+
+\begin{document}
+\input{chapters/cover2.tex}
+\end{document}
