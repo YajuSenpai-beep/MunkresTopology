@@ -209,15 +209,15 @@ There exist many other ways to form compact surfaces. One can for instance delet
 
 Although we have succeeded in obtaining presentations for the fundamental groups of a number of surfaces, we now pause to ask ourselves what we have actually accomplished. Can we conclude from our computations, for instance, that the double torus and the triple torus are topologically distinct? Not immediately. For, as we know, we lack an effective procedure for determining from the presentations for two groups whether or not these groups are isomorphic. Matters are much more satisfactory if we pass to the abelian group \({\pi }_{1}/[ {{\pi }_{1},{\pi }_{1}}]\), where \({\pi }_{1} = {\pi }_{1}( {X,x_{0}})\). For then we have some known invariants to work with. We explore this situation in this section.
 
-We know that if \(X\) is a path-connected space, and if \(\alpha\) is a path in \(X\) from \(x_{0}\) to \(x_{1}\), then there is an isomorphism \(\widehat{\alpha }\) of the fundamental group based at \(x_{0}\) with the fundamental group based at \(x_{1}\), but the isomorphism depends on the choice of the path \(\alpha\). A stronger result holds for the group \({\pi }_{1}/[ {{\pi }_{1},{\pi }_{1}}]\). In this case, the isomorphism of the ``abelianized fundamental group'' based at \(x_{0}\) with the one based at \(x_{1}\), induced by \(\alpha\), is in fact independent of the choice of the path \(\alpha\).
+We know that if \(X\) is a path-connected space, and if \(\alpha\) is a path in \(X\) from \(x_{0}\) to \(x_{1}\), then there is an isomorphism \(\hat{\alpha }\) of the fundamental group based at \(x_{0}\) with the fundamental group based at \(x_{1}\), but the isomorphism depends on the choice of the path \(\alpha\). A stronger result holds for the group \({\pi }_{1}/[ {{\pi }_{1},{\pi }_{1}}]\). In this case, the isomorphism of the ``abelianized fundamental group'' based at \(x_{0}\) with the one based at \(x_{1}\), induced by \(\alpha\), is in fact independent of the choice of the path \(\alpha\).
 
 To verify this fact, it suffices to show that if \(\alpha\) and \(\beta\) are two paths from \(x_{0}\) to \(x_{1}\), then the path \(g = \alpha * \bar{\beta }\) induces the identity isomorphism of \({\pi }_{1}/[ {{\pi }_{1},{\pi }_{1}}]\) with itself. And this is easy. If \([ f] \in {\pi }_{1}( {X,x_{0}})\), we have
 
 \[
-\widehat{g}[ f] = [ {\bar{g} * f * g}] = {[ g] }^{-1} * [ f] * [ g] .
+\hat{g}[ f] = [ {\bar{g} * f * g}] = {[ g] }^{-1} * [ f] * [ g] .
 \]
 
-When we pass to the cosets in the abelian group \({\pi }_{1}/[ {{\pi }_{1},{\pi }_{1}}]\), we see that \(\widehat{g}\) induces the identity map.
+When we pass to the cosets in the abelian group \({\pi }_{1}/[ {{\pi }_{1},{\pi }_{1}}]\), we see that \(\hat{g}\) induces the identity map.
 
 \begin{definition}
 	If \(X\) is a path-connected space, let
@@ -882,9 +882,12 @@ Indeed, let \(B\) be the open unit ball in \(\mathbb{R}^{2}\) centered at the or
 \par\nopagebreak
 \begin{center}
 	\munkrescomm{0.3895}{%
-		\node (Be) at ( 62.3,  -64.6) {$\mathbf{B}_{\epsilon}-\mathbf{0}$};
-		\node (B)  at (880.9,  -64.6) {$\mathbf{B}-\mathbf{0}$};
-		\node (V)  at (533.1, -313.0) {$V-\mathbf{0}$};
+		% 原书这三个串是**粗斜体**（回原书 40 倍放大核对：B、V 都带倾斜且笔画明显加粗，
+		% 只有 0 是粗正体）；\mathbf 在本项目的字体下给的是**正体且不加粗**，
+		% 故改用 \boldsymbol（\boldsymbol{0} 仍是粗正体，与原书一致）。
+		\node (Be) at ( 62.3,  -64.6) {$\boldsymbol{B_{\epsilon}-0}$};
+		\node (B)  at (880.9,  -64.6) {$\boldsymbol{B-0}$};
+		\node (V)  at (479.6, -313.0) {$\boldsymbol{V-0}$};   % x 由 533.1 左移：原书 V−0 墨迹中心在两上节点中心的中点（偏离 +0.7% 顶边跨度），533.1 时偏离 +5.8%；字形同 B：原书为粗斜体
 		\draw[->] (Be) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$i$} (B);
 		\draw[->] (Be) -- node[inner sep=0pt,below left=3pt,pos=.5] {$j$} (V);
 		\draw[->] (V)  -- node[inner sep=0pt,below right=3pt,pos=.5] {$k$} (B);   % k 放箭头下方（V->B 是上行右斜线，下方即右下侧）
@@ -914,9 +917,9 @@ Now we prove our result. For convenience, assume \(x\) is the origin in \(\mathb
 \par\nopagebreak
 \begin{center}
 	\munkrescomm{0.4008}{%
-		\node (Xe) at ( 61.4,  -59.5) {$\mathbf{X}_{\epsilon}-\mathbf{0}$};
-		\node (X)  at (881.1,  -59.5) {$\mathbf{X}-\mathbf{0}$};
-		\node (W)  at (530.8, -313.2) {$W-\mathbf{0}$};
+		\node (Xe) at ( 61.4,  -59.5) {$\boldsymbol{X_{\epsilon}-0}$};
+		\node (X)  at (881.1,  -59.5) {$\boldsymbol{X-0}$};
+		\node (W)  at (480.6, -313.2) {$\boldsymbol{W-0}$};   % x 由 530.8 左移：同 com_78_35，原书 W−0 居中（偏离 +1.0% 顶边跨度），530.8 时偏离 +5.8%；字形同 X：原书为粗斜体
 		\draw[->] (Xe) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$i$} (X);
 		\draw[->] (Xe) -- node[inner sep=0pt,below left=3pt,pos=.5] {$j$} (W);
 		\draw[->] (W)  -- node[inner sep=0pt,below right=3pt,pos=.5] {$k$} (X);   % k 放箭头下方
