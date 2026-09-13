@@ -718,7 +718,7 @@ be homomorphisms. Let \(i_{1},i_{2},j_{1},j_{2}\) be the homomorphisms indicated
 		\draw[->] (V) -- node[inner sep=0pt,right=6pt] {$j_2$} (X);   % 再往右挪一点
 		\draw[->] (U) -- node[inner sep=0pt,above right=3pt,pos=.45] {$\phi_1$} (H);
 		\draw[->] (V) -- node[inner sep=0pt,below right=3pt,pos=.45] {$\phi_2$} (H);
-		\draw[->] (X) -- node[inner sep=0pt,above=3.5pt,pos=.38] {$\Phi$} (H);   % 往左移，原书 Φ 在 φ1 箭头头的左侧
+		\draw[->] (X) -- node[inner sep=0pt,above=3.5pt] {$\Phi$} (H);   % 默认 pos=.5。原书实测：X 右缘 203.3、H 左缘 228.7（间隙中点 216.0），Φ 墨迹中心 215.65 —— 就在间隙正中。fix3.62 曾改 .38，偏左。
 	}
 	\label{fig:com_70_00}
 \end{center}
@@ -968,7 +968,7 @@ Let \(H\) denote the group \({\pi }_{1}( {U,x_{0}}) * {\pi }_{1}( {V,x_{0}}) /N\
 		%   拉开到 ±9pt，并把标签再推离线 2pt。
 		% 用户要求：k（H→X）与 Φ（X→H）**合成一支双头箭头**（原来是上下两根）
 		\draw[<->] (X.east) -- node[inner sep=0pt,above=3.5pt,pos=.35] {$k$}
-		                     node[inner sep=0pt,below=4pt,pos=.45] {$\Phi$} (H.west);   % 靠左一点，避开 φ2 斜线
+		                     node[inner sep=0pt,below=4pt,pos=.35] {$\Phi$} (H.west);   % pos 与 k 同取 .35：原书 k、Φ 同在箭头中心一列（.45 时 Φ 比 k 靠右）
 	}
 	\label{fig:com_70_01}
 \end{center}
@@ -1225,7 +1225,7 @@ Let \(q\) be the point of \(B^{2}\) that is the midpoint of the line segment fro
 
 Step 2 tells us that the homomorphism \({\pi }_{1}( {U,b}) \rightarrow {\pi }_{1}( {X,b})\) induced by inclusion is surjective and its kernel is the least normal subgroup containing the class of the loop \(g_{0} = h \circ {f}_{0}\). To obtain the analogous result with base point \(a\) we proceed as follows:
 
-Let \(\gamma\) be the straight-line path in \(B^{2}\) from \(q\) to \(p\) ; let \(\delta\) be the path \(\delta = h \circ \gamma\) in \(U\) from \(b\) to \(a\). The isomorphisms induced by the path \(\delta\) (both of which we denote by \(\widehat{\delta }\) ) commute with the homomorphisms induced by inclusion in the following diagram:
+Let \(\gamma\) be the straight-line path in \(B^{2}\) from \(q\) to \(p\) ; let \(\delta\) be the path \(\delta = h \circ \gamma\) in \(U\) from \(b\) to \(a\). The isomorphisms induced by the path \(\delta\) (both of which we denote by \(\hat{\delta }\) ) commute with the homomorphisms induced by inclusion in the following diagram:
 
 % 交换图 com_72_10：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
 % 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
@@ -1248,10 +1248,10 @@ Let \(\gamma\) be the straight-line path in \(B^{2}\) from \(q\) to \(p\) ; let 
 \end{center}
 \par\nopagebreak 
 
-Therefore, the homomorphism of \({\pi }_{1}( {U,a})\) into \({\pi }_{1}( {X,a})\) induced by inclusion is surjective, and its kernel is the least normal subgroup containing the element \(\widehat{\delta }( [ g_{0}] )\).
+Therefore, the homomorphism of \({\pi }_{1}( {U,a})\) into \({\pi }_{1}( {X,a})\) induced by inclusion is surjective, and its kernel is the least normal subgroup containing the element \(\hat{\delta }( [ g_{0}] )\).
 
 \munkresfig[0.5]{72.2}[Figure 72.2]
-The loop \(f_{0}\) represents a generator of the fundamental group of Int \(B^{2} - 0\) based at \(q\). Then the loop \(\bar{\gamma } * ( {f_{0} * \gamma })\) represents a generator of the fundamental group of \(B^{2} - 0\) based at \(p\). Therefore, it is path homotopic either to \(f\) or its reverse; suppose the former. Following this path homotopy by the map \(h\), we see that \(\bar{\delta } * ( {g_{0} * \delta })\) is path homotopic in \(U\) to \(g\). Then \(\widehat{\delta }( [ g_{0}] ) = [ g]\), and the theorem follows.
+The loop \(f_{0}\) represents a generator of the fundamental group of Int \(B^{2} - 0\) based at \(q\). Then the loop \(\bar{\gamma } * ( {f_{0} * \gamma })\) represents a generator of the fundamental group of \(B^{2} - 0\) based at \(p\). Therefore, it is path homotopic either to \(f\) or its reverse; suppose the former. Following this path homotopy by the map \(h\), we see that \(\bar{\delta } * ( {g_{0} * \delta })\) is path homotopic in \(U\) to \(g\). Then \(\hat{\delta }( [ g_{0}] ) = [ g]\), and the theorem follows.
 
 There is nothing special in this theorem about the unit ball \(B^{2}\). The same result holds if we replace \(B^{2}\) by any space \(B\) homeomorphic to \(B^{2}\), if we denote by \(\operatorname{Bd}B\) the subspace corresponding to \(S^{1}\) under the homeomorphism. Such a space \(B\) is called a 2- cell. The space \(X\) of this theorem is thought of as having been obtained by ``adjoining a 2-cell'' to \(A\). We shall treat this situation more formally later.
 \end{proof}

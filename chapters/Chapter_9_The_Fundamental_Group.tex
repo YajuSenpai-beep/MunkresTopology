@@ -286,27 +286,27 @@ An immediate question one asks is the extent to which the fundamental group depe
 Let \(\alpha\) be a path in \(X\) from \(x_{0}\) to \(x_{1}\). We define a map
 
 \[
-\widehat{\alpha } : {\pi }_{1}( {X,x_{0}}) \rightarrow {\pi }_{1}( {X,x_{1}})
+\hat{\alpha } : {\pi }_{1}( {X,x_{0}}) \rightarrow {\pi }_{1}( {X,x_{1}})
 \]
 by the equation
 
 \[
-\widehat{\alpha }( [ f] ) = [ \bar{\alpha }] * [ f] * [ \alpha ] .
+\hat{\alpha }( [ f] ) = [ \bar{\alpha }] * [ f] * [ \alpha ] .
 \]
 
-The map \(\widehat{\alpha }\), which we call \(\alpha\) -hat,'' is well-defined because the operation \(*\) is well-defined. If \(f\) is a loop based at \(x_{0}\), then \(\bar{\alpha } * ( {f * \alpha })\) is a loop based at \(x_{1}\). Hence \(\widehat{\alpha }\) maps \({\pi }_{1}( {X,x_{0}})\) into \({\pi }_{1}( {X,x_{1}})\), as desired; note that it depends only on the path-homotopy class of \(\alpha\). It is pictured in \hyperref[fig:52.1]{Figure 52.1}.
+The map \(\hat{\alpha }\), which we call \(\alpha\) -hat,'' is well-defined because the operation \(*\) is well-defined. If \(f\) is a loop based at \(x_{0}\), then \(\bar{\alpha } * ( {f * \alpha })\) is a loop based at \(x_{1}\). Hence \(\hat{\alpha }\) maps \({\pi }_{1}( {X,x_{0}})\) into \({\pi }_{1}( {X,x_{1}})\), as desired; note that it depends only on the path-homotopy class of \(\alpha\). It is pictured in \hyperref[fig:52.1]{Figure 52.1}.
 \end{definition}
 
 \munkresfig[0.7]{52.1}[Figure 52.1]
 \begin{theorem}
 \label{thm:\thetheorem}
-The map \(\widehat{\alpha }\) is a group isomorphism.
+The map \(\hat{\alpha }\) is a group isomorphism.
 \end{theorem}
 
 \begin{proof}
-To show that \(\widehat{\alpha }\) is a homomorphism, we compute
+To show that \(\hat{\alpha }\) is a homomorphism, we compute
 \[
-\widehat{\alpha }( [ f] ) * \widehat{\alpha }( [ g] ) = ( {[ \bar{\alpha }] * [ f] * [ \alpha ] }) * ( {[ \bar{\alpha }] * [ g] * [ \alpha ] })
+\hat{\alpha }( [ f] ) * \hat{\alpha }( [ g] ) = ( {[ \bar{\alpha }] * [ f] * [ \alpha ] }) * ( {[ \bar{\alpha }] * [ g] * [ \alpha ] })
 \]
 
 \[
@@ -314,20 +314,20 @@ To show that \(\widehat{\alpha }\) is a homomorphism, we compute
 \]
 
 \[
-= \widehat{\alpha }( {[ f] * [ g] }) \text{.}
+= \hat{\alpha }( {[ f] * [ g] }) \text{.}
 \]
 
-To show that \(\widehat{\alpha }\) is an isomorphism, we show that if \(\beta\) denotes the path \(\bar{\alpha }\), which is the reverse of \(\alpha\), then \(\widehat{\beta }\) is an inverse for \(\widehat{\alpha }\). We compute, for each element \([ h]\) of \({\pi }_{1}( {X,x_{1}})\),
+To show that \(\hat{\alpha }\) is an isomorphism, we show that if \(\beta\) denotes the path \(\bar{\alpha }\), which is the reverse of \(\alpha\), then \(\hat{\beta }\) is an inverse for \(\hat{\alpha }\). We compute, for each element \([ h]\) of \({\pi }_{1}( {X,x_{1}})\),
 
 \[
-\widehat{\beta }( [ h] ) = [ \bar{\beta }] * [ h] * [ \beta ] = [ \alpha ] * [ h] * [ \bar{\alpha }] ,
+\hat{\beta }( [ h] ) = [ \bar{\beta }] * [ h] * [ \beta ] = [ \alpha ] * [ h] * [ \bar{\alpha }] ,
 \]
 
 \[
-\widehat{\alpha }( {\widehat{\beta }( [ h] ) }) = [ \bar{\alpha }] * ( {[ \alpha ] * [ h] * [ \bar{\alpha }] }) * [ \alpha ] = [ h] .
+\hat{\alpha }( {\hat{\beta }( [ h] ) }) = [ \bar{\alpha }] * ( {[ \alpha ] * [ h] * [ \bar{\alpha }] }) * [ \alpha ] = [ h] .
 \]
 
-A similar computation shows that \(\widehat{\beta }( {\widehat{\alpha }( [ f] ) }) = [ f]\) for each \([ f] \in {\pi }_{1}( {X,x_{0}})\).
+A similar computation shows that \(\hat{\beta }( {\hat{\alpha }( [ f] ) }) = [ f]\) for each \([ f] \in {\pi }_{1}( {X,x_{0}})\).
 \end{proof}
 \begin{corollary}
 \label{cor:\thetheorem}
@@ -429,11 +429,11 @@ Let \(k : ( {Y,y_{0}}) \rightarrow ( {X,x_{0}})\) be the inverse of \(h\). Then 
  \item Find a star convex set that is not convex.
  \item Show that if \(A\) is star convex, \(A\) is simply connected.
  \end{enumerate}
-\item Let \(\alpha\) be a path in \(X\) from \(x_{0}\) to \(x_{1}\) ; let \(\beta\) be a path in \(X\) from \(x_{1}\) to \(x_{2}\). Show that if \(\gamma = \alpha * \beta\), then \(\widehat{\gamma } = \widehat{\beta } \circ \widehat{\alpha }\).
-\item Let \(x_{0}\) and \(x_{1}\) be points of the path-connected space \(X\). Show that \({\pi }_{1}( {X,x_{0}})\) is abelian if and only if for every pair \(\alpha\) and \(\beta\) of paths from \(x_{0}\) to \(x_{1}\), we have \(\widehat{\alpha } = \widehat{\beta }\).
+\item Let \(\alpha\) be a path in \(X\) from \(x_{0}\) to \(x_{1}\) ; let \(\beta\) be a path in \(X\) from \(x_{1}\) to \(x_{2}\). Show that if \(\gamma = \alpha * \beta\), then \(\hat{\gamma } = \hat{\beta } \circ \hat{\alpha }\).
+\item Let \(x_{0}\) and \(x_{1}\) be points of the path-connected space \(X\). Show that \({\pi }_{1}( {X,x_{0}})\) is abelian if and only if for every pair \(\alpha\) and \(\beta\) of paths from \(x_{0}\) to \(x_{1}\), we have \(\hat{\alpha } = \hat{\beta }\).
 \item Let \(A \subset X\) ; suppose \(r : X \rightarrow A\) is a continuous map such that \(r( a) = a\) for each \(a \in A\). (The map \(r\) is called a retraction of \(X\) onto \(A\).) If \(a_{0} \in A\), show that \[ r_{ * } : {\pi }_{1}( {X,a_{0}}) \rightarrow {\pi }_{1}( {A,a_{0}}) \] is surjective.
 \item Let \(A\) be a subspace of \(\mathbb{R}^{n}\) ; let \(h : ( {A,a_{0}}) \rightarrow ( {Y,y_{0}})\). Show that if \(h\) is extendable to a continuous map of \(\mathbb{R}^{n}\) into \(Y\), then \(h_{ * }\) is the trivial homomorphism (the homomorphism that maps everything to the identity element).
-\item Show that if \(X\) is path connected, the homomorphism induced by a continuous map is independent of base point, up to isomorphisms of the groups involved. More precisely, let \(h : X \rightarrow Y\) be continuous, with \(h( x_{0}) = y_{0}\) and \(h( x_{1}) = y_{1}\). Let \(\alpha\) be a path in \(X\) from \(x_{0}\) to \(x_{1}\), and let \(\beta = h \circ \alpha\). Show that \[ \widehat{\beta } \circ {( h_{x_{0}}) }_{ * } = {( h_{x_{1}}) }_{ * } \circ \widehat{\alpha }. \] This equation expresses the fact that the following diagram of maps ``commutes.'' % 交换图 com_52_2：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
+\item Show that if \(X\) is path connected, the homomorphism induced by a continuous map is independent of base point, up to isomorphisms of the groups involved. More precisely, let \(h : X \rightarrow Y\) be continuous, with \(h( x_{0}) = y_{0}\) and \(h( x_{1}) = y_{1}\). Let \(\alpha\) be a path in \(X\) from \(x_{0}\) to \(x_{1}\), and let \(\beta = h \circ \alpha\). Show that \[ \hat{\beta } \circ {( h_{x_{0}}) }_{ * } = {( h_{x_{1}}) }_{ * } \circ \hat{\alpha }. \] This equation expresses the fact that the following diagram of maps ``commutes.'' % 交换图 com_52_2：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
 % 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
 \par\nopagebreak
 \begin{center}
@@ -1337,7 +1337,7 @@ We now show that two spaces having the same homotopy type have isomorphic fundam
 
 \begin{lemma}
 \label{lem:\thetheorem}
-Let \(h,k : X \rightarrow Y\) be continuous maps; let \(h( x_{0}) = y_{0}\) and \(k( x_{0}) = y_{1}\). If \(h\) and \(k\) are homotopic, there is a path \(\alpha\) in \(Y\) from \(y_{0}\) to \(y_{1}\) such that \(k_{ * } = \widehat{\alpha } \circ {h}_{ * }\). Indeed, if \(H : X \times I \rightarrow Y\) is the homotopy between \(h\) and \(k\), then \(\alpha\) is the path \(\alpha ( t) = H( {x_{0},t})\).
+Let \(h,k : X \rightarrow Y\) be continuous maps; let \(h( x_{0}) = y_{0}\) and \(k( x_{0}) = y_{1}\). If \(h\) and \(k\) are homotopic, there is a path \(\alpha\) in \(Y\) from \(y_{0}\) to \(y_{1}\) such that \(k_{ * } = \hat{\alpha } \circ {h}_{ * }\). Indeed, if \(H : X \times I \rightarrow Y\) is the homotopy between \(h\) and \(k\), then \(\alpha\) is the path \(\alpha ( t) = H( {x_{0},t})\).
 \end{lemma}
 
 % 交换图 com_58_25：几何取自原书实测（坐标 = 墨迹宽/1000，原书 y 向下故取负）
@@ -1359,7 +1359,7 @@ Let \(h,k : X \rightarrow Y\) be continuous maps; let \(h( x_{0}) = y_{0}\) and 
 \begin{proof}
 Let \(f : I \rightarrow X\) be a loop in \(X\) based at \(x_{0}\). We must show that
 \[
-k_{ * }( [ f] ) = \widehat{\alpha }( h_{ * }( [ f] ) )
+k_{ * }( [ f] ) = \hat{\alpha }( h_{ * }( [ f] ) )
 \]
 This equation states that \([ {k \circ f}] = [ \bar{\alpha }] * [ {h \circ f}] * [ \alpha ]\), or equivalently, that
 
@@ -1464,7 +1464,7 @@ g \circ f : ( {X,x_{0}}) \rightarrow ( {X,x_{1}})
 is by hypothesis homotopic to the identity map, so there is a path \(\alpha\) in \(X\) such that
 
 \[
-{( g \circ f) }_{ * } = \widehat{\alpha } \circ {( i_X ) }_{ * } = \widehat{\alpha }.
+{( g \circ f) }_{ * } = \hat{\alpha } \circ {( i_X ) }_{ * } = \hat{\alpha }.
 \]
 
 It follows that \({( g \circ f) }_{ * } = g_{ * } \circ {( f_{x_{0}}) }_{ * }\) is an isomorphism.
@@ -1474,7 +1474,7 @@ Similarly, because \(f \circ g\) is homotopic to the identity map \({iy}\), the 
 The first fact implies that \(g_{ * }\) is surjective, and the second implies that \(g_{ * }\) is injective. Therefore, \(g_{ * }\) is an isomorphism. Applying the first equation once again, we conclude that
 
 \[
-{( f_{x_{0}}) }_{ * } = {( g_{ * }) }^{-1} \circ \widehat{\alpha },
+{( f_{x_{0}}) }_{ * } = {( g_{ * }) }^{-1} \circ \hat{\alpha },
 \]
 so that \({( f_{x_{0}}) }_{ * }\) is also an isomorphism.
 
@@ -1513,7 +1513,7 @@ It is a striking fact that the situation that occurs for these two spaces is the
  \item Give an example in which \(j_{ * }\) is not an isomorphism.
 \item[*8.] Find a space \(X\) and a point \(x_{0}\) of \(X\) such that inclusion \(\{ x_{0}\} \rightarrow X\) is a homotopy equivalence, but \(\{ x_{0}\}\) is not a deformation retract of \(X\). [Hint: Let \(X\) be the subspace of \(\mathbb{R}^{2}\) that is the union of the line segments \(( {1/n}) \times I\), for \(n \in {\mathbb{Z}}_{ + }\), the line segment \(0 \times I\), and the line segment \(I \times 0\) ; let \(x_{0}\) be the point (0,1). If \(\{ x_{0}\}\) is a deformation retract of \(X\), show that for any neighborhood \(U\) of \(x_{0}\), the path component of \(U\) containing \(x_{0}\) contains a neighborhood of \(x_{0}\).]
  \end{enumerate}
-\item[9.] We define the degree of a continuous map \(h : S^{1} \rightarrow {S}^{1}\) as follows: Let \(b_{0}\) be the point (1,0) of \(S^{1}\) ; choose a generator \(\gamma\) for the infinite cyclic group \({\pi }_{1}( {S^{1},b_{0}})\). If \(x_{0}\) is any point of \(S^{1}\), choose a path \(\alpha\) in \(S^{1}\) from \(b_{0}\) to \(x_{0}\), and define \(\gamma ( x_{0}) = \widehat{\alpha }( \gamma )\). Then \(\gamma ( x_{0})\) generates \({\pi }_{1}( {S^{1},x_{0}})\). The element \(\gamma ( x_{0})\) is independent of the choice of the path \(\alpha\), since the fundamental group of \(S^{1}\) is abelian. Now given \(h : S^{1} \rightarrow {S}^{1}\), choose \(x_{0} \in {S}^{1}\) and let \(h( x_{0}) = x_{1}\). Consider the homomorphism \[ h_{ * } : {\pi }_{1}( {S^{1},x_{0}}) \rightarrow {\pi }_{1}( {S^{1},x_{1}}). \] Since both groups are infinite cyclic, we have (*) \[ h_{ * }( {\gamma ( x_{0}) }) = d \cdot \gamma ( x_{1}) \] for some integer \(d\), if the group is written additively. The integer \(d\) is called the degree of \(h\) and is denoted by \(\deg h\). The degree of \(h\) is independent of the choice of the generator \(\gamma\) ; choosing the other generator would merely change the sign of both sides of \(( *)\).
+\item[9.] We define the degree of a continuous map \(h : S^{1} \rightarrow {S}^{1}\) as follows: Let \(b_{0}\) be the point (1,0) of \(S^{1}\) ; choose a generator \(\gamma\) for the infinite cyclic group \({\pi }_{1}( {S^{1},b_{0}})\). If \(x_{0}\) is any point of \(S^{1}\), choose a path \(\alpha\) in \(S^{1}\) from \(b_{0}\) to \(x_{0}\), and define \(\gamma ( x_{0}) = \hat{\alpha }( \gamma )\). Then \(\gamma ( x_{0})\) generates \({\pi }_{1}( {S^{1},x_{0}})\). The element \(\gamma ( x_{0})\) is independent of the choice of the path \(\alpha\), since the fundamental group of \(S^{1}\) is abelian. Now given \(h : S^{1} \rightarrow {S}^{1}\), choose \(x_{0} \in {S}^{1}\) and let \(h( x_{0}) = x_{1}\). Consider the homomorphism \[ h_{ * } : {\pi }_{1}( {S^{1},x_{0}}) \rightarrow {\pi }_{1}( {S^{1},x_{1}}). \] Since both groups are infinite cyclic, we have (*) \[ h_{ * }( {\gamma ( x_{0}) }) = d \cdot \gamma ( x_{1}) \] for some integer \(d\), if the group is written additively. The integer \(d\) is called the degree of \(h\) and is denoted by \(\deg h\). The degree of \(h\) is independent of the choice of the generator \(\gamma\) ; choosing the other generator would merely change the sign of both sides of \(( *)\).
  \begin{enumerate}[itemsep=0.2em, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=*, label=(\alph*), align=left]
  \item Show that \(d\) is independent of the choice of \(x_{0}\).
  \item Show that if \(h,k : S^{1} \rightarrow {S}^{1}\) are homotopic, they have the same degree.
