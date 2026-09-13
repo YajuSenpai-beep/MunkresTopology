@@ -132,8 +132,11 @@
 	\begin{tikzpicture}[
 		>={Stealth[length=7.36pt, width=4.31pt]},
 		line width=1.025pt,
+		% inner sep 给箭头端点与文字留出间隙：原书实测箭头尖端离文字约 2.5pt，
+		% 设 0pt 时箭头紧贴文字、视觉上很压迫（用户反馈）。
+		% 只影响**节点边界**，不改文字位置（anchor=center 居中与 inner sep 无关）。
 		every node/.style={font=\fontsize{14.71}{17.6}\selectfont,
-		                   anchor=center, inner sep=0pt, outer sep=0pt},
+		                   anchor=center, inner sep=2.5pt, outer sep=0pt},
 		x=\dimexpr#1\textwidth/1000\relax, y=\dimexpr#1\textwidth/1000\relax,
 	]
 		#2
