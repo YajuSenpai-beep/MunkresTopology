@@ -706,19 +706,19 @@ be homomorphisms. Let \(i_{1},i_{2},j_{1},j_{2}\) be the homomorphisms indicated
 \par\nopagebreak
 \begin{center}
 	\munkrescomm{0.4755}{%
-		\node (UV) at (140, -260) {$\pi_1(U \cap V, x_0)$};
-		\node (U)  at (628.3,  -15.0) {$\pi_1(U, x_0)$};
-		\node (X)  at (628.3, -260.0) {$\pi_1(X, x_0)$};
-		\node (V)  at (628.3, -500.0) {$\pi_1(V, x_0)$};
-		\node (H)  at (955, -260) {$H$};
-		\draw[->] (UV) -- node[above left=1pt,pos=.45] {$i_1$} (U);
-		\draw[->] (UV) -- node[below left=1pt,pos=.45] {$i_2$} (V);
+		\node (UV) at (143.5, -256.7) {$\pi_1(U \cap V, x_0)$};
+		\node (U)  at (633.3,  -11.8) {$\pi_1(U, x_0)$};
+		\node (X)  at (633.3, -256.7) {$\pi_1(X, x_0)$};
+		\node (V)  at (633.3, -496.8) {$\pi_1(V, x_0)$};
+		\node (H)  at (957.8, -256.7) {$H$};
+		\draw[->] (UV) -- node[inner sep=0pt,above left=3pt,pos=.45] {$i_1$} (U);
+		\draw[->] (UV) -- node[inner sep=0pt,below left=3pt,pos=.45] {$i_2$} (V);
 		\draw[->] (UV) -- (X);
-		\draw[->] (U) -- node[right] {$j_1$} (X);
-		\draw[->] (V) -- node[right] {$j_2$} (X);
-		\draw[->] (U) -- node[above right=1pt,pos=.45] {$\phi_1$} (H);
-		\draw[->] (V) -- node[below right=1pt,pos=.45] {$\phi_2$} (H);
-		\draw[->] (X) -- node[above,pos=.5] {$\Phi$} (H);
+		\draw[->] (U) -- node[inner sep=0pt,right=6pt] {$j_1$} (X);   % 再往右挪一点
+		\draw[->] (V) -- node[inner sep=0pt,right=6pt] {$j_2$} (X);   % 再往右挪一点
+		\draw[->] (U) -- node[inner sep=0pt,above right=3pt,pos=.45] {$\phi_1$} (H);
+		\draw[->] (V) -- node[inner sep=0pt,below right=3pt,pos=.45] {$\phi_2$} (H);
+		\draw[->] (X) -- node[inner sep=0pt,above=3.5pt,pos=.38] {$\Phi$} (H);   % 往左移，原书 Φ 在 φ1 箭头头的左侧
 	}
 	\label{fig:com_70_00}
 \end{center}
@@ -952,20 +952,23 @@ Let \(H\) denote the group \({\pi }_{1}( {U,x_{0}}) * {\pi }_{1}( {V,x_{0}}) /N\
 \par\nopagebreak
 \begin{center}
 	\munkrescomm{0.4758}{%
-		\node (UV) at (140, -260) {$\pi_1(U \cap V, x_0)$};
-		\node (U)  at (628.3,  -15.0) {$\pi_1(U, x_0)$};
-		\node (X)  at (628.3, -260.0) {$\pi_1(X, x_0)$};
-		\node (V)  at (628.3, -500.0) {$\pi_1(V, x_0)$};
-		\node (H)  at (955, -260) {$H$};
-		\draw[->] (UV) -- node[above left=1pt,pos=.45] {$i_1$} (U);
-		\draw[->] (UV) -- node[below left=1pt,pos=.45] {$i_2$} (V);
-		\draw[->] (UV) -- node[above,pos=.5] {$i_*$} (X);
-		\draw[->] (U) -- node[right] {$j_1$} (X);
-		\draw[->] (V) -- node[right] {$j_2$} (X);
-		\draw[->] (U) -- node[above right=1pt,pos=.45] {$\phi_1$} (H);
-		\draw[->] (V) -- node[below right=1pt,pos=.45] {$\phi_2$} (H);
-		\draw[->] ([yshift=-6pt]X.east) -- node[below,pos=.45] {$\Phi$} ([yshift=-6pt]H.west);
-		\draw[->] ([yshift=6pt]H.west) -- node[above,pos=.5] {$k$} ([yshift=6pt]X.east);
+		\node (UV) at (143.5, -256.7) {$\pi_1(U \cap V, x_0)$};
+		\node (U)  at (633.3,  -11.9) {$\pi_1(U, x_0)$};
+		\node (X)  at (633.3, -256.7) {$\pi_1(X, x_0)$};
+		\node (V)  at (633.3, -496.9) {$\pi_1(V, x_0)$};
+		\node (H)  at (957.8, -256.7) {$H$};
+		\draw[->] (UV) -- node[inner sep=0pt,above left=3pt,pos=.45] {$i_1$} (U);
+		\draw[->] (UV) -- node[inner sep=0pt,below left=3pt,pos=.45] {$i_2$} (V);
+		\draw[->] (UV) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$i_*$} (X);
+		\draw[->] (U) -- node[inner sep=0pt,right=6pt] {$j_1$} (X);   % 再往右挪一点
+		\draw[->] (V) -- node[inner sep=0pt,right=6pt] {$j_2$} (X);   % 再往右挪一点
+		\draw[->] (U) -- node[inner sep=0pt,above right=3pt,pos=.45] {$\phi_1$} (H);
+		\draw[->] (V) -- node[inner sep=0pt,below right=3pt,pos=.45] {$\phi_2$} (H);
+		% ⚠ 这两支箭头之间只有 12pt，标签又被 φ₁/φ₂ 两条斜线穿过（斜线都收在 H 左缘）。
+		%   拉开到 ±9pt，并把标签再推离线 2pt。
+		% 用户要求：k（H→X）与 Φ（X→H）**合成一支双头箭头**（原来是上下两根）
+		\draw[<->] (X.east) -- node[inner sep=0pt,above=3.5pt,pos=.35] {$k$}
+		                     node[inner sep=0pt,below=4pt,pos=.45] {$\Phi$} (H.west);   % 靠左一点，避开 φ2 斜线
 	}
 	\label{fig:com_70_01}
 \end{center}
@@ -1229,13 +1232,16 @@ Let \(\gamma\) be the straight-line path in \(B^{2}\) from \(q\) to \(p\) ; let 
 \par\nopagebreak
 \begin{center}
 	\munkrescomm{0.2883}{%
-		\node (A) at (180,  -55) {$\pi_1(U,b)$};
-		\node (B) at (830,  -55) {$\pi_1(X,b)$};
-		\node (C) at (180, -440) {$\pi_1(U,a)$};
-		\node (D) at (830, -440) {$\pi_1(X,a)$};
+		\node (A) at (187.1,  -49.1) {$\pi_1(U,b)$};
+		\node (B) at (838.2,  -49.1) {$\pi_1(X,b)$};
+		\node (C) at (187.1, -434.1) {$\pi_1(U,a)$};
+		\node (D) at (838.2, -434.1) {$\pi_1(X,a)$};
 		\draw[->] (A) -- (B);
-		\draw[->] (A) -- node[left] {$\hat{\alpha}$} (C);
-		\draw[->] (B) -- node[right] {$\hat{\alpha}$} (D);
+		% ⚠ 符号是 δ̂ 不是 α̂：前文写「The isomorphisms induced by the path δ
+		%   (both of which we denote by δ̂)」，原书图上也是 δ̂。原稿误作 \hat{\alpha}。
+		%   两标签都在各自箭头**右侧**（原书如此；原先左边那支写在左侧）。
+		\draw[->] (A) -- node[inner sep=0pt,right=6pt] {$\hat{\delta}$} (C);   % 往右挪一点
+		\draw[->] (B) -- node[inner sep=0pt,right=6pt] {$\hat{\delta}$} (D);   % 往右挪一点
 		\draw[->] (C) -- (D);
 	}
 	\label{fig:com_72_10}

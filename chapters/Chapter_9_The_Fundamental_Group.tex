@@ -437,15 +437,19 @@ Let \(k : ( {Y,y_{0}}) \rightarrow ( {X,x_{0}})\) be the inverse of \(h\). Then 
 % 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
 \par\nopagebreak
 \begin{center}
-	\munkrescomm{0.3062}{%
-		\node (A) at (190.0, -116.5) {$\pi_1(X,x_0)$};
-		\node (B) at (820.0, -116.5) {$\pi_1(Y,y_0)$};
-		\node (C) at (190, -500) {$\pi_1(X,x_1)$};
-		\node (D) at (820, -500) {$\pi_1(Y,y_1)$};
-		\draw[->] (A) -- node[above,pos=.5] {$(h_{x_0})_*$} (B);
-		\draw[->] (A) -- node[left] {$\hat{\alpha}$} (C);
-		\draw[->] (B) -- node[right] {$\hat{\beta}$} (D);
-		\draw[->] (C) -- node[above,pos=.5] {$(h_{x_1})_*$} (D);
+	% ⚠ w 从 0.3062 放大到 0.38：`(h_{x_0})_*` 这类标签在原书里**明显窄于**节点间距，
+	%   但在本版字号（14.71pt，按原书比例标定）下几乎占满间距、贴到两侧节点文字上。
+	%   放大图宽 = 拉大节点间距而字号不变，标签便有余量。原书同一位置也是如此。
+	%   α̂ 在原书里在竖箭头**右侧**（源码原写 left，写反了）。
+	\munkrescomm{0.38}{%
+		\node (A) at (196.7, -110.4) {$\pi_1(X,x_0)$};
+		\node (B) at (828.6, -110.4) {$\pi_1(Y,y_0)$};
+		\node (C) at (196.7, -493.9) {$\pi_1(X,x_1)$};
+		\node (D) at (828.6, -493.9) {$\pi_1(Y,y_1)$};
+		\draw[->] (A) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$(h_{x_0})_*$} (B);
+		\draw[->] (A) -- node[inner sep=0pt,right=3pt] {$\hat{\alpha}$} (C);
+		\draw[->] (B) -- node[inner sep=0pt,right=3pt] {$\hat{\beta}$} (D);
+		\draw[->] (C) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$(h_{x_1})_*$} (D);
 	}
 	\label{fig:com_52_2}
 \end{center}
@@ -640,12 +644,12 @@ Let \(p : E \rightarrow B\) be a map. If \(f\) is a continuous mapping of some s
 \par\nopagebreak
 \begin{center}
 	\munkrescomm{0.1376}{%
-		\node (E) at (838.5,  -95.0) {$E$};
-		\node (X) at ( 85.0, -829.5) {$X$};
-		\node (B) at (838.5, -829.5) {$B$};
-		\draw[->] (X) -- node[above left=1pt,pos=.5] {$\bar{f}$} (E);
-		\draw[->] (E) -- node[right] {$p$} (B);
-		\draw[->] (X) -- node[below,pos=.5] {$f$} (B);
+		\node (E) at (843.0,  -84.9) {$E$};
+		\node (X) at ( 91.4, -814.5) {$X$};
+		\node (B) at (843.0, -814.5) {$B$};
+		\draw[->] (X) -- node[inner sep=0pt,above left=3pt,pos=.5] {$\bar{f}$} (E);
+		\draw[->] (E) -- node[inner sep=0pt,right=3pt] {$p$} (B);
+		\draw[->] (X) -- node[inner sep=0pt,below=3.5pt,pos=.5] {$f$} (B);
 	}
 	\label{fig:com_54_0}
 \end{center}
@@ -1141,14 +1145,14 @@ Step 1. Let \(q : S^{1} \rightarrow {S}^{1}\) be the map \(q( z) = z^{2}\), wher
 \par\nopagebreak
 \begin{center}
 	\munkrescomm{0.1439}{%
-		\node (A) at (114.5, -204.0) {$S^1$};
-		\node (B) at (894.5, -204.0) {$S^1$};
-		\node (C) at (114.5, -959.0) {$S^1$};
-		\node (D) at (894.5, -959.0) {$S^1$};
-		\draw[->] (B) -- node[above,pos=.5] {$h$} (A);
-		\draw[->] (A) -- node[left] {$q$} (C);
-		\draw[->] (B) -- node[right] {$q$} (D);
-		\draw[->] (C) -- node[above,pos=.5] {$k$} (D);
+		\node (A) at (134.3, -187.5) {$S^1$};
+		\node (B) at (914.3, -187.5) {$S^1$};
+		\node (C) at (134.3, -942.5) {$S^1$};
+		\node (D) at (914.3, -942.5) {$S^1$};
+		\draw[->] (B) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$h$} (A);
+		\draw[->] (A) -- node[inner sep=0pt,left=3pt] {$q$} (C);
+		\draw[->] (B) -- node[inner sep=0pt,left=3pt] {$q$} (D);   % 右侧竖箭头的 q 也在箭头左侧
+		\draw[->] (C) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$k$} (D);
 	}
 	\label{fig:com_57_0}
 \end{center}
@@ -1341,12 +1345,12 @@ Let \(h,k : X \rightarrow Y\) be continuous maps; let \(h( x_{0}) = y_{0}\) and 
 \par\nopagebreak
 \begin{center}
 	\munkrescomm{0.3048}{%
-		\node (A) at (187, -100) {$\pi_1(X,x_0)$};
-		\node (B) at (750, -100) {$\pi_1(Y,y_0)$};
-		\node (C) at (830, -450) {$\pi_1(Y,y_1)$};
-		\draw[->] (A) -- node[above,pos=.5] {$h_*$} (B);
-		\draw[->] (A) -- node[below right=1pt,pos=.5] {$k_*$} (C);
-		\draw[->] (B) -- node[left] {$\hat{\alpha}$} (C);
+		\node (A) at (196.0, -93.9) {$\pi_1(X,x_0)$};
+		\node (B) at (759.3, -93.9) {$\pi_1(Y,y_0)$};
+		\node (C) at (759.3, -443.9) {$\pi_1(Y,y_1)$};   % 原书与 pi1(Y,y0) 同列，原先偏右 78.6，竖箭头因此是斜的
+		\draw[->] (A) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$h_*$} (B);
+		\draw[->] (A) -- node[inner sep=0pt,below left=3pt,pos=.5] {$k_*$} (C);   % below right 会让标签朝右下展开、跨过下行的线
+		\draw[->] (B) -- node[inner sep=0pt,left=3pt] {$\hat{\alpha}$} (C);
 	}
 	\label{fig:com_58_25}
 \end{center}
@@ -1437,14 +1441,16 @@ where \(x_{1} = g( y_{0})\) and \(y_{1} = f( x_{1})\). We have the corresponding
 % 尺寸/字号推导见 TopologyBook.sty 的 \munkrescomm
 \par\nopagebreak
 \begin{center}
-	\munkrescomm{0.3059}{%
-		\node (A) at (190, -110) {$\pi_1(X,x_0)$};
-		\node (B) at (865.0, -110.0) {$\pi_1(Y,y_0)$};
-		\node (C) at (250, -470) {$\pi_1(X,x_1)$};
-		\node (D) at (865.0, -470.0) {$\pi_1(Y,y_1)$};
-		\draw[->] (A) -- node[above,pos=.5] {$(f_{x_0})_*$} (B);
-		\draw[->] (C) -- node[above,pos=.5] {$(f_{x_1})_*$} (D);
-		\draw[->] (B) -- node[below right=1pt,pos=.55] {$g_*$} (C);
+	% 同 com_52_2：`(f_{x_0})_*` 这类标签在原书里窄于节点间距，本版字号下会贴到节点上，
+	% 故把图加宽（0.3059 -> 0.38）拉开节点间距。g_* 原 pos=.55 会撞上 (f_{x_1})_*，移到靠 B 端。
+	\munkrescomm{0.38}{%
+		\node (A) at (199.0, -103.9) {$\pi_1(X,x_0)$};
+		\node (B) at (873.6, -103.9) {$\pi_1(Y,y_0)$};
+		\node (C) at (254.3, -463.9) {$\pi_1(X,x_1)$};
+		\node (D) at (873.6, -463.9) {$\pi_1(Y,y_1)$};
+		\draw[->] (A) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$(f_{x_0})_*$} (B);
+		\draw[->] (C) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$(f_{x_1})_*$} (D);
+		\draw[->] (B) -- node[inner sep=0pt,left=3pt,pos=.35] {$g_*$} (C);   % g* 放箭头左侧
 	}
 	\label{fig:com_58_35}
 \end{center}

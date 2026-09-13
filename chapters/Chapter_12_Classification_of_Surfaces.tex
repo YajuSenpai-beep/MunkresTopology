@@ -256,19 +256,26 @@ This theorem states, roughly speaking, that if one divides \(F\) by \(N\) and th
 \par\nopagebreak
 \begin{center}
 	\munkrescomm{0.5603}{%
-		\node (F)  at ( 20, -155) {$F$};
-		\node (qF) at (245,  -45) {$q(F)$};
-		\node (qQ) at (732.5,  -45.0) {$q(F)/[q(F),q(F)]$};
-		\node (pF) at (398, -207) {$p(F)$};
-		\node (pP) at (732.5, -262.0) {$p(F)/p(N)$};
-		\draw[->] (qF) -- node[above,pos=.5] {$s$} (qQ);
-		\draw[->] (F)  -- node[above,pos=.5] {$q$} (qF);
-		\draw[->] (F)  -- node[below,pos=.5] {$p$} (pF);
-		\draw[->] (qF) -- node[below,pos=.5] {$u$} (pP);
-		\draw[->] (pF) -- node[above,pos=.5] {$v$} (qQ);
-		\draw[->] ([xshift=-9pt]pP.east) -- node[right] {$\phi$} ([xshift=-9pt]qQ.east);
-		\draw[->] ([xshift=-18pt]qQ.east) -- node[left] {$\psi$} ([xshift=-18pt]pP.east);
-		\draw[->] (pF) -- node[below,pos=.5] {$r$} (pP);
+		\node (F)  at ( 21.4, -152.5) {$F$};
+		\node (qF) at (248.9,  -42.8) {$q(F)$};
+		\node (qQ) at (674.1,  -42.8) {$q(F)/[q(F),q(F)]$};
+		\node (pF) at (248.9, -259.8) {$p(F)$};   % 原书：p(F) 与 q(F) 严格同列（x 已修）；且 p(F) 与 p(F)/p(N) **同一行**，故 y 取与 pP 相同（-259.8）。原先 y=-204.8 偏高约 55 单位。
+		\node (pP) at (735.4, -259.8) {$p(F)/p(N)$};
+		\draw[->] (qF) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$s$} (qQ);
+		\draw[->] (F)  -- node[inner sep=0pt,above=3.5pt,pos=.5] {$q$} (qF);
+		\draw[->] (F)  -- node[inner sep=0pt,below=3.5pt,pos=.5] {$p$} (pF);
+		% u/v 都在各自线的**下方**（原书如此）；pos 取 .3 让两标签分开
+		% （都取 .5 时两标签在中点附近几乎重合）
+		\draw[->] (qF) -- node[inner sep=0pt,below=3.5pt,pos=.22] {$u$} (pP);
+		\draw[->] (pF) -- node[inner sep=0pt,below=3.5pt,pos=.22] {$v$} (qQ);
+		% ⚠ 这两支竖箭头原写作 `[xshift=-9pt]pP.east` —— `east` 已是节点右缘，
+		%   再往左偏移等于**把箭头画进节点文字里**（实测箭头穿过 ")]" 和 "N"），
+		%   而且两支只差 9pt、箭头互相重叠。原书里它们在两个右侧节点**文字之右**的
+		%   空白处左右并列。故改用显式坐标：φ 在左、ψ 在右（原书如此；原先左右相反），
+		%   纵向跨度取两节点之间的空隙。
+		\draw[->] (737, -68) -- node[inner sep=0pt,left=3pt] {$\phi$} (737, -232);   % 原书 φ 朝下；x=737 实测（原写 880 偏右 143）
+		\draw[->] (767, -232) -- node[inner sep=0pt,right=3pt] {$\psi$} (767, -68);   % 原书 ψ 朝上；x=767 实测（原写 908 偏右）
+		\draw[->] (pF) -- node[inner sep=0pt,below=3.5pt,pos=.5] {$r$} (pP);
 	}
 	\label{fig:com_75_1}
 \end{center}
@@ -875,12 +882,12 @@ Indeed, let \(B\) be the open unit ball in \(\mathbb{R}^{2}\) centered at the or
 \par\nopagebreak
 \begin{center}
 	\munkrescomm{0.3895}{%
-		\node (Be) at ( 60,  -70) {$\mathbf{B}_{\epsilon}-\mathbf{0}$};
-		\node (B)  at (880,  -70) {$\mathbf{B}-\mathbf{0}$};
-		\node (V)  at (530, -320) {$V-\mathbf{0}$};
-		\draw[->] (Be) -- node[above,pos=.5] {$i$} (B);
-		\draw[->] (Be) -- node[below left=1pt,pos=.5] {$j$} (V);
-		\draw[->] (V)  -- node[above right=1pt,pos=.5] {$k$} (B);
+		\node (Be) at ( 62.3,  -64.6) {$\mathbf{B}_{\epsilon}-\mathbf{0}$};
+		\node (B)  at (880.9,  -64.6) {$\mathbf{B}-\mathbf{0}$};
+		\node (V)  at (533.1, -313.0) {$V-\mathbf{0}$};
+		\draw[->] (Be) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$i$} (B);
+		\draw[->] (Be) -- node[inner sep=0pt,below left=3pt,pos=.5] {$j$} (V);
+		\draw[->] (V)  -- node[inner sep=0pt,below right=3pt,pos=.5] {$k$} (B);   % k 放箭头下方（V->B 是上行右斜线，下方即右下侧）
 	}
 	\label{fig:com_78_35}
 \end{center}
@@ -907,12 +914,12 @@ Now we prove our result. For convenience, assume \(x\) is the origin in \(\mathb
 \par\nopagebreak
 \begin{center}
 	\munkrescomm{0.4008}{%
-		\node (Xe) at ( 60,  -64) {$\mathbf{X}_{\epsilon}-\mathbf{0}$};
-		\node (X)  at (880,  -64) {$\mathbf{X}-\mathbf{0}$};
-		\node (W)  at (530, -320) {$W-\mathbf{0}$};
-		\draw[->] (Xe) -- node[above,pos=.5] {$i$} (X);
-		\draw[->] (Xe) -- node[below left=1pt,pos=.5] {$j$} (W);
-		\draw[->] (W)  -- node[above right=1pt,pos=.5] {$k$} (X);
+		\node (Xe) at ( 61.4,  -59.5) {$\mathbf{X}_{\epsilon}-\mathbf{0}$};
+		\node (X)  at (881.1,  -59.5) {$\mathbf{X}-\mathbf{0}$};
+		\node (W)  at (530.8, -313.2) {$W-\mathbf{0}$};
+		\draw[->] (Xe) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$i$} (X);
+		\draw[->] (Xe) -- node[inner sep=0pt,below left=3pt,pos=.5] {$j$} (W);
+		\draw[->] (W)  -- node[inner sep=0pt,below right=3pt,pos=.5] {$k$} (X);   % k 放箭头下方
 	}
 	\label{fig:com_78_55}
 \end{center}
