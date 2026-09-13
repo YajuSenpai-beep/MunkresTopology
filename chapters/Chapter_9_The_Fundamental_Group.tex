@@ -1450,7 +1450,9 @@ where \(x_{1} = g( y_{0})\) and \(y_{1} = f( x_{1})\). We have the corresponding
 		\node (D) at (873.6, -463.9) {$\pi_1(Y,y_1)$};
 		\draw[->] (A) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$(f_{x_0})_*$} (B);
 		\draw[->] (C) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$(f_{x_1})_*$} (D);
-		\draw[->] (B) -- node[inner sep=0pt,left=3pt,pos=.35] {$g_*$} (C);   % g* 放箭头左侧
+		% g* 放箭头左侧。这条斜线倾角 30.2°，垂直间距 = d·sin30.2° = 0.50d：
+		% 3pt→1.51pt（贴线），5.5pt→2.76pt，6pt→3.01pt 才进入轴对齐标签的 3.0~3.5pt 基准区间。
+		\draw[->] (B) -- node[inner sep=0pt,left=6pt,pos=.35] {$g_*$} (C);
 	}
 	\label{fig:com_58_35}
 \end{center}
