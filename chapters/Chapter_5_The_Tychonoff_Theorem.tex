@@ -378,13 +378,17 @@ Thus \(g\) is the desired extension of \(f\).
 		\node (Y1) at (307.0,  -37.1) {$Y_1$};
 		\node (Y2) at ( 78.8, -324.4) {$Y_2$};
 		\draw[->] (X1) -- node[inner sep=0pt,left=3pt] {$j_2$} (Y2);
-		\draw[->] (Y1) -- node[inner sep=0pt,below=3.5pt,pos=.5] {$f_2$} (Y2);
+		% f₂ 原用 below=3.5pt —— 那是**纯向下平移**，标签中心被压到箭头中点以下 3.5pt；
+		% 而 j₂ 用的 left=3pt 是垂直偏移，中心仍在箭头中点。两者因此不齐平。
+		% 改用同类的垂直偏移 right；这条斜线倾角 52.2°，垂直间距 = d·sin52.2° = 0.79d，
+		% 取 3pt 只有 2.37pt（全场最紧），取 4pt 得 3.16pt，进入轴对齐标签的 3.0~3.5pt 基准区间。
+		\draw[->] (Y1) -- node[inner sep=0pt,right=4pt,pos=.5] {$f_2$} (Y2);
 		\node (X2) at (680.6,  -37.1) {$X$};
 		\node (C2) at (804.1,  -37.1) {$\subset$};
 		\node (Y2b) at (903.2,  -37.1) {$Y_2$};
 		\node (Y1b) at (680.6, -324.4) {$Y_1$};
 		\draw[->] (X2) -- node[inner sep=0pt,left=3pt] {$j_1$} (Y1b);
-		\draw[->] (Y2b) -- node[inner sep=0pt,below=3.5pt,pos=.5] {$f_1$} (Y1b);
+		\draw[->] (Y2b) -- node[inner sep=0pt,right=4pt,pos=.5] {$f_1$} (Y1b);   % 同 f₂：与 j₁ 的 left 偏移对称，3pt→4pt 把垂直间距提到 3.16pt
 	}
 	\label{fig:com_37_3}
 \end{center}
