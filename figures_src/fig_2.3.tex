@@ -1,0 +1,67 @@
+% 图 2.3 —— 手工重建（y = f(x) 的抛物线 + 刻度轴）
+%
+% 做法：看图定「是什么」，算法在圈定区域内量「是多少」。
+%
+%   抛物线   不是逼近出来的 —— **认出它就是 y = 3x² + 2**：
+%             顶点实测 (356,568) 即数据点 (0,2)；过 (243,229)/(469,229) 即 (±1,5)；
+%             沿曲线逐点验证 |x|≤0.8 处到墨迹距离全是 0.00 ✓
+%             所以用 plot[domain] 解析画，不再拿描摹点做样条（那样会有波纹）。
+%   坐标     原点 (356,794)，比例 **113 px 每单位**（x 刻度实测 124/240/465/577）
+%   刻度     两轴各画短线；数字位置取实测框中心
+%   空心圆点 (±1,5) 与 (0,2)：外径实测 18、描边 4 → 中线半径 7
+%   公式     `y = f(x)` 加**白底**，免得被曲线压住（用户指出）
+\documentclass[12pt]{standalone}
+\usepackage{fontspec}
+\setsansfont{Arial}
+\newfontfamily\mfallback{DejaVu Sans}
+\usepackage{tikz}
+
+\def\ox{356}       % 原点
+\def\oy{794}
+\def\U{113}        % 每单位像素
+\def\wAx{4.0}      % 轴线宽（实测）
+\def\wCur{5.5}     % 曲线宽（实测，比轴粗）
+
+% 抛物线 y = 3x^2 + 2：图像坐标 = (\ox + \U*t, \oy - \U*(3t^2+2))
+% 两臂在 t = ±1.24 处出画框顶（实测端点 y≈45）
+\begin{document}
+\begin{tikzpicture}[x=1pt, y=-1pt]
+
+  % ── 两轴 ──
+  \draw[line width=\wAx] (14,794) -- (700,794);     % x 轴
+  \draw[line width=\wAx] (356,10) -- (356,890);     % y 轴
+
+  % ── 刻度（短线，长度实测 ≈16）──
+  \foreach \t in {-2,-1,1,2}{ \draw[line width=\wAx] ({\ox+\U*\t},786) -- ({\ox+\U*\t},802); }
+  \foreach \t in {1,2,3,4,5,6}{ \draw[line width=\wAx] (348,{\oy-\U*\t}) -- (364,{\oy-\U*\t}); }
+
+  % ── 抛物线（解析）──
+  \draw[line width=\wCur] plot[domain=-1.24:1.24,samples=161]
+       ({\ox+\U*\x},{\oy-\U*(3*\x*\x+2)});
+
+  % ── 三个空心圆点（中线半径 7、描边 4）──
+  \draw[line width=4.0pt,fill=white] (\ox-\U,\oy-5*\U) circle (7);
+  \draw[line width=4.0pt,fill=white] (\ox+\U,\oy-5*\U) circle (7);
+  \draw[line width=4.0pt,fill=white] (\ox,\oy-2*\U)   circle (7);
+
+  % ── x 轴数字 ──
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28}{35}\selectfont] at (126.0,822.0) {\textsf{\textbf{−2}}};
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28}{35}\selectfont] at (239.5,822.0) {\textsf{\textbf{−1}}};
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28}{35}\selectfont] at (465.0,822.0) {\textsf{\textbf{1}}};
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28}{35}\selectfont] at (579.5,822.0) {\textsf{\textbf{2}}};
+
+  % ── y 轴数字（位置取实测框中心）──
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28}{35}\selectfont] at (337.5, 99.0) {\textsf{\textbf{6}}};
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28}{35}\selectfont] at (337.0,215.5) {\textsf{\textbf{5}}};
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28}{35}\selectfont] at (335.5,332.0) {\textsf{\textbf{4}}};
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28}{35}\selectfont] at (335.5,449.0) {\textsf{\textbf{3}}};
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28}{35}\selectfont] at (335.5,565.0) {\textsf{\textbf{2}}};
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28}{35}\selectfont] at (337.0,676.5) {\textsf{\textbf{1}}};
+
+  % ── 公式：**加白底**，免得与曲线/刻度叠在一起看不清 ──
+  \node[anchor=center,inner sep=4pt,fill=white,font=\fontsize{26}{32.5}\selectfont] at (533.0,312.0)
+       {\textsf{\textbf{\textit{y} = \textit{f}(\textit{x})}}};
+
+  \path[use as bounding box] (0,0) rectangle (710,897);
+\end{tikzpicture}
+\end{document}

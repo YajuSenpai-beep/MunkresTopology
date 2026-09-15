@@ -1,0 +1,117 @@
+% 图 1.1 —— 手写重建版（对照「描摹版」）
+%
+% 思路：不描摹像素，按**图里的信息**重建 ——
+%   内容 = 三组 Venn 图，每组两个等半径圆 + 一个区域用 45° 平行线填充
+%   参数从原书实测（不是猜的）：
+%     圆半径    r = 92.6  （6 个圆实测 92.52~92.79，取统一值）
+%     圆心距    P1 114.2  P2 123.7  P3 113.8  （书里三组本就不同，照实复刻）
+%     阴影线    45°，垂直间距 13.0，垂直线宽 3.3  （实测水平周期 18.4、截面宽 4.6）
+%     标签位置  取实测字形框的中心
+%   标签字体 = 粗体无衬线；字母斜体、符号正立（对全库 1438 字形实测得出）
+%
+% 这样做出来的圆是**解析的圆**、阴影线是**等距等宽的平行线**，
+% 不会有描摹不可避免的拼接弯曲与线宽跳变。
+\documentclass[12pt]{standalone}
+\usepackage{fontspec}
+\setsansfont{Arial}
+\newfontfamily\mfallback{DejaVu Sans}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+
+% ── 阴影线：45°，垂直线间距 13pt，线宽 3.3pt ──
+% 平铺方块边长取 13*sqrt(2)=18.385：方格内一条对角线，相邻线垂直间距正好 13。
+\pgfdeclarepatternformonly{hatch45}
+  {\pgfqpoint{-18.385pt}{-18.385pt}}
+  {\pgfqpoint{18.385pt}{18.385pt}}
+  {\pgfqpoint{18.385pt}{18.385pt}}
+  {\pgfsetlinewidth{3.3pt}\pgfsetstrokecolor{black}%
+   \pgfpathmoveto{\pgfqpoint{0pt}{0pt}}%
+   \pgfpathlineto{\pgfqpoint{18.385pt}{18.385pt}}%
+   \pgfusepath{stroke}}
+
+% 线宽分三种（都实测）：
+%   **圆周 4.4pt / 阴影线 3.3pt / 算子符号 3.0pt**。
+% 之前一律用 3.3，整体比原书少 12% 的墨 —— 圆和阴影线粗细本就不同。
+% 算子（∪ ∩）比圆周细：实测原书竖笔 3.0、弧底 3.0，与圆周的 4.4 明显不同。
+\def\wCirc{4.4}
+\def\wHatch{3.3}
+\def\wSym{3.0}
+
+\begin{document}
+\begin{tikzpicture}[x=1pt, y=-1pt, line width=\wHatch]   % y 向下，与图像坐标一致
+  \path[use as bounding box] (0,0) rectangle (1139,250);
+
+  % ── 三个面板的圆心（实测）──
+  \def\rA{92.6}
+  \coordinate (A1) at (137.05,115.76);  \coordinate (B1) at (251.24,116.84);
+  \coordinate (A2) at (512.72,111.05);  \coordinate (B2) at (636.34,108.78);
+  \coordinate (A3) at (915.15,106.15);  \coordinate (B3) at (1028.90,104.99);
+
+  % ── 面板 1：A ∪ B 全填充（非零环绕 = 并集）──
+  \begin{scope}
+    \clip (A1) circle (\rA) (B1) circle (\rA);
+    \fill[pattern=hatch45] (A1) circle (\rA) (B1) circle (\rA);
+  \end{scope}
+  \draw[line width=\wCirc] (A1) circle (\rA);
+  \draw[line width=\wCirc] (B1) circle (\rA);
+
+  % ── 面板 2：只填交集 ──
+  % 注意：两圆**同向**时非零环绕给的是**并集**，不是交集（第一版就错在这）。
+  % 正解：先夹到 A，再单独填 B。
+  \begin{scope}
+    \clip (A2) circle (\rA);
+    \fill[pattern=hatch45] (B2) circle (\rA);
+  \end{scope}
+  \draw[line width=\wCirc] (A2) circle (\rA);
+  \draw[line width=\wCirc] (B2) circle (\rA);
+
+  % ── 面板 3：A − B（夹到 A，再偶奇规则 = 只在 A 里且不在 B 里）──
+  \begin{scope}
+    \clip (A3) circle (\rA);
+    \fill[pattern=hatch45,even odd rule] (A3) circle (\rA) (B3) circle (\rA);
+  \end{scope}
+  \draw[line width=\wCirc] (A3) circle (\rA);
+  \draw[line width=\wCirc] (B3) circle (\rA);
+
+  % ── 标签（位置 = 实测字形框中心）──
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28.5}{35.6}\selectfont] at (27.2,119.5) {\textsf{\textbf{\textit{A}}}};
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28.5}{35.6}\selectfont] at (339.8,41.0) {\textsf{\textbf{\textit{B}}}};
+  % ∪ / ∩ 不排字体，直接画 —— 因为这个符号**原书就是画出来的**，不是字体字形。
+  % 依据（对 24 个字体实测，脚本见 `checks/test_union_glyphs.py` 与
+  % `checks/test_stretch_symbol.py`）：
+  %   · 原书宽高比 **1.30**（26×20），而所有字体都在 0.79~0.97，没有一个够宽
+  %     （TeX Live 全部数学字体 + Windows 无衬线都量过，最宽的 GFS Neohellenic 才 0.97）；
+  %   · 原书**竖笔 3.0、弧底 3.0，笔画完全均匀**；字体字形横向拉伸到 1.30 后，
+  %     竖笔会变粗 1.6~1.7 倍，粗细立刻不匀。
+  %   ⇒ 没有现成符号可用；按几何画，线宽由我定，天然均匀。
+  %
+  % 尺寸照实测：**两个符号的墨迹框同为 26×20**（之前把 ∩ 画成 28×22 是错的）。
+  % ⚠ 26×20 是**墨迹**框，不是路径框。且 TikZ 默认是**平头端帽**（butt），
+  %   竖笔的开口端不外扩，只有圆弧那一侧外扩半个线宽（1.5pt）：
+  %     墨迹宽 = 路径宽 + 3      → 路径宽 23（半圆半径 11.5）
+  %     墨迹高 = 竖笔 7 + 半径 11.5 + 1.5 = 20
+  %   （第一版按 26×20 直接当路径画，量出来 29×22；第二版只减了横的不减竖的，
+  %     又量成 26×18。两处都记在这。）
+  %   ∪：路径左上 (190.5,225)，弧心 (202,232)
+  %   ∩：路径左下 (570.5,239)，弧心 (582,232)
+  % ⚠ 本图用 y=-1pt（y 向下），TikZ 的弧线角度会被**上下镜像**：
+  %   数学上的 90°（向上）在屏幕上朝**下**。所以 ∪ 用 arc(180:0)（向下鼓）、
+  %   ∩ 用 arc(180:360)（向上鼓）。
+  \draw[line width=\wSym] (190.5,225) -- (190.5,232) arc (180:0:11.5) -- (213.5,225);
+  \draw[line width=\wSym] (570.5,239) -- (570.5,232) arc (180:360:11.5) -- (593.5,239);
+
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28.5}{35.6}\selectfont] at (169.6,233.5) {\textsf{\textbf{\textit{A}}}};
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28.5}{35.6}\selectfont] at (237.8,232.5) {\textsf{\textbf{\textit{B}}}};
+
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28.5}{35.6}\selectfont] at (404.2,115.5) {\textsf{\textbf{\textit{A}}}};
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28.5}{35.6}\selectfont] at (727.8,37.5) {\textsf{\textbf{\textit{B}}}};
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28.5}{35.6}\selectfont] at (549.6,229.5) {\textsf{\textbf{\textit{A}}}};
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28.5}{35.6}\selectfont] at (617.8,228.5) {\textsf{\textbf{\textit{B}}}};
+
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28.5}{35.6}\selectfont] at (803.2,111.5) {\textsf{\textbf{\textit{A}}}};
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28.5}{35.6}\selectfont] at (1120.8,33.0) {\textsf{\textbf{\textit{B}}}};
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28.5}{35.6}\selectfont] at (948.6,223.5) {\textsf{\textbf{\textit{A}}}};
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28.5}{35.6}\selectfont] at (976.8,229.1) {{\mfallback\textbf{−}}};
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28.5}{35.6}\selectfont] at (1005.8,223.0) {\textsf{\textbf{\textit{B}}}};
+\end{tikzpicture}
+\end{document}
