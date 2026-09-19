@@ -1,0 +1,67 @@
+% 图 21.1 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
+%%
+% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 21.1` 看指标 + 看叠合图。
+%%
+%% ⚠ 待核：
+%   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
+%   · 可疑字形 1 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
+%%
+\documentclass[12pt]{standalone}
+\usepackage{fontspec}
+\setsansfont{Arial}
+\newfontfamily\mfallback{DejaVu Sans}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[x=1pt, y=-1pt, line width=6.0pt, line cap=round, line join=round]
+
+  %% ════ 直线段（prims2 的 strokes）════
+  \draw[line width=6.0pt] (378.0,356.0) -- (340.8,375.0);
+  \draw[line width=5.0pt] (402.0,350.0) -- (389.0,349.0);
+  \draw[line width=6.0pt] (460.0,44.0) -- (447.6,50.4);
+  \draw[line width=7.0pt] (401.0,324.9) -- (389.0,344.0);
+  \draw[line width=5.0pt] (381.0,411.0) -- (380.0,480.0);
+  \draw[line width=3.0pt] (389.0,348.0) -- (389.0,345.0);
+  \draw[line width=5.0pt] (381.0,343.0) -- (383.0,44.0);
+  \draw[line width=5.0pt] (381.0,409.0) -- (379.0,356.0);
+  \draw[line width=6.0pt] (382.0,344.0) -- (388.0,344.0);
+  \draw[line width=5.0pt] (382.0,410.0) -- (462.0,409.0);
+  \draw[line width=4.0pt] (198.0,358.0) -- (248.0,358.0);
+  \draw[line width=5.0pt] (383.0,42.0) -- (382.0,18.0);
+  \draw[line width=7.0pt] (461.0,45.0) -- (470.0,45.0);
+  \draw[line width=5.0pt] (384.0,43.0) -- (398.0,42.0);
+  \draw[line width=7.0pt] (379.0,355.0) -- (381.0,344.0);
+  \draw[line width=6.0pt] (379.0,355.0) -- (388.0,349.0);
+  \draw[line width=5.0pt] (463.0,395.0) -- (463.0,408.0);
+  \draw[line width=6.0pt] (472.0,45.0) -- (483.0,53.1);
+  \draw[line width=6.0pt] (483.0,53.1) -- (492.0,70.4);
+  \draw[line width=6.0pt] (520.1,309.1) -- (537.1,344.1);
+  \draw[line width=6.0pt] (537.1,344.1) -- (568.9,368.9);
+  \draw[line width=5.0pt] (838.0,410.0) -- (464.0,409.0);
+  \draw[line width=5.0pt] (17.0,410.0) -- (380.0,410.0);
+
+  %% ════ 曲线（prims2 的 curves —— 三段式，坐标同为 (y,x)）════
+  \draw[line width=6.0pt] (340.8,375.0) .. controls (262.1,396.3) and (175.7,392.9) .. (91.0,395.0);
+  \draw[line width=5.0pt] (223.0,336.0) .. controls (230.2,334.6) and (226.8,343.1) .. (228.0,346.0);
+  \draw[line width=7.0pt] (461.0,43.0) .. controls (461.0,36.8) and (471.0,38.5) .. (471.0,44.0);
+  \draw[line width=6.0pt] (447.6,50.4) .. controls (403.8,132.6) and (432.2,238.3) .. (401.0,324.9);
+  \draw[line width=6.0pt] (492.0,70.4) .. controls (514.4,145.8) and (503.0,231.9) .. (520.1,309.1);
+  \draw[line width=6.0pt] (568.9,368.9) .. controls (651.2,399.4) and (745.7,391.0) .. (836.0,396.0);
+
+  %% ════ 标签（probe 直接给的 \node 行）════
+  %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.9}{36.1}\selectfont] at (366.9,43.0) {\textsf{\textbf{1}}};   % box(359,32,9,21)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.7}{29.7}\selectfont] at (248.8,372.4) {\textsf{\textbf{1}}};   % box(242,364,8,16)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{25.0}{31.2}\selectfont] at (227.5,374.0) {\textsf{\textbf{+}}};   % box(220,366,12,13)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{25.3}{31.6}\selectfont] at (206.1,375.5) {\textsf{\textbf{\textit{n}}}};   % box(199,367,13,14)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.7}{29.7}\selectfont] at (466.8,434.4) {\textsf{\textbf{1}}};   % box(460,426,8,16)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{37.7}{47.1}\selectfont] at (474.6,454.2) {{\mfallback\textbf{−}}};   % box(455,446,21,5)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{24.4}{30.5}\selectfont] at (465.1,463.9) {\textsf{\textbf{\textit{n}}}};   % box(458,456,13,13)
+
+  % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
+  \pgfresetboundingbox
+  \path[use as bounding box] (0,0) rectangle (850,488);
+\end{tikzpicture}
+\end{document}
+
+% ⚠ 待核清单（probe 拿不准，人眼过一遍）：
+%   · 未识别/跳过：⑤ 跳过/未识别的字形

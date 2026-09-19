@@ -1,0 +1,190 @@
+% 图 54.1 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
+%%
+% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 54.1` 看指标 + 看叠合图。
+%%
+%% ⚠ 待核：
+%   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
+%   · 可疑字形 1 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
+%%
+\documentclass[12pt]{standalone}
+\usepackage{fontspec}
+\setsansfont{Arial}
+\newfontfamily\mfallback{DejaVu Sans}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[x=1pt, y=-1pt, line width=4.4pt, line cap=round, line join=round]
+
+  %% ════ 填充区（prims2 的 fills）════
+  \fill (182.0,39.0) -- (186.0,43.0) -- (191.0,43.0) -- (195.0,39.0) -- cycle;
+  \fill (592.0,250.0) -- (593.0,269.0) -- (593.0,265.0) -- (597.0,260.0) -- (597.0,255.0) -- cycle;
+
+  %% ════ 直线段（prims2 的 strokes）════
+  \draw[line width=6.0pt] (999.0,51.0) -- (990.0,64.0);
+  \draw[line width=7.0pt] (1077.0,334.0) -- (1074.0,343.0);
+  \draw[line width=5.0pt] (139.0,240.0) -- (137.0,256.0);
+  \draw[line width=5.0pt] (865.0,18.0) -- (864.0,33.0);
+  \draw[line width=4.0pt] (228.0,33.0) -- (229.0,19.0);
+  \draw[line width=7.0pt] (981.0,64.0) -- (988.0,64.0);
+  \draw[line width=5.7pt] (137.0,70.0) -- (142.0,70.0);
+  \draw[line width=4.0pt] (269.0,133.0) -- (269.0,151.0);
+  \draw[line width=4.0pt] (229.0,34.0) -- (312.0,35.0);
+  \draw[line width=6.1pt] (158.0,28.0) -- (161.0,33.0);
+  \draw[line width=5.0pt] (1123.0,34.0) -- (1152.0,35.0);
+  \draw[line width=6.1pt] (270.0,132.0) -- (275.0,129.0);
+  \draw[line width=6.0pt] (581.0,196.0) -- (598.0,196.0);
+  \draw[line width=5.0pt] (421.0,256.0) -- (420.0,240.0);
+  \draw[line width=6.0pt] (540.0,34.0) -- (540.0,20.0);
+  \draw[line width=4.0pt] (712.0,33.0) -- (713.0,18.0);
+  \draw[line width=6.0pt] (272.0,170.0) -- (268.0,177.0);
+  \draw[line width=5.7pt] (667.0,336.0) -- (669.0,341.0);
+  \draw[line width=6.0pt] (150.0,55.0) -- (144.0,69.0);
+  \draw[line width=4.0pt] (538.0,275.0) -- (537.0,257.0);
+  \draw[line width=3.0pt] (447.0,236.8) -- (445.0,239.0);
+  \draw[line width=7.0pt] (190.0,262.0) -- (191.0,253.0);
+  \draw[line width=3.0pt] (269.0,131.0) -- (270.0,67.0);
+  \draw[line width=8.0pt] (1137.0,305.0) -- (1115.0,326.0);
+  \draw[line width=4.0pt] (138.0,275.0) -- (137.0,256.0);
+  \draw[line width=5.5pt] (507.0,68.0) -- (513.0,55.0);
+  \draw[line width=6.0pt] (179.0,190.0) -- (182.0,195.0);
+  \draw[line width=7.0pt] (1036.0,34.0) -- (1014.0,34.0);
+  \draw[line width=6.0pt] (183.0,196.0) -- (201.0,196.0);
+  \draw[line width=5.7pt] (1013.0,35.0) -- (1011.0,40.0);
+  \draw[line width=4.0pt] (421.0,275.0) -- (421.0,257.0);
+  \draw[line width=4.0pt] (668.0,130.0) -- (668.0,66.0);
+  \draw[line width=5.7pt] (507.0,70.0) -- (509.0,75.0);
+  \draw[line width=5.0pt] (421.0,35.0) -- (453.0,34.0);
+  \draw[line width=7.0pt] (192.0,262.0) -- (193.0,253.0);
+  \draw[line width=4.0pt] (21.0,275.0) -- (22.0,257.0);
+  \draw[line width=5.0pt] (140.0,35.0) -- (56.0,35.0);
+  \draw[line width=5.0pt] (539.0,240.0) -- (537.0,255.0);
+  \draw[line width=7.0pt] (1039.0,172.0) -- (1044.0,176.0);
+  \draw[line width=6.1pt] (1132.0,303.0) -- (1137.0,304.0);
+  \draw[line width=4.0pt] (20.0,240.0) -- (22.0,257.0);
+  \draw[line width=4.0pt] (1079.0,130.0) -- (1079.0,67.0);
+  \draw[line width=7.0pt] (1038.0,34.0) -- (1122.0,34.0);
+  \draw[line width=6.1pt] (1080.0,131.0) -- (1085.0,128.0);
+  \draw[line width=5.0pt] (1121.0,20.0) -- (1122.0,33.0);
+  \draw[line width=4.0pt] (314.0,35.0) -- (342.0,34.0);
+  \draw[line width=4.0pt] (455.0,34.0) -- (496.0,35.0);
+  \draw[line width=5.0pt] (627.0,33.0) -- (626.0,20.0);
+  \draw[line width=5.0pt] (711.0,34.0) -- (627.0,34.0);
+  \draw[line width=5.0pt] (142.0,35.0) -- (159.0,35.0);
+  \draw[line width=4.0pt] (55.0,34.0) -- (54.0,19.0);
+  \draw[line width=6.0pt] (967.0,190.0) -- (970.0,195.0);
+  \draw[line width=5.0pt] (137.0,256.0) -- (22.0,257.0);
+  \draw[line width=7.4pt] (521.0,34.0) -- (525.0,28.0);
+  \draw[line width=5.0pt] (422.0,257.0) -- (536.0,256.0);
+  \draw[line width=7.0pt] (743.0,252.0) -- (741.0,261.0);
+  \draw[line width=7.1pt] (989.0,66.0) -- (990.0,72.0);
+  \draw[line width=4.0pt] (713.0,34.0) -- (742.0,34.0);
+  \draw[line width=7.0pt] (1076.0,177.0) -- (1080.0,167.0);
+  \draw[line width=6.0pt] (1073.0,344.0) -- (1052.0,344.0);
+  \draw[line width=7.0pt] (343.0,252.0) -- (342.0,262.0);
+  \draw[line width=7.0pt] (577.0,189.0) -- (580.0,195.0);
+  \draw[line width=5.0pt] (313.0,34.0) -- (313.0,18.0);
+  \draw[line width=7.7pt] (146.0,77.0) -- (144.0,70.0);
+  \draw[line width=7.5pt] (675.0,127.0) -- (669.0,131.0);
+  \draw[line width=7.0pt] (1153.0,253.0) -- (1151.0,262.0);
+  \draw[line width=5.0pt] (1080.0,167.0) -- (1040.0,168.0);
+  \draw[line width=5.7pt] (1049.0,341.0) -- (1047.0,336.0);
+  \draw[line width=4.0pt] (937.0,239.0) -- (936.0,255.0);
+  \draw[line width=6.5pt] (952.0,30.0) -- (957.0,34.0);
+  \draw[line width=6.0pt] (142.0,20.0) -- (141.0,34.0);
+  \draw[line width=5.5pt] (539.0,35.0) -- (524.0,36.0);
+  \draw[line width=4.0pt] (626.0,34.0) -- (541.0,35.0);
+  \draw[line width=6.1pt] (965.0,201.0) -- (969.0,197.0);
+  \draw[line width=5.0pt] (162.0,34.0) -- (227.0,34.0);
+  \draw[line width=6.0pt] (987.0,196.0) -- (971.0,196.0);
+  \draw[line width=6.0pt] (668.0,133.0) -- (668.0,150.0);
+  \draw[line width=6.0pt] (1073.0,129.0) -- (1078.0,132.0);
+  \draw[line width=5.0pt] (864.0,33.0) -- (831.0,34.0);
+  \draw[line width=5.0pt] (864.0,33.0) -- (947.0,34.0);
+  \draw[line width=4.0pt] (820.0,256.0) -- (820.0,275.0);
+  \draw[line width=5.1pt] (948.0,34.0) -- (951.0,30.0);
+  \draw[line width=6.0pt] (957.0,34.0) -- (1011.0,34.0);
+  \draw[line width=8.0pt] (957.0,34.0) -- (948.0,35.0);
+  \draw[line width=6.0pt] (1079.0,133.0) -- (1079.0,150.0);
+  \draw[line width=6.0pt] (498.0,35.0) -- (520.0,34.0);
+  \draw[line width=5.0pt] (936.0,255.0) -- (821.0,255.0);
+  \draw[line width=4.0pt] (936.0,255.0) -- (937.0,275.0);
+  \draw[line width=4.0pt] (1038.0,19.0) -- (1037.0,33.0);
+  \draw[line width=7.7pt] (1003.0,275.0) -- (996.0,273.0);
+  \draw[line width=5.0pt] (54.0,35.0) -- (23.0,36.0);
+  \draw[line width=4.0pt] (454.0,33.0) -- (454.0,20.0);
+  \draw[line width=4.0pt] (951.0,19.0) -- (951.0,29.0);
+  \draw[line width=5.0pt] (820.0,254.0) -- (819.0,239.0);
+
+  %% ════ 曲线（prims2 的 curves —— 三段式，坐标同为 (y,x)）════
+  \draw[line width=7.0pt] (744.0,252.0) .. controls (748.6,252.8) and (748.2,261.8) .. (743.0,261.0);
+  \draw[line width=6.0pt] (344.0,252.0) .. controls (349.1,252.8) and (350.0,262.5) .. (344.0,262.0);
+  \draw[line width=4.0pt] (505.0,70.0) .. controls (477.4,121.8) and (453.0,177.2) .. (447.0,236.8);
+  \draw[line width=7.0pt] (1154.0,253.0) .. controls (1158.7,253.3) and (1158.1,263.1) .. (1153.0,262.0);
+  \draw[line width=5.0pt] (980.0,242.0) .. controls (981.4,210.4) and (1007.0,178.6) .. (1038.0,172.0);
+  \draw[line width=4.0pt] (1118.0,186.0) .. controls (1110.0,174.2) and (1093.9,169.1) .. (1080.0,167.0);
+  \draw[line width=4.0pt] (137.0,218.0) .. controls (148.4,206.3) and (162.9,195.8) .. (180.0,196.0);
+  \draw[line width=5.0pt] (978.0,245.0) .. controls (973.1,289.0) and (1004.6,334.6) .. (1048.0,342.0);
+  \draw[line width=5.0pt] (1114.0,327.0) .. controls (1106.2,339.7) and (1088.9,342.2) .. (1075.0,344.0);
+  \draw[line width=4.0pt] (885.0,237.0) .. controls (905.7,173.5) and (946.0,119.0) .. (988.0,66.0);
+  \draw[line width=4.0pt] (578.0,197.0) .. controls (561.1,196.3) and (547.8,206.6) .. (536.0,218.0);
+  \draw[line width=4.0pt] (83.0,238.0) .. controls (89.5,178.0) and (115.0,123.1) .. (142.0,70.0);
+  \draw[line width=3.0pt] (925.0,218.0) .. controls (936.3,206.2) and (950.9,195.6) .. (968.0,196.0);
+
+  %% ════ 圆 / 椭圆（probe 精测）════
+  \draw (1076.9,255.3) circle (77.2);
+  \draw (666.3,256.2) circle (78.2);
+  \draw (267.8,255.2) circle (77.6);
+
+  %% ════ 实心点 ════
+  \fill (188.0,30.0) circle (5.0);
+  \fill (495.5,31.5) circle (6.5);
+  \fill (141.5,39.0) circle (6.5);
+  \fill (496.0,38.5) circle (7.0);
+  \fill (541.0,39.0) circle (6.1);
+  \fill (1122.5,38.5) circle (6.5);
+  \fill (502.5,66.5) circle (5.7);
+  \fill (264.5,133.0) circle (5.2);
+  \fill (663.0,131.5) circle (3.6);
+  \fill (182.0,201.0) circle (5.1);
+  \fill (581.0,201.5) circle (5.2);
+  \fill (974.0,244.8) circle (4.3);
+  \fill (585.5,258.5) circle (6.5);
+  \fill (1051.4,348.5) circle (5.6);
+
+  %% ════ 标签（probe 直接给的 \node 行）════
+  %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{32.3}{40.4}\selectfont] at (955.2,61.8) {\textsf{\textbf{0}}};   % box(945,50,15,23)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{32.3}{40.4}\selectfont] at (127.2,62.8) {\textsf{\textbf{0}}};   % box(117,51,15,23)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{32.1}{40.1}\selectfont] at (314.3,63.0) {\textsf{\textbf{2}}};   % box(306,51,15,23)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.1}{38.9}\selectfont] at (628.6,62.5) {\textsf{\textbf{1}}};   % box(620,51,10,22)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{32.1}{40.1}\selectfont] at (714.3,63.0) {\textsf{\textbf{2}}};   % box(706,51,15,23)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.8}{39.8}\selectfont] at (870.7,63.0) {\textsf{\textbf{1}}};   % box(862,51,10,23)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.8}{39.8}\selectfont] at (61.7,64.0) {\textsf{\textbf{1}}};   % box(53,52,10,23)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.8}{39.8}\selectfont] at (230.7,64.0) {\textsf{\textbf{1}}};   % box(222,52,10,23)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.6}{39.5}\selectfont] at (545.1,63.3) {\textsf{\textbf{0}}};   % box(535,52,15,22)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.1}{38.9}\selectfont] at (1038.6,63.5) {\textsf{\textbf{1}}};   % box(1030,52,10,22)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.4}{39.3}\selectfont] at (1123.3,63.5) {\textsf{\textbf{2}}};   % box(1115,52,15,22)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.8}{39.8}\selectfont] at (461.7,65.0) {\textsf{\textbf{1}}};   % box(453,53,10,23)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.3}{37.9}\selectfont] at (856.8,67.6) {{\mfallback\textbf{−}}};   % box(841,61,17,4)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.3}{37.9}\selectfont] at (48.8,69.6) {{\mfallback\textbf{−}}};   % box(33,63,17,4)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.3}{37.9}\selectfont] at (447.8,69.6) {{\mfallback\textbf{−}}};   % box(432,63,17,4)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.2}{36.4}\selectfont] at (695.9,116.0) {\textsf{\textbf{\textit{P}}}};   % box(685,104,18,22)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.8}{37.3}\selectfont] at (1105.0,116.5) {\textsf{\textbf{\textit{P}}}};   % box(1094,104,18,23)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.6}{38.3}\selectfont] at (296.5,117.5) {\textsf{\textbf{\textit{P}}}};   % box(285,105,19,23)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{36.0}{45.1}\selectfont] at (915.7,131.4) {{\mfallback\textbf{−}}};   % box(899,123,16,6)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{37.7}{47.1}\selectfont] at (102.6,136.2) {{\mfallback\textbf{−}}};   % box(86,127,15,7)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{37.7}{47.1}\selectfont] at (461.6,139.2) {{\mfallback\textbf{−}}};   % box(445,130,15,7)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.5}\selectfont] at (905.8,147.2) {\textsf{\textbf{\textit{b}}}};   % box(896,135,17,22)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.5}{35.6}\selectfont] at (93.0,151.5) {\textsf{\textbf{\textit{f}}}};   % box(87,140,11,22)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.8}{38.5}\selectfont] at (452.1,154.0) {\textsf{\textbf{\textit{g}}}};   % box(441,141,18,23)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{27.1}{33.9}\selectfont] at (157.5,180.5) {\textsf{\textbf{\textit{f}}}};   % box(152,169,10,22)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.5}\selectfont] at (948.8,181.2) {\textsf{\textbf{\textit{b}}}};   % box(939,169,17,22)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.8}{38.5}\selectfont] at (560.1,184.0) {\textsf{\textbf{\textit{g}}}};   % box(549,171,18,23)
+
+  % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
+  \pgfresetboundingbox
+  \path[use as bounding box] (0,0) rectangle (1173,357);
+\end{tikzpicture}
+\end{document}
+
+% ⚠ 待核清单（probe 拿不准，人眼过一遍）：
+%   · 未识别/跳过：⑤ 跳过/未识别的字形
