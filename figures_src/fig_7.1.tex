@@ -1,154 +1,110 @@
-% 图 7.1 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
+% 图 7.1 —— 手工重建（原书 §7 Example 2：Z₊×Z₊ 的“数数”示意）
 %%
-% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 7.1` 看指标 + 看叠合图。
+%% ── 图上有什么 ─────────────────────────────────────────────
+%%   左panel：4×4 点阵。a₁..a₁₀ 按 x+y 递增编号（a₁=(0,0) a₂=(1,0) a₃=(0,1) a₄=(2,0) …）。
+%%            点阵里画了一批**短斜箭头**，方向一律左上：它们标的是「沿反对角线数下去」的方向，
+%%            即从右下的 (c+1,r) 指到左上的 (c,r+1)。箭头的条数按 c 递减：
+%%            c=0 有 4 条（r=0..3）、c=1 有 3 条、c=2 有 2 条、c=3 有 1 条 —— 共 10 条。
+%%            最靠外的几条（c=0,r=3 等）已经伸出点阵之外，表示计数还要继续。
+%%   右panel：A = {(x,y) ∈ Z₊×Z₊ : y ≤ x}。画成**阶梯点阵**：第 c 列有 c+1 个点
+%%            （c=0..3，共 1+2+3+4=10 个）。每列在自己的相邻两点之间画一支**向上**的箭头
+%%            （列 c 有 c 支），同样表示向上继续。
+%%   中间：一条浅弧 + 箭头，标 f —— 表示左panel 到右panel 的那个双射。
 %%
-%% ⚠ 待核：
-%   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
-%   · 可疑字形 3 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
+%% ── 尺寸从哪来 ─────────────────────────────────────────────
+%% 逐点实测 `images\7.1.png`（1150×562 像素，本文件的坐标就是它），并用原书扫描件
+%% （`论文素材\3.Munkres原始扫描文本 (Doc2X)\原书PDF\《Topology》 (2nd，James Munkres).pdf`
+%%   第 62 页）复核过几何关系。实测值：
+%%     · 点阵  列距 105px、行距 99px（原书页坐标 23.0pt × 21.8pt —— 原图本就不是正方格，照抄）
+%%     · 圆点  直径 15px；边框线宽 4px；箭头杆 4px；箭头头 17×20px
+%%     · 短划占 dot→dot 的 0.22~0.79（两处实测为 0.238/0.797 与 0.19/0.77，取齐成一组）
+%%     · f 弧三点拟合（最大偏差 0.31px）：起 (474,259.5)、控制 (520.5,243.6)/(562,247.7)、
+%%       终 (592,264)，弧顶 (531,249.5)
+%%     · 字号 标签 a = Arial **粗斜体 30pt**；下标数字 = 粗体 22pt；f 与 A = 30pt
 %%
 \documentclass[12pt]{standalone}
 \usepackage{fontspec}
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
-\begin{tikzpicture}[x=1pt, y=-1pt, line width=5.7pt, line cap=round, line join=round]
+\begin{tikzpicture}[x=1pt, y=-1pt, line width=4pt, line cap=butt, line join=miter]
 
-  %% ════ 填充区（prims2 的 fills）════
-  \fill (304.0,446.0) -- (299.0,452.0) -- (299.0,457.0) -- (306.0,460.0) -- (309.0,457.0) -- (308.0,447.0) -- cycle;
+  %% ════ 两个面板的 L 形边框（竖线 + 底线）════
+  \draw (13.8,17) -- (13.8,549.8) -- (514,549.8);
+  \draw (635,16) -- (635,549.8) -- (1137,549.8);
 
-  %% ════ 直线段（prims2 的 strokes）════
-  \draw[line width=5.7pt] (1054.0,183.0) -- (1049.0,185.0);
-  \draw[line width=6.7pt] (151.0,174.0) -- (151.0,180.0);
-  \draw[line width=3.0pt] (302.0,219.0) -- (257.0,176.0);
-  \draw[line width=6.0pt] (255.0,275.0) -- (255.0,281.0);
-  \draw[line width=7.7pt] (369.0,371.0) -- (362.0,373.0);
-  \draw[line width=4.0pt] (1053.0,423.0) -- (1054.0,388.0);
-  \draw[line width=4.0pt] (1055.0,184.0) -- (1055.0,218.0);
-  \draw[line width=3.0pt] (303.0,416.0) -- (258.0,373.0);
-  \draw[line width=7.7pt] (153.0,174.0) -- (160.0,172.0);
-  \draw[line width=4.0pt] (153.0,174.0) -- (197.0,217.0);
-  \draw[line width=3.0pt] (362.0,373.0) -- (407.0,416.0);
-  \draw[line width=3.0pt] (409.0,315.0) -- (364.0,271.0);
-  \draw[line width=3.0pt] (152.0,375.0) -- (197.0,418.0);
-  \draw[line width=6.5pt] (141.0,163.0) -- (151.0,173.0);
-  \draw[line width=6.5pt] (350.0,362.0) -- (360.0,372.0);
-  \draw[line width=6.5pt] (1055.0,267.0) -- (1054.0,284.0);
-  \draw[line width=7.3pt] (474.0,369.0) -- (467.0,370.0);
-  \draw[line width=5.0pt] (265.0,370.0) -- (259.0,372.0);
-  \draw[line width=5.3pt] (149.0,273.0) -- (148.0,278.0);
-  \draw[line width=3.0pt] (302.0,317.0) -- (257.0,274.0);
-  \draw[line width=7.0pt] (845.0,385.0) -- (839.0,388.0);
-  \draw[line width=6.0pt] (1047.0,389.0) -- (1053.0,387.0);
-  \draw[line width=5.7pt] (1053.0,246.0) -- (1056.0,242.0);
-  \draw[line width=8.7pt] (362.0,271.0) -- (362.0,279.0);
-  \draw[line width=6.0pt] (1053.0,285.0) -- (1047.0,288.0);
-  \draw[line width=4.0pt] (14.0,18.0) -- (12.0,541.3);
-  \draw[line width=5.0pt] (12.0,541.3) -- (13.7,548.7);
-  \draw[line width=4.0pt] (13.7,548.7) -- (513.0,549.0);
-  \draw[line width=4.0pt] (952.0,422.0) -- (952.0,387.0);
-  \draw[line width=4.0pt] (466.0,372.0) -- (511.0,415.0);
-  \draw[line width=6.0pt] (151.0,73.0) -- (141.0,64.0);
-  \draw[line width=5.0pt] (1137.0,550.0) -- (637.8,549.0);
-  \draw[line width=5.9pt] (637.8,549.0) -- (633.0,546.0);
-  \draw[line width=5.0pt] (633.0,546.0) -- (635.0,17.0);
-  \draw[line width=6.5pt] (847.0,385.0) -- (852.0,389.0);
-  \draw[line width=8.7pt] (364.0,271.0) -- (372.0,269.0);
-  \draw[line width=5.3pt] (151.0,75.0) -- (150.0,80.0);
-  \draw[line width=2.0pt] (1054.0,286.0) -- (1054.0,322.0);
-  \draw[line width=6.5pt] (1061.0,186.0) -- (1056.0,182.0);
-  \draw[line width=7.0pt] (158.0,373.0) -- (152.0,374.0);
-  \draw[line width=6.7pt] (150.0,381.0) -- (150.0,375.0);
-  \draw[line width=7.0pt] (153.0,73.0) -- (159.0,72.0);
-  \draw[line width=7.3pt] (464.0,379.0) -- (465.0,372.0);
-  \draw[line width=6.0pt] (245.0,165.0) -- (255.0,175.0);
-  \draw[line width=5.7pt] (951.0,386.0) -- (946.0,388.0);
-  \draw[line width=6.0pt] (149.0,271.0) -- (138.0,261.0);
-  \draw[line width=6.0pt] (952.0,385.0) -- (951.0,367.0);
-  \draw[line width=5.0pt] (360.0,374.0) -- (359.0,380.0);
-  \draw[line width=4.0pt] (846.0,386.0) -- (846.0,419.0);
-  \draw[line width=7.7pt] (257.0,274.0) -- (264.0,272.0);
-  \draw[line width=5.3pt] (151.0,271.0) -- (156.0,270.0);
-  \draw[line width=5.5pt] (465.0,370.0) -- (454.0,360.0);
-  \draw[line width=6.0pt] (1055.0,164.0) -- (1055.0,181.0);
-  \draw[line width=6.0pt] (362.0,270.0) -- (352.0,261.0);
-  \draw[line width=6.0pt] (845.0,366.0) -- (846.0,384.0);
-  \draw[line width=6.0pt] (257.0,372.0) -- (246.0,362.0);
-  \draw[line width=5.5pt] (588.0,263.0) -- (573.0,258.0);
-  \draw[line width=6.0pt] (1054.0,367.0) -- (1054.0,385.0);
-  \draw[line width=6.7pt] (257.0,176.0) -- (263.0,174.0);
-  \draw[line width=6.0pt] (255.0,177.0) -- (255.0,183.0);
-  \draw[line width=6.0pt] (245.0,263.0) -- (255.0,273.0);
-  \draw[line width=5.3pt] (571.0,250.0) -- (572.0,255.0);
-  \draw[line width=3.0pt] (198.0,118.0) -- (152.0,75.0);
-  \draw[line width=6.7pt] (257.0,379.0) -- (257.0,373.0);
-  \draw[line width=7.0pt] (151.0,374.0) -- (140.0,364.0);
-  \draw[line width=4.0pt] (150.0,273.0) -- (196.0,316.0);
+  %% ════ 左 panel：4×4 点阵（列距 105、行距 99，起于 (117.5,442)）════
+  \foreach \c in {0,...,3} \foreach \r in {0,...,3}
+    \fill (117.5+\c*105, 442-\r*99) circle (7.5);
 
-  %% ════ 曲线（prims2 的 curves —— 三段式，坐标同为 (y,x)）════
-  \draw[line width=4.0pt] (471.0,260.0) .. controls (501.8,249.8) and (539.7,243.2) .. (571.0,256.0);
+  %% ════ 右 panel：阶梯点阵 A（第 c 列 c+1 个点，列距 103.7，起于 x=744）════
+  \foreach \c/\x in {0/744, 1/847.7, 2/951.4, 3/1055.1}
+    \foreach \r in {0,...,\c}
+      \fill (\x, 442-\r*99) circle (7.5);
 
-  %% ════ 实心点 ════
-  \fill (118.4,143.3) circle (7.5);
-  \fill (329.6,144.3) circle (7.6);
-  \fill (1054.8,143.8) circle (7.6);
-  \fill (222.0,144.9) circle (7.5);
-  \fill (433.8,144.8) circle (7.6);
-  \fill (222.0,241.9) circle (7.6);
-  \fill (117.6,242.6) circle (7.5);
-  \fill (329.3,242.5) circle (7.6);
-  \fill (433.4,243.3) circle (7.6);
-  \fill (1054.4,243.5) circle (7.6);
-  \fill (328.6,343.3) circle (7.6);
-  \fill (433.8,342.6) circle (7.5);
-  \fill (847.0,342.9) circle (7.5);
-  \fill (951.7,343.3) circle (7.7);
-  \fill (117.4,344.5) circle (7.6);
-  \fill (221.4,344.1) circle (7.7);
-  \fill (1053.4,344.1) circle (7.6);
-  \fill (329.0,440.6) circle (7.4);
-  \fill (117.0,441.7) circle (7.5);
-  \fill (222.4,442.4) circle (7.6);
-  \fill (743.8,441.8) circle (7.5);
-  \fill (845.5,442.1) circle (7.6);
-  \fill (951.3,441.5) circle (7.6);
-  \fill (1055.4,442.3) circle (7.6);
-  \fill (569.0,261.0) circle (4.1);
-  \fill (1059.0,284.0) circle (6.1);
-  \fill (1059.0,385.0) circle (6.1);
-  \fill (956.5,385.5) circle (5.5);
+  %% ════ 左 panel 的短斜箭头（一律左上）════
+  %% 每条都是 (c+1,r) → (c,r+1) 这一段上 0.22~0.79 的一截
+  \draw[-{Triangle[width=17pt,length=20pt]}] (199.4,420.2) -- (139.6,363.8);   % c=0 r=0
 
-  %% ════ 标签（probe 直接给的 \node 行）════
-  %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{47.3}{59.1}\selectfont] at (76.6,152.9) {\textsf{\textbf{\textit{a}}}};   % box(64,137,22,27)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.7}{29.6}\selectfont] at (94.6,156.6) {\textsf{\textbf{6}}};   % box(88,148,12,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.1}{36.4}\selectfont] at (526.0,229.0) {\textsf{\textbf{\textit{f}}}};   % box(520,217,11,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (182.5,244.5) {\textsf{\textbf{\textit{a}}}};   % box(174,235,15,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{51.4}{64.2}\selectfont] at (85.7,252.1) {\textsf{\textbf{\textit{a}}}};   % box(71,236,26,27)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.6}{35.8}\selectfont] at (952.7,244.9) {\textsf{\textbf{\textit{o}}}};   % box(944,236,16,15)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{24.4}{30.5}\selectfont] at (196.4,255.1) {\textsf{\textbf{9}}};   % box(189,246,12,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{60.1}{75.1}\selectfont] at (953.0,293.5) {\textsf{\textbf{(}}};   % box(944,264,16,57)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (1105.2,296.5) {\textsf{\textbf{\textit{A}}}};   % box(1093,285,19,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (78.5,345.5) {\textsf{\textbf{\textit{a}}}};   % box(70,336,15,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (183.5,345.5) {\textsf{\textbf{\textit{a}}}};   % box(175,336,15,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{52.3}{65.4}\selectfont] at (297.7,352.6) {\textsf{\textbf{\textit{a}}}};   % box(283,336,26,28)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{24.0}{30.0}\selectfont] at (90.4,356.1) {\textsf{\textbf{3}}};   % box(84,347,12,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.7}{28.3}\selectfont] at (196.8,355.6) {\textsf{\textbf{9}}};   % box(190,347,11,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (183.5,443.5) {\textsf{\textbf{\textit{a}}}};   % box(175,434,15,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{51.4}{64.2}\selectfont] at (397.7,450.1) {\textsf{\textbf{\textit{a}}}};   % box(383,434,26,27)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (81.5,444.5) {\textsf{\textbf{\textit{a}}}};   % box(73,435,15,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (292.5,444.5) {\textsf{\textbf{\textit{a}}}};   % box(284,435,15,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.6}{35.8}\selectfont] at (433.2,444.4) {\textsf{\textbf{\textit{o}}}};   % box(425,435,15,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.0}{28.7}\selectfont] at (94.7,453.9) {\textsf{\textbf{1}}};   % box(88,446,8,15)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.9}{28.7}\selectfont] at (195.1,454.4) {\textsf{\textbf{2}}};   % box(189,446,11,16)
+  \draw[-{Triangle[width=17pt,length=20pt]}] (199.4,321.2) -- (139.6,264.8);
+  \draw[-{Triangle[width=17pt,length=20pt]}] (199.4,222.2) -- (139.6,165.8);
+  \draw[-{Triangle[width=17pt,length=20pt]}] (199.4,123.2) -- (139.6,66.8);
+  \draw[-{Triangle[width=17pt,length=20pt]}] (304.4,420.2) -- (244.6,363.8);
+  \draw[-{Triangle[width=17pt,length=20pt]}] (304.4,321.2) -- (244.6,264.8);
+  \draw[-{Triangle[width=17pt,length=20pt]}] (304.4,222.2) -- (244.6,165.8);
+  \draw[-{Triangle[width=17pt,length=20pt]}] (409.4,420.2) -- (349.6,363.8);
+  \draw[-{Triangle[width=17pt,length=20pt]}] (409.4,321.2) -- (349.6,264.8);
+  \draw[-{Triangle[width=17pt,length=20pt]}] (514.4,420.2) -- (454.6,363.8);
 
-  % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
+  %% ════ 右 panel 的竖直箭头（每列在自己的相邻两点之间）════
+  \draw[-{Triangle[width=17pt,length=20pt]}] (847.7,420.2) -- (847.7,363.8);
+  \draw[-{Triangle[width=17pt,length=20pt]}] (951.4,420.2) -- (951.4,363.8);
+  \draw[-{Triangle[width=17pt,length=20pt]}] (951.4,321.2) -- (951.4,264.8);
+  \draw[-{Triangle[width=17pt,length=20pt]}] (1055.1,420.2) -- (1055.1,363.8);
+  \draw[-{Triangle[width=17pt,length=20pt]}] (1055.1,321.2) -- (1055.1,264.8);
+  \draw[-{Triangle[width=17pt,length=20pt]}] (1055.1,222.2) -- (1055.1,165.8);
+
+  %% ════ 中间的 f 弧 ════
+  \draw[-{Triangle[width=16pt,length=22pt]}]
+    (474,259.5) .. controls (520.5,243.6) and (562,247.7) .. (592,264);
+  \node[anchor=center,inner sep=0pt,font=\fontsize{30}{30}\selectfont]
+    at (525.5,228) {\textsf{\textbf{\textit{f}}}};
+
+  %% ════ 标签 a₁ … a₁₀ ════
+  %% 字号/字重/锚点全部**在原书 600dpi 裁切里实测**（不靠眼估，也不靠自洽指标）：
+  %%   量法：原书图区与成品渲染到**同一像素尺度**（原书图区 253×123.5pt ↔ 本画布 1150×562，
+  %%         换算 1 原书 pt = 4.5285 本画布单位），在同一个像素框里取连通块比 bbox 与墨迹面积。
+  %%   标定：拿圆点当参照 —— 原书 ⌀28px 墨 607，我的 ⌀27px 墨 592，**扫描增益只有 1.03**
+  %%         （实心块不膨胀）。所以圆点/线宽这些实心量可以直接比。
+  %%   ① 字母 a：原书 15.2×15.8 单位、墨 637；我的常规斜体 30pt 为 14.7×16.3、墨 385，
+  %%      粗斜体 30pt 为 14.7×16.3、墨 499。归一化包围盒后 **IoU：常规 0.597 / 粗体 0.768**。
+  %%      → 定为 **Arial 粗斜体 30pt**。先前写成 48pt，比原书大 60%（细笔画在印刷扫描里会被
+  %%        撑肥，所以原书墨量天然比屏幕渲染重，**不能拿墨量绝对值判字重**，要用 IoU 形状比对）。
+  %%   ② 下标数字：原书高 15.8 单位，恰好等于 a 的 x 高；我的 22pt 也是 15.8 —— **高度已对**，
+  %%        不必改。数字底边比字母低 18.5 单位（相对圆点中心），是真下标，不是同基线。
+  %%   ③ 锚点由**迭代收敛**得到：编译 → 量同框 → 按 (目标−实测) 平移 → 再编译，两轮到位。
+  %%        踩过的坑：修正量的**符号**写反过一次，越修越偏；且必须删掉旧 fig.pdf 再编译，
+  %%        否则 xelatex 失败时会静默量到上一轮的陈旧 PDF（两版输出一模一样就是这么来的）。
+  %% 换算：字母 x 高 px ÷ 0.519 = 字号；数字高 px ÷ 0.716 = 字号。
+  \foreach \x/\y/\s/\i in {%
+      117.5/442/1/1, 222.5/442/2/2, 327.5/442/4/3, 432.5/442/7/4,
+      117.5/343/3/5, 222.5/343/5/6, 327.5/343/8/7,
+      117.5/244/6/8, 222.5/244/9/9,
+      117.5/145/10/10}{
+    \node[anchor=base east,inner sep=0pt,font=\fontsize{30}{30}\selectfont]
+      at (\x-26,\y+8.3) {\textsf{\textbf{\textit{a}}}};
+    \node[anchor=base east,inner sep=0pt,font=\fontsize{22}{22}\selectfont]
+      at (\x-15.2,\y+20.1) {\textsf{\textbf{\s}}};
+  }
+
+  %% ════ 右 panel 的 A 標籤 ════
+  \node[anchor=center,inner sep=0pt,font=\fontsize{30}{30}\selectfont]
+    at (1102.5,296) {\textsf{\textbf{\textit{A}}}};
+
+  % 钉死画布：与 images\7.1.png 的像素框逐一对齐
   \pgfresetboundingbox
   \path[use as bounding box] (0,0) rectangle (1150,562);
 \end{tikzpicture}
 \end{document}
-
-% ⚠ 待核清单（probe 拿不准，人眼过一遍）：
-%   · 可疑字形：\node[anchor=center,inner sep=0pt,font=\fontsize{28.6}{35.8}\selectfont] at (952.7,244.9) {\textsf{\textbf{\te
-%   · 可疑字形：\node[anchor=center,inner sep=0pt,font=\fontsize{28.6}{35.8}\selectfont] at (433.2,444.4) {\textsf{\textbf{\te
-%   · 未识别/跳过：⑤ 跳过/未识别的字形
