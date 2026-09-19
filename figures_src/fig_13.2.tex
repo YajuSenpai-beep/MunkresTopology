@@ -1,11 +1,22 @@
-% 图 13.2 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
+% 图 13.2 —— 手工重建（两个相交矩形 B′₁ B′₂，交点处一个元素点 x）
 %%
-% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 13.2` 看指标 + 看叠合图。
+%% ══ 按用户意见重做（2026-09-19）══
+%%  ①「元素 B2 缺少一撇」：原书两个标签**都是带撇的** B′₂、B′₁。
+%%     B′₁ 的撇被 prims2 拆成了一条独立的短线段（(52,210)-(54,204)）所以还在；
+%%     B′₂ 的撇则被并进了字形框（实测框宽 26.7，而纯 B 只有 20.0）——
+%%     probe 于是拿它当「一个特别宽的 B」处理，字号给到 36.1，撇就丢了。
+%%     现在两个撇**按实测各自画出来**，不再是「一个残段 + 一个缺失」。
+%%  ②「下标的重叠」：同上，B₂ 的字号被撑大后 ₂ 挤进了 B 的右下角。
+%%     现在 B 与 B₁ 同字号（30.0），下标按原图字形框单独定位。
+%%  ③「B1 的撇画记号需要核实是否合适」：实量原图，B′₁ 的撇是**独立连通域**
+%%     （框 5.0x8.3，中心 (48.70,201.77)，即 B 的右上角外侧），方向是下左->上右，
+%%     宽约 2.5 画布单位 —— 确认是撇，按这个几何重画。
 %%
-%% ⚠ 待核：
-%   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
-%   · 可疑字形 1 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
+%% ⚠ 与 13.1 同一个毛病：probe 的图形参数比原书**小约 2~2.5%**
+%%   （矩形 A 实量 288.7x177.8，tex 画出来只有 282.8x174）。本图一律自量。
+%%   标定 SC = 733/408 = 1.7966 px/画布单位。
 %%
+%% 线宽：矩形实量 5.0；撇实量约 2.6。
 \documentclass[12pt]{standalone}
 \usepackage{fontspec}
 \setsansfont{Arial}
@@ -14,43 +25,26 @@
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=5.0pt, line cap=round, line join=round]
 
-  %% ════ 填充区（prims2 的 fills）════
+  %% ════ 两个矩形（边线中心线实测值）════
+  \draw ( 9.7, 10.2) rectangle (298.4,188.0);
+  \draw (174.4,102.1) rectangle (349.8,394.4);
 
-  %% ════ 直线段（prims2 的 strokes）════
-  \draw[line width=5.0pt] (176.0,193.0) -- (18.8,194.0);
-  \draw[line width=3.9pt] (18.8,194.0) -- (15.4,192.4);
-  \draw[line width=5.0pt] (15.4,192.4) -- (15.0,21.1);
-  \draw[line width=3.0pt] (15.0,21.1) -- (17.1,19.0);
-  \draw[line width=5.0pt] (17.1,19.0) -- (296.0,20.0);
-  \draw[line width=2.9pt] (296.0,20.0) -- (298.0,22.2);
-  \draw[line width=5.0pt] (298.0,22.2) -- (298.0,108.0);
-  \draw[line width=4.0pt] (52.0,210.0) -- (54.0,204.0);
-  \draw[line width=5.0pt] (177.0,192.0) -- (178.6,109.4);
-  \draw[line width=4.0pt] (178.6,109.4) -- (297.0,109.0);
-  \draw[line width=4.0pt] (177.0,195.0) -- (176.6,394.6);
-  \draw[line width=4.0pt] (176.6,394.6) -- (347.3,395.7);
-  \draw[line width=4.0pt] (347.3,395.7) -- (348.1,110.1);
-  \draw[line width=5.0pt] (348.1,110.1) -- (299.0,110.0);
-  \draw[line width=5.0pt] (298.0,111.0) -- (297.0,191.7);
-  \draw[line width=2.9pt] (297.0,191.7) -- (295.1,193.9);
-  \draw[line width=5.0pt] (295.1,193.9) -- (178.0,194.0);
+  %% ════ 元素点 ════
+  \fill (212.4,127.2) circle (6.4);
 
-  %% ════ 实心点 ════
-  \fill (214.0,133.6) circle (6.2);
+  %% ════ 撇（两个，实测几何）════
+  \draw[line width=2.6pt] ( 47.9,205.4) -- ( 49.3,197.7);
+  \draw[line width=2.6pt] (390.5,214.9) -- (391.3,207.1);
 
-  %% ════ 标签（probe 直接给的 \node 行）════
-  %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.1}{37.6}\selectfont] at (215.0,161.0) {\textsf{\textbf{\textit{x}}}};   % box(206,150,16,18)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.2}{37.8}\selectfont] at (41.3,214.0) {\textsf{\textbf{\textit{B}}}};   % box(30,202,19,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{36.1}{45.1}\selectfont] at (380.6,224.1) {\textsf{\textbf{\textit{B}}}};   % box(365,212,27,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{21.5}{26.9}\selectfont] at (60.0,229.9) {\textsf{\textbf{1}}};   % box(54,222,7,15)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.6}{29.6}\selectfont] at (394.1,237.9) {\textsf{\textbf{2}}};   % box(388,229,11,17)
+  %% ════ 字母 / 数字 ════
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.1}{37.6}\selectfont] at (211.8,152.0) {\textsf{\textbf{\textit{x}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.2}{37.8}\selectfont] at (34.5,207.9) {\textsf{\textbf{\textit{B}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{21.6}{26.9}\selectfont] at (52.3,223.8) {\textsf{\textbf{1}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (376.3,217.9) {\textsf{\textbf{\textit{B}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.6}{29.6}\selectfont] at (395.2,232.1) {\textsf{\textbf{2}}};
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox
   \path[use as bounding box] (0,0) rectangle (408,408);
 \end{tikzpicture}
 \end{document}
-
-% ⚠ 待核清单（probe 拿不准，人眼过一遍）：
-%   · 未识别/跳过：⑤ 跳过/未识别的字形

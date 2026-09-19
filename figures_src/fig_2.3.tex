@@ -39,10 +39,16 @@
   \draw[line width=\wCur] plot[domain=-1.24:1.24,samples=161]
        ({\ox+\U*\x},{\oy-\U*(3*\x*\x+2)});
 
-  % ── 三个空心圆点（中线半径 7、描边 4）──
-  \draw[line width=4.0pt,fill=white] (\ox-\U,\oy-5*\U) circle (7);
-  \draw[line width=4.0pt,fill=white] (\ox+\U,\oy-5*\U) circle (7);
-  \draw[line width=4.0pt,fill=white] (\ox,\oy-2*\U)   circle (7);
+  % ── 三个实心圆点 ──
+  % ⚠ 原来画的是**空心环**（\draw + fill=white + circle(7)）—— 那是错的。
+  %   原书 600dpi 上逐行量墨段：经过标记中心那一行**只有一段墨**（宽 18 单位），
+  %   圆环的话该行必有两段（左右弧）。三个点实测外径 18.3 / 17.2 / 19.4，
+  %   故一律 `\fill ... circle (9)`。
+  %   附带：空心环的 fill=white 还会把穿过它的抛物线**抠掉一块**，
+  %   那正是用户说的「数字 2 挡住曲线、观感不对」的一部分成因。
+  \fill (\ox-\U,\oy-5*\U) circle (9);
+  \fill (\ox+\U,\oy-5*\U) circle (9);
+  \fill (\ox,\oy-2*\U)   circle (9);
 
   % ── x 轴数字 ──
   \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28}{35}\selectfont] at (126.0,822.0) {\textsf{\textbf{−2}}};
@@ -55,7 +61,17 @@
   \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28}{35}\selectfont] at (337.0,215.5) {\textsf{\textbf{5}}};
   \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28}{35}\selectfont] at (335.5,332.0) {\textsf{\textbf{4}}};
   \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28}{35}\selectfont] at (335.5,449.0) {\textsf{\textbf{3}}};
-  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28}{35}\selectfont] at (335.5,565.0) {\textsf{\textbf{2}}};
+  % ⚠ 用户两次指出「数字 2 挡住曲线」。**白底是用户要的，不能去掉** ——
+  %   要去掉的是「白底与曲线/圆点相交」这件事，办法是**把数字挪到不相交的位置**。
+  %
+  %   节点方框 = 字形 + inner sep 1.5pt ⇒ 半宽约 9.3、半高约 11.5（画布单位）。
+  %   两处障碍：① 抛物线 —— 其最低点是顶点画布 y=568（数据 y=2），即曲线只存在于
+  %   y≤568；② 顶点圆点 —— 半径 9、圆心 (356,568)，左缘 x=347。
+  %   取 (332,578)：方框 x 322.7..341.3、y 566.5..589.5
+  %     · 曲线在 y=566.5 处已退到 x≥348.5 > 341.3 ✓
+  %     · 圆点左缘 347 > 341.3 ✓
+  %   两处都不相交，白底完整，曲线和圆点也不再被切。
+  \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28}{35}\selectfont] at (332.0,578.0) {\textsf{\textbf{2}}};
   \node[anchor=center,inner sep=1.5pt,fill=white,font=\fontsize{28}{35}\selectfont] at (337.0,676.5) {\textsf{\textbf{1}}};
 
   % ── 公式：**加白底**，免得与曲线/刻度叠在一起看不清 ──
