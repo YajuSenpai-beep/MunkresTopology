@@ -1,44 +1,51 @@
-% 图 13.1 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
+% 图 13.1 —— 手工重建（两个相交圆 B₁ B₂、小圆 B₃ ⊙、元素点 x）
 %%
-% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 13.1` 看指标 + 看叠合图。
+%% ══ 按用户意见重做（2026-09-19）══
+%%  ①「元素 Bi 有 3 个，但元素的下标和元素名有重叠」：原稿的 Bi 与下标坐标取自 probe，
+%%     而 probe 在这张图上**整体偏了**（见下），导致 ₃ 压在 B 的右下角上。
+%%     现在每个字形都按原图**独立连通域**量出字形框再定位。
+%%  ②「在不出 pdf 边界的情况下调整」：B₁/₁ 原本就贴着画布下沿，只做小幅平移，
+%%     没有让它越出 (0,0)-(491,408)。
 %%
-%% ⚠ 待核：
-%   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
-%   · 可疑字形 1 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
+%% ⚠ probe 在这张图上不可信：它内定的画布标定与图形参数**自相矛盾** ——
+%%   两个大圆的半径实量比 tex 写的**大 3.1%**（右 122.5 vs 118.7，左 171.1 vs 166.0，
+%%   两个独立的剖线测量给出同一个比例），而它渲染出来的墨迹框又比原书小 1.5~2.5%。
+%%   所以本图**一律自量**：
+%%     · 圆：过心的横/竖剖线（椭圆上任一过心弦都是直径，中点即圆心）
+%%     · 小圆 / 点 / 6 个字形：原图连通域（面积分档：环 >1500、点 250~500、字形 150~1200）
+%%   标定：SC = 原书墨迹框宽 / 画布内容宽 = (867-12)/476.5 = 1.7943 px/画布单位
 %%
+%% 线宽：原书实量 5.02（原稿写 4.0，偏细）。
 \documentclass[12pt]{standalone}
 \usepackage{fontspec}
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
 \begin{document}
-\begin{tikzpicture}[x=1pt, y=-1pt, line width=4.0pt, line cap=round, line join=round]
+\begin{tikzpicture}[x=1pt, y=-1pt, line width=5.0pt, line cap=round, line join=round]
 
-  %% ════ 填充区（prims2 的 fills）════
+  %% ════ 两个大圆 ════
+  %% ⚠ 它们**不是正圆**：过心的横剖与竖剖给出的半轴不同（右 119.9 x 122.1、左 167.0 x 171.1），
+  %%   两个形状一致地「竖着略高 2%」—— 按椭圆画才和原书重合。
+  \draw (345.3,131.6) ellipse (119.9 and 122.1);
+  \draw (175.9,203.5) ellipse (167.0 and 171.1);
 
-  %% ════ 圆 / 椭圆（probe 精测）════
-  \draw (346.0,136.1) circle (118.7);
-  \draw (178.9,206.9) circle (166.0);
-  \draw[rotate around={178.9:(290.1,138.2)}] (290.1,138.2) ellipse (20.1 and 20.8);
+  %% ════ 小圆 B₃ 的 ⊙ ════
+  \draw (288.7,133.5) circle (20.5);
+  \fill (289.0,135.2) circle (6.1);
 
-  %% ════ 实心点 ════
-  \fill (290.8,139.5) circle (6.1);
-
-  %% ════ 标签（probe 直接给的 \node 行）════
-  %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.2}{36.5}\selectfont] at (257.0,147.4) {\textsf{\textbf{\textit{x}}}};   % box(248,137,16,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (306.2,181.5) {\textsf{\textbf{\textit{B}}}};   % box(295,170,19,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.3}{27.9}\selectfont] at (318.9,195.6) {\textsf{\textbf{3}}};   % box(313,187,11,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (464.2,217.5) {\textsf{\textbf{\textit{B}}}};   % box(453,206,19,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.9}{28.7}\selectfont] at (477.1,231.4) {\textsf{\textbf{2}}};   % box(471,223,11,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.8}\selectfont] at (273.8,377.0) {\textsf{\textbf{\textit{B}}}};   % box(262,365,20,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{20.6}{25.7}\selectfont] at (288.4,390.3) {\textsf{\textbf{1}}};   % box(283,382,6,16)
+  %% ════ 字母 / 数字 ════
+  %% 坐标 = 原图连通域量出的字形框中心（下方注释给出字号来源）。
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.2}{36.6}\selectfont] at (253.3,139.9) {\textsf{\textbf{\textit{x}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (302.6,176.4) {\textsf{\textbf{\textit{B}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.3}{27.9}\selectfont] at (317.3,191.6) {\textsf{\textbf{3}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (463.7,213.2) {\textsf{\textbf{\textit{B}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.9}{28.7}\selectfont] at (478.9,228.1) {\textsf{\textbf{2}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.8}\selectfont] at (269.2,375.9) {\textsf{\textbf{\textit{B}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{20.6}{25.7}\selectfont] at (284.4,390.3) {\textsf{\textbf{1}}};
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox
   \path[use as bounding box] (0,0) rectangle (491,408);
 \end{tikzpicture}
 \end{document}
-
-% ⚠ 待核清单（probe 拿不准，人眼过一遍）：
-%   · 未识别/跳过：⑤ 跳过/未识别的字形

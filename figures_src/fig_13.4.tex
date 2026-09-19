@@ -17,41 +17,56 @@
   %% ════ 填充区（prims2 的 fills）════
 
   %% ════ 直线段（prims2 的 strokes）════
-  \draw[line width=5.0pt] (274.0,68.0) -- (17.8,68.2);
-  \draw[line width=5.0pt] (17.8,68.2) -- (18.6,235.6);
-  \draw[line width=4.0pt] (18.6,235.6) -- (351.0,236.0);
-  \draw[line width=3.8pt] (351.0,236.0) -- (353.0,232.8);
-  \draw[line width=5.0pt] (353.0,232.8) -- (352.7,68.7);
-  \draw[line width=5.0pt] (352.7,68.7) -- (274.0,68.0);
-  \draw[line width=4.0pt] (657.0,58.0) -- (600.1,60.9);
-  \draw[line width=5.0pt] (600.1,60.9) -- (601.8,156.8);
-  \draw[line width=4.0pt] (601.8,156.8) -- (668.7,156.3);
-  \draw[line width=4.0pt] (668.7,156.3) -- (668.4,59.4);
-  \draw[line width=4.0pt] (668.4,59.4) -- (657.0,58.0);
+  \draw[line width=5.0pt] (271.0,60.3) -- (10.1,60.5);
+  \draw[line width=5.0pt] (10.1,60.5) -- (10.9,231.7);
+  \draw[line width=4.0pt] (10.9,231.7) -- (349.4,232.1);
+  \draw[line width=3.8pt] (349.4,232.1) -- (351.4,228.8);
+  \draw[line width=5.0pt] (351.4,228.8) -- (351.1,61.0);
+  \draw[line width=5.0pt] (351.1,61.0) -- (271.0,60.3);
+  \draw[line width=4.0pt] (661.0,50.0) -- (603.1,53.0);
+  \draw[line width=5.0pt] (603.1,53.0) -- (604.8,151.1);
+  \draw[line width=4.0pt] (604.8,151.1) -- (672.9,150.6);
+  \draw[line width=4.0pt] (672.9,150.6) -- (672.6,51.5);
+  \draw[line width=4.0pt] (672.6,51.5) -- (661.0,50.0);
 
   %% ════ 曲线（prims2 的 curves —— 三段式，坐标同为 (y,x)）════
-  \draw[line width=4.0pt] (753.0,286.0) .. controls (816.5,242.8) and (833.5,149.8) .. (794.0,86.1);
-  \draw[line width=5.0pt] (794.0,86.1) .. controls (754.2,19.5) and (660.8,-3.7) .. (596.7,39.3);
-  \draw[line width=4.0pt] (596.7,39.3) .. controls (529.8,83.0) and (509.4,177.7) .. (552.3,243.3);
-  \draw[line width=5.0pt] (552.3,243.3) .. controls (592.4,312.2) and (690.1,332.0) .. (753.0,286.0);
+  \draw[line width=4.0pt] (758.8,283.2) .. controls (823.5,239.0) and (840.8,143.9) .. (800.5,78.8);
+  \draw[line width=5.0pt] (800.5,78.8) .. controls (760.0,10.7) and (664.9,-13.1) .. (599.6,30.9);
+  \draw[line width=4.0pt] (599.6,30.9) .. controls (531.5,75.6) and (510.7,172.4) .. (554.4,239.5);
+  \draw[line width=5.0pt] (554.4,239.5) .. controls (595.2,310.0) and (694.7,330.2) .. (758.8,283.2);
 
   %% ════ 圆 / 椭圆（probe 精测）════
-  \draw (112.6,125.3) circle (38.5);
+  \draw (106.6,118.9) circle (39.3);
+
+  %% ════ 上标「撇」（原书实测：4.4x8.3 的小斜道，独立连通域）════
+  \draw[line width=2.6pt] (706.5,107.5) -- (708.2, 99.7);
+  \draw[line width=2.6pt] (386.4,150.1) -- (388.0,142.4);
 
   %% ════ 实心点 ════
-  \fill (624.6,96.0) circle (6.1);
-  \fill (100.8,120.0) circle (6.0);
+  %% ⚠ 这两个点的坐标原来也是 probe 给的，实测各偏 (x-3.4,y+6.3) / (x+5.3,y+5.8)——
+  %%   左边那个点因此**钻进了 x 的白底框**，看着像被啃掉一块。改按连通域实测值。
+  \fill (625.4,89.5) circle (6.1);
+  \fill ( 94.7,113.8) circle (6.1);
 
   %% ════ 标签（probe 直接给的 \node 行）════
   %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.3}{35.4}\selectfont] at (644.4,107.4) {\textsf{\textbf{\textit{x}}}};   % box(636,97,15,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.3}{37.9}\selectfont] at (693.8,118.5) {\textsf{\textbf{\textit{B}}}};   % box(682,107,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{42.4}{53.0}\selectfont] at (709.2,111.4) {\textsf{\textbf{.}}};   % box(704,107,4,8)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.1}{37.6}\selectfont] at (120.0,134.0) {\textsf{\textbf{\textit{x}}}};   % box(111,123,16,18)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.3}{37.9}\selectfont] at (167.8,143.5) {\textsf{\textbf{\textit{B}}}};   % box(156,132,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{42.4}{53.0}\selectfont] at (393.2,153.4) {\textsf{\textbf{.}}};   % box(388,149,4,8)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.3}{37.9}\selectfont] at (838.8,160.5) {\textsf{\textbf{\textit{B}}}};   % box(827,149,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.4}{38.0}\selectfont] at (377.3,161.0) {\textsf{\textbf{\textit{B}}}};   % box(365,150,21,21)
+     \node[anchor=center,inner sep=0pt,font=\fontsize{28.3}{35.4}\selectfont] at (647.5,98.5) {\textsf{\textbf{\textit{x}}}};   % box(636,97,15,17)
+     \node[anchor=center,inner sep=0pt,font=\fontsize{30.3}{37.9}\selectfont] at (695.5,111.0) {\textsf{\textbf{\textit{B}}}};   % box(682,107,20,22)
+     %% ⚠ 这里原本是一个独立的『.』节点（fontsize 42.4）—— 那是 B 的**上标一撇**被
+     %%   probe 认成了句点，渲染成一个贴在字母右边的小黑点（用户：『记号错误，还遮住了字母』）。
+     %%   已删，改画成真正的撇（见下方 \draw）。
+     \node[anchor=center,inner sep=0pt,font=\fontsize{30.1}{37.6}\selectfont] at (113.4,125.1) {\textsf{\textbf{\textit{x}}}};   % box(111,123,16,18)
+     %% ⚠ 用户指出「左侧 x 和 B 离曲线太近，白底盖住了图形」。实测：
+     %%   · 左 x：到最近墨（那个实心点）6.85，原书 6.19 —— **本来就不近**，
+     %%     露白是被它自己的白底框啃掉了点，去掉 fill=white 即好，位置不动。
+     %%   · 左 B：到圆只有 **1.57**，而原书是 6.69 —— Arial 斜体 B 的左下墨比原书字体更靠左
+     %%     （两者字形框左缘都是 150.1，净空却差 5.1）。曾右移 5.1 补净空；
+     %%     ⚠ 但随后发现**本图整体图形偏了 ~7.8 且小 ~2%**（点图时按仿射改正过），
+     %%     圆跟着往左上走了 ~6，于是 5.1 的让位过头（净空变成 12.50）。
+     %%     现在移回 160.3 —— 净空 6.9，与原书 6.69 一致。
+     \node[anchor=center,inner sep=0pt,font=\fontsize{30.3}{37.9}\selectfont] at (160.3,136.5) {\textsf{\textbf{\textit{B}}}};   % box(156,132,20,22)
+     \node[anchor=center,inner sep=0pt,font=\fontsize{30.3}{37.9}\selectfont] at (843.2,154.1) {\textsf{\textbf{\textit{B}}}};   % box(827,149,20,22)
+     \node[anchor=center,inner sep=0pt,font=\fontsize{30.4}{38.0}\selectfont] at (374.0,154.7) {\textsf{\textbf{\textit{B}}}};   % box(365,150,21,21)
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox

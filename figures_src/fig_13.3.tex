@@ -1,11 +1,16 @@
-% 图 13.3 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
+% 图 13.3 —— 手工重建（外圈两个开集 U₁ U₂；内圈三个基元素 B₁ B₂ B₃；B₃ 里是元素 x）
 %%
-% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 13.3` 看指标 + 看叠合图。
+%% ══ 按用户意见重做（2026-09-19）══
+%%  ①「元素 x 没有标记清楚，需要对照原图」：原稿把 B₃ 圈里的字母 x 拆成了**三条碎片线**
+%%     (291,267)-(285,271) / (292,266)-(292,261) / (298,257)-(293,260)，
+%%     渲染出来活像个 ʃ。原书那里是一个清清楚楚的小写 x（连通域实测 16.1x16.6、面积 507）。
+%%     已删掉碎片、改回真正的字形节点。
+%%  ② 圆/椭圆原来没写 line width，吃了 tikzpicture 的默认 2.8pt，比原书细一截
+%%     （大圆实量 5.0、B₃ 环 3.9），已逐个补上。
+%%  ③ 标签坐标一律改用**原图连通域**量出的字形框中心 —— probe 给的坐标在本图系统性偏 3~8 单位。
 %%
-%% ⚠ 待核：
-%   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
-%   · 可疑字形 1 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
-%%
+%% 标定 SC = 1814/1004 = 1.8068 px/画布单位（墨迹框落在 (7.7,7.2)~(996.8,562.9)，
+%% 四周留白 7 左右，与画布 1004x569 自洽 —— 本图的 probe 尺度是准的，只有字形坐标偏）。
 \documentclass[12pt]{standalone}
 \usepackage{fontspec}
 \setsansfont{Arial}
@@ -14,82 +19,88 @@
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=2.8pt, line cap=round, line join=round]
 
-  %% ════ 填充区（prims2 的 fills）════
-
   %% ════ 直线段（prims2 的 strokes）════
-  \draw[line width=4.0pt] (499.0,560.0) -- (520.0,555.0);
-  \draw[line width=5.0pt] (566.1,489.9) -- (600.0,463.0);
-  \draw[line width=5.0pt] (637.6,459.0) -- (650.9,463.0);
-  \draw[line width=5.0pt] (902.5,306.0) -- (924.5,301.0);
-  \draw[line width=5.0pt] (924.5,301.0) -- (961.2,285.8);
-  \draw[line width=5.0pt] (987.0,251.6) -- (988.0,232.1);
-  \draw[line width=5.0pt] (750.3,86.0) -- (723.1,104.9);
-  \draw[line width=5.0pt] (723.1,104.9) -- (708.3,125.7);
-  \draw[line width=4.0pt] (555.8,210.0) -- (521.0,195.0);
-  \draw[line width=5.0pt] (470.0,160.0) -- (454.1,157.0);
-  \draw[line width=5.0pt] (454.1,157.0) -- (403.3,149.0);
-  \draw[line width=5.0pt] (267.0,390.0) -- (233.0,407.0);
-  \draw[line width=4.0pt] (450.0,343.0) -- (454.0,343.0);
-  \draw[line width=5.0pt] (291.0,267.0) -- (285.0,271.0);
-  \draw[line width=4.7pt] (520.0,194.0) -- (518.0,190.0);
-  \draw[line width=5.0pt] (292.0,266.0) -- (292.0,261.0);
-  \draw[line width=5.0pt] (298.0,257.0) -- (293.0,260.0);
-  \draw[line width=6.0pt] (455.0,342.0) -- (459.0,336.0);
-  \draw[line width=6.0pt] (244.0,342.0) -- (240.0,336.0);
-  \draw[line width=4.0pt] (518.0,188.0) -- (513.0,159.0);
-  \draw[line width=5.0pt] (513.0,159.0) -- (504.0,127.8);
-  \draw[line width=5.0pt] (276.0,27.0) -- (213.0,37.0);
+  \draw[line width=4.0pt] (499.0,564.3) -- (520.3,559.2);
+  \draw[line width=5.0pt] (567.1,493.1) -- (601.5,465.8);
+  \draw[line width=5.0pt] (639.7,461.7) -- (653.2,465.8);
+  \draw[line width=5.0pt] (908.7,306.3) -- (931.0,301.3);
+  \draw[line width=5.0pt] (931.0,301.3) -- (968.3,285.8);
+  \draw[line width=5.0pt] (994.5,251.1) -- (995.5,231.3);
+  %% ⚠ 原为两条直线，接点 (726.5,102.1) 折角 19.8° —— 合成一条切向连续的贝塞尔
+  \draw[line width=5.0pt] (754.1,82.9) .. controls (738.9,93.5) and (719.7,111.6) .. (711.5,123.2);
+  %% ⚠ 颈部原有一条 6.75 单位长的**桥接短线**（line width 4.7pt）把直穿的曲线掰了个肘，
+  %%   造成 41.6° / 45.7° 双折角 + 1.6 单位的鼓包（原书这里是一个干净的 X 交叉）。
+  %%   已删；两条曲线各自的端点统一到真正的交点。
+  \draw[line width=4.0pt] (556.6,208.8) -- (517.9,187.5);
+  \draw[line width=5.0pt] (471.5,160.6) -- (453.4,155.0);
+  \draw[line width=5.0pt] (453.4,155.0) -- (401.8,146.9);
+  %% ⚠ 以下三处是**自交点**：原稿把一条穿过的曲线拆成 3 段，三段的端点却差 2~3 单位，
+  %%   叠在一起渲染出一个豁口（用户说的「毛刺」）。统一到同一个点即可。
+  %% ⚠ 起点原为 (263.4,391.6)，与下一段起点 (269.5,391.6) 差 6.1 单位（原书是连续的，被交叉处挡住）
+  \draw[line width=5.0pt] (269.5,391.6) -- (228.1,410.9);
+  %% ⚠ 原为两条短线 (449.2,343.9)--(453.3,343.9) 与 (454.3,342.9)--(458.3,336.8)，
+  %%   接点处**折角 56.7°**（用户说的「毛刺」）—— 其实是曲线的一段被拆成了两条直线。
+  %%   前后切向实测都 ≈(0.88,-0.49)，几乎平行，合成一条切向连续的贝塞尔即可。
+  \draw[line width=5.0pt] (449.2,343.9) .. controls (451.8,342.4) and (456.0,338.6) .. (458.7,336.4);
+  \draw[line width=6.0pt] (240.0,342.9) -- (235.9,336.8);
+  \draw[line width=4.0pt] (517.9,187.5) -- (513.2,157.1);
+  \draw[line width=5.0pt] (513.2,157.1) -- (504.0,125.4);
+  \draw[line width=5.0pt] (272.5,23.0) -- (208.5,33.2);
 
-  %% ════ 曲线（prims2 的 curves —— 三段式，坐标同为 (y,x)）════
-  \draw[line width=4.0pt] (207.0,319.0) .. controls (205.6,350.1) and (215.8,381.0) .. (232.0,407.0);
-  \draw[line width=4.0pt] (233.0,410.0) .. controls (290.1,502.9) and (392.2,559.5) .. (499.0,560.0);
-  \draw[line width=4.0pt] (520.0,555.0) .. controls (544.3,540.4) and (545.7,509.0) .. (566.1,489.9);
-  \draw[line width=4.0pt] (600.0,463.0) .. controls (611.8,458.8) and (624.8,456.8) .. (637.6,459.0);
-  \draw[line width=4.0pt] (650.9,463.0) .. controls (696.3,493.5) and (750.3,462.6) .. (779.0,421.9);
-  \draw[line width=5.0pt] (779.0,421.9) .. controls (809.1,375.6) and (840.0,311.3) .. (902.5,306.0);
-  \draw[line width=5.0pt] (961.2,285.8) .. controls (973.5,277.7) and (983.5,265.5) .. (987.0,251.6);
-  \draw[line width=4.0pt] (988.0,232.1) .. controls (970.2,127.9) and (852.5,49.6) .. (750.3,86.0);
-  \draw[line width=5.0pt] (708.3,125.7) .. controls (682.7,181.4) and (620.3,237.1) .. (555.8,210.0);
-  \draw[line width=4.0pt] (403.3,149.0) .. controls (310.2,140.7) and (217.2,217.2) .. (206.0,309.0);
-  \draw[line width=5.0pt] (273.0,390.0) .. controls (329.1,365.3) and (395.6,373.3) .. (450.0,343.0);
-  \draw[line width=4.0pt] (517.0,189.0) .. controls (501.5,183.5) and (491.2,166.2) .. (474.0,165.0);
-  \draw[line width=5.0pt] (504.0,127.8) .. controls (475.0,36.7) and (361.9,-6.9) .. (276.0,27.0);
-  \draw[line width=5.0pt] (213.0,37.0) .. controls (177.6,42.7) and (142.8,28.0) .. (108.8,38.2);
-  \draw[line width=5.0pt] (108.8,38.2) .. controls (95.4,43.3) and (82.6,50.1) .. (72.4,61.6);
-  \draw[line width=4.0pt] (72.4,61.6) .. controls (33.0,116.0) and (88.5,171.4) .. (82.0,229.8);
-  \draw[line width=4.0pt] (82.0,229.8) .. controls (78.6,245.7) and (70.9,260.1) .. (59.5,272.5);
-  \draw[line width=4.0pt] (59.5,272.5) .. controls (42.0,291.8) and (24.9,313.1) .. (21.0,339.0);
-  \draw[line width=4.0pt] (21.0,339.0) .. controls (0.9,403.2) and (36.4,475.2) .. (97.1,503.0);
-  \draw[line width=4.0pt] (97.1,503.0) .. controls (146.5,524.5) and (200.3,483.7) .. (207.0,434.2);
-  \draw[line width=4.0pt] (207.0,434.2) .. controls (211.9,423.8) and (220.0,413.6) .. (231.0,410.0);
-  \draw[line width=4.0pt] (460.0,335.0) .. controls (510.2,308.6) and (523.9,247.7) .. (520.0,195.0);
+  %% ════ 曲线（prims2 的 curves —— 三段式）════
+  \draw[line width=4.0pt] (201.8,313.1) .. controls (201.0,351.1) and (211.4,382.5) .. (228.1,410.9);
+  \draw[line width=4.0pt] (228.1,410.9) .. controls (286.8,506.3) and (390.5,563.8) .. (499.0,564.3);
+  \draw[line width=4.0pt] (520.3,559.2) .. controls (547.0,548.3) and (546.4,512.5) .. (567.1,493.1);
+  \draw[line width=4.0pt] (601.5,465.8) .. controls (612.6,459.6) and (626.7,459.5) .. (639.7,461.7);
+  \draw[line width=4.0pt] (653.2,465.8) .. controls (703.3,489.6) and (754.1,465.4) .. (783.3,424.0);
+  \draw[line width=5.0pt] (783.3,424.0) .. controls (813.9,377.0) and (845.2,311.7) .. (908.7,306.3);
+  \draw[line width=5.0pt] (968.3,285.8) .. controls (980.8,277.6) and (991.0,265.2) .. (994.5,251.1);
+  %% ⚠ 与下面那条（原两条直线合成）在 (754.1,82.9) 接，折角 15.3° —— 末控制点转到切线方向
+  \draw[line width=4.0pt] (995.5,231.3) .. controls (977.5,125.5) and (852.1,32.5) .. (754.1,82.9);
+  \draw[line width=5.0pt] (711.5,123.2) .. controls (685.5,179.8) and (622.1,236.4) .. (556.6,208.8);
+  %% ⚠ 缺口 10.15 单位（= 2.54 倍笔画宽，全图最大），正中 (201.8,313.1) 恰好是大圆 B₁ 与波边界的交点
+  \draw[line width=4.0pt] (401.8,146.9) .. controls (307.2,138.5) and (212.8,216.2) .. (201.8,313.1);
+  \draw[line width=5.0pt] (269.5,391.6) .. controls (326.4,366.5) and (394.0,374.7) .. (449.2,343.9);
+  %% ⚠ 缺口 6.47 单位，正中 (471.5,160.6) 也是 B₁ 圆周上的交点
+  \draw[line width=4.0pt] (517.9,187.5) .. controls (501.5,181.9) and (491.0,164.4) .. (471.5,160.6);
+  \draw[line width=5.0pt] (504.0,125.4) .. controls (474.6,32.9) and (359.7,-11.4) .. (272.5,23.0);
+  \draw[line width=5.0pt] (208.5,33.2) .. controls (172.6,38.9) and (137.2,24.0) .. (102.7,34.4);
+  \draw[line width=5.0pt] (102.7,34.4) .. controls (89.1,39.6) and (76.1,46.5) .. (65.7,58.1);
+  \draw[line width=4.0pt] (65.7,58.1) .. controls (25.7,113.4) and (82.1,169.6) .. (75.5,228.9);
+  \draw[line width=4.0pt] (75.5,228.9) .. controls (72.0,245.1) and (64.2,259.7) .. (52.6,272.3);
+  \draw[line width=4.0pt] (52.6,272.3) .. controls (34.9,291.9) and (17.5,313.5) .. (13.5,339.8);
+  \draw[line width=4.0pt] (13.5,339.8) .. controls (-6.9,405.0) and (29.2,478.2) .. (90.8,506.4);
+  \draw[line width=4.0pt] (90.8,506.4) .. controls (141.0,528.2) and (187.9,485.1) .. (202.4,436.5);
+  \draw[line width=4.0pt] (202.4,436.5) .. controls (205.7,425.4) and (215.6,415.6) .. (228.1,410.9);
+  \draw[line width=4.0pt] (458.7,336.4) .. controls (510.3,309.0) and (524.2,247.1) .. (517.9,187.5);
 
-  %% ════ 圆 / 椭圆（probe 精测）════
-  \draw (316.2,196.1) circle (160.2);
-  \draw (349.4,311.3) circle (112.7);
-  \draw (306.1,263.6) circle (35.8);
+  %% ════ 圆 / 椭圆 ════
+  %% ⚠ 原来没写 line width，吃了 tikzpicture 的默认 2.8pt —— 而原书实量是
+  %%   大圆 5.0、B₃ 环 3.9。渲染出来明显比原书细，现在逐个补上。
+  \draw[line width=5.0pt] (313.3,194.7) circle (162.7);
+  \draw[line width=5.0pt] (347.0,311.7) circle (114.4);
+  \draw[line width=4.0pt] (303.1,263.3) circle (36.4);
 
   %% ════ 实心点 ════
-  \fill (312.1,278.1) circle (6.2);
+  \fill (309.7,275.4) circle (6.1);
 
-  %% ════ 标签（probe 直接给的 \node 行）════
-  %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.3}{37.9}\selectfont] at (139.8,268.5) {\textsf{\textbf{\textit{B}}}};   % box(128,257,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.9}{28.6}\selectfont] at (157.2,281.9) {\textsf{\textbf{1}}};   % box(151,273,7,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (274.2,313.5) {\textsf{\textbf{\textit{B}}}};   % box(263,302,19,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.0}{28.7}\selectfont] at (288.9,327.1) {\textsf{\textbf{3}}};   % box(283,318,11,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.8}\selectfont] at (443.8,408.0) {\textsf{\textbf{\textit{B}}}};   % box(432,396,20,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.6}{29.6}\selectfont] at (459.1,421.9) {\textsf{\textbf{2}}};   % box(453,413,11,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.9}{36.1}\selectfont] at (800.5,437.2) {\textsf{\textbf{\textit{U}}}};   % box(791,425,19,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.9}{28.7}\selectfont] at (817.1,450.4) {\textsf{\textbf{2}}};   % box(811,442,11,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.5}{36.9}\selectfont] at (125.5,532.7) {\textsf{\textbf{\textit{U}}}};   % box(116,520,19,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{21.5}{26.9}\selectfont] at (143.0,544.9) {\textsf{\textbf{1}}};   % box(137,537,7,15)
+  %% ════ 字母 / 数字 ════
+  %% 白底保留（文字压曲线会脏）。坐标 = 原图**连通域**量出的字形框中心；
+  %% probe 给的坐标在本图系统性偏 3~8 单位，不再沿用。
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.2}{36.6}\selectfont] at (289.2,261.2) {\textsf{\textbf{\textit{x}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (132.8,264.3) {\textsf{\textbf{\textit{B}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.9}{28.6}\selectfont] at (149.4,277.8) {\textsf{\textbf{1}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (269.0,309.7) {\textsf{\textbf{\textit{B}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.0}{28.7}\selectfont] at (285.0,323.5) {\textsf{\textbf{3}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (440.6,405.4) {\textsf{\textbf{\textit{B}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.6}{29.6}\selectfont] at (457.2,419.5) {\textsf{\textbf{2}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.0}{36.3}\selectfont] at (803.9,434.2) {\textsf{\textbf{\textit{U}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.9}{28.7}\selectfont] at (820.3,448.3) {\textsf{\textbf{2}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.0}{36.3}\selectfont] at (120.4,531.1) {\textsf{\textbf{\textit{U}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{21.6}{26.9}\selectfont] at (135.6,544.1) {\textsf{\textbf{1}}};
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox
   \path[use as bounding box] (0,0) rectangle (1004,569);
 \end{tikzpicture}
 \end{document}
-
-% ⚠ 待核清单（probe 拿不准，人眼过一遍）：
-%   · 未识别/跳过：⑤ 跳过/未识别的字形
