@@ -11,6 +11,7 @@
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=4.4pt, line cap=round, line join=round]
 
@@ -55,7 +56,7 @@
   \draw[line width=3.4pt] (856.0,180.0) -- (859.0,181.0);
   \draw[line width=5.3pt] (737.0,301.0) -- (738.0,296.0);
   \draw[line width=5.7pt] (627.0,76.0) -- (632.0,78.0);
-  \draw[line width=6.1pt] (56.0,180.0) -- (61.0,177.0);
+  % （略）线段 (56.0,180.0)-(61.0,177.0) 线宽6.1 —— 是箭头头那一坨，已由箭头头代替
   \draw[line width=3.0pt] (448.0,192.0) -- (432.0,192.0);
   \draw[line width=5.0pt] (975.0,168.0) -- (964.0,164.0);
   \draw[line width=3.0pt] (301.0,51.0) -- (298.8,49.0);
@@ -148,6 +149,7 @@
   \draw[line width=3.0pt] (590.0,260.0) -- (663.0,185.0);
   \draw[line width=4.5pt] (663.0,185.0) -- (672.0,180.0);
   \draw[line width=4.0pt] (55.0,181.0) -- (54.0,298.8);
+  \fill (50.0,181.0) -- (60.0,181.0) -- (54.9,196.0) -- cycle;
   \draw[line width=3.0pt] (54.0,298.8) -- (56.0,301.0);
   \draw[line width=3.0pt] (632.0,293.0) -- (708.6,214.4);
   \draw[line width=4.9pt] (708.6,214.4) -- (710.0,210.0);

@@ -1,54 +1,50 @@
-% 图 44.1 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
+% 图 44.1 —— **结构化重画**（2026-09-25，替换掉 `checks/emit_hand.py` 的逐段拟合稿）
 %%
-% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 44.1` 看指标 + 看叠合图。
+% 结构：一条带 3 个刻度的线段（中刻度**只向上**）+ 右下标的 a/b + 一支右向弧形箭头 g + 一个正方形内接三角形 + 3 个实心点 + 标签 a b g
 %%
-%% ⚠ 待核：
-%   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
-%   · 可疑字形 1 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
+% 旧版是**描摹**：把每一段笔画单独拟合后发出来，连「箭头头」都被当成"一条很粗的短线"描
+%   （图 81.5 上一度出现 `\draw[line width=7.0pt] (586,277)--(586,270);` 这种 7px 长的疙瘩），
+%   渲染出来是黑疙瘩而不是箭头。本版改成**看懂结构后用 TikZ 画**。
+%%
+% 做法、约定、已踩过的坑 → `＜工作区＞\checks\redraw\README_重画流程.md`
+% 本图圆/椭圆的中心与半径、标签的文字与位置，沿用 probe 的脚手架（那部分它是对的）。
+%%
+% ⚠ 本图 tikzpicture 是 y=-1pt（**y 翻转**）⇒ `arc` 的角向"递减"才是屏幕逆时针；
+%   同一根线上的多段弧必须同向。改完务必拿原书并排、放大核箭头朝向。
 %%
 \documentclass[12pt]{standalone}
 \usepackage{fontspec}
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
-\begin{tikzpicture}[x=1pt, y=-1pt, line width=5.5pt, line cap=round, line join=round]
+\begin{tikzpicture}[x=1pt, y=-1pt, line width=4.0pt, line cap=round, line join=round]
+  \def\arr{-{Triangle[width=13pt,length=24pt]}}
 
-  %% ════ 填充区（prims2 的 fills）════
-  \fill (726.0,284.0) -- (725.0,293.0) -- (721.0,296.0) -- (717.0,296.0) -- (721.0,300.0) -- (726.0,299.0) -- (730.0,295.0) -- (730.0,289.0) -- cycle;
+  % ── 左：带刻度的线段（两端刻度上下对称；中刻度只向上）──
+  \draw (25.5,158.5) -- (292.5,158.5);                       % 主线
+  \foreach \x/\ya/\yb in {25.5/142.0/174.0, 158.5/143.0/158.5, 292.5/141.0/175.0}
+    \draw (\x,\ya) -- (\x,\yb);
 
-  %% ════ 直线段（prims2 的 strokes）════
-  \draw[line width=5.5pt] (422.0,135.0) -- (407.0,130.0);
-  \draw[line width=5.0pt] (405.0,130.0) -- (400.0,133.0);
-  \draw[line width=4.0pt] (460.0,286.0) -- (585.0,159.0);
-  \draw[line width=4.0pt] (26.0,159.0) -- (26.0,175.0);
-  \draw[line width=4.0pt] (455.0,285.0) -- (456.2,18.8);
-  \draw[line width=5.0pt] (456.2,18.8) -- (722.3,18.3);
-  \draw[line width=4.0pt] (722.3,18.3) -- (725.0,21.2);
-  \draw[line width=4.0pt] (725.0,21.2) -- (722.0,289.0);
-  \draw[line width=3.0pt] (460.0,290.0) -- (460.0,287.0);
-  \draw[line width=6.0pt] (587.0,159.0) -- (593.0,159.0);
-  \draw[line width=3.0pt] (459.0,286.0) -- (456.0,286.0);
-  \draw[line width=7.7pt] (404.0,121.0) -- (406.0,128.0);
-  \draw[line width=5.0pt] (461.0,291.0) -- (720.0,291.0);
-  \draw[line width=4.0pt] (159.0,141.0) -- (158.0,157.0);
-  \draw[line width=4.0pt] (26.0,158.0) -- (26.0,140.0);
-  \draw[line width=4.0pt] (157.0,158.0) -- (27.0,159.0);
-  \draw[line width=5.0pt] (721.0,290.0) -- (594.0,159.0);
-  \draw[line width=4.0pt] (292.0,157.0) -- (292.0,141.0);
-  \draw[line width=4.0pt] (291.0,158.0) -- (159.0,158.0);
-  \draw[line width=4.0pt] (292.0,159.0) -- (292.0,174.0);
+  % ── 中：向右的弧形箭头（三次贝塞尔，末端切向 19.5°）──
+  \draw[line width=3.8pt,\arr]
+    (328.0,131.2) .. controls (358.2,121.6) and (391.5,123.3) .. (423.0,134.5);
 
-  %% ════ 曲线（prims2 的 curves —— 三段式，坐标同为 (y,x)）════
-  \draw[line width=7.0pt] (460.0,292.0) .. controls (454.7,300.9) and (446.4,290.8) .. (455.0,286.0);
-  \draw[line width=7.0pt] (594.0,158.0) .. controls (597.1,149.3) and (582.7,148.9) .. (586.0,158.0);
-  \draw[line width=4.0pt] (405.0,129.0) .. controls (381.0,119.8) and (352.1,125.1) .. (328.0,131.0);
+  % ── 右：正方形 + 内接三角形 ──
+  \draw[line width=4.4pt] (455.5,18.0) rectangle (724.0,292.0);
+  \draw[line width=4.0pt] (455.5,292.0) -- (589.0,154.0) -- (724.0,292.0);
 
-  %% ════ 标签（probe 直接给的 \node 行）════
-  %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{33.1}{41.3}\selectfont] at (374.4,103.8) {\textsf{\textbf{9}}};   % box(364,92,17,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.3}\selectfont] at (293.8,204.8) {\textsf{\textbf{\textit{b}}}};   % box(284,192,17,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (23.5,208.5) {\textsf{\textbf{\textit{a}}}};   % box(15,199,15,16)
+  % ── 3 个实心圆点（三角形顶点、方形左下角、右下角）──
+  \foreach \p in {(589.0,154.0), (455.5,291.5), (722.0,292.0)} \fill \p circle (8.0);
+
+  % ── 标签（数字不斜体；不用 $...$）──
+  \node[anchor=center,inner sep=0pt,font=\fontsize{30.7}{37}\selectfont]
+    at (22.0,206.7) {\textsf{\textbf{\textit{a}}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{30.7}{37}\selectfont]
+    at (291.8,203.1) {\textsf{\textbf{\textit{b}}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{30.7}{37}\selectfont]
+    at (371.6,102.4) {\textsf{\textbf{\textit{g}}}};
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox
@@ -56,5 +52,8 @@
 \end{tikzpicture}
 \end{document}
 
-% ⚠ 待核清单（probe 拿不准，人眼过一遍）：
-%   · 未识别/跳过：⑤ 跳过/未识别的字形
+% ⚠ 待核（交付前请主会话决定）：
+%   · README §3.5 规定 head = 13x16。本图原书机头**直接量顶点**得 背边 14.2 × 轴长 22.9；
+%     README 同节记的图 6.1 直箭头实测也是 14.9 × 22~24 —— 两处一致，说明 book 的箭头
+%     实为 ~14.5 x 22.5，规格里的 length=16 可能偏短约 30%。此处**仍按 §3.5 用 13x16**；
+%     若改，只需把 \arr 的 length 调成 22.5。

@@ -11,6 +11,7 @@
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=4.0pt, line cap=round, line join=round]
 
@@ -19,7 +20,7 @@
   %% ════ 直线段（prims2 的 strokes）════
   \draw[line width=5.0pt] (900.0,213.0) -- (911.0,201.0);
   \draw[line width=4.0pt] (918.0,202.0) -- (911.0,243.1);
-  \draw[line width=4.0pt] (402.0,198.0) -- (496.0,196.0);
+  \draw[line width=4.0pt, -{Triangle[width=10.8pt,length=16.2pt]}] (402.0,198.0) -- (496.0,196.0);
   \draw[line width=4.0pt] (937.0,212.0) -- (927.0,201.0);
   \draw[line width=6.0pt] (920.0,200.0) -- (926.0,200.0);
   \draw[line width=4.0pt] (231.0,197.0) -- (77.0,197.0);
@@ -48,7 +49,7 @@
   \draw (757.8,199.1) circle (162.9);
 
   %% ════ 实心点 ════
-  \fill (480.5,192.5) circle (4.5);
+  % （略）(480.5,192.5) r=4.5 落在箭头头上 —— 已由箭头头代替
 
   %% ════ 标签（probe 直接给的 \node 行）════
   %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰

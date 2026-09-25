@@ -5,7 +5,8 @@
 %%     B′₁ 的撇被 prims2 拆成了一条独立的短线段（(52,210)-(54,204)）所以还在；
 %%     B′₂ 的撇则被并进了字形框（实测框宽 26.7，而纯 B 只有 20.0）——
 %%     probe 于是拿它当「一个特别宽的 B」处理，字号给到 36.1，撇就丢了。
-%%     现在两个撇**按实测各自画出来**，不再是「一个残段 + 一个缺失」。
+%%     现在两个撇都**直接写进节点文字**（`B′`）—— 文字就该当文字写，
+%%     既不是残段、也不用另量尺寸画线（2026-09-25 曾走错这一步，已纠正）。
 %%  ②「下标的重叠」：同上，B₂ 的字号被撑大后 ₂ 挤进了 B 的右下角。
 %%     现在 B 与 B₁ 同字号（30.0），下标按原图字形框单独定位。
 %%  ③「B1 的撇画记号需要核实是否合适」：实量原图，B′₁ 的撇是**独立连通域**
@@ -32,15 +33,14 @@
   %% ════ 元素点 ════
   \fill (212.4,127.2) circle (6.4);
 
-  %% ════ 撇（两个，实测几何）════
-  \draw[line width=2.6pt] ( 47.9,205.4) -- ( 49.3,197.7);
-  \draw[line width=2.6pt] (390.5,214.9) -- (391.3,207.1);
+  %% 撇（U+2032）已改回**随字母一起打**（见下方 B′ 节点）：
+  %%   2026-09-25 曾一度把它当成独立图元「量尺寸另画一根线」—— 那是把文字当图形了。
 
   %% ════ 字母 / 数字 ════
   \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.1}{37.6}\selectfont] at (211.8,152.0) {\textsf{\textbf{\textit{x}}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.2}{37.8}\selectfont] at (34.5,207.9) {\textsf{\textbf{\textit{B}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.2}{37.8}\selectfont] at (34.5,207.9) {\textsf{\textbf{\textit{B}′}}};
   \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{21.6}{26.9}\selectfont] at (52.3,223.8) {\textsf{\textbf{1}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (376.3,217.9) {\textsf{\textbf{\textit{B}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (376.3,217.9) {\textsf{\textbf{\textit{B}′}}};
   \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.6}{29.6}\selectfont] at (395.2,232.1) {\textsf{\textbf{2}}};
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准

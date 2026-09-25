@@ -11,6 +11,7 @@
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=3.0pt, line cap=round, line join=round]
 
@@ -35,6 +36,7 @@
   \draw[line width=4.0pt] (463.0,256.0) -- (507.0,255.0);
   \draw[line width=5.0pt] (239.0,98.0) -- (259.1,105.0);
   \draw[line width=5.9pt] (117.0,264.4) -- (122.0,266.0);
+  \fill (123.8,260.3) -- (120.2,271.7) -- (104.9,260.5) -- cycle;
   \draw[line width=4.0pt] (597.0,86.0) -- (589.0,104.7);
   \draw[line width=5.0pt] (589.0,104.7) -- (588.0,378.4);
   \draw[line width=4.0pt] (588.0,378.4) -- (598.2,399.2);
@@ -78,7 +80,7 @@
   %% ════ 实心点 ════
   \fill (134.5,90.5) circle (7.6);
   \fill (238.1,92.1) circle (4.1);
-  \fill (117.9,263.3) circle (8.3);
+  % （略）(117.9,263.3) r=8.3 落在箭头头上 —— 已由箭头头代替
 
   %% ════ 标签（probe 直接给的 \node 行）════
   %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰

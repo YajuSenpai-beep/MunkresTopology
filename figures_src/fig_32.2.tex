@@ -11,6 +11,7 @@
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=3.0pt, line cap=round, line join=round]
 
@@ -179,7 +180,7 @@
   \draw[line width=5.0pt] (659.0,60.0) -- (643.0,60.0);
   \draw[line width=6.0pt] (310.0,527.0) -- (311.0,537.0);
   \draw[line width=5.0pt] (153.0,770.0) -- (308.0,772.0);
-  \draw[line width=6.1pt] (290.0,493.0) -- (291.0,488.0);
+  % （略）线段 (290.0,493.0)-(291.0,488.0) 线宽6.1 —— 是箭头头那一坨，已由箭头头代替
   \draw[line width=6.0pt] (367.0,61.0) -- (350.0,60.0);
   \draw[line width=3.0pt] (301.0,674.0) -- (228.0,600.0);
   \draw[line width=5.0pt] (301.0,674.0) -- (308.0,673.0);
@@ -203,6 +204,7 @@
   \draw[line width=8.0pt] (750.0,76.0) -- (753.0,69.0);
   \draw[line width=3.0pt] (598.0,377.0) -- (571.0,349.0);
   \draw[line width=5.0pt] (310.0,772.0) -- (745.0,772.0);
+  \fill (310.0,777.6) -- (310.0,766.4) -- (326.8,772.0) -- cycle;
   \draw[line width=5.0pt] (311.0,427.0) -- (311.0,435.0);
   \draw[line width=5.0pt] (333.0,145.0) -- (348.0,144.0);
   \draw[line width=6.0pt] (294.0,534.0) -- (302.0,525.0);
@@ -327,6 +329,7 @@
   \draw[line width=7.0pt] (505.0,318.0) -- (512.0,311.0);
   \draw[line width=4.0pt] (463.0,220.0) -- (453.0,227.0);
   \draw[line width=4.0pt] (307.0,513.0) -- (290.0,494.0);
+  \fill (286.3,497.3) -- (293.7,490.7) -- (300.0,505.2) -- cycle;
   \draw[line width=6.5pt] (349.0,478.0) -- (357.0,470.0);
   \draw[line width=7.0pt] (208.0,619.0) -- (200.0,627.0);
   \draw[line width=3.0pt] (406.0,67.0) -- (462.0,127.0);
@@ -406,7 +409,7 @@
   \draw[line width=7.0pt] (625.0,196.0) -- (633.0,188.0);
   \draw[line width=6.0pt] (311.0,574.0) -- (310.0,567.0);
   \draw[line width=3.0pt] (165.0,666.0) -- (220.0,725.0);
-  \draw[line width=6.1pt] (283.0,495.0) -- (288.0,494.0);
+  % （略）线段 (283.0,495.0)-(288.0,494.0) 线宽6.1 —— 是箭头头那一坨，已由箭头头代替
   \draw[line width=4.5pt] (369.0,292.0) -- (378.0,284.0);
   \draw[line width=3.0pt] (689.0,92.0) -- (707.0,111.0);
   \draw[line width=4.0pt] (714.0,80.0) -- (725.0,75.0);
@@ -659,7 +662,7 @@
 
   %% ════ 实心点 ════
   \fill (313.0,56.0) circle (6.0);
-  \fill (309.5,776.5) circle (6.5);
+  % （略）(309.5,776.5) r=6.5 落在箭头头上 —— 已由箭头头代替
 
   %% ════ 标签（probe 直接给的 \node 行）════
   %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰

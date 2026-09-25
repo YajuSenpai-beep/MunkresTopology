@@ -11,6 +11,7 @@
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=6.0pt, line cap=round, line join=round]
 
@@ -19,7 +20,7 @@
   %% ════ 直线段（prims2 的 strokes）════
   \draw[line width=6.0pt] (268.0,332.0) -- (274.0,342.0);
   \draw[line width=4.0pt] (511.0,443.0) -- (496.0,426.0);
-  \draw[line width=4.0pt] (228.0,350.0) -- (153.0,384.0);
+  \draw[line width=4.0pt, {Triangle[width=10.0pt,length=15.0pt]}-] (228.0,350.0) -- (153.0,384.0);
   \draw[line width=8.1pt] (518.0,48.0) -- (519.0,55.0);
   \draw[line width=5.0pt] (192.0,204.0) -- (204.1,190.0);
   \draw[line width=5.0pt] (517.8,182.0) -- (535.0,197.0);
@@ -92,7 +93,7 @@
 
   %% ════ 实心点 ════
   \fill (468.5,394.2) circle (6.9);
-  \fill (211.5,354.5) circle (6.0);
+  % （略）(211.5,354.5) r=6.0 落在箭头头上 —— 已由箭头头代替
   \fill (497.5,423.0) circle (4.7);
   \fill (515.0,446.0) circle (4.5);
 

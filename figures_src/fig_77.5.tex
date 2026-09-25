@@ -11,6 +11,7 @@
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=6.3pt, line cap=round, line join=round]
 
@@ -87,6 +88,7 @@
   \draw[line width=3.0pt] (398.0,454.0) -- (491.5,358.5);
   \draw[line width=3.0pt] (491.5,358.5) -- (495.0,352.0);
   \draw[line width=7.0pt] (648.0,159.0) -- (641.8,161.2);
+  \fill (646.9,156.0) -- (649.1,162.0) -- (639.0,162.2) -- cycle;
   \draw[line width=3.0pt] (641.8,161.2) -- (589.0,215.0);
   \draw[line width=3.0pt] (347.0,411.0) -- (395.0,361.0);
   \draw[line width=4.0pt] (589.0,217.0) -- (594.0,223.0);
@@ -126,7 +128,7 @@
   \draw[line width=4.0pt] (487.0,531.0) -- (477.0,524.0);
   \draw[line width=6.0pt] (510.0,349.0) -- (510.0,361.0);
   \draw[line width=3.0pt] (337.0,403.0) -- (388.0,351.0);
-  \draw[line width=7.0pt] (651.0,161.0) -- (656.0,157.0);
+  % （略）线段 (651.0,161.0)-(656.0,157.0) 线宽7.0 —— 是箭头头那一坨，已由箭头头代替
   \draw[line width=5.0pt] (529.0,62.0) -- (536.0,49.0);
   \draw[line width=5.0pt] (609.0,235.0) -- (618.0,241.0);
   \draw[line width=7.0pt] (469.0,349.0) -- (462.0,349.0);
@@ -262,6 +264,7 @@
   \draw[line width=3.0pt] (609.0,233.0) .. controls (620.4,219.2) and (634.2,203.8) .. (649.0,195.0);
   \draw[line width=4.0pt] (622.0,69.0) .. controls (630.2,69.2) and (636.2,56.4) .. (645.0,64.0);
   \draw[line width=4.0pt] (589.0,66.0) .. controls (586.2,57.1) and (575.2,65.2) .. (569.0,65.0);
+  \fill (568.8,70.0) -- (569.2,60.0) -- (584.0,65.7) -- cycle;
   \draw[line width=4.0pt] (297.0,348.0) .. controls (292.4,338.6) and (283.2,348.5) .. (277.0,350.0);
   \draw[line width=5.0pt] (813.0,347.0) .. controls (789.2,346.9) and (762.0,344.7) .. (739.2,351.0);
   \draw[line width=4.5pt] (524.8,351.0) .. controls (531.0,344.6) and (540.4,340.8) .. (546.4,350.0);
@@ -271,7 +274,7 @@
   %% ════ 实心点 ════
   \fill (45.4,65.0) circle (6.9);
   \fill (204.0,61.0) circle (4.1);
-  \fill (569.5,60.5) circle (4.5);
+  % （略）(569.5,60.5) r=4.5 落在箭头头上 —— 已由箭头头代替
   \fill (404.5,61.5) circle (4.7);
   \fill (129.0,69.5) circle (5.2);
   \fill (419.0,77.0) circle (3.2);
