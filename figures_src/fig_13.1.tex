@@ -38,11 +38,18 @@
   %% 坐标 = 原图连通域量出的字形框中心（下方注释给出字号来源）。
   \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.2}{36.6}\selectfont] at (253.3,139.9) {\textsf{\textbf{\textit{x}}}};
   \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (302.6,176.4) {\textsf{\textbf{\textit{B}}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.3}{27.9}\selectfont] at (317.3,191.6) {\textsf{\textbf{3}}};
+  %% 2026-09-25：**三个下标（3 / 2 / 1）的白底都去掉**。
+  %%   `fill=white` 涂的是**矩形**（尺寸 = 节点的文字框，不是字形的墨迹框），
+  %%   下标的白框左边缘会越到左边那个「B」的字尾上去，把 B 啃掉一个方口子。
+  %%   逐处实测（去掉该处白底后与现状的差集）：
+  %%     「3」→ (309,182)~(310,183)   「2」→ (470,219)~(471,220)   「1」→ (277,381)~(277,382)
+  %%   全都落在各自 B 的末笔上。去掉即恢复。
+  %%   （B 本体、x、B₂ 的「B」等其余白底实测没盖住任何墨迹，保留。）
+  \node[anchor=center,inner sep=0pt,font=\fontsize{22.3}{27.9}\selectfont] at (317.3,191.6) {\textsf{\textbf{3}}};
   \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (463.7,213.2) {\textsf{\textbf{\textit{B}}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.9}{28.7}\selectfont] at (478.9,228.1) {\textsf{\textbf{2}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{22.9}{28.7}\selectfont] at (478.9,228.1) {\textsf{\textbf{2}}};
   \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.8}\selectfont] at (269.2,375.9) {\textsf{\textbf{\textit{B}}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{20.6}{25.7}\selectfont] at (284.4,390.3) {\textsf{\textbf{1}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{20.6}{25.7}\selectfont] at (284.4,390.3) {\textsf{\textbf{1}}};
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox

@@ -11,6 +11,7 @@
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=4.0pt, line cap=round, line join=round]
 
@@ -38,6 +39,7 @@
   \draw[line width=5.0pt] (106.0,247.0) -- (93.0,243.0);
   \draw[line width=5.0pt] (225.0,293.0) -- (213.0,289.0);
   \draw[line width=5.0pt] (280.0,110.0) -- (359.0,199.0);
+  \fill (362.7,195.7) -- (355.3,202.3) -- (349.0,187.8) -- cycle;
   \draw[line width=5.0pt] (199.0,283.0) -- (185.0,278.0);
   \draw[line width=5.0pt] (133.0,258.0) -- (147.0,262.0);
   \draw[line width=4.0pt] (796.0,235.0) -- (797.0,253.0);
@@ -120,7 +122,7 @@
   \draw[line width=5.0pt] (1023.0,344.0) -- (983.0,367.0);
   \draw[line width=5.0pt] (899.0,416.0) -- (939.0,392.0);
   \draw[line width=4.5pt] (292.0,319.0) -- (280.0,315.0);
-  \draw[line width=8.0pt] (359.0,200.0) -- (358.0,207.0);
+  % （略）线段 (359.0,200.0)-(358.0,207.0) 线宽8.0 —— 是箭头头那一坨，已由箭头头代替
   \draw[line width=3.0pt] (850.0,387.0) -- (895.0,341.0);
   \draw[line width=4.7pt] (57.0,239.0) -- (55.0,235.0);
   \draw[line width=4.0pt] (796.0,309.0) -- (796.0,291.0);
@@ -224,7 +226,7 @@
   \draw (929.1,272.4) circle (154.2);
 
   %% ════ 实心点 ════
-  \fill (363.5,195.5) circle (5.1);
+  % （略）(363.5,195.5) r=5.1 落在箭头头上 —— 已由箭头头代替
   \fill (692.5,289.0) circle (3.6);
   \fill (787.5,364.2) circle (4.1);
 

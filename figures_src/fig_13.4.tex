@@ -1,10 +1,16 @@
-% 图 13.4 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
+% 图 13.4 —— **结构化重画**（2026-09-25，替换掉 `checks/emit_hand.py` 的逐段拟合稿）
 %%
-% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 13.4` 看指标 + 看叠合图。
+% 结构：一个矩形（内含一个小圆 + 实心点 + x/B）+ 一个圆（内含一个小矩形 + 实心点 + x/B′） + 4 个标签。2026-09-25：三处描摹（6 段折线/5 段折线/4 段贝塞尔）换成真图元 `rectangle` / `circle`
 %%
-%% ⚠ 待核：
-%   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
-%   · 可疑字形 1 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
+% 旧版是**描摹**：把每一段笔画单独拟合后发出来，连「箭头头」都被当成"一条很粗的短线"描
+%   （图 81.5 上一度出现 `\draw[line width=7.0pt] (586,277)--(586,270);` 这种 7px 长的疙瘩），
+%   渲染出来是黑疙瘩而不是箭头。本版改成**看懂结构后用 TikZ 画**。
+%%
+% 做法、约定、已踩过的坑 → `＜工作区＞\checks\redraw\README_重画流程.md`
+% 本图圆/椭圆的中心与半径、标签的文字与位置，沿用 probe 的脚手架（那部分它是对的）。
+%%
+% ⚠ 本图 tikzpicture 是 y=-1pt（**y 翻转**）⇒ `arc` 的角向"递减"才是屏幕逆时针；
+%   同一根线上的多段弧必须同向。改完务必拿原书并排、放大核箭头朝向。
 %%
 \documentclass[12pt]{standalone}
 \usepackage{fontspec}
@@ -13,34 +19,25 @@
 \usepackage{tikz}
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=4.4pt, line cap=round, line join=round]
+  %% ════ 图元（2026-09-25 改：原来是折线/贝塞尔描摹，现在是真图元）════
+  %% 左框：原为 6 段折线，含一段斜线 (349.4,232.1)--(351.4,228.8) ⇒ 渲染成梯形
+  \draw[line width=4.4pt] (10.5,60.5) rectangle (351.2,231.9);
+  %% 右框：原为 5 段折线
+  \draw[line width=4.4pt] (603.5,51.0) rectangle (672.8,150.8);
+  %% 右图外圈：原为 4 段贝塞尔；拟合圆 圆心(677.0,158.4) r=148.08 残差 ±1.1px
+  \draw[line width=4.4pt] (677.0,158.4) circle (148.08);
 
   %% ════ 填充区（prims2 的 fills）════
 
   %% ════ 直线段（prims2 的 strokes）════
-  \draw[line width=5.0pt] (271.0,60.3) -- (10.1,60.5);
-  \draw[line width=5.0pt] (10.1,60.5) -- (10.9,231.7);
-  \draw[line width=4.0pt] (10.9,231.7) -- (349.4,232.1);
-  \draw[line width=3.8pt] (349.4,232.1) -- (351.4,228.8);
-  \draw[line width=5.0pt] (351.4,228.8) -- (351.1,61.0);
-  \draw[line width=5.0pt] (351.1,61.0) -- (271.0,60.3);
-  \draw[line width=4.0pt] (661.0,50.0) -- (603.1,53.0);
-  \draw[line width=5.0pt] (603.1,53.0) -- (604.8,151.1);
-  \draw[line width=4.0pt] (604.8,151.1) -- (672.9,150.6);
-  \draw[line width=4.0pt] (672.9,150.6) -- (672.6,51.5);
-  \draw[line width=4.0pt] (672.6,51.5) -- (661.0,50.0);
 
   %% ════ 曲线（prims2 的 curves —— 三段式，坐标同为 (y,x)）════
-  \draw[line width=4.0pt] (758.8,283.2) .. controls (823.5,239.0) and (840.8,143.9) .. (800.5,78.8);
-  \draw[line width=5.0pt] (800.5,78.8) .. controls (760.0,10.7) and (664.9,-13.1) .. (599.6,30.9);
-  \draw[line width=4.0pt] (599.6,30.9) .. controls (531.5,75.6) and (510.7,172.4) .. (554.4,239.5);
-  \draw[line width=5.0pt] (554.4,239.5) .. controls (595.2,310.0) and (694.7,330.2) .. (758.8,283.2);
 
   %% ════ 圆 / 椭圆（probe 精测）════
   \draw (106.6,118.9) circle (39.3);
 
-  %% ════ 上标「撇」（原书实测：4.4x8.3 的小斜道，独立连通域）════
-  \draw[line width=2.6pt] (706.5,107.5) -- (708.2, 99.7);
-  \draw[line width=2.6pt] (386.4,150.1) -- (388.0,142.4);
+  %% 撇（U+2032）已改回**随字母一起打**（见下方两处 B′ 节点）：
+  %%   2026-09-25 曾一度把它当成独立图元「量尺寸另画一根线」—— 那是把文字当图形了。
 
   %% ════ 实心点 ════
   %% ⚠ 这两个点的坐标原来也是 probe 给的，实测各偏 (x-3.4,y+6.3) / (x+5.3,y+5.8)——
@@ -51,10 +48,10 @@
   %% ════ 标签（probe 直接给的 \node 行）════
   %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
      \node[anchor=center,inner sep=0pt,font=\fontsize{28.3}{35.4}\selectfont] at (647.5,98.5) {\textsf{\textbf{\textit{x}}}};   % box(636,97,15,17)
-     \node[anchor=center,inner sep=0pt,font=\fontsize{30.3}{37.9}\selectfont] at (695.5,111.0) {\textsf{\textbf{\textit{B}}}};   % box(682,107,20,22)
+     \node[anchor=center,inner sep=0pt,font=\fontsize{30.3}{37.9}\selectfont] at (695.5,111.0) {\textsf{\textbf{\textit{B}′}}};   % box(682,107,20,22)
      %% ⚠ 这里原本是一个独立的『.』节点（fontsize 42.4）—— 那是 B 的**上标一撇**被
      %%   probe 认成了句点，渲染成一个贴在字母右边的小黑点（用户：『记号错误，还遮住了字母』）。
-     %%   已删，改画成真正的撇（见下方 \draw）。
+     %%   已删，改成把撇**直接写进 B 的节点文字**（`B′`）。
      \node[anchor=center,inner sep=0pt,font=\fontsize{30.1}{37.6}\selectfont] at (113.4,125.1) {\textsf{\textbf{\textit{x}}}};   % box(111,123,16,18)
      %% ⚠ 用户指出「左侧 x 和 B 离曲线太近，白底盖住了图形」。实测：
      %%   · 左 x：到最近墨（那个实心点）6.85，原书 6.19 —— **本来就不近**，
@@ -66,7 +63,7 @@
      %%     现在移回 160.3 —— 净空 6.9，与原书 6.69 一致。
      \node[anchor=center,inner sep=0pt,font=\fontsize{30.3}{37.9}\selectfont] at (160.3,136.5) {\textsf{\textbf{\textit{B}}}};   % box(156,132,20,22)
      \node[anchor=center,inner sep=0pt,font=\fontsize{30.3}{37.9}\selectfont] at (843.2,154.1) {\textsf{\textbf{\textit{B}}}};   % box(827,149,20,22)
-     \node[anchor=center,inner sep=0pt,font=\fontsize{30.4}{38.0}\selectfont] at (374.0,154.7) {\textsf{\textbf{\textit{B}}}};   % box(365,150,21,21)
+     \node[anchor=center,inner sep=0pt,font=\fontsize{30.4}{38.0}\selectfont] at (374.0,154.7) {\textsf{\textbf{\textit{B}′}}};   % box(365,150,21,21)
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox

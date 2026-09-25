@@ -11,6 +11,7 @@
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=3.0pt, line cap=round, line join=round]
 
@@ -20,8 +21,9 @@
   %% ════ 直线段（prims2 的 strokes）════
   \draw[line width=3.0pt] (219.0,229.0) -- (225.0,236.0);
   \draw[line width=5.5pt] (549.0,155.0) -- (566.0,155.0);
-  \draw[line width=7.7pt] (1076.0,129.0) -- (1069.0,129.0);
+  % （略）线段 (1076.0,129.0)-(1069.0,129.0) 线宽7.7 —— 是箭头头那一坨，已由箭头头代替
   \draw[line width=5.0pt] (1076.0,129.0) -- (1118.0,63.2);
+  \fill (1080.2,131.7) -- (1071.8,126.3) -- (1084.1,116.4) -- cycle;
   \draw[line width=5.0pt] (1118.0,63.2) -- (1107.1,56.1);
   \draw[line width=5.0pt] (1107.1,56.1) -- (1091.5,62.0);
   \draw[line width=4.0pt] (1060.3,61.7) -- (1054.4,62.0);
@@ -158,6 +160,7 @@
   \draw[line width=4.0pt] (786.0,113.0) -- (786.0,95.0);
   \draw[line width=4.0pt] (786.0,75.0) -- (787.0,60.0);
   \draw[line width=11.0pt] (784.0,227.0) -- (796.6,233.0);
+  \fill (781.0,233.3) -- (787.0,220.7) -- (803.0,236.0) -- cycle;
   \draw[line width=5.0pt] (796.6,233.0) -- (809.8,226.0);
   \draw[line width=5.0pt] (809.8,226.0) -- (821.9,232.9);
   \draw[line width=5.0pt] (821.9,232.9) -- (833.1,226.0);
@@ -167,7 +170,7 @@
   \draw[line width=4.0pt] (349.0,101.0) -- (349.0,96.0);
   \draw[line width=4.0pt] (349.0,96.0) -- (357.0,91.0);
   \draw[line width=5.7pt] (698.0,149.0) -- (703.0,147.0);
-  \draw[line width=6.7pt] (1076.0,131.0) -- (1078.0,137.0);
+  % （略）线段 (1076.0,131.0)-(1078.0,137.0) 线宽6.7 —— 是箭头头那一坨，已由箭头头代替
   \draw[line width=3.0pt] (387.0,155.0) -- (384.0,155.0);
   \draw[line width=3.0pt] (384.0,155.0) -- (337.5,109.0);
   \draw[line width=4.0pt] (337.5,109.0) -- (330.0,117.0);

@@ -1,57 +1,61 @@
-% 图 27.1 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
+% 图 27.1 —— **结构化重画**（2026-09-25，替换掉 `checks/emit_hand.py` 的逐段拟合稿）
 %%
-% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 27.1` 看指标 + 看叠合图。
+% 结构：一条数轴 + 左方括号 + 左圆括号 + 3 个实心点 + 一支凹背曲线箭头 + 4 个标签
 %%
-%% ⚠ 待核：
-%   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
-%   · 可疑字形 2 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
+% 旧版是**描摹**：把每一段笔画单独拟合后发出来，连「箭头头」都被当成"一条很粗的短线"描
+%   （图 81.5 上一度出现 `\draw[line width=7.0pt] (586,277)--(586,270);` 这种 7px 长的疙瘩），
+%   渲染出来是黑疙瘩而不是箭头。本版改成**看懂结构后用 TikZ 画**。
+%%
+% 做法、约定、已踩过的坑 → `＜工作区＞\checks\redraw\README_重画流程.md`
+% 本图圆/椭圆的中心与半径、标签的文字与位置，沿用 probe 的脚手架（那部分它是对的）。
+%%
+% ⚠ 本图 tikzpicture 是 y=-1pt（**y 翻转**）⇒ `arc` 的角向"递减"才是屏幕逆时针；
+%   同一根线上的多段弧必须同向。改完务必拿原书并排、放大核箭头朝向。
 %%
 \documentclass[12pt]{standalone}
 \usepackage{fontspec}
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
-\begin{tikzpicture}[x=1pt, y=-1pt, line width=8.0pt, line cap=round, line join=round]
+\begin{tikzpicture}[x=1pt, y=-1pt, line width=4.55pt, line cap=round, line join=round]
 
-  %% ════ 填充区（prims2 的 fills）════
+  % ── 数轴 ──
+  \draw (22,115.76) -- (417.5,115.76);
 
-  %% ════ 直线段（prims2 的 strokes）════
-  \draw[line width=8.0pt] (268.0,103.0) -- (265.0,84.0);
-  \draw[line width=5.0pt] (343.0,115.0) -- (419.0,115.0);
-  \draw[line width=4.0pt] (341.0,114.0) -- (270.0,116.0);
-  \draw[line width=5.0pt] (198.0,116.0) -- (268.0,116.0);
-  \draw[line width=5.7pt] (262.0,83.0) -- (257.0,81.0);
-  \draw[line width=4.0pt] (196.0,115.0) -- (22.0,116.0);
-  \draw[line width=6.0pt] (271.0,77.0) -- (266.0,83.0);
+  % ── a 处的方括号 [ （闭端点; 开口背向区间）──
+  \draw[line width=4.7pt]
+        (30.33,97.02) -- (22.17,97.02)
+     -- (22.17,134.56) -- (30.33,134.56);
 
-  %% ════ 曲线（prims2 的 curves —— 三段式，坐标同为 (y,x)）════
-  \draw[line width=4.0pt] (197.0,117.0) .. controls (196.7,123.5) and (202.0,129.8) .. (207.0,133.0);
-  \draw[line width=5.0pt] (206.0,97.0) .. controls (199.6,99.5) and (196.0,106.9) .. (197.0,114.0);
-  \draw[line width=5.0pt] (334.0,95.0) .. controls (345.4,93.2) and (342.7,105.8) .. (342.0,113.0);
-  \draw[line width=4.0pt] (243.0,44.0) .. controls (252.0,55.2) and (261.5,67.5) .. (263.0,82.0);
-  \draw[line width=5.0pt] (30.0,134.0) .. controls (18.3,137.3) and (21.1,124.3) .. (21.0,117.0);
-  \draw[line width=5.0pt] (30.0,96.0) .. controls (17.3,92.6) and (21.6,107.4) .. (21.0,115.0);
-  \draw[line width=4.5pt] (334.0,133.0) .. controls (346.2,136.8) and (343.3,123.1) .. (342.0,116.0);
+  % ── c 处的方括号 ] ──
+  \draw[line width=4.7pt]
+        (333.88,96.18) -- (341.77,96.18)
+     -- (341.77,133.99) -- (333.88,133.99);
 
-  %% ════ 实心点 ════
-  \fill (17.0,115.5) circle (6.5);
-  \fill (270.0,112.5) circle (7.0);
-  \fill (270.0,119.5) circle (6.0);
+  % ── d 处的圆括号 ( ──
+  \draw[line width=5.17pt]
+        (206.32,97.54)
+        .. controls (201.21,97.54) and (197.07,105.46) .. (197.07,115.22)
+        .. controls (197.07,124.98) and (201.21,132.9) .. (206.32,132.9);
 
-  %% ════ 标签（probe 直接给的 \node 行）════
-  %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{24.5}{30.6}\selectfont] at (235.4,26.3) {\textsf{\textbf{\textit{Z}}}};   % box(226,17,16,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.8}{38.5}\selectfont] at (199.8,161.3) {\textsf{\textbf{\textit{d}}}};   % box(189,149,19,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.5}{38.1}\selectfont] at (336.3,163.0) {\textsf{\textbf{\textit{c}}}};   % box(328,153,15,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (24.5,163.5) {\textsf{\textbf{\textit{a}}}};   % box(16,154,15,16)
+  % ── 三个实心点 a / z / c ──
+  \foreach \p in {(22.17,116.61), (269.42,116.61), (341.77,116.61)}
+     \fill \p circle (7.7);
 
-  % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
-  \pgfresetboundingbox
+  % ── 由 Z 指向 z 的弯箭头 ──
+  % 2026-09-25: Stealth 的**默认 inset 不是 0**，会把头收窄 **28%**
+        %   （实测：原书 17.8pt vs 我 13.9pt）。显式写 inset=0pt 后与 Triangle 等价。
+        \draw[line width=4.9pt, -{Stealth[length=27.47pt, width=18.06pt, inset=0pt]}]
+        (244.12,46.13) .. controls (258.49,65.18) and (261.99,70.84) .. (267.79,105.97);
+
+  % ── 标签（anchor=base：直接钉在扫描量出的基线上）──
+  \node[anchor=base,inner sep=0pt,font=\fontsize{24.5}{30.6}\selectfont] at (233.2,33.9) {\textsf{\textbf{\textit{Z}}}};
+  \node[anchor=base,inner sep=0pt,font=\fontsize{30.2}{37.8}\selectfont] at (23.3,169.62) {\textsf{\textbf{\textit{a}}}};
+  \node[anchor=base,inner sep=0pt,font=\fontsize{30.5}{38.1}\selectfont] at (197.7,170.43) {\textsf{\textbf{\textit{d}}}};
+  \node[anchor=base,inner sep=0pt,font=\fontsize{30.0}{37.5}\selectfont] at (333.6,169.35) {\textsf{\textbf{\textit{c}}}};
+
   \path[use as bounding box] (0,0) rectangle (439,180);
 \end{tikzpicture}
 \end{document}
-
-% ⚠ 待核清单（probe 拿不准，人眼过一遍）：
-%   · 未识别/跳过：⑤ 跳过/未识别的字形
-%   · 未识别/跳过：box(242,43,31,62)

@@ -1,48 +1,49 @@
-% 图 70.3 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
+% 图 70.3 —— **结构化重画**（2026-09-25，替换掉 `checks/emit_hand.py` 的逐段拟合稿）
 %%
-% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 70.3` 看指标 + 看叠合图。
+% 结构：一个圆 + 一条过心直径 + 圆周上 4 个实心点 + 7 个文字标签（**无箭头**）
 %%
-%% ⚠ 待核：
-%   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
-%   · 可疑字形 1 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
+% 旧版是**描摹**：把每一段笔画单独拟合后发出来，连「箭头头」都被当成"一条很粗的短线"描
+%   （图 81.5 上一度出现 `\draw[line width=7.0pt] (586,277)--(586,270);` 这种 7px 长的疙瘩），
+%   渲染出来是黑疙瘩而不是箭头。本版改成**看懂结构后用 TikZ 画**。
+%%
+% 做法、约定、已踩过的坑 → `＜工作区＞\checks\redraw\README_重画流程.md`
+% 本图圆/椭圆的中心与半径、标签的文字与位置，沿用 probe 的脚手架（那部分它是对的）。
+%%
+% ⚠ 本图 tikzpicture 是 y=-1pt（**y 翻转**）⇒ `arc` 的角向"递减"才是屏幕逆时针；
+%   同一根线上的多段弧必须同向。改完务必拿原书并排、放大核箭头朝向。
 %%
 \documentclass[12pt]{standalone}
 \usepackage{fontspec}
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
-\begin{tikzpicture}[x=1pt, y=-1pt, line width=4.0pt, line cap=round, line join=round]
+\begin{tikzpicture}[x=1pt, y=-1pt, line width=4.8pt, line cap=round, line join=round]
 
-  %% ════ 填充区（prims2 的 fills）════
-  \fill (235.0,50.0) -- (249.0,50.0) -- (244.0,46.0) -- (240.0,46.0) -- cycle;
-  \fill (262.0,445.0) -- (233.0,446.0) -- (237.0,450.0) -- (243.0,451.0) -- (248.0,446.0) -- cycle;
-
-  %% ════ 直线段（prims2 的 strokes）════
-  \draw[line width=5.0pt] (52.0,248.0) -- (433.0,249.0);
-
-  %% ════ 圆 / 椭圆（probe 精测）════
+  % ── 圆：中心 (242.3,247.8)、半径 193.8（prims2 的 ellipses）──
   \draw (242.3,247.8) circle (193.8);
 
-  %% ════ 实心点 ════
-  \fill (242.0,57.0) circle (5.0);
-  \fill (439.0,249.0) circle (4.0);
+  % ── 直径 pq：两端恰为圆上左右两点 ──
+  \draw (48.5,247.8) -- (436.1,247.8);
 
-  %% ════ 标签（probe 直接给的 \node 行）════
-  %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{32.9}{41.1}\selectfont] at (244.1,26.6) {\textsf{\textbf{\textit{a}}}};   % box(235,16,16,18)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.9}{36.1}\selectfont] at (333.1,114.0) {\textsf{\textbf{\textit{A}}}};   % box(321,103,19,21)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.2}{36.4}\selectfont] at (26.9,251.0) {\textsf{\textbf{\textit{P}}}};   % box(16,239,18,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.1}{38.9}\selectfont] at (463.5,253.3) {\textsf{\textbf{\textit{q}}}};   % box(454,240,17,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{32.2}{40.3}\selectfont] at (265.3,277.8) {\textsf{\textbf{\textit{C}}}};   % box(254,266,21,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.8}{39.7}\selectfont] at (380.4,421.0) {\textsf{\textbf{\textit{B}}}};   % box(368,409,21,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.3}\selectfont] at (241.8,477.8) {\textsf{\textbf{\textit{b}}}};   % box(232,465,17,23)
+  % ── 圆周上的 4 个实心点：上 a / 下 b / 左 p / 右 q ──
+  \foreach \x/\y in {242.3/54.0, 242.3/441.6, 48.5/247.8, 436.1/247.8}
+    \fill (\x,\y) circle (6.9);
 
-  % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
-  \pgfresetboundingbox
+  % ── 7 个标签（\x/\y/字号/字母）──
+  %    坐标＝原书实测的**墨迹盒中心**，再按首轮渲染实测的「盒心 vs 字形墨心」偏差回修过
+  \foreach \x/\y/\sz/\lab in {%
+      241.78/24.02/33.7/a,
+      330.58/112.27/29.8/A,
+      24.82/249.11/30.7/p,
+      461.72/250.63/30.7/q,
+      262.45/276.18/32.2/C,
+      377.48/419.77/31.5/B,
+      240.02/475.16/31.3/b}
+    \node[anchor=center,inner sep=0pt,font=\fontsize{\sz}{42.1}\selectfont] at (\x,\y) {\textsf{\textbf{\textit{\lab}}}};
+
+  % 钉死画布（W/H 取自 prims2）
   \path[use as bounding box] (0,0) rectangle (481,496);
 \end{tikzpicture}
 \end{document}
-
-% ⚠ 待核清单（probe 拿不准，人眼过一遍）：
-%   · 未识别/跳过：⑤ 跳过/未识别的字形

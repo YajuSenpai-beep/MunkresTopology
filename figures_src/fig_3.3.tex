@@ -1,10 +1,16 @@
-% 图 3.3 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
+% 图 3.3 —— **结构化重画**（2026-09-25，替换掉 `checks/emit_hand.py` 的逐段拟合稿）
 %%
-% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 3.3` 看指标 + 看叠合图。
+% 结构：左组：4 个区间号（竖笔 + 上下端帽）+ 省略号；右组：同类图形 + 标签。2026-09-25：端帽线宽 5.0 -> 4.5（实测端帽比竖笔粗 14%，原书 4.37 vs 3.83）
 %%
-%% ⚠ 待核：
-%   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
-%   · 可疑字形 1 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
+% 旧版是**描摹**：把每一段笔画单独拟合后发出来，连「箭头头」都被当成"一条很粗的短线"描
+%   （图 81.5 上一度出现 `\draw[line width=7.0pt] (586,277)--(586,270);` 这种 7px 长的疙瘩），
+%   渲染出来是黑疙瘩而不是箭头。本版改成**看懂结构后用 TikZ 画**。
+%%
+% 做法、约定、已踩过的坑 → `＜工作区＞\checks\redraw\README_重画流程.md`
+% 本图圆/椭圆的中心与半径、标签的文字与位置，沿用 probe 的脚手架（那部分它是对的）。
+%%
+% ⚠ 本图 tikzpicture 是 y=-1pt（**y 翻转**）⇒ `arc` 的角向"递减"才是屏幕逆时针；
+%   同一根线上的多段弧必须同向。改完务必拿原书并排、放大核箭头朝向。
 %%
 \documentclass[12pt]{standalone}
 \usepackage{fontspec}
@@ -12,66 +18,45 @@
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
 \begin{document}
-\begin{tikzpicture}[x=1pt, y=-1pt, line width=4.0pt, line cap=round, line join=round]
+\begin{tikzpicture}[x=1pt, y=-1pt, line width=4.0pt, line cap=round, line join=miter]
+  %% 2026-09-25：8 个开区间端原来是**两段手描贝塞尔**，各自改为一条 arc。
+  \draw[line width=4pt] (51.0,274.5) ++(-166.7:19.53) arc[start angle=-166.7, end angle=-13.3, radius=19.53];
+  \draw[line width=4pt] (159.6,276.7) ++(-161.1:20.70) arc[start angle=-161.1, end angle=-20.3, radius=20.70];
+  \draw[line width=4pt] (269.4,274.8) ++(-169.0:19.78) arc[start angle=-169.0, end angle=-20.0, radius=19.78];
+  \draw[line width=4pt] (377.5,276.6) ++(-161.4:20.58) arc[start angle=-161.4, end angle=-18.6, radius=20.58];
+  \draw[line width=4pt] (1048.1,310.3) ++(-76.5:20.87) arc[start angle=-76.5, end angle=70.8, radius=20.87];
+  \draw[line width=4pt] (1048.6,422.3) ++(-83.1:20.44) arc[start angle=-83.1, end angle=74.6, radius=20.44];
+  \draw[line width=4pt] (1047.9,533.9) ++(-81.1:20.09) arc[start angle=-81.1, end angle=72.4, radius=20.09];
+  \draw[line width=4pt] (1048.5,199.8) ++(-75.1:21.54) arc[start angle=-75.1, end angle=69.5, radius=21.54];
+  %% 2026-09-25：**全图 line join 由 round 改为 miter** —— 闭区间端 `[` 必须是**方角**，
+  %%   否则与开区间 `)` 分不出来（用户指出）。原来整图 line join=round 把方角磨圆了。
+  %%   闭区间端原是 4 段独立笔画（各带**圆线帽**），更把它磨成一团；
+  %%   现各写成一条折线 + `line join=miter, line cap=butt`。横杠/臂长由原碎线端点量得。
+  \draw[line width=4.5pt, line join=miter, line cap=butt] (176,493) -- (176,508) -- (141,508) -- (141,493);
+  \draw[line width=4.5pt, line join=miter, line cap=butt] (34,493) -- (34,508) -- (69,508) -- (69,493);
+  \draw[line width=4.5pt, line join=miter, line cap=butt] (251,494) -- (251,508) -- (286,508) -- (286,494);
+  \draw[line width=4.5pt, line join=miter, line cap=butt] (359,495) -- (359,508) -- (394,508) -- (394,495);
+  %% 2026-09-25：右组 4 个区间号的左端 `[` 帽原来由「斜线 + 竖线 + 贝塞尔」拼成
+  %%   （`(832,551)--(819.3,549.3)` 是斜的）⇒ 渲染出台阶。改为一条 `[` 形折线。
+  \draw[line width=4.5pt, line join=miter, line cap=butt] (833,290) -- (820,290) -- (820,327) -- (833,327);
+  \draw[line width=4.5pt, line join=miter, line cap=butt] (833,180) -- (820,180) -- (820,216) -- (833,216);
+  \draw[line width=4.5pt, line join=miter, line cap=butt] (833,404) -- (820,404) -- (820,439) -- (833,439);
+  \draw[line width=4.5pt, line join=miter, line cap=butt] (833,515) -- (820,515) -- (820,550) -- (833,550);
 
   %% ════ 填充区（prims2 的 fills）════
 
   %% ════ 直线段（prims2 的 strokes）════
-  \draw[line width=4.0pt] (176.0,493.0) -- (175.0,507.0);
-  \draw[line width=5.0pt] (175.0,507.0) -- (160.0,508.0);
-  \draw[line width=5.0pt] (158.0,508.0) -- (141.9,507.9);
-  \draw[line width=4.0pt] (141.9,507.9) -- (141.0,493.0);
-  \draw[line width=5.0pt] (267.0,508.0) -- (251.8,507.8);
-  \draw[line width=4.0pt] (251.8,507.8) -- (251.0,494.0);
   \draw[line width=4.0pt] (160.0,257.0) -- (159.0,507.0);
-  \draw[line width=5.0pt] (50.0,508.0) -- (34.9,507.9);
-  \draw[line width=4.0pt] (34.9,507.9) -- (34.0,493.0);
-  \draw[line width=5.0pt] (268.0,507.0) -- (269.0,256.0);
-  \draw[line width=5.0pt] (51.0,507.0) -- (52.0,256.0);
-  \draw[line width=5.0pt] (832.0,551.0) -- (819.3,549.3);
-  \draw[line width=5.0pt] (819.3,549.3) -- (819.0,534.0);
-  \draw[line width=5.0pt] (52.0,508.0) -- (68.0,507.0);
-  \draw[line width=4.0pt] (68.0,507.0) -- (69.0,493.0);
+  \draw[line width=4.5pt] (268.0,507.0) -- (269.0,256.0);
+  \draw[line width=4.5pt] (51.0,507.0) -- (52.0,256.0);
   \draw[line width=4.0pt] (904.0,580.0) -- (903.0,586.0);
-  \draw[line width=4.5pt] (833.0,439.0) -- (819.0,438.0);
-  \draw[line width=4.0pt] (819.0,438.0) -- (820.0,422.0);
-  \draw[line width=5.0pt] (376.0,508.0) -- (360.0,509.0);
-  \draw[line width=4.0pt] (360.0,509.0) -- (359.0,495.0);
-  \draw[line width=5.0pt] (821.0,310.0) -- (1068.0,310.0);
+  \draw[line width=4.5pt] (821.0,310.0) -- (1068.0,310.0);
   \draw[line width=4.0pt] (378.0,257.0) -- (377.0,505.0);
   \draw[line width=4.0pt] (1068.0,422.0) -- (820.0,422.0);
-  \draw[line width=5.0pt] (834.0,179.0) -- (820.0,182.1);
-  \draw[line width=4.0pt] (820.0,182.1) -- (821.0,199.0);
-  \draw[line width=5.0pt] (832.0,290.0) -- (820.4,291.6);
-  \draw[line width=5.0pt] (820.4,291.6) -- (820.0,309.0);
-  \draw[line width=5.0pt] (821.0,199.0) -- (1069.0,200.0);
-  \draw[line width=4.0pt] (821.0,199.0) -- (820.5,215.5);
-  \draw[line width=4.5pt] (820.5,215.5) -- (833.0,217.0);
-  \draw[line width=5.0pt] (833.0,514.0) -- (819.4,515.6);
-  \draw[line width=5.0pt] (819.4,515.6) -- (819.0,534.0);
+  \draw[line width=4.5pt] (821.0,199.0) -- (1069.0,200.0);
   \draw[line width=4.0pt] (1067.0,534.0) -- (819.0,534.0);
 
   %% ════ 曲线（prims2 的 curves —— 三段式，坐标同为 (y,x)）════
-  \draw[line width=4.0pt] (1055.0,330.0) .. controls (1063.6,329.3) and (1070.3,319.4) .. (1069.0,311.0);
-  \draw[line width=4.0pt] (1069.0,423.0) .. controls (1070.6,432.0) and (1062.9,441.8) .. (1054.0,442.0);
-  \draw[line width=4.0pt] (833.0,403.0) .. controls (818.9,398.2) and (816.2,411.6) .. (820.0,422.0);
-  \draw[line width=5.0pt] (286.0,494.0) .. controls (289.9,507.1) and (280.1,510.2) .. (269.0,508.0);
-  \draw[line width=4.5pt] (1051.0,402.0) .. controls (1061.8,401.4) and (1069.2,411.0) .. (1069.0,421.0);
-  \draw[line width=4.0pt] (32.0,270.0) .. controls (32.9,260.9) and (42.0,254.4) .. (51.0,255.0);
-  \draw[line width=4.0pt] (1051.0,514.0) .. controls (1059.7,513.4) and (1070.0,523.0) .. (1068.0,533.0);
-  \draw[line width=4.0pt] (179.0,269.0) .. controls (177.0,261.0) and (169.8,254.7) .. (161.0,256.0);
-  \draw[line width=4.0pt] (1054.0,179.0) .. controls (1063.0,180.5) and (1071.6,189.1) .. (1070.0,199.0);
-  \draw[line width=5.0pt] (250.0,271.0) .. controls (249.7,261.3) and (258.9,254.9) .. (268.0,255.0);
-  \draw[line width=5.0pt] (394.0,495.0) .. controls (397.9,507.0) and (388.3,512.6) .. (378.0,508.0);
-  \draw[line width=4.0pt] (1068.0,535.0) .. controls (1069.3,543.2) and (1062.7,553.3) .. (1054.0,553.0);
-  \draw[line width=4.0pt] (358.0,270.0) .. controls (359.9,261.6) and (367.9,254.7) .. (377.0,256.0);
-  \draw[line width=4.0pt] (397.0,270.0) .. controls (396.6,261.3) and (387.7,254.5) .. (379.0,256.0);
-  \draw[line width=4.0pt] (70.0,270.0) .. controls (71.8,262.0) and (61.2,253.9) .. (53.0,255.0);
-  \draw[line width=5.0pt] (820.0,311.0) .. controls (818.5,320.4) and (819.9,330.7) .. (832.0,327.0);
-  \draw[line width=4.0pt] (1056.0,220.0) .. controls (1064.4,218.4) and (1071.5,210.0) .. (1070.0,201.0);
-  \draw[line width=4.0pt] (1053.0,290.0) .. controls (1062.7,289.8) and (1070.3,299.3) .. (1069.0,309.0);
-  \draw[line width=4.0pt] (140.0,270.0) .. controls (141.0,261.2) and (150.9,254.1) .. (159.0,256.0);
-  \draw[line width=4.0pt] (288.0,268.0) .. controls (287.4,259.8) and (277.9,254.1) .. (270.0,255.0);
 
   %% ════ 实心点 ════
   \fill (948.0,70.0) circle (6.9);

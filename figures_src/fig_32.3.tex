@@ -11,6 +11,7 @@
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=6.0pt, line cap=round, line join=round]
 
@@ -541,6 +542,7 @@
   \draw[line width=3.0pt] (302.0,420.0) -- (347.0,466.0);
   \draw[line width=3.0pt] (347.0,466.0) -- (347.0,469.0);
   \draw[line width=4.0pt] (693.0,739.0) -- (738.0,739.0);
+  \fill (738.0,733.8) -- (738.0,744.2) -- (722.4,739.0) -- cycle;
   \draw[line width=3.0pt] (668.0,193.0) -- (679.0,206.0);
   \draw[line width=3.0pt] (304.0,590.0) -- (379.0,669.0);
   \draw[line width=3.0pt] (743.0,141.0) -- (761.0,161.0);
@@ -676,7 +678,7 @@
   \fill (781.5,735.0) circle (6.5);
   \fill (584.5,743.0) circle (6.5);
   \fill (694.0,743.0) circle (7.1);
-  \fill (738.0,742.5) circle (7.0);
+  % （略）(738.0,742.5) r=7.0 落在箭头头上 —— 已由箭头头代替
   \fill (781.5,743.0) circle (6.5);
 
   %% ════ 标签（probe 直接给的 \node 行）════

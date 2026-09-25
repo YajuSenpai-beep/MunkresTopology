@@ -1,69 +1,86 @@
-% 图 81.4 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
+% 图 81.4 —— **结构化重画**（2026-09-25，替换掉 `checks/emit_hand.py` 的逐段拟合稿）
 %%
-% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 81.4` 看指标 + 看叠合图。
+% 结构：左边 3 个互切圆（B₁ 小·A₁ 大·B₂ 小）+ 右边 2 个互切圆（B·A）+ 3 个切点实心点 + 6 支切向箭头（A₁ 大圆 2 支）+ 1 支水平箭头 p + 13 个标签
 %%
-%% ⚠ 待核：
-%   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
-%   · 可疑字形 1 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
+% 旧版是**描摹**：把每一段笔画单独拟合后发出来，连「箭头头」都被当成"一条很粗的短线"描
+%   （图 81.5 上一度出现 `\draw[line width=7.0pt] (586,277)--(586,270);` 这种 7px 长的疙瘩），
+%   渲染出来是黑疙瘩而不是箭头。本版改成**看懂结构后用 TikZ 画**。
+%%
+% 做法、约定、已踩过的坑 → `＜工作区＞\checks\redraw\README_重画流程.md`
+% 本图圆/椭圆的中心与半径、标签的文字与位置，沿用 probe 的脚手架（那部分它是对的）。
+%%
+% ⚠ 本图 tikzpicture 是 y=-1pt（**y 翻转**）⇒ `arc` 的角向"递减"才是屏幕逆时针；
+%   同一根线上的多段弧必须同向。改完务必拿原书并排、放大核箭头朝向。
 %%
 \documentclass[12pt]{standalone}
 \usepackage{fontspec}
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
-\begin{tikzpicture}[x=1pt, y=-1pt, line width=4.4pt, line cap=round, line join=round]
+\begin{tikzpicture}[x=1pt, y=-1pt, line width=4.8pt, line cap=round, line join=round]
+  % ---- 箭头（2026-09-25）-----------------------------------------------------
+  % 样式与全库一致：标准 `-{Triangle[width=..,length=..]}`，不自创图元。
+  % ⚠ 关键：**箭头弧要短**。把圆画成 circle、箭头画成一条**长**弧时，长弧在
+  %   `y=-1pt`（y 翻转）下会累积约 0.75pt 的径向漂移，两条笔画不重合、并集外扩
+  %   ⇒ "箭头后的部分很粗"。实测（r=79.4）：
+  %       圆            θ=258° 外缘 +2.99  宽 5.22
+  %       长弧 340→239            +3.74      5.55   ✗
+  %       短弧 256→239            +2.63      4.44   ✓ 与圆重合
+  %   所以箭头只挂 ~18°（≈头长）的短弧；外溢的部分盖在圆上，看不见。
+  \def\arr{-{Triangle[width=17.1pt,length=14.8pt]}}
+  \def\arrowarc#1#2#3#4{%
+    \draw[\arr] (#1,#2) ++(#4+18:#3) arc[start angle=#4+18, end angle=#4, radius=#3];%
+  }
+  \def\arrP{-{Triangle[width=14pt,length=27pt]}}
+  %% ⚠ 本图 tikzpicture 是 y=-1pt（y 翻转）⇒ **角向递减 = 屏幕上的逆时针**。
+  %%    本图 6 支切向箭头全部逆时针：顶上的箭头朝左、底下那支（A2）朝右上。
+  %%    每段弧都必须**递减**（end < start）。
 
-  %% ════ 填充区（prims2 的 fills）════
-  \fill (409.0,166.0) -- (410.0,178.0) -- (413.0,170.0) -- cycle;
+  % ── 三个切点上的实心点 ──
+  \foreach \x/\y in {171.1/171.1, 405.0/171.6, 959.8/171.4} \fill (\x,\y) circle (7.1);
 
-  %% ════ 直线段（prims2 的 strokes）════
-  \draw[line width=6.5pt] (501.0,100.0) -- (497.0,95.0);
-  \draw[line width=6.5pt] (724.0,148.0) -- (721.0,154.0);
-  \draw[line width=6.7pt] (338.0,270.0) -- (344.0,272.0);
-  \draw[line width=7.0pt] (263.0,64.0) -- (258.0,60.0);
-  \draw[line width=5.0pt] (348.0,273.0) -- (347.0,282.0);
-  \draw[line width=6.0pt] (1051.0,91.0) -- (1057.0,84.0);
-  \draw[line width=10.0pt] (258.0,49.0) -- (255.0,58.0);
-  \draw[line width=4.0pt] (657.0,148.0) -- (723.0,147.0);
-  \draw[line width=7.4pt] (73.0,100.0) -- (67.0,98.0);
-  \draw[line width=6.1pt] (1053.0,94.0) -- (1056.0,99.0);
-  \draw[line width=6.0pt] (726.0,147.0) -- (743.0,148.0);
-  \draw[line width=6.3pt] (64.0,96.0) -- (65.0,90.0);
-  \draw[line width=6.0pt] (496.0,92.0) -- (499.0,87.0);
-  \draw[line width=6.5pt] (892.0,91.0) -- (896.0,85.0);
+  % ── 五个圆：**单独画完整圆**（cx/cy/r1 取自 prims2 的 ellipses）──
+  %   ⚠ 2026-09-25 用户指出：**不要把圆拆成"首尾相接的两条弧、拿弧端当箭尖"** ——
+  %     那样圆的连续性依赖接缝接得准不准，而接缝正在箭尖处，接不准就**露缺口**，
+  %     圆头线帽还会在接点鼓出一个小疙瘩。**圆要单独画完整**，箭头只是叠上去的短弧。
+  \foreach \cx/\cy/\r in {92.4/171.0/79.1, 287.8/171.1/117.2, 484.3/172.2/79.4,
+                          879.8/171.9/79.5, 1039.5/170.9/79.3}
+    \draw (\cx,\cy) circle (\r);
 
-  %% ════ 圆 / 椭圆（probe 精测）════
-  \draw (287.8,171.1) circle (117.2);
-  \draw (484.3,172.2) circle (79.4);
-  \draw (879.8,171.9) circle (79.5);
-  \draw (1039.5,170.9) circle (79.3);
-  \draw (92.4,171.0) circle (79.1);
+  % ── 切向箭头：叠在圆上的**短弧**（角向一律**递减** —— y 翻转的坑，见 §3）──
+  % ── 大圆 A1：上下各一支（尖端 50.8° / 245.7°，取自原书实测）──
+  \arrowarc{287.8}{171.1}{117.2}{50.8}
+  \arrowarc{287.8}{171.1}{117.2}{245.7}
+  % ── 四个小圆：各一支 ──
+  \foreach \cx/\cy/\r/\tt in {92.4/171.0/79.1/235.8,%
+                              484.3/172.2/79.4/264.7,%
+                              879.8/171.9/79.5/265.1,%
+                              1039.5/170.9/79.3/264.6} {
+    \arrowarc{\cx}{\cy}{\r}{\tt}
+  }
 
-  %% ════ 实心点 ════
-  \fill (724.5,142.0) circle (3.6);
+  % ── 水平箭头 p ──
+  \draw[\arrP, line width=4.4pt] (655.0,147.6) -- (746.5,147.6);
 
-  %% ════ 标签（probe 直接给的 \node 行）════
-  %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.3}{37.9}\selectfont] at (323.8,26.5) {\textsf{\textbf{\textit{A}}}};   % box(311,15,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.2}{27.8}\selectfont] at (341.1,40.4) {\textsf{\textbf{1}}};   % box(335,32,7,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (113.2,55.5) {\textsf{\textbf{\textit{B}}}};   % box(102,44,19,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.2}{37.8}\selectfont] at (540.3,57.0) {\textsf{\textbf{\textit{B}}}};   % box(529,45,19,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.2}{37.8}\selectfont] at (905.3,57.0) {\textsf{\textbf{\textit{B}}}};   % box(894,45,19,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.3}{37.9}\selectfont] at (1095.8,57.5) {\textsf{\textbf{\textit{A}}}};   % box(1083,46,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.7}{29.7}\selectfont] at (128.8,70.4) {\textsf{\textbf{1}}};   % box(122,62,8,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.6}{29.6}\selectfont] at (555.1,70.9) {\textsf{\textbf{2}}};   % box(549,62,11,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.8}{37.3}\selectfont] at (696.0,108.5) {\textsf{\textbf{\textit{P}}}};   % box(685,96,18,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{32.4}{40.5}\selectfont] at (431.9,173.6) {\textsf{\textbf{\textit{e}}}};   % box(422,163,16,18)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{24.9}{31.1}\selectfont] at (446.1,182.7) {\textsf{\textbf{0}}};   % box(438,174,12,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (383.2,282.5) {\textsf{\textbf{\textit{A}}}};   % box(371,271,19,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{24.0}{30.0}\selectfont] at (398.6,297.4) {\textsf{\textbf{2}}};   % box(392,289,12,16)
+  % ── 标签（数字不斜体；下标另起一个 node，不用 $...$）──
+  \node[anchor=center,inner sep=0pt,font=\fontsize{30.3}{37.9}\selectfont] at (321.2,25.2) {\textsf{\textbf{\textit{A}}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{22.2}{27.8}\selectfont] at (338.4,39.4) {\textsf{\textbf{1}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{29.6}{37.0}\selectfont] at (110.3,54.4) {\textsf{\textbf{\textit{B}}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{23.7}{29.7}\selectfont] at (126.6,68.9) {\textsf{\textbf{1}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{30.2}{37.8}\selectfont] at (537.4,56.0) {\textsf{\textbf{\textit{B}}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{23.6}{29.6}\selectfont] at (554.2,70.0) {\textsf{\textbf{2}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{30.2}{37.8}\selectfont] at (902.7,56.0) {\textsf{\textbf{\textit{B}}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{30.3}{37.9}\selectfont] at (1093.3,56.4) {\textsf{\textbf{\textit{A}}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{29.8}{37.3}\selectfont] at (693.5,106.9) {\textsf{\textbf{\textit{p}}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{32.4}{40.5}\selectfont] at (428.4,171.2) {\textsf{\textbf{\textit{e}}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{24.9}{31.1}\selectfont] at (443.9,182.3) {\textsf{\textbf{0}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{29.6}{37.0}\selectfont] at (380.8,281.6) {\textsf{\textbf{\textit{A}}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{24.0}{30.0}\selectfont] at (398.0,296.3) {\textsf{\textbf{2}}};
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox
   \path[use as bounding box] (0,0) rectangle (1134,314);
 \end{tikzpicture}
 \end{document}
-
-% ⚠ 待核清单（probe 拿不准，人眼过一遍）：
-%   · 未识别/跳过：⑤ 跳过/未识别的字形

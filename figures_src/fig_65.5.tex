@@ -11,11 +11,12 @@
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=6.0pt, line cap=round, line join=round]
 
   %% ════ 直线段（prims2 的 strokes）════
-  \draw[line width=6.0pt] (300.0,166.0) -- (295.0,163.0);
+  % （略）线段 (300.0,166.0)-(295.0,163.0) 线宽6.0 —— 是箭头头那一坨，已由箭头头代替
   \draw[line width=8.0pt] (366.0,270.0) -- (303.0,263.0);
   \draw[line width=6.0pt] (163.0,139.0) -- (153.0,136.0);
   \draw[line width=7.0pt] (295.0,255.0) -- (302.0,262.0);
@@ -36,6 +37,7 @@
   \draw[line width=7.0pt] (408.0,84.0) -- (411.0,75.0);
   \draw[line width=8.0pt] (152.0,136.0) -- (107.0,169.0);
   \draw[line width=5.0pt] (303.0,91.0) -- (295.0,163.0);
+  \fill (300.0,163.6) -- (290.0,162.4) -- (296.7,148.1) -- cycle;
   \draw[line width=7.0pt] (43.0,241.0) -- (34.3,248.3);
   \draw[line width=6.0pt] (153.0,135.0) -- (158.0,127.0);
   \draw[line width=7.0pt] (290.0,258.0) -- (293.0,264.0);

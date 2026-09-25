@@ -11,6 +11,7 @@
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=3.0pt, line cap=round, line join=round]
 
@@ -77,7 +78,7 @@
   \draw[line width=3.0pt] (338.0,433.0) -- (332.0,441.0);
   \draw[line width=3.0pt] (303.0,434.0) -- (310.0,443.0);
   \draw[line width=4.0pt] (423.0,442.0) -- (429.0,433.0);
-  \draw[line width=5.0pt] (87.0,444.0) -- (99.0,441.0);
+  % （略）线段 (87.0,444.0)-(99.0,441.0) 线宽5.0 —— 是箭头头那一坨，已由箭头头代替
   \draw[line width=3.0pt] (313.0,312.0) -- (321.0,320.0);
   \draw[line width=4.5pt] (107.0,333.0) -- (111.4,334.4);
   \draw[line width=3.0pt] (111.4,334.4) -- (213.6,438.6);
@@ -427,7 +428,7 @@
   \draw[line width=6.0pt] (117.0,283.0) -- (120.6,289.6);
   \draw[line width=6.9pt] (120.6,289.6) -- (126.4,292.4);
   \draw[line width=3.0pt] (126.4,292.4) -- (272.0,443.0);
-  \draw[line width=5.0pt] (106.0,443.0) -- (111.0,443.0);
+  % （略）线段 (106.0,443.0)-(111.0,443.0) 线宽5.0 —— 是箭头头那一坨，已由箭头头代替
   \draw[line width=4.0pt] (452.0,281.0) -- (467.0,281.0);
   \draw[line width=5.0pt] (636.0,443.0) -- (619.0,443.0);
   \draw[line width=5.0pt] (93.0,291.0) -- (100.0,283.0);
@@ -610,6 +611,7 @@
   \draw[line width=3.0pt] (249.4,286.4) .. controls (264.8,297.2) and (274.6,316.8) .. (291.0,325.0);
   \draw[line width=3.0pt] (564.0,442.0) .. controls (525.6,396.8) and (481.5,354.6) .. (438.0,312.0);
   \draw[line width=3.0pt] (99.0,440.0) .. controls (89.6,424.0) and (76.1,410.4) .. (62.0,397.0);
+  \fill (102.2,437.3) -- (95.8,442.7) -- (90.8,430.4) -- cycle;
   \draw[line width=3.0pt] (310.0,92.0) .. controls (303.9,92.7) and (301.9,102.5) .. (295.0,101.0);
   \draw[line width=3.0pt] (438.0,369.0) .. controls (462.4,391.5) and (488.3,416.3) .. (509.0,442.0);
   \draw[line width=3.0pt] (401.0,279.0) .. controls (409.1,266.0) and (423.0,252.0) .. (436.0,244.0);

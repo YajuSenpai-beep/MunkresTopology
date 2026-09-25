@@ -11,6 +11,7 @@
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=4.0pt, line cap=round, line join=round]
 
@@ -18,12 +19,14 @@
 
   %% ════ 直线段（prims2 的 strokes）════
   \draw[line width=4.0pt] (248.0,113.0) -- (388.0,113.0);
+  \fill (248.0,118.0) -- (248.0,108.0) -- (263.0,113.0) -- cycle;
   \draw[line width=5.0pt] (22.0,113.0) -- (246.0,113.0);
   \draw[line width=5.0pt] (390.0,111.0) -- (398.0,92.0);
   \draw[line width=5.0pt] (318.0,88.0) -- (319.0,102.0);
 
   %% ════ 曲线（prims2 的 curves —— 三段式，坐标同为 (y,x)）════
   \draw[line width=5.0pt] (21.0,114.0) .. controls (20.5,121.6) and (19.3,137.0) .. (31.0,131.0);
+  \fill (16.7,116.5) -- (25.3,111.5) -- (28.6,126.9) -- cycle;
   \draw[line width=5.0pt] (389.0,110.0) .. controls (387.5,102.5) and (391.3,91.7) .. (379.0,95.0);
   \draw[line width=3.0pt] (317.0,85.0) .. controls (314.6,70.6) and (305.8,56.7) .. (295.0,47.0);
   \draw[line width=6.0pt] (30.0,94.0) .. controls (18.3,91.2) and (21.1,104.8) .. (21.0,112.0);
@@ -33,7 +36,7 @@
   \draw[line width=5.0pt] (247.0,114.0) .. controls (247.4,121.4) and (243.8,135.4) .. (256.0,132.0);
 
   %% ════ 实心点 ════
-  \fill (16.5,113.0) circle (6.0);
+  % （略）(16.5,113.0) r=6.0 落在箭头头上 —— 已由箭头头代替
   \fill (318.5,110.0) circle (6.5);
   \fill (319.0,116.0) circle (7.0);
 
