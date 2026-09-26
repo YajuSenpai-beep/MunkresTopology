@@ -1149,7 +1149,10 @@ Step 1. Let \(q : S^{1} \rightarrow {S}^{1}\) be the map \(q( z) = z^{2}\), wher
 		\node (B) at (914.3, -187.5) {$S^1$};
 		\node (C) at (134.3, -942.5) {$S^1$};
 		\node (D) at (914.3, -942.5) {$S^1$};
-		\draw[->] (B) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$h$} (A);
+		% 2026-09-26 修**事实性错误**：h 箭头原先写成 (B)--(A)，方向反了。
+		%   原书（本复刻书**书印 p.393**，8× 放大核）上下两条横箭头**都指向右**：
+		%   上排 S¹ --h--> S¹、下排 S¹ --k--> S¹（k∘q = q∘h）。
+		\draw[->] (A) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$h$} (B);
 		\draw[->] (A) -- node[inner sep=0pt,left=3pt] {$q$} (C);
 		\draw[->] (B) -- node[inner sep=0pt,left=3pt] {$q$} (D);   % 右侧竖箭头的 q 也在箭头左侧
 		\draw[->] (C) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$k$} (D);
@@ -1446,7 +1449,12 @@ where \(x_{1} = g( y_{0})\) and \(y_{1} = f( x_{1})\). We have the corresponding
 	\munkrescomm{0.38}{%
 		\node (A) at (199.0, -103.9) {$\pi_1(X,x_0)$};
 		\node (B) at (873.6, -103.9) {$\pi_1(Y,y_0)$};
-		\node (C) at (254.3, -463.9) {$\pi_1(X,x_1)$};
+		% 2026-09-26 样式修正：C 原先 x=254.3，比左上的 A(x=199.0) 右移 55 单位（5.3% 图宽）。
+		%   原书里上下两排的左侧标签是**逐字形左对齐**的：把该图裁切做连通域，
+		%   上下两排每个字形的 x 范围逐个重合（1..54↔0..53、137..199↔137..199、
+		%   250..295↔250..295…），两排中心只差 −1 单位。故 C 的 x 取与 A 同值。
+		%   连带效果：B→C 那条 g_* 斜箭随节点边界自动变长变斜一点，其余不动。
+		\node (C) at (199.0, -463.9) {$\pi_1(X,x_1)$};
 		\node (D) at (873.6, -463.9) {$\pi_1(Y,y_1)$};
 		\draw[->] (A) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$(f_{x_0})_*$} (B);
 		\draw[->] (C) -- node[inner sep=0pt,above=3.5pt,pos=.5] {$(f_{x_1})_*$} (D);
