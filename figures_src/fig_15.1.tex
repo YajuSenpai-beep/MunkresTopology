@@ -1,136 +1,120 @@
-% 图 15.1 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
-%%
-% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 15.1` 看指标 + 看叠合图。
-%%
-%% ⚠ 待核：
-%   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
-%   · 可疑字形 1 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
-%%
+% 图 15.1 —— 手工重建（2026-09-30 重画；2026-10-01 修正记号朝向与括号跨度）
+%
+% 前身是 emit_hand.py 的 91 条描摹碎片。重画与修正的理由**都是语义**，不是像素：
+%   · 端点弧 = 开区间的记号。少画一个 ⇒ 括号所跨的区间变了 ⇒ 图是另一个意思。
+%   · 端点弧的**朝向不是固定的**：一律「开口朝向它所界定的那个区间」——
+%       左端点 `(`、右端点 `)`、上端点 `⌒`、下端点 `⌣`。
+%     全图画成同一个朝向 ⇒ 必然有一半是反的（旧稿 8 个里错了 4 个）。
+%
+% 几何与线宽全部实测自 src_hi/15.1.png（600dpi，1597×861，脚本内坐标 = pt）：
+%   竖轴 x=202（y 16→645）｜横轴 y=645（x 202→1578）       主轴/矩形线宽 ≈ 7pt
+%   左矩形 (667,264)-(990,605)   右矩形 (810,59)-(1510,451)
+%   区间  u1=(667,990)  u2=(810,1510)   v1=(264,605)  v2=(59,451)
+%   端点弧：跨过轴线 ±31，矢高 ≈ 18（旧稿写 29，太深）
+%   花括号：v2 跨 55→451（**尖头不在中点**，在 31% 处）｜v1 跨 269→603
+%           u1 跨 667→990 @y738 ｜ u2 跨 810→1505 @y700（u2 比 u1 **高**）
+%           幅度 ≈ 20（竖）/ 16（横）
+%   阴影：45°、方向 `\`（右下斜）、横向间距 33、线宽 8pt
+%   标签：v 墨迹高 41 ⇒ 字号 70；下标数字高 31 ⇒ 字号 44；位置取实测墨迹框中心
+%
 \documentclass[12pt]{standalone}
 \usepackage{fontspec}
-\setsansfont{Arial}
+\setsansfont{TeX Gyre Heros}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
 \begin{document}
-\begin{tikzpicture}[x=1pt, y=-1pt, line width=4.0pt, line cap=round, line join=round]
+\begin{tikzpicture}[x=1pt, y=-1pt, line width=7.0pt, line cap=round, line join=round]
 
-  %% ════ 填充区（prims2 的 fills）════
+  %% ════ 坐标轴 ════
+  \draw (202,16) -- (202,645) -- (1578,645);
 
-  %% ════ 直线段（prims2 的 strokes）════
-  \draw[line width=4.0pt] (830.0,360.0) -- (550.0,359.0);
-  \draw[line width=6.0pt] (550.0,254.0) -- (541.0,253.0);
-  \draw[line width=4.5pt] (487.0,253.0) -- (504.0,253.0);
-  \draw[line width=4.0pt] (551.0,253.0) -- (550.0,239.0);
-  \draw[line width=5.0pt] (832.0,360.0) -- (870.0,359.0);
-  \draw[line width=5.0pt] (552.0,254.0) -- (832.1,253.9);
-  \draw[line width=3.8pt] (832.1,253.9) -- (834.0,250.6);
-  \draw[line width=4.0pt] (834.0,250.6) -- (834.0,40.0);
-  \draw[line width=5.0pt] (834.0,40.0) -- (452.5,38.5);
-  \draw[line width=5.0pt] (452.5,38.5) -- (451.0,151.0);
-  \draw[line width=4.0pt] (551.0,255.0) -- (549.6,336.4);
-  \draw[line width=5.0pt] (549.6,336.4) -- (371.1,336.1);
-  \draw[line width=5.0pt] (371.1,336.1) -- (371.6,153.4);
-  \draw[line width=4.0pt] (371.6,153.4) -- (450.0,152.0);
-  \draw[line width=5.0pt] (550.0,163.0) -- (551.0,180.0);
-  \draw[line width=5.0pt] (370.0,359.0) -- (119.2,359.0);
-  \draw[line width=5.0pt] (119.2,359.0) -- (117.0,337.0);
-  \draw[line width=4.0pt] (57.0,243.0) -- (62.7,237.3);
-  \draw[line width=5.0pt] (62.7,237.3) -- (66.0,156.4);
-  \draw[line width=4.0pt] (66.0,156.4) -- (71.0,152.0);
-  \draw[line width=6.0pt] (451.0,218.0) -- (451.0,236.0);
-  \draw[line width=5.0pt] (372.0,359.0) -- (445.0,359.0);
-  \draw[line width=4.0pt] (523.0,153.0) -- (541.0,153.0);
-  \draw[line width=4.0pt] (486.0,153.0) -- (469.0,153.0);
-  \draw[line width=3.0pt] (486.0,153.0) -- (505.0,153.0);
-  \draw[line width=4.0pt] (117.0,335.0) -- (117.0,254.0);
-  \draw[line width=5.0pt] (548.0,359.0) -- (447.0,359.0);
-  \draw[line width=6.0pt] (451.0,237.0) -- (451.9,252.9);
-  \draw[line width=4.0pt] (451.9,252.9) -- (468.0,253.0);
-  \draw[line width=5.0pt] (451.0,197.0) -- (451.0,180.0);
-  \draw[line width=5.0pt] (118.0,336.0) -- (130.0,327.0);
-  \draw[line width=5.0pt] (541.0,253.0) -- (524.0,253.0);
-  \draw[line width=5.0pt] (451.0,199.0) -- (451.0,216.0);
-  \draw[line width=4.0pt] (549.0,403.0) -- (543.3,408.7);
-  \draw[line width=4.0pt] (543.3,408.7) -- (465.0,412.0);
-  \draw[line width=4.0pt] (465.0,412.0) -- (460.0,417.0);
-  \draw[line width=3.0pt] (57.0,245.0) -- (63.0,253.0);
-  \draw[line width=4.0pt] (63.0,253.0) -- (65.0,332.0);
-  \draw[line width=4.0pt] (65.0,332.0) -- (71.0,337.0);
-  \draw[line width=5.0pt] (451.0,161.0) -- (451.0,178.0);
-  \draw[line width=5.0pt] (470.0,253.0) -- (485.0,253.0);
-  \draw[line width=4.0pt] (117.0,252.0) -- (118.0,155.0);
-  \draw[line width=4.0pt] (459.0,417.0) -- (449.8,410.0);
-  \draw[line width=4.0pt] (449.8,410.0) -- (376.4,409.0);
-  \draw[line width=4.0pt] (376.4,409.0) -- (370.0,405.0);
-  \draw[line width=4.0pt] (550.0,219.0) -- (550.0,237.0);
-  \draw[line width=3.0pt] (828.0,384.0) -- (823.0,389.0);
-  \draw[line width=4.0pt] (823.0,389.0) -- (665.2,390.0);
-  \draw[line width=4.0pt] (665.2,390.0) -- (656.0,397.0);
-  \draw[line width=4.0pt] (522.0,153.0) -- (505.0,153.0);
-  \draw[line width=4.0pt] (456.0,383.0) -- (461.4,388.0);
-  \draw[line width=4.0pt] (461.4,388.0) -- (644.2,389.2);
-  \draw[line width=3.0pt] (644.2,389.2) -- (656.0,397.0);
-  \draw[line width=4.0pt] (119.0,14.0) -- (118.0,35.0);
-  \draw[line width=5.0pt] (451.0,153.0) -- (451.0,159.0);
-  \draw[line width=5.0pt] (551.0,182.0) -- (550.0,200.0);
-  \draw[line width=4.0pt] (550.0,200.0) -- (550.0,218.0);
-  \draw[line width=3.0pt] (96.0,248.0) -- (90.0,242.0);
-  \draw[line width=4.0pt] (90.0,242.0) -- (88.0,111.0);
-  \draw[line width=3.0pt] (88.0,111.0) -- (82.0,105.0);
-  \draw[line width=5.0pt] (522.0,253.0) -- (506.0,253.0);
-  \draw[line width=5.0pt] (118.0,37.0) -- (118.0,152.0);
-  \draw[line width=4.0pt] (452.0,152.0) -- (469.0,153.0);
-  \draw[line width=3.0pt] (469.0,153.0) -- (472.6,160.6);
-  \draw[line width=3.0pt] (472.6,160.6) -- (549.0,238.0);
+  %% ════ 端点弧（开区间记号）════
+  %% ⚠ 这是**几何记号**，按规范形状发：一条 `arc[起止角, 半径]`（同 fig_3.3 的 8 个开区间端）。
+  %%   不要用贝塞尔去描墨迹。判据=圆拟合残差：这 8 条实测残差 0.41~0.54 个单位。
+  %% 规则：**圆心落在轴线上、沿轴朝它所界的区间偏 ≈29，半径 ≈28，扫 ≈130°**，
+  %%   于是弧**开口朝向区间**（上端 ⌒、下端 ⌣、左端 ( 、右端 ) 全由此自然得到）。
+  \draw[line width=7.0pt] (692.4,643.7)  ++(113.5:27.81) arc[start angle=113.5,  end angle=247.7, radius=27.81];  % x=667  (  u1 左
+  \draw[line width=7.0pt] (832.0,644.0)  ++(113.9:29.71) arc[start angle=113.9,  end angle=246.0, radius=29.71];  % x=810  (  u2 左
+  \draw[line width=7.0pt] (962.2,645.1)  ++(-61.3:29.81) arc[start angle=-61.3,  end angle=64.4,  radius=29.81];  % x=990  )  u1 右
+  \draw[line width=7.0pt] (1477.4,647.9) ++(-66.4:30.49) arc[start angle=-66.4,  end angle=64.2,  radius=30.49];  % x=1510 )  u2 右
+  \draw[line width=7.0pt] (203.7,80.0)   ++(-157.7:26.67) arc[start angle=-157.7, end angle=-22.6, radius=26.67]; % y=55   ⌒  v2 上
+  \draw[line width=7.0pt] (203.1,296.7)  ++(-155.8:28.43) arc[start angle=-155.8, end angle=-18.2, radius=28.43]; % y=269  ⌒  v1 上
+  \draw[line width=7.0pt] (201.3,424.2)  ++(22.1:27.93)  arc[start angle=22.1,   end angle=155.7, radius=27.93]; % y=451  ⌣  v2 下
+  \draw[line width=7.0pt] (200.5,576.5)  ++(24.3:27.27)  arc[start angle=24.3,   end angle=157.4, radius=27.27]; % y=603  ⌣  v1 下
 
-  %% ════ 曲线（prims2 的 curves —— 三段式，坐标同为 (y,x)）════
-  \draw[line width=4.0pt] (117.0,36.0) .. controls (112.0,36.9) and (103.4,39.6) .. (105.0,46.0);
-  \draw[line width=5.0pt] (549.0,360.0) .. controls (549.1,365.4) and (545.6,371.7) .. (540.0,373.0);
-  \draw[line width=3.0pt] (452.0,236.0) .. controls (459.2,237.9) and (465.5,245.8) .. (469.0,252.0);
-  \draw[line width=5.0pt] (119.0,36.0) .. controls (124.8,35.3) and (130.2,39.9) .. (132.0,45.0);
-  \draw[line width=4.0pt] (371.0,358.0) .. controls (370.4,351.8) and (374.6,344.9) .. (381.0,344.0);
-  \draw[line width=4.0pt] (456.0,343.0) .. controls (450.4,346.1) and (445.1,350.8) .. (446.0,358.0);
-  \draw[line width=3.0pt] (549.0,218.0) .. controls (526.4,199.5) and (504.4,175.6) .. (486.0,153.0);
-  \draw[line width=4.0pt] (116.0,253.0) .. controls (110.6,252.6) and (104.6,249.7) .. (103.0,244.0);
-  \draw[line width=5.0pt] (382.0,373.0) .. controls (376.7,371.4) and (370.0,366.5) .. (371.0,360.0);
-  \draw[line width=5.0pt] (116.0,336.0) .. controls (110.2,335.2) and (102.5,331.9) .. (102.0,325.0);
-  \draw[line width=5.0pt] (118.0,253.0) .. controls (124.4,253.6) and (130.5,248.5) .. (131.0,242.0);
-  \draw[line width=4.0pt] (549.0,358.0) .. controls (548.8,352.0) and (545.5,347.1) .. (540.0,344.0);
-  \draw[line width=4.0pt] (822.0,346.0) .. controls (828.1,347.1) and (830.3,353.9) .. (831.0,359.0);
-  \draw[line width=3.0pt] (549.0,162.0) .. controls (545.2,161.0) and (542.4,157.9) .. (542.0,154.0);
-  \draw[line width=4.0pt] (831.0,361.0) .. controls (832.1,366.9) and (826.9,373.8) .. (821.0,374.0);
-  \draw[line width=4.0pt] (117.0,154.0) .. controls (110.3,152.9) and (105.7,157.7) .. (103.0,163.0);
-  \draw[line width=3.0pt] (541.0,253.0) .. controls (514.4,220.6) and (483.5,188.2) .. (452.0,160.0);
-  \draw[line width=3.0pt] (96.0,41.0) .. controls (80.4,57.2) and (100.3,87.7) .. (82.0,103.0);
-  \draw[line width=3.0pt] (452.0,198.0) .. controls (471.7,212.0) and (489.2,233.4) .. (505.0,252.0);
-  \draw[line width=3.0pt] (452.0,217.0) .. controls (465.4,224.9) and (477.8,239.2) .. (486.0,252.0);
-  \draw[line width=3.0pt] (550.0,181.0) .. controls (539.2,176.2) and (529.5,163.8) .. (523.0,154.0);
-  \draw[line width=5.0pt] (456.0,372.0) .. controls (449.8,371.9) and (446.2,365.6) .. (446.0,360.0);
-  \draw[line width=4.0pt] (452.0,179.0) .. controls (477.6,200.5) and (501.6,226.7) .. (523.0,252.0);
-  \draw[line width=3.0pt] (550.0,200.0) .. controls (533.1,188.3) and (516.1,170.2) .. (505.0,153.0);
-  \draw[line width=5.0pt] (550.0,162.0) .. controls (554.2,156.4) and (548.3,148.3) .. (542.0,153.0);
-  \draw[line width=5.0pt] (131.0,164.0) .. controls (131.5,157.2) and (124.5,153.6) .. (119.0,153.0);
+  %% ════ 两个矩形 ════
+  \draw (667,264) -- (990,264) -- (990,605) -- (667,605) -- cycle;
+  \draw (810,59)  -- (1510,59) -- (1510,451) -- (810,451) -- cycle;
 
-  %% ════ 实心点 ════
-  \fill (54.1,245.2) circle (3.3);
-  \fill (461.0,419.0) circle (4.2);
+  %% ════ 重叠区阴影：45° \" 方向（右下斜）、横向间距 33、线宽 8 ════
+  %% 端点已算好（线段在 (810,264)-(990,451) 内的部分），不用 \clip
+  \draw[line width=8.0pt] (810,415) -- (846,451);
+  \draw[line width=8.0pt] (810,382) -- (879,451);
+  \draw[line width=8.0pt] (810,349) -- (912,451);
+  \draw[line width=8.0pt] (810,316) -- (945,451);
+  \draw[line width=8.0pt] (810,283) -- (978,451);
+  \draw[line width=8.0pt] (824,264) -- (990,430);
+  \draw[line width=8.0pt] (857,264) -- (990,397);
+  \draw[line width=8.0pt] (890,264) -- (990,364);
+  \draw[line width=8.0pt] (923,264) -- (990,331);
+  \draw[line width=8.0pt] (956,264) -- (990,298);
 
-  %% ════ 标签（probe 直接给的 \node 行）════
-  %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{37.9}{47.4}\selectfont] at (55.6,102.9) {\textsf{\textbf{\textit{v}}}};   % box(45,90,18,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.6}{29.6}\selectfont] at (67.1,114.9) {\textsf{\textbf{2}}};   % box(61,106,11,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{36.8}{46.1}\selectfont] at (25.0,241.8) {\textsf{\textbf{\textit{v}}}};   % box(15,229,17,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.2}{27.8}\selectfont] at (41.1,255.4) {\textsf{\textbf{1}}};   % box(35,247,7,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{38.7}{48.4}\selectfont] at (654.9,431.3) {\textsf{\textbf{\textit{u}}}};   % box(643,418,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.6}{29.6}\selectfont] at (667.1,442.9) {\textsf{\textbf{2}}};   % box(661,434,11,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{37.8}{47.3}\selectfont] at (457.9,449.7) {\textsf{\textbf{\textit{u}}}};   % box(446,437,20,21)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{21.5}{26.9}\selectfont] at (471.0,462.9) {\textsf{\textbf{1}}};   % box(465,455,7,15)
+  %% ════ 花括号（区间）════
+  %% ⚠ 不用 TikZ 的 decoration={brace}：那是「大弧形花括号」，而原书是
+  %%   **直线脊 + 中间一个小尖缺口 + 两端各一个小卷**（两臂基本是直的、平行的）。
+  %%   故按实测手写路径：端卷半径 r≈16，尖口半高 d≈14，尖头纵深 A≈20（竖）/16（横）。
+  %% v2 的尖头**不在中点**（在 y≈178，跨度 55→451 的 31% 处）。
+  %% ════ 花括号（区间）════
+  %% ⚠ 也不用贝塞尔：原书这根括号同样是弧拼的 —— **端卷 + 直线脊 + 缺口两段弧 + 直线脊 + 端卷**。
+  %%   四点实测（残差 0.26~0.39）：端卷 R=26.66；缺口上半 R=24.70（圆心在尖头侧 25.3 上 23.9）、
+  %%   缺口下半 R=24.03（下 25.0 上 24.1）。缺口**两段弧在尖处相接、切线不连续**——
+  %%   这正是"尖"的来源，是原书本来的样子，不是缺陷。端卷半径 > 缺口纵深 ⇒
+  %%   `decoration={brace}` 做不出来（它两端卷半径恒等于 amplitude），必须显式发弧。
+  \draw[line width=7.0pt]
+        (178.1,84.1) ++(237.6:26.66) arc[start angle=237.6, end angle=180.2, radius=26.66]
+        -- (150.7,150.0)
+        (126.1,152.2) ++(-5.1:24.70) arc[start angle=-5.1, end angle=70.6, radius=24.70]
+        -- (133.3,179.6)
+        (125.9,202.5) ++(-72.1:24.03) arc[start angle=-72.1, end angle=6.0, radius=24.03]
+        -- (151.4,422.0)
+        (178.1,421.9) ++(179.8:26.66) arc[start angle=179.8, end angle=122.4, radius=26.66];   % v2
+  \draw[line width=7.0pt]
+        (131.1,298.1) ++(237.6:26.66) arc[start angle=237.6, end angle=180.2, radius=26.66]
+        -- (103.7,408.5)
+        (79.1,410.7) ++(-5.1:24.70) arc[start angle=-5.1, end angle=70.6, radius=24.70]
+        -- (86.3,438.1)
+        (78.9,461.0) ++(-72.1:24.03) arc[start angle=-72.1, end angle=6.0, radius=24.03]
+        -- (104.4,574.0)
+        (131.1,573.9) ++(179.8:26.66) arc[start angle=179.8, end angle=122.4, radius=26.66];   % v1
+  \draw[line width=7.0pt]
+        (696.1,709.9) ++(147.6:26.66) arc[start angle=147.6, end angle=90.2, radius=26.66]
+        -- (800.5,737.3)
+        (802.7,761.9) ++(-95.1:24.70) arc[start angle=-95.1, end angle=-19.4, radius=24.70]
+        -- (830.1,754.7)
+        (853.0,762.1) ++(-162.1:24.03) arc[start angle=-162.1, end angle=-84.0, radius=24.03]
+        -- (961.0,736.6)
+        (960.9,709.9) ++(89.8:26.66) arc[start angle=89.8, end angle=32.4, radius=26.66];      % u1
+  \draw[line width=7.0pt]
+        (839.1,671.9) ++(147.6:26.66) arc[start angle=147.6, end angle=90.2, radius=26.66]
+        -- (1129.5,699.3)
+        (1131.7,723.9) ++(-95.1:24.70) arc[start angle=-95.1, end angle=-19.4, radius=24.70]
+        -- (1159.1,716.7)
+        (1182.0,724.1) ++(-162.1:24.03) arc[start angle=-162.1, end angle=-84.0, radius=24.03]
+        -- (1476.0,698.6)
+        (1475.9,671.9) ++(89.8:26.66) arc[start angle=89.8, end angle=32.4, radius=26.66];     % u2
 
-  % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
-  \pgfresetboundingbox
-  \path[use as bounding box] (0,0) rectangle (879,478);
+  %% ════ 标签 ════
+  %% 坐标 = 渲染后**逐字核**出来的：先按旧值出图，量每个字的墨迹中心与原书的差，再整体回移。
+  %% （`anchor=center` 对的是 TeX 行盒中心，不是墨迹中心，所以不能直接填墨迹中心。）
+  \node[anchor=center,inner sep=0pt,font=\fontsize{70}{84}\selectfont] at (81,170)  {\textsf{\textbf{\textit{v}}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{44}{53}\selectfont] at (107,195) {\textsf{\textbf{2}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{70}{84}\selectfont] at (25,425)  {\textsf{\textbf{\textit{v}}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{44}{53}\selectfont] at (55,452)  {\textsf{\textbf{1}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{70}{84}\selectfont] at (820,807) {\textsf{\textbf{\textit{u}}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{44}{53}\selectfont] at (846,834) {\textsf{\textbf{1}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{70}{84}\selectfont] at (1182,773){\textsf{\textbf{\textit{u}}}};
+  \node[anchor=center,inner sep=0pt,font=\fontsize{44}{53}\selectfont] at (1209,798){\textsf{\textbf{2}}};
+
 \end{tikzpicture}
 \end{document}
-
-% ⚠ 待核清单（probe 拿不准，人眼过一遍）：
-%   · 未识别/跳过：⑤ 跳过/未识别的字形
