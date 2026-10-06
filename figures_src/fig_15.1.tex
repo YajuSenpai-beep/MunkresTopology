@@ -34,13 +34,15 @@
   %%   不要用贝塞尔去描墨迹。判据=圆拟合残差：这 8 条实测残差 0.41~0.54 个单位。
   %% 规则：**圆心落在轴线上、沿轴朝它所界的区间偏 ≈29，半径 ≈28，扫 ≈130°**，
   %%   于是弧**开口朝向区间**（上端 ⌒、下端 ⌣、左端 ( 、右端 ) 全由此自然得到）。
+  %% ★ 2026-10-06：**u2 / v2 的四个端点记号改用 `blue`**（用户指定）。原书是灰度 ——
+  %%   蓝色是**刻意加**的语义标记，不是原书的颜色，后人别以为是书上就有。
   \draw[line width=7.0pt] (692.4,643.7)  ++(113.5:27.81) arc[start angle=113.5,  end angle=247.7, radius=27.81];  % x=667  (  u1 左
-  \draw[line width=7.0pt] (832.0,644.0)  ++(113.9:29.71) arc[start angle=113.9,  end angle=246.0, radius=29.71];  % x=810  (  u2 左
+  \draw[blue,line width=7.0pt] (832.0,644.0)  ++(113.9:29.71) arc[start angle=113.9,  end angle=246.0, radius=29.71];  % x=810  (  u2 左
   \draw[line width=7.0pt] (962.2,645.1)  ++(-61.3:29.81) arc[start angle=-61.3,  end angle=64.4,  radius=29.81];  % x=990  )  u1 右
-  \draw[line width=7.0pt] (1477.4,647.9) ++(-66.4:30.49) arc[start angle=-66.4,  end angle=64.2,  radius=30.49];  % x=1510 )  u2 右
-  \draw[line width=7.0pt] (203.7,80.0)   ++(-157.7:26.67) arc[start angle=-157.7, end angle=-22.6, radius=26.67]; % y=55   ⌒  v2 上
+  \draw[blue,line width=7.0pt] (1477.4,647.9) ++(-66.4:30.49) arc[start angle=-66.4,  end angle=64.2,  radius=30.49];  % x=1510 )  u2 右
+  \draw[blue,line width=7.0pt] (203.7,80.0)   ++(-157.7:26.67) arc[start angle=-157.7, end angle=-22.6, radius=26.67]; % y=55   ⌒  v2 上
   \draw[line width=7.0pt] (203.1,296.7)  ++(-155.8:28.43) arc[start angle=-155.8, end angle=-18.2, radius=28.43]; % y=269  ⌒  v1 上
-  \draw[line width=7.0pt] (201.3,424.2)  ++(22.1:27.93)  arc[start angle=22.1,   end angle=155.7, radius=27.93]; % y=451  ⌣  v2 下
+  \draw[blue,line width=7.0pt] (201.3,424.2)  ++(22.1:27.93)  arc[start angle=22.1,   end angle=155.7, radius=27.93]; % y=451  ⌣  v2 下
   \draw[line width=7.0pt] (200.5,576.5)  ++(24.3:27.27)  arc[start angle=24.3,   end angle=157.4, radius=27.27]; % y=603  ⌣  v1 下
 
   %% ════ 两个矩形 ════

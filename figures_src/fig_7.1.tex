@@ -26,6 +26,7 @@
 \usepackage{fontspec}
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
+\usepackage{amsmath}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta}
 \begin{document}
@@ -88,15 +89,25 @@
   %%        踩过的坑：修正量的**符号**写反过一次，越修越偏；且必须删掉旧 fig.pdf 再编译，
   %%        否则 xelatex 失败时会静默量到上一轮的陈旧 PDF（两版输出一模一样就是这么来的）。
   %% 换算：字母 x 高 px ÷ 0.519 = 字号；数字高 px ÷ 0.716 = 字号。
-  \foreach \x/\y/\s/\i in {%
-      117.5/442/1/1, 222.5/442/2/2, 327.5/442/4/3, 432.5/442/7/4,
-      117.5/343/3/5, 222.5/343/5/6, 327.5/343/8/7,
-      117.5/244/6/8, 222.5/244/9/9,
-      117.5/145/10/10}{
+  % ★ 2026-10-06 修：原来每个标签是**两个各自按右边缘锚定的节点**（字母 at `\x-26`、
+  %   下标 at `\x-15.2`）⇒ 两右缘恒差 10.8，**视觉间隙 = 10.8 − 下标宽度**。
+  %   一位数(≈12.2)勉强贴住；**两位数 `10`(≈24) 反向压进字母 13 单位** —— 这就是
+  %   「下标没统一 + 重叠」的根：间距定义成了"右边缘间距"，不是"字间间隙"。
+  %   ⇒ 按 SOP §3「**一个标签 = 一个节点**」改成一体标签，下标交给排版引擎（同 15.2 的 π₁⁻¹(U)）。
+  \foreach \x/\y/\s in {%
+      117.5/442/1, 222.5/442/2, 327.5/442/4, 432.5/442/7,
+      117.5/343/3, 222.5/343/5, 327.5/343/8,
+      117.5/244/6, 222.5/244/9,
+      117.5/145/10}{
+    %   下标还要**再沉 5.8 单位**：原书数字底边在「圆点 +18.5」，数学模式默认只到 +12.7。
+    %   ★ **字号必须显式给** —— 但根因是 `\raisebox`，不是 `\text`：
+    %     `\raisebox` 开一个 `\hbox`，**把数学样式重置成正文样式** ⇒ 里面的 `\text` 取到 30pt，
+    %     下标于是高 21（原书只 16）。实测：不用 `\raisebox` 的地方（15.2 的 π₁⁻¹(U)）
+    %     上下标是正常缩小的（6~7×15，与原书一致）。
+    %     ⇒ 凡是用 `\raisebox` 调上下标位置，**必须同时写死 `\fontsize`**。
     \node[anchor=base east,inner sep=0pt,font=\fontsize{30}{30}\selectfont]
-      at (\x-26,\y+8.3) {\textsf{\textbf{\textit{a}}}};
-    \node[anchor=base east,inner sep=0pt,font=\fontsize{22}{22}\selectfont]
-      at (\x-15.2,\y+20.1) {\textsf{\textbf{\s}}};
+      at (\x-15.2,\y+8.3)
+      {$\text{\textsf{\textbf{\textit{a}}}}_{\raisebox{-5.8pt}{\text{\fontsize{22}{22}\selectfont\textsf{\textbf{\s}}}}}$};
   }
 
   %% ════ 右 panel 的 A 標籤 ════
