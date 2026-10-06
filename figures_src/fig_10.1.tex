@@ -16,10 +16,19 @@
 \usepackage{fontspec}
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
+\usepackage{amsmath}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta}
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=4.0pt, line cap=round, line join=round]
+  %% ════ 标签 ════
+  %% ★ 2026-10-06 试：**标签挪到所有几何之前** —— 白底先画、底下没有东西，白底等于看不见；
+  %%   后画的曲线/轴**不被切**。
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{38.0}{47.5}\selectfont] at (753.3,124.0) {\textsf{\textbf{\textit{x}}}};
+     \def\lab#1#2#3#4{\node[anchor=center,inner sep=0pt,fill=white,text height=21.8pt,text depth=6pt,font=\fontsize{30.5}{38}\selectfont] at (#1,#2)
+        {$\text{\textsf{\textbf{\textit{#3}}}}_{\raisebox{-5.0pt}{\text{\fontsize{23.4}{29}\selectfont\textsf{\textbf{#4}}}}}$};}
+     \lab{38.0}{367.5}{b}{0}
+     \lab{377.5}{607.5}{a}{0}
 
   %% ════ 两轴 ════
   \draw[line width=4.0pt] (58.0,17.0) -- (58.7,573.7);
@@ -119,18 +128,16 @@
   %% 现照图 2.3 的写法改成**刻度**：一小段**横跨坐标轴**的短线，
   %%   坐标由轴线方程算出（y 轴 (58.0,17.0)→(58.7,573.7)；
   %%   x 轴 (109.9,574.0)→(694.9,575.0)），线宽取所跨那条轴本身的宽度，长 16。
-  \draw[line width=4.0pt] (50.4,363.5) -- (66.4,363.5);   % b₀ 横跨 y 轴
-  \draw[line width=5.0pt] (381.0,566.5) -- (381.0,582.5);  % a₀ 横跨 x 轴
+  %% ★ 2026-10-06 改回**实心点**：2026-09-25 那次改成"横跨轴的刻度短线"**是错的**
+  %%   （用户指正：原书这两处是**圆点、正中压在轴上**）。实测原书两处都是 ⌀14 的实心点
+  %%   （r≈7，与点阵圆点同级），中心分别落在 y 轴 x=58.43、x 轴 y=574.46 上。
+  %%   更早那版用过 `\fill circle`，但坐标照 probe 框手填 ⇒ b₀ 偏右 4.1 半个悬空、a₀ 两点夹轴。
+  %%   这次坐标**由轴线方程算出**：y 轴 (58.0,17.0)→(58.7,573.7)；x 轴 (109.9,574.0)→(694.9,575.0)。
+  \fill (58.43,363.0) circle (7.0);    % b₀ 在 y 轴上
+  \fill (381.0,574.46) circle (7.0);   % a₀ 在 x 轴上
 
-  %% ════ 标签 ════
-  %% ⚠ 全部 fill=white：文字在最上层，否则与曲线交叉干扰（用户要的效果）
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{38.0}{47.5}\selectfont] at (753.3,124.0) {\textsf{\textbf{\textit{x}}}};
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.3}\selectfont] at (26.8,363.8) {\textsf{\textbf{\textit{b}}}};
-     % ⚠ 下标原稿写成 9 —— 是 0
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.4}{29.2}\selectfont] at (41.9,377.1) {\textsf{\textbf{0}}};
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (372.5,605.5) {\textsf{\textbf{\textit{a}}}};
-     % ⚠ 下标原稿写成 9 —— 是 0
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.4}{29.2}\selectfont] at (387.9,615.1) {\textsf{\textbf{0}}};
+  % ★ 2026-10-06：标签已**挪到文件最前**（见 tikzpicture 开头）—— 白底先画就不会切曲线/轴。
+  %   ⚠ 下标是 **0** 不是 9（原稿认错）。
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox

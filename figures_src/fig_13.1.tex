@@ -20,9 +20,18 @@
 \usepackage{fontspec}
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
+\usepackage{amsmath}
 \usepackage{tikz}
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=5.0pt, line cap=round, line join=round]
+  %% ════ 标签 ════
+  %% ★ 2026-10-06 试：**标签挪到所有几何之前** —— 白底先画、底下没有东西，白底等于看不见；
+  %%   后画的曲线/圆**不被切**。（原来标签在后 ⇒ 白框把上方的圆弧切出直边。）
+  \def\lab#1#2#3#4{\node[anchor=center,inner sep=0pt,fill=white,text height=21.5pt,text depth=6pt,font=\fontsize{30}{37.6}\selectfont] at (#1,#2)
+     {$\text{\textsf{\textbf{\textit{#3}}}}_{\raisebox{-5.0pt}{\text{\fontsize{22.5}{28}\selectfont\textsf{\textbf{#4}}}}}$};}
+  \lab{311.0}{182.5}{B}{3}
+  \lab{462.5}{216.5}{B}{2}
+  \lab{269.5}{377.0}{B}{1}
 
   %% ════ 两个大圆 ════
   %% ⚠ 它们**不是正圆**：过心的横剖与竖剖给出的半轴不同（右 119.9 x 122.1、左 167.0 x 171.1），
@@ -37,7 +46,9 @@
   %% ════ 字母 / 数字 ════
   %% 坐标 = 原图连通域量出的字形框中心（下方注释给出字号来源）。
   \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.2}{36.6}\selectfont] at (253.3,139.9) {\textsf{\textbf{\textit{x}}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (302.6,176.4) {\textsf{\textbf{\textit{B}}}};
+  % ⚠ 2026-10-06：这里原来还留着 `B₃` 的**旧字母节点**（\node ... \textit{B} at (302.6,176.4)）。
+  %   我把它并进 `\lab` 时漏删，于是**重复画了一个 B**，而它自带 `fill=white` ⇒ 正是它盖住几何。
+  %   ⚠ 它躲过 `check_ink_tex`（多余的 B 正落在原书的 B 上，不算"多画"）—— 是白底差集查出来的。
   %% 2026-09-25：**三个下标（3 / 2 / 1）的白底都去掉**。
   %%   `fill=white` 涂的是**矩形**（尺寸 = 节点的文字框，不是字形的墨迹框），
   %%   下标的白框左边缘会越到左边那个「B」的字尾上去，把 B 啃掉一个方口子。
@@ -45,11 +56,8 @@
   %%     「3」→ (309,182)~(310,183)   「2」→ (470,219)~(471,220)   「1」→ (277,381)~(277,382)
   %%   全都落在各自 B 的末笔上。去掉即恢复。
   %%   （B 本体、x、B₂ 的「B」等其余白底实测没盖住任何墨迹，保留。）
-  \node[anchor=center,inner sep=0pt,font=\fontsize{22.3}{27.9}\selectfont] at (317.3,191.6) {\textsf{\textbf{3}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (463.7,213.2) {\textsf{\textbf{\textit{B}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{22.9}{28.7}\selectfont] at (478.9,228.1) {\textsf{\textbf{2}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.8}\selectfont] at (269.2,375.9) {\textsf{\textbf{\textit{B}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{20.6}{25.7}\selectfont] at (284.4,390.3) {\textsf{\textbf{1}}};
+  % ★ 2026-10-06：B₁/B₂/B₃ 已改成**一个节点 + 下标命令**，并**挪到文件最前**（见 tikzpicture 开头）——
+  %   白底先画就不会切到曲线。
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox

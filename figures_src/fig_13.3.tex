@@ -15,9 +15,22 @@
 \usepackage{fontspec}
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
+\usepackage{amsmath}
 \usepackage{tikz}
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=2.8pt, line cap=round, line join=round]
+  %% ════ 标签 ════
+  %% ★ 2026-10-06 试：**标签挪到所有几何之前** —— 白底先画、底下什么都没有，
+  %%   于是白底等于看不见；后画的曲线**不被切**（原来标签在后，白底把曲线切出直边）。
+  \def\lab#1#2#3#4{\node[anchor=center,inner sep=0pt,fill=white,text height=21.5pt,text depth=6pt,font=\fontsize{29.8}{37}\selectfont] at (#1,#2)
+     {$\text{\textsf{\textbf{\textit{#3}}}}_{\raisebox{-5.0pt}{\text{\fontsize{23}{28.5}\selectfont\textsf{\textbf{#4}}}}}$};}
+  \lab{145.0}{271.5}{B}{1}
+  \lab{284.5}{314.5}{B}{3}
+  \lab{441.5}{410.0}{B}{2}
+  \lab{803.0}{438.5}{U}{2}
+  \lab{131.0}{535.0}{U}{1}
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.2}{36.6}\selectfont] at (289.2,261.2) {\textsf{\textbf{\textit{x}}}};
+
   %% ════ 两条**闭合波边界**（U₁ 的边界、U₂ 的边界）════
   %% 2026-09-25 重做：原来是**逐段拟合**——37 段（直线/贝塞尔混着）各拟合各的、
   %%   各带各的 line width（4.0/5.0 交替，还有一处 6.0 的疙瘩），
@@ -43,20 +56,8 @@
   %% ════ 实心点 ════
   \fill (309.7,275.4) circle (6.1);
 
-  %% ════ 字母 / 数字 ════
-  %% 白底保留（文字压曲线会脏）。坐标 = 原图**连通域**量出的字形框中心；
-  %% probe 给的坐标在本图系统性偏 3~8 单位，不再沿用。
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.2}{36.6}\selectfont] at (289.2,261.2) {\textsf{\textbf{\textit{x}}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (132.8,264.3) {\textsf{\textbf{\textit{B}}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.9}{28.6}\selectfont] at (149.4,277.8) {\textsf{\textbf{1}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (269.0,309.7) {\textsf{\textbf{\textit{B}}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.0}{28.7}\selectfont] at (285.0,323.5) {\textsf{\textbf{3}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.6}\selectfont] at (440.6,405.4) {\textsf{\textbf{\textit{B}}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.6}{29.6}\selectfont] at (457.2,419.5) {\textsf{\textbf{2}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.0}{36.3}\selectfont] at (803.9,434.2) {\textsf{\textbf{\textit{U}}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.9}{28.7}\selectfont] at (820.3,448.3) {\textsf{\textbf{2}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.0}{36.3}\selectfont] at (120.4,531.1) {\textsf{\textbf{\textit{U}}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{21.6}{26.9}\selectfont] at (135.6,544.1) {\textsf{\textbf{1}}};
+  % ★ 2026-10-06：标签已**挪到文件最前**（见 tikzpicture 开头）—— 白底先画就不会切曲线。
+  %   坐标 = 原图**连通域**量出的字形框中心；probe 给的坐标在本图系统性偏 3~8 单位，不再沿用。
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox

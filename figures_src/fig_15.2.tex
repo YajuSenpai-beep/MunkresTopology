@@ -21,6 +21,21 @@
 \usetikzlibrary{arrows.meta,decorations.pathreplacing}
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line width=7.0pt, line cap=round, line join=round]
+  %% ════ 标签 ════（★ 2026-10-06：**标签一律写在所有几何之前** —— TikZ 按书写顺序绘制，
+  %%   先写的在底下；白底先画、底下没东西 ⇒ 白底等于看不见，后画的几何不被直边切。同 10.1/13.1/13.3）
+  \node[anchor=center,inner sep=0pt,fill=white] at (373.5,54)
+    {\fontsize{30}{36}\selectfont
+     $\text{\textsf{\textbf{\textit{π}}}}_{\text{\textsf{\textbf{1}}}}%
+      ^{\text{\textsf{\textbf{\mfallback −}}}\text{\textsf{\textbf{1}}}}%
+      \text{\textsf{\textbf{(\textit{U})}}}$};
+  \node[anchor=center,inner sep=0pt,fill=white] at (822,360)
+    {\fontsize{30}{36}\selectfont
+     $\text{\textsf{\textbf{\textit{π}}}}_{\text{\textsf{\textbf{2}}}}%
+      ^{\text{\textsf{\textbf{\mfallback −}}}\text{\textsf{\textbf{1}}}}%
+      \text{\textsf{\textbf{(\textit{V})}}}$};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (22.8,363.0) {\textsf{\textbf{\textit{V}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{38.1}{47.6}\selectfont] at (815.8,563.5) {\textsf{\textbf{\textit{x}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (359.0,621.0) {\textsf{\textbf{\textit{U}}}};
 
   %% ── 实测几何 ──
   \def\Yax{106}   \def\Xax{531}                                  % 坐标轴
@@ -65,21 +80,8 @@
   \draw[decorate,decoration={brace,amplitude=20pt},line width=4.0pt] (57,\HBb) -- (57,\HBy);   % 左：V（尖朝左，37..57）
   \draw[decorate,decoration={brace,amplitude=16pt},line width=4.0pt] (\VBr,585) -- (\VBx,585);  % 下：U（尖朝下，585..601）
 
-  %% ════ 标签 ════
-  % ★ 整条写成一个节点：上下标交给排版引擎（拆成 7 个字形节点会因"数字=帽高/π=x高/括号=括号高"口径不同而错位）
-  \node[anchor=center,inner sep=0pt,fill=white] at (373.5,54)
-    {\fontsize{30}{36}\selectfont
-     $\text{\textsf{\textbf{\textit{π}}}}_{\text{\textsf{\textbf{1}}}}%
-      ^{\text{\textsf{\textbf{\mfallback −}}}\text{\textsf{\textbf{1}}}}%
-      \text{\textsf{\textbf{(\textit{U})}}}$};
-  \node[anchor=center,inner sep=0pt,fill=white] at (822,360)
-    {\fontsize{30}{36}\selectfont
-     $\text{\textsf{\textbf{\textit{π}}}}_{\text{\textsf{\textbf{2}}}}%
-      ^{\text{\textsf{\textbf{\mfallback −}}}\text{\textsf{\textbf{1}}}}%
-      \text{\textsf{\textbf{(\textit{V})}}}$};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (22.8,363.0) {\textsf{\textbf{\textit{V}}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{38.1}{47.6}\selectfont] at (815.8,563.5) {\textsf{\textbf{\textit{x}}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (359.0,621.0) {\textsf{\textbf{\textit{U}}}};
+  % ★ 2026-10-06：标签已**挪到文件最前**（见 tikzpicture 开头）。
+  %   整条写成一个节点：上下标交给排版引擎（拆成 7 个字形节点会因"数字=帽高/π=x高/括号=括号高"口径不同而错位）。
 
   % 钉死画布
   \pgfresetboundingbox

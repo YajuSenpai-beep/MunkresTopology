@@ -21,6 +21,7 @@
 \usepackage{fontspec}
 \setsansfont{TeX Gyre Heros}
 \newfontfamily\mfallback{DejaVu Sans}
+\usepackage{amsmath}
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathreplacing}
 \begin{document}
@@ -109,14 +110,18 @@
   %% ════ 标签 ════
   %% 坐标 = 渲染后**逐字核**出来的：先按旧值出图，量每个字的墨迹中心与原书的差，再整体回移。
   %% （`anchor=center` 对的是 TeX 行盒中心，不是墨迹中心，所以不能直接填墨迹中心。）
-  \node[anchor=center,inner sep=0pt,font=\fontsize{70}{84}\selectfont] at (81,170)  {\textsf{\textbf{\textit{v}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{44}{53}\selectfont] at (107,195) {\textsf{\textbf{2}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{70}{84}\selectfont] at (25,425)  {\textsf{\textbf{\textit{v}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{44}{53}\selectfont] at (55,452)  {\textsf{\textbf{1}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{70}{84}\selectfont] at (820,807) {\textsf{\textbf{\textit{u}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{44}{53}\selectfont] at (846,834) {\textsf{\textbf{1}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{70}{84}\selectfont] at (1182,773){\textsf{\textbf{\textit{u}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{44}{53}\selectfont] at (1209,798){\textsf{\textbf{2}}};
+  % ★ 2026-10-06：v₂/v₁/u₁/u₂ 改成**一个节点 + 下标命令**（原稿字母、下标各一个 node 手摆坐标）
+  %   本图是 70pt 大字，下标下沉按 0.16em 折算 ⇒ `\raisebox{-11.2pt}`。
+  \def\lab#1#2#3#4{\node[anchor=center,inner sep=0pt,font=\fontsize{70}{84}\selectfont] at (#1,#2)
+     {$\text{\textsf{\textbf{\textit{#3}}}}_{\raisebox{-11.2pt}{\text{\fontsize{44}{53}\selectfont\textsf{\textbf{#4}}}}}$};}
+  \lab{90.5}{174.5}{v}{2}
+  \lab{38.0}{430.0}{v}{1}
+  \lab{831.0}{812.5}{u}{1}
+  \lab{1191.5}{778.5}{u}{2}
+
+  % ★ 本图原先**没有钉画布**（其余各图都有）—— 违反 SOP「画布钉死」；补上，几何才可复现。
+  \pgfresetboundingbox
+  \path[use as bounding box] (0,0) rectangle (1597,861);
 
 \end{tikzpicture}
 \end{document}

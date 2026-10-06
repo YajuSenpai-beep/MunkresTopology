@@ -16,6 +16,7 @@
 \usepackage{fontspec}
 \setsansfont{Arial}
 \newfontfamily\mfallback{DejaVu Sans}
+\usepackage{amsmath}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta}
 \begin{document}
@@ -64,25 +65,24 @@
     \arrowarc{\cx}{\cy}{\r}{\tt}
   }
 
-  % ── 标签（数字不斜体；下标另起一个 node，不用 $...$）──
-  \node[anchor=center,inner sep=0pt,font=\fontsize{29.6}{37.0}\selectfont] at (351.2,32.5) {\textsf{\textbf{\textit{A}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{23.7}{29.7}\selectfont] at (367.8,45.4) {\textsf{\textbf{1}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{30.3}{37.9}\selectfont] at (587.8,30.5) {\textsf{\textbf{\textit{B}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{23.7}{29.7}\selectfont] at (603.8,44.4) {\textsf{\textbf{1}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{28.9}{36.1}\selectfont] at (839.1,31.0) {\textsf{\textbf{\textit{A}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{23.0}{28.7}\selectfont] at (853.9,45.1) {\textsf{\textbf{3}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{30.3}{37.9}\selectfont] at (120.8,71.5) {\textsf{\textbf{\textit{B}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{23.0}{28.7}\selectfont] at (135.9,85.1) {\textsf{\textbf{3}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{30.2}{37.8}\selectfont] at (1050.3,71.0) {\textsf{\textbf{\textit{B}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{23.0}{28.7}\selectfont] at (1064.7,84.3) {\textsf{\textbf{4}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{32.4}{40.5}\selectfont] at (475.9,197.6) {\textsf{\textbf{\textit{e}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{24.4}{30.5}\selectfont] at (487.6,207.1) {\textsf{\textbf{0}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{29.6}{37.0}\selectfont] at (332.2,355.5) {\textsf{\textbf{\textit{A}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{23.6}{29.6}\selectfont] at (347.1,368.9) {\textsf{\textbf{2}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{31.0}{38.8}\selectfont] at (600.8,355.0) {\textsf{\textbf{\textit{B}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{22.9}{28.7}\selectfont] at (615.1,369.4) {\textsf{\textbf{2}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{29.6}{37.0}\selectfont] at (835.2,355.5) {\textsf{\textbf{\textit{A}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{23.0}{28.7}\selectfont] at (851.3,368.3) {\textsf{\textbf{4}}};
+  % ── 标签：★★ 2026-10-06 重做 —— **一个标签 = 一个节点，下标用命令排**
+  %% 原稿把每个标签拆成**两个 node**（字母一个、下标一个）靠手摆坐标对齐 —— 那是"描摹"的思路：
+  %%   两个字形互不知情，间距随字形宽度缩水 ⇒ 已三次压字（15.2 `π₁⁻¹(U)`、7.1 `a₁₀`、本图 `e₀`）。
+  %%   既然是读代码，**就该写命令**（同 15.2 / 7.1 的修法）。
+  %%   下标下沉 5.1：原书下标基线比主基线低 10，而 TeX 默认只低 ~0.15em(≈4.9) ⇒ 用 `\raisebox` 补，
+  %%   而 `\raisebox` 会重置数学样式 ⇒ **必须同时写死 `\fontsize`**（见记忆 fig-drawing ⛔ 那条）。
+  \def\lab#1#2#3#4{\node[anchor=center,inner sep=0pt,font=\fontsize{30}{36}\selectfont] at (#1,#2)
+      {$\text{\textsf{\textbf{\textit{#3}}}}_{\raisebox{-5.1pt}{\text{\fontsize{23.5}{28}\selectfont\textsf{\textbf{#4}}}}}$};}%
+  %% 位置 = 原书墨迹框中心 **+ 一轮实测校正**（`anchor=center` 对的是行盒中心，不是墨迹中心）
+  \lab{358.0}{37.0}{A}{1}
+  \lab{594.0}{35.5}{B}{1}
+  \lab{847.0}{36.5}{A}{3}
+  \lab{125.5}{76.5}{B}{3}
+  \lab{1058.0}{75.5}{B}{4}
+  \lab{481.0}{202.0}{e}{0}
+  \lab{338.5}{361.5}{A}{2}
+  \lab{607.0}{361.5}{B}{2}
+  \lab{842.5}{361.5}{A}{4}
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox
