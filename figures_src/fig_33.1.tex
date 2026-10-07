@@ -220,15 +220,17 @@
 
   %% ════ 标签（probe 直接给的 \node 行）════
   %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{59.1}{73.8}\selectfont] at (605.3,138.9) {{\mfallback\textbf{−}}};   % box(573,125,36,10)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{47.0}{58.8}\selectfont] at (722.9,175.3) {\textsf{\textbf{)}}};   % box(713,157,15,35)
+     %% ⚠ 删除 2 个虚影字形（原书此处是虚线曲线的两段短划，不是字符）：
+     %%    曾作 "−" box(573,125,36,10) @ (605.3,138.9)；曾作 ")" box(713,157,15,35) @ (722.9,175.3)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.9}{36.1}\selectfont] at (847.5,183.2) {\textsf{\textbf{\textit{U}}}};   % box(838,171,19,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{52.6}{65.8}\selectfont] at (995.6,196.6) {\textsf{\textbf{\textit{u}}}};   % box(979,179,28,29)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{52.6}{65.8}\selectfont] at (995.6,196.6) {\textsf{\textbf{\textit{U}}}};   % box(979,179,28,29)  ← 原书 U_{2/3} 的「U」（probe 误作小写 u）
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.0}{28.7}\selectfont] at (1004.5,203.0) {\textsf{\textbf{2}}};   % box(999,198,11,10)  ← 补 U_{2/3} 的分子「2」（probe 整字漏检）
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{21.5}{26.9}\selectfont] at (862.0,191.9) {\textsf{\textbf{1}}};   % box(856,184,7,15)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.7}{37.1}\selectfont] at (1087.5,207.7) {\textsf{\textbf{\textit{U}}}};   % box(1077,196,21,21)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (655.0,211.2) {\textsf{\textbf{\textit{U}}}};   % box(645,199,20,22)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{34.9}{43.6}\selectfont] at (868.9,209.2) {{\mfallback\textbf{−}}};   % box(853,201,15,6)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{24.7}{30.9}\selectfont] at (1102.4,217.6) {\textsf{\textbf{3}}};   % box(1096,208,12,18)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{24.7}{30.9}\selectfont] at (1102.4,217.6) {\textsf{\textbf{3}}};   % box(1096,208,12,18)  ← U_{3/4} 的分子「3」
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{24.7}{30.9}\selectfont] at (1102.5,243.5) {\textsf{\textbf{4}}};   % box(1095,235,15,17)  ← 补 U_{3/4} 的分母「4」（probe 整字漏检）
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{21.9}{27.3}\selectfont] at (862.5,217.4) {\textsf{\textbf{2}}};   % box(857,209,10,16)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.2}{27.8}\selectfont] at (670.1,219.4) {\textsf{\textbf{1}}};   % box(664,211,7,16)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.3}{37.9}\selectfont] at (1007.8,217.6) {{\mfallback\textbf{−}}};   % box(992,211,17,4)
@@ -237,22 +239,24 @@
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (562.0,244.2) {\textsf{\textbf{\textit{U}}}};   % box(552,232,20,22)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.0}{28.7}\selectfont] at (668.9,245.1) {\textsf{\textbf{3}}};   % box(663,236,11,17)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{21.5}{26.9}\selectfont] at (578.0,253.9) {\textsf{\textbf{1}}};   % box(572,246,7,15)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{39.5}{49.3}\selectfont] at (140.7,283.2) {\textsf{\textbf{(}}};   % box(135,264,10,37)
+     %% ⚠ 删除虚影字形：(140.7,283.2) box(135,264,10,37) 原被认作 "("，实为左侧曲线的一段
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.5}{35.6}\selectfont] at (582.4,271.3) {{\mfallback\textbf{−}}};   % box(568,265,15,4)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.0}{28.7}\selectfont] at (576.0,278.0) {\textsf{\textbf{4}}};   % box(570,270,12,16)  ← 补 U_{1/4} 的分母「4」（probe 整字漏检）
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (475.0,310.2) {\textsf{\textbf{\textit{U}}}};   % box(465,298,20,22)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{21.5}{26.9}\selectfont] at (490.0,319.9) {\textsf{\textbf{1}}};   % box(484,312,7,15)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.4}{36.8}\selectfont] at (495.1,335.4) {{\mfallback\textbf{−}}};   % box(480,329,16,4)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{24.1}{30.1}\selectfont] at (490.1,344.6) {\textsf{\textbf{6}}};   % box(484,335,11,18)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{24.1}{30.1}\selectfont] at (490.1,344.6) {\textsf{\textbf{5}}};   % box(484,335,11,18)  ← 原书 U_{1/5} 的分母「5」（probe 误作 6）
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.3}{37.9}\selectfont] at (320.8,416.5) {\textsf{\textbf{\textit{A}}}};   % box(308,405,20,22)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.3}{37.9}\selectfont] at (839.8,416.5) {\textsf{\textbf{\textit{B}}}};   % box(828,405,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{40.8}{51.0}\selectfont] at (107.2,440.7) {\textsf{\textbf{(}}};   % box(101,422,11,36)
+     %% ⚠ 删除虚影字形：(107.2,440.7) box(101,422,11,36) 原被认作 "("，实为左侧曲线的一段
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (450.0,470.2) {\textsf{\textbf{\textit{U}}}};   % box(440,458,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{24.4}{30.5}\selectfont] at (464.4,483.1) {\textsf{\textbf{9}}};   % box(457,474,12,17)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{24.4}{30.5}\selectfont] at (464.4,483.1) {\textsf{\textbf{0}}};   % box(457,474,12,17)  ← 原书 U_0 的下标「0」（probe 误作 9）
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (1041.0,605.2) {\textsf{\textbf{\textit{U}}}};   % box(1031,593,20,22)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.7}{29.7}\selectfont] at (1056.8,618.4) {\textsf{\textbf{1}}};   % box(1050,610,8,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{53.5}{66.9}\selectfont] at (744.7,648.1) {\textsf{\textbf{\textit{u}}}};   % box(728,630,28,30)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{53.5}{66.9}\selectfont] at (744.7,648.1) {\textsf{\textbf{\textit{U}}}};   % box(728,630,28,30)  ← 原书 U_{2/5} 的「U」（probe 误作小写 u）
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{25.1}{31.4}\selectfont] at (753.0,652.0) {\textsf{\textbf{2}}};   % box(748,646,10,12)  ← 补 U_{2/5} 的分子「2」（probe 整字漏检）
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.5}{35.6}\selectfont] at (757.4,668.3) {{\mfallback\textbf{−}}};   % box(743,662,15,4)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{25.1}{31.4}\selectfont] at (752.5,676.6) {\textsf{\textbf{9}}};   % box(745,667,12,18)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{25.1}{31.4}\selectfont] at (752.5,676.6) {\textsf{\textbf{5}}};   % box(745,667,12,18)  ← 原书 U_{2/5} 的分母「5」（probe 误作 9）
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{38.0}{47.5}\selectfont] at (1157.3,740.0) {\textsf{\textbf{\textit{X}}}};   % box(1146,726,20,23)
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
@@ -263,8 +267,13 @@
 
 % ⚠ 待核清单（probe 拿不准，人眼过一遍）：
 %   · 未识别/跳过：⑤ 跳过/未识别的字形
-%   · 未识别/跳过：box(672,130,35,16)
-%   · 未识别/跳过：box(522,131,36,11)
-%   · 未识别/跳过：box(570,270,12,16)
-%   · 未识别/跳过：box(103,524,16,34)
-%   · 未识别/跳过：box(448,643,33,18)
+%   · 未识别/跳过：box(672,130,35,16)   ← 已核：顶部虚线的一段，非字符
+%   · 未识别/跳过：box(522,131,36,11)   ← 已核：顶部曲线的一段，非字符
+%   · 未识别/跳过：box(570,270,12,16)   ← 已核：是 U_{1/4} 的分母「4」，已补节点 (576.0,278.0)
+%   · 未识别/跳过：box(103,524,16,34)   ← 已核：左侧曲线的一段，非字符
+%   · 未识别/跳过：box(448,643,33,18)   ← 已核：左下方曲线的一段，非字符
+%
+% ⚠ 本轮（字符层核对）遗留的**布局**问题，未动（属于「整图重做」范围）：
+%   · (995.6,196.6) 与 (744.7,648.1) 两个「U」节点的 fontsize 仍是 52.6 / 53.5 ——
+%     原 probe 的 box 把分子「2」一起框进去了，故尺寸虚大。同级 U 节点实测为 29.6pt。
+%   · U_{3/4} 的分数线是一条 \draw 笔画（第 45 行），不是节点 —— 其余 6 条分数线都是节点。
