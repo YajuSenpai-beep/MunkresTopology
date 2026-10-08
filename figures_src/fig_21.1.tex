@@ -41,7 +41,9 @@
 
   %% ════ 曲线（prims2 的 curves —— 三段式，坐标同为 (y,x)）════
   \draw[line width=6.0pt] (340.8,375.0) .. controls (262.1,396.3) and (175.7,392.9) .. (91.0,395.0);
-  \draw[line width=5.0pt] (223.0,336.0) .. controls (230.2,334.6) and (226.8,343.1) .. (228.0,346.0);
+  %% ★ 2026-10-08 删：原 `\draw[line width=5.0pt] (223.0,336.0) .. controls (230.2,334.6)
+  %%   and (226.8,343.1) .. (228.0,346.0);` —— probe 把左分数的**分子 `1`** 近似成一条钩形曲线
+  %%   （= `_续做须知.md`「已知盲点：字形被画成 `\draw` 笔画」）。已改回**字符 `\node`**（见下）。
   \draw[line width=7.0pt] (461.0,43.0) .. controls (461.0,36.8) and (471.0,38.5) .. (471.0,44.0);
   \draw[line width=6.0pt] (447.6,50.4) .. controls (403.8,132.6) and (432.2,238.3) .. (401.0,324.9);
   \draw[line width=6.0pt] (492.0,70.4) .. controls (514.4,145.8) and (503.0,231.9) .. (520.1,309.1);
@@ -49,10 +51,33 @@
 
   %% ════ 标签（probe 直接给的 \node 行）════
   %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
+  %
+  %% ★ 2026-10-08 逐字核（真值 = images/21.1.png，原书那张图，850×488）+ 按红线合成：
+  %%   · 原书字符 = 纵轴 `1`、左分数 `1/(n+1)`、右分数 `1/n`，**字母只有小写 `n`**（三处分数
+  %%     / 纵轴的 `1` 字形同宽同高：墨迹 8×16）。逐一核过，**字形本身一处都不用改**
+  %%     —— 主表判「✓ 对（字母仅小写 n）」**成立**。
+  %%   · 原稿把**左分数**拆成 1 条曲线笔画 + 1 条分数线 + 3 个手摆 node，本次按红线收成命令：
+  %%       分子 `1`    —— probe 把字形画成 `\draw` 曲线（渲染成钩子）⇒ 改回**字符 node**。
+  %%       分母 `n+1`  —— 3 个 node（`n`/`+`/`1`）各摆一处 ⇒ **合成 1 个 node**（参考 18.3
+  %%                      对分母 `1 − x²` 的处理）；间距用原书实测墨迹值复现（8 / 10 px），
+  %%                      字体自身的 text-mode 间距为 0，不复现会挤成一团。
+  %%       分数线      —— 分数是二维结构，分子 / 分数线 / 分母**各算一条命令**（照 18.3 口径，
+  %%                      分数线保留原 `\draw`：197-249 @ y 356-359）。
+  %%   · 原书墨迹 x 区间（本稿收敛后应落在 ±2 px）：
+  %%       分母 `n` 199-211 ｜ `+` 220-231 ｜ `1` 242-249（间距 8 / 10）
+  %%       分子 `1` 223-230（y 333-348）
+  %%   · 右分数 `1/n` 三项本来就各是一条命令（分子 node / 分数线 node / 分母 node），
+  %%     **未动** —— 它不是「一个标签拆成多个手摆 node」。
+  %% ⚠ 本次核出但**超范围未改**（只改字符，不动坐标）：右分数的**分数线 node**
+  %%   `at (474.6,454.2)` 比原书右移 **7 px** —— probe 的 anchor 与它自己的 box 中心不自洽
+  %%   （box(455,446,21,5) 中心 465.5，anchor 却给 474.6；其余字形 anchor-中心差 ≤ 3）。
+  %%   实测：原书横线 x 455-475（w 21，中心 465），本稿渲出 x 461-483（w 23，中心 472）。
+  %%   另注：分数线用 `−` 字符 `\mfallback` 渲染，本就比原书略长（23 vs 21），
+  %%   要彻底修可改 `\draw[line width≈4.7pt] (455,448) -- (475,448);`（同 18.3 口径）。
+  %%   归几何/精修那一轮处理。
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.7}{29.7}\selectfont] at (228.8,341.9) {\textsf{\textbf{1}}};   % 左分数 · 分子（原为 \draw 笔画）
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{25.3}{31.6}\selectfont] at (226.5,373.5) {\textsf{\textbf{\textit{n}}}\hspace{6pt}{\fontsize{25.0}{31.2}\selectfont\textsf{\textbf{+}}}\hspace{7pt}{\fontsize{23.7}{29.7}\selectfont\textsf{\textbf{1}}}};   % 左分数 · 分母 n+1（3 node 合成）
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.9}{36.1}\selectfont] at (366.9,43.0) {\textsf{\textbf{1}}};   % box(359,32,9,21)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.7}{29.7}\selectfont] at (248.8,372.4) {\textsf{\textbf{1}}};   % box(242,364,8,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{25.0}{31.2}\selectfont] at (227.5,374.0) {\textsf{\textbf{+}}};   % box(220,366,12,13)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{25.3}{31.6}\selectfont] at (206.1,375.5) {\textsf{\textbf{\textit{n}}}};   % box(199,367,13,14)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.7}{29.7}\selectfont] at (466.8,434.4) {\textsf{\textbf{1}}};   % box(460,426,8,16)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{37.7}{47.1}\selectfont] at (474.6,454.2) {{\mfallback\textbf{−}}};   % box(455,446,21,5)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{24.4}{30.5}\selectfont] at (465.1,463.9) {\textsf{\textbf{\textit{n}}}};   % box(458,456,13,13)
@@ -65,3 +90,7 @@
 
 % ⚠ 待核清单（probe 拿不准，人眼过一遍）：
 %   · 未识别/跳过：⑤ 跳过/未识别的字形
+%   ★ 2026-10-08 已逐字核完，本条作废：原书本图**只有 3 处文字** —— 纵轴 `1`、左分数
+%     `1/(n+1)`、右分数 `1/n`（字母**只有小写 `n`**）；probe 报的「空心圈 ⊙」是尖峰
+%     顶上的**实心顶点标记**（属曲线，不是字符）。字形逐一核过、**无一处要改**；
+%     本次只做了 2 处**结构**修正（分子由 `\draw` 笔画改回字符、分母 3 node 合成 1 node）。

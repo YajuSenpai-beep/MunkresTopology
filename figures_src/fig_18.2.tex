@@ -6,6 +6,22 @@
 %   · 标签里 **`=` 被识别成 U+2212 减号 `−`，还只画了一条横杠** ⇒ 渲染成 `f(x) .- 3x + 1`
 %     （`=` 是**字符**，直接打字；见记忆 text-vs-graphic-first）
 %
+% ★ 2026-10-08 逐字核（对 figpipe/src_hi/18.2.png（943×787 源）+ images/18.2.png 原书抽取
+%   + chap2 p32 书页（印刷 p106，"EXAMPLE 4 … f(x) = 3x + 1"））：
+%   · 原书标签共 **9 个字形**：`f ( x ) = 3 x + 1`。逐列量墨迹（src_hi 943×787 同坐标系）：
+%       f   x604-622 h41（**有降部 ⇒ 小写斜体 f**，不是大写 F）
+%       (   x628-641 h51      x   x645-677 h31      )   x680-694 h51
+%       =   x722-748 h15（**两条横杠**，不是 `−`）
+%       3   x772-798 h41（数字三）   x   x801-833 h31
+%       +   x857-886 h31（加号）     1   x912-930 h39（数字一）
+%     ⇒ **字符全部正确，一字未改**（字号 58 也仍对得上：f/3 高 41、x/+ 高 31、括号 51）。
+%   · 结构：原稿把整条标签拆成 **9 个 node 手摆坐标**（一个字形一个 node）——
+%     正是记忆里「一个标签 = 一个节点」那条红线（同 18.1 的 `f(U)`、15.1 的 `v₂`）。
+%     ⇒ 按 15.1 / 18.1 的口径**合成一个 node**：整条公式一个 `\node`，
+%     `=` `+` 两侧的间距用实测值 `\hspace` 复现（原书墨迹间距 28/24/24/26，字体本身的
+%     text-mode 间距为 0，不复现就会把公式挤成一团）。锚点 = 原书**整组墨迹框中心**
+%     (767, 186.5)，不改任何几何。
+%
 % 几何全部实测自 src_hi/18.2.png（943×787，脚本内坐标 = 源像素，1pt = 1px）：
 %   竖轴 x=308（y 17→771）｜横轴 y=491（x 17→663）
 %   斜线 (172,685)→(482,28)   线宽：轴 ≈7pt、斜线 ≈9pt（扫描墨宽 9/11 减去印刷撑肥）
@@ -33,15 +49,11 @@
 
   %% ════ 标签 f(x) = 3x + 1 ════
   %% ⚠ `=` 是字符，直接打字 —— 别再画横杠、更别用 U+2212
-  \node[anchor=center,inner sep=0pt,font=\fontsize{58}{70}\selectfont] at (611.5,182.5) {\textsf{\textbf{\textit{f}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{58}{70}\selectfont] at (637,188.5) {\textsf{\textbf{(}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{58}{70}\selectfont] at (664.5,187.5) {\textsf{\textbf{\textit{x}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{58}{70}\selectfont] at (690.5,187.5) {\textsf{\textbf{)}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{58}{70}\selectfont] at (739,193) {\textsf{\textbf{=}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{58}{70}\selectfont] at (788.5,183) {\textsf{\textbf{3}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{58}{70}\selectfont] at (821.5,186.5) {\textsf{\textbf{\textit{x}}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{58}{70}\selectfont] at (875.5,189) {\textsf{\textbf{+}}};
-  \node[anchor=center,inner sep=0pt,font=\fontsize{58}{70}\selectfont] at (926.5,183.5) {\textsf{\textbf{1}}};
+  %% ★ 合成一个 node（原稿 9 个手摆 node）。`(` `)` 等直立字用 `\textup`，
+  %%   斜体字用 `\textit`（同 18.1 的 `\textit{f}\textup{(}\textit{U}\textup{)}`）。
+  %%   `=` `+` 两侧 `\hspace` = 原书实测墨迹间距（见文件头）。
+  \node[anchor=center,inner sep=0pt,font=\fontsize{58}{70}\selectfont] at (770.5,186.5)
+     {\textsf{\textbf{\textit{f}\textup{(}\textit{x}\textup{)}\hspace{21pt}\textup{=}\hspace{18pt}\textup{3}\textit{x}\hspace{19pt}\textup{+}\hspace{18pt}\textup{1}}}};
 
   \pgfresetboundingbox
   \path[use as bounding box] (0,0) rectangle (943,787);

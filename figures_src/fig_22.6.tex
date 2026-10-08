@@ -99,19 +99,16 @@
 
   %% ════ 标签（probe 直接给的 \node 行）════
   %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.4}\selectfont] at (578.5,29.5) {\textsf{\textbf{(}}};   % box(574,15,8,28)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.0}{35.0}\selectfont] at (597.3,26.9) {\textsf{\textbf{\textit{V}}}};   % box(589,15,17,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{32.6}{40.7}\selectfont] at (615.1,30.5) {\textsf{\textbf{)}}};   % box(609,16,9,28)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.8}{37.3}\selectfont] at (561.0,32.5) {\textsf{\textbf{\textit{P}}}};   % box(550,20,18,23)
+  %%
+  %% ★ 2026-10-08 逐字核（对 images/22.6.png 原书抽取 + chap2 p66 书页）：
+  %%   · 三个映射标是 **小写 `p`**（有降部），原稿 probe 认成大写 `P`（3 处）—— 已改。
+  %%   · `p(V)` / `p(U)` / `p(W)` 原各为 **四个 node 手摆坐标**（P / ( / 字母 / )）。
+  %%     按项目红线「一个标签 = 一个 node」合成单节点（同 18.1 / 18.4 口径）；
+  %%     位置 = 该组原书**整组墨迹框中心**（未改任何几何），字号按整组墨迹框重配。
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.8}\selectfont] at (583.5,29.0) {\textsf{\textbf{\textit{p}\textup{(}\textit{V}\textup{)}}}};   % p(V) 原书整组墨迹 (550,15)-(617,43)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{33.5}{41.9}\selectfont] at (194.0,154.3) {\textsf{\textbf{.}}};   % box(189,152,5,4)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.4}\selectfont] at (87.5,397.5) {\textsf{\textbf{(}}};   % box(83,383,8,28)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (105.0,395.2) {\textsf{\textbf{\textit{U}}}};   % box(95,383,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{32.6}{40.7}\selectfont] at (125.1,397.5) {\textsf{\textbf{)}}};   % box(119,383,9,28)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.8}{37.3}\selectfont] at (70.0,400.5) {\textsf{\textbf{\textit{P}}}};   % box(59,388,18,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.9}{37.4}\selectfont] at (576.2,453.5) {\textsf{\textbf{\textit{W}}}};   % box(563,441,26,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{32.6}{40.7}\selectfont] at (598.1,456.5) {\textsf{\textbf{)}}};   % box(592,442,9,28)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.2}{37.7}\selectfont] at (554.5,457.0) {\textsf{\textbf{(}}};   % box(550,443,8,27)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.4}\selectfont] at (535.5,460.0) {\textsf{\textbf{\textit{P}}}};   % box(524,448,19,22)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.8}\selectfont] at (93.0,396.5) {\textsf{\textbf{\textit{p}\textup{(}\textit{U}\textup{)}}}};   % p(U) 原书整组墨迹 (59,383)-(127,410)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.8}\selectfont] at (562.0,455.0) {\textsf{\textbf{\textit{p}\textup{(}\textit{W}\textup{)}}}};   % p(W) 原书整组墨迹 (524,441)-(600,469)
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox
@@ -121,4 +118,7 @@
 
 % ⚠ 待核清单（probe 拿不准，人眼过一遍）：
 %   · 未识别/跳过：⑤ 跳过/未识别的字形
-%   · 未识别/跳过：box(538,155,7,7)
+%   · 未识别/跳过：box(538,155,7,7) —— 2026-10-08 复核**不是缺字**：
+%     即本文第 54 行那条 `\draw[line width=3.0pt] (543,160) -- (538,155);`
+%     的短笔画（= 内圈断口处的小墨点，与左侧 (194,154) 的 `.` node 对称）。
+%     已知盲点「字形被画成 \draw 笔画」的又一例，**不得补字（会重影）**。

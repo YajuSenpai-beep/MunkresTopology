@@ -51,20 +51,31 @@
   %% ════ 实心点 ════
   % （略）(480.5,192.5) r=4.5 落在箭头头上 —— 已由箭头头代替
 
-  %% ════ 标签（probe 直接给的 \node 行）════
+  %% ════ 标签（2026-10-08 核字：14 个手摆 node -> 11 个）════
   %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{27.1}{33.9}\selectfont] at (885.5,60.5) {\textsf{\textbf{\textit{f}}}};   % box(880,49,10,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.4}\selectfont] at (899.5,63.5) {\textsf{\textbf{(}}};   % box(895,49,8,28)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (917.0,61.2) {\textsf{\textbf{\textit{U}}}};   % box(907,49,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.4}\selectfont] at (935.5,63.5) {\textsf{\textbf{)}}};   % box(930,49,8,28)
+  %%
+  %% ★ 2026-10-08 逐字核（对 images/18.4.png 原书抽取 = 原书那张图，975×374；
+  %%   全图连通域比对：原书 14 个墨块 <-> 本稿 14 个，一一对应，无缺无多）：
+  %%   · 原书左下角是 **`0`**（闭合椭圆，无 6 的上挑钩）—— 原稿 probe 认成 `6`，已改。
+  %%   · 原书 `1/4` 的分母是 **`4`**（斜笔 + 横笔 + 竖笔，`δ→6`/`4→6` 是已登记的高频误读）
+  %%     —— 原稿 probe 认成 `6`，已改。改后墨迹框与原书逐 px 相同（11×16 @(66,257)）。
+  %%   · `f(U)` 原为 **4 个 node 手摆坐标**（f / ( / U / )）。按红线「一个标签 = 一个节点」
+  %%     （15.1 / 18.1 / 18.2 / 18.3 同款）合成 1 个 node：括号用 `\textup`、字母用 `\textit`。
+  %%     合成前逐块量过：原书 f=10×22、(=8×28、U=20×22、)=8×28、整组 58×28 @(880,49)。
+  %%     单字号 30.7 同时对上三个高度（f 的 ascender 22 / U 的 cap 22 / 括号 28）。
+  %%     锚点 = 原书**整组墨迹框中心** (908.5,62.5)，渲后回量再收敛（见交付说明）。
+  %%   · `f⁻¹` 那类「上下标拆 node」本图没有。`1/4` 按 18.3 的口径保留「分数 = 二维结构，
+  %%     分子 / 分数线 / 分母各一条命令」三件，未合成一个 node；其中分数线那件是
+  %%     **唯一超出「只改字符」的一处**（字号 + 锚点），见下面 `−` 那行（已单列）。
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.4}\selectfont] at (912.5,63.0) {\textsf{\textbf{\textit{f}\hspace*{3pt}\textup{(}\textit{U}\hspace*{2pt}\textup{)}}}};   % f(U) 原书整组墨迹 (880,49)-(937,76)；两处 \hspace = 实测字距差（原书 5/3，Arial 自然间距 2/1）
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (55.0,162.2) {\textsf{\textbf{\textit{U}}}};   % box(45,150,20,22)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.1}{36.4}\selectfont] at (449.0,174.0) {\textsf{\textbf{\textit{f}}}};   % box(443,162,11,23)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.8}{37.3}\selectfont] at (959.0,204.5) {\textsf{\textbf{\textit{p}}}};   % box(948,192,18,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.1}{38.8}\selectfont] at (28.3,243.8) {\textsf{\textbf{6}}};   % box(20,232,15,22)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.1}{38.8}\selectfont] at (28.3,243.8) {\textsf{\textbf{0}}};   % ★ 0（原稿 6）原书墨迹 (20,232)-(34,253)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.7}{29.7}\selectfont] at (73.8,240.4) {\textsf{\textbf{1}}};   % box(67,232,8,16)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.4}{38.0}\selectfont] at (228.5,243.0) {\textsf{\textbf{1}}};   % box(220,232,10,21)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{37.2}{46.4}\selectfont] at (80.5,257.6) {{\mfallback\textbf{−}}};   % box(63,249,17,6)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.7}{28.3}\selectfont] at (72.1,265.6) {\textsf{\textbf{6}}};   % box(66,257,11,16)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.0}{34.9}\selectfont] at (72.0,256.0) {{\mfallback\textbf{−}}};   % 分数线：原书墨迹 17×6 @(63,249)；原稿 37.2 号渲出 24×5 @(68,250)（偏长 7、偏右 9）——字号 + 锚点按实测改（越界项，见交付说明）
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{22.7}{28.3}\selectfont] at (72.1,265.6) {\textsf{\textbf{4}}};   % ★ 4（原稿 6）原书墨迹 11×16 @(66,257)
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox
@@ -74,3 +85,7 @@
 
 % ⚠ 待核清单（probe 拿不准，人眼过一遍）：
 %   · 未识别/跳过：⑤ 跳过/未识别的字形
+%   ★ 2026-10-08 已逐字核完：原书本图共 **12 个标记** —— U / 0 / 1 / 1 / 4（分数 1/4）/ 1 /
+%     f（箭头）/ f(U) / p，与 tex 现在一一对应（`_glyphs.py 18.4` → f|(|U|)|U|f|p|0|1|1|−|4），
+%     **无字段缺失**（`0` 曾被认成 `6`、分母 `4` 曾被认成 `6`，均已改）⇒ 本条作废。
+%   ⚠ 全图 14 个墨块中含 2 个非字符块（区间轴+括号 214×43、箭头 95×13）+ 圆及其上的钩，不计入字形。

@@ -71,15 +71,33 @@
 
   %% ════ 标签（probe 直接给的 \node 行）════
   %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.2}{36.5}\selectfont] at (97.0,131.4) {\textsf{\textbf{\textit{x}}}};   % box(88,121,16,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{70.4}{88.0}\selectfont] at (112.8,141.1) {\textsf{\textbf{.}}};   % box(102,132,11,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{34.8}{43.5}\selectfont] at (568.0,146.4) {\textsf{\textbf{9}}};   % box(557,134,18,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{51.3}{64.1}\selectfont] at (139.2,206.6) {\textsf{\textbf{\textit{a}}}};   % box(125,190,25,28)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{59.9}{74.9}\selectfont] at (179.0,270.0) {\textsf{\textbf{×}}};   % box(165,251,26,29)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{37.2}{46.5}\selectfont] at (391.2,296.5) {\textsf{\textbf{\textit{X}}}};   % box(380,283,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{35.2}{44.0}\selectfont] at (999.9,296.1) {\textsf{\textbf{2}}};   % box(990,284,18,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.1}{37.6}\selectfont] at (281.5,335.5) {\textsf{\textbf{\textit{x}}}};   % box(272,325,17,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.0}{28.7}\selectfont] at (294.7,344.9) {\textsf{\textbf{1}}};   % box(288,337,8,15)
+  %%
+  %% ★ 2026-10-08 逐字核（对 images/22.7.png 原书抽取做连通域量测）：原书本图共 **7 个标记**
+  %%   —— 四个 **x + 数字下标**（x₄ x₃ x₂ x₁）+ **X** + **g**（箭头上方）+ **Z**。
+  %%   原稿四组下标**全是 probe 误读**（组内墨迹框几乎重合，说明字形相同，只是被拆/被并）：
+  %%     · x₄ → 拆成 `x` + `.` 两个 node（`.` 实为下标 `4`；probe 按"句点"配了 70.4pt，
+  %%            渲出只 h10，原书 17）                           原书墨迹 (88,121)-(113,149)
+  %%     · x₃ → 并成单 node `a`（实为 `x3` 两块，8-连通被粘连；probe 按整块配 51.3pt） (125,190)-(150,218)
+  %%     · x₂ → 并成单 node `×`（实为 `x2`，59.9pt）                                    (165,251)-(191,280)
+  %%     · x₁ → 拆成 `x` + `1` 两个 node                                                (272,325)-(296,352)
+  %%   ⇒ 按红线「**一个标签 = 一个节点**」把四组各合成**一个 node**（同 7.1 / 10.1 / 18.1 口径）。
+  %%     下标用 `\raisebox` 落位，**必须同时写死 `\fontsize`** —— `\raisebox` 开 hbox 会
+  %%     把数学样式重置成正文样式（记忆 fig-drawing ⛔ 那条）。
+  %%   · `9` → **g**（小写斜体，带下垂尾；`g→9` 是本项目最高频误读）。
+  %%   · `2` → **Z**（大写斜体）。
+  %%   · `X` 字形本就对，但 probe 字号 37.2 是离群值（渲出 29×27，原书墨迹 20×22）
+  %%     ⇒ 按原书墨迹高 22 重配 31.0（同 18.1 的 37.2→31.0 处理）。
+  %%   锚点 = 原书该组**整组墨迹框中心**；字号按原书墨迹框标定（x/x₁ 沿用已核过的 30.1 / 23.0）。
+  %%   ⚠ 未改任何几何（曲线/线宽/坐标一律未动）。
+  \def\labx#1#2#3{\node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.1}{37.6}\selectfont] at (#1,#2)
+     {\textsf{\textbf{\textit{x}}}\raisebox{-11.5pt}{\fontsize{23.0}{28.7}\selectfont\textsf{\textbf{#3}}}};}
+     \labx{100.5}{135.5}{4}    % x₄  原书整组墨迹 (88,121)-(113,149)  ★ 原稿 `x`+`.`
+     \labx{137.5}{204.0}{3}    % x₃  原书整组墨迹 (125,190)-(150,218)  ★ 原稿单 node `a`
+     \labx{178.0}{265.5}{2}    % x₂  原书整组墨迹 (165,251)-(191,280)  ★ 原稿单 node `×`
+     \labx{284.0}{338.5}{1}    % x₁  原书整组墨迹 (272,325)-(296,352)  ★ 原稿 `x`+`1`
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.8}\selectfont] at (566.0,146.0) {\textsf{\textbf{\textit{g}}}};   % ★ g（原稿 9）原书墨迹 (557,134)-(575,157)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.8}\selectfont] at (390.0,294.5) {\textsf{\textbf{\textit{X}}}};   % 原书墨迹 (380,283)-(400,305)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.8}\selectfont] at (999.0,296.0) {\textsf{\textbf{\textit{Z}}}};   % ★ Z（原稿 2）原书墨迹 (990,284)-(1008,307)
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox
@@ -89,3 +107,11 @@
 
 % ⚠ 待核清单（probe 拿不准，人眼过一遍）：
 %   · 未识别/跳过：⑤ 跳过/未识别的字形
+%   ★ 2026-10-08 已逐字核完（对 images/22.7.png 原书抽取做连通域量测 + 放大目视）：
+%     原书本图**只有 7 个标记** —— x₄ x₃ x₂ x₁ / X / g / Z，与 tex 现在**一一对应**
+%     （`_glyphs.py 22.7` → x|#3|g|X|Z，`#3` = `\labx` 宏的下标参数，同 10.1 的 `#3`/`#4` 惯例）。
+%     无漏字、无多字 ⇒ 本条作废。（图上其余的"点/圆点"是**几何**：4 个线上点、
+%     射线端 1 点 + 射线上的 3 点、左右各 3 个竖排省略号点，均已由既有图元画出。）
+%   ⚠ 遗留（**非字符问题，本次未动**）：原稿的 fills 把若干圆点近似成了折线多边形，
+%     渲染后线上会留一点凸缘（如 line1 (77,113)-(93,113)、line3 (150,244)-(165,249)）；
+%     属于画法/几何差异，不在"核字符"范围内。

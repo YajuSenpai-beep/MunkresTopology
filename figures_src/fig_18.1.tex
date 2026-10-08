@@ -61,17 +61,24 @@
 
   %% ════ 标签（probe 直接给的 \node 行）════
   %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
+  %%
+  %% ★ 2026-10-08 逐字核（对 images/18.1.png 原书抽取 + chap2 p31 书页）：
+  %%   · 原书右团块标记是 **大写 Y**（带下垂竖尾），原稿 probe 认成 `V` —— 已改。
+  %%   · `f⁻¹` 原为**三个 node 手摆坐标**（f / − / 1），`f(U)` 原为**四个 node**
+  %%     （f / ( / U / )）。拆开摆的后果已实测到：`−` 那个 node 的 `fill=white`
+  %%     白底（后画、盖在上面）把 `1` 的墨迹截断成 9pt 高（原书 16pt）—— 即记忆里
+  %%     「上下标拆成多个 node ⇒ 必然压字」那条。故按 15.1 / 81.6 的口径
+  %%     合成**一个标签 = 一个 node**，上标用 `\raisebox` + 写死 `\fontsize`。
+  %%   · `X` 的 probe 字号 37.2 是个离群值（按它自己记的 box 高 22 反推应 ≈31）：
+  %%     渲出 29×27，原书 20×22 ⇒ 改 31.0（见交付说明「超出只改字符」一节）。
+  %%   位置取值：一组的锚点 = 该组原书**整组墨迹框中心**（未改任何几何）。
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{27.8}{34.8}\selectfont] at (546.0,54.0) {\textsf{\textbf{\textit{f}}}};   % box(540,43,11,21)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{37.2}{46.5}\selectfont] at (29.2,109.5) {\textsf{\textbf{\textit{X}}}};   % box(18,96,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.3}{37.9}\selectfont] at (1035.7,119.0) {\textsf{\textbf{\textit{V}}}};   % box(1026,107,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.7}{29.7}\selectfont] at (558.8,152.4) {\textsf{\textbf{1}}};   % box(552,144,8,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{27.8}{34.8}\selectfont] at (529.0,160.0) {\textsf{\textbf{\textit{f}}}};   % box(523,149,11,21)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{26.5}{33.2}\selectfont] at (550.9,156.0) {{\mfallback\textbf{−}}};   % box(538,150,13,4)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.8}\selectfont] at (29.2,109.5) {\textsf{\textbf{\textit{X}}}};   % 原书墨迹 (18,96)-(37,117)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.3}{37.9}\selectfont] at (1035.7,119.0) {\textsf{\textbf{\textit{Y}}}};   % ★ Y（原稿 V）原书墨迹 (1026,107)-(1045,128)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{27.8}{34.8}\selectfont] at (544.5,157.5)
+        {\textsf{\textbf{\textit{f}}}\raisebox{10.0pt}{\fontsize{22.3}{28.0}\selectfont\mfallback\textbf{−}\textsf{\textbf{1}}}};   % f⁻¹ 原书整组墨迹 (523,144)-(559,169)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (317.0,186.2) {\textsf{\textbf{\textit{U}}}};   % box(307,174,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{27.1}{33.9}\selectfont] at (866.5,199.5) {\textsf{\textbf{\textit{f}}}};   % box(861,188,10,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.4}\selectfont] at (878.5,202.5) {\textsf{\textbf{(}}};   % box(874,188,8,28)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (895.0,200.2) {\textsf{\textbf{\textit{U}}}};   % box(885,188,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.4}\selectfont] at (914.5,202.5) {\textsf{\textbf{)}}};   % box(909,188,8,28)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.4}\selectfont] at (892.0,202.5) {\textsf{\textbf{\textit{f}\textup{(}\textit{U}\textup{)}}}};   % f(U) 原书整组墨迹 (861,188)-(916,215)
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox
@@ -81,3 +88,6 @@
 
 % ⚠ 待核清单（probe 拿不准，人眼过一遍）：
 %   · 未识别/跳过：⑤ 跳过/未识别的字形
+%   ★ 2026-10-08 已逐字核完：原书本图共 **6 个标记** —— X / U / f / f⁻¹ / Y / f(U)，
+%     与 tex 现在一一对应（`_glyphs.py 18.1` → f|X|Y|f|−|1|U|f|(|U|)），**无字段缺失** ⇒ 本条作废。
+

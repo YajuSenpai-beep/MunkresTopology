@@ -142,29 +142,48 @@
   \fill (448.0,289.0) circle (7.0);
   \fill (448.0,297.5) circle (7.0);
 
-  %% ════ 标签（probe 直接给的 \node 行）════
-  %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.4}{38.0}\selectfont] at (509.5,26.0) {\textsf{\textbf{1}}};   % box(501,15,10,21)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{37.1}{46.4}\selectfont] at (478.1,28.3) {\textsf{\textbf{×}}};   % box(469,17,17,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.1}{37.6}\selectfont] at (451.0,30.0) {\textsf{\textbf{\textit{x}}}};   % box(442,19,16,18)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.2}{35.2}\selectfont] at (755.8,83.5) {\textsf{\textbf{1}}};   % box(748,73,9,20)
+  %% ════ 标签（2026-10-08 逐字核 + 合成：21 个手摆 node -> 9 个）════
+  %%
+  %% ★ 2026-10-08 逐字核（对 images/22.5.png 原书抽取；书页 chap2 p140 —— 索引记的 p65 是引用页）：
+  %%   · 原书本图标签共 **6 条有序对 + 3 个单字母**：
+  %%       `x × 1`（方块②上） `x × 0`（方块②下） `1 × y`（方块③右上）
+  %%       `0 × y`（方块③中） `x × y`（方块④）   `0 × 0`（方块①左下）+ `U` `V` `W`
+  %%   · ★ **两处 `6` 应为 `0`**：方块③那条有序对的**首字**、方块②下边那条的**末字**。
+  %%     逐列量墨迹：两字都是 15×22 的椭圆环、无 6 的斜升笔，与同图其余 `0` 全同。
+  %%     ⇒ 主表 `_fig_table.tsv` 的「✗ 两处 0→6」判定 **成立**（本批少见的一次真阳，非假阳）。
+  %%   · `U` `V` `W` 大写、`x` `y` 小写、`1` 是数字 —— 逐字核对**无误**；
+  %%     `×` 是乘号 U+00D7（不是字母 x），原稿已对。
+  %%   · 结构：原稿把每条有序对拆成 **3 个 node 手摆坐标**（如 `x`/`×`/`1` 三个 node）——
+  %%     正是记忆里「一个标签 = 一个节点」那条红线（同本批 18.1~18.5）。
+  %%     ⇒ 按同批口径**合成一个 node**：整条有序对一个 `\node`，三个字形各带自己的
+  %%     `\fontsize`（沿用 probe 实测值，字形大小不变），字形间距用**实测墨迹间距**的
+  %%     `\hspace` 复现（原书墨迹间距 8~17px，Arial 自带字距 ≈3pt，故 hspace 取 5~11pt）；
+  %%     字形垂直位用 `\raisebox`（**内含写死的 `\fontsize`**，防 \raisebox 重置字号）
+  %%     对齐到原书逐字形墨迹中心；锚点 = 该组**原书整组墨迹框中心**。
+  %%     ⚠ 合并不是"原稿压字"倒逼的：原稿三 node 间留白 11~17pt、白底互不重叠。
+  %%       但合成后所有字形同基线，`×` 用 34~38pt（比字母大，为凑原书 16px 墨高）
+  %%       会被基线抬上去 → 实测偏高 2~4.5px，故补了 `\raisebox` 微调（残差 ≤1px）。
+  %%   · ⚠ 方块③那条 `0 × y` **去掉了 `fill=white`**：原稿 `6` 那个 node 的白色底框
+  %%     （宽 ≈17pt）把左边箭头的**箭头尖**截掉了 —— 回比实测箭尖只剩 6px（原书 9px），
+  %%     去掉白底后箭尖复原为 8px（原书 9px）。合成后白框更宽（≈73pt）本会截得更多，
+  %%     而该标签下方原书本无压线 ⇒ 该处不需要白底。其余 5 条下方无几何，白底保留。
+  %%   · 水平校准：迭代到各字形墨迹间距差 ≤1px、组中心差 ≤1px。
+     % x × 1   （方块②上）   原书整组墨迹 (442,15)-(510,36)
+     \node[anchor=center,inner sep=0pt,fill=white] at (479.0,26.7) {{\raisebox{1.2pt}{\fontsize{30.1}{37.6}\selectfont\textsf{\textbf{\textit{x}}}}}\hspace{8.0pt}{\raisebox{-1.8pt}{\fontsize{37.1}{46.4}\selectfont\textsf{\textbf{×}}}}\hspace{11.0pt}{\raisebox{0.7pt}{\fontsize{30.4}{38.0}\selectfont\textsf{\textbf{1}}}}};
+     % x × 0   （方块②下）   原书整组墨迹 (439,310)-(509,331)   ★ 末字 0（原稿 6）
+     \node[anchor=center,inner sep=0pt,fill=white] at (475.0,322.7) {{\raisebox{1.7pt}{\fontsize{31.0}{38.8}\selectfont\textsf{\textbf{\textit{x}}}}}\hspace{5.0pt}{\raisebox{-2.8pt}{\fontsize{38.2}{47.8}\selectfont\textsf{\textbf{×}}}}\hspace{9.0pt}{\raisebox{1.2pt}{\fontsize{31.1}{38.9}\selectfont\textsf{\textbf{0}}}}};
+     % 1 × y   （方块③右上） 原书整组墨迹 (748,73)-(822,99)
+     \node[anchor=center,inner sep=0pt,fill=white] at (784.5,86.2) {{\raisebox{1.2pt}{\fontsize{28.2}{35.2}\selectfont\textsf{\textbf{1}}}}\hspace{10.0pt}{\raisebox{-1.8pt}{\fontsize{33.8}{42.2}\selectfont\textsf{\textbf{×}}}}\hspace{11.0pt}{\raisebox{0.7pt}{\fontsize{30.7}{38.4}\selectfont\textsf{\textbf{\textit{y}}}}}};
+     % 0 × y   （方块③中）   原书整组墨迹 (678,190)-(751,215)   ★ 首字 0（原稿 6）；无 fill=white
+     \node[anchor=center,inner sep=0pt] at (714.5,203.5) {{\raisebox{0.5pt}{\fontsize{31.1}{38.9}\selectfont\textsf{\textbf{0}}}}\hspace{9.0pt}{\raisebox{-2.0pt}{\fontsize{34.9}{43.6}\selectfont\textsf{\textbf{×}}}}\hspace{10.0pt}{\raisebox{1.5pt}{\fontsize{30.0}{37.5}\selectfont\textsf{\textbf{\textit{y}}}}}};
+     % x × y   （方块④）     原书整组墨迹 (1059,203)-(1129,225)
+     \node[anchor=center,inner sep=0pt,fill=white] at (1094.5,214.2) {{\raisebox{1.7pt}{\fontsize{28.3}{35.4}\selectfont\textsf{\textbf{\textit{x}}}}}\hspace{7.0pt}{\raisebox{-2.8pt}{\fontsize{34.9}{43.6}\selectfont\textsf{\textbf{×}}}}\hspace{11.0pt}{\raisebox{1.2pt}{\fontsize{29.2}{36.5}\selectfont\textsf{\textbf{\textit{y}}}}}};
+     % 0 × 0   （方块①左下） 原书整组墨迹 (19,308)-(88,330)
+     \node[anchor=center,inner sep=0pt,fill=white] at (54.0,320.5) {{\raisebox{0.5pt}{\fontsize{32.3}{40.4}\selectfont\textsf{\textbf{0}}}}\hspace{9.0pt}{\raisebox{-1.5pt}{\fontsize{34.9}{43.6}\selectfont\textsf{\textbf{×}}}}\hspace{9.0pt}{\raisebox{1.0pt}{\fontsize{30.6}{38.2}\selectfont\textsf{\textbf{0}}}}};
+     % 单字母（原本就是一个 node，未改字符，位置未动）
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.9}{37.4}\selectfont] at (1089.2,86.5) {\textsf{\textbf{\textit{W}}}};   % box(1076,74,26,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{33.8}{42.3}\selectfont] at (782.1,86.5) {\textsf{\textbf{×}}};   % box(774,76,15,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.3}\selectfont] at (811.3,90.3) {\textsf{\textbf{\textit{y}}}};   % box(802,77,18,23)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.4}{36.8}\selectfont] at (454.8,178.5) {\textsf{\textbf{\textit{V}}}};   % box(446,166,18,23)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (143.0,179.2) {\textsf{\textbf{\textit{U}}}};   % box(133,167,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.1}{38.8}\selectfont] at (686.3,201.8) {\textsf{\textbf{6}}};   % box(678,190,15,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{34.9}{43.6}\selectfont] at (713.6,204.6) {\textsf{\textbf{×}}};   % box(705,194,16,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.5}\selectfont] at (743.2,207.8) {\textsf{\textbf{\textit{y}}}};   % box(734,195,18,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.3}{35.4}\selectfont] at (1067.4,213.4) {\textsf{\textbf{\textit{x}}}};   % box(1059,203,15,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{34.9}{43.6}\selectfont] at (1092.6,213.6) {\textsf{\textbf{×}}};   % box(1084,203,16,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.2}{36.4}\selectfont] at (1121.7,216.7) {\textsf{\textbf{\textit{y}}}};   % box(1113,204,17,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{32.3}{40.4}\selectfont] at (29.2,319.8) {\textsf{\textbf{0}}};   % box(19,308,15,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.6}{38.2}\selectfont] at (84.5,320.3) {\textsf{\textbf{0}}};   % box(75,309,14,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.1}{38.8}\selectfont] at (503.3,321.8) {\textsf{\textbf{6}}};   % box(495,310,15,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{34.9}{43.6}\selectfont] at (54.6,323.6) {\textsf{\textbf{×}}};   % box(46,313,16,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{38.2}{47.7}\selectfont] at (474.6,325.4) {\textsf{\textbf{×}}};   % box(465,314,18,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.7}\selectfont] at (449.0,325.6) {\textsf{\textbf{\textit{x}}}};   % box(439,315,18,17)
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox
@@ -174,3 +193,9 @@
 
 % ⚠ 待核清单（probe 拿不准，人眼过一遍）：
 %   · 未识别/跳过：⑤ 跳过/未识别的字形
+%   ★ 2026-10-08 已逐字核完：原书本图共 **21 个字形** —— 6 条有序对（各 3 字）+ `U` `V` `W`，
+%     与 tex 现在一一对应（`_glyphs.py 22.5` → x|×|1|x|×|0|1|×|y|0|×|y|x|×|y|0|×|0|W|V|U）。
+%     两处 `6`→`0` 已改；逐字形墨迹框回比，最大单边偏差 2px（多数 ≤1px）⇒ 本条作废。
+%   ⚠ **仍存的、不在本次范围**：方块①四条箭头的**箭头三角**被 prims2 画成小斜杠（非实心三角）、
+%     方块①右下角有一处 y 翻转的毛刺、圆/箭头那组（方块④）的箭头形状与阴影 —— 都是**几何/图元**问题，
+%     与字符无关，本次未动（留给几何精修）。

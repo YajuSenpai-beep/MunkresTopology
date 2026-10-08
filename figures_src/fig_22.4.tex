@@ -175,18 +175,33 @@
 
   %% ════ 标签（probe 直接给的 \node 行）════
   %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.4}\selectfont] at (724.5,30.5) {\textsf{\textbf{(}}};   % box(720,16,8,28)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.9}{36.1}\selectfont] at (741.5,28.2) {\textsf{\textbf{\textit{U}}}};   % box(732,16,19,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{32.0}{40.0}\selectfont] at (761.1,30.0) {\textsf{\textbf{)}}};   % box(755,16,9,27)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.8}{37.3}\selectfont] at (707.0,33.5) {\textsf{\textbf{\textit{P}}}};   % box(696,21,18,23)
+  %%
+  %% ★ 2026-10-08 逐字核（figpipe/src_hi/22.4.png 高清源 + images/22.4.png 原书抽取，
+  %%   两图映射用左圆直径标定：s=0.5464、ox=6.9、oy=9.5）：
+  %%   原书本图共 **12 个字形** = U / V / X / p( U ) / p / p( V )。
+  %%   · **三处 `P` 原书全是小写斜体 `p`**（原稿 probe 认成大写、写成 \textit{P}）：
+  %%       p(U) 的 p：墨迹 x695.4-713.4 y21.5-43.9 —— 顶在 y21.5，比同组 `U` 的 cap 线
+  %%       (y16.1) 低 5.4px，且**下探到基线 y38.5 以下 5.4px**（降部）⇒ 小写；
+  %%       箭头标签 p：x377.9-395.9 y148.8-171.2（同样是带降部的 p，宽 18 与上者同）；
+  %%       p(V) 的 p：x714.5-732.5 y338.4-360.8（同）。
+  %%     ⇒ 三处 `P` → `p`。**表 `_fig_table.tsv` 判的「✗ p→P（3 处）」方向反了**：
+  %%       它的「原书字符」列写的 p(小写)是对的，错的是「我的字符」列 —— 那正是原稿的错。
+  %%   · 字号：本图三个大写 U/V/X 的 cap 高实测**都是 22.4px** ⇒ 30.7
+  %%     （Arial Bold cap = 0.716em，30.7×0.716 ≈ 22.0；实渲 U = 22px、括号 28px 对上原书 27.9）。
+  %%   · `p(U)` / `p(V)` 原稿各拆成 **4 个手摆 node**（p / ( / U / )），正是记忆里
+  %%     「一个标签 = 一个节点」那条红线 ⇒ 按 18.1 / 18.2 的口径**合成一个 node**；
+  %%     组内间距用实测 `\hspace` 复现（原书间隙 6.0/4.3/3.8 与 4.9/5.5/2.8；
+  %%     字体自然间距只有 2/4/1 —— 不复现整组就比原书窄 7~11%）。
+  %%     直立括号用 `\textup`、斜体字母用 `\textit`（同 18.1 的 `\textit{f}\textup{(}\textit{U}\textup{)}`）。
+  %%   · 锚点 = 原书**整组墨迹框中心**（不改任何几何）。
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.4}\selectfont] at (733.4,30.7)
+        {\textsf{\textbf{\textit{p}\hspace{4.0pt}\textup{(}\textit{U}\hspace{2.8pt}\textup{)}}}};   % p(U) 原书整组墨迹 (695.4,16.1)-(763.1,43.9)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.5}{36.9}\selectfont] at (259.5,41.7) {\textsf{\textbf{\textit{U}}}};   % box(250,29,19,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.2}{36.4}\selectfont] at (388.9,161.0) {\textsf{\textbf{\textit{P}}}};   % box(378,149,18,22)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.4}\selectfont] at (388.9,161.5) {\textsf{\textbf{\textit{p}}}};   % ★ 原为 \textit{P}；原书墨迹 (377.9,148.8)-(395.9,171.2)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.6}{35.8}\selectfont] at (282.3,319.5) {\textsf{\textbf{\textit{V}}}};   % box(274,307,17,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.4}\selectfont] at (742.5,346.5) {\textsf{\textbf{(}}};   % box(738,332,8,28)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.0}{35.0}\selectfont] at (759.3,343.9) {\textsf{\textbf{\textit{V}}}};   % box(751,332,17,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.4}\selectfont] at (776.5,347.5) {\textsf{\textbf{)}}};   % box(771,333,8,28)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.8}{37.3}\selectfont] at (726.0,350.5) {\textsf{\textbf{\textit{P}}}};   % box(715,338,18,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{38.0}{47.5}\selectfont] at (151.3,369.0) {\textsf{\textbf{\textit{X}}}};   % box(140,355,20,23)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.4}\selectfont] at (751.1,348.5)
+        {\textsf{\textbf{\textit{p}\hspace{2.9pt}\textup{(}\textit{V}\hspace{1.8pt}\textup{)}}}};   % p(V) 原书整组墨迹 (714.5,331.9)-(779.0,360.8)
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.8}\selectfont] at (151.3,369.0) {\textsf{\textbf{\textit{X}}}};   % 原书墨迹 (139.7,355.4)-(160.4,377.8)；原 38.0 是 probe 离群值
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox

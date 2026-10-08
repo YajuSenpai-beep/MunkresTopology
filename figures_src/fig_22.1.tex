@@ -4,7 +4,7 @@
 %%
 %% ⚠ 待核：
 %   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
-%   · 可疑字形 2 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
+%   · 可疑字形 2 项 —— **已核实为柱面下缘点刻/扫描斑点，非字形，已删除**（见文件末说明）
 %%
 \documentclass[12pt]{standalone}
 \usepackage{fontspec}
@@ -174,9 +174,9 @@
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.0}{37.5}\selectfont] at (324.8,115.2) {\textsf{\textbf{\textit{b}}}};   % box(315,103,17,22)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{62.9}{78.6}\selectfont] at (412.2,130.9) {{\mfallback\textbf{−}}};   % box(363,114,68,15)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{62.9}{78.6}\selectfont] at (891.2,130.9) {{\mfallback\textbf{−}}};   % box(842,114,68,15)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{33.5}{41.9}\selectfont] at (637.5,149.8) {\textsf{\textbf{.}}};   % box(633,147,4,5)
+     % （略）杂点 box(633,147,4,5) → 曾误读成 "." @ (637.5,149.8) —— 柱面下缘点刻/扫描斑点，非字形，已删
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.9}{38.6}\selectfont] at (1082.3,165.3) {\textsf{\textbf{\textit{b}}}};   % box(1072,153,18,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.5}{36.9}\selectfont] at (659.0,166.4) {\textsf{\textbf{′}}};   % box(657,155,5,8)
+     % （略）杂点 box(657,155,5,8) → 曾误读成 "′" @ (659.0,166.4) —— 柱面下缘点刻/扫描斑点，非字形，已删
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{33.0}{41.2}\selectfont] at (628.6,193.1) {\textsf{\textbf{\textit{a}}}};   % box(619,183,17,17)
      \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{33.0}{41.2}\selectfont] at (172.6,203.1) {\textsf{\textbf{\textit{a}}}};   % box(163,193,17,17)
 
@@ -188,4 +188,7 @@
 
 % ⚠ 待核清单（probe 拿不准，人眼过一遍）：
 %   · 未识别/跳过：⑤ 跳过/未识别的字形
-%   · 未识别/跳过：box(674,149,7,5)
+%   · 未识别/跳过：box(674,149,7,5) —— 已核实：柱面下缘点刻/扫描斑点，非字形
+% ⚠ 结论（对照 chap2 p62 原书页 Figure 22.1）：**字母仅小写 a×3、b×5**，无一处需补、无需换字。
+%    probe 误读的 2 个杂点（"." / "′"）已清零；2 处 "−" 是**两段箭头的杆**（非杂点，保留）。
+%    ⚠ 但箭头**只有杆、没有头**（tex 内无箭头头笔画）—— 属"画法/几何"层，超出本次字符范围，另议。

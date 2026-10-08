@@ -17,7 +17,6 @@
   %% ════ 直线段（prims2 的 strokes）════
   \draw[line width=4.0pt] (367.0,210.0) -- (366.0,195.0);
   \draw[line width=4.0pt] (78.0,315.0) -- (77.0,330.0);
-  \draw[line width=3.0pt] (528.0,151.0) -- (517.0,151.0);
   \draw[line width=3.0pt] (466.0,123.0) -- (479.0,123.0);
   \draw[line width=5.0pt] (366.0,294.0) -- (235.8,295.0);
   \draw[line width=6.5pt] (235.8,295.0) -- (230.0,292.0);
@@ -42,6 +41,8 @@
   \draw[line width=3.0pt] (478.0,128.0) -- (467.0,129.0);
   \draw[line width=5.0pt] (79.0,167.0) -- (79.0,183.0);
   \draw[line width=4.0pt] (367.0,78.0) -- (368.0,93.0);
+  \draw[line width=4.0pt] (367.0,107.0) -- (367.0,125.0);
+  \draw[line width=4.0pt] (367.0,136.0) -- (367.0,154.0);
   \draw[line width=4.0pt] (77.0,342.0) -- (78.0,357.0);
   \draw[line width=6.0pt] (345.0,21.0) -- (343.0,74.3);
   \draw[line width=6.8pt] (233.5,286.5) -- (230.0,292.0);
@@ -67,18 +68,34 @@
   \draw[line width=6.0pt] (343.0,74.3) .. controls (342.4,157.5) and (306.2,240.0) .. (233.5,286.5);
   \draw[line width=6.0pt] (113.0,446.0) .. controls (131.2,389.0) and (171.9,339.8) .. (217.0,297.0);
 
-  %% ════ 标签（probe 直接给的 \node 行）════
-  %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.9}{39.9}\selectfont] at (532.1,110.1) {\textsf{\textbf{\textit{x}}}};   % box(522,99,18,18)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{20.0}{25.0}\selectfont] at (369.5,116.8) {\textsf{\textbf{)}}};   % box(366,107,5,19)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.6}{38.3}\selectfont] at (401.5,124.5) {\textsf{\textbf{\textit{F}}}};   % box(392,112,19,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.4}\selectfont] at (418.5,127.5) {\textsf{\textbf{(}}};   % box(414,113,8,28)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{32.6}{40.7}\selectfont] at (448.1,127.5) {\textsf{\textbf{)}}};   % box(442,113,9,28)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.7}\selectfont] at (433.0,128.6) {\textsf{\textbf{\textit{x}}}};   % box(423,118,18,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{24.7}{30.9}\selectfont] at (564.6,141.9) {\textsf{\textbf{2}}};   % box(558,133,12,17)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{20.0}{25.0}\selectfont] at (369.5,145.8) {\textsf{\textbf{)}}};   % box(366,136,5,19)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.9}{36.1}\selectfont] at (503.9,150.0) {\textsf{\textbf{1}}};   % box(496,139,9,21)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.7}\selectfont] at (546.0,153.6) {\textsf{\textbf{\textit{x}}}};   % box(536,143,18,17)
+  %% ════ 标签（2026-10-08 合成：10 个手摆 node -> 3 个）════
+  %% ⚠ 全部保留 fill=white：文字在最上层，否则与曲线交叉干扰
+  %
+  %% ★ 2026-10-08 逐字核（对 images/18.3.png 原书抽取 = 原书那张图，581×461）：
+  %%   · 原书公式 = `F(x) = x/(1 − x²)`：**大写 `F`**、小写斜体 `x`、分母上标 `2`。
+  %%     字符本身逐一正确（主表判「✓ 对」成立），一处字形都没改。
+  %%   · 原稿把 `F(x)` 拆成 **4 个 node**（F / ( / x / )），把分母 `1 − x²` 拆成
+  %%     **3 个 node + 1 条笔画**（`1` / `x` / `2` 各一个 node，`−` 是 `\draw` 短横）
+  %%     —— 正是记忆里「一个标签 = 一个节点」那条红线。按 15.1 / 18.1 / 18.2 的口径合成：
+  %%       `F(x)`              -> 一个 node（括号用 `\textup`、字母用 `\textit`）
+  %%       分母 `1 − x²`        -> 一个 node（上标 `2` 用 `\raisebox` + 写死 `\fontsize`；
+  %%                              `−` 改打字符，原笔画删除以免被 node 的白底盖住）
+  %%       分子 `x` 与分数线    -> 各算一条命令（分数是二维结构，其三个视觉元素各一条命令）
+  %%     锚点 = 原书该组**墨迹框中心**，再做「渲染 -> 逐字量差 -> 回移」一轮收敛。
+  %%   · 间距用实测墨迹值复现（原书分母墨迹间距 11 / 6 / 4 px，字体本身的 text-mode
+  %%     间距为 0，不复现就会把 `1 − x²` 挤成一团）。
+  %%   · 收敛后逐字对照原书墨迹（原书 x 区间 -> 本稿 x 区间，均在 1-2 px 内）：
+  %%       `F` 392-410 -> 392-410 ｜ `(` 414-421 -> 413-419 ｜ `x` 423-440 -> 421-439
+  %%       `)` 442-450 -> 442-448 ｜ 分子 `x` 522-539 -> 520-538
+  %%       分母 `1` 496-504 -> 495-504 ｜ `−` 516-529 -> 516-529
+  %%       `x` 536-553 -> 536-553 ｜ `2` 558-569 -> 558-569（间距 11/6/4 全对上）
+  %%   · 另修 probe 的 2 处误读（见上「直线段」）：x≈367 的虚线渐近线上有 **两段虚线**
+  %%     被认成字形 `)`（`box(366,107,5,19)`、`box(366,136,5,19)`），渲出来是括号、
+  %%     还把虚线打断 —— 原书那里是虚线（y 107-125 / 136-154，与相邻虚线同长同宽）。
+  %%     ⇒ 删掉这两个 node，按原书补回两段 4.0pt 虚线笔画。
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.6}{38.3}\selectfont] at (422.0,126.5) {\textsf{\textbf{\textit{F}\textup{(}\textit{x}\textup{)}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.9}{39.9}\selectfont] at (532.1,110.1) {\textsf{\textbf{\textit{x}}}};
+  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.7}\selectfont] at (534.0,147.0) {\textsf{\textbf{1}}\hspace{5pt}\raisebox{-1.0pt}{\fontsize{27.5}{33.0}\selectfont\textsf{\textbf{−}}}\hspace{5pt}\textsf{\textbf{\textit{x}}}\hspace{3pt}\raisebox{10.5pt}{\fontsize{24.7}{30.0}\selectfont\textsf{\textbf{2}}}};
 
   % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
   \pgfresetboundingbox
@@ -88,3 +105,6 @@
 
 % ⚠ 待核清单（probe 拿不准，人眼过一遍）：
 %   · 未识别/跳过：⑤ 跳过/未识别的字形
+%   ★ 2026-10-08 已逐字核完，本条作废：原书本图**只有公式 `F(x) = x/(1 − x²)` 一串字符**
+%     （`F ( x ) x 1 x 2` + `=` 两横 / 分数线 / 减号），逐一核过、**字形无一处要改**；
+%     probe 多报的 2 个 `)` 是 x≈367 渐近线上的虚线（已改回笔画）。
