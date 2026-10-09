@@ -1,87 +1,65 @@
-% 图 18.5 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
-%%
-% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 18.5` 看指标 + 看叠合图。
-%%
-%% ⚠ 待核：
-%   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
-%   · 可疑字形 1 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
-%%
+% 图 18.5 —— 2026-10-09 矢量级**重画**（推翻 probe 描摹稿：原稿 45 碎段 + 8 段贝塞尔、线宽 9 档）
+%
+% 三幅分段函数图像：h（连续、原点有折角）｜k（原点跳跃：实心点 + 空心点）｜l（同 k，另加跳跃记号）
+%
+% 几何全部实测自 `images/18.5.png`（1109×342 = 画布，1pt = 1px）：
+%   竖轴 x = 169 / 556 / 937 ；横轴同为 y = 173（三幅）
+%   h 折线：**两段斜率不同**（实测：右支 dx/dy≈-1.97、左支 dx/dy≈-0.94）⇒ 原点有**折角**，不是一条直线
+%   k 上段 (556,107)→(644,17)｜下段 (555,229)→(479,314)｜实心点 (556,107) r7.5｜空心点 (555,229.5) 外8.5/内4
+%   l 上段 (938,106)→(1019,20)｜下段 (938,224)→(853,320)｜实心点 (940,106)｜空心点 (938,224)
+%   l 另加 5 个记号（**k 没有**）：上拱弧 (921,78)..(938,64)..(959,78)｜下谷弧 (921,131)..(937,145)..(954,131)
+%     ｜上一短横 y=154.5 x937→953｜下一短横 y=191.5 x936→953｜横轴右侧 `)` 弧 (980,154)..(995,173)..(980,196)
+%   线宽：全图一档 5.0（书实测 4~5px）
 \documentclass[12pt]{standalone}
 \usepackage{fontspec}
-\setsansfont{Arial}
+\setsansfont{TeX Gyre Heros}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+
+\def\w{5.0}
+
 \begin{document}
-\begin{tikzpicture}[x=1pt, y=-1pt, line width=3.0pt, line cap=round, line join=round]
+\begin{tikzpicture}[x=1pt, y=-1pt, line width=\w, line cap=butt, line join=round]
 
-  %% ════ 直线段（prims2 的 strokes）════
-  \draw[line width=3.0pt] (167.0,176.0) -- (164.8,174.0);
-  \draw[line width=4.0pt] (164.8,174.0) -- (15.0,174.0);
-  \draw[line width=6.0pt] (932.0,231.0) -- (855.0,316.0);
-  \draw[line width=5.0pt] (940.0,155.0) -- (938.0,144.0);
-  \draw[line width=5.0pt] (556.0,113.0) -- (556.0,172.0);
-  \draw[line width=7.0pt] (556.0,234.0) -- (556.0,224.0);
-  \draw[line width=4.0pt] (556.0,18.0) -- (557.0,101.0);
-  \draw[line width=5.9pt] (182.0,171.0) -- (185.6,166.4);
-  \draw[line width=6.0pt] (185.6,166.4) -- (319.4,99.0);
-  \draw[line width=2.9pt] (319.4,99.0) -- (322.0,100.0);
-  \draw[line width=5.0pt] (555.0,223.0) -- (556.0,174.0);
-  \draw[line width=7.0pt] (554.0,224.0) -- (550.0,233.0);
-  \draw[line width=5.0pt] (992.0,174.0) -- (1098.0,174.0);
-  \draw[line width=3.0pt] (942.0,100.0) -- (939.0,100.0);
-  \draw[line width=5.0pt] (556.0,235.0) -- (556.0,331.0);
-  \draw[line width=5.0pt] (398.0,173.0) -- (555.0,173.0);
-  \draw[line width=4.0pt] (937.0,332.0) -- (937.0,232.0);
-  \draw[line width=8.0pt] (172.0,173.0) -- (181.0,172.0);
-  \draw[line width=7.0pt] (940.0,156.0) -- (939.0,172.0);
-  \draw[line width=7.0pt] (167.0,179.0) -- (69.0,281.0);
-  \draw[line width=3.0pt] (936.0,231.0) -- (933.0,231.0);
-  \draw[line width=4.0pt] (551.0,234.0) -- (555.0,234.0);
-  \draw[line width=5.0pt] (953.0,155.0) -- (941.0,155.0);
-  \draw[line width=3.0pt] (182.0,172.0) -- (184.2,174.0);
-  \draw[line width=5.0pt] (184.2,174.0) -- (334.0,174.0);
-  \draw[line width=5.0pt] (941.0,174.0) -- (989.0,173.0);
-  \draw[line width=7.0pt] (940.0,175.0) -- (940.0,191.0);
-  \draw[line width=7.0pt] (1017.0,22.0) -- (943.0,100.0);
-  \draw[line width=7.0pt] (557.0,112.0) -- (560.0,103.0);
-  \draw[line width=4.0pt] (938.0,99.0) -- (938.0,67.0);
-  \draw[line width=5.0pt] (777.0,173.0) -- (938.0,173.0);
-  \draw[line width=4.0pt] (938.0,65.0) -- (939.0,18.0);
-  \draw[line width=4.0pt] (952.0,191.0) -- (941.0,192.0);
-  \draw[line width=4.2pt] (171.0,173.0) -- (168.0,176.0);
-  \draw[line width=7.0pt] (937.0,109.0) -- (938.0,100.0);
-  \draw[line width=7.0pt] (550.0,234.0) -- (480.0,310.0);
-  \draw[line width=5.0pt] (938.0,110.0) -- (938.0,142.0);
-  \draw[line width=5.0pt] (936.0,219.0) -- (932.0,230.0);
-  \draw[line width=5.0pt] (170.0,19.0) -- (171.0,172.0);
-  \draw[line width=7.0pt] (939.0,109.0) -- (943.0,101.0);
-  \draw[line width=7.0pt] (561.0,102.0) -- (641.0,21.0);
-  \draw[line width=4.0pt] (557.0,173.0) -- (713.0,174.0);
-  \draw[line width=4.0pt] (937.0,218.0) -- (939.0,192.0);
-  \draw[line width=5.0pt] (170.0,332.0) -- (170.0,181.2);
-  \draw[line width=3.0pt] (170.0,181.2) -- (168.0,179.0);
+  %% ════════════ h：两段折线（原点折角）════════════
+  \draw (170,18) -- (170,334);          % 竖轴
+  \draw (14,173) -- (335,173);          % 横轴
+  \draw (323,99) -- (173,173) -- (68,284);   % 折线：右支与左支斜率不同
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.9}{38.6}\selectfont] at (344.8,94.2) {\textsf{\textbf{\textit{h}}}};
 
-  %% ════ 曲线（prims2 的 curves —— 三段式，坐标同为 (y,x)）════
-  \draw[line width=5.0pt] (981.0,156.0) .. controls (986.4,160.0) and (990.5,164.9) .. (990.0,172.0);
-  \draw[line width=5.0pt] (937.0,66.0) .. controls (930.5,66.8) and (923.7,69.1) .. (921.0,76.0);
-  \draw[line width=5.0pt] (921.0,132.0) .. controls (923.3,138.4) and (929.9,143.8) .. (937.0,143.0);
-  \draw[line width=5.0pt] (938.0,231.0) .. controls (944.2,229.7) and (945.2,219.0) .. (938.0,219.0);
-  \draw[line width=7.0pt] (557.0,102.0) .. controls (551.7,102.1) and (548.2,111.6) .. (555.0,112.0);
-  \draw[line width=5.0pt] (939.0,143.0) .. controls (945.6,142.9) and (951.8,139.1) .. (955.0,133.0);
-  \draw[line width=5.0pt] (939.0,66.0) .. controls (946.5,66.5) and (953.0,70.3) .. (957.0,77.0);
-  \draw[line width=5.0pt] (980.0,194.0) .. controls (987.1,189.8) and (990.6,182.8) .. (991.0,175.0);
+  %% ════════════ k：原点跳跃 ════════════
+  \draw (556,18) -- (556,334);
+  \draw (397,173) -- (716,173);
+  \draw (644,17) -- (556,107);          % 上段（止于实心点）
+  \draw (479,314) -- (555,230);         % 下段（起于下端的点）
+  %% ★ 2026-10-09 更正：k 的两段**都含 0**（`k(x)=x−2 (x≤0)` 与 `x+2 (x≥0)` 在 0 处都给值）
+  %%   ⇒ 正文说「**do not define a function**」，图上**两个端点都是实心点**。
+  %%   （`images/18.5.png` 下端那个"白孔"是伪影：600dpi 源与原书页 p109 都是实心。）
+  \fill (556,107) circle (7.5);         % 上端实心点
+  \fill (555,230) circle (7.5);         % 下端**实心**点
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.8}{36.0}\selectfont] at (691.2,94.9) {\textsf{\textbf{\textit{k}}}};
 
-  %% ════ 标签（probe 直接给的 \node 行）════
-  %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.9}{38.6}\selectfont] at (344.8,94.2) {\textsf{\textbf{\textit{h}}}};   % box(335,82,17,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.8}{36.0}\selectfont] at (691.2,94.9) {\textsf{\textbf{\textit{k}}}};   % box(683,83,16,21)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.9}{38.6}\selectfont] at (1056.5,94.5) {\textsf{\textbf{\textit{l}}}};   % box(1050,83,12,22)
+  %% ════════════ l：同 k + 5 个记号 ════════════
+  \draw (938,18) -- (938,334);
+  \draw (775,173) -- (1099,173);
+  \draw (1019,20) -- (938,106);
+  \draw (853,320) -- (938,224);
+  \fill (939,106) circle (7.5);
+  \draw (938,224) circle (6.5);
+  %% ★ 2026-10-09 四改：这两个记号**本身就是圆弧**（对原书中心线做三点圆：
+  %%   拱弧 心(938.5,83.3) R=18.3；谷弧 心(938.6,127.0) R=18.1；两心关于 y≈105 **镜像对称**），
+  %%   先前写成 `.. controls ..`（手给控制点的贝塞尔）—— 正是"记号本该是 `arc`"那条教训的同类。
+  \draw (921,78)  arc[start angle=-163.2, end angle=-16.8, radius=18.3];   % 上拱弧
+  \draw (921,131) arc[start angle=167.2, end angle=16.1, radius=18.1];     % 下谷弧
+  %% ★ 2026-10-09 更正：这是**左闭区间符号 `[`**（正文：l 的原像 (1,3) 的原像是**非开集 [0,1)**），
+  %%   它**有自己的竖杠** —— 实测杠的墨迹 x 937~943，比轴的 937~940 **宽一倍**，即杠心在轴心**右半个线宽**。
+  %%   故写成**一条 `[` 折线**（一个元素 = 一条命令），不再只画两条短横。
+  \draw (954,154.5) -- (940,154.5) -- (940,191) -- (953,191);
+  \draw (981,155) arc[start angle=-52.9, end angle=54.7, radius=25.5];   % 横轴右侧 `)` 弧
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.9}{38.6}\selectfont] at (1056.5,94.5) {\textsf{\textbf{\textit{l}}}};
 
-  % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
+  % 钉死画布（与原稿同尺寸 ⇒ 长宽比不变，书里 \munkresfig[1.0]{18.5} 不变）
   \pgfresetboundingbox
   \path[use as bounding box] (0,0) rectangle (1109,342);
 \end{tikzpicture}
 \end{document}
-
-% ⚠ 待核清单（probe 拿不准，人眼过一遍）：
-%   · 未识别/跳过：⑤ 跳过/未识别的字形

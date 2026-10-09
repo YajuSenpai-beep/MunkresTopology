@@ -1,110 +1,55 @@
-% 图 18.3 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
-%%
-% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 18.3` 看指标 + 看叠合图。
-%%
-%% ⚠ 待核：
-%   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
-%   · 可疑字形 1 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
-%%
+% 图 18.3 —— 2026-10-09 矢量级**重画**（推翻 probe 描摹稿：原稿 48 碎段 + 线宽 7 档）
+%
+% 元素清单（4 类）：
+%   ① 两条坐标轴   ② 两条竖直**虚**渐近线（x = ±1）   ③ 曲线 F(x)=x/(1−x²)   ④ 标签 F(x)=x/(1−x²)
+%
+% 几何实测自 `images/18.3.png`（581×461 = 画布，1pt = 1px）：
+%   竖轴 x = 223.5（即 x=0）  横轴 y = 294.5（即 y=0）
+%   虚渐近线 x = 79.0 / 368.0（即 x = ∓1）  ⇒ **x 尺度 = 144.5 px/unit**
+%   y 尺度 = 84.2 px/unit（由曲线最小二乘拟合得；见下）
+%   竖轴 y 15→448 ｜ 横轴 x 13→433 ｜ 虚线 y 20→448.9，节距 29.36px（on 18 / off 11.35）
+%
+% ★ 曲线取 **精确函数** 而非照书追踪：原书是手绘草图，与 F(x)=x/(1−x²) 差 ≤15px（拟合
+%   rms 12px）。按 SOP 红线「矢量级重建、理想化、不做像素拟合」⇒ 画函数本身。
+%   端点取曲线与画布的上下缘相交处 ⇒ x ∈ [-0.763, 0.860]。
+%
+% 线宽：曲线 6.0（书实测 ~5.5px）｜轴与虚线 4.0（书实测 4 / 3px）⇒ **2 档**（≤3 ✓）
 \documentclass[12pt]{standalone}
 \usepackage{fontspec}
-\setsansfont{Arial}
+\setsansfont{TeX Gyre Heros}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
 \begin{document}
-\begin{tikzpicture}[x=1pt, y=-1pt, line width=4.0pt, line cap=round, line join=round]
+\begin{tikzpicture}[x=1pt, y=-1pt, line width=4.0pt, line cap=butt, line join=round]
 
-  %% ════ 直线段（prims2 的 strokes）════
-  \draw[line width=4.0pt] (367.0,210.0) -- (366.0,195.0);
-  \draw[line width=4.0pt] (78.0,315.0) -- (77.0,330.0);
-  \draw[line width=3.0pt] (466.0,123.0) -- (479.0,123.0);
-  \draw[line width=5.0pt] (366.0,294.0) -- (235.8,295.0);
-  \draw[line width=6.5pt] (235.8,295.0) -- (230.0,292.0);
-  \draw[line width=4.0pt] (367.0,293.0) -- (367.0,284.0);
-  \draw[line width=4.0pt] (77.0,401.0) -- (79.0,417.0);
-  \draw[line width=4.0pt] (225.0,292.0) -- (222.0,282.2);
-  \draw[line width=4.0pt] (222.0,282.2) -- (223.0,17.0);
-  \draw[line width=5.0pt] (225.0,292.0) -- (230.0,292.0);
-  \draw[line width=6.5pt] (225.0,292.0) -- (221.0,297.0);
-  \draw[line width=4.0pt] (366.0,166.0) -- (368.0,182.0);
-  \draw[line width=5.0pt] (366.0,432.0) -- (367.0,446.0);
-  \draw[line width=3.0pt] (497.0,124.0) -- (562.0,124.0);
-  \draw[line width=3.0pt] (79.0,93.0) -- (78.0,80.0);
-  \draw[line width=5.0pt] (431.0,295.0) -- (368.0,295.0);
-  \draw[line width=4.0pt] (367.0,416.0) -- (366.0,401.0);
-  \draw[line width=5.0pt] (14.0,294.0) -- (77.0,294.0);
-  \draw[line width=3.5pt] (79.0,20.0) -- (79.0,35.0);
-  \draw[line width=5.0pt] (78.0,256.0) -- (79.0,270.0);
-  \draw[line width=5.0pt] (222.0,445.0) -- (223.0,299.2);
-  \draw[line width=3.0pt] (223.0,299.2) -- (221.0,297.0);
-  \draw[line width=4.0pt] (78.0,432.0) -- (78.0,447.0);
-  \draw[line width=3.0pt] (478.0,128.0) -- (467.0,129.0);
-  \draw[line width=5.0pt] (79.0,167.0) -- (79.0,183.0);
-  \draw[line width=4.0pt] (367.0,78.0) -- (368.0,93.0);
-  \draw[line width=4.0pt] (367.0,107.0) -- (367.0,125.0);
-  \draw[line width=4.0pt] (367.0,136.0) -- (367.0,154.0);
-  \draw[line width=4.0pt] (77.0,342.0) -- (78.0,357.0);
-  \draw[line width=6.0pt] (345.0,21.0) -- (343.0,74.3);
-  \draw[line width=6.8pt] (233.5,286.5) -- (230.0,292.0);
-  \draw[line width=4.0pt] (367.0,225.0) -- (366.0,240.0);
-  \draw[line width=4.0pt] (78.0,286.0) -- (78.0,293.0);
-  \draw[line width=5.0pt] (367.0,357.0) -- (367.0,342.0);
-  \draw[line width=4.0pt] (77.0,225.0) -- (79.0,241.0);
-  \draw[line width=3.0pt] (221.0,297.0) -- (218.0,297.0);
-  \draw[line width=4.0pt] (78.0,107.0) -- (79.0,122.0);
-  \draw[line width=5.0pt] (78.0,197.0) -- (79.0,211.0);
-  \draw[line width=4.0pt] (367.0,268.0) -- (367.0,255.0);
-  \draw[line width=3.5pt] (78.0,373.0) -- (78.0,388.0);
-  \draw[line width=4.0pt] (366.0,313.0) -- (367.0,328.0);
-  \draw[line width=3.0pt] (79.0,64.0) -- (78.0,49.0);
-  \draw[line width=3.0pt] (367.0,19.0) -- (367.0,35.0);
-  \draw[line width=4.0pt] (79.0,138.0) -- (80.0,152.0);
-  \draw[line width=3.0pt] (217.0,296.0) -- (214.8,294.0);
-  \draw[line width=5.0pt] (214.8,294.0) -- (79.0,294.0);
-  \draw[line width=4.0pt] (367.0,49.0) -- (367.0,64.0);
-  \draw[line width=4.0pt] (367.0,372.0) -- (367.0,387.0);
+  %% ════ ① 坐标轴 ════
+  \draw (223.5,15) -- (223.5,448);   % 竖轴 = x 轴(x=0)
+  \draw (13,294.5) -- (433,294.5);   % 横轴 = y 轴(y=0)
 
-  %% ════ 曲线（prims2 的 curves —— 三段式，坐标同为 (y,x)）════
-  \draw[line width=6.0pt] (343.0,74.3) .. controls (342.4,157.5) and (306.2,240.0) .. (233.5,286.5);
-  \draw[line width=6.0pt] (113.0,446.0) .. controls (131.2,389.0) and (171.9,339.8) .. (217.0,297.0);
+  %% ════ ② 两条竖直虚渐近线 x = ±1 ════
+  %% 节距实测 29.36px（书 15 段：首段 y20-37，末段 y431-448）⇒ on 18 / off 11.35
+  \draw[dash pattern=on 18pt off 11.35pt] (79.0,20)  -- (79.0,448.9);
+  \draw[dash pattern=on 18pt off 11.35pt] (368.0,20) -- (368.0,448.9);
 
-  %% ════ 标签（2026-10-08 合成：10 个手摆 node -> 3 个）════
-  %% ⚠ 全部保留 fill=white：文字在最上层，否则与曲线交叉干扰
-  %
-  %% ★ 2026-10-08 逐字核（对 images/18.3.png 原书抽取 = 原书那张图，581×461）：
-  %%   · 原书公式 = `F(x) = x/(1 − x²)`：**大写 `F`**、小写斜体 `x`、分母上标 `2`。
-  %%     字符本身逐一正确（主表判「✓ 对」成立），一处字形都没改。
-  %%   · 原稿把 `F(x)` 拆成 **4 个 node**（F / ( / x / )），把分母 `1 − x²` 拆成
-  %%     **3 个 node + 1 条笔画**（`1` / `x` / `2` 各一个 node，`−` 是 `\draw` 短横）
-  %%     —— 正是记忆里「一个标签 = 一个节点」那条红线。按 15.1 / 18.1 / 18.2 的口径合成：
-  %%       `F(x)`              -> 一个 node（括号用 `\textup`、字母用 `\textit`）
-  %%       分母 `1 − x²`        -> 一个 node（上标 `2` 用 `\raisebox` + 写死 `\fontsize`；
-  %%                              `−` 改打字符，原笔画删除以免被 node 的白底盖住）
-  %%       分子 `x` 与分数线    -> 各算一条命令（分数是二维结构，其三个视觉元素各一条命令）
-  %%     锚点 = 原书该组**墨迹框中心**，再做「渲染 -> 逐字量差 -> 回移」一轮收敛。
-  %%   · 间距用实测墨迹值复现（原书分母墨迹间距 11 / 6 / 4 px，字体本身的 text-mode
-  %%     间距为 0，不复现就会把 `1 − x²` 挤成一团）。
-  %%   · 收敛后逐字对照原书墨迹（原书 x 区间 -> 本稿 x 区间，均在 1-2 px 内）：
-  %%       `F` 392-410 -> 392-410 ｜ `(` 414-421 -> 413-419 ｜ `x` 423-440 -> 421-439
-  %%       `)` 442-450 -> 442-448 ｜ 分子 `x` 522-539 -> 520-538
-  %%       分母 `1` 496-504 -> 495-504 ｜ `−` 516-529 -> 516-529
-  %%       `x` 536-553 -> 536-553 ｜ `2` 558-569 -> 558-569（间距 11/6/4 全对上）
-  %%   · 另修 probe 的 2 处误读（见上「直线段」）：x≈367 的虚线渐近线上有 **两段虚线**
-  %%     被认成字形 `)`（`box(366,107,5,19)`、`box(366,136,5,19)`），渲出来是括号、
-  %%     还把虚线打断 —— 原书那里是虚线（y 107-125 / 136-154，与相邻虚线同长同宽）。
-  %%     ⇒ 删掉这两个 node，按原书补回两段 4.0pt 虚线笔画。
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.6}{38.3}\selectfont] at (422.0,126.5) {\textsf{\textbf{\textit{F}\textup{(}\textit{x}\textup{)}}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.9}{39.9}\selectfont] at (532.1,110.1) {\textsf{\textbf{\textit{x}}}};
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.7}\selectfont] at (534.0,147.0) {\textsf{\textbf{1}}\hspace{5pt}\raisebox{-1.0pt}{\fontsize{27.5}{33.0}\selectfont\textsf{\textbf{−}}}\hspace{5pt}\textsf{\textbf{\textit{x}}}\hspace{3pt}\raisebox{10.5pt}{\fontsize{24.7}{30.0}\selectfont\textsf{\textbf{2}}}};
+  %% ════ ③ 曲线 F(x) = x/(1−x²)，x∈(-1,1) ════
+  %% x_px = 223.5 + 144.5·t   y_px = 294.5 − 84.2·t/(1−t²)
+  \draw[line width=6.0pt]
+    plot[domain=-0.763:0.860, samples=400, variable=\t]
+      ({223.5+144.5*\t}, {294.5-84.2*\t/(1-\t*\t)});
 
-  % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
+  %% ════ ④ 标签 F(x) = x/(1−x²) ════
+  %% `F(x)` 一个 node；`=` 一个 node（原稿是两条 \draw 横杠）。
+  %% 分母上标 2 用 \raisebox，**必须写死 \fontsize**（\raisebox 会重置数学样式）。
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.6}{38.3}\selectfont] at (421.5,126.5) {\textsf{\textbf{\textit{F}\textup{(}\textit{x}\textup{)}}}};
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{27.0}{33.8}\selectfont] at (473.0,130.5) {\textsf{\textbf{=}}};
+     %% ★ 2026-10-09：分数**合成一个 node**（`\shortstack` 分子/分数线/分母），
+     %%   不再"分子一个 node + 分数线一条 \draw + 分母一个 node"三件手摆（同 18.4 的 ¼）。
+     %%   锚点 = 原书整组墨迹框中心；分数线用 `\rule` 写死 68×4.5pt（原书 68×5 @(497,122)）。
+     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.0}{38.7}\selectfont] at (533.0,129.5)
+        {\textsf{\textbf{\shortstack{\textit{x}\\[3pt]\rule{68pt}{4.5pt}\\[3.4pt]1\hspace{5pt}\raisebox{-1.0pt}{\fontsize{27.5}{33.0}\selectfont\textsf{\textbf{−}}}\hspace{5pt}\textit{x}\hspace{3pt}\raisebox{10.5pt}{\fontsize{24.7}{30.0}\selectfont\textsf{\textbf{2}}}}}}};
+
+  % 钉死画布（与原稿同尺寸 ⇒ 长宽比不变，书里 \includegraphics[width=0.42\linewidth] 不变）
   \pgfresetboundingbox
   \path[use as bounding box] (0,0) rectangle (581,461);
 \end{tikzpicture}
 \end{document}
-
-% ⚠ 待核清单（probe 拿不准，人眼过一遍）：
-%   · 未识别/跳过：⑤ 跳过/未识别的字形
-%   ★ 2026-10-08 已逐字核完，本条作废：原书本图**只有公式 `F(x) = x/(1 − x²)` 一串字符**
-%     （`F ( x ) x 1 x 2` + `=` 两横 / 分数线 / 减号），逐一核过、**字形无一处要改**；
-%     probe 多报的 2 个 `)` 是 x≈367 渐近线上的虚线（已改回笔画）。
