@@ -1,39 +1,34 @@
-% 图 23.1 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
-%%
-% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 23.1` 看指标 + 看叠合图。
-%%
-%% ⚠ 待核：
-%   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
-%   · 可疑字形 1 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
-%%
+% 图 23.1 —— 按 canvas.png 重新量测绘制
+% 画布 657x224，1pt=1px，y 向下
+% 元素：① 水平基线（4pt）② 一条开口曲线（6pt，顶点近垂直，向下渐近水平）
 \documentclass[12pt]{standalone}
 \usepackage{fontspec}
-\setsansfont{Arial}
+\setsansfont{TeX Gyre Heros}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \begin{document}
-\begin{tikzpicture}[x=1pt, y=-1pt, line width=3.9pt, line cap=round, line join=round]
+\begin{tikzpicture}[x=1pt, y=-1pt, line cap=round, line join=round]
 
-  %% ════ 直线段（prims2 的 strokes）════
-  \draw[line width=3.9pt] (16.0,214.0) -- (19.6,213.0);
-  \draw[line width=4.0pt] (19.6,213.0) -- (634.8,214.0);
-  \draw[line width=5.0pt] (634.8,214.0) -- (643.4,213.0);
-  \draw[line width=3.9pt] (643.4,213.0) -- (647.0,214.0);
-  \draw[line width=6.0pt] (606.0,206.0) -- (308.3,199.0);
-  \draw[line width=6.0pt] (308.3,199.0) -- (273.4,194.0);
-  \draw[line width=6.0pt] (273.4,194.0) -- (238.8,180.8);
+  % ① 水平基线：墨迹 x=14..646（canvas 加权中心 y=213.06），线宽 4
+  \draw[line width=4pt] (15.5,213.5) -- (644.5,213.5);
 
-  %% ════ 曲线（prims2 的 curves —— 三段式，坐标同为 (y,x)）════
-  \draw[line width=6.0pt] (238.8,180.8) .. controls (188.7,143.9) and (193.1,75.8) .. (184.0,20.0);
+  % ② 曲线：一条连续命令，中心线取自 canvas 量测（样条重采样）
+  \draw[line width=6pt]
+    plot[smooth] coordinates {
+      (183.54,19.30) (185.99,37.21) (187.94,53.24) (188.69,59.36)
+      (189.59,70.29) (192.61,85.52) (195.16,101.73) (198.61,118.49)
+      (204.00,135.11) (211.49,150.81) (221.15,164.83) (233.06,176.39)
+      (247.18,185.03) (262.97,191.11) (279.84,195.18) (297.18,197.79)
+      (314.45,199.46) (331.50,200.50) (348.43,201.11) (365.32,201.50)
+      (382.26,201.87) (399.31,202.34) (416.43,202.88) (433.59,203.44)
+      (450.75,203.96) (467.86,204.41) (484.93,204.77) (501.98,205.05)
+      (519.01,205.28) (536.05,205.46) (553.12,205.62) (570.22,205.76)
+      (587.38,205.90) (604.62,206.06)
+    };
 
-  %% ════ 标签（probe 直接给的 \node 行）════
-  %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-
-  % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
+  % 钉死画布
   \pgfresetboundingbox
   \path[use as bounding box] (0,0) rectangle (657,224);
 \end{tikzpicture}
 \end{document}
-
-% ⚠ 待核清单（probe 拿不准，人眼过一遍）：
-%   · 未识别/跳过：⑤ 跳过/未识别的字形

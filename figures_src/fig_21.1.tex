@@ -1,96 +1,72 @@
-% 图 21.1 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
-%%
-% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 21.1` 看指标 + 看叠合图。
-%%
-%% ⚠ 待核：
-%   · 本图 probe 报出阴影族 1 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
-%   · 可疑字形 1 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
-%%
+% 图 21.1 —— 按 src_hi.png 推翻重画（非描摹稿）
+% 画布 850x488，1pt = 1px，y 向下。
+% 元素：水平轴、竖直轴、两处 y 轴刻度（1 与经过轴处的一短横）、
+%        x 轴刻度 1/n、单条平滑曲线、峰顶实心点、三个标签。
 \documentclass[12pt]{standalone}
 \usepackage{fontspec}
-\setsansfont{Arial}
+\setsansfont{TeX Gyre Heros}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{amsmath}
 \begin{document}
-\begin{tikzpicture}[x=1pt, y=-1pt, line width=6.0pt, line cap=round, line join=round]
+\begin{tikzpicture}[x=1pt, y=-1pt, line cap=round, line join=round]
 
-  %% ════ 直线段（prims2 的 strokes）════
-  \draw[line width=6.0pt] (378.0,356.0) -- (340.8,375.0);
-  \draw[line width=5.0pt] (402.0,350.0) -- (389.0,349.0);
-  \draw[line width=6.0pt] (460.0,44.0) -- (447.6,50.4);
-  \draw[line width=7.0pt] (401.0,324.9) -- (389.0,344.0);
-  \draw[line width=5.0pt] (381.0,411.0) -- (380.0,480.0);
-  \draw[line width=3.0pt] (389.0,348.0) -- (389.0,345.0);
-  \draw[line width=5.0pt] (381.0,343.0) -- (383.0,44.0);
-  \draw[line width=5.0pt] (381.0,409.0) -- (379.0,356.0);
-  \draw[line width=6.0pt] (382.0,344.0) -- (388.0,344.0);
-  \draw[line width=5.0pt] (382.0,410.0) -- (462.0,409.0);
-  \draw[line width=4.0pt] (198.0,358.0) -- (248.0,358.0);
-  \draw[line width=5.0pt] (383.0,42.0) -- (382.0,18.0);
-  \draw[line width=7.0pt] (461.0,45.0) -- (470.0,45.0);
-  \draw[line width=5.0pt] (384.0,43.0) -- (398.0,42.0);
-  \draw[line width=7.0pt] (379.0,355.0) -- (381.0,344.0);
-  \draw[line width=6.0pt] (379.0,355.0) -- (388.0,349.0);
-  \draw[line width=5.0pt] (463.0,395.0) -- (463.0,408.0);
-  \draw[line width=6.0pt] (472.0,45.0) -- (483.0,53.1);
-  \draw[line width=6.0pt] (483.0,53.1) -- (492.0,70.4);
-  \draw[line width=6.0pt] (520.1,309.1) -- (537.1,344.1);
-  \draw[line width=6.0pt] (537.1,344.1) -- (568.9,368.9);
-  \draw[line width=5.0pt] (838.0,410.0) -- (464.0,409.0);
-  \draw[line width=5.0pt] (17.0,410.0) -- (380.0,410.0);
+  % ════ 标签（先写，白底，之后的几何压在上面也不穿过文字）════
+  % 左分数 1/(n+1)：墨迹 bbox (196,332)-(249,378)，中心 (222.5,355)
+  %   分子 1 高 16；分母 n 13、+ 13、1 16；分数线 y 355-358（厚 4），宽 54。
+  \node[anchor=center, inner sep=0pt, fill=white,
+        font=\fontsize{23.3}{28}\selectfont] at (223.0,356.0) {%
+    \vbox{%
+      \hbox to 54pt{\hfil\kern 10pt\textsf{\textbf{1}}\hfil}%
+      \nointerlineskip\kern 5.5pt
+      \hbox{\rule{54pt}{4pt}}%
+      \nointerlineskip\kern 4.5pt
+      \hbox to 54pt{\hfil\kern 2pt\textsf{\textbf{\textit{n}}}\hspace{6pt}{\fontsize{26}{31}\selectfont\raisebox{1.5pt}{\textsf{\textbf{+}}}}\hspace{7pt}\textsf{\textbf{1}}\hfil}%
+    }};
 
-  %% ════ 曲线（prims2 的 curves —— 三段式，坐标同为 (y,x)）════
-  \draw[line width=6.0pt] (340.8,375.0) .. controls (262.1,396.3) and (175.7,392.9) .. (91.0,395.0);
-  %% ★ 2026-10-08 删：原 `\draw[line width=5.0pt] (223.0,336.0) .. controls (230.2,334.6)
-  %%   and (226.8,343.1) .. (228.0,346.0);` —— probe 把左分数的**分子 `1`** 近似成一条钩形曲线
-  %%   （= `_续做须知.md`「已知盲点：字形被画成 `\draw` 笔画」）。已改回**字符 `\node`**（见下）。
-  \draw[line width=7.0pt] (461.0,43.0) .. controls (461.0,36.8) and (471.0,38.5) .. (471.0,44.0);
-  \draw[line width=6.0pt] (447.6,50.4) .. controls (403.8,132.6) and (432.2,238.3) .. (401.0,324.9);
-  \draw[line width=6.0pt] (492.0,70.4) .. controls (514.4,145.8) and (503.0,231.9) .. (520.1,309.1);
-  \draw[line width=6.0pt] (568.9,368.9) .. controls (651.2,399.4) and (745.7,391.0) .. (836.0,396.0);
+  % y 轴上的 “1”：墨迹 bbox (358,31)-(367,51)，中心 (362.5,41)
+  \node[anchor=center, inner sep=0pt, fill=white,
+        font=\fontsize{29}{35}\selectfont] at (364.5,42.0) {\textsf{\textbf{1}}};
 
-  %% ════ 标签（probe 直接给的 \node 行）════
-  %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-  %
-  %% ★ 2026-10-08 逐字核（真值 = images/21.1.png，原书那张图，850×488）+ 按红线合成：
-  %%   · 原书字符 = 纵轴 `1`、左分数 `1/(n+1)`、右分数 `1/n`，**字母只有小写 `n`**（三处分数
-  %%     / 纵轴的 `1` 字形同宽同高：墨迹 8×16）。逐一核过，**字形本身一处都不用改**
-  %%     —— 主表判「✓ 对（字母仅小写 n）」**成立**。
-  %%   · 原稿把**左分数**拆成 1 条曲线笔画 + 1 条分数线 + 3 个手摆 node，本次按红线收成命令：
-  %%       分子 `1`    —— probe 把字形画成 `\draw` 曲线（渲染成钩子）⇒ 改回**字符 node**。
-  %%       分母 `n+1`  —— 3 个 node（`n`/`+`/`1`）各摆一处 ⇒ **合成 1 个 node**（参考 18.3
-  %%                      对分母 `1 − x²` 的处理）；间距用原书实测墨迹值复现（8 / 10 px），
-  %%                      字体自身的 text-mode 间距为 0，不复现会挤成一团。
-  %%       分数线      —— 分数是二维结构，分子 / 分数线 / 分母**各算一条命令**（照 18.3 口径，
-  %%                      分数线保留原 `\draw`：197-249 @ y 356-359）。
-  %%   · 原书墨迹 x 区间（本稿收敛后应落在 ±2 px）：
-  %%       分母 `n` 199-211 ｜ `+` 220-231 ｜ `1` 242-249（间距 8 / 10）
-  %%       分子 `1` 223-230（y 333-348）
-  %%   · 右分数 `1/n` 三项本来就各是一条命令（分子 node / 分数线 node / 分母 node），
-  %%     **未动** —— 它不是「一个标签拆成多个手摆 node」。
-  %% ⚠ 本次核出但**超范围未改**（只改字符，不动坐标）：右分数的**分数线 node**
-  %%   `at (474.6,454.2)` 比原书右移 **7 px** —— probe 的 anchor 与它自己的 box 中心不自洽
-  %%   （box(455,446,21,5) 中心 465.5，anchor 却给 474.6；其余字形 anchor-中心差 ≤ 3）。
-  %%   实测：原书横线 x 455-475（w 21，中心 465），本稿渲出 x 461-483（w 23，中心 472）。
-  %%   另注：分数线用 `−` 字符 `\mfallback` 渲染，本就比原书略长（23 vs 21），
-  %%   要彻底修可改 `\draw[line width≈4.7pt] (455,448) -- (475,448);`（同 18.3 口径）。
-  %%   归几何/精修那一轮处理。
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.7}{29.7}\selectfont] at (228.8,341.9) {\textsf{\textbf{1}}};   % 左分数 · 分子（原为 \draw 笔画）
-  \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{25.3}{31.6}\selectfont] at (226.5,373.5) {\textsf{\textbf{\textit{n}}}\hspace{6pt}{\fontsize{25.0}{31.2}\selectfont\textsf{\textbf{+}}}\hspace{7pt}{\fontsize{23.7}{29.7}\selectfont\textsf{\textbf{1}}}};   % 左分数 · 分母 n+1（3 node 合成）
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.9}{36.1}\selectfont] at (366.9,43.0) {\textsf{\textbf{1}}};   % box(359,32,9,21)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.7}{29.7}\selectfont] at (466.8,434.4) {\textsf{\textbf{1}}};   % box(460,426,8,16)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{37.7}{47.1}\selectfont] at (474.6,454.2) {{\mfallback\textbf{−}}};   % box(455,446,21,5)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{24.4}{30.5}\selectfont] at (465.1,463.9) {\textsf{\textbf{\textit{n}}}};   % box(458,456,13,13)
+  % 右分数 1/n：墨迹 bbox (455,425)-(474,466)，中心 (464.5,445.5)
+  %   分子 1 高 15；分数线 y 444-448（厚 5），宽 20；分母 n 13。
+  \node[anchor=center, inner sep=0pt, fill=white,
+        font=\fontsize{22.5}{27}\selectfont] at (465.0,445.9) {%
+    \vbox{%
+      \hbox to 20pt{\hfil\textsf{\textbf{1}}\hfil}%
+      \nointerlineskip\kern 3.2pt
+      \hbox{\rule{20pt}{4.2pt}}%
+      \nointerlineskip\kern 5.5pt
+      \hbox to 20pt{\hfil\textsf{\textbf{\textit{n}}}\hfil}%
+    }};
 
-  % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
+  % ════ 坐标轴（两端平头/圆头，原图无箭头）════
+  % 水平轴：墨迹 y 407-411（中心 409），x 14-840
+  \draw[line width=4.8pt] (16.4,409.4) -- (837.6,409.4);
+  % 竖直轴：墨迹 x 380-384（中心 382），y 14-480
+  \draw[line width=4.8pt] (382.4,16.4) -- (382.4,477.6);
+
+  % ════ 刻度 ════
+  % y 轴 “1” 处短横：墨迹 y 39-43（中心 41），x 384-399
+  \draw[line width=5.2pt] (386.2,41.4) -- (397.2,41.4);
+  % 曲线与 y 轴交点处的短横：墨迹 y 347-351（中心 349），x 383-404
+  \draw[line width=5.2pt] (385.4,349.2) -- (402.4,349.2);
+  % x 轴 1/n 处竖刻度：墨迹 x 461-465（中心 463），y 393-410
+  \draw[line width=5.2pt] (463.4,395.6) -- (463.4,409.4);
+
+  % ════ 曲线（一条命令；按原书中心线取样，smooth 拟合）════
+  % 采样点：左尾 x=92…，过轴 (382,350.8)，近竖直段 (416,250)-(422,150)，
+  % 峰 (466,41.5)，右竖直段 (509,200)-(513,270)，右长尾至 x=836。
+  \draw[line width=6.2pt] plot[smooth] coordinates {%
+    (92.0,393.7) (150.2,393.3) (210.0,391.1) (268.9,386.3) (318.3,378.5) (353.7,367.3) (376.1,354.9) (390.4,339.6) (401.3,320.0) (408.1,300.0) (412.2,280.0) (414.9,260.0) (416.7,240.0) (417.9,220.0) (418.9,200.0) (419.9,180.0) (421.4,160.0) (423.3,140.0) (426.0,120.0) (429.7,100.0) (434.6,80.0) (441.0,62.0) (447.7,50.8) (455.9,44.7) (466.1,42.4) (476.4,46.3) (484.8,55.9) (491.4,70.7) (497.0,90.0) (500.8,110.0) (503.7,130.0) (505.7,150.0) (506.9,170.0) (508.3,190.0) (509.7,210.0) (510.7,230.0) (511.8,250.0) (513.6,270.0) (516.7,290.0) (521.6,310.0) (530.2,330.0) (545.8,349.6) (568.8,365.6) (601.1,377.1) (640.1,384.8) (680.0,389.1) (720.0,391.8) (760.0,393.4) (799.6,394.3) (836.0,394.5)};
+
+  % ════ 峰顶实心点（标记 (1/n, 1)）════
+  % 墨迹在 x 461-471 处比笔画厚约 9px；峰顶 y 34-49
+  \fill (466.0,42.0) circle (7.8pt);
+
+  % 钉死画布
   \pgfresetboundingbox
   \path[use as bounding box] (0,0) rectangle (850,488);
 \end{tikzpicture}
 \end{document}
-
-% ⚠ 待核清单（probe 拿不准，人眼过一遍）：
-%   · 未识别/跳过：⑤ 跳过/未识别的字形
-%   ★ 2026-10-08 已逐字核完，本条作废：原书本图**只有 3 处文字** —— 纵轴 `1`、左分数
-%     `1/(n+1)`、右分数 `1/n`（字母**只有小写 `n`**）；probe 报的「空心圈 ⊙」是尖峰
-%     顶上的**实心顶点标记**（属曲线，不是字符）。字形逐一核过、**无一处要改**；
-%     本次只做了 2 处**结构**修正（分子由 `\draw` 笔画改回字符、分母 3 node 合成 1 node）。
