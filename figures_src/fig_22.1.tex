@@ -6,11 +6,45 @@
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,decorations.markings,patterns.meta}
+\pgfdeclarelayer{shading}
+\pgfdeclarelayer{labels}
+\pgfsetlayers{shading,main,labels}
 
 \begin{document}
 \begin{tikzpicture}[x=1pt, y=-1pt, line cap=round, line join=round, line width=5pt]
 
-  %% ═════════ 标签（一个标签 = 一个节点；先写，白底） ═════════
+\begin{pgfonlayer}{shading}
+
+    \begin{scope}
+      \clip (507,118.5) ellipse [x radius=27.5, y radius=54.5];
+      \fill[black!15] (507,118.5) ellipse [x radius=27.5, y radius=54.5];
+      \foreach \b in {-84,-78,...,84}
+        \draw[black!70,line width=1.7pt] (470,{118.5+\b}) -- (545,{118.5+\b+37.5});
+    \end{scope}
+  
+
+    \begin{scope}
+      \clip (535,172)
+    -- (535,168) -- (538,165) -- (541,162) -- (544,163) -- (547,165) -- (550,164)
+    -- (553,158) -- (556,161) -- (559,162) -- (562,164) -- (565,157) -- (568,159)
+    -- (571,162) -- (574,163) -- (577,161) -- (580,158) -- (583,165) -- (586,164)
+    -- (589,164) -- (592,165) -- (595,163) -- (598,162) -- (601,164) -- (604,166)
+    -- (607,160) -- (610,164) -- (613,166) -- (616,165) -- (619,164) -- (622,165)
+    -- (625,164) -- (628,161) -- (631,158) -- (634,157) -- (637,166) -- (640,167)
+    -- (643,167) -- (646,169) -- (649,169) -- (652,169) -- (655,168) -- (658,157)
+    -- (661,168) -- (664,159) -- (667,158) -- (670,167) -- (673,157) -- (676,157)
+    -- (679,157) -- (682,159) -- (685,157) -- (688,159) -- (691,163) -- (694,164)
+    -- (697,157) -- (700,157) -- (703,157) -- (706,157) -- (709,158) -- (712,158)
+    -- (715,160) -- (718,165) -- (721,159) -- (724,159) -- (727,159) -- (730,158)
+    -- (733,165) -- (736,166) -- (739,159) -- (742,162) -- (745,162) -- (748,157)
+    -- (751,157) -- (754,157) -- (757,157) -- (760,158) -- (760,172) -- cycle;
+      \fill[black!50] (535,155) rectangle (760,173);
+    \end{scope}
+  
+  \end{pgfonlayer}
+
+  %% ═════════ 标签（一个标签 = 一个节点；labels 层，最后压在最上） ═════════
+  \begin{pgfonlayer}{labels}
   % 小写粗斜体 a ×2
   \node[anchor=base,inner sep=0pt,fill=white,font=\fontsize{31.5}{37}\selectfont] at (171.5,34) {\textsf{\textbf{\textit{a}}}};
   \node[anchor=base,inner sep=0pt,fill=white,font=\fontsize{31.5}{37}\selectfont] at (171.5,209) {\textsf{\textbf{\textit{a}}}};
@@ -21,6 +55,10 @@
   \node[anchor=base,inner sep=0pt,fill=white,font=\fontsize{29.5}{36}\selectfont] at (553.5,124.5){\textsf{\textbf{\textit{b}}}};
   \node[anchor=base,inner sep=0pt,fill=white,font=\fontsize{29.5}{36}\selectfont] at (806.5,122.5){\textsf{\textbf{\textit{b}}}};
   \node[anchor=base,inner sep=0pt,fill=white,font=\fontsize{29.5}{36}\selectfont] at (1079.5,174.5){\textsf{\textbf{\textit{b}}}};
+  \end{pgfonlayer}
+
+  % 图层会丢掉 picture 选项里的全局线宽；在 main 层里用 scope 重新钉死
+  \begin{scope}[line width=5pt]
 
   %% ═════════ ① 正方形（四条边各带一个中途箭头；每边一条命令） ═════════
   % 上边 a：尖端 (178,52)，向右
@@ -45,13 +83,9 @@
   \draw[-{Stealth[length=26.4,width=16.8]},line width=4pt] (843,120) -- (910,120);
 
   %% ═════════ ③ 圆柱 ═════════
-    % left disc: sparse 45-degree hatching = printed shading, not solid black
+  % 左端面：阴影层（先画）；轮廓/箭头在 main 层后画
+  
   \draw (507,118.5) ellipse [x radius=27.5, y radius=54.5];
-  \begin{scope}
-    \clip (507,118.5) ellipse [x radius=27.5, y radius=54.5];
-    \foreach \b in {-84,-78,...,84}
-      \draw[black!35,line width=1.2pt] (470,{118.5+\b}) -- (545,{118.5+\b+37.5});
-  \end{scope}
 
   % b 箭头：沿圆盘右侧母线自下而上（方向与源图右上角凸出的箭头一致）
   \draw[line width=5pt, -{Stealth[length=15.6,width=15.6]}]
@@ -62,27 +96,8 @@
   \draw[postaction={decorate},decoration={markings,
     mark=at position 0.687 with {\arrow{Stealth[length=16.8,width=16.8]}}}]
     (757,173) arc[start angle=90, end angle=-90, x radius=27.5, y radius=54.5];
-    % 下缘阴影：45deg light hatch clipped to the measured envelope
-  \begin{scope}
-    \clip % 下缘阴影带：按扫描上包络描出的有机形状
-% 下缘阴影带：按扫描上包络描出的有机形状（一条 fill）
-(535,172)
-    -- (535,168) -- (538,165) -- (541,162) -- (544,163) -- (547,165) -- (550,164)
-    -- (553,158) -- (556,161) -- (559,162) -- (562,164) -- (565,157) -- (568,159)
-    -- (571,162) -- (574,163) -- (577,161) -- (580,158) -- (583,165) -- (586,164)
-    -- (589,164) -- (592,165) -- (595,163) -- (598,162) -- (601,164) -- (604,166)
-    -- (607,160) -- (610,164) -- (613,166) -- (616,165) -- (619,164) -- (622,165)
-    -- (625,164) -- (628,161) -- (631,158) -- (634,157) -- (637,166) -- (640,167)
-    -- (643,167) -- (646,169) -- (649,169) -- (652,169) -- (655,168) -- (658,157)
-    -- (661,168) -- (664,159) -- (667,158) -- (670,167) -- (673,157) -- (676,157)
-    -- (679,157) -- (682,159) -- (685,157) -- (688,159) -- (691,163) -- (694,164)
-    -- (697,157) -- (700,157) -- (703,157) -- (706,157) -- (709,158) -- (712,158)
-    -- (715,160) -- (718,165) -- (721,159) -- (724,159) -- (727,159) -- (730,158)
-    -- (733,165) -- (736,166) -- (739,159) -- (742,162) -- (745,162) -- (748,157)
-    -- (751,157) -- (754,157) -- (757,157) -- (760,158) -- (760,172) -- cycle;
-    \foreach \x in {535,543,...,760}
-      \draw[black!30,line width=1.1pt] (\x,155) -- ({\x+17},172);
-  \end{scope}
+    % 下缘阴影：阴影层（先画）；底边线/a 箭头在 main 层后画
+  
   % 下母线；a 箭头最后画，避免被阴影盖住
   \draw[postaction={decorate},decoration={markings,
     mark=at position 0.596 with {\arrow{Stealth[length=19.2,width=16.8]}}}]
@@ -101,6 +116,8 @@
   \draw[postaction={decorate},decoration={markings,
     mark=at position 0.512 with {\arrow{Stealth[length=15.6,width=15.6]}}}]
     (1060,183) .. controls (1048,172) and (1049,143) .. (1059,131);
+
+  \end{scope}
 
   % 钉死画布（1208×219，1:1 回比）
   \pgfresetboundingbox
