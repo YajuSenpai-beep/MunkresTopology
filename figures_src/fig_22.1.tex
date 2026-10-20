@@ -45,13 +45,14 @@
   \draw[-{Stealth[length=26.4,width=16.8]},line width=4pt] (843,120) -- (910,120);
 
   %% ═════════ ③ 圆柱 ═════════
-  % 左端：近端圆盘——按用户要求不涂黑，保留几何意义上的 b 箭头
+    % left disc: sparse 45-degree hatching = printed shading, not solid black
   \draw (507,118.5) ellipse [x radius=27.5, y radius=54.5];
-  % 圆盘点缀：按源图白斑位置铺浅灰点（去掉贴近 b 箭头的 2 处，避免盖住箭头）
   \begin{scope}
     \clip (507,118.5) ellipse [x radius=27.5, y radius=54.5];
-    \fill[black!40] (524.34,114.53) circle (3.01) (487.41,110.7) circle (2.97) (485.36,103.11) circle (2.66) (520.25,147.51) circle (2.49) (519.92,93.09) circle (2.39) (516.84,158.92) circle (2.31) (505.29,168.43) circle (2.04) (483.44,118.05) circle (1.87) (510.5,106.5) circle (1.84) (517.58,124.17) circle (1.68) (521.68,141.92) circle (1.62) (492.9,74.8) circle (1.5) (493.73,154.09) circle (1.46) (489.61,95.09) circle (1.36) (490.93,120.32) circle (1.32) (500.99,148.76) circle (1.29) (486.57,144.37) circle (1.17) (503.83,141.93) circle (1.03) (500.61,154.24) circle (1.03) (521.44,104.02) circle (0.99) (485.8,124.71) circle (0.99) (504.09,146.67) circle (0.99) (511.65,154.26) circle (0.94) (518.07,77.23) circle (0.76);
+    \foreach \b in {-84,-78,...,84}
+      \draw[black!35,line width=1.2pt] (470,{118.5+\b}) -- (545,{118.5+\b+37.5});
   \end{scope}
+
   % b 箭头：沿圆盘右侧母线自下而上（方向与源图右上角凸出的箭头一致）
   \draw[line width=5pt, -{Stealth[length=15.6,width=15.6]}]
     (514.1,171.2) arc[start angle=75, end angle=-25, x radius=27.5, y radius=54.5];
@@ -61,12 +62,11 @@
   \draw[postaction={decorate},decoration={markings,
     mark=at position 0.687 with {\arrow{Stealth[length=16.8,width=16.8]}}}]
     (757,173) arc[start angle=90, end angle=-90, x radius=27.5, y radius=54.5];
-  % 下母线；a 箭头在中途
-  \draw[postaction={decorate},decoration={markings,
-    mark=at position 0.596 with {\arrow{Stealth[length=19.2,width=16.8]}}}]
-    (507,173) -- (757,173);
-  % 下缘阴影带：按扫描上包络描出的有机形状（一条 fill）
-\fill (535,172)
+    % 下缘阴影：45deg light hatch clipped to the measured envelope
+  \begin{scope}
+    \clip % 下缘阴影带：按扫描上包络描出的有机形状
+% 下缘阴影带：按扫描上包络描出的有机形状（一条 fill）
+(535,172)
     -- (535,168) -- (538,165) -- (541,162) -- (544,163) -- (547,165) -- (550,164)
     -- (553,158) -- (556,161) -- (559,162) -- (562,164) -- (565,157) -- (568,159)
     -- (571,162) -- (574,163) -- (577,161) -- (580,158) -- (583,165) -- (586,164)
@@ -80,12 +80,23 @@
     -- (715,160) -- (718,165) -- (721,159) -- (724,159) -- (727,159) -- (730,158)
     -- (733,165) -- (736,166) -- (739,159) -- (742,162) -- (745,162) -- (748,157)
     -- (751,157) -- (754,157) -- (757,157) -- (760,158) -- (760,172) -- cycle;
+    \foreach \x in {535,543,...,760}
+      \draw[black!30,line width=1.1pt] (\x,155) -- ({\x+17},172);
+  \end{scope}
+  % 下母线；a 箭头最后画，避免被阴影盖住
+  \draw[postaction={decorate},decoration={markings,
+    mark=at position 0.596 with {\arrow{Stealth[length=19.2,width=16.8]}}}]
+    (507,173) -- (757,173);
+
 
   %% ═════════ ④ 环面（透视椭圆；b = 子午线方向） ═════════
   % 外轮廓（a 方向）
   \draw (1079,120) ellipse [x radius=112, y radius=64];
   % 洞缘（b 圆在洞内的可见部分）
   \draw (1080,112.5) ellipse [x radius=62.5, y radius=17.5];
+  % 洞口两端的上挑收笔（源图 600dpi 可见；旧验收版漏画）
+  \draw (1016,111) .. controls (1016,104) and (1017,101) .. (1020,97);
+  \draw (1143,111) .. controls (1144,104) and (1141,100) .. (1140,96);
   % b 箭头：自外轮廓向上穿入洞内，箭头在中途指向上方
   \draw[postaction={decorate},decoration={markings,
     mark=at position 0.512 with {\arrow{Stealth[length=15.6,width=15.6]}}}]
