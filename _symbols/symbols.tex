@@ -1,0 +1,61 @@
+% =====================================================================
+% 统一符号层（2026-10-20）
+% 用法：在 fig_<号>.tex 的 preamble 里 \input{../_symbols/symbols.tex}
+% 依赖：fontspec（已 \setsansfont{TeX Gyre Heros}）、graphicx 不需要
+% 规则见同目录《符号验收清单.md》
+% =====================================================================
+
+% ---- 字体角色（全部走 sans = TeX Gyre Heros）----
+\newcommand{\SIt}[1]{\textsf{\textit{#1}}}          % 斜体变量
+\newcommand{\SBf}[1]{\textsf{\textbf{#1}}}          % 粗体
+\newcommand{\SBfIt}[1]{\textsf{\textbf{\textit{#1}}}} % 粗斜体变量
+\newcommand{\SNum}[1]{\textsf{\textup{#1}}}         % 直立数字
+
+% ---- 上下标：字号/位置写死，避免数学样式与手调混用 ----
+% 审计结论（2026-10-20）：源图下标/底字高比在 0.77–0.92em，0.72em 偏小。
+% 默认 0.80em；仍需按源图逐图标定（44.4/44.5 约 0.85–0.92，39/41/46 约 0.77–0.80）。
+\newcommand{\FSup}[2]{#1\raisebox{0.30em}{\fontsize{0.72em}{0.82em}\selectfont #2}}
+\newcommand{\FSub}[2]{#1\raisebox{-0.30em}{\fontsize{0.80em}{0.92em}\selectfont #2}}
+
+% ---- 分数：数字直立、方头粗杆；杆宽 = max(分子宽,分母宽) + 2pt ----
+% 杆厚 4pt（配合 20–26pt 标签）；小字号图可局部调 0.17em
+% 2026-10-20 修正：原 \shortstack 负 kern 不随字号缩放（23pt 下总高仅 30pt、杆贴字），
+% 改为 offinterlineskip + em 定间距：上间隙 0.12em、下间隙 0.13em
+% （37.2 源图 23pt 实测四标签上/下间隙均值 2.6/4.0pt；取近平衡且总高保持 42–43pt）。
+\newcommand{\FFrac}[2]{%
+  \begingroup
+  \setbox0=\hbox{#1}\setbox2=\hbox{#2}%
+  \dimen0=\wd0 \ifdim\wd2>\dimen0 \dimen0=\wd2 \fi
+  \advance\dimen0 by 2pt
+  \leavevmode\vbox{\offinterlineskip
+    \hbox to \dimen0{\hss\box0\hss}%
+    \kern0.12em
+    \hbox{\rule{\dimen0}{4pt}}%
+    \kern0.13em
+    \hbox to \dimen0{\hss\box2\hss}%
+  }%
+  \endgroup}
+
+% ---- 真减号（审计：源图减号 15–18px 宽、3–5px 厚；Heros 常规字重偏细）----
+% 可选参数 = 宽度（em）：正文 0.58；上标内用 \FMinus[0.72]
+\newcommand{\FMinus}[1][0.58]{\rule[0.30em]{#1em}{0.13em}}
+
+% ---- 直撇（审计：44.2 用弯引号、44.3 用直撇，必须统一为直楔撇）----
+\newcommand{\FPrime}{\textsf{\textquotesingle}}
+
+% ---- 乘号（审计：46.2 的 × 比源小 25–30%，标签内需按源校准）----
+% 用 \FTimes 时在 node 内与底字同字号，并在目检时量宽高。
+
+
+% ---- 斜杠分数（审计 A：35.1 的 r/3 用 38pt 斜杠手搓）----
+\newcommand{\FSlashFrac}[2]{#1\raisebox{-0.18em}{\fontsize{1.35em}{1.35em}\selectfont\textsf{/}}\kern-0.06em #2}
+
+% ---- 交集号 ∩（Heros 无此字，固定回退字号/基线，避免逐图不同）----
+\newcommand{\FIntersect}{\raisebox{0.02em}{\fontsize{0.95em}{1em}\selectfont\mfallback{∩}}}
+
+% ---- 括号/开区间（图形层，不是字形）----
+% 一律 \draw ... arc[start angle=, end angle=, radius=]：
+%   · 端点记号背离它所界的区间；
+%   · 左端/右端分别 10× 特写核对；
+%   · 闭区间压在轴上时竖脊右移半个线宽；
+%   · 同一张图同类记号同一种写法。

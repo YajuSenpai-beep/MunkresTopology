@@ -1,762 +1,323 @@
-% 图 39.2 —— 由 `checks/emit_hand.py` 自动拼出（probe 精测 + prims2 图元分解）
-%%
-% ⚠ 这是**稿子不是成品**：跑 `checks/checkhand.py 39.2` 看指标 + 看叠合图。
-%%
-%% ⚠ 待核：
-%   · 本图 probe 报出阴影族 2 个 —— **本脚本不生成阴影**（要照原书手写）；prims2 的 strokes 里可能含阴影线，核对时留意别画重
-%   · 可疑字形 3 项（空心圈 ⊙ 常被认成字母 o）—— 见文件末
-%%
+% Fig 39.2 -- rebuilt under 新SOP 2026-10-20 (measured from src_hi/canvas; no draft geometry reused)
+% canvas 846x615, x=1pt, y=-1pt (canvas pixel coords, y down)
+%
+% 教材原文（Munkres §39 证明）：U<V<W 时
+%   S_n(U)={x|B(x,1/n)⊂U}   T_n(U)=S_n(U)−∪_{V<U}V   E_n(U)=T_n(U) 的 1/3n 邻域
+% ⇒ 三个 E_n 两两不交、各自含在自己的集合里、且盖不满 X。
+%
+% 画法：每个 E_n 集合只定义**一条路径** \pathEnV / \pathEnW（圆弧为主，交接处自由曲线），
+% 同一条路径既作排线裁剪、又作虚线轮廓——白色空缺就是“没铺排线的纸面”，
+% 不再用白色填充去擦除。
 \documentclass[12pt]{standalone}
 \usepackage{fontspec}
-\setsansfont{Arial}
+\setsansfont{TeX Gyre Heros}
 \newfontfamily\mfallback{DejaVu Sans}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\input{../_symbols/symbols.tex}
 \begin{document}
-\begin{tikzpicture}[x=1pt, y=-1pt, line width=4.0pt, line cap=round, line join=round]
+\begin{tikzpicture}[x=1pt, y=-1pt, line cap=round, line join=round]
 
-  %% ════ 直线段（prims2 的 strokes）════
-  \draw[line width=4.0pt] (559.0,120.0) -- (550.0,116.0);
-  \draw[line width=3.0pt] (559.0,120.0) -- (562.0,120.0);
-  \draw[line width=3.0pt] (427.0,406.0) -- (433.0,398.0);
-  \draw[line width=5.0pt] (534.0,395.0) -- (547.0,394.0);
-  \draw[line width=6.0pt] (147.0,113.0) -- (164.0,116.0);
-  \draw[line width=4.0pt] (488.0,210.0) -- (485.0,229.0);
-  \draw[line width=5.0pt] (233.0,297.0) -- (244.0,282.0);
-  \draw[line width=4.5pt] (570.0,386.0) -- (558.0,389.0);
-  \draw[line width=4.0pt] (275.0,341.0) -- (288.0,345.0);
-  \draw[line width=5.0pt] (364.0,224.0) -- (372.0,222.0);
-  \draw[line width=5.0pt] (342.0,244.0) -- (342.0,236.0);
-  \draw[line width=5.0pt] (438.0,93.0) -- (431.0,86.0);
-  \draw[line width=7.0pt] (438.0,93.0) -- (430.0,100.0);
-  \draw[line width=3.0pt] (586.0,131.0) -- (594.0,122.0);
-  \draw[line width=5.0pt] (456.0,150.0) -- (451.0,141.0);
-  \draw[line width=3.0pt] (456.0,150.0) -- (466.0,144.0);
-  \draw[line width=3.0pt] (456.0,150.0) -- (456.0,153.0);
-  \draw[line width=4.0pt] (515.0,433.0) -- (522.0,433.0);
-  \draw[line width=5.0pt] (380.0,365.0) -- (390.0,360.0);
-  \draw[line width=5.0pt] (380.0,365.0) -- (385.0,372.0);
-  \draw[line width=3.0pt] (643.0,314.0) -- (657.0,306.0);
-  \draw[line width=4.0pt] (202.0,282.0) -- (209.0,292.0);
-  \draw[line width=3.0pt] (616.0,157.0) -- (500.0,275.0);
-  \draw[line width=5.0pt] (457.0,230.0) -- (454.0,241.0);
-  \draw[line width=3.0pt] (444.0,127.0) -- (354.4,218.6);
-  \draw[line width=4.9pt] (354.4,218.6) -- (353.0,223.0);
-  \draw[line width=4.0pt] (412.0,86.0) -- (420.0,93.0);
-  \draw[line width=5.0pt] (353.0,540.0) -- (348.0,540.0);
-  \draw[line width=4.5pt] (472.0,157.0) -- (467.0,144.0);
-  \draw[line width=5.0pt] (342.0,42.0) -- (326.0,40.0);
-  \draw[line width=4.5pt] (505.0,452.0) -- (507.0,441.0);
-  \draw[line width=4.0pt] (306.0,43.0) -- (324.0,40.0);
-  \draw[line width=3.0pt] (664.0,280.0) -- (652.0,286.0);
-  \draw[line width=5.0pt] (304.0,348.0) -- (320.0,350.0);
-  \draw[line width=5.0pt] (345.0,213.0) -- (351.0,199.0);
-  \draw[line width=4.5pt] (667.0,238.0) -- (665.0,224.0);
-  \draw[line width=5.0pt] (354.0,224.0) -- (362.0,224.0);
-  \draw[line width=3.0pt] (342.0,43.0) -- (337.0,54.0);
-  \draw[line width=4.0pt] (550.0,404.0) -- (549.0,429.0);
-  \draw[line width=4.0pt] (392.0,315.0) -- (407.0,308.0);
-  \draw[line width=4.5pt] (472.0,400.0) -- (486.0,403.0);
-  \draw[line width=5.0pt] (462.0,205.0) -- (463.0,199.0);
-  \draw[line width=5.0pt] (646.0,204.0) -- (651.0,214.0);
-  \draw[line width=5.0pt] (340.0,552.0) -- (327.0,548.0);
-  \draw[line width=4.0pt] (259.0,318.0) -- (269.0,323.0);
-  \draw[line width=3.0pt] (384.0,375.0) -- (268.0,494.0);
-  \draw[line width=5.0pt] (475.0,175.0) -- (477.0,190.0);
-  \draw[line width=4.0pt] (347.0,335.0) -- (337.0,334.0);
-  \draw[line width=5.0pt] (347.0,335.0) -- (357.0,331.0);
-  \draw[line width=3.0pt] (337.0,536.0) -- (334.0,536.0);
-  \draw[line width=5.0pt] (545.0,432.0) -- (525.0,433.0);
-  \draw[line width=4.0pt] (524.0,397.0) -- (515.0,396.0);
-  \draw[line width=3.0pt] (606.0,148.0) -- (490.0,266.0);
-  \draw[line width=4.0pt] (476.0,429.0) -- (466.0,425.0);
-  \draw[line width=4.0pt] (476.0,429.0) -- (480.0,429.0);
-  \draw[line width=3.0pt] (476.0,429.0) -- (371.4,536.6);
-  \draw[line width=4.9pt] (371.4,536.6) -- (370.0,541.0);
-  \draw[line width=5.0pt] (441.0,93.0) -- (460.0,83.0);
-  \draw[line width=5.3pt] (311.0,374.0) -- (316.0,373.0);
-  \draw[line width=4.0pt] (341.0,361.0) -- (360.0,357.0);
-  \draw[line width=3.0pt] (524.0,398.0) -- (521.0,406.0);
-  \draw[line width=4.9pt] (242.5,72.5) -- (244.0,68.0);
-  \draw[line width=3.0pt] (195.0,270.0) -- (203.0,263.0);
-  \draw[line width=5.0pt] (281.0,329.0) -- (271.0,324.0);
-  \draw[line width=5.0pt] (281.0,329.0) -- (286.0,329.0);
-  \draw[line width=3.0pt] (281.0,329.0) -- (275.0,339.0);
-  \draw[line width=5.0pt] (419.0,355.0) -- (415.0,349.0);
-  \draw[line width=4.0pt] (653.0,230.0) -- (653.0,234.0);
-  \draw[line width=3.0pt] (437.0,115.0) -- (357.1,196.9);
-  \draw[line width=4.0pt] (357.1,196.9) -- (352.0,199.0);
-  \draw[line width=4.0pt] (344.0,224.0) -- (345.0,215.0);
-  \draw[line width=4.0pt] (351.0,56.0) -- (347.0,56.0);
-  \draw[line width=3.0pt] (518.0,424.0) -- (514.0,432.0);
-  \draw[line width=5.0pt] (491.0,395.0) -- (496.0,394.0);
-  \draw[line width=4.0pt] (606.0,129.0) -- (595.0,122.0);
-  \draw[line width=4.0pt] (236.0,398.0) -- (226.0,403.0);
-  \draw[line width=5.0pt] (287.0,62.0) -- (297.0,57.0);
-  \draw[line width=4.0pt] (485.0,159.0) -- (487.0,173.0);
-  \draw[line width=4.0pt] (453.0,380.0) -- (463.0,386.0);
-  \draw[line width=6.0pt] (319.0,54.0) -- (311.0,57.0);
-  \draw[line width=5.0pt] (362.0,60.0) -- (352.0,56.0);
-  \draw[line width=3.0pt] (362.0,60.0) -- (365.0,60.0);
-  \draw[line width=3.0pt] (506.0,477.0) -- (484.0,495.0);
-  \draw[line width=4.0pt] (377.0,363.0) -- (372.0,354.0);
-  \draw[line width=3.0pt] (377.0,363.0) -- (384.0,355.0);
-  \draw[line width=5.0pt] (332.0,228.0) -- (342.0,227.0);
-  \draw[line width=5.0pt] (379.0,542.0) -- (371.0,542.0);
-  \draw[line width=3.0pt] (267.0,495.0) -- (260.0,502.0);
-  \draw[line width=4.0pt] (475.0,129.0) -- (471.0,115.0);
-  \draw[line width=5.0pt] (363.0,344.0) -- (341.0,349.0);
-  \draw[line width=3.0pt] (451.0,137.0) -- (451.0,140.0);
-  \draw[line width=4.0pt] (194.0,232.0) -- (194.0,236.0);
-  \draw[line width=3.0pt] (357.0,330.0) -- (357.0,327.0);
-  \draw[line width=5.7pt] (424.0,99.0) -- (422.0,94.0);
-  \draw[line width=4.0pt] (247.0,462.0) -- (252.0,470.0);
-  \draw[line width=5.0pt] (439.0,372.0) -- (431.0,365.0);
-  \draw[line width=4.0pt] (425.0,100.0) -- (429.0,100.0);
-  \draw[line width=4.5pt] (386.0,355.0) -- (390.0,359.0);
-  \draw[line width=4.0pt] (191.0,216.0) -- (190.0,207.0);
-  \draw[line width=6.0pt] (457.0,266.0) -- (466.0,252.0);
-  \draw[line width=3.0pt] (327.0,547.0) -- (334.0,536.0);
-  \draw[line width=3.0pt] (469.0,235.0) -- (458.0,243.0);
-  \draw[line width=5.0pt] (519.0,111.0) -- (529.0,113.0);
-  \draw[line width=4.0pt] (439.0,373.0) -- (434.0,380.0);
-  \draw[line width=6.0pt] (488.0,208.0) -- (489.0,191.0);
-  \draw[line width=3.0pt] (324.0,531.0) -- (321.0,531.0);
-  \draw[line width=5.0pt] (498.0,394.0) -- (507.0,397.0);
-  \draw[line width=6.0pt] (190.0,205.0) -- (190.0,199.0);
-  \draw[line width=4.0pt] (227.0,420.0) -- (226.0,403.0);
-  \draw[line width=7.0pt] (457.0,296.0) -- (427.0,327.0);
-  \draw[line width=3.0pt] (575.0,125.0) -- (572.0,125.0);
-  \draw[line width=5.0pt] (369.0,542.0) -- (364.0,542.0);
-  \draw[line width=4.0pt] (412.0,365.0) -- (421.0,372.0);
-  \draw[line width=3.3pt] (550.0,391.0) -- (549.0,394.0);
-  \draw[line width=5.0pt] (523.0,100.0) -- (505.0,100.0);
-  \draw[line width=5.0pt] (523.0,100.0) -- (539.0,102.0);
-  \draw[line width=4.0pt] (523.0,100.0) -- (518.0,110.0);
-  \draw[line width=5.0pt] (290.0,345.0) -- (303.0,348.0);
-  \draw[line width=5.0pt] (238.0,378.0) -- (242.0,367.0);
-  \draw[line width=4.0pt] (233.0,454.0) -- (237.0,467.0);
-  \draw[line width=4.0pt] (504.0,419.0) -- (519.0,422.0);
-  \draw[line width=3.0pt] (327.0,337.0) -- (321.0,349.0);
-  \draw[line width=5.0pt] (420.0,228.0) -- (430.0,232.0);
-  \draw[line width=4.5pt] (496.0,226.0) -- (486.0,230.0);
-  \draw[line width=5.0pt] (299.0,520.0) -- (309.0,526.0);
-  \draw[line width=3.0pt] (484.0,124.0) -- (477.0,129.0);
-  \draw[line width=5.0pt] (545.0,364.0) -- (548.0,372.0);
-  \draw[line width=4.0pt] (439.0,414.0) -- (448.0,419.0);
-  \draw[line width=3.0pt] (489.0,252.0) -- (480.0,258.0);
-  \draw[line width=5.0pt] (192.0,165.0) -- (197.0,153.0);
-  \draw[line width=7.0pt] (447.0,238.0) -- (454.0,241.0);
-  \draw[line width=4.0pt] (420.0,75.0) -- (411.0,68.0);
-  \draw[line width=3.0pt] (369.0,149.0) -- (243.0,278.0);
-  \draw[line width=3.0pt] (348.0,298.0) -- (412.9,233.1);
-  \draw[line width=4.0pt] (412.9,233.1) -- (415.0,228.0);
-  \draw[line width=5.0pt] (435.0,398.0) -- (446.0,403.0);
-  \draw[line width=3.0pt] (536.0,334.0) -- (536.0,331.0);
-  \draw[line width=4.0pt] (520.0,407.0) -- (504.0,406.0);
-  \draw[line width=4.0pt] (585.0,131.0) -- (576.0,125.0);
-  \draw[line width=5.0pt] (400.0,225.0) -- (405.0,225.0);
-  \draw[line width=5.0pt] (621.0,343.0) -- (599.0,366.0);
-  \draw[line width=5.0pt] (290.0,357.0) -- (277.0,354.0);
-  \draw[line width=4.0pt] (290.0,357.0) -- (306.0,360.0);
-  \draw[line width=4.0pt] (290.0,357.0) -- (285.0,367.0);
-  \draw[line width=3.0pt] (298.0,56.0) -- (305.0,44.0);
-  \draw[line width=3.5pt] (248.0,343.0) -- (243.0,352.0);
-  \draw[line width=5.7pt] (703.0,173.0) -- (698.0,171.0);
-  \draw[line width=4.0pt] (536.0,335.0) -- (541.0,343.0);
-  \draw[line width=5.0pt] (634.0,179.0) -- (640.0,188.0);
-  \draw[line width=3.0pt] (499.0,111.0) -- (504.0,101.0);
-  \draw[line width=3.0pt] (624.0,168.0) -- (508.0,285.0);
-  \draw[line width=5.0pt] (270.0,364.0) -- (279.0,368.0);
-  \draw[line width=5.5pt] (338.0,55.0) -- (345.0,56.0);
-  \draw[line width=3.0pt] (313.0,542.0) -- (321.0,531.0);
-  \draw[line width=4.0pt] (413.0,399.0) -- (405.0,392.0);
-  \draw[line width=4.0pt] (366.0,164.0) -- (371.0,151.0);
-  \draw[line width=3.0pt] (214.0,331.0) -- (214.0,334.0);
-  \draw[line width=5.0pt] (499.0,275.0) -- (490.0,267.0);
-  \draw[line width=5.0pt] (437.0,113.0) -- (430.0,104.0);
-  \draw[line width=5.0pt] (318.0,234.0) -- (330.0,228.0);
-  \draw[line width=5.0pt] (505.0,453.0) -- (492.0,473.0);
-  \draw[line width=3.5pt] (373.0,555.0) -- (380.0,543.0);
-  \draw[line width=4.0pt] (503.0,100.0) -- (479.0,106.0);
-  \draw[line width=5.0pt] (391.0,315.0) -- (372.0,328.0);
-  \draw[line width=3.0pt] (615.0,138.0) -- (608.0,146.0);
-  \draw[line width=5.0pt] (296.0,333.0) -- (286.0,329.0);
-  \draw[line width=4.0pt] (296.0,333.0) -- (300.0,333.0);
-  \draw[line width=3.0pt] (296.0,333.0) -- (289.0,344.0);
-  \draw[line width=3.0pt] (261.0,334.0) -- (269.0,324.0);
-  \draw[line width=5.0pt] (341.0,256.0) -- (342.0,263.0);
-  \draw[line width=4.0pt] (471.0,400.0) -- (459.0,395.0);
-  \draw[line width=3.0pt] (177.0,193.0) -- (188.0,187.0);
-  \draw[line width=3.5pt] (300.0,371.0) -- (306.0,360.0);
-  \draw[line width=5.5pt] (247.0,83.0) -- (272.0,65.0);
-  \draw[line width=5.0pt] (305.0,237.0) -- (317.0,234.0);
-  \draw[line width=5.0pt] (535.0,113.0) -- (544.0,115.0);
-  \draw[line width=4.0pt] (462.0,207.0) -- (461.0,217.0);
-  \draw[line width=5.0pt] (310.0,374.0) -- (301.0,372.0);
-  \draw[line width=3.0pt] (378.0,65.0) -- (375.0,65.0);
-  \draw[line width=3.0pt] (386.0,372.0) -- (393.0,365.0);
-  \draw[line width=4.0pt] (395.0,383.0) -- (403.0,391.0);
-  \draw[line width=5.0pt] (495.0,240.0) -- (490.0,251.0);
-  \draw[line width=3.0pt] (198.0,153.0) -- (284.6,67.4);
-  \draw[line width=4.9pt] (284.6,67.4) -- (286.0,63.0);
-  \draw[line width=4.5pt] (253.0,474.0) -- (259.0,483.0);
-  \draw[line width=3.0pt] (545.0,116.0) -- (503.1,160.9);
-  \draw[line width=4.0pt] (503.1,160.9) -- (498.0,163.0);
-  \draw[line width=3.0pt] (371.0,50.0) -- (366.0,59.0);
-  \draw[line width=5.0pt] (277.0,505.0) -- (286.0,512.0);
-  \draw[line width=5.0pt] (669.0,257.0) -- (667.0,240.0);
-  \draw[line width=5.0pt] (195.0,271.0) -- (201.0,281.0);
-  \draw[line width=4.0pt] (490.0,395.0) -- (482.0,391.0);
-  \draw[line width=4.0pt] (490.0,133.0) -- (485.0,124.0);
-  \draw[line width=3.9pt] (473.0,552.0) -- (474.4,548.6);
-  \draw[line width=3.0pt] (189.0,222.0) -- (180.0,228.0);
-  \draw[line width=4.0pt] (462.0,188.0) -- (463.0,198.0);
-  \draw[line width=5.0pt] (215.0,335.0) -- (234.0,348.0);
-  \draw[line width=5.0pt] (355.0,540.0) -- (363.0,542.0);
-  \draw[line width=3.0pt] (312.0,525.0) -- (424.0,407.0);
-  \draw[line width=5.0pt] (353.0,187.0) -- (351.0,198.0);
-  \draw[line width=4.0pt] (412.0,382.0) -- (403.0,375.0);
-  \draw[line width=7.4pt] (235.0,349.0) -- (241.0,353.0);
-  \draw[line width=4.3pt] (394.0,364.0) -- (393.0,360.0);
-  \draw[line width=4.5pt] (241.0,353.0) -- (232.0,359.0);
-  \draw[line width=3.0pt] (451.0,419.0) -- (448.0,419.0);
-  \draw[line width=5.0pt] (454.0,243.0) -- (444.0,261.0);
-  \draw[line width=4.0pt] (183.0,150.0) -- (177.0,172.0);
-  \draw[line width=4.5pt] (417.0,549.0) -- (395.0,555.0);
-  \draw[line width=5.0pt] (521.0,443.0) -- (523.0,434.0);
-  \draw[line width=4.0pt] (386.0,375.0) -- (394.0,382.0);
-  \draw[line width=8.7pt] (457.0,548.0) -- (459.0,556.0);
-  \draw[line width=5.0pt] (415.0,400.0) -- (424.0,407.0);
-  \draw[line width=4.0pt] (608.0,148.0) -- (616.0,155.0);
-  \draw[line width=3.0pt] (400.0,78.0) -- (212.0,271.0);
-  \draw[line width=4.0pt] (246.0,462.0) -- (237.0,467.0);
-  \draw[line width=5.0pt] (317.0,373.0) -- (327.0,375.0);
-  \draw[line width=4.0pt] (424.0,100.0) -- (414.0,106.0);
-  \draw[line width=5.0pt] (548.0,378.0) -- (548.0,373.0);
-  \draw[line width=3.0pt] (358.0,326.0) -- (443.0,237.0);
-  \draw[line width=3.0pt] (456.0,266.0) -- (438.0,279.0);
-  \draw[line width=4.0pt] (545.0,362.0) -- (545.0,358.0);
-  \draw[line width=3.0pt] (230.0,437.0) -- (238.0,433.0);
-  \draw[line width=5.0pt] (320.0,361.0) -- (306.0,360.0);
-  \draw[line width=4.0pt] (326.0,548.0) -- (313.0,543.0);
-  \draw[line width=5.0pt] (500.0,178.0) -- (498.0,170.0);
-  \draw[line width=5.0pt] (330.0,56.0) -- (336.0,55.0);
-  \draw[line width=5.0pt] (246.0,310.0) -- (237.0,302.0);
-  \draw[line width=3.0pt] (246.0,310.0) -- (238.0,319.0);
-  \draw[line width=3.0pt] (237.0,378.0) -- (228.0,382.0);
-  \draw[line width=5.0pt] (410.0,537.0) -- (401.0,541.0);
-  \draw[line width=4.0pt] (238.0,379.0) -- (239.0,390.0);
-  \draw[line width=3.0pt] (408.0,309.0) -- (394.0,330.0);
-  \draw[line width=6.0pt] (381.0,542.0) -- (388.0,541.0);
-  \draw[line width=5.0pt] (475.0,212.0) -- (477.0,192.0);
-  \draw[line width=5.0pt] (341.0,273.0) -- (344.0,282.0);
-  \draw[line width=5.0pt] (661.0,207.0) -- (657.0,194.0);
-  \draw[line width=4.0pt] (444.0,388.0) -- (434.0,382.0);
-  \draw[line width=4.0pt] (238.0,409.0) -- (237.0,399.0);
-  \draw[line width=5.0pt] (509.0,112.0) -- (500.0,112.0);
-  \draw[line width=5.5pt] (153.0,217.0) -- (167.0,213.0);
-  \draw[line width=4.0pt] (594.0,121.0) -- (583.0,116.0);
-  \draw[line width=5.0pt] (652.0,275.0) -- (651.0,285.0);
-  \draw[line width=3.0pt] (198.0,140.0) -- (184.0,149.0);
-  \draw[line width=3.0pt] (441.0,372.0) -- (515.0,298.0);
-  \draw[line width=5.0pt] (491.0,432.0) -- (496.0,432.0);
-  \draw[line width=5.0pt] (341.0,254.0) -- (342.0,246.0);
-  \draw[line width=5.0pt] (441.0,373.0) -- (451.0,379.0);
-  \draw[line width=5.0pt] (347.0,298.0) -- (344.0,289.0);
-  \draw[line width=5.0pt] (549.0,403.0) -- (544.0,403.0);
-  \draw[line width=4.0pt] (277.0,522.0) -- (268.0,514.0);
-  \draw[line width=5.0pt] (399.0,225.0) -- (390.0,223.0);
-  \draw[line width=5.2pt] (446.0,539.0) -- (449.0,535.0);
-  \draw[line width=4.0pt] (655.0,264.0) -- (654.0,255.0);
-  \draw[line width=3.0pt] (655.0,264.0) -- (668.0,258.0);
-  \draw[line width=5.0pt] (655.0,264.0) -- (652.0,273.0);
-  \draw[line width=4.0pt] (199.0,250.0) -- (199.0,246.0);
-  \draw[line width=5.0pt] (495.0,153.0) -- (498.0,163.0);
-  \draw[line width=4.0pt] (465.0,425.0) -- (461.0,425.0);
-  \draw[line width=3.5pt] (474.0,174.0) -- (463.0,180.0);
-  \draw[line width=5.0pt] (495.0,238.0) -- (497.0,227.0);
-  \draw[line width=4.0pt] (177.0,212.0) -- (176.0,194.0);
-  \draw[line width=3.5pt] (177.0,212.0) -- (189.0,206.0);
-  \draw[line width=5.0pt] (177.0,212.0) -- (179.0,228.0);
-  \draw[line width=4.0pt] (393.0,331.0) -- (367.0,344.0);
-  \draw[line width=3.0pt] (626.0,165.0) -- (634.0,158.0);
-  \draw[line width=3.0pt] (507.0,286.0) -- (431.0,364.0);
-  \draw[line width=5.0pt] (497.0,225.0) -- (499.0,217.0);
-  \draw[line width=5.0pt] (191.0,177.0) -- (192.0,167.0);
-  \draw[line width=4.0pt] (386.0,54.0) -- (372.0,49.0);
-  \draw[line width=6.3pt] (485.0,123.0) -- (486.0,117.0);
-  \draw[line width=4.0pt] (352.0,318.0) -- (357.0,326.0);
-  \draw[line width=3.0pt] (210.0,275.0) -- (203.0,281.0);
-  \draw[line width=3.0pt] (476.0,191.0) -- (464.0,198.0);
-  \draw[line width=5.0pt] (227.0,381.0) -- (231.0,360.0);
-  \draw[line width=5.0pt] (571.0,386.0) -- (598.0,366.0);
-  \draw[line width=4.0pt] (176.0,193.0) -- (177.0,174.0);
-  \draw[line width=4.0pt] (239.0,434.0) -- (242.0,442.0);
-  \draw[line width=5.0pt] (551.0,402.0) -- (569.0,395.0);
-  \draw[line width=3.0pt] (463.0,386.0) -- (466.0,386.0);
-  \draw[line width=3.0pt] (463.0,386.0) -- (459.0,393.0);
-  \draw[line width=3.0pt] (256.0,357.0) -- (262.0,350.0);
-  \draw[line width=3.0pt] (394.0,383.0) -- (278.0,503.0);
-  \draw[line width=5.0pt] (513.0,396.0) -- (508.0,397.0);
-  \draw[line width=5.0pt] (522.0,407.0) -- (543.0,403.0);
-  \draw[line width=3.0pt] (345.0,374.0) -- (343.6,379.4);
-  \draw[line width=3.0pt] (343.6,379.4) -- (254.0,470.0);
-  \draw[line width=5.0pt] (489.0,191.0) -- (487.0,174.0);
-  \draw[line width=4.5pt] (489.0,191.0) -- (499.0,187.0);
-  \draw[line width=3.0pt] (276.0,505.0) -- (268.0,513.0);
-  \draw[line width=5.0pt] (238.0,415.0) -- (238.0,410.0);
-  \draw[line width=4.0pt] (581.0,117.0) -- (576.0,124.0);
-  \draw[line width=4.5pt] (617.0,157.0) -- (625.0,165.0);
-  \draw[line width=3.0pt] (498.0,278.0) -- (460.0,316.0);
-  \draw[line width=4.0pt] (626.0,168.0) -- (633.0,176.0);
-  \draw[line width=5.0pt] (445.0,127.0) -- (451.0,136.0);
-  \draw[line width=3.0pt] (490.0,396.0) -- (487.0,402.0);
-  \draw[line width=4.0pt] (750.0,259.0) -- (693.0,262.0);
-  \draw[line width=3.0pt] (415.0,399.0) -- (421.0,392.0);
-  \draw[line width=4.0pt] (473.0,553.0) -- (523.0,574.0);
-  \draw[line width=4.5pt] (360.0,331.0) -- (370.0,328.0);
-  \draw[line width=6.0pt] (414.0,349.0) -- (403.0,355.0);
-  \draw[line width=4.0pt] (284.0,368.0) -- (280.0,368.0);
-  \draw[line width=4.0pt] (616.0,137.0) -- (607.0,130.0);
-  \draw[line width=4.0pt] (563.0,120.0) -- (572.0,125.0);
-  \draw[line width=5.0pt] (617.0,138.0) -- (626.0,147.0);
-  \draw[line width=5.0pt] (276.0,353.0) -- (264.0,349.0);
-  \draw[line width=4.0pt] (312.0,527.0) -- (321.0,531.0);
-  \draw[line width=5.0pt] (278.0,523.0) -- (288.0,530.0);
-  \draw[line width=3.0pt] (486.0,419.0) -- (481.0,428.0);
-  \draw[line width=5.0pt] (341.0,552.0) -- (356.0,555.0);
-  \draw[line width=5.0pt] (460.0,169.0) -- (460.0,164.0);
-  \draw[line width=3.5pt] (499.0,205.0) -- (489.0,209.0);
-  \draw[line width=2.5pt] (379.0,64.0) -- (385.0,55.0);
-  \draw[line width=3.0pt] (520.0,444.0) -- (506.0,453.0);
-  \draw[line width=4.9pt] (496.0,239.0) -- (500.4,237.6);
-  \draw[line width=3.0pt] (500.4,237.6) -- (595.0,139.0);
-  \draw[line width=4.0pt] (380.0,65.0) -- (388.0,70.0);
-  \draw[line width=3.0pt] (640.0,190.0) -- (525.0,306.0);
-  \draw[line width=3.0pt] (178.0,173.0) -- (191.0,166.0);
-  \draw[line width=5.0pt] (582.0,115.0) -- (569.0,110.0);
-  \draw[line width=5.0pt] (232.0,453.0) -- (229.0,438.0);
-  \draw[line width=8.7pt] (698.0,161.0) -- (696.0,169.0);
-  \draw[line width=4.0pt] (548.0,379.0) -- (550.0,390.0);
-  \draw[line width=3.0pt] (429.0,104.0) -- (367.0,165.0);
-  \draw[line width=4.0pt] (150.0,219.0) -- (103.0,237.0);
-  \draw[line width=5.0pt] (438.0,115.0) -- (444.0,124.0);
-  \draw[line width=4.0pt] (229.0,437.0) -- (227.0,421.0);
-  \draw[line width=5.0pt] (420.0,356.0) -- (429.0,364.0);
-  \draw[line width=4.0pt] (320.0,54.0) -- (329.0,56.0);
-  \draw[line width=5.0pt] (645.0,299.0) -- (651.0,287.0);
-  \draw[line width=3.0pt] (357.0,46.0) -- (352.0,55.0);
-  \draw[line width=4.5pt] (476.0,391.0) -- (467.0,386.0);
-  \draw[line width=5.0pt] (476.0,391.0) -- (481.0,391.0);
-  \draw[line width=4.0pt] (476.0,391.0) -- (472.0,399.0);
-  \draw[line width=3.0pt] (450.0,141.0) -- (374.1,215.9);
-  \draw[line width=4.5pt] (374.1,215.9) -- (372.0,222.0);
-  \draw[line width=4.0pt] (459.0,548.0) -- (466.0,553.0);
-  \draw[line width=4.0pt] (477.0,258.0) -- (457.0,295.0);
-  \draw[line width=5.0pt] (347.0,539.0) -- (338.0,536.0);
-  \draw[line width=4.9pt] (502.0,196.0) -- (506.4,194.6);
-  \draw[line width=3.0pt] (506.4,194.6) -- (572.0,125.0);
-  \draw[line width=5.0pt] (219.0,303.0) -- (225.0,310.0);
-  \draw[line width=3.0pt] (270.0,363.0) -- (276.0,355.0);
-  \draw[line width=4.0pt] (495.0,152.0) -- (495.0,148.0);
-  \draw[line width=5.0pt] (402.0,78.0) -- (410.0,85.0);
-  \draw[line width=3.0pt] (549.0,115.0) -- (546.0,115.0);
-  \draw[line width=4.0pt] (516.0,295.0) -- (508.0,286.0);
-  \draw[line width=4.5pt] (214.0,330.0) -- (225.0,311.0);
-  \draw[line width=5.0pt] (473.0,414.0) -- (487.0,417.0);
-  \draw[line width=5.0pt] (490.0,432.0) -- (481.0,429.0);
-  \draw[line width=5.0pt] (470.0,235.0) -- (475.0,213.0);
-  \draw[line width=8.0pt] (232.0,303.0) -- (226.0,310.0);
-  \draw[line width=3.0pt] (422.0,93.0) -- (429.0,86.0);
-  \draw[line width=4.0pt] (322.0,361.0) -- (339.0,361.0);
-  \draw[line width=4.3pt] (507.0,439.0) -- (508.0,435.0);
-  \draw[line width=5.0pt] (388.0,223.0) -- (382.0,224.0);
-  \draw[line width=4.0pt] (458.0,296.0) -- (469.0,291.0);
-  \draw[line width=3.0pt] (419.0,77.0) -- (412.0,85.0);
-  \draw[line width=5.0pt] (366.0,60.0) -- (374.0,64.0);
-  \draw[line width=5.0pt] (358.0,44.0) -- (343.0,42.0);
-  \draw[line width=5.0pt] (445.0,540.0) -- (418.0,549.0);
-  \draw[line width=4.0pt] (199.0,251.0) -- (204.0,259.0);
-  \draw[line width=5.0pt] (359.0,45.0) -- (371.0,48.0);
-  \draw[line width=5.0pt] (412.0,537.0) -- (423.0,535.0);
-  \draw[line width=3.0pt] (647.0,200.0) -- (655.0,194.0);
-  \draw[line width=4.0pt] (312.0,543.0) -- (301.0,538.0);
-  \draw[line width=2.5pt] (357.0,554.0) -- (363.0,543.0);
-  \draw[line width=5.0pt] (197.0,152.0) -- (199.0,141.0);
-  \draw[line width=4.0pt] (471.0,113.0) -- (476.0,106.0);
-  \draw[line width=4.5pt] (226.0,311.0) -- (237.0,319.0);
-  \draw[line width=5.0pt] (511.0,112.0) -- (517.0,111.0);
-  \draw[line width=5.0pt] (199.0,139.0) -- (218.0,113.0);
-  \draw[line width=7.5pt] (571.0,387.0) -- (569.0,394.0);
-  \draw[line width=5.0pt] (299.0,372.0) -- (294.0,372.0);
-  \draw[line width=3.0pt] (278.0,521.0) -- (286.0,513.0);
-  \draw[line width=3.0pt] (461.0,83.0) -- (464.0,83.0);
-  \draw[line width=3.0pt] (547.0,395.0) -- (543.0,402.0);
-  \draw[line width=4.0pt] (421.0,76.0) -- (430.0,85.0);
-  \draw[line width=3.0pt] (466.0,424.0) -- (472.0,415.0);
-  \draw[line width=4.0pt] (475.0,173.0) -- (472.0,159.0);
-  \draw[line width=6.0pt] (342.0,234.0) -- (343.0,228.0);
-  \draw[line width=3.0pt] (669.0,262.0) -- (669.0,259.0);
-  \draw[line width=5.0pt] (459.0,409.0) -- (447.0,404.0);
-  \draw[line width=3.0pt] (598.0,139.0) -- (595.0,139.0);
-  \draw[line width=4.0pt] (363.0,339.0) -- (363.0,343.0);
-  \draw[line width=6.0pt] (472.0,553.0) -- (466.0,553.0);
-  \draw[line width=5.0pt] (670.0,263.0) -- (691.0,263.0);
-  \draw[line width=4.5pt] (389.0,540.0) -- (390.4,535.6);
-  \draw[line width=3.0pt] (390.4,535.6) -- (490.0,433.0);
-  \draw[line width=5.0pt] (360.0,332.0) -- (362.0,338.0);
-  \draw[line width=5.0pt] (390.0,541.0) -- (399.0,541.0);
-  \draw[line width=5.0pt] (247.0,457.0) -- (243.0,449.0);
-  \draw[line width=3.0pt] (488.0,173.0) -- (497.0,169.0);
-  \draw[line width=3.0pt] (478.0,112.0) -- (472.0,114.0);
-  \draw[line width=5.0pt] (422.0,390.0) -- (413.0,383.0);
-  \draw[line width=4.0pt] (212.0,275.0) -- (218.0,282.0);
-  \draw[line width=4.0pt] (423.0,391.0) -- (434.0,397.0);
-  \draw[line width=4.0pt] (144.0,110.0) -- (115.0,104.0);
-  \draw[line width=5.0pt] (555.0,106.0) -- (568.0,109.0);
-  \draw[line width=8.0pt] (481.0,496.0) -- (464.0,513.0);
-  \draw[line width=3.0pt] (449.0,534.0) -- (464.0,514.0);
-  \draw[line width=3.0pt] (219.0,301.0) -- (226.0,293.0);
-  \draw[line width=5.0pt] (500.0,278.0) -- (507.0,285.0);
-  \draw[line width=6.0pt] (345.0,225.0) -- (352.0,224.0);
-  \draw[line width=5.0pt] (297.0,519.0) -- (288.0,513.0);
-  \draw[line width=4.0pt] (190.0,222.0) -- (194.0,231.0);
-  \draw[line width=3.0pt] (419.0,356.0) -- (412.0,364.0);
-  \draw[line width=5.0pt] (492.0,475.0) -- (482.0,493.0);
-  \draw[line width=4.0pt] (248.0,327.0) -- (238.0,320.0);
-  \draw[line width=7.0pt] (437.0,279.0) -- (409.0,308.0);
-  \draw[line width=4.0pt] (568.0,523.0) -- (542.0,512.0);
-  \draw[line width=3.0pt] (189.0,257.0) -- (198.0,251.0);
-  \draw[line width=5.0pt] (398.0,60.0) -- (387.0,55.0);
-  \draw[line width=4.0pt] (205.0,263.0) -- (211.0,271.0);
-  \draw[line width=6.0pt] (227.0,293.0) -- (232.0,297.0);
-  \draw[line width=3.0pt] (462.0,218.0) -- (474.0,212.0);
-  \draw[line width=4.5pt] (452.0,419.0) -- (461.0,425.0);
-  \draw[line width=5.0pt] (300.0,537.0) -- (289.0,531.0);
-  \draw[line width=3.0pt] (537.0,330.0) -- (645.6,220.4);
-  \draw[line width=4.0pt] (645.6,220.4) -- (650.0,219.0);
-  \draw[line width=4.0pt] (340.0,362.0) -- (334.0,373.0);
-  \draw[line width=6.0pt] (501.0,197.0) -- (500.0,204.0);
-  \draw[line width=3.0pt] (439.0,412.0) -- (445.0,405.0);
-  \draw[line width=5.0pt] (461.0,130.0) -- (467.0,143.0);
-  \draw[line width=4.5pt] (443.0,237.0) -- (434.0,232.0);
-  \draw[line width=3.0pt] (443.0,237.0) -- (446.0,237.0);
-  \draw[line width=5.0pt] (463.0,513.0) -- (445.0,522.0);
-  \draw[line width=5.0pt] (248.0,311.0) -- (257.0,317.0);
-  \draw[line width=5.0pt] (646.0,200.0) -- (641.0,190.0);
-  \draw[line width=3.0pt] (568.0,111.0) -- (563.0,119.0);
-  \draw[line width=6.3pt] (542.0,519.0) -- (541.0,513.0);
-  \draw[line width=3.8pt] (693.0,266.2) -- (691.0,263.0);
-  \draw[line width=5.0pt] (344.0,373.0) -- (334.0,373.0);
-  \draw[line width=5.0pt] (622.0,342.0) -- (642.0,314.0);
-  \draw[line width=5.3pt] (317.0,335.0) -- (312.0,336.0);
-  \draw[line width=5.0pt] (530.0,318.0) -- (524.0,309.0);
-  \draw[line width=4.0pt] (356.0,371.0) -- (367.0,369.0);
-  \draw[line width=5.0pt] (445.0,388.0) -- (458.0,394.0);
-  \draw[line width=4.0pt] (402.0,374.0) -- (395.0,365.0);
-  \draw[line width=4.0pt] (243.0,447.0) -- (243.0,443.0);
-  \draw[line width=4.0pt] (440.0,331.0) -- (417.0,345.0);
-  \draw[line width=4.5pt] (250.0,492.0) -- (244.0,481.0);
-  \draw[line width=4.0pt] (389.0,222.0) -- (390.4,217.6);
-  \draw[line width=3.0pt] (390.4,217.6) -- (455.0,154.0);
-  \draw[line width=5.0pt] (183.0,243.0) -- (179.0,229.0);
-  \draw[line width=3.0pt] (183.0,243.0) -- (193.0,237.0);
-  \draw[line width=4.0pt] (183.0,243.0) -- (188.0,257.0);
-  \draw[line width=4.0pt] (251.0,493.0) -- (258.0,502.0);
-  \draw[line width=5.0pt] (279.0,255.0) -- (304.0,237.0);
-  \draw[line width=5.0pt] (245.0,356.0) -- (253.0,358.0);
-  \draw[line width=5.0pt] (299.0,57.0) -- (311.0,57.0);
-  \draw[line width=4.5pt] (530.0,321.0) -- (536.0,330.0);
-  \draw[line width=3.0pt] (390.0,70.0) -- (397.0,62.0);
-  \draw[line width=5.0pt] (476.0,254.0) -- (467.0,251.0);
-  \draw[line width=5.0pt] (656.0,245.0) -- (653.0,235.0);
-  \draw[line width=3.0pt] (656.0,245.0) -- (666.0,239.0);
-  \draw[line width=4.0pt] (656.0,245.0) -- (654.0,253.0);
-  \draw[line width=6.0pt] (678.0,176.0) -- (696.0,170.0);
-  \draw[line width=3.0pt] (247.0,458.0) -- (247.0,461.0);
-  \draw[line width=4.9pt] (318.0,235.0) -- (316.6,239.4);
-  \draw[line width=3.0pt] (316.6,239.4) -- (248.0,309.0);
-  \draw[line width=5.0pt] (462.0,186.0) -- (462.0,181.0);
-  \draw[line width=4.5pt] (261.0,335.0) -- (274.0,340.0);
-  \draw[line width=3.0pt] (319.0,53.0) -- (325.0,41.0);
-  \draw[line width=4.0pt] (243.0,480.0) -- (237.0,467.0);
-  \draw[line width=4.0pt] (651.0,218.0) -- (651.0,214.0);
-  \draw[line width=6.3pt] (549.0,395.0) -- (550.0,401.0);
-  \draw[line width=3.0pt] (446.0,106.0) -- (439.0,113.0);
-  \draw[line width=3.0pt] (422.0,372.0) -- (429.0,365.0);
-  \draw[line width=4.0pt] (422.0,373.0) -- (433.0,381.0);
-  \draw[line width=3.0pt] (523.0,309.0) -- (453.0,379.0);
-  \draw[line width=6.0pt] (501.0,195.0) -- (500.0,188.0);
-  \draw[line width=4.0pt] (218.0,302.0) -- (210.0,293.0);
-  \draw[line width=5.0pt] (285.0,368.0) -- (294.0,372.0);
-  \draw[line width=4.0pt] (436.0,413.0) -- (427.0,408.0);
-  \draw[line width=3.0pt] (436.0,413.0) -- (325.0,530.0);
-  \draw[line width=3.0pt] (539.0,103.0) -- (535.0,112.0);
-  \draw[line width=4.0pt] (372.0,556.0) -- (358.0,555.0);
-  \draw[line width=4.0pt] (479.0,111.0) -- (479.0,107.0);
-  \draw[line width=5.0pt] (472.0,413.0) -- (460.0,410.0);
-  \draw[line width=5.0pt] (651.0,220.0) -- (653.0,229.0);
-  \draw[line width=5.0pt] (480.0,112.0) -- (486.0,117.0);
-  \draw[line width=3.0pt] (218.0,283.0) -- (210.0,291.0);
-  \draw[line width=6.0pt] (413.0,106.0) -- (372.0,148.0);
-  \draw[line width=6.0pt] (500.0,206.0) -- (499.0,215.0);
-  \draw[line width=3.0pt] (272.0,64.0) -- (281.0,50.0);
-  \draw[line width=4.0pt] (233.0,453.0) -- (242.0,448.0);
-  \draw[line width=5.0pt] (273.0,65.0) -- (285.0,62.0);
-  \draw[line width=5.0pt] (424.0,535.0) -- (444.0,522.0);
-  \draw[line width=5.0pt] (382.0,224.0) -- (372.0,222.0);
-  \draw[line width=3.0pt] (299.0,519.0) -- (413.0,400.0);
-  \draw[line width=5.0pt] (351.0,312.0) -- (347.0,303.0);
-  \draw[line width=3.0pt] (460.0,130.0) -- (452.0,136.0);
-  \draw[line width=3.0pt] (352.0,313.0) -- (352.0,316.0);
-  \draw[line width=3.0pt] (664.0,223.0) -- (654.0,229.0);
-  \draw[line width=4.0pt] (458.0,244.0) -- (465.0,248.0);
-  \draw[line width=4.0pt] (487.0,403.0) -- (503.0,406.0);
-  \draw[line width=3.0pt] (266.0,364.0) -- (269.0,364.0);
-  \draw[line width=3.0pt] (517.0,295.0) -- (632.0,179.0);
-  \draw[line width=5.0pt] (263.0,348.0) -- (249.0,342.0);
-  \draw[line width=3.0pt] (304.0,347.0) -- (311.0,337.0);
-  \draw[line width=3.0pt] (402.0,375.0) -- (395.0,382.0);
-  \draw[line width=4.0pt] (244.0,356.0) -- (242.0,365.0);
-  \draw[line width=5.0pt] (239.0,432.0) -- (240.0,427.0);
-  \draw[line width=4.0pt] (401.0,355.0) -- (393.0,360.0);
-  \draw[line width=6.0pt] (446.0,540.0) -- (456.0,547.0);
-  \draw[line width=4.0pt] (322.0,350.0) -- (339.0,349.0);
-  \draw[line width=4.0pt] (541.0,348.0) -- (545.0,358.0);
-  \draw[line width=5.0pt] (460.0,164.0) -- (456.0,155.0);
-  \draw[line width=3.5pt] (460.0,164.0) -- (471.0,158.0);
-  \draw[line width=3.0pt] (529.0,321.0) -- (467.0,385.0);
-  \draw[line width=5.0pt] (540.0,511.0) -- (526.0,506.0);
-  \draw[line width=3.0pt] (259.0,485.0) -- (252.0,492.0);
-  \draw[line width=4.0pt] (276.0,503.0) -- (268.0,495.0);
-  \draw[line width=5.0pt] (390.0,71.0) -- (400.0,77.0);
-  \draw[line width=4.0pt] (668.0,264.0) -- (665.0,280.0);
-  \draw[line width=3.0pt] (458.0,411.0) -- (452.0,418.0);
-  \draw[line width=3.0pt] (618.0,155.0) -- (625.0,148.0);
-  \draw[line width=5.3pt] (556.0,389.0) -- (551.0,390.0);
-  \draw[line width=5.0pt] (319.0,335.0) -- (327.0,336.0);
-  \draw[line width=4.0pt] (517.0,298.0) -- (523.0,306.0);
-  \draw[line width=4.3pt] (190.0,221.0) -- (191.0,217.0);
-  \draw[line width=5.0pt] (353.0,186.0) -- (366.0,165.0);
-  \draw[line width=3.0pt] (545.0,358.0) -- (645.5,257.5);
-  \draw[line width=4.0pt] (645.5,257.5) -- (653.0,254.0);
-  \draw[line width=3.0pt] (554.0,107.0) -- (550.0,114.0);
-  \draw[line width=5.0pt] (636.0,158.0) -- (643.0,168.0);
-  \draw[line width=3.0pt] (417.0,548.0) -- (424.0,536.0);
-  \draw[line width=3.0pt] (641.0,188.0) -- (649.0,181.0);
-  \draw[line width=4.0pt] (729.0,155.0) -- (698.0,170.0);
-  \draw[line width=5.0pt] (495.0,147.0) -- (490.0,138.0);
-  \draw[line width=5.0pt] (650.0,180.0) -- (644.0,169.0);
-  \draw[line width=4.5pt] (476.0,105.0) -- (465.0,84.0);
-  \draw[line width=5.0pt] (461.0,219.0) -- (457.0,229.0);
-  \draw[line width=4.0pt] (490.0,253.0) -- (486.0,262.0);
-  \draw[line width=3.0pt] (451.0,380.0) -- (445.0,387.0);
-  \draw[line width=3.0pt] (409.0,69.0) -- (402.0,77.0);
-  \draw[line width=5.0pt] (507.0,434.0) -- (498.0,432.0);
-  \draw[line width=5.0pt] (658.0,305.0) -- (665.0,281.0);
-  \draw[line width=5.0pt] (344.0,287.0) -- (344.0,282.0);
-  \draw[line width=5.0pt] (586.0,132.0) -- (595.0,139.0);
-  \draw[line width=4.0pt] (199.0,246.0) -- (194.0,237.0);
-  \draw[line width=3.0pt] (634.0,176.0) -- (642.0,169.0);
-  \draw[line width=5.0pt] (415.0,228.0) -- (406.0,225.0);
-  \draw[line width=4.0pt] (415.0,228.0) -- (419.0,228.0);
-  \draw[line width=3.0pt] (355.0,370.0) -- (361.0,358.0);
-  \draw[line width=5.0pt] (540.0,102.0) -- (554.0,105.0);
-  \draw[line width=4.0pt] (233.0,350.0) -- (231.0,358.0);
-  \draw[line width=3.0pt] (249.0,327.0) -- (257.0,318.0);
-  \draw[line width=4.0pt] (374.0,556.0) -- (393.0,555.0);
-  \draw[line width=3.0pt] (233.0,301.0) -- (233.0,298.0);
-  \draw[line width=3.0pt] (219.0,282.0) -- (410.0,86.0);
-  \draw[line width=3.0pt] (368.0,370.0) -- (261.0,483.0);
-  \draw[line width=5.0pt] (498.0,168.0) -- (498.0,163.0);
-  \draw[line width=4.0pt] (311.0,336.0) -- (302.0,333.0);
-  \draw[line width=4.0pt] (189.0,188.0) -- (190.0,199.0);
-  \draw[line width=4.5pt] (265.0,364.0) -- (256.0,359.0);
-  \draw[line width=4.0pt] (466.0,553.0) -- (460.0,557.0);
-  \draw[line width=3.0pt] (489.0,138.0) -- (482.0,143.0);
-  \draw[line width=3.0pt] (446.0,124.0) -- (454.0,117.0);
-  \draw[line width=3.0pt] (353.0,312.0) -- (430.0,232.0);
-  \draw[line width=5.0pt] (644.0,300.0) -- (638.6,301.4);
-  \draw[line width=4.5pt] (481.0,144.0) -- (484.0,158.0);
-  \draw[line width=5.0pt] (665.0,222.0) -- (661.0,208.0);
-  \draw[line width=3.0pt] (531.0,318.0) -- (645.0,204.0);
-  \draw[line width=4.5pt] (466.0,248.0) -- (470.0,236.0);
-  \draw[line width=4.0pt] (346.0,57.0) -- (343.9,62.1);
-  \draw[line width=3.0pt] (343.9,62.1) -- (192.0,216.0);
-  \draw[line width=8.0pt] (441.0,331.0) -- (456.0,316.0);
-  \draw[line width=5.0pt] (656.0,193.0) -- (651.0,181.0);
-  \draw[line width=3.0pt] (416.0,344.0) -- (427.0,328.0);
-  \draw[line width=5.0pt] (226.0,292.0) -- (219.0,283.0);
-  \draw[line width=2.5pt] (321.0,362.0) -- (317.0,372.0);
-  \draw[line width=5.0pt] (239.0,390.0) -- (237.0,397.0);
-  \draw[line width=4.0pt] (403.0,355.0) -- (411.0,364.0);
-  \draw[line width=5.0pt] (334.0,536.0) -- (325.0,532.0);
-  \draw[line width=3.0pt] (413.0,105.0) -- (420.0,94.0);
-  \draw[line width=4.0pt] (599.0,140.0) -- (607.0,147.0);
-  \draw[line width=4.5pt] (369.0,352.0) -- (367.0,345.0);
-  \draw[line width=4.0pt] (477.0,254.0) -- (485.0,230.0);
-  \draw[line width=3.0pt] (242.0,280.0) -- (228.0,292.0);
-  \draw[line width=6.0pt] (342.0,265.0) -- (341.0,272.0);
-  \draw[line width=3.0pt] (430.0,232.0) -- (433.0,232.0);
-  \draw[line width=3.0pt] (244.0,480.0) -- (252.0,474.0);
-  \draw[line width=3.0pt] (585.0,132.0) -- (505.4,214.6);
-  \draw[line width=5.9pt] (505.4,214.6) -- (500.0,216.0);
-  \draw[line width=2.5pt] (301.0,536.0) -- (309.0,526.0);
-  \draw[line width=5.0pt] (470.0,291.0) -- (486.0,268.0);
-  \draw[line width=4.5pt] (249.0,328.0) -- (260.0,334.0);
-  \draw[line width=4.0pt] (267.0,513.0) -- (259.0,503.0);
-  \draw[line width=3.0pt] (541.0,347.0) -- (541.0,344.0);
-  \draw[line width=4.3pt] (509.0,434.0) -- (513.0,433.0);
-  \draw[line width=4.0pt] (240.0,427.0) -- (238.0,417.0);
-  \draw[line width=4.0pt] (240.0,427.0) -- (245.2,424.8);
-  \draw[line width=3.0pt] (245.2,424.8) -- (294.0,372.0);
-  \draw[line width=3.0pt] (347.0,541.0) -- (341.0,551.0);
-  \draw[line width=3.0pt] (490.0,134.0) -- (490.0,137.0);
-  \draw[line width=4.0pt] (462.0,180.0) -- (460.0,171.0);
-  \draw[line width=3.0pt] (412.0,383.0) -- (405.0,391.0);
-  \draw[line width=3.0pt] (605.0,131.0) -- (599.0,138.0);
-  \draw[line width=5.0pt] (369.0,369.0) -- (376.0,365.0);
-  \draw[line width=5.0pt] (529.0,113.0) -- (534.0,113.0);
-  \draw[line width=4.0pt] (635.0,157.0) -- (627.0,148.0);
-  \draw[line width=5.0pt] (480.0,259.0) -- (485.0,262.0);
-  \draw[line width=3.0pt] (486.0,263.0) -- (486.0,266.0);
-  \draw[line width=3.0pt] (652.0,235.0) -- (542.0,343.0);
-  \draw[line width=4.0pt] (507.0,398.0) -- (504.0,405.0);
-  \draw[line width=6.0pt] (334.0,373.0) -- (327.0,375.0);
-  \draw[line width=5.0pt] (362.0,357.0) -- (369.0,353.0);
-  \draw[line width=5.0pt] (260.0,485.0) -- (267.0,494.0);
-  \draw[line width=4.0pt] (226.0,403.0) -- (227.0,383.0);
-  \draw[line width=4.0pt] (437.0,278.0) -- (444.0,262.0);
-  \draw[line width=3.0pt] (448.0,419.0) -- (338.0,535.0);
-  \draw[line width=4.0pt] (470.0,292.0) -- (457.0,314.0);
-  \draw[line width=5.0pt] (194.0,270.0) -- (189.0,258.0);
-  \draw[line width=6.0pt] (336.0,334.0) -- (328.0,336.0);
-  \draw[line width=3.0pt] (497.0,431.0) -- (503.0,420.0);
-  \draw[line width=4.0pt] (461.0,129.0) -- (456.0,117.0);
-  \draw[line width=5.0pt] (480.0,143.0) -- (476.0,130.0);
-  \draw[line width=4.9pt] (411.0,536.0) -- (412.4,531.6);
-  \draw[line width=3.0pt] (412.4,531.6) -- (501.6,441.4);
-  \draw[line width=4.9pt] (501.6,441.4) -- (506.0,440.0);
-  \draw[line width=3.0pt] (403.0,392.0) -- (288.0,512.0);
-  \draw[line width=3.0pt] (486.0,158.0) -- (494.0,153.0);
-  \draw[line width=3.0pt] (651.0,214.0) -- (660.0,208.0);
-  \draw[line width=5.0pt] (503.0,419.0) -- (488.0,418.0);
-  \draw[line width=3.5pt] (549.0,372.0) -- (553.4,370.6);
-  \draw[line width=3.0pt] (553.4,370.6) -- (646.6,275.4);
-  \draw[line width=4.9pt] (646.6,275.4) -- (651.0,274.0);
-  \draw[line width=6.0pt] (532.0,395.0) -- (525.0,397.0);
-  \draw[line width=6.0pt] (500.0,180.0) -- (500.0,186.0);
-  \draw[line width=5.0pt] (399.0,61.0) -- (410.0,67.0);
-  \draw[line width=4.5pt] (447.0,105.0) -- (441.0,94.0);
-  \draw[line width=5.0pt] (346.0,373.0) -- (354.0,371.0);
-  \draw[line width=3.0pt] (394.0,554.0) -- (400.0,542.0);
-  \draw[line width=5.0pt] (191.0,179.0) -- (189.0,186.0);
-  \draw[line width=4.0pt] (354.0,539.0) -- (359.0,530.0);
-  \draw[line width=3.0pt] (359.0,530.0) -- (461.0,425.0);
-  \draw[line width=5.0pt] (486.0,117.0) -- (498.0,112.0);
-  \draw[line width=4.0pt] (347.0,303.0) -- (347.0,299.0);
-  \draw[line width=5.0pt] (448.0,106.0) -- (455.0,116.0);
-  \draw[line width=3.0pt] (237.0,416.0) -- (228.0,420.0);
-  \draw[line width=3.0pt] (289.0,529.0) -- (297.0,520.0);
-  \draw[line width=4.5pt] (642.0,313.0) -- (645.0,301.0);
+  % ---------- labels: one node each, bold upright, white backing ----------
+  \node[fill=white, inner sep=1pt] at (94.5,99)
+    {\fontsize{30}{30}\selectfont\SBf{U}};
+  \node[fill=white, inner sep=1pt] at (52,241)
+    {\fontsize{30}{30}\selectfont\SBf{E}\FSub{}{\SBf{n}}\SBf{(U)}};
+  \node[fill=white, inner sep=1pt] at (746.5,149)
+    {\fontsize{30}{30}\selectfont\SBf{V}};
+  \node[fill=white, inner sep=1pt] at (797.5,264)
+    {\fontsize{30}{30}\selectfont\SBf{E}\FSub{}{\SBf{n}}\SBf{(V)}};
+  \node[fill=white, inner sep=1pt] at (594.5,527.5)
+    {\fontsize{30}{30}\selectfont\SBf{W}};
+  \node[fill=white, inner sep=1pt] at (575,589)
+    {\fontsize{30}{30}\selectfont\SBf{E}\FSub{}{\SBf{n}}\SBf{(W)}};
 
-  %% ════ 曲线（prims2 的 curves —— 三段式，坐标同为 (y,x)）════
-  \draw[line width=3.0pt] (559.0,120.0) .. controls (543.0,141.3) and (521.4,161.5) .. (501.0,179.0);
-  \draw[line width=3.0pt] (343.0,264.0) .. controls (358.0,254.3) and (371.7,238.9) .. (382.0,224.0);
-  \draw[line width=3.0pt] (343.0,245.0) .. controls (350.9,242.2) and (359.8,232.9) .. (363.0,225.0);
-  \draw[line width=3.0pt] (456.0,229.0) .. controls (451.9,228.8) and (448.9,232.8) .. (447.0,236.0);
-  \draw[line width=3.0pt] (510.0,113.0) .. controls (506.0,120.8) and (498.8,128.8) .. (491.0,133.0);
-  \draw[line width=3.0pt] (391.0,314.0) .. controls (405.0,294.5) and (423.3,275.6) .. (443.0,261.0);
-  \draw[line width=3.0pt] (301.0,332.0) .. controls (313.4,316.9) and (327.2,299.8) .. (343.0,288.0);
-  \draw[line width=2.0pt] (347.0,335.0) .. controls (345.9,339.8) and (339.4,342.5) .. (340.0,348.0);
-  \draw[line width=3.0pt] (202.0,111.0) .. controls (218.1,101.9) and (228.0,84.2) .. (242.5,72.5);
-  \draw[line width=4.0pt] (245.0,280.0) .. controls (256.6,273.0) and (264.5,258.5) .. (278.0,255.0);
-  \draw[line width=3.0pt] (544.0,363.0) .. controls (533.0,371.9) and (519.7,382.6) .. (514.0,395.0);
-  \draw[line width=3.0pt] (362.0,60.0) .. controls (308.2,118.8) and (252.1,177.4) .. (195.0,231.0);
-  \draw[line width=3.0pt] (329.0,57.0) .. controls (285.1,105.3) and (237.4,153.8) .. (190.0,199.0);
-  \draw[line width=3.0pt] (331.0,227.0) .. controls (332.0,221.1) and (338.4,215.4) .. (344.0,214.0);
-  \draw[line width=5.0pt] (213.0,330.0) .. controls (177.7,303.8) and (159.0,261.5) .. (152.0,220.0);
-  \draw[line width=5.0pt] (520.0,423.0) .. controls (525.2,422.4) and (523.9,428.7) .. (524.0,432.0);
-  \draw[line width=4.0pt] (521.0,445.0) .. controls (518.6,456.5) and (514.7,467.5) .. (507.0,477.0);
-  \draw[line width=3.0pt] (461.0,206.0) .. controls (450.4,210.7) and (442.0,222.3) .. (434.0,231.0);
-  \draw[line width=4.5pt] (372.0,353.0) .. controls (375.9,350.2) and (381.6,350.7) .. (385.0,354.0);
-  \draw[line width=3.0pt] (461.0,187.0) .. controls (446.3,197.5) and (432.1,213.1) .. (420.0,227.0);
-  \draw[line width=4.0pt] (474.4,548.6) .. controls (512.5,520.3) and (540.6,479.0) .. (546.0,433.0);
-  \draw[line width=3.0pt] (421.0,355.0) .. controls (427.2,347.2) and (438.0,341.4) .. (441.0,332.0);
-  \draw[line width=3.0pt] (371.0,329.0) .. controls (371.2,333.1) and (367.2,336.1) .. (364.0,338.0);
-  \draw[line width=5.0pt] (459.0,558.0) .. controls (396.1,596.9) and (310.1,585.6) .. (255.9,534.9);
-  \draw[line width=4.0pt] (255.9,534.9) .. controls (203.6,484.6) and (184.9,403.0) .. (213.0,336.0);
-  \draw[line width=3.0pt] (535.0,335.0) .. controls (515.9,350.9) and (496.5,370.1) .. (482.0,390.0);
-  \draw[line width=3.0pt] (351.0,317.0) .. controls (344.4,319.7) and (339.3,327.1) .. (336.0,333.0);
-  \draw[line width=3.0pt] (192.0,178.0) .. controls (233.3,139.6) and (273.1,98.3) .. (311.0,57.0);
-  \draw[line width=4.0pt] (235.0,347.0) .. controls (237.1,342.6) and (243.7,340.0) .. (248.0,342.0);
-  \draw[line width=3.0pt] (247.0,84.0) .. controls (239.6,94.4) and (230.0,106.0) .. (219.0,113.0);
-  \draw[line width=3.0pt] (310.0,375.0) .. controls (289.4,398.4) and (267.4,422.1) .. (244.0,442.0);
-  \draw[line width=5.0pt] (201.0,112.0) .. controls (191.4,122.2) and (185.3,134.8) .. (183.0,148.0);
-  \draw[line width=3.0pt] (620.0,342.0) .. controls (610.7,346.6) and (601.7,355.8) .. (598.0,365.0);
-  \draw[line width=3.0pt] (399.0,226.0) .. controls (382.7,245.4) and (364.1,265.8) .. (344.0,282.0);
-  \draw[line width=3.0pt] (318.0,334.0) .. controls (323.2,321.6) and (336.3,311.2) .. (347.0,303.0);
-  \draw[line width=5.0pt] (676.0,176.0) .. controls (639.8,98.6) and (545.4,54.4) .. (465.0,83.0);
-  \draw[line width=7.0pt] (570.0,395.0) .. controls (608.2,381.2) and (644.3,345.0) .. (658.0,307.0);
-  \draw[line width=4.0pt] (460.0,82.0) .. controls (451.3,67.1) and (435.4,54.0) .. (421.0,45.0);
-  \draw[line width=5.0pt] (421.0,45.0) .. controls (347.6,-9.6) and (231.1,13.2) .. (182.6,92.4);
-  \draw[line width=4.0pt] (182.6,92.4) .. controls (171.8,106.7) and (164.2,123.0) .. (160.0,140.0);
-  \draw[line width=4.0pt] (160.0,140.0) .. controls (151.4,163.5) and (149.6,190.1) .. (152.0,216.0);
-  \draw[line width=5.0pt] (395.0,331.0) .. controls (420.8,317.8) and (446.2,293.7) .. (457.0,267.0);
-  \draw[line width=3.0pt] (547.0,379.0) .. controls (541.2,382.3) and (535.0,387.4) .. (533.0,394.0);
-  \draw[line width=5.0pt] (677.0,177.0) .. controls (686.6,203.3) and (694.9,231.8) .. (692.0,261.0);
-  \draw[line width=4.0pt] (550.0,430.0) .. controls (626.3,415.2) and (688.4,343.0) .. (693.0,266.2);
-  \draw[line width=3.0pt] (388.0,71.0) .. controls (328.8,134.8) and (267.8,197.9) .. (205.0,259.0);
-  \draw[line width=3.0pt] (444.0,521.0) .. controls (455.8,504.7) and (473.8,485.9) .. (491.0,474.0);
-  \draw[line width=3.0pt] (239.0,409.0) .. controls (254.4,398.2) and (266.9,382.9) .. (279.0,369.0);
-  \draw[line width=3.0pt] (279.0,256.0) .. controls (268.9,272.9) and (250.4,285.7) .. (237.0,301.0);
-  \draw[line width=3.0pt] (341.0,235.0) .. controls (311.8,258.8) and (286.9,289.5) .. (259.0,317.0);
-  \draw[line width=3.0pt] (374.0,66.0) .. controls (317.6,127.3) and (259.5,188.5) .. (199.0,246.0);
-  \draw[line width=3.0pt] (286.0,329.0) .. controls (301.4,309.2) and (320.5,289.0) .. (340.0,273.0);
-  \draw[line width=5.0pt] (507.0,478.0) .. controls (496.1,502.1) and (473.9,524.5) .. (450.0,535.0);
-  \draw[line width=4.0pt] (201.0,110.0) .. controls (209.9,93.2) and (225.1,74.6) .. (243.0,67.0);
-  \draw[line width=5.0pt] (426.0,327.0) .. controls (415.9,331.9) and (395.6,339.1) .. (401.0,354.0);
-  \draw[line width=3.0pt] (248.0,457.0) .. controls (275.3,431.3) and (303.3,403.9) .. (327.0,375.0);
-  \draw[line width=3.0pt] (638.6,301.4) .. controls (612.5,330.9) and (579.8,357.6) .. (557.0,388.0);
-  \draw[line width=3.0pt] (540.0,348.0) .. controls (525.5,362.1) and (507.6,376.3) .. (497.0,393.0);
-  \draw[line width=3.0pt] (352.0,186.0) .. controls (335.3,201.0) and (316.5,217.6) .. (304.0,236.0);
-  \draw[line width=3.0pt] (239.0,390.0) .. controls (248.5,384.0) and (258.0,374.2) .. (265.0,365.0);
-  \draw[line width=3.0pt] (406.0,224.0) .. controls (419.9,204.5) and (440.6,185.7) .. (459.0,170.0);
-  \draw[line width=3.5pt] (243.0,366.0) .. controls (248.3,366.9) and (250.3,361.4) .. (253.0,358.0);
-  \draw[line width=3.0pt] (529.0,113.0) .. controls (520.8,125.6) and (508.3,137.6) .. (496.0,147.0);
-  \draw[line width=3.0pt] (271.0,323.0) .. controls (295.7,301.7) and (314.2,273.2) .. (340.0,255.0);
-  \draw[line width=4.0pt] (305.0,43.0) .. controls (297.3,41.9) and (287.6,44.3) .. (281.0,49.0);
-  \draw[line width=4.0pt] (244.0,67.0) .. controls (254.4,58.2) and (266.4,50.7) .. (280.0,49.0);
-  \draw[line width=4.0pt] (218.0,112.0) .. controls (221.7,99.2) and (234.1,88.0) .. (246.0,83.0);
+  % ==================================================================
+  % E_n(V)：一条闭合路径（V 的 E_n 圆弧 + 绕 U 的割弧，交接处 7° 自由曲线）
+  % ==================================================================
+  \def\pathEnV{
+    (466.4,108.2) -- (468.9,107.3) -- (471.4,106.5) -- (474.0,105.8) -- (476.6,105.1) -- (479.2,104.4)
+    -- (481.8,103.8) -- (484.4,103.2) -- (487.0,102.7) -- (489.6,102.2) -- (492.2,101.8) -- (494.9,101.4)
+    -- (497.5,101.1) -- (500.2,100.8) -- (502.8,100.5) -- (505.5,100.3) -- (508.2,100.2) -- (510.8,100.1)
+    -- (513.5,100.0) -- (516.2,100.0) -- (518.8,100.0) -- (521.5,100.1) -- (524.2,100.2) -- (526.8,100.4)
+    -- (529.5,100.6) -- (532.2,100.9) -- (534.8,101.2) -- (537.5,101.6) -- (540.1,102.0) -- (542.7,102.4)
+    -- (545.3,102.9) -- (548.0,103.5) -- (550.6,104.1) -- (553.2,104.7) -- (555.7,105.4) -- (558.3,106.1)
+    -- (560.9,106.9) -- (563.4,107.7) -- (565.9,108.5) -- (568.4,109.4) -- (570.9,110.4) -- (573.4,111.4)
+    -- (575.9,112.4) -- (578.3,113.5) -- (580.7,114.6) -- (583.1,115.7) -- (585.5,116.9) -- (587.9,118.2)
+    -- (590.2,119.5) -- (592.6,120.8) -- (594.8,122.2) -- (597.1,123.6) -- (599.4,125.0) -- (601.6,126.5)
+    -- (603.8,128.0) -- (605.9,129.6) -- (608.1,131.2) -- (610.2,132.8) -- (612.3,134.5) -- (614.3,136.2)
+    -- (616.3,137.9) -- (618.3,139.7) -- (620.3,141.5) -- (622.2,143.3) -- (624.1,145.2) -- (626.0,147.1)
+    -- (627.8,149.1) -- (629.6,151.1) -- (631.4,153.1) -- (633.1,155.1) -- (634.8,157.2) -- (636.4,159.3)
+    -- (638.0,161.4) -- (639.6,163.5) -- (641.2,165.7) -- (642.7,167.9) -- (644.1,170.2) -- (645.5,172.4)
+    -- (646.9,174.7) -- (648.3,177.0) -- (649.6,179.3) -- (650.8,181.7) -- (652.1,184.1) -- (653.2,186.5)
+    -- (654.4,188.9) -- (655.5,191.3) -- (656.5,193.8) -- (657.5,196.2) -- (658.5,198.7) -- (659.4,201.2)
+    -- (660.3,203.7) -- (661.1,206.3) -- (661.9,208.8) -- (662.7,211.4) -- (663.4,214.0) -- (664.0,216.5)
+    -- (664.6,219.1) -- (665.2,221.8) -- (665.7,224.4) -- (666.2,227.0) -- (666.6,229.6) -- (667.0,232.3)
+    -- (667.4,234.9) -- (667.6,237.6) -- (667.9,240.2) -- (668.1,242.9) -- (668.2,245.6) -- (668.3,248.2)
+    -- (668.4,250.9) -- (668.4,253.6) -- (668.4,256.2) -- (668.3,258.9) -- (668.1,261.6) -- (668.0,264.2)
+    -- (667.7,266.9) -- (667.5,269.5) -- (667.2,272.2) -- (666.8,274.8) -- (666.4,277.5) -- (665.9,280.1)
+    -- (665.4,282.7) -- (664.9,285.3) -- (664.3,287.9) -- (663.7,290.5) -- (663.0,293.1) -- (662.3,295.7)
+    -- (661.5,298.2) -- (660.7,300.8) -- (659.8,303.3) -- (658.9,305.8) -- (658.0,308.3) -- (657.0,310.8)
+    -- (655.9,313.3) -- (654.9,315.7) -- (653.7,318.1) -- (652.6,320.5) -- (651.4,322.9) -- (650.1,325.3)
+    -- (648.8,327.6) -- (647.5,329.9) -- (646.1,332.2) -- (644.7,334.5) -- (643.3,336.7) -- (641.8,338.9)
+    -- (640.3,341.1) -- (638.7,343.3) -- (637.1,345.4) -- (635.5,347.5) -- (633.8,349.6) -- (632.1,351.7)
+    -- (630.4,353.7) -- (628.6,355.7) -- (626.8,357.6) -- (624.9,359.6) -- (623.0,361.5) -- (621.1,363.3)
+    -- (619.2,365.1) -- (617.2,366.9) -- (615.2,368.7) -- (613.1,370.4) -- (611.1,372.1) -- (609.0,373.7)
+    -- (606.9,375.4) -- (604.7,376.9) -- (602.5,378.5) -- (600.3,380.0) -- (598.1,381.4) -- (595.8,382.8)
+    -- (593.5,384.2) -- (591.2,385.6) -- (588.9,386.9) -- (586.5,388.1) -- (584.2,389.4) -- (581.8,390.5)
+    -- (579.4,391.7) -- (576.9,392.8) -- (574.5,393.8) -- (572.0,394.8) -- (569.5,395.8) -- (567.0,396.7)
+    -- (564.5,397.6) -- (561.9,398.4) -- (559.4,399.2) -- (556.8,399.9) -- (554.3,400.6) -- (551.7,401.3)
+    -- (549.1,401.9) -- (546.5,402.5) -- (543.8,403.0) -- (541.2,403.4) -- (538.6,403.9) -- (535.9,404.2)
+    -- (533.3,404.6) -- (530.6,404.9) -- (528.0,405.1) -- (525.3,405.3) -- (522.6,405.4) -- (520.0,405.5)
+    -- (517.3,405.6) -- (514.6,405.6) -- (512.0,405.6) -- (509.3,405.5) -- (506.6,405.3) -- (504.0,405.2)
+    -- (501.3,404.9) -- (498.7,404.7) -- (496.0,404.3) -- (493.4,404.0) -- (490.7,403.6) -- (488.1,403.1)
+    -- (485.5,402.6) -- (482.9,402.1) -- (480.3,401.5) -- (477.7,400.8) -- (475.1,400.1) -- (472.5,399.4)
+    -- (470.0,398.6) -- (467.4,397.8) -- (464.9,396.9) -- (462.4,396.0) -- (459.9,395.1) -- (457.4,394.1)
+    -- (455.0,393.1) -- (452.5,392.0) -- (450.1,390.9) -- (447.7,389.7) -- (445.3,388.5) -- (443.0,387.2)
+    -- (440.6,385.9) -- (438.3,384.6) -- (436.0,383.2) -- (433.8,381.8) -- (431.5,380.4) -- (429.3,378.9)
+    -- (427.1,377.4) -- (425.0,375.8) -- (422.8,374.2) -- (420.7,372.6) -- (418.6,370.9) -- (416.6,369.2)
+    -- (414.6,367.4) -- (412.6,365.7) -- (410.6,363.8) -- (408.7,362.0) -- (406.8,360.1) -- (405.0,358.2)
+    -- (403.1,356.2) -- (401.3,354.3) -- (399.6,352.2) -- (397.9,350.2) -- (396.2,348.1) -- (394.5,346.0)
+    -- (392.9,343.9) -- (391.8,343.5) -- (394.4,342.3) -- (397.0,341.1) -- (399.6,339.8) -- (402.1,338.4)
+    -- (404.7,337.1) -- (407.2,335.6) -- (409.6,334.2) -- (412.1,332.7) -- (414.5,331.1) -- (416.9,329.5)
+    -- (419.3,327.9) -- (421.6,326.2) -- (424.0,324.5) -- (426.2,322.7) -- (428.5,321.0) -- (430.7,319.1)
+    -- (432.9,317.2) -- (435.1,315.3) -- (437.2,313.4) -- (439.3,311.4) -- (441.3,309.4) -- (443.3,307.3)
+    -- (445.3,305.2) -- (447.3,303.1) -- (449.2,300.9) -- (451.0,298.7) -- (452.9,296.5) -- (454.7,294.3)
+    -- (456.4,292.0) -- (458.1,289.6) -- (459.8,287.3) -- (461.4,284.9) -- (463.0,282.5) -- (464.5,280.1)
+    -- (466.0,277.6) -- (467.5,275.1) -- (468.9,272.6) -- (470.3,270.1) -- (471.6,267.5) -- (472.9,264.9)
+    -- (474.1,262.3) -- (475.3,259.7) -- (476.4,257.1) -- (477.5,254.4) -- (478.6,251.7) -- (479.6,249.0)
+    -- (480.5,246.3) -- (481.4,243.6) -- (482.3,240.8) -- (483.1,238.0) -- (483.9,235.3) -- (484.6,232.5)
+    -- (485.2,229.7) -- (485.8,226.9) -- (486.4,224.0) -- (486.9,221.2) -- (487.4,218.4) -- (487.8,215.5)
+    -- (488.2,212.6) -- (488.5,209.8) -- (488.7,206.9) -- (488.9,204.0) -- (489.1,201.2) -- (489.2,198.3)
+    -- (489.3,195.4) -- (489.3,192.5) -- (489.3,189.6) -- (489.2,186.8) -- (489.0,183.9) -- (488.8,181.0)
+    -- (488.6,178.1) -- (488.3,175.3) -- (488.0,172.4) -- (487.6,169.6) -- (487.1,166.7) -- (486.6,163.9)
+    -- (486.1,161.0) -- (485.5,158.2) -- (484.9,155.4) -- (484.2,152.6) -- (483.4,149.8) -- (482.7,147.1)
+    -- (481.8,144.3) -- (480.9,141.6) -- (480.0,138.8) -- (479.0,136.1) -- (478.0,133.4) -- (476.9,130.8)
+    -- (475.8,128.1) -- (474.7,125.5) -- (473.4,122.8) -- (472.2,120.3) -- (470.9,117.7) -- (469.5,115.1)
+    -- (468.1,112.6) -- (466.7,110.1) -- (465.2,107.6) -- cycle
+  }
+  % ==================================================================
+  % E_n(W)：一条闭合路径（W 的 E_n 圆弧 + 绕 U、V 的割弧）
+  % ==================================================================
+  \def\pathEnW{
+    (525.3,418.1) -- (525.0,420.7) -- (524.7,423.3) -- (524.3,426.0) -- (523.8,428.6) -- (523.3,431.2)
+    -- (522.8,433.8) -- (522.2,436.4) -- (521.6,439.0) -- (520.9,441.6) -- (520.2,444.1) -- (519.5,446.7)
+    -- (518.6,449.2) -- (517.8,451.8) -- (516.9,454.3) -- (516.0,456.7) -- (515.0,459.2) -- (514.0,461.7)
+    -- (512.9,464.1) -- (511.8,466.5) -- (510.6,468.9) -- (509.4,471.3) -- (508.2,473.7) -- (506.9,476.0)
+    -- (505.6,478.3) -- (504.2,480.6) -- (502.8,482.9) -- (501.4,485.1) -- (499.9,487.3) -- (498.4,489.5)
+    -- (496.9,491.7) -- (495.3,493.8) -- (493.6,495.9) -- (492.0,498.0) -- (490.3,500.0) -- (488.5,502.1)
+    -- (486.8,504.1) -- (484.9,506.0) -- (483.1,507.9) -- (481.2,509.8) -- (479.3,511.7) -- (477.4,513.5)
+    -- (475.4,515.3) -- (473.4,517.1) -- (471.4,518.8) -- (469.3,520.5) -- (467.2,522.1) -- (465.1,523.7)
+    -- (463.0,525.3) -- (460.8,526.8) -- (458.6,528.3) -- (456.4,529.8) -- (454.1,531.2) -- (451.8,532.6)
+    -- (449.5,533.9) -- (447.2,535.2) -- (444.9,536.5) -- (442.5,537.7) -- (440.1,538.9) -- (437.7,540.0)
+    -- (435.3,541.1) -- (432.8,542.1) -- (430.4,543.1) -- (427.9,544.1) -- (425.4,545.0) -- (422.9,545.9)
+    -- (420.3,546.7) -- (417.8,547.5) -- (415.2,548.3) -- (412.7,549.0) -- (410.1,549.6) -- (407.5,550.2)
+    -- (404.9,550.8) -- (402.3,551.3) -- (399.7,551.8) -- (397.0,552.2) -- (394.4,552.6) -- (391.8,552.9)
+    -- (389.1,553.2) -- (386.5,553.4) -- (383.8,553.6) -- (381.1,553.7) -- (378.5,553.8) -- (375.8,553.9)
+    -- (373.2,553.9) -- (370.5,553.9) -- (367.8,553.8) -- (365.2,553.6) -- (362.5,553.5) -- (359.9,553.2)
+    -- (357.2,552.9) -- (354.6,552.6) -- (351.9,552.3) -- (349.3,551.8) -- (346.7,551.4) -- (344.1,550.9)
+    -- (341.5,550.3) -- (338.9,549.7) -- (336.3,549.1) -- (333.7,548.4) -- (331.2,547.7) -- (328.6,546.9)
+    -- (326.1,546.1) -- (323.6,545.2) -- (321.1,544.3) -- (318.6,543.4) -- (316.1,542.4) -- (313.7,541.3)
+    -- (311.2,540.2) -- (308.8,539.1) -- (306.4,537.9) -- (304.0,536.7) -- (301.7,535.5) -- (299.4,534.2)
+    -- (297.1,532.9) -- (294.8,531.5) -- (292.5,530.1) -- (290.3,528.6) -- (288.1,527.1) -- (285.9,525.6)
+    -- (283.7,524.1) -- (281.6,522.5) -- (279.5,520.8) -- (277.5,519.1) -- (275.4,517.4) -- (273.4,515.7)
+    -- (271.4,513.9) -- (269.5,512.1) -- (267.6,510.2) -- (265.7,508.3) -- (263.8,506.4) -- (262.0,504.5)
+    -- (260.2,502.5) -- (258.5,500.5) -- (256.8,498.4) -- (255.1,496.4) -- (253.5,494.3) -- (251.9,492.1)
+    -- (250.3,490.0) -- (248.8,487.8) -- (247.3,485.6) -- (245.9,483.4) -- (244.5,481.1) -- (243.1,478.8)
+    -- (241.8,476.5) -- (240.5,474.2) -- (239.2,471.8) -- (238.0,469.5) -- (236.9,467.1) -- (235.8,464.6)
+    -- (234.7,462.2) -- (233.6,459.8) -- (232.6,457.3) -- (231.7,454.8) -- (230.8,452.3) -- (229.9,449.8)
+    -- (229.1,447.2) -- (228.3,444.7) -- (227.6,442.1) -- (226.9,439.6) -- (226.3,437.0) -- (225.7,434.4)
+    -- (225.2,431.8) -- (224.7,429.2) -- (224.2,426.5) -- (223.8,423.9) -- (223.4,421.3) -- (223.1,418.6)
+    -- (222.9,416.0) -- (222.6,413.3) -- (222.5,410.7) -- (222.3,408.0) -- (222.2,405.3) -- (222.2,402.7)
+    -- (222.2,400.0) -- (222.3,397.4) -- (222.4,394.7) -- (222.5,392.0) -- (222.7,389.4) -- (223.0,386.7)
+    -- (223.2,384.1) -- (223.6,381.4) -- (224.0,378.8) -- (224.4,376.2) -- (224.9,373.6) -- (225.4,371.0)
+    -- (225.9,368.4) -- (226.6,365.8) -- (227.2,363.2) -- (227.9,360.6) -- (228.7,358.1) -- (229.5,355.5)
+    -- (230.3,353.0) -- (231.2,350.5) -- (232.1,348.0) -- (233.1,345.5) -- (234.1,343.0) -- (235.1,340.6)
+    -- (236.2,338.2) -- (237.3,335.8) -- (238.5,333.4) -- (238.8,333.3) -- (241.2,334.8) -- (243.7,336.2)
+    -- (246.2,337.6) -- (248.7,339.0) -- (251.3,340.3) -- (253.9,341.6) -- (256.5,342.8) -- (259.1,344.0)
+    -- (261.7,345.1) -- (264.4,346.2) -- (267.1,347.2) -- (269.8,348.2) -- (272.5,349.1) -- (275.2,350.0)
+    -- (277.9,350.8) -- (280.7,351.6) -- (283.5,352.4) -- (286.2,353.1) -- (289.0,353.7) -- (291.8,354.3)
+    -- (294.7,354.9) -- (297.5,355.4) -- (300.3,355.9) -- (303.2,356.3) -- (306.0,356.6) -- (308.9,356.9)
+    -- (311.7,357.2) -- (314.6,357.4) -- (317.4,357.5) -- (320.3,357.6) -- (323.2,357.7) -- (326.0,357.7)
+    -- (328.9,357.7) -- (331.8,357.6) -- (334.6,357.4) -- (337.5,357.2) -- (340.4,357.0) -- (343.2,356.7)
+    -- (346.1,356.3) -- (348.9,355.9) -- (351.8,355.5) -- (354.6,355.0) -- (357.4,354.5) -- (360.2,353.9)
+    -- (363.0,353.2) -- (365.8,352.5) -- (368.6,351.8) -- (371.3,351.0) -- (374.1,350.2) -- (376.8,349.3)
+    -- (379.5,348.4) -- (381.0,348.8) -- (382.7,351.2) -- (384.5,353.5) -- (386.3,355.8) -- (388.2,358.1)
+    -- (390.1,360.3) -- (392.0,362.5) -- (393.9,364.7) -- (395.9,366.8) -- (398.0,369.0) -- (400.1,371.0)
+    -- (402.2,373.0) -- (404.3,375.0) -- (406.5,377.0) -- (408.7,378.9) -- (411.0,380.8) -- (413.3,382.6)
+    -- (415.6,384.4) -- (417.9,386.2) -- (420.3,387.9) -- (422.7,389.5) -- (425.2,391.2) -- (427.6,392.7)
+    -- (430.1,394.3) -- (432.6,395.8) -- (435.2,397.2) -- (437.8,398.6) -- (440.4,400.0) -- (443.0,401.3)
+    -- (445.6,402.6) -- (448.3,403.8) -- (451.0,404.9) -- (453.7,406.1) -- (456.4,407.1) -- (459.2,408.2)
+    -- (461.9,409.1) -- (464.7,410.1) -- (467.5,410.9) -- (470.3,411.8) -- (473.1,412.6) -- (476.0,413.3)
+    -- (478.8,414.0) -- (481.7,414.6) -- (484.6,415.2) -- (487.4,415.7) -- (490.3,416.2) -- (493.2,416.6)
+    -- (496.1,417.0) -- (499.1,417.3) -- (502.0,417.5) -- (504.9,417.8) -- (507.8,417.9) -- (510.8,418.0)
+    -- (513.7,418.1) -- (516.6,418.1) -- (519.5,418.1) -- (522.5,418.0) -- (525.4,417.8) -- cycle
+  }
 
-  %% ════ 标签（probe 直接给的 \node 行）════
-  %% ⚠ 全部补了 fill=white：文字在最上层，否则与曲线交叉干扰
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (96.0,101.2) {\textsf{\textbf{\textit{U}}}};   % box(86,89,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.6}{35.8}\selectfont] at (747.3,150.5) {\textsf{\textbf{\textit{V}}}};   % box(739,138,17,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.3}{37.9}\selectfont] at (22.7,238.0) {\textsf{\textbf{\textit{E}}}};   % box(13,226,20,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.3}{39.1}\selectfont] at (53.5,241.0) {\textsf{\textbf{(}}};   % box(49,226,8,29)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.7}{35.9}\selectfont] at (91.9,240.5) {\textsf{\textbf{)}}};   % box(87,226,7,28)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.0}{36.2}\selectfont] at (71.0,239.7) {\textsf{\textbf{\textit{U}}}};   % box(61,228,20,21)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{24.4}{30.5}\selectfont] at (38.1,253.9) {\textsf{\textbf{\textit{n}}}};   % box(31,246,13,13)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{29.6}{37.0}\selectfont] at (770.3,261.0) {\textsf{\textbf{\textit{E}}}};   % box(761,249,19,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{33.2}{41.4}\selectfont] at (799.1,264.1) {\textsf{\textbf{(}}};   % box(794,249,9,29)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.0}{35.0}\selectfont] at (816.3,260.9) {\textsf{\textbf{\textit{V}}}};   % box(808,249,17,22)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.4}\selectfont] at (834.5,263.5) {\textsf{\textbf{)}}};   % box(829,249,8,28)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{21.5}{26.9}\selectfont] at (785.0,277.3) {\textsf{\textbf{\textit{n}}}};   % box(779,270,11,12)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.0}{35.0}\selectfont] at (595.7,529.4) {\textsf{\textbf{\textit{W}}}};   % box(583,518,25,21)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.2}{37.8}\selectfont] at (543.2,586.5) {\textsf{\textbf{\textit{E}}}};   % box(534,574,19,23)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{31.3}{39.1}\selectfont] at (573.5,589.0) {\textsf{\textbf{(}}};   % box(569,574,8,29)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{28.0}{35.0}\selectfont] at (594.7,586.4) {\textsf{\textbf{\textit{W}}}};   % box(582,575,25,21)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{30.7}{38.4}\selectfont] at (616.5,589.5) {\textsf{\textbf{)}}};   % box(611,575,8,28)
-     \node[anchor=center,inner sep=0pt,fill=white,font=\fontsize{23.4}{29.3}\selectfont] at (558.6,601.9) {\textsf{\textbf{\textit{n}}}};   % box(552,594,12,13)
+  \def\pathEnVclip{
+    (466.9,109.7) -- (469.4,108.8) -- (471.9,108.1) -- (474.4,107.3) -- (477.0,106.6) -- (479.5,106.0)
+    -- (482.1,105.4) -- (484.7,104.8) -- (487.3,104.3) -- (489.9,103.8) -- (492.5,103.4) -- (495.1,103.0)
+    -- (497.7,102.7) -- (500.3,102.4) -- (503.0,102.1) -- (505.6,101.9) -- (508.2,101.8) -- (510.9,101.7)
+    -- (513.5,101.6) -- (516.2,101.6) -- (518.8,101.6) -- (521.4,101.7) -- (524.1,101.8) -- (526.7,102.0)
+    -- (529.4,102.2) -- (532.0,102.5) -- (534.6,102.8) -- (537.2,103.2) -- (539.8,103.6) -- (542.4,104.0)
+    -- (545.0,104.5) -- (547.6,105.0) -- (550.2,105.6) -- (552.8,106.2) -- (555.3,106.9) -- (557.9,107.6)
+    -- (560.4,108.4) -- (562.9,109.2) -- (565.4,110.0) -- (567.9,110.9) -- (570.4,111.9) -- (572.8,112.8)
+    -- (575.2,113.9) -- (577.7,114.9) -- (580.1,116.0) -- (582.4,117.2) -- (584.8,118.4) -- (587.1,119.6)
+    -- (589.5,120.9) -- (591.7,122.2) -- (594.0,123.5) -- (596.3,124.9) -- (598.5,126.3) -- (600.7,127.8)
+    -- (602.8,129.3) -- (605.0,130.9) -- (607.1,132.4) -- (609.2,134.1) -- (611.3,135.7) -- (613.3,137.4)
+    -- (615.3,139.1) -- (617.3,140.9) -- (619.2,142.7) -- (621.1,144.5) -- (623.0,146.4) -- (624.8,148.2)
+    -- (626.6,150.2) -- (628.4,152.1) -- (630.2,154.1) -- (631.9,156.1) -- (633.5,158.2) -- (635.2,160.2)
+    -- (636.8,162.3) -- (638.3,164.5) -- (639.8,166.6) -- (641.3,168.8) -- (642.8,171.0) -- (644.2,173.3)
+    -- (645.6,175.5) -- (646.9,177.8) -- (648.2,180.1) -- (649.4,182.4) -- (650.6,184.8) -- (651.8,187.1)
+    -- (652.9,189.5) -- (654.0,191.9) -- (655.1,194.4) -- (656.1,196.8) -- (657.0,199.3) -- (657.9,201.8)
+    -- (658.8,204.3) -- (659.6,206.8) -- (660.4,209.3) -- (661.1,211.8) -- (661.8,214.4) -- (662.5,216.9)
+    -- (663.1,219.5) -- (663.6,222.1) -- (664.2,224.7) -- (664.6,227.3) -- (665.1,229.9) -- (665.4,232.5)
+    -- (665.8,235.1) -- (666.0,237.7) -- (666.3,240.4) -- (666.5,243.0) -- (666.6,245.6) -- (666.7,248.3)
+    -- (666.8,250.9) -- (666.8,253.6) -- (666.8,256.2) -- (666.7,258.8) -- (666.6,261.5) -- (666.4,264.1)
+    -- (666.2,266.7) -- (665.9,269.4) -- (665.6,272.0) -- (665.2,274.6) -- (664.8,277.2) -- (664.4,279.8)
+    -- (663.9,282.4) -- (663.3,285.0) -- (662.7,287.6) -- (662.1,290.1) -- (661.4,292.7) -- (660.7,295.2)
+    -- (660.0,297.8) -- (659.2,300.3) -- (658.3,302.8) -- (657.4,305.3) -- (656.5,307.7) -- (655.5,310.2)
+    -- (654.5,312.6) -- (653.4,315.0) -- (652.3,317.4) -- (651.1,319.8) -- (649.9,322.2) -- (648.7,324.5)
+    -- (647.4,326.8) -- (646.1,329.1) -- (644.8,331.4) -- (643.4,333.6) -- (642.0,335.8) -- (640.5,338.0)
+    -- (639.0,340.2) -- (637.4,342.3) -- (635.9,344.5) -- (634.2,346.5) -- (632.6,348.6) -- (630.9,350.6)
+    -- (629.2,352.6) -- (627.4,354.6) -- (625.6,356.5) -- (623.8,358.4) -- (621.9,360.3) -- (620.0,362.2)
+    -- (618.1,364.0) -- (616.1,365.7) -- (614.1,367.5) -- (612.1,369.2) -- (610.1,370.8) -- (608.0,372.5)
+    -- (605.9,374.1) -- (603.8,375.6) -- (601.6,377.2) -- (599.4,378.6) -- (597.2,380.1) -- (595.0,381.5)
+    -- (592.7,382.9) -- (590.4,384.2) -- (588.1,385.5) -- (585.8,386.7) -- (583.5,387.9) -- (581.1,389.1)
+    -- (578.7,390.2) -- (576.3,391.3) -- (573.9,392.3) -- (571.4,393.3) -- (568.9,394.3) -- (566.5,395.2)
+    -- (564.0,396.1) -- (561.5,396.9) -- (558.9,397.7) -- (556.4,398.4) -- (553.9,399.1) -- (551.3,399.7)
+    -- (548.7,400.3) -- (546.1,400.9) -- (543.5,401.4) -- (540.9,401.9) -- (538.3,402.3) -- (535.7,402.7)
+    -- (533.1,403.0) -- (530.5,403.3) -- (527.8,403.5) -- (525.2,403.7) -- (522.6,403.8) -- (519.9,403.9)
+    -- (517.3,404.0) -- (514.7,404.0) -- (512.0,404.0) -- (509.4,403.9) -- (506.7,403.7) -- (504.1,403.6)
+    -- (501.5,403.3) -- (498.8,403.1) -- (496.2,402.8) -- (493.6,402.4) -- (491.0,402.0) -- (488.4,401.5)
+    -- (485.8,401.0) -- (483.2,400.5) -- (480.6,399.9) -- (478.1,399.3) -- (475.5,398.6) -- (473.0,397.9)
+    -- (470.5,397.1) -- (467.9,396.3) -- (465.4,395.4) -- (463.0,394.5) -- (460.5,393.6) -- (458.0,392.6)
+    -- (455.6,391.6) -- (453.2,390.5) -- (450.8,389.4) -- (448.4,388.3) -- (446.1,387.1) -- (443.7,385.8)
+    -- (441.4,384.6) -- (439.1,383.2) -- (436.9,381.9) -- (434.6,380.5) -- (432.4,379.1) -- (430.2,377.6)
+    -- (428.0,376.1) -- (425.9,374.5) -- (423.8,372.9) -- (421.7,371.3) -- (419.7,369.7) -- (417.6,368.0)
+    -- (415.6,366.2) -- (413.7,364.5) -- (411.7,362.7) -- (409.8,360.8) -- (408.0,359.0) -- (406.1,357.1)
+    -- (404.3,355.2) -- (402.5,353.2) -- (400.8,351.2) -- (399.1,349.2) -- (397.4,347.1) -- (395.8,345.1)
+    -- (394.2,342.9) -- (392.4,344.9) -- (395.1,343.7) -- (397.7,342.5) -- (400.3,341.2) -- (402.9,339.8)
+    -- (405.4,338.5) -- (408.0,337.0) -- (410.5,335.5) -- (412.9,334.0) -- (415.4,332.5) -- (417.8,330.9)
+    -- (420.2,329.2) -- (422.6,327.5) -- (424.9,325.8) -- (427.2,324.0) -- (429.5,322.2) -- (431.7,320.3)
+    -- (434.0,318.4) -- (436.1,316.5) -- (438.3,314.5) -- (440.4,312.5) -- (442.5,310.5) -- (444.5,308.4)
+    -- (446.5,306.3) -- (448.5,304.2) -- (450.4,302.0) -- (452.3,299.8) -- (454.1,297.5) -- (455.9,295.2)
+    -- (457.7,292.9) -- (459.4,290.6) -- (461.1,288.2) -- (462.7,285.8) -- (464.3,283.4) -- (465.9,280.9)
+    -- (467.4,278.4) -- (468.9,275.9) -- (470.3,273.4) -- (471.7,270.8) -- (473.0,268.2) -- (474.3,265.6)
+    -- (475.6,263.0) -- (476.8,260.4) -- (477.9,257.7) -- (479.0,255.0) -- (480.1,252.3) -- (481.1,249.6)
+    -- (482.0,246.8) -- (483.0,244.1) -- (483.8,241.3) -- (484.6,238.5) -- (485.4,235.7) -- (486.1,232.9)
+    -- (486.8,230.0) -- (487.4,227.2) -- (488.0,224.3) -- (488.5,221.5) -- (489.0,218.6) -- (489.4,215.7)
+    -- (489.7,212.8) -- (490.1,209.9) -- (490.3,207.0) -- (490.5,204.1) -- (490.7,201.2) -- (490.8,198.3)
+    -- (490.9,195.4) -- (490.9,192.5) -- (490.9,189.6) -- (490.8,186.7) -- (490.6,183.8) -- (490.4,180.9)
+    -- (490.2,178.0) -- (489.9,175.1) -- (489.6,172.2) -- (489.2,169.3) -- (488.7,166.4) -- (488.2,163.6)
+    -- (487.7,160.7) -- (487.1,157.9) -- (486.4,155.0) -- (485.7,152.2) -- (485.0,149.4) -- (484.2,146.6)
+    -- (483.4,143.8) -- (482.5,141.0) -- (481.5,138.3) -- (480.5,135.6) -- (479.5,132.8) -- (478.4,130.1)
+    -- (477.3,127.5) -- (476.1,124.8) -- (474.9,122.2) -- (473.6,119.5) -- (472.3,116.9) -- (470.9,114.4)
+    -- (469.5,111.8) -- (468.1,109.3) -- (466.6,106.8) -- cycle
+  }
+  \def\pathEnWclip{
+    (523.7,417.9) -- (523.4,420.5) -- (523.1,423.1) -- (522.7,425.7) -- (522.3,428.3) -- (521.8,430.9)
+    -- (521.2,433.5) -- (520.7,436.1) -- (520.1,438.6) -- (519.4,441.2) -- (518.7,443.7) -- (517.9,446.2)
+    -- (517.1,448.7) -- (516.3,451.2) -- (515.4,453.7) -- (514.5,456.2) -- (513.5,458.6) -- (512.5,461.1)
+    -- (511.4,463.5) -- (510.3,465.9) -- (509.2,468.2) -- (508.0,470.6) -- (506.8,472.9) -- (505.5,475.2)
+    -- (504.2,477.5) -- (502.9,479.8) -- (501.5,482.0) -- (500.1,484.2) -- (498.6,486.4) -- (497.1,488.6)
+    -- (495.6,490.7) -- (494.0,492.8) -- (492.4,494.9) -- (490.7,497.0) -- (489.0,499.0) -- (487.3,501.0)
+    -- (485.6,503.0) -- (483.8,504.9) -- (482.0,506.8) -- (480.1,508.7) -- (478.2,510.5) -- (476.3,512.3)
+    -- (474.4,514.1) -- (472.4,515.8) -- (470.4,517.5) -- (468.3,519.2) -- (466.3,520.8) -- (464.2,522.4)
+    -- (462.0,524.0) -- (459.9,525.5) -- (457.7,527.0) -- (455.5,528.4) -- (453.3,529.8) -- (451.0,531.2)
+    -- (448.7,532.5) -- (446.4,533.8) -- (444.1,535.1) -- (441.8,536.3) -- (439.4,537.4) -- (437.0,538.5)
+    -- (434.6,539.6) -- (432.2,540.7) -- (429.8,541.7) -- (427.3,542.6) -- (424.8,543.5) -- (422.4,544.4)
+    -- (419.8,545.2) -- (417.3,546.0) -- (414.8,546.7) -- (412.3,547.4) -- (409.7,548.0) -- (407.1,548.6)
+    -- (404.6,549.2) -- (402.0,549.7) -- (399.4,550.2) -- (396.8,550.6) -- (394.2,551.0) -- (391.6,551.3)
+    -- (388.9,551.6) -- (386.3,551.8) -- (383.7,552.0) -- (381.1,552.1) -- (378.4,552.2) -- (375.8,552.3)
+    -- (373.2,552.3) -- (370.5,552.3) -- (367.9,552.2) -- (365.3,552.0) -- (362.6,551.9) -- (360.0,551.6)
+    -- (357.4,551.4) -- (354.8,551.0) -- (352.2,550.7) -- (349.6,550.3) -- (347.0,549.8) -- (344.4,549.3)
+    -- (341.8,548.8) -- (339.2,548.2) -- (336.7,547.5) -- (334.1,546.9) -- (331.6,546.1) -- (329.1,545.4)
+    -- (326.6,544.6) -- (324.1,543.7) -- (321.6,542.8) -- (319.2,541.9) -- (316.7,540.9) -- (314.3,539.9)
+    -- (311.9,538.8) -- (309.5,537.7) -- (307.1,536.5) -- (304.8,535.3) -- (302.5,534.1) -- (300.1,532.8)
+    -- (297.9,531.5) -- (295.6,530.1) -- (293.4,528.7) -- (291.2,527.3) -- (289.0,525.8) -- (286.8,524.3)
+    -- (284.7,522.8) -- (282.6,521.2) -- (280.5,519.6) -- (278.5,517.9) -- (276.5,516.2) -- (274.5,514.5)
+    -- (272.5,512.7) -- (270.6,510.9) -- (268.7,509.1) -- (266.8,507.2) -- (265.0,505.3) -- (263.2,503.4)
+    -- (261.4,501.4) -- (259.7,499.4) -- (258.0,497.4) -- (256.4,495.4) -- (254.8,493.3) -- (253.2,491.2)
+    -- (251.6,489.1) -- (250.1,486.9) -- (248.7,484.7) -- (247.2,482.5) -- (245.8,480.3) -- (244.5,478.0)
+    -- (243.2,475.7) -- (241.9,473.4) -- (240.7,471.1) -- (239.5,468.7) -- (238.3,466.4) -- (237.2,464.0)
+    -- (236.1,461.6) -- (235.1,459.1) -- (234.1,456.7) -- (233.2,454.2) -- (232.3,451.8) -- (231.5,449.3)
+    -- (230.6,446.8) -- (229.9,444.2) -- (229.2,441.7) -- (228.5,439.2) -- (227.9,436.6) -- (227.3,434.0)
+    -- (226.7,431.5) -- (226.2,428.9) -- (225.8,426.3) -- (225.4,423.7) -- (225.0,421.1) -- (224.7,418.4)
+    -- (224.4,415.8) -- (224.2,413.2) -- (224.1,410.6) -- (223.9,407.9) -- (223.8,405.3) -- (223.8,402.7)
+    -- (223.8,400.0) -- (223.9,397.4) -- (224.0,394.8) -- (224.1,392.1) -- (224.3,389.5) -- (224.6,386.9)
+    -- (224.8,384.3) -- (225.2,381.7) -- (225.5,379.1) -- (226.0,376.5) -- (226.4,373.9) -- (227.0,371.3)
+    -- (227.5,368.7) -- (228.1,366.1) -- (228.8,363.6) -- (229.5,361.0) -- (230.2,358.5) -- (231.0,356.0)
+    -- (231.8,353.5) -- (232.7,351.0) -- (233.6,348.5) -- (234.5,346.1) -- (235.5,343.7) -- (236.6,341.2)
+    -- (237.7,338.8) -- (238.8,336.4) -- (240.0,334.1) -- (237.9,334.7) -- (240.4,336.2) -- (242.9,337.6)
+    -- (245.4,339.0) -- (248.0,340.4) -- (250.6,341.7) -- (253.2,343.0) -- (255.8,344.2) -- (258.4,345.4)
+    -- (261.1,346.6) -- (263.8,347.6) -- (266.5,348.7) -- (269.2,349.7) -- (272.0,350.6) -- (274.7,351.5)
+    -- (277.5,352.4) -- (280.3,353.2) -- (283.1,353.9) -- (285.9,354.6) -- (288.7,355.3) -- (291.5,355.9)
+    -- (294.4,356.5) -- (297.2,357.0) -- (300.1,357.4) -- (302.9,357.8) -- (305.8,358.2) -- (308.7,358.5)
+    -- (311.6,358.8) -- (314.5,359.0) -- (317.4,359.1) -- (320.3,359.2) -- (323.2,359.3) -- (326.1,359.3)
+    -- (329.0,359.3) -- (331.9,359.2) -- (334.7,359.0) -- (337.6,358.8) -- (340.5,358.6) -- (343.4,358.3)
+    -- (346.3,357.9) -- (349.1,357.5) -- (352.0,357.1) -- (354.9,356.6) -- (357.7,356.0) -- (360.5,355.4)
+    -- (363.4,354.8) -- (366.2,354.1) -- (369.0,353.3) -- (371.8,352.5) -- (374.5,351.7) -- (377.3,350.8)
+    -- (380.0,349.9) -- (379.7,349.7) -- (381.5,352.1) -- (383.2,354.5) -- (385.1,356.8) -- (386.9,359.1)
+    -- (388.8,361.4) -- (390.8,363.6) -- (392.8,365.8) -- (394.8,368.0) -- (396.8,370.1) -- (398.9,372.2)
+    -- (401.1,374.2) -- (403.3,376.2) -- (405.5,378.2) -- (407.7,380.1) -- (410.0,382.0) -- (412.3,383.9)
+    -- (414.6,385.7) -- (417.0,387.5) -- (419.4,389.2) -- (421.8,390.9) -- (424.3,392.5) -- (426.8,394.1)
+    -- (429.3,395.7) -- (431.8,397.2) -- (434.4,398.6) -- (437.0,400.0) -- (439.6,401.4) -- (442.3,402.7)
+    -- (445.0,404.0) -- (447.6,405.2) -- (450.4,406.4) -- (453.1,407.6) -- (455.8,408.6) -- (458.6,409.7)
+    -- (461.4,410.7) -- (464.2,411.6) -- (467.0,412.5) -- (469.9,413.3) -- (472.7,414.1) -- (475.6,414.8)
+    -- (478.5,415.5) -- (481.4,416.2) -- (484.3,416.7) -- (487.2,417.3) -- (490.1,417.7) -- (493.0,418.2)
+    -- (496.0,418.5) -- (498.9,418.9) -- (501.8,419.1) -- (504.8,419.4) -- (507.8,419.5) -- (510.7,419.6)
+    -- (513.7,419.7) -- (516.6,419.7) -- (519.6,419.7) -- (522.5,419.6) -- (525.5,419.4) -- cycle
+  }
 
-  % 钉死画布：否则超出的图元/控制点会把页面撑大，1:1 回比就失准
+  % ---- E_n(U)：整圆 ----
+  \begin{scope}
+    \clip (324.9,193.3) circle (150.3);
+    \foreach \k in {-16,...,16} {
+      \draw[line width=3] ({519.1+18.384776*\k},0) -- (0,{519.1+18.384776*\k});
+    }
+  \end{scope}
+  \draw[line width=4.3, line cap=butt, dash pattern=on 7pt off 5pt]
+    (324.9,193.3) circle (151.9);
+
+  % ---- E_n(V)：排线裁到同一条路径 ----
+  \begin{scope}
+    \clip \pathEnVclip;
+    \foreach \k in {-16,...,16} {
+      \draw[line width=3] ({774.636+18.384776*\k},0) -- (0,{774.636+18.384776*\k});
+    }
+  \end{scope}
+  \draw[line width=4.3, line cap=butt, dash pattern=on 7pt off 5pt] \pathEnV;
+
+  % ---- E_n(W)：排线裁到同一条路径 ----
+  \begin{scope}
+    \clip \pathEnWclip;
+    \foreach \k in {-16,...,16} {
+      \draw[line width=3] ({797.285+18.384776*\k},0) -- (0,{797.285+18.384776*\k});
+    }
+  \end{scope}
+  \draw[line width=4.3, line cap=butt, dash pattern=on 7pt off 5pt] \pathEnW;
+
+  %% ===== 集合内部的实线圆/圆弧：仅 U 整圆、V 远侧弧、W 远侧弧；同心、半径 −9、线宽同虚线 =====
+  \draw[line width=4.3] (324.9,193.3) circle (142.9);
+  \draw[line width=4.3] (483.25,112.69) arc[start angle=257.0, end angle=436.0, radius=143.8];
+  \draw[line width=4.3] (514.08,431.63) arc[start angle=12.0, end angle=202.0, radius=143.0];
+
+  %% ===== 三个大圆：设计不变 =====
+  \draw[line width=5.5] (374.2,401.9) circle (177.0);
+  \draw[line width=5.5] (515.6,252.8) circle (177.8);
+  \draw[line width=5.5] (324.9,193.3) circle (176.9);
+
+  % ---------- leader arrows, flat-backed triangle heads, tips on the thick stroke ----------
+  \draw[line width=3.6, -{Triangle[length=22pt,width=16pt]}] (113,104) -- (163,115);
+  \draw[line width=3.6, -{Triangle[length=22pt,width=16pt]}] (98,238) -- (180,243);
+  \draw[line width=3.6, -{Triangle[length=22pt,width=16pt]}] (733,158) -- (679,182);
+  \draw[line width=3.6, -{Triangle[length=22pt,width=16pt]}] (757,264) -- (672,256);
+  \draw[line width=3.6, -{Triangle[length=22pt,width=16pt]}] (573,525) -- (520,503);
+  \draw[line width=3.6, -{Triangle[length=22pt,width=16pt]}] (525,575) -- (484,512);
+
+  % ---------- pin the canvas ----------
   \pgfresetboundingbox
   \path[use as bounding box] (0,0) rectangle (846,615);
 \end{tikzpicture}
 \end{document}
-
-% ⚠ 待核清单（probe 拿不准，人眼过一遍）：
-%   · 未识别/跳过：⑤ 跳过/未识别的字形
-%   · 未识别/跳过：box(114,102,51,17)
-%   · 未识别/跳过：box(525,506,46,20)
