@@ -350,7 +350,9 @@
 \newtheorem*{ucorollary}{Corollary}
 \newtheorem*{utheorem}{Theorem}
 
-\newfontfamily{\ExampleSC}[Path=D:/texlive/2025/texmf-dist/fonts/opentype/huerta/alegreya/]{AlegreyaSC-Bold.otf}%  小型大写(原书 EXAMPLE 1.)
+\IfFontExistsTF{AlegreyaSC-Bold.otf}
+  {\newfontfamily{\ExampleSC}{AlegreyaSC-Bold.otf}}%  小型大写(原书 EXAMPLE 1.)
+  {\newfontfamily{\ExampleSC}{TeX Gyre Termes}}%      TeX Live 缺该字体时的回退
 \newtheoremstyle{ExampleStyle}%
   {8pt}{8pt}{\normalfont}{0pt}%
   {}{}{.25em}%

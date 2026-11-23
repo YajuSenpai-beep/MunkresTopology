@@ -1,6 +1,8 @@
 \documentclass[12pt,openany]{book}
 \usepackage{TopologyBook}   % 加载自定义样式
-\setmainfont{Times New Roman}   % 正文 Times
+\IfFontExistsTF{Times New Roman}
+  {\setmainfont{Times New Roman}}% 正文 Times
+  {\setmainfont{TeX Gyre Termes}}% Linux/CI 回退
 \usepackage{newtxmath}        % 数学 Times
 
 \begin{document}
