@@ -1,0 +1,40 @@
+name: Book
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  book:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build PDF in TeX Live
+        run: |
+          docker run --rm -v "$PWD":/work -w /work texlive/texlive:latest \
+            sh -c "apt-get update -qq && apt-get install -y -qq make && make"
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: book-pdf
+          path: |
+            Topology_by_Munkres.pdf
+            Cover.pdf
+
+  figures:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check every figure has a PDF
+        run: python tools/check_figures.py
